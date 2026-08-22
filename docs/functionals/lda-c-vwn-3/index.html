@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>lda_c_vwn_3</title>
+    <link rel="stylesheet" href="../../assets/styles.css?v=20260822-github">
+    <script defer src="../../assets/search.js?v=20260822-github"></script>
+    <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+    <script defer src="../../vendor/katex/katex.min.js"></script>
+    <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
+    <script defer src="../../assets/detail.js?v=20260822-github"></script>
+
+  </head>
+  <body>
+    <main class="shell">
+      <form class="global-search" role="search" action="../../" method="get">
+        <div class="search-box">
+          <input class="search-input global-search-input" name="q" type="search" autocomplete="off" placeholder="Search functionals..." aria-controls="global-search-suggestions">
+          <span class="search-shortcut" aria-hidden="true">Ctrl K</span>
+          <div id="global-search-suggestions" class="search-suggestions" role="listbox" hidden></div>
+        </div>
+      </form>
+
+      <a class="back" href="../../">Back to search</a>
+      <header class="top">
+        <a class="github-link" href="https://github.com/aouinaayoub/libxc-wiki" aria-label="View Libxc Wiki on GitHub" title="View source on GitHub">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .7a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2.23c-3.22.7-3.9-1.37-3.9-1.37-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.71.08-.71 1.16.08 1.78 1.2 1.78 1.2 1.04 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.74-1.55-2.57-.29-5.27-1.29-5.27-5.69 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.16 1.18a10.94 10.94 0 0 1 5.76 0c2.19-1.49 3.16-1.18 3.16-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.42-2.71 5.39-5.29 5.68.42.36.79 1.07.79 2.16v3.2c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .7Z"/></svg>
+        </a>
+
+        <p class="brand">LDA</p>
+        <h1><code class="title-code">lda_c_vwn_3</code></h1>
+        <div class="detail-tags"><span class="tag">lda</span>
+<span class="tag">correlation</span></div>
+      </header>
+
+      <div class="detail-grid">
+      <section class="callout">
+        <p class="callout-label">Review excerpt</p>
+        <div class="review-html">
+<p>The Vosko&ndash;Wilk&ndash;Nusair<sup class="citation-marker"><a href="#review-ref-Vosko1980-1200">422</a></sup> (VWN) correlation functional is one of the first <em>modern</em> LDAs, and is still commonly used nowadays. It is based on a Pad\&#39;e approximant technique to accurately interpolate the MC results of Ceperley and Alder<sup class="citation-marker"><a href="#review-ref-Ceperley1980-566">397</a></sup>. Furthermore, by combining these results with the spin-dependence of the RPA correlation energy, Vosko et al.<sup class="citation-marker"><a href="#review-ref-Vosko1980-1200">422</a></sup> were able to obtain an accurate parametrization of the HEG for relevant ranges of $r_s$ and $\zeta$. The functional reads as</p>
+<div class="equation" data-tex="e_\text{c}^\text{VWN}(r_s,\zeta) = e_\text{c}^\text{P}(r_s) +
+  \left[e_\text{c}^\text{F}(r_s) - e_\text{c}^\text{P}(r_s)\right] f_\text{c}(\zeta)\zeta^4 \\
+ +  \frac{f_\text{c}(\zeta)}{f_\text{c}&#39;&#39;(0)}\left(1-\zeta^4\right)\alpha_\text{c}(r_s)"></div>
+<p>where $\alpha_\text{c}$ is the spin-stiffness coefficient given by</p>
+<div class="equation" data-tex="\alpha_\text{c}(r_s) = \left.\frac{\partial^2 e_\text{c}(r_s, \zeta)}{\partial \zeta^2}\right|_{\zeta=0}"></div>
+<p>The function $f_\text{c}(\zeta)$ is the same as in the <a class="functional-link" href="../lda-c-vbh/"><code>lda_c_vbh</code></a> functional (see <a class="review-eq-link" href="#review-eq-eq-fzeta">
+  <code>eq:fzeta</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="f_\text{c}(\zeta) = \frac{\phi_{4/3}(\zeta) - 1}{2^{1/3} - 1}"></span>
+  </span>
+</a>), but we can see that the spin interpolation is now considerably more complex. The second derivative of $f_\text{c}(\zeta)$ at $\zeta=0$ gives $f_\text{c}&#39;&#39;(0)=4/\left[9\left(2^{1/3}-1\right)\right]$, and the functions $e_\text{c}^\text{P}$, $e_\text{c}^\text{F}$, and $\alpha_\text{c}$ are parameterized using the form</p>
+<div class="equation" data-tex="G(y) = A\bigg\{\ln\frac{y^2}{X(y)} + \frac{2b}{Q}\arctan\frac{Q}{2y+b}
+ \\
+  -\frac{by_0}{X(y_0)}\bigg[\ln\frac{(y-y_0)^2}{X(y)} + 2\frac{b+2y_0}{Q}\arctan\frac{Q}{2y+b}\bigg]\bigg\}"></div>
+<p>with $Q=\sqrt{4c-b^2}$ and $X(y)=y^2+by+c$. VWN provided a fit to the parameters $y_0$, $b$, and $c$ for both MC and RPA data, with the latter only given as a test of the adequacy of <a class="review-eq-link" href="#review-eq-eq-ldacvwn">
+  <code>eq:ldacvwn</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="G(y) = A\bigg\{\ln\frac{y^2}{X(y)} + \frac{2b}{Q}\arctan\frac{Q}{2y+b}
+ \\
+  -\frac{by_0}{X(y_0)}\bigg[\ln\frac{(y-y_0)^2}{X(y)} + 2\frac{b+2y_0}{Q}\arctan\frac{Q}{2y+b}\bigg]\bigg\}"></span>
+  </span>
+</a> to interpolate over the relevant range of $r_s$.</p>
+<p>Unfortunately, the several versions of the VWN functional given in the paper<sup class="citation-marker"><a href="#review-ref-Vosko1980-1200">422</a></sup> later led to confusion in the community,<sup class="citation-marker"><a href="#review-ref-Lehtola2023-JCP-114116">139</a></sup> in particular regarding the construction of the hybrid functional B3LYP.<sup class="citation-marker"><a href="#review-ref-Stephens1994-11623">423</a>,<a href="#review-ref-Hertwig1997-345">424</a></sup> Various versions of the VWN functional are described below:</p>
+<p> &#8226; <a class="functional-link" href="../lda-c-vwn/"><code>lda_c_vwn</code></a> uses <a class="review-eq-link" href="#review-eq-eq-vwnsi">
+  <code>eq:vwnsi</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="e_\text{c}^\text{VWN}(r_s,\zeta) = e_\text{c}^\text{P}(r_s) +
+  \left[e_\text{c}^\text{F}(r_s) - e_\text{c}^\text{P}(r_s)\right] f_\text{c}(\zeta)\zeta^4 \\
+ +  \frac{f_\text{c}(\zeta)}{f_\text{c}&#39;&#39;(0)}\left(1-\zeta^4\right)\alpha_\text{c}(r_s)"></span>
+  </span>
+</a>; <a class="review-eq-link" href="#review-eq-eq-ldacvwn">
+  <code>eq:ldacvwn</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="G(y) = A\bigg\{\ln\frac{y^2}{X(y)} + \frac{2b}{Q}\arctan\frac{Q}{2y+b}
+ \\
+  -\frac{by_0}{X(y_0)}\bigg[\ln\frac{(y-y_0)^2}{X(y)} + 2\frac{b+2y_0}{Q}\arctan\frac{Q}{2y+b}\bigg]\bigg\}"></span>
+  </span>
+</a> with the MC coefficients. This is the functional that was recommended by Vosko et al.<sup class="citation-marker"><a href="#review-ref-Vosko1980-1200">422</a></sup>, which is sometimes referred to as VWN5 in the literature. This is the version used in <code>hyb\_gga\_xc\_b3lyp5</code> as implemented in Libxc.</p>
+<p>&#8226; <a class="functional-link" href="../lda-c-vwn-rpa/"><code>lda_c_vwn_rpa</code></a> uses <a class="review-eq-link" href="#review-eq-eq-ldacvwn">
+  <code>eq:ldacvwn</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="G(y) = A\bigg\{\ln\frac{y^2}{X(y)} + \frac{2b}{Q}\arctan\frac{Q}{2y+b}
+ \\
+  -\frac{by_0}{X(y_0)}\bigg[\ln\frac{(y-y_0)^2}{X(y)} + 2\frac{b+2y_0}{Q}\arctan\frac{Q}{2y+b}\bigg]\bigg\}"></span>
+  </span>
+</a> with the RPA coefficients, but uses the older spin-interpolation formula of <a class="functional-link" href="../lda-c-vbh/"><code>lda_c_vbh</code></a> given by <a class="review-eq-link" href="#review-eq-eq-ldavBHsi">
+  <code>eq:ldavBHsi</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="e_\text{c}^\text{vBH}(r_s,\zeta) =
+  e_\text{c}^\text{P}(r_s) + \left[e_\text{c}^\text{F}(r_s) - e_\text{c}^\text{P}(r_s)\right] f_\text{c}(\zeta)"></span>
+  </span>
+</a>. This is the version used in <code>hyb\_gga\_xc\_b3lyp</code> as implemented in Libxc.</p>
+<p>&#8226; <a class="functional-link" href="../lda-c-vwn-1/"><code>lda_c_vwn_1</code></a> uses <a class="review-eq-link" href="#review-eq-eq-ldacvwn">
+  <code>eq:ldacvwn</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="G(y) = A\bigg\{\ln\frac{y^2}{X(y)} + \frac{2b}{Q}\arctan\frac{Q}{2y+b}
+ \\
+  -\frac{by_0}{X(y_0)}\bigg[\ln\frac{(y-y_0)^2}{X(y)} + 2\frac{b+2y_0}{Q}\arctan\frac{Q}{2y+b}\bigg]\bigg\}"></span>
+  </span>
+</a> with the MC coefficients, but uses the older spin-interpolation formula of <a class="functional-link" href="../lda-c-vbh/"><code>lda_c_vbh</code></a> given by <a class="review-eq-link" href="#review-eq-eq-ldavBHsi">
+  <code>eq:ldavBHsi</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="e_\text{c}^\text{vBH}(r_s,\zeta) =
+  e_\text{c}^\text{P}(r_s) + \left[e_\text{c}^\text{F}(r_s) - e_\text{c}^\text{P}(r_s)\right] f_\text{c}(\zeta)"></span>
+  </span>
+</a>.</p>
+<p>&#8226; <a class="functional-link" href="../lda-c-vwn-2/"><code>lda_c_vwn_2</code></a> is given by</p>
+<div class="equation" data-tex="e_\text{c}^\text{VWN2}(r_s,\zeta) = e_\text{c}^\text{P, MC}(r_s) \\
+  + \left[e_\text{c}^\text{F, RPA}(r_s) - e_\text{c}^\text{P, RPA}(r_s)\right] f_\text{c}(\zeta)(\zeta^4 - 1)  \\
+  + \left[e_\text{c}^\text{F, MC}(r_s) - e_\text{c}^\text{P, MC}(r_s)\right] f_\text{c}(\zeta) \\
+  +  \frac{f_\text{c}(\zeta)}{f_\text{c}&#39;&#39;(0)}\left(1-\zeta^4\right)\alpha_\text{c}^\text{RPA}(r_s)"></div>
+<p>which uses both MC and RPA coefficients in <a class="review-eq-link" href="#review-eq-eq-ldacvwn">
+  <code>eq:ldacvwn</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="G(y) = A\bigg\{\ln\frac{y^2}{X(y)} + \frac{2b}{Q}\arctan\frac{Q}{2y+b}
+ \\
+  -\frac{by_0}{X(y_0)}\bigg[\ln\frac{(y-y_0)^2}{X(y)} + 2\frac{b+2y_0}{Q}\arctan\frac{Q}{2y+b}\bigg]\bigg\}"></span>
+  </span>
+</a>.</p>
+<p>&#8226; <a class="functional-link" href="../lda-c-vwn-3/"><code>lda_c_vwn_3</code></a> uses the spin interpolation given by <a class="review-eq-link" href="#review-eq-eq-vwnsi">
+  <code>eq:vwnsi</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="e_\text{c}^\text{VWN}(r_s,\zeta) = e_\text{c}^\text{P}(r_s) +
+  \left[e_\text{c}^\text{F}(r_s) - e_\text{c}^\text{P}(r_s)\right] f_\text{c}(\zeta)\zeta^4 \\
+ +  \frac{f_\text{c}(\zeta)}{f_\text{c}&#39;&#39;(0)}\left(1-\zeta^4\right)\alpha_\text{c}(r_s)"></span>
+  </span>
+</a> with the MC coefficients, but with a spin-stiffness coefficient that is rescaled as follows:</p>
+<div class="equation" data-tex="\alpha^\text{VWN3}_\text{c}(r_s) =  \alpha^\text{RPA}_\text{c}(r_s) \\
+ \times\frac{e_\text{c}^\text{F, MC}(r_s) - e_\text{c}^\text{P, MC}(r_s)}
+  {e_\text{c}^\text{F, RPA}(r_s) - e_\text{c}^\text{P, RPA}(r_s)}"></div>
+<p>This amounts to the assumption that the spin-dependence of the correlation energy is the same as for the RPA for fixed $r_s$. This is the version used in <code>hyb\_gga\_xc\_b3lyp3</code> as implemented in Libxc.</p>
+<p>&#8226; <a class="functional-link" href="../lda-c-vwn-4/"><code>lda_c_vwn_4</code></a> uses the spin interpolation of <a class="review-eq-link" href="#review-eq-eq-vwnsi">
+  <code>eq:vwnsi</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="e_\text{c}^\text{VWN}(r_s,\zeta) = e_\text{c}^\text{P}(r_s) +
+  \left[e_\text{c}^\text{F}(r_s) - e_\text{c}^\text{P}(r_s)\right] f_\text{c}(\zeta)\zeta^4 \\
+ +  \frac{f_\text{c}(\zeta)}{f_\text{c}&#39;&#39;(0)}\left(1-\zeta^4\right)\alpha_\text{c}(r_s)"></span>
+  </span>
+</a> with the MC coefficients in <a class="review-eq-link" href="#review-eq-eq-ldacvwn">
+  <code>eq:ldacvwn</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="G(y) = A\bigg\{\ln\frac{y^2}{X(y)} + \frac{2b}{Q}\arctan\frac{Q}{2y+b}
+ \\
+  -\frac{by_0}{X(y_0)}\bigg[\ln\frac{(y-y_0)^2}{X(y)} + 2\frac{b+2y_0}{Q}\arctan\frac{Q}{2y+b}\bigg]\bigg\}"></span>
+  </span>
+</a>, with the exception of the spin stiffness $\alpha_{\text{c}}$ that is calculated at the RPA level.</p>
+<p></p>
+        </div>
+        <p class="source-note">Adapted from <a href="https://arxiv.org/abs/2602.17333">Tran, Lehtola, Pittalis, and Marques, <em>Semi-Local Exchange-Correlation Approximations in Density Functional Theory</em>, arXiv:2602.17333</a>.</p>
+      </section>
+
+        <section class="section">
+          <h2>Referenced Review Equations</h2>
+          <div class="review-equations">
+          <article class="review-equation-card" id="review-eq-eq-fzeta">
+            <code>eq:fzeta</code>
+            <div class="equation" data-tex="f_\text{c}(\zeta) = \frac{\phi_{4/3}(\zeta) - 1}{2^{1/3} - 1}"></div>
+          </article>
+
+          <article class="review-equation-card" id="review-eq-eq-ldacvwn">
+            <code>eq:ldacvwn</code>
+            <div class="equation" data-tex="G(y) = A\bigg\{\ln\frac{y^2}{X(y)} + \frac{2b}{Q}\arctan\frac{Q}{2y+b}
+ \\
+  -\frac{by_0}{X(y_0)}\bigg[\ln\frac{(y-y_0)^2}{X(y)} + 2\frac{b+2y_0}{Q}\arctan\frac{Q}{2y+b}\bigg]\bigg\}"></div>
+          </article>
+
+          <article class="review-equation-card" id="review-eq-eq-vwnsi">
+            <code>eq:vwnsi</code>
+            <div class="equation" data-tex="e_\text{c}^\text{VWN}(r_s,\zeta) = e_\text{c}^\text{P}(r_s) +
+  \left[e_\text{c}^\text{F}(r_s) - e_\text{c}^\text{P}(r_s)\right] f_\text{c}(\zeta)\zeta^4 \\
+ +  \frac{f_\text{c}(\zeta)}{f_\text{c}&#39;&#39;(0)}\left(1-\zeta^4\right)\alpha_\text{c}(r_s)"></div>
+          </article>
+
+          <article class="review-equation-card" id="review-eq-eq-ldavBHsi">
+            <code>eq:ldavBHsi</code>
+            <div class="equation" data-tex="e_\text{c}^\text{vBH}(r_s,\zeta) =
+  e_\text{c}^\text{P}(r_s) + \left[e_\text{c}^\text{F}(r_s) - e_\text{c}^\text{P}(r_s)\right] f_\text{c}(\zeta)"></div>
+          </article>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <h2>Review References</h2>
+          <ol class="review-refs"><li id="review-ref-Vosko1980-1200" value="422">Vosko, S. H.; Wilk, L.; Nusair, M. Accurate spin-dependent electron liquid correlation energies for local spin density calculations: a critical analysis. <em>Can. J. Phys.</em> <strong>1980</strong>, <em>58</em>, 1200, DOI: <a href="https://doi.org/10.1139/p80-159">10.1139/p80-159</a></li>
+<li id="review-ref-Ceperley1980-566" value="397">Ceperley, D. M.; Alder, B. J. Ground State of the Electron Gas by a Stochastic Method. <em>Phys. Rev. Lett.</em> <strong>1980</strong>, <em>45</em>, 566--569, DOI: <a href="https://doi.org/10.1103/PhysRevLett.45.566">10.1103/PhysRevLett.45.566</a></li>
+<li id="review-ref-Lehtola2023-JCP-114116" value="139">Lehtola, S.; Marques, M. A. L. Reproducibility of density functional approximations: How new functionals should be reported. <em>J. Chem. Phys.</em> <strong>2023</strong>, <em>159</em>, 114116, DOI: <a href="https://doi.org/10.1063/5.0167763">10.1063/5.0167763</a></li>
+<li id="review-ref-Stephens1994-11623" value="423">Stephens, P. J.; Devlin, F. J.; Chabalowski, C. F.; Frisch, M. J. Ab Initio Calculation of Vibrational Absorption and Circular Dichroism Spectra Using Density Functional Force Fields. <em>J. Phys. Chem.</em> <strong>1994</strong>, <em>98</em>, 11623, DOI: <a href="https://doi.org/10.1021/j100096a001">10.1021/j100096a001</a></li>
+<li id="review-ref-Hertwig1997-345" value="424">Hertwig, R. H.; Koch, W. On the parameterization of the local correlation functional. What is Becke-3-LYP? <em>Chem. Phys. Lett.</em> <strong>1997</strong>, <em>268</em>, 345--351, DOI: <a href="https://doi.org/10.1016/s0009-2614(97)00207-8">10.1016/s0009-2614(97)00207-8</a></li></ol>
+        </section>
+
+        <section class="section">
+          <h2>Publications</h2>
+          <ol class="publication-refs"><li>Vosko, S. H.; Wilk, L.; Nusair, M. Accurate spin-dependent electron liquid correlation energies for local spin density calculations: a critical analysis. <em>Can. J. Phys.</em> <strong>1980</strong>, <em>58</em>, 1200, DOI: <a href="https://doi.org/10.1139/p80-159">10.1139/p80-159</a></li></ol>
+        </section>
+
+        <section class="section">
+          <div class="section-heading">
+            <h2>BibTeX</h2>
+            <button class="copy-button" type="button" data-copy-target="bibtex-code" aria-label="Copy BibTeX">Copy</button>
+          </div>
+          <pre><code id="bibtex-code">@article{Vosko1980_1200,
+  author = {Vosko, S. H. and Wilk, L. and Nusair, M.},
+  title = {Accurate spin-dependent electron liquid correlation energies for local spin density calculations: a critical analysis},
+  journal = {Can. J. Phys.},
+  volume = {58},
+  number = {8},
+  pages = {1200},
+  year = {1980},
+  doi = {10.1139/p80-159},
+  url = {http://www.nrcresearchpress.com/doi/abs/10.1139/p80-159}
+}
+</code></pre>
+        </section>
+
+        <details>
+          <summary>All Libxc metadata</summary>
+          <dl class="metadata">
+            <dt>identifier</dt><dd>lda_c_vwn_3</dd>
+            <dt>family</dt><dd>lda</dd>
+            <dt>kind</dt><dd>correlation</dd>
+            <dt>derivatives</dt><dd>0, 1, 2</dd>
+            <dt>flags</dt><dd>dim3, exc, fxc, vxc, enforce_fhc</dd>
+<dt>cam_alpha</dt><dd>null</dd>
+<dt>cam_beta</dt><dd>null</dd>
+<dt>cam_omega</dt><dd>null</dd>
+<dt>density_threshold</dt><dd>1.0e-15</dd>
+<dt>exx_coefficient</dt><dd>null</dd>
+<dt>n_spin</dt><dd>1</dd>
+<dt>nlc_C</dt><dd>null</dd>
+<dt>nlc_b</dt><dd>null</dd>
+<dt>sigma_threshold</dt><dd>1.0000000000000027e-20</dd>
+<dt>tau_threshold</dt><dd>1.0e-20</dd>
+<dt>zeta_threshold</dt><dd>2.220446049250313e-16</dd>
+          </dl>
+        </details>
+      </div>
+
+    </main>
+    <div id="command-palette" class="command-palette" aria-hidden="true" hidden>
+      <div class="command-backdrop" data-command-close></div>
+      <form class="command-panel" role="search">
+        <div class="search-box">
+          <input id="command-search" class="search-input command-search-input" type="search" autocomplete="off" placeholder="Search functionals..." aria-controls="command-search-suggestions">
+          <div id="command-search-suggestions" class="search-suggestions command-search-suggestions" role="listbox" hidden></div>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

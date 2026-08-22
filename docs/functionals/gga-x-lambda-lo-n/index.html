@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>gga_x_lambda_lo_n</title>
+    <link rel="stylesheet" href="../../assets/styles.css?v=20260822-github">
+    <script defer src="../../assets/search.js?v=20260822-github"></script>
+    <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+    <script defer src="../../vendor/katex/katex.min.js"></script>
+    <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
+    <script defer src="../../assets/detail.js?v=20260822-github"></script>
+
+  </head>
+  <body>
+    <main class="shell">
+      <form class="global-search" role="search" action="../../" method="get">
+        <div class="search-box">
+          <input class="search-input global-search-input" name="q" type="search" autocomplete="off" placeholder="Search functionals..." aria-controls="global-search-suggestions">
+          <span class="search-shortcut" aria-hidden="true">Ctrl K</span>
+          <div id="global-search-suggestions" class="search-suggestions" role="listbox" hidden></div>
+        </div>
+      </form>
+
+      <a class="back" href="../../">Back to search</a>
+      <header class="top">
+        <a class="github-link" href="https://github.com/aouinaayoub/libxc-wiki" aria-label="View Libxc Wiki on GitHub" title="View source on GitHub">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .7a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2.23c-3.22.7-3.9-1.37-3.9-1.37-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.71.08-.71 1.16.08 1.78 1.2 1.78 1.2 1.04 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.74-1.55-2.57-.29-5.27-1.29-5.27-5.69 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.16 1.18a10.94 10.94 0 0 1 5.76 0c2.19-1.49 3.16-1.18 3.16-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.42-2.71 5.39-5.29 5.68.42.36.79 1.07.79 2.16v3.2c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .7Z"/></svg>
+        </a>
+
+        <p class="brand">GGA</p>
+        <h1><code class="title-code">gga_x_lambda_lo_n</code></h1>
+        <div class="detail-tags"><span class="tag">gga</span>
+<span class="tag">exchange</span></div>
+      </header>
+
+      <div class="detail-grid">
+      <section class="callout">
+        <p class="callout-label">Review excerpt</p>
+        <div class="review-html">
+<p>These five functionals, based on the <a class="functional-link" href="../gga-x-pbe/"><code>gga_x_pbe</code></a> form, were obtained by revisiting the LO bound. Known properties about the bound for systems with various numbers of electrons $N$ are the following:</p>
+<div class="equation" data-tex="\begin{aligned}
+\lambda(N=1) &amp; = 1.48 \\
+  \lambda(N=2) &amp; &gt; 1.67 \\
+  \lambda(N+1) &amp; \ge \lambda(N) \\
+  \lambda(N\to\infty) &amp; \le \lambda_\infty
+\end{aligned}"></div>
+<p>with $\lambda_\infty$ a constant for which several values have been proposed: $\lambda_{\text{LO}}=2.273$,<sup class="citation-marker"><a href="#review-ref-Lieb1981-427">167</a></sup> $\lambda_{\text{CH}}=2.215$,<sup class="citation-marker"><a href="#review-ref-Chan1999-3075">191</a></sup> and $\lambda_{\text{OC2}}=2.00$.<sup class="citation-marker"><a href="#review-ref-Odashima2007-054106">194</a>,<a href="#review-ref-Odashima2008-13">200</a></sup> Odashima et al.<sup class="citation-marker"><a href="#review-ref-Odashima2009-798">547</a></sup> used these known properties to propose a $N$-dependent tight bound:</p>
+<div class="equation" data-tex="\lambda(N,\lambda_\infty) = \left(1-\frac{1}{N}\right)\lambda_\infty
+  +\frac{\lambda(N=1)}{N}"></div>
+<p>which can be easily used in <a class="review-eq-link" href="#review-eq-eq-pbeenh">
+  <code>eq:pbeenh</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="F_\text{x}^{\text{PBE}} = 1 + \kappa\left[1 - \frac{\kappa}{\kappa + f_0(s_\sigma)}\right]"></span>
+  </span>
+</a> by noticing that the $\kappa$ parameter is simply related to $\lambda$ by</p>
+<div class="equation" data-tex="\kappa = \frac{\lambda}{2^{1/3}} - 1"></div>
+<p>By using the above choices, five new variants of <a class="functional-link" href="../gga-x-pbe/"><code>gga_x_pbe</code></a> were proposed:    &#8226; PBE$(\lambda_\text{CH})$: <a class="review-eq-link" href="#review-eq-eq-kappalambda">
+  <code>eq:kappalambda</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="\kappa = \frac{\lambda}{2^{1/3}} - 1"></span>
+  </span>
+</a> with $\lambda=\lambda_\text{CH}$.   &#8226; PBE$(\lambda_\text{OC2})$: <a class="review-eq-link" href="#review-eq-eq-kappalambda">
+  <code>eq:kappalambda</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="\kappa = \frac{\lambda}{2^{1/3}} - 1"></span>
+  </span>
+</a> with $\lambda=\lambda_\text{OC2}$.   &#8226; PBE$(\lambda_\text{LO}(N))$: <a class="review-eq-link" href="#review-eq-eq-colambda">
+  <code>eq:colambda</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="\lambda(N,\lambda_\infty) = \left(1-\frac{1}{N}\right)\lambda_\infty
+  +\frac{\lambda(N=1)}{N}"></span>
+  </span>
+</a>; <a class="review-eq-link" href="#review-eq-eq-kappalambda">
+  <code>eq:kappalambda</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="\kappa = \frac{\lambda}{2^{1/3}} - 1"></span>
+  </span>
+</a> with $\lambda_\infty=\lambda_\text{LO}$.   &#8226; PBE$(\lambda_\text{CH}(N))$: <a class="review-eq-link" href="#review-eq-eq-colambda">
+  <code>eq:colambda</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="\lambda(N,\lambda_\infty) = \left(1-\frac{1}{N}\right)\lambda_\infty
+  +\frac{\lambda(N=1)}{N}"></span>
+  </span>
+</a>; <a class="review-eq-link" href="#review-eq-eq-kappalambda">
+  <code>eq:kappalambda</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="\kappa = \frac{\lambda}{2^{1/3}} - 1"></span>
+  </span>
+</a> with $\lambda_\infty=\lambda_\text{CH}$.   &#8226; PBE$(\lambda_\text{OC2}(N))$: <a class="review-eq-link" href="#review-eq-eq-colambda">
+  <code>eq:colambda</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="\lambda(N,\lambda_\infty) = \left(1-\frac{1}{N}\right)\lambda_\infty
+  +\frac{\lambda(N=1)}{N}"></span>
+  </span>
+</a>; <a class="review-eq-link" href="#review-eq-eq-kappalambda">
+  <code>eq:kappalambda</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="\kappa = \frac{\lambda}{2^{1/3}} - 1"></span>
+  </span>
+</a> with $\lambda_\infty=\lambda_\text{OC2}$.  Let us recall that the original <a class="functional-link" href="../gga-x-pbe/"><code>gga_x_pbe</code></a> corresponds to <a class="review-eq-link" href="#review-eq-eq-kappalambda">
+  <code>eq:kappalambda</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="\kappa = \frac{\lambda}{2^{1/3}} - 1"></span>
+  </span>
+</a> with $\lambda=\lambda_\text{LO}$. It was found that atomization energies and bond lengths of molecules are rather insensitive to the choice of the LO bound.</p>
+<p>The <a class="functional-link" href="../gga-x-lambda-lo-n/"><code>gga_x_lambda_lo_n</code></a>, <a class="functional-link" href="../gga-x-lambda-ch-n/"><code>gga_x_lambda_ch_n</code></a>, and <a class="functional-link" href="../gga-x-lambda-oc2-n/"><code>gga_x_lambda_oc2_n</code></a> functionals are implemented in Libxc with $N$ in <a class="review-eq-link" href="#review-eq-eq-colambda">
+  <code>eq:colambda</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="\lambda(N,\lambda_\infty) = \left(1-\frac{1}{N}\right)\lambda_\infty
+  +\frac{\lambda(N=1)}{N}"></span>
+  </span>
+</a> handled as a user-defined parameter, that is set to $N=\infty$ by default, which leads to <a class="functional-link" href="../gga-x-pbe/"><code>gga_x_pbe</code></a>, <code>gga_x_lambda_ch</code>, and <code>gga_x_lambda_oc2</code>, respectively. The explicit dependence on the number of electrons $N$ makes these functionals formally not semi-local functionals (see discussion for <a class="functional-link" href="../lda-x-rae/"><code>lda_x_rae</code></a>).</p>
+        </div>
+        <p class="source-note">Adapted from <a href="https://arxiv.org/abs/2602.17333">Tran, Lehtola, Pittalis, and Marques, <em>Semi-Local Exchange-Correlation Approximations in Density Functional Theory</em>, arXiv:2602.17333</a>.</p>
+      </section>
+
+        <section class="section">
+          <h2>Referenced Review Equations</h2>
+          <div class="review-equations">
+          <article class="review-equation-card" id="review-eq-eq-pbeenh">
+            <code>eq:pbeenh</code>
+            <div class="equation" data-tex="F_\text{x}^{\text{PBE}} = 1 + \kappa\left[1 - \frac{\kappa}{\kappa + f_0(s_\sigma)}\right]"></div>
+          </article>
+
+          <article class="review-equation-card" id="review-eq-eq-kappalambda">
+            <code>eq:kappalambda</code>
+            <div class="equation" data-tex="\kappa = \frac{\lambda}{2^{1/3}} - 1"></div>
+          </article>
+
+          <article class="review-equation-card" id="review-eq-eq-colambda">
+            <code>eq:colambda</code>
+            <div class="equation" data-tex="\lambda(N,\lambda_\infty) = \left(1-\frac{1}{N}\right)\lambda_\infty
+  +\frac{\lambda(N=1)}{N}"></div>
+          </article>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <h2>Review References</h2>
+          <ol class="review-refs"><li id="review-ref-Lieb1981-427" value="167">Lieb, E. H.; Oxford, S. Improved lower bound on the indirect Coulomb energy. <em>Int. J. Quantum Chem.</em> <strong>1981</strong>, <em>19</em>, 427--439, DOI: <a href="https://doi.org/10.1002/qua.560190306">10.1002/qua.560190306</a></li>
+<li id="review-ref-Chan1999-3075" value="191">Chan, G. K.-L.; Handy, N. C. Optimized Lieb-Oxford bound for the exchange-correlation energy. <em>Phys. Rev. A</em> <strong>1999</strong>, <em>59</em>, 3075--3077, DOI: <a href="https://doi.org/10.1103/PhysRevA.59.3075">10.1103/PhysRevA.59.3075</a></li>
+<li id="review-ref-Odashima2007-054106" value="194">Odashima, M. M.; Capelle, K. How tight is the Lieb-Oxford bound? <em>J. Chem. Phys.</em> <strong>2007</strong>, <em>127</em>, 054106, DOI: <a href="https://doi.org/10.1063/1.2759202">10.1063/1.2759202</a></li>
+<li id="review-ref-Odashima2008-13" value="200">Odashima, M. M.; Capelle, K. Empirical analysis of the Lieb-Oxford bound in ions and molecules. <em>Int. J. Quantum Chem.</em> <strong>2008</strong>, <em>108</em>, 2428--2432, DOI: <a href="https://doi.org/10.1002/qua.21677">10.1002/qua.21677</a></li>
+<li id="review-ref-Odashima2009-798" value="547">Odashima, M. M.; Capelle, K.; Trickey, S. B. Tightened Lieb--Oxford Bound for Systems of Fixed Particle Number. <em>J. Chem. Theory Comput.</em> <strong>2009</strong>, <em>5</em>, 798--807, DOI: <a href="https://doi.org/10.1021/ct8005634">10.1021/ct8005634</a></li></ol>
+        </section>
+
+        <section class="section">
+          <h2>Publications</h2>
+          <ol class="publication-refs"><li>Odashima, M. M.; Capelle, K.; Trickey, S. B. Tightened Lieb--Oxford Bound for Systems of Fixed Particle Number. <em>J. Chem. Theory Comput.</em> <strong>2009</strong>, <em>5</em>, 798--807, DOI: <a href="https://doi.org/10.1021/ct8005634">10.1021/ct8005634</a></li></ol>
+        </section>
+
+        <section class="section">
+          <div class="section-heading">
+            <h2>BibTeX</h2>
+            <button class="copy-button" type="button" data-copy-target="bibtex-code" aria-label="Copy BibTeX">Copy</button>
+          </div>
+          <pre><code id="bibtex-code">@article{Odashima2009_798,
+  author = {Odashima, Mariana M. and Capelle, K. and Trickey, S. B.},
+  title = {Tightened {Lieb}--{Oxford} Bound for Systems of Fixed Particle Number},
+  journal = {J. Chem. Theory Comput.},
+  volume = {5},
+  number = {4},
+  pages = {798-807},
+  year = {2009},
+  doi = {10.1021/ct8005634},
+  url = {https://doi.org/10.1021/ct8005634}
+}
+</code></pre>
+        </section>
+
+        <details>
+          <summary>All Libxc metadata</summary>
+          <dl class="metadata">
+            <dt>identifier</dt><dd>gga_x_lambda_lo_n</dd>
+            <dt>family</dt><dd>gga</dd>
+            <dt>kind</dt><dd>exchange</dd>
+            <dt>derivatives</dt><dd>0, 1, 2</dd>
+            <dt>flags</dt><dd>dim3, exc, fxc, vxc, enforce_fhc</dd>
+<dt>cam_alpha</dt><dd>null</dd>
+<dt>cam_beta</dt><dd>null</dd>
+<dt>cam_omega</dt><dd>null</dd>
+<dt>density_threshold</dt><dd>1.0e-15</dd>
+<dt>exx_coefficient</dt><dd>null</dd>
+<dt>n_spin</dt><dd>1</dd>
+<dt>nlc_C</dt><dd>null</dd>
+<dt>nlc_b</dt><dd>null</dd>
+<dt>sigma_threshold</dt><dd>1.0000000000000027e-20</dd>
+<dt>tau_threshold</dt><dd>1.0e-20</dd>
+<dt>zeta_threshold</dt><dd>2.220446049250313e-16</dd>
+          </dl>
+        </details>
+      </div>
+
+    </main>
+    <div id="command-palette" class="command-palette" aria-hidden="true" hidden>
+      <div class="command-backdrop" data-command-close></div>
+      <form class="command-panel" role="search">
+        <div class="search-box">
+          <input id="command-search" class="search-input command-search-input" type="search" autocomplete="off" placeholder="Search functionals..." aria-controls="command-search-suggestions">
+          <div id="command-search-suggestions" class="search-suggestions command-search-suggestions" role="listbox" hidden></div>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

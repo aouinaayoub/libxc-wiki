@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>mgga_c_m11_l</title>
+    <link rel="stylesheet" href="../../assets/styles.css?v=20260822-github">
+    <script defer src="../../assets/search.js?v=20260822-github"></script>
+    <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+    <script defer src="../../vendor/katex/katex.min.js"></script>
+    <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
+    <script defer src="../../assets/detail.js?v=20260822-github"></script>
+
+  </head>
+  <body>
+    <main class="shell">
+      <form class="global-search" role="search" action="../../" method="get">
+        <div class="search-box">
+          <input class="search-input global-search-input" name="q" type="search" autocomplete="off" placeholder="Search functionals..." aria-controls="global-search-suggestions">
+          <span class="search-shortcut" aria-hidden="true">Ctrl K</span>
+          <div id="global-search-suggestions" class="search-suggestions" role="listbox" hidden></div>
+        </div>
+      </form>
+
+      <a class="back" href="../../">Back to search</a>
+      <header class="top">
+        <a class="github-link" href="https://github.com/aouinaayoub/libxc-wiki" aria-label="View Libxc Wiki on GitHub" title="View source on GitHub">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .7a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2.23c-3.22.7-3.9-1.37-3.9-1.37-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.71.08-.71 1.16.08 1.78 1.2 1.78 1.2 1.04 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.74-1.55-2.57-.29-5.27-1.29-5.27-5.69 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.16 1.18a10.94 10.94 0 0 1 5.76 0c2.19-1.49 3.16-1.18 3.16-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.42-2.71 5.39-5.29 5.68.42.36.79 1.07.79 2.16v3.2c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .7Z"/></svg>
+        </a>
+
+        <p class="brand">META-GGA</p>
+        <h1><code class="title-code">mgga_c_m11_l</code></h1>
+        <div class="detail-tags"><span class="tag">meta-gga</span>
+<span class="tag">correlation</span></div>
+      </header>
+
+      <div class="detail-grid">
+      <section class="callout">
+        <p class="callout-label">Review excerpt</p>
+        <div class="review-html">
+<p>This functional has the same analytical form as the correlation component of the M08-HX and M08-SO hybrid functionals.<sup class="citation-marker"><a href="#review-ref-Zhao2008-1849">795</a></sup> The tradition of using the Stoll ansatz (see the review) to describe separately the opposite- and parallel-spin contributions to the correlation energy is here not followed, as this had been shown to be inaccurate for the HEG.<sup class="citation-marker"><a href="#review-ref-GoriGiorgi2004-041103">388</a></sup> Consequently, the self-interaction correction factor $1-z_\sigma$ (used in <a class="functional-link" href="../mgga-c-m06-l/"><code>mgga_c_m06_l</code></a> for instance) is also not used, since it can lead to convergence problems.<sup class="citation-marker"><a href="#review-ref-Grafenstein2007-214103">796</a></sup> Instead, an interpolation between the <a class="functional-link" href="../lda-c-pw/"><code>lda_c_pw</code></a> and <a class="functional-link" href="../gga-c-pbe/"><code>gga_c_pbe</code></a> functionals is used:</p>
+<div class="equation" data-tex="e_\text{c}^\text{M08} = \sum_{i=0}^m c_i w^i e_\text{c}^\text{PW-LDA} + 
+  \sum_{i=0}^m d_i w^i H_0"></div>
+<p>where $H_0$ is the gradient correction of <a class="functional-link" href="../gga-c-pbe/"><code>gga_c_pbe</code></a> (see <a class="review-eq-link" href="#review-eq-eq-ecpbe">
+  <code>eq:ecpbe</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="e_\text{c}^{\text{PBE}} = e_\text{c}^\text{PW-LDA}(r_s, \zeta) + H_0(\phi_{2/3}, t, A)"></span>
+  </span>
+</a>). The variable $w$ is defined by <a class="review-eq-link" href="#review-eq-eq-b00wnospin">
+  <code>eq:b00wnospin</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="w = \frac{\tau^\text{TF} - \tau}{\tau^\text{TF} + \tau} 
+  = \frac{C_\text{F} - 2^{2/3}\tilde{t}}{C_\text{F} +  2^{2/3}\tilde{t}}"></span>
+  </span>
+</a> and $m=8$ is chosen for the sums in the case of <a class="functional-link" href="../mgga-c-m11-l/"><code>mgga_c_m11_l</code></a>, while $m=11$ was chosen for M08-HX and M08-SO.<sup class="citation-marker"><a href="#review-ref-Zhao2008-1849">795</a></sup> The parameters $c_i$ and $d_i$ were fit together with the parameters in the associated exchange functional, <a class="functional-link" href="../mgga-x-m11-l/"><code>mgga_x_m11_l</code></a>. The correct HEG limit (LDA, represented by <a class="functional-link" href="../lda-c-pw/"><code>lda_c_pw</code></a>) and the second-order term in the density-gradient expansion were used as constraints for the parameters.</p>
+        </div>
+        <p class="source-note">Adapted from <a href="https://arxiv.org/abs/2602.17333">Tran, Lehtola, Pittalis, and Marques, <em>Semi-Local Exchange-Correlation Approximations in Density Functional Theory</em>, arXiv:2602.17333</a>.</p>
+      </section>
+
+        <section class="section">
+          <h2>Referenced Review Equations</h2>
+          <div class="review-equations">
+          <article class="review-equation-card" id="review-eq-eq-ecpbe">
+            <code>eq:ecpbe</code>
+            <div class="equation" data-tex="e_\text{c}^{\text{PBE}} = e_\text{c}^\text{PW-LDA}(r_s, \zeta) + H_0(\phi_{2/3}, t, A)"></div>
+          </article>
+
+          <article class="review-equation-card" id="review-eq-eq-b00wnospin">
+            <code>eq:b00wnospin</code>
+            <div class="equation" data-tex="w = \frac{\tau^\text{TF} - \tau}{\tau^\text{TF} + \tau} 
+  = \frac{C_\text{F} - 2^{2/3}\tilde{t}}{C_\text{F} +  2^{2/3}\tilde{t}}"></div>
+          </article>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <h2>Review References</h2>
+          <ol class="review-refs"><li id="review-ref-Zhao2008-1849" value="795">Zhao, Y.; Truhlar, D. G. Exploring the Limit of Accuracy of the Global Hybrid Meta Density Functional for Main-Group Thermochemistry, Kinetics, and Noncovalent Interactions. <em>J. Chem. Theory Comput.</em> <strong>2008</strong>, <em>4</em>, 1849, DOI: <a href="https://doi.org/10.1021/ct800246v">10.1021/ct800246v</a></li>
+<li id="review-ref-GoriGiorgi2004-041103" value="388">Gori-Giorgi, P.; Perdew, J. P. Spin resolution of the electron-gas correlation energy: Positive same spin contributions. <em>Phys. Rev. B</em> <strong>2004</strong>, <em>69</em>, 041103, DOI: <a href="https://doi.org/10.1103/PhysRevB.69.041103">10.1103/PhysRevB.69.041103</a></li>
+<li id="review-ref-Grafenstein2007-214103" value="796">Gräfenstein, J.; Izotov, D.; Cremer, D. Avoiding singularity problems associated with meta-GGA (generalized gradient approximation) exchange and correlation functionals containing the kinetic energy density. <em>J. Chem. Phys.</em> <strong>2007</strong>, <em>127</em>, 214103, DOI: <a href="https://doi.org/10.1063/1.2800011">10.1063/1.2800011</a></li></ol>
+        </section>
+
+        <section class="section">
+          <h2>Publications</h2>
+          <ol class="publication-refs"><li>Peverati, R.; Truhlar, D. G. M11-L: A Local Density Functional That Provides Improved Accuracy for Electronic Structure Calculations in Chemistry and Physics. <em>J. Phys. Chem. Lett.</em> <strong>2012</strong>, <em>3</em>, 117, DOI: <a href="https://doi.org/10.1021/jz201525m">10.1021/jz201525m</a></li></ol>
+        </section>
+
+        <section class="section">
+          <div class="section-heading">
+            <h2>BibTeX</h2>
+            <button class="copy-button" type="button" data-copy-target="bibtex-code" aria-label="Copy BibTeX">Copy</button>
+          </div>
+          <pre><code id="bibtex-code">@article{Peverati2012_117,
+  author = {Peverati, R. and Truhlar, D. G.},
+  title = {{M11}-{L}: A Local Density Functional That Provides Improved Accuracy for Electronic Structure Calculations in Chemistry and Physics},
+  journal = {J. Phys. Chem. Lett.},
+  volume = {3},
+  number = {1},
+  pages = {117},
+  year = {2012},
+  doi = {10.1021/jz201525m},
+  url = {http://pubs.acs.org/doi/abs/10.1021/jz201525m}
+}
+</code></pre>
+        </section>
+
+        <details>
+          <summary>All Libxc metadata</summary>
+          <dl class="metadata">
+            <dt>identifier</dt><dd>mgga_c_m11_l</dd>
+            <dt>family</dt><dd>meta-gga</dd>
+            <dt>kind</dt><dd>correlation</dd>
+            <dt>derivatives</dt><dd>0, 1, 2</dd>
+            <dt>flags</dt><dd>dim3, exc, fxc, vxc, needs_tau, enforce_fhc</dd>
+<dt>cam_alpha</dt><dd>null</dd>
+<dt>cam_beta</dt><dd>null</dd>
+<dt>cam_omega</dt><dd>null</dd>
+<dt>density_threshold</dt><dd>1.0e-15</dd>
+<dt>exx_coefficient</dt><dd>null</dd>
+<dt>n_spin</dt><dd>1</dd>
+<dt>nlc_C</dt><dd>null</dd>
+<dt>nlc_b</dt><dd>null</dd>
+<dt>sigma_threshold</dt><dd>1.0000000000000027e-20</dd>
+<dt>tau_threshold</dt><dd>1.0e-20</dd>
+<dt>zeta_threshold</dt><dd>2.220446049250313e-16</dd>
+          </dl>
+        </details>
+      </div>
+
+    </main>
+    <div id="command-palette" class="command-palette" aria-hidden="true" hidden>
+      <div class="command-backdrop" data-command-close></div>
+      <form class="command-panel" role="search">
+        <div class="search-box">
+          <input id="command-search" class="search-input command-search-input" type="search" autocomplete="off" placeholder="Search functionals..." aria-controls="command-search-suggestions">
+          <div id="command-search-suggestions" class="search-suggestions command-search-suggestions" role="listbox" hidden></div>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

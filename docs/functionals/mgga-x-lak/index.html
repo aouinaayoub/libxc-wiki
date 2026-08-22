@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>mgga_x_lak</title>
+    <link rel="stylesheet" href="../../assets/styles.css?v=20260822-github">
+    <script defer src="../../assets/search.js?v=20260822-github"></script>
+    <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+    <script defer src="../../vendor/katex/katex.min.js"></script>
+    <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
+    <script defer src="../../assets/detail.js?v=20260822-github"></script>
+
+  </head>
+  <body>
+    <main class="shell">
+      <form class="global-search" role="search" action="../../" method="get">
+        <div class="search-box">
+          <input class="search-input global-search-input" name="q" type="search" autocomplete="off" placeholder="Search functionals..." aria-controls="global-search-suggestions">
+          <span class="search-shortcut" aria-hidden="true">Ctrl K</span>
+          <div id="global-search-suggestions" class="search-suggestions" role="listbox" hidden></div>
+        </div>
+      </form>
+
+      <a class="back" href="../../">Back to search</a>
+      <header class="top">
+        <a class="github-link" href="https://github.com/aouinaayoub/libxc-wiki" aria-label="View Libxc Wiki on GitHub" title="View source on GitHub">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .7a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2.23c-3.22.7-3.9-1.37-3.9-1.37-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.71.08-.71 1.16.08 1.78 1.2 1.78 1.2 1.04 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.74-1.55-2.57-.29-5.27-1.29-5.27-5.69 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.16 1.18a10.94 10.94 0 0 1 5.76 0c2.19-1.49 3.16-1.18 3.16-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.42-2.71 5.39-5.29 5.68.42.36.79 1.07.79 2.16v3.2c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .7Z"/></svg>
+        </a>
+
+        <p class="brand">META-GGA</p>
+        <h1><code class="title-code">mgga_x_lak</code></h1>
+        <div class="detail-tags"><span class="tag">meta-gga</span>
+<span class="tag">exchange</span></div>
+      </header>
+
+      <div class="detail-grid">
+      <section class="callout">
+        <p class="callout-label">Review excerpt</p>
+        <div class="review-html">
+<p>Lebeda et al.<sup class="citation-marker"><a href="#review-ref-Lebeda2024-136402">337</a></sup> constructed a functional that is based on a careful examination of the relative weight of the contributions from the density gradient and kinetic-energy density to the density-gradient expansions of exchange and correlation. Their goal was to demonstrate that it is possible to get accurate results at the MGGA level for standard molecular properties (atomization energies and bond lengths), like SCAN (<a class="functional-link" href="../mgga-x-scan/"><code>mgga_x_scan</code></a> + <a class="functional-link" href="../mgga-c-scan/"><code>mgga_c_scan</code></a>) does, and the band gaps of solids, with <a class="functional-link" href="../mgga-x-task/"><code>mgga_x_task</code></a> being a good example.</p>
+<p>The enhancement factor of the exchange component of the nonempirical LAK functional has a form similar to <a class="review-eq-link" href="#review-eq-eq-fscan">
+  <code>eq:fscan</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="\begin{aligned}
+F_\text{x}^\text{SCAN} = &amp; \left\{h_{\text{x}}^1(s_\sigma,\alpha_\sigma)
+  + f(\alpha_\sigma)\right.  \\
+
+  &amp; \left.\times\left[h_{\text{x}}^0 - h_{\text{x}}^1(s_\sigma,\alpha_\sigma)\right]\right\}g(s_\sigma)
+\end{aligned}"></span>
+  </span>
+</a> of <a class="functional-link" href="../mgga-x-scan/"><code>mgga_x_scan</code></a> or <a class="review-eq-link" href="#review-eq-eq-ftask">
+  <code>eq:ftask</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="\begin{aligned}
+F_\text{x}^\text{TASK} = &amp; h_{\text{x}}^0 g(s_\sigma) + \left[1-f(\alpha_{\sigma})\right]  \\
+
+  &amp; \times\left[h_{\text{x}}^1(s_\sigma)-h_{\text{x}}^0\right]g^d(s_\sigma)
+\end{aligned}"></span>
+  </span>
+</a> of <a class="functional-link" href="../mgga-x-task/"><code>mgga_x_task</code></a>:</p>
+<div class="equation" data-tex="\begin{aligned}
+F_\text{x}^\text{LAK} = &amp; h_{\text{x}}^0 g(s_\sigma) + \left[1-f(\alpha_{\sigma})\right]  \\
+&amp; \times \left[h_{\text{x}}^1(s_\sigma)-h_{\text{x}}^0\right]g_{\text{num}}(s_\sigma)
+\end{aligned}"></div>
+<p>with the various quantities described as follows. The parameter $h_{\text{x}}^0=1.174$ is fixed by the strongly tightened LO bound,<sup class="citation-marker"><a href="#review-ref-Perdew2014-18A533">725</a></sup> while $g(s_\sigma)$ is given by <a class="review-eq-link" href="#review-eq-eq-g-task">
+  <code>eq:g-task</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="g(s_\sigma) = 1 - \E^{-cs_{\sigma}^{-1/2}}"></span>
+  </span>
+</a> that was parameterized to yield the correct energy of the H atom. The functions</p>
+<div class="equation" data-tex="h_{\text{x}}^1(s_\sigma) = h_{\text{x}}^{\text{GEA4}}(s_\sigma) +
+k_{\text{x}}(s_\sigma)\left[a_{\text{x}}-h_{\text{x}}^{\text{GEA4}}(s_\sigma)\right]"></div>
+<div class="equation" data-tex="f(\alpha_{\sigma}) = \frac{2}{\pi}\arctan\left\{\frac{\pi}{2}\left[c_1\frac{\alpha_\sigma-1}{\alpha_\sigma}+c_2\left(\alpha_\sigma-1\right)^2\right]\right\}"></div>
+<p>have mathematical forms that were guided by the fourth-order density-gradient expansion.<sup class="citation-marker"><a href="#review-ref-Svendsen1996-17402">285</a>,<a href="#review-ref-Aschebrock2019-033082">756</a></sup> In $h_{\text{x}}^1(s_\sigma)$,</p>
+<div class="equation" data-tex="h_{\text{x}}^{\text{GEA4}}(s_\sigma) = 1 + \mu_{s,\text{x}}s_{\sigma}^2 + \nu_{s}s_\sigma^4 +
+h_{\text{x}}^0\left[1-g(s_\sigma)\right]"></div>
+<div class="equation" data-tex="k_{\text{x}}(s_\sigma) = \E^{-1/\left[\left(s_\sigma/a_{\text{x}}\right)^2\left(1+s_\sigma^2\right)\right]}"></div>
+<p>with $a_{\text{x}}=1.1$. In $f(\alpha_{\sigma})$, $c_1=\mu_{\alpha,\text{x}}/\left(h_{\text{x}}^0-1\right)$ and $c_2=\left(\mu_{\alpha,\text{x}}+\nu_{\alpha}\right)/\left(h_{\text{x}}^0-1\right)$. The constants</p>
+<div class="equation" data-tex="\mu_{\alpha,\text{x}} = -\frac{97+3h_{\text{x}}^0 +
+\sqrt{\left(3h_{\text{x}}^0\right)^2+74166h_{\text{x}}^0-64175}}{1200}"></div>
+<p>$\mu_{s,\text{x}}=\left(10+60\mu_{\alpha,\text{x}}\right)/81$, $\nu_{\alpha}=\left(73-50\mu_{\alpha,\text{x}}\right)/5000$, and $\nu_{s}=-\left(1606-50\mu_{\alpha,\text{x}}\right)/18825$ control the relative importance of $\alpha_\sigma$ (i.e., $\tau_\sigma$) and $s_\sigma$ in the density-gradient expansion. Besides the fourth-order density-gradient expansion, other requirements that were involved to derive the functional form are, for instance, <a class="review-eq-link" href="#review-eq-eq-task-alpha">
+  <code>eq:task-alpha</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="\frac{\partial F_{\text{x}}}{\partial\alpha_{\sigma}}&lt;0"></span>
+  </span>
+</a> or a smooth enhancement factor.</p>
+<p>Furthermore, $k_{\text{x}}(s_\sigma)$ was determined from the requirement that $\partial F_{\text{x}}/\partial s_\sigma\vert_{\alpha_{\sigma}=1}$ should be positive for $0.5\lesssim s_\sigma\lesssim1.2$ and negative for $s_\sigma\gtrsim 1.2$. The function $g_{\text{num}}(s_\sigma)$ in <a class="review-eq-link" href="#review-eq-eq-flak">
+  <code>eq:flak</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="\begin{aligned}
+F_\text{x}^\text{LAK} = &amp; h_{\text{x}}^0 g(s_\sigma) + \left[1-f(\alpha_{\sigma})\right]  \\
+
+&amp; \times \left[h_{\text{x}}^1(s_\sigma)-h_{\text{x}}^0\right]g_{\text{num}}(s_\sigma)
+\end{aligned}"></span>
+  </span>
+</a> reads</p>
+<div class="equation" data-tex="g_{\text{num}}(s_\sigma)=1-\E^{-\left(a_{\text{num}}/s_\sigma\right)^2}"></div>
+<p>attenuates the dependence on $\alpha_\sigma$ at large values of $s_\sigma$ in order to reduce numerical instabilities. The value $a_{\text{num}}=5$ was chosen.</p>
+<p>The LAK functional, <a class="functional-link" href="../mgga-x-lak/"><code>mgga_x_lak</code></a> combined with <code>mgga_c_lak</code>, is as accurate as SCAN (<a class="functional-link" href="../mgga-x-scan/"><code>mgga_x_scan</code></a> + <a class="functional-link" href="../mgga-c-scan/"><code>mgga_c_scan</code></a>) for atomization energies and bond lengths of molecules, and as accurate as the HSE06<sup class="citation-marker"><a href="#review-ref-Heyd2003-8207">769</a>,<a href="#review-ref-Heyd2006-219906">770</a>,<a href="#review-ref-Krukau2006-224106">771</a></sup> range-separated hybrid for band gaps smaller than 4 eV.</p>
+        </div>
+        <p class="source-note">Adapted from <a href="https://arxiv.org/abs/2602.17333">Tran, Lehtola, Pittalis, and Marques, <em>Semi-Local Exchange-Correlation Approximations in Density Functional Theory</em>, arXiv:2602.17333</a>.</p>
+      </section>
+
+        <section class="section">
+          <h2>Referenced Review Equations</h2>
+          <div class="review-equations">
+          <article class="review-equation-card" id="review-eq-eq-fscan">
+            <code>eq:fscan</code>
+            <div class="equation" data-tex="\begin{aligned}
+F_\text{x}^\text{SCAN} = &amp; \left\{h_{\text{x}}^1(s_\sigma,\alpha_\sigma)
+  + f(\alpha_\sigma)\right.  \\
+
+  &amp; \left.\times\left[h_{\text{x}}^0 - h_{\text{x}}^1(s_\sigma,\alpha_\sigma)\right]\right\}g(s_\sigma)
+\end{aligned}"></div>
+          </article>
+
+          <article class="review-equation-card" id="review-eq-eq-ftask">
+            <code>eq:ftask</code>
+            <div class="equation" data-tex="\begin{aligned}
+F_\text{x}^\text{TASK} = &amp; h_{\text{x}}^0 g(s_\sigma) + \left[1-f(\alpha_{\sigma})\right]  \\
+
+  &amp; \times\left[h_{\text{x}}^1(s_\sigma)-h_{\text{x}}^0\right]g^d(s_\sigma)
+\end{aligned}"></div>
+          </article>
+
+          <article class="review-equation-card" id="review-eq-eq-g-task">
+            <code>eq:g-task</code>
+            <div class="equation" data-tex="g(s_\sigma) = 1 - \E^{-cs_{\sigma}^{-1/2}}"></div>
+          </article>
+
+          <article class="review-equation-card" id="review-eq-eq-task-alpha">
+            <code>eq:task-alpha</code>
+            <div class="equation" data-tex="\frac{\partial F_{\text{x}}}{\partial\alpha_{\sigma}}&lt;0"></div>
+          </article>
+
+          <article class="review-equation-card" id="review-eq-eq-flak">
+            <code>eq:flak</code>
+            <div class="equation" data-tex="\begin{aligned}
+F_\text{x}^\text{LAK} = &amp; h_{\text{x}}^0 g(s_\sigma) + \left[1-f(\alpha_{\sigma})\right]  \\
+
+&amp; \times \left[h_{\text{x}}^1(s_\sigma)-h_{\text{x}}^0\right]g_{\text{num}}(s_\sigma)
+\end{aligned}"></div>
+          </article>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <h2>Review References</h2>
+          <ol class="review-refs"><li id="review-ref-Lebeda2024-136402" value="337">Lebeda, T.; Aschebrock, T.; Kummel, S. Balancing the Contributions to the Gradient Expansion: Accurate Binding and Band Gaps with a Nonempirical Meta-GGA. <em>Phys. Rev. Lett.</em> <strong>2024</strong>, <em>133</em>, 136402, DOI: <a href="https://doi.org/10.1103/PhysRevLett.133.136402">10.1103/PhysRevLett.133.136402</a></li>
+<li id="review-ref-Perdew2014-18A533" value="725">Perdew, J. P.; Ruzsinszky, A.; Sun, J.; Burke, K. Gedanken densities and exact constraints in density functional theory. <em>J. Chem. Phys.</em> <strong>2014</strong>, <em>140</em>, 18A533, DOI: <a href="https://doi.org/10.1063/1.4870763">10.1063/1.4870763</a></li>
+<li id="review-ref-Svendsen1996-17402" value="285">Svendsen, P. S.; von Barth, U. Gradient expansion of the exchange energy from second-order density response theory. <em>Phys. Rev. B</em> <strong>1996</strong>, <em>54</em>, 17402--17413, DOI: <a href="https://doi.org/10.1103/PhysRevB.54.17402">10.1103/PhysRevB.54.17402</a></li>
+<li id="review-ref-Aschebrock2019-033082" value="756">Aschebrock, T.; Kummel, S. Ultranonlocality and accurate band gaps from a meta-generalized gradient approximation. <em>Phys. Rev. Res.</em> <strong>2019</strong>, <em>1</em>, 033082, DOI: <a href="https://doi.org/10.1103/PhysRevResearch.1.033082">10.1103/PhysRevResearch.1.033082</a></li>
+<li id="review-ref-Heyd2003-8207" value="769">Heyd, J.; Scuseria, G. E.; Ernzerhof, M. Hybrid functionals based on a screened Coulomb potential. <em>J. Chem. Phys.</em> <strong>2003</strong>, <em>118</em>, 8207, DOI: <a href="https://doi.org/10.1063/1.1564060">10.1063/1.1564060</a></li>
+<li id="review-ref-Heyd2006-219906" value="770">Heyd, J.; Scuseria, G. E.; Ernzerhof, M. Erratum: &quot;Hybrid functionals based on a screened Coulomb potential&quot; [J. Chem. Phys. 118, 8207 (2003)]. <em>J. Chem. Phys.</em> <strong>2006</strong>, <em>124</em>, 219906, DOI: <a href="https://doi.org/10.1063/1.2204597">10.1063/1.2204597</a></li>
+<li id="review-ref-Krukau2006-224106" value="771">Krukau, A. V.; Vydrov, O. A.; Izmaylov, A. F.; Scuseria, G. E. Influence of the exchange screening parameter on the performance of screened hybrid functionals. <em>J. Chem. Phys.</em> <strong>2006</strong>, <em>125</em>, 224106, DOI: <a href="https://doi.org/10.1063/1.2404663">10.1063/1.2404663</a></li></ol>
+        </section>
+
+        <section class="section">
+          <h2>Publications</h2>
+          <ol class="publication-refs"><li>Lebeda, T.; Aschebrock, T.; Kummel, S. Balancing the Contributions to the Gradient Expansion: Accurate Binding and Band Gaps with a Nonempirical Meta-GGA. <em>Phys. Rev. Lett.</em> <strong>2024</strong>, <em>133</em>, 136402, DOI: <a href="https://doi.org/10.1103/PhysRevLett.133.136402">10.1103/PhysRevLett.133.136402</a></li></ol>
+        </section>
+
+        <section class="section">
+          <div class="section-heading">
+            <h2>BibTeX</h2>
+            <button class="copy-button" type="button" data-copy-target="bibtex-code" aria-label="Copy BibTeX">Copy</button>
+          </div>
+          <pre><code id="bibtex-code">@article{Lebeda2024_136402,
+  author = {Lebeda, Timo and Aschebrock, Thilo and K\&quot;ummel, Stephan},
+  title = {Balancing the Contributions to the Gradient Expansion: Accurate Binding and Band Gaps with a Nonempirical Meta-GGA},
+  journal = {Phys. Rev. Lett.},
+  volume = {133},
+  issue = {13},
+  pages = {136402},
+  year = {2024},
+  month = {Sep},
+  publisher = {American Physical Society},
+  doi = {10.1103/PhysRevLett.133.136402},
+  url = {https://link.aps.org/doi/10.1103/PhysRevLett.133.136402}
+}
+</code></pre>
+        </section>
+
+        <details>
+          <summary>All Libxc metadata</summary>
+          <dl class="metadata">
+            <dt>identifier</dt><dd>mgga_x_lak</dd>
+            <dt>family</dt><dd>meta-gga</dd>
+            <dt>kind</dt><dd>exchange</dd>
+            <dt>derivatives</dt><dd>0, 1, 2</dd>
+            <dt>flags</dt><dd>dim3, exc, fxc, vxc, needs_tau, enforce_fhc</dd>
+<dt>cam_alpha</dt><dd>null</dd>
+<dt>cam_beta</dt><dd>null</dd>
+<dt>cam_omega</dt><dd>null</dd>
+<dt>density_threshold</dt><dd>1.0e-15</dd>
+<dt>exx_coefficient</dt><dd>null</dd>
+<dt>n_spin</dt><dd>1</dd>
+<dt>nlc_C</dt><dd>null</dd>
+<dt>nlc_b</dt><dd>null</dd>
+<dt>sigma_threshold</dt><dd>1.0000000000000027e-20</dd>
+<dt>tau_threshold</dt><dd>1.0e-20</dd>
+<dt>zeta_threshold</dt><dd>2.220446049250313e-16</dd>
+          </dl>
+        </details>
+      </div>
+
+    </main>
+    <div id="command-palette" class="command-palette" aria-hidden="true" hidden>
+      <div class="command-backdrop" data-command-close></div>
+      <form class="command-panel" role="search">
+        <div class="search-box">
+          <input id="command-search" class="search-input command-search-input" type="search" autocomplete="off" placeholder="Search functionals..." aria-controls="command-search-suggestions">
+          <div id="command-search-suggestions" class="search-suggestions command-search-suggestions" role="listbox" hidden></div>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

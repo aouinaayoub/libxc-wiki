@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>mgga_x_tm</title>
+    <link rel="stylesheet" href="../../assets/styles.css?v=20260822-github">
+    <script defer src="../../assets/search.js?v=20260822-github"></script>
+    <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+    <script defer src="../../vendor/katex/katex.min.js"></script>
+    <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
+    <script defer src="../../assets/detail.js?v=20260822-github"></script>
+
+  </head>
+  <body>
+    <main class="shell">
+      <form class="global-search" role="search" action="../../" method="get">
+        <div class="search-box">
+          <input class="search-input global-search-input" name="q" type="search" autocomplete="off" placeholder="Search functionals..." aria-controls="global-search-suggestions">
+          <span class="search-shortcut" aria-hidden="true">Ctrl K</span>
+          <div id="global-search-suggestions" class="search-suggestions" role="listbox" hidden></div>
+        </div>
+      </form>
+
+      <a class="back" href="../../">Back to search</a>
+      <header class="top">
+        <a class="github-link" href="https://github.com/aouinaayoub/libxc-wiki" aria-label="View Libxc Wiki on GitHub" title="View source on GitHub">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .7a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2.23c-3.22.7-3.9-1.37-3.9-1.37-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.71.08-.71 1.16.08 1.78 1.2 1.78 1.2 1.04 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.74-1.55-2.57-.29-5.27-1.29-5.27-5.69 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.16 1.18a10.94 10.94 0 0 1 5.76 0c2.19-1.49 3.16-1.18 3.16-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.42-2.71 5.39-5.29 5.68.42.36.79 1.07.79 2.16v3.2c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .7Z"/></svg>
+        </a>
+
+        <p class="brand">META-GGA</p>
+        <h1><code class="title-code">mgga_x_tm</code></h1>
+        <div class="detail-tags"><span class="tag">meta-gga</span>
+<span class="tag">exchange</span></div>
+      </header>
+
+      <div class="detail-grid">
+      <section class="callout">
+        <p class="callout-label">Review excerpt</p>
+        <div class="review-html">
+<p>Starting from the construction of an exchange hole, Tao and Mo<sup class="citation-marker"><a href="#review-ref-Tao2016-073001">730</a></sup> arrived at the following expression for the enhancement factor:</p>
+<div class="equation" data-tex="F_{\text{x}}^{\text{TM}} = \tilde{w}_{\sigma}F_{\text{x}}^{\text{DME}} + (1-\tilde{w}_{\sigma})F_{\text{x}}^{\text{SC}}"></div>
+<p>which is a linear combination of two enhancement factors weighted by the function</p>
+<div class="equation" data-tex="\tilde{w}_{\sigma}=\frac{z_\sigma^2 +3z_\sigma^3}{\left(1+z_\sigma^3\right)^2}"></div>
+<p>The DME (density matrix expansion) and SC (slowly varying correction) enhancement factors are given by</p>
+<div class="equation" data-tex="F_{\text{x}}^{\text{DME}} = \frac{1}{f_{\sigma}^2} + \frac{7}{9}\frac{R_{\sigma}}{f_{\sigma}^4}"></div>
+<p>and</p>
+<div class="equation" data-tex="\begin{aligned}
+F_{\text{x}}^{\text{SC}} = &amp; \left\{1+10\left[\left(\mu^{\text{GE}}+\frac{50}{729}p_{\sigma}\right)p_{\sigma}+
+  \frac{146}{2025}\tilde{q}_{\sigma}^2\right.\right.  \\
+  &amp;\left.\left.- \frac{73}{405}\tilde{q}_{\sigma}\frac{3}{5}z_\sigma\left(1-z_\sigma\right)\right]\right\}^{1/10}
+\end{aligned}"></div>
+<p>respectively. In <a class="review-eq-link" href="#review-eq-eq-fxdme">
+  <code>eq:fxdme</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="F_{\text{x}}^{\text{DME}} = \frac{1}{f_{\sigma}^2} + \frac{7}{9}\frac{R_{\sigma}}{f_{\sigma}^4}"></span>
+  </span>
+</a></p>
+<div class="equation" data-tex="f_{\sigma} = \left(1+10\frac{70}{27}y_{\sigma}+\beta y_{\sigma}^2\right)^{1/10}"></div>
+<p>and</p>
+<div class="equation" data-tex="\begin{aligned}
+R_{\sigma} = 1 + \frac{595}{54}(2\lambda-1)^2p_{\sigma}  \\
+  - \frac{1}{C_{\text{F}}}\left[\tilde{t}_{\sigma}-3\left(\lambda^2-\lambda+\frac{1}{2}\right)\left(\tilde{t}_{\sigma}-C_{\text{F}}-\frac{1}{72}x_\sigma^2 \right)\right]
+\end{aligned}"></div>
+<p>where $y_{\sigma}=(2\lambda-1)^2p_{\sigma}$ and $\tilde{q}_{\sigma}$ is <a class="review-eq-link" href="#review-eq-eq-qtilde">
+  <code>eq:qtilde</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="\tilde q_{\sigma} = \frac{9}{20} \frac{\alpha_\sigma -1}
+  {\sqrt{1+b\alpha_\sigma(\alpha_\sigma-1)}} + \frac{2}{3}p_\sigma"></span>
+  </span>
+</a> with $b=0$. The two parameters $\beta=79.873$ (in <a class="review-eq-link" href="#review-eq-eq-ftm">
+  <code>eq:ftm</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="f_{\sigma} = \left(1+10\frac{70}{27}y_{\sigma}+\beta y_{\sigma}^2\right)^{1/10}"></span>
+  </span>
+</a>) and $\lambda=0.6866$ (in <a class="review-eq-link" href="#review-eq-eq-rtm">
+  <code>eq:rtm</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="\begin{aligned}
+R_{\sigma} = 1 + \frac{595}{54}(2\lambda-1)^2p_{\sigma}  \\
+
+  - \frac{1}{C_{\text{F}}}\left[\tilde{t}_{\sigma}-3\left(\lambda^2-\lambda+\frac{1}{2}\right)\left(\tilde{t}_{\sigma}-C_{\text{F}}-\frac{1}{72}x_\sigma^2 \right)\right]
+\end{aligned}"></span>
+  </span>
+</a>) were determined from the exact exchange energy of the H atom and the requirement of a smooth and monotonically increasing behavior of $F_{\text{x}}^{\text{DME}}$.</p>
+<p>Combined with the associated correlation <a class="functional-link" href="../mgga-c-tm/"><code>mgga_c_tm</code></a>, the functional appears to be fairly accurate for various molecular and solid-state properties. Tao and Mo<sup class="citation-marker"><a href="#review-ref-Tao2016-073001">730</a></sup> also combined <a class="functional-link" href="../mgga-x-tm/"><code>mgga_x_tm</code></a> with <a class="functional-link" href="../mgga-c-tpss/"><code>mgga_c_tpss</code></a>, which leads to substantial improvement for the jellium surface xc energies.</p>
+        </div>
+        <p class="source-note">Adapted from <a href="https://arxiv.org/abs/2602.17333">Tran, Lehtola, Pittalis, and Marques, <em>Semi-Local Exchange-Correlation Approximations in Density Functional Theory</em>, arXiv:2602.17333</a>.</p>
+      </section>
+
+        <section class="section">
+          <h2>Referenced Review Equations</h2>
+          <div class="review-equations">
+          <article class="review-equation-card" id="review-eq-eq-fxdme">
+            <code>eq:fxdme</code>
+            <div class="equation" data-tex="F_{\text{x}}^{\text{DME}} = \frac{1}{f_{\sigma}^2} + \frac{7}{9}\frac{R_{\sigma}}{f_{\sigma}^4}"></div>
+          </article>
+
+          <article class="review-equation-card" id="review-eq-eq-qtilde">
+            <code>eq:qtilde</code>
+            <div class="equation" data-tex="\tilde q_{\sigma} = \frac{9}{20} \frac{\alpha_\sigma -1}
+  {\sqrt{1+b\alpha_\sigma(\alpha_\sigma-1)}} + \frac{2}{3}p_\sigma"></div>
+          </article>
+
+          <article class="review-equation-card" id="review-eq-eq-ftm">
+            <code>eq:ftm</code>
+            <div class="equation" data-tex="f_{\sigma} = \left(1+10\frac{70}{27}y_{\sigma}+\beta y_{\sigma}^2\right)^{1/10}"></div>
+          </article>
+
+          <article class="review-equation-card" id="review-eq-eq-rtm">
+            <code>eq:rtm</code>
+            <div class="equation" data-tex="\begin{aligned}
+R_{\sigma} = 1 + \frac{595}{54}(2\lambda-1)^2p_{\sigma}  \\
+
+  - \frac{1}{C_{\text{F}}}\left[\tilde{t}_{\sigma}-3\left(\lambda^2-\lambda+\frac{1}{2}\right)\left(\tilde{t}_{\sigma}-C_{\text{F}}-\frac{1}{72}x_\sigma^2 \right)\right]
+\end{aligned}"></div>
+          </article>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <h2>Review References</h2>
+          <ol class="review-refs"><li id="review-ref-Tao2016-073001" value="730">Tao, J.; Mo, Y. Accurate Semilocal Density Functional for Condensed-Matter Physics and Quantum Chemistry. <em>Phys. Rev. Lett.</em> <strong>2016</strong>, <em>117</em>, 073001, DOI: <a href="https://doi.org/10.1103/PhysRevLett.117.073001">10.1103/PhysRevLett.117.073001</a></li></ol>
+        </section>
+
+        <section class="section">
+          <h2>Publications</h2>
+          <ol class="publication-refs"><li>Tao, J.; Mo, Y. Accurate Semilocal Density Functional for Condensed-Matter Physics and Quantum Chemistry. <em>Phys. Rev. Lett.</em> <strong>2016</strong>, <em>117</em>, 073001, DOI: <a href="https://doi.org/10.1103/PhysRevLett.117.073001">10.1103/PhysRevLett.117.073001</a></li></ol>
+        </section>
+
+        <section class="section">
+          <div class="section-heading">
+            <h2>BibTeX</h2>
+            <button class="copy-button" type="button" data-copy-target="bibtex-code" aria-label="Copy BibTeX">Copy</button>
+          </div>
+          <pre><code id="bibtex-code">@article{Tao2016_073001,
+  author = {Tao, Jianmin and Mo, Yuxiang},
+  title = {Accurate Semilocal Density Functional for Condensed-Matter Physics and Quantum Chemistry},
+  journal = {Phys. Rev. Lett.},
+  volume = {117},
+  issue = {7},
+  pages = {073001},
+  year = {2016},
+  month = {Aug},
+  publisher = {American Physical Society},
+  doi = {10.1103/PhysRevLett.117.073001},
+  url = {http://link.aps.org/doi/10.1103/PhysRevLett.117.073001}
+}
+</code></pre>
+        </section>
+
+        <details>
+          <summary>All Libxc metadata</summary>
+          <dl class="metadata">
+            <dt>identifier</dt><dd>mgga_x_tm</dd>
+            <dt>family</dt><dd>meta-gga</dd>
+            <dt>kind</dt><dd>exchange</dd>
+            <dt>derivatives</dt><dd>0, 1, 2</dd>
+            <dt>flags</dt><dd>dim3, exc, fxc, vxc, needs_tau, enforce_fhc</dd>
+<dt>cam_alpha</dt><dd>null</dd>
+<dt>cam_beta</dt><dd>null</dd>
+<dt>cam_omega</dt><dd>null</dd>
+<dt>density_threshold</dt><dd>1.0e-15</dd>
+<dt>exx_coefficient</dt><dd>null</dd>
+<dt>n_spin</dt><dd>1</dd>
+<dt>nlc_C</dt><dd>null</dd>
+<dt>nlc_b</dt><dd>null</dd>
+<dt>sigma_threshold</dt><dd>1.0000000000000027e-20</dd>
+<dt>tau_threshold</dt><dd>1.0e-20</dd>
+<dt>zeta_threshold</dt><dd>2.220446049250313e-16</dd>
+          </dl>
+        </details>
+      </div>
+
+    </main>
+    <div id="command-palette" class="command-palette" aria-hidden="true" hidden>
+      <div class="command-backdrop" data-command-close></div>
+      <form class="command-panel" role="search">
+        <div class="search-box">
+          <input id="command-search" class="search-input command-search-input" type="search" autocomplete="off" placeholder="Search functionals..." aria-controls="command-search-suggestions">
+          <div id="command-search-suggestions" class="search-suggestions command-search-suggestions" role="listbox" hidden></div>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

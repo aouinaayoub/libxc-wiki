@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>gga_x_s12g</title>
+    <link rel="stylesheet" href="../../assets/styles.css?v=20260822-github">
+    <script defer src="../../assets/search.js?v=20260822-github"></script>
+    <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+    <script defer src="../../vendor/katex/katex.min.js"></script>
+    <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
+    <script defer src="../../assets/detail.js?v=20260822-github"></script>
+
+  </head>
+  <body>
+    <main class="shell">
+      <form class="global-search" role="search" action="../../" method="get">
+        <div class="search-box">
+          <input class="search-input global-search-input" name="q" type="search" autocomplete="off" placeholder="Search functionals..." aria-controls="global-search-suggestions">
+          <span class="search-shortcut" aria-hidden="true">Ctrl K</span>
+          <div id="global-search-suggestions" class="search-suggestions" role="listbox" hidden></div>
+        </div>
+      </form>
+
+      <a class="back" href="../../">Back to search</a>
+      <header class="top">
+        <a class="github-link" href="https://github.com/aouinaayoub/libxc-wiki" aria-label="View Libxc Wiki on GitHub" title="View source on GitHub">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .7a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2.23c-3.22.7-3.9-1.37-3.9-1.37-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.71.08-.71 1.16.08 1.78 1.2 1.78 1.2 1.04 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.74-1.55-2.57-.29-5.27-1.29-5.27-5.69 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.16 1.18a10.94 10.94 0 0 1 5.76 0c2.19-1.49 3.16-1.18 3.16-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.42-2.71 5.39-5.29 5.68.42.36.79 1.07.79 2.16v3.2c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .7Z"/></svg>
+        </a>
+
+        <p class="brand">GGA</p>
+        <h1><code class="title-code">gga_x_s12g</code></h1>
+        <div class="detail-tags"><span class="tag">gga</span>
+<span class="tag">exchange</span></div>
+      </header>
+
+      <div class="detail-grid">
+      <section class="callout">
+        <p class="callout-label">Review excerpt</p>
+        <div class="review-html">
+<p>This functional builds upon its predecessors <a class="functional-link" href="../gga-x-ssb-sw/"><code>gga_x_ssb_sw</code></a>, <a class="functional-link" href="../gga-x-ssb/"><code>gga_x_ssb</code></a>, and <a class="functional-link" href="../gga-x-ssb-d/"><code>gga_x_ssb_d</code></a>. Here, a similar expression for the enhancement factor is chosen with the difference that a fourth-order term in $x_\sigma$ is present in the numerator. The form of the enhancement function was chosen to be more flat in the low $x_\sigma$ regime, and it is given by</p>
+<div class="equation" data-tex="F_\text{x}^{\text{S12g}} = A + B\left(1-\frac{1}{1+C x_{\sigma}^2 + D x_{\sigma}^4}\right)  \\
+  \times\left(1 - \frac{1}{1+E x_{\sigma}^2}\right)"></div>
+<p>$B$ is fixed by imposing the tight LO bound from Chan and Handy<sup class="citation-marker"><a href="#review-ref-Chan1999-3075">191</a></sup>, leading to $B=1.757-A$. This exchange functional was then combined with <a class="functional-link" href="../gga-c-pbe/"><code>gga_c_pbe</code></a> for correlation and Grimme&#39;s D3 dispersion correction,<sup class="citation-marker"><a href="#review-ref-Grimme2011-WIRCMS-211">572</a></sup> and the remaining parameters ($A$, $C$, $D$, and $E$ in <a class="review-eq-link" href="#review-eq-eq-s12g">
+  <code>eq:s12g</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="F_\text{x}^{\text{S12g}} = A + B\left(1-\frac{1}{1+C x_{\sigma}^2 + D x_{\sigma}^4}\right)  \\
+  \times\left(1 - \frac{1}{1+E x_{\sigma}^2}\right)"></span>
+  </span>
+</a> and $s_{r,6}$ and $s_8$ in the D3 correction) were obtained from a fit to a series of databases for small molecules. The resulting values are $A=1.03842032$, $C=0.00403198$, $D=0.00104596$, $E=0.00594635$, $s_{r,6}=1.17755954$, and $s_8=0.84432515$.</p>
+<p>The functional was shown to work well for a series of molecular properties, including weakly and strongly bound systems, as well as spin-state energies.</p>
+        </div>
+        <p class="source-note">Adapted from <a href="https://arxiv.org/abs/2602.17333">Tran, Lehtola, Pittalis, and Marques, <em>Semi-Local Exchange-Correlation Approximations in Density Functional Theory</em>, arXiv:2602.17333</a>.</p>
+      </section>
+
+        <section class="section">
+          <h2>Referenced Review Equations</h2>
+          <div class="review-equations">
+          <article class="review-equation-card" id="review-eq-eq-s12g">
+            <code>eq:s12g</code>
+            <div class="equation" data-tex="F_\text{x}^{\text{S12g}} = A + B\left(1-\frac{1}{1+C x_{\sigma}^2 + D x_{\sigma}^4}\right)  \\
+  \times\left(1 - \frac{1}{1+E x_{\sigma}^2}\right)"></div>
+          </article>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <h2>Review References</h2>
+          <ol class="review-refs"><li id="review-ref-Chan1999-3075" value="191">Chan, G. K.-L.; Handy, N. C. Optimized Lieb-Oxford bound for the exchange-correlation energy. <em>Phys. Rev. A</em> <strong>1999</strong>, <em>59</em>, 3075--3077, DOI: <a href="https://doi.org/10.1103/PhysRevA.59.3075">10.1103/PhysRevA.59.3075</a></li>
+<li id="review-ref-Grimme2011-WIRCMS-211" value="572">Grimme, S. Density functional theory with London dispersion corrections. <em>Wiley Interdiscip. Rev. Comput. Mol. Sci.</em> <strong>2011</strong>, <em>1</em>, 211--228, DOI: <a href="https://doi.org/10.1002/wcms.30">10.1002/wcms.30</a></li></ol>
+        </section>
+
+        <section class="section">
+          <h2>Publications</h2>
+          <ol class="publication-refs"><li>Swart, M. A new family of hybrid density functionals. <em>Chem. Phys. Lett.</em> <strong>2013</strong>, <em>580</em>, 166--171, DOI: <a href="https://doi.org/10.1016/j.cplett.2013.06.045">10.1016/j.cplett.2013.06.045</a></li></ol>
+        </section>
+
+        <section class="section">
+          <div class="section-heading">
+            <h2>BibTeX</h2>
+            <button class="copy-button" type="button" data-copy-target="bibtex-code" aria-label="Copy BibTeX">Copy</button>
+          </div>
+          <pre><code id="bibtex-code">@article{Swart2013_166,
+  author = {Swart, Marcel},
+  title = {A new family of hybrid density functionals},
+  journal = {Chem. Phys. Lett.},
+  volume = {580},
+  pages = {166 - 171},
+  year = {2013},
+  issn = {0009-2614},
+  doi = {10.1016/j.cplett.2013.06.045},
+  url = {http://www.sciencedirect.com/science/article/pii/S0009261413008221}
+}
+</code></pre>
+        </section>
+
+        <details>
+          <summary>All Libxc metadata</summary>
+          <dl class="metadata">
+            <dt>identifier</dt><dd>gga_x_s12g</dd>
+            <dt>family</dt><dd>gga</dd>
+            <dt>kind</dt><dd>exchange</dd>
+            <dt>derivatives</dt><dd>0, 1, 2</dd>
+            <dt>flags</dt><dd>dim3, exc, fxc, vxc, enforce_fhc</dd>
+<dt>cam_alpha</dt><dd>null</dd>
+<dt>cam_beta</dt><dd>null</dd>
+<dt>cam_omega</dt><dd>null</dd>
+<dt>density_threshold</dt><dd>1.0e-15</dd>
+<dt>exx_coefficient</dt><dd>null</dd>
+<dt>n_spin</dt><dd>1</dd>
+<dt>nlc_C</dt><dd>null</dd>
+<dt>nlc_b</dt><dd>null</dd>
+<dt>sigma_threshold</dt><dd>1.0000000000000027e-20</dd>
+<dt>tau_threshold</dt><dd>1.0e-20</dd>
+<dt>zeta_threshold</dt><dd>2.220446049250313e-16</dd>
+          </dl>
+        </details>
+      </div>
+
+    </main>
+    <div id="command-palette" class="command-palette" aria-hidden="true" hidden>
+      <div class="command-backdrop" data-command-close></div>
+      <form class="command-panel" role="search">
+        <div class="search-box">
+          <input id="command-search" class="search-input command-search-input" type="search" autocomplete="off" placeholder="Search functionals..." aria-controls="command-search-suggestions">
+          <div id="command-search-suggestions" class="search-suggestions command-search-suggestions" role="listbox" hidden></div>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

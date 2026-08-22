@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>lda_c_lp96</title>
+    <link rel="stylesheet" href="../../assets/styles.css?v=20260822-github">
+    <script defer src="../../assets/search.js?v=20260822-github"></script>
+    <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+    <script defer src="../../vendor/katex/katex.min.js"></script>
+    <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
+    <script defer src="../../assets/detail.js?v=20260822-github"></script>
+
+  </head>
+  <body>
+    <main class="shell">
+      <form class="global-search" role="search" action="../../" method="get">
+        <div class="search-box">
+          <input class="search-input global-search-input" name="q" type="search" autocomplete="off" placeholder="Search functionals..." aria-controls="global-search-suggestions">
+          <span class="search-shortcut" aria-hidden="true">Ctrl K</span>
+          <div id="global-search-suggestions" class="search-suggestions" role="listbox" hidden></div>
+        </div>
+      </form>
+
+      <a class="back" href="../../">Back to search</a>
+      <header class="top">
+        <a class="github-link" href="https://github.com/aouinaayoub/libxc-wiki" aria-label="View Libxc Wiki on GitHub" title="View source on GitHub">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .7a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2.23c-3.22.7-3.9-1.37-3.9-1.37-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.71.08-.71 1.16.08 1.78 1.2 1.78 1.2 1.04 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.74-1.55-2.57-.29-5.27-1.29-5.27-5.69 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.16 1.18a10.94 10.94 0 0 1 5.76 0c2.19-1.49 3.16-1.18 3.16-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.42-2.71 5.39-5.29 5.68.42.36.79 1.07.79 2.16v3.2c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .7Z"/></svg>
+        </a>
+
+        <p class="brand">LDA</p>
+        <h1><code class="title-code">lda_c_lp96</code></h1>
+        <div class="detail-tags"><span class="tag">lda</span>
+<span class="tag">correlation</span></div>
+      </header>
+
+      <div class="detail-grid">
+      <section class="callout">
+        <p class="callout-label">Review excerpt</p>
+        <div class="review-html">
+<p>By rescaling the interaction term by a coupling constant $\lambda$, one can decompose the correlation energy as<sup class="citation-marker"><a href="#review-ref-Levy1985-2010">256</a></sup></p>
+<div class="equation" data-tex="\lambda E_\text{c}^\lambda[n] = T_\text{c}^\lambda[n] + \lambda V_\text{c}^\lambda[n]"></div>
+<p>where the first term is the contribution of the kinetic energy to the correlation energy of DFT and the second is the potential energy contribution. One can prove that these quantities obey a series of exact conditions, such as<sup class="citation-marker"><a href="#review-ref-Levy1985-2010">256</a>,<a href="#review-ref-Savin1995-R1805">434</a></sup></p>
+<div class="equation" data-tex="T_\text{c}^\lambda[n] = -\lambda^2 \frac{d E_\text{c}^\lambda[n]}{d \lambda}"></div>
+<p>Starting from these identities, and from the assumption that $E_\text{c}^\lambda[n]$ has a Taylor expansion as a function of $\lambda$, Liu and Parr arrived at the conclusion that $E_\text{c}$ and $T_\text{c}$ can be expressed as combinations of homogeneous functionals of different degrees in terms of coordinate scaling. Furthermore, they showed that when $E_\text{c}$ and $T_\text{c}$ are of the LDA type, they are linear combinations of homogeneous functionals of degree $(4-i)/3$, where $i=1$, 2, 3, $\ldots$. Taking into account the first four terms in the expansion leads to the following functional form for the correlation:</p>
+<div class="equation" data-tex="e_\text{c}^{\text{LP96}}(n) = C_1 + C_2 n^{-1/3} + C_3 n^{-2/3} + C_4n^{-1}"></div>
+<p>By first considering <a class="review-eq-link" href="#review-eq-eq-lda-c-lp96">
+  <code>eq:lda:c:lp96</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="e_\text{c}^{\text{LP96}}(n) = C_1 + C_2 n^{-1/3} + C_3 n^{-2/3} + C_4n^{-1}"></span>
+  </span>
+</a> with $C_4=0$, Liu and Parr fit accurate correlation energies for the atoms He through Ar<sup class="citation-marker"><a href="#review-ref-Grabo1995-141">435</a>,<a href="#review-ref-Morrison1995-1980">436</a></sup> and obtained $C_1 = -0.0603$, $C_2=0.0175$, and $C_3=-0.00053$ (<a class="functional-link" href="../lda-c-lp96/"><code>lda_c_lp96</code></a>). However, note that different values for $C_2$ and $C_3$ were given in <sup class="citation-marker"><a href="#review-ref-Liu2000-29">433</a></sup> ($C_1 = -0.0603$, $C_2=0.0715$, and $C_3=-0.0053$), and that it is not clear which set is correct. The values from <sup class="citation-marker"><a href="#review-ref-Liu1996-2211">432</a></sup> are used in the Libxc implementation of <a class="functional-link" href="../lda-c-lp96/"><code>lda_c_lp96</code></a>.</p>
+<p>Finally, by taking into account also the term $C_4n^{-1}$, and optimizing the coefficients for both the correlation and kinetic energies simultaneously, the values $C_1 = -0.0532$, $C_2=0.0121$, $C_3=-0.0003$, and $C_4=-0.0070$ were obtained (<code>lda_c_lp96_b</code>).</p>
+        </div>
+        <p class="source-note">Adapted from <a href="https://arxiv.org/abs/2602.17333">Tran, Lehtola, Pittalis, and Marques, <em>Semi-Local Exchange-Correlation Approximations in Density Functional Theory</em>, arXiv:2602.17333</a>.</p>
+      </section>
+
+        <section class="section">
+          <h2>Referenced Review Equations</h2>
+          <div class="review-equations">
+          <article class="review-equation-card" id="review-eq-eq-lda-c-lp96">
+            <code>eq:lda:c:lp96</code>
+            <div class="equation" data-tex="e_\text{c}^{\text{LP96}}(n) = C_1 + C_2 n^{-1/3} + C_3 n^{-2/3} + C_4n^{-1}"></div>
+          </article>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <h2>Review References</h2>
+          <ol class="review-refs"><li id="review-ref-Levy1985-2010" value="256">Levy, M.; Perdew, J. P. Hellmann-Feynman, virial, and scaling requisites for the exact universal density functionals. Shape of the correlation potential and diamagnetic susceptibility for atoms. <em>Phys. Rev. A</em> <strong>1985</strong>, <em>32</em>, 2010--2021, DOI: <a href="https://doi.org/10.1103/PhysRevA.32.2010">10.1103/PhysRevA.32.2010</a></li>
+<li id="review-ref-Savin1995-R1805" value="434">Savin, A. Expression of the exact electron-correlation-energy density functional in terms of first-order density matrices. <em>Phys. Rev. A</em> <strong>1995</strong>, <em>52</em>, R1805--R1807, DOI: <a href="https://doi.org/10.1103/PhysRevA.52.R1805">10.1103/PhysRevA.52.R1805</a></li>
+<li id="review-ref-Grabo1995-141" value="435">Grabo, T.; Gross, E. Density-functional theory using an optimized exchange-correlation potential. <em>Chem. Phys. Lett.</em> <strong>1995</strong>, <em>240</em>, 141 -- 150, DOI: <a href="https://doi.org/10.1016/0009-2614(95)00500-4">10.1016/0009-2614(95)00500-4</a></li>
+<li id="review-ref-Morrison1995-1980" value="436">Morrison, R. C.; Zhao, Q. Solution to the Kohn--Sham equations using reference densities from accurate, correlated wave functions for the neutral atoms helium through argon. <em>Phys. Rev. A</em> <strong>1995</strong>, <em>51</em>, 1980--1984, DOI: <a href="https://doi.org/10.1103/PhysRevA.51.1980">10.1103/PhysRevA.51.1980</a></li>
+<li id="review-ref-Liu2000-29" value="433">Liu, S.; Parr, R. Homogeneities in density of various LDA energy functionals. <em>J. Mol. Struct.: THEOCHEM</em> <strong>2000</strong>, <em>501--502</em>, 29--34, DOI: <a href="https://doi.org/10.1016/S0166-1280(99)00410-8">10.1016/S0166-1280(99)00410-8</a></li>
+<li id="review-ref-Liu1996-2211" value="432">Liu, S.; Parr, R. G. Expansions of the correlation-energy density functional $E_c[rho]$ and its kinetic-energy component $T_c[rho]$ in terms of homogeneous functionals. <em>Phys. Rev. A</em> <strong>1996</strong>, <em>53</em>, 2211--2219, DOI: <a href="https://doi.org/10.1103/PhysRevA.53.2211">10.1103/PhysRevA.53.2211</a></li></ol>
+        </section>
+
+        <section class="section">
+          <h2>Publications</h2>
+          <ol class="publication-refs"><li>Liu, S.; Parr, R. G. Expansions of the correlation-energy density functional $E_c[rho]$ and its kinetic-energy component $T_c[rho]$ in terms of homogeneous functionals. <em>Phys. Rev. A</em> <strong>1996</strong>, <em>53</em>, 2211--2219, DOI: <a href="https://doi.org/10.1103/PhysRevA.53.2211">10.1103/PhysRevA.53.2211</a></li>
+<li>Liu, S.; Parr, R. Homogeneities in density of various LDA energy functionals. <em>J. Mol. Struct.: THEOCHEM</em> <strong>2000</strong>, <em>501--502</em>, 29--34, DOI: <a href="https://doi.org/10.1016/S0166-1280(99)00410-8">10.1016/S0166-1280(99)00410-8</a></li></ol>
+        </section>
+
+        <section class="section">
+          <div class="section-heading">
+            <h2>BibTeX</h2>
+            <button class="copy-button" type="button" data-copy-target="bibtex-code" aria-label="Copy BibTeX">Copy</button>
+          </div>
+          <pre><code id="bibtex-code">@article{Liu1996_2211,
+  author = {Liu, Shubin and Parr, Robert G.},
+  title = {Expansions of the correlation-energy density functional ${E}\_{c}[\rho]$ and its kinetic-energy component ${T}\_{c}[\rho]$ in terms of homogeneous functionals},
+  journal = {Phys. Rev. A},
+  volume = {53},
+  issue = {4},
+  pages = {2211--2219},
+  year = {1996},
+  month = {Apr},
+  publisher = {American Physical Society},
+  doi = {10.1103/PhysRevA.53.2211},
+  url = {http://link.aps.org/doi/10.1103/PhysRevA.53.2211}
+}
+
+
+@article{Liu2000_29,
+  author = {Liu, S and Parr, R.G},
+  title = {Homogeneities in density of various {LDA} energy functionals},
+  journal = {J. Mol. Struct.: THEOCHEM},
+  volume = {501--502},
+  number = {},
+  pages = {29 - 34},
+  year = {2000},
+  issn = {0166-1280},
+  doi = {10.1016/S0166-1280(99)00410-8},
+  url = {http://www.sciencedirect.com/science/article/pii/S0166128099004108}
+}
+</code></pre>
+        </section>
+
+        <details>
+          <summary>All Libxc metadata</summary>
+          <dl class="metadata">
+            <dt>identifier</dt><dd>lda_c_lp96</dd>
+            <dt>family</dt><dd>lda</dd>
+            <dt>kind</dt><dd>correlation</dd>
+            <dt>derivatives</dt><dd>0, 1, 2</dd>
+            <dt>flags</dt><dd>dim3, exc, fxc, vxc, enforce_fhc</dd>
+<dt>cam_alpha</dt><dd>null</dd>
+<dt>cam_beta</dt><dd>null</dd>
+<dt>cam_omega</dt><dd>null</dd>
+<dt>density_threshold</dt><dd>1.0e-16</dd>
+<dt>exx_coefficient</dt><dd>null</dd>
+<dt>n_spin</dt><dd>1</dd>
+<dt>nlc_C</dt><dd>null</dd>
+<dt>nlc_b</dt><dd>null</dd>
+<dt>sigma_threshold</dt><dd>4.641588833612792e-22</dd>
+<dt>tau_threshold</dt><dd>1.0e-20</dd>
+<dt>zeta_threshold</dt><dd>2.220446049250313e-16</dd>
+          </dl>
+        </details>
+      </div>
+
+    </main>
+    <div id="command-palette" class="command-palette" aria-hidden="true" hidden>
+      <div class="command-backdrop" data-command-close></div>
+      <form class="command-panel" role="search">
+        <div class="search-box">
+          <input id="command-search" class="search-input command-search-input" type="search" autocomplete="off" placeholder="Search functionals..." aria-controls="command-search-suggestions">
+          <div id="command-search-suggestions" class="search-suggestions command-search-suggestions" role="listbox" hidden></div>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

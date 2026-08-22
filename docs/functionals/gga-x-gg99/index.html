@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>gga_x_gg99</title>
+    <link rel="stylesheet" href="../../assets/styles.css?v=20260822-github">
+    <script defer src="../../assets/search.js?v=20260822-github"></script>
+    <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+    <script defer src="../../vendor/katex/katex.min.js"></script>
+    <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
+    <script defer src="../../assets/detail.js?v=20260822-github"></script>
+
+  </head>
+  <body>
+    <main class="shell">
+      <form class="global-search" role="search" action="../../" method="get">
+        <div class="search-box">
+          <input class="search-input global-search-input" name="q" type="search" autocomplete="off" placeholder="Search functionals..." aria-controls="global-search-suggestions">
+          <span class="search-shortcut" aria-hidden="true">Ctrl K</span>
+          <div id="global-search-suggestions" class="search-suggestions" role="listbox" hidden></div>
+        </div>
+      </form>
+
+      <a class="back" href="../../">Back to search</a>
+      <header class="top">
+        <a class="github-link" href="https://github.com/aouinaayoub/libxc-wiki" aria-label="View Libxc Wiki on GitHub" title="View source on GitHub">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .7a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2.23c-3.22.7-3.9-1.37-3.9-1.37-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.71.08-.71 1.16.08 1.78 1.2 1.78 1.2 1.04 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.74-1.55-2.57-.29-5.27-1.29-5.27-5.69 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.16 1.18a10.94 10.94 0 0 1 5.76 0c2.19-1.49 3.16-1.18 3.16-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.42-2.71 5.39-5.29 5.68.42.36.79 1.07.79 2.16v3.2c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .7Z"/></svg>
+        </a>
+
+        <p class="brand">GGA</p>
+        <h1><code class="title-code">gga_x_gg99</code></h1>
+        <div class="detail-tags"><span class="tag">gga</span>
+<span class="tag">exchange</span></div>
+      </header>
+
+      <div class="detail-grid">
+      <section class="callout">
+        <p class="callout-label">Review excerpt</p>
+        <div class="review-html">
+<p>Gilbert and Gill<sup class="citation-marker"><a href="#review-ref-Gilbert1999-511">509</a></sup> discussed a way to decompose a local xc energy into contributions from each value of the reduced-density gradient $x_\sigma$. They then proposed a reference system given by one electron feeling an effective-core potential of the form</p>
+<div class="equation" data-tex="V(r) = -\left[\text{sech}^2(r) + \frac{\tanh(r)}{r}\right]"></div>
+<p>By demanding that the decomposition of the exchange-energy reproduces exactly its HF counterpart for this system (which only includes the cancellation of the self-energy for the one electron), they then arrived at the enhancement factor</p>
+<div class="equation" data-tex="\begin{aligned}
+F_\text{x}^{\text{GG99}} = \frac{1}{C_{\text{x}}}
+  \frac{\pi^2 - 12 r\ln\left(1+\E^{-2r}\right) + 12 \dilog\left(-\E^{-2r}\right)}
+  {2\times3^{1/3}\pi r \sech^{2/3}(r)}
+\end{aligned}"></div>
+<p>where $\dilog$ is the dilogarithm function. The reduced-density gradient is given by</p>
+<div class="equation" data-tex="x_\sigma(r) = 2 \pi \sinh(r) \left[\frac{\sech(r)}{3}\right]^{1/3}"></div>
+<p>which is an equation that has to be inverted to obtain $r$, either analytically (see Eq. (22) of Gilbert and Gill<sup class="citation-marker"><a href="#review-ref-Gilbert1999-511">509</a></sup>) or numerically, so that it can be used in an implementation of <a class="review-eq-link" href="#review-eq-eq-gg99">
+  <code>eq:gg99</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="\begin{aligned}
+F_\text{x}^{\text{GG99}} = \frac{1}{C_{\text{x}}}
+  \frac{\pi^2 - 12 r\ln\left(1+\E^{-2r}\right) + 12 \dilog\left(-\E^{-2r}\right)}
+  {2\times3^{1/3}\pi r \sech^{2/3}(r)}
+\end{aligned}"></span>
+  </span>
+</a>.</p>
+<p>From the small-gradient expansion of this functional given by</p>
+<div class="equation" data-tex="\begin{aligned}
+\lim_{x_\sigma\to 0} F_\text{x}^{\text{GG99}} \approx &amp; 0.9864 + 0.004827 x_\sigma^2  \\
+  &amp;- 0.00002194 x_\sigma^4
+\end{aligned}"></div>
+<p>it is interesting to observe that the functional reduces to $F_{\text{x}} \approx 0.9864$ for the HEG, which is quite close to <a class="functional-link" href="../lda-x/"><code>lda_x</code></a> ($F_{\text{x}}=1$), even if the <a class="functional-link" href="../lda-x/"><code>lda_x</code></a> limit was not used in the construction of <a class="functional-link" href="../gga-x-gg99/"><code>gga_x_gg99</code></a>. Furthermore, the quadratic term in <a class="review-eq-link" href="#review-eq-eq-fg999exp">
+  <code>eq:fg999exp</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="\begin{aligned}
+\lim_{x_\sigma\to 0} F_\text{x}^{\text{GG99}} \approx &amp; 0.9864 + 0.004827 x_\sigma^2  \\
+
+  &amp;- 0.00002194 x_\sigma^4
+\end{aligned}"></span>
+  </span>
+</a> is remarkably close to the corresponding value $\beta/C_{\text{x}}=0.0042/C_{\text{x}} \approx 0.004514$ obtained by Becke in <a class="functional-link" href="../gga-x-b88/"><code>gga_x_b88</code></a> by fitting to HF exchange energies of rare-gas atoms.</p>
+<p>The <a class="functional-link" href="../gga-x-gg99/"><code>gga_x_gg99</code></a> functional was found to consistently underestimate the absolute value of the exchange energy in the bonding regions of molecules. To correct for this behavior, Gilbert and Gill<sup class="citation-marker"><a href="#review-ref-Gilbert1999-511">509</a></sup> proposed adding a constant to <a class="review-eq-link" href="#review-eq-eq-gg99">
+  <code>eq:gg99</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="\begin{aligned}
+F_\text{x}^{\text{GG99}} = \frac{1}{C_{\text{x}}}
+  \frac{\pi^2 - 12 r\ln\left(1+\E^{-2r}\right) + 12 \dilog\left(-\E^{-2r}\right)}
+  {2\times3^{1/3}\pi r \sech^{2/3}(r)}
+\end{aligned}"></span>
+  </span>
+</a>:</p>
+<div class="equation" data-tex="F_\text{x}^{\kappa\text{GG99}} = F_\text{x}^{\text{GG99}} - \frac{\kappa}{C_\text{x}}"></div>
+<p>By a simple minimization procedure they obtained the value $\kappa = -0.047$, thus defining the <a class="functional-link" href="../gga-x-kgg99/"><code>gga_x_kgg99</code></a> functional. By adding this term, the atomization energy of molecules is clearly improved. At $x_\sigma=0$, $F_\text{x}^{\kappa\text{GG99}} \approx 1.0369$, which is also close to <a class="functional-link" href="../lda-x/"><code>lda_x</code></a>.</p>
+        </div>
+        <p class="source-note">Adapted from <a href="https://arxiv.org/abs/2602.17333">Tran, Lehtola, Pittalis, and Marques, <em>Semi-Local Exchange-Correlation Approximations in Density Functional Theory</em>, arXiv:2602.17333</a>.</p>
+      </section>
+
+        <section class="section">
+          <h2>Referenced Review Equations</h2>
+          <div class="review-equations">
+          <article class="review-equation-card" id="review-eq-eq-gg99">
+            <code>eq:gg99</code>
+            <div class="equation" data-tex="\begin{aligned}
+F_\text{x}^{\text{GG99}} = \frac{1}{C_{\text{x}}}
+  \frac{\pi^2 - 12 r\ln\left(1+\E^{-2r}\right) + 12 \dilog\left(-\E^{-2r}\right)}
+  {2\times3^{1/3}\pi r \sech^{2/3}(r)}
+\end{aligned}"></div>
+          </article>
+
+          <article class="review-equation-card" id="review-eq-eq-fg999exp">
+            <code>eq:fg999exp</code>
+            <div class="equation" data-tex="\begin{aligned}
+\lim_{x_\sigma\to 0} F_\text{x}^{\text{GG99}} \approx &amp; 0.9864 + 0.004827 x_\sigma^2  \\
+
+  &amp;- 0.00002194 x_\sigma^4
+\end{aligned}"></div>
+          </article>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <h2>Review References</h2>
+          <ol class="review-refs"><li id="review-ref-Gilbert1999-511" value="509">Gilbert, A. T.; Gill, P. M. Decomposition of exchange-correlation energies. <em>Chem. Phys. Lett.</em> <strong>1999</strong>, <em>312</em>, 511--521, DOI: <a href="https://doi.org/10.1016/S0009-2614(99)00836-2">10.1016/S0009-2614(99)00836-2</a></li></ol>
+        </section>
+
+        <section class="section">
+          <h2>Publications</h2>
+          <ol class="publication-refs"><li>Gilbert, A. T.; Gill, P. M. Decomposition of exchange-correlation energies. <em>Chem. Phys. Lett.</em> <strong>1999</strong>, <em>312</em>, 511--521, DOI: <a href="https://doi.org/10.1016/S0009-2614(99)00836-2">10.1016/S0009-2614(99)00836-2</a></li></ol>
+        </section>
+
+        <section class="section">
+          <div class="section-heading">
+            <h2>BibTeX</h2>
+            <button class="copy-button" type="button" data-copy-target="bibtex-code" aria-label="Copy BibTeX">Copy</button>
+          </div>
+          <pre><code id="bibtex-code">@article{Gilbert1999_511,
+  author = {Gilbert, Andrew T.B. and Gill, Peter M.W.},
+  title = {Decomposition of exchange-correlation energies},
+  journal = {Chem. Phys. Lett.},
+  volume = {312},
+  number = {5-6},
+  pages = {511 - 521},
+  year = {1999},
+  issn = {0009-2614},
+  doi = {10.1016/S0009-2614(99)00836-2},
+  url = {http://www.sciencedirect.com/science/article/pii/S0009261499008362}
+}
+</code></pre>
+        </section>
+
+        <details>
+          <summary>All Libxc metadata</summary>
+          <dl class="metadata">
+            <dt>identifier</dt><dd>gga_x_gg99</dd>
+            <dt>family</dt><dd>gga</dd>
+            <dt>kind</dt><dd>exchange</dd>
+            <dt>derivatives</dt><dd>0, 1, 2</dd>
+            <dt>flags</dt><dd>dim3, exc, fxc, vxc, enforce_fhc</dd>
+<dt>cam_alpha</dt><dd>null</dd>
+<dt>cam_beta</dt><dd>null</dd>
+<dt>cam_omega</dt><dd>null</dd>
+<dt>density_threshold</dt><dd>5.0e-7</dd>
+<dt>exx_coefficient</dt><dd>null</dd>
+<dt>n_spin</dt><dd>1</dd>
+<dt>nlc_C</dt><dd>null</dd>
+<dt>nlc_b</dt><dd>null</dd>
+<dt>sigma_threshold</dt><dd>3.968502629920503e-9</dd>
+<dt>tau_threshold</dt><dd>1.0e-20</dd>
+<dt>zeta_threshold</dt><dd>2.220446049250313e-16</dd>
+          </dl>
+        </details>
+      </div>
+
+    </main>
+    <div id="command-palette" class="command-palette" aria-hidden="true" hidden>
+      <div class="command-backdrop" data-command-close></div>
+      <form class="command-panel" role="search">
+        <div class="search-box">
+          <input id="command-search" class="search-input command-search-input" type="search" autocomplete="off" placeholder="Search functionals..." aria-controls="command-search-suggestions">
+          <div id="command-search-suggestions" class="search-suggestions command-search-suggestions" role="listbox" hidden></div>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

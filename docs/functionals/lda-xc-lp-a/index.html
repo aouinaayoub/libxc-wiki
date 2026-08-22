@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>lda_xc_lp_a</title>
+    <link rel="stylesheet" href="../../assets/styles.css?v=20260822-github">
+    <script defer src="../../assets/search.js?v=20260822-github"></script>
+    <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+    <script defer src="../../vendor/katex/katex.min.js"></script>
+    <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
+    <script defer src="../../assets/detail.js?v=20260822-github"></script>
+
+  </head>
+  <body>
+    <main class="shell">
+      <form class="global-search" role="search" action="../../" method="get">
+        <div class="search-box">
+          <input class="search-input global-search-input" name="q" type="search" autocomplete="off" placeholder="Search functionals..." aria-controls="global-search-suggestions">
+          <span class="search-shortcut" aria-hidden="true">Ctrl K</span>
+          <div id="global-search-suggestions" class="search-suggestions" role="listbox" hidden></div>
+        </div>
+      </form>
+
+      <a class="back" href="../../">Back to search</a>
+      <header class="top">
+        <a class="github-link" href="https://github.com/aouinaayoub/libxc-wiki" aria-label="View Libxc Wiki on GitHub" title="View source on GitHub">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .7a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2.23c-3.22.7-3.9-1.37-3.9-1.37-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.71.08-.71 1.16.08 1.78 1.2 1.78 1.2 1.04 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.74-1.55-2.57-.29-5.27-1.29-5.27-5.69 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.16 1.18a10.94 10.94 0 0 1 5.76 0c2.19-1.49 3.16-1.18 3.16-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.42-2.71 5.39-5.29 5.68.42.36.79 1.07.79 2.16v3.2c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .7Z"/></svg>
+        </a>
+
+        <p class="brand">LDA</p>
+        <h1><code class="title-code">lda_xc_lp_a</code></h1>
+        <div class="detail-tags"><span class="tag">lda</span>
+<span class="tag">exchange</span>
+<span class="tag">correlation</span></div>
+      </header>
+
+      <div class="detail-grid">
+      <section class="callout">
+        <p class="callout-label">Review excerpt</p>
+        <div class="review-html">
+<p>The exact xc energy $E_\text{xc}$ can be calculated from the diagonal of the two-particle density matrix $\rho_2(\br_1,\br_2)$ (see the review). Consequently, Lee and Parr<sup class="citation-marker"><a href="#review-ref-Lee1990-193">468</a></sup> addressed the xc problem by providing a formal ansatz for $\rho_2(\br_1,\br_2)$:</p>
+<div class="equation" data-tex="\begin{aligned}
+\rho_2(\br_1,\br_2) = &amp; n(\br_1)n(\br_2)  \\
+  &amp;\times\bigg[1 - \frac{1 + F(\br,r_{12})}{1+\alpha(\br)}\E^{-\alpha(\br)r_{12}}\bigg]
+\end{aligned}"></div>
+<p>where $\br = (\br_1+\br_2)/2$ and $\br_{12} = \br_2 - \br_1$. In passing we stress that while in the original article the normalization of $\rho_2(\br_1,\br_2)$  equals the number of electron pairs, here the normalization of $\rho_2(\br_1,\br_2)$ equals the <em>double</em> of the electron pairs. Thus, an explicit factor of 1/2 is retained in our expression of the electron-electron interaction. The functions $\alpha(\br)$ and $F(\br,r_{12})$ are assumed to be well behaved, and are expanded in powers of $r_{12}$. Note here that $\alpha(\br)$ is not the MGGA ingredient of <a class="review-eq-link" href="#review-eq-eq-alpha">
+  <code>eq:alpha</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="\alpha = \frac{\tau-\tau^{\text{W}}[n]}{\tau^{\text{TF}}[n]}"></span>
+  </span>
+</a>. The Coulomb part of the density matrix, $n(\br_1)n(\br_2)$, can also be  Taylor expanded in powers of $r_{12}$. Its average over $\Omega_{r_{12}}$ gives rise to</p>
+<div class="equation" data-tex="n^2(\br) - \frac{2}{3}\left(\tau^{\text{W}}(\br) - \frac{1}{8}\nabla^2n(\br)\right)n(\br)r_{12}^2 + \mathcal{O}(r_{12}^3)"></div>
+<p>So far, $E_\text{xc}$ can be formally computed. At this point, Lee and Parr<sup class="citation-marker"><a href="#review-ref-Lee1990-193">468</a></sup> proposed $\alpha(\br)$ to be considered as the reciprocal of a screening length and chose $\alpha(\br) = \kappa n^{1/3}(\br)$, for some constant $\kappa$. Furthermore, the product of two infinite series that appear in the formula can be written in different ways, leading to two alternative expressions for $E_\text{xc}$. By approximating the unknown functions that enter these expressions as functions of the density, they arrived at a functional form and proposed several variants based on this form. Considering here the LDA-type variants, the general expression is given by (only the spin-unpolarized version was developed)</p>
+<div class="equation" data-tex="e^\text{LP-LDA}_\text{xc} =
+  -a\frac{1+\frac{b}{N}}{1+\frac{c}{N}}\frac{1}{\left(\frac{4}{3}\pi\right)^{1/3}r_s + k}"></div>
+<p>which is an extension of the <a class="functional-link" href="../lda-c-wigner/"><code>lda_c_wigner</code></a> form, with $N$ being the number of electrons in the system. Four different optimizations of <a class="review-eq-link" href="#review-eq-eq-lp90">
+  <code>eq:lp90</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="e^\text{LP-LDA}_\text{xc} =
+  -a\frac{1+\frac{b}{N}}{1+\frac{c}{N}}\frac{1}{\left(\frac{4}{3}\pi\right)^{1/3}r_s + k}"></span>
+  </span>
+</a> were proposed. The parameters were determined from a fit to the xc energies of a series of 10 closed-shell neutral and ionized atoms, from He to Ar. The functionals are  &#8226; <a class="functional-link" href="../lda-xc-lp-a/"><code>lda_xc_lp_a</code></a>: $b$, $c$, and $k$ are set to zero, leading to $a=0.8626$. This functional is equivalent to the simple <a class="functional-link" href="../lda-c-xalpha/"><code>lda_c_xalpha</code></a> form, see <a class="review-eq-link" href="#review-eq-eq-ldax3d2">
+  <code>eq:ldax3d2</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="\begin{aligned}
+e_\text{x}^\text{LDA}(r_s,\zeta) = -A_\text{x}\frac{\phi_{4/3}(\zeta)}{r_s}
+\end{aligned}"></span>
+  </span>
+</a>. &#8226; <a class="functional-link" href="../lda-xc-lp-b/"><code>lda_xc_lp_b</code></a>: $b$ and $c$ are set to zero, leading to $a=0.906$ and $k=0.021987$. This functional is equivalent to the <a class="functional-link" href="../lda-c-wigner/"><code>lda_c_wigner</code></a> form, see <a class="review-eq-link" href="#review-eq-eq-ldacwigner">
+  <code>eq:ldacwigner</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="e_\text{c}^\text{Wigner}(r_s) = -\frac{a}{b + r_s}"></span>
+  </span>
+</a>. &#8226; <code>lda_xc_lp_a_n</code>: only $k$ is set to zero, which leads to $a=0.7475$, $b=17.1903$, and $c=14.1936$. &#8226; <code>lda_xc_lp_b_n</code>: all parameters are optimized, yielding $a=0.76799$, $b=17.5943$, $c=14.8893$, and $k=4.115\times10^{-3}$. </p>
+<p>The other functionals proposed by Lee and Parr<sup class="citation-marker"><a href="#review-ref-Lee1990-193">468</a></sup> involve a correction to <a class="review-eq-link" href="#review-eq-eq-lp90">
+  <code>eq:lp90</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="e^\text{LP-LDA}_\text{xc} =
+  -a\frac{1+\frac{b}{N}}{1+\frac{c}{N}}\frac{1}{\left(\frac{4}{3}\pi\right)^{1/3}r_s + k}"></span>
+  </span>
+</a> that depends on the gradient and Laplacian of $n$ (see <a class="functional-link" href="../mgga-xc-lp90/"><code>mgga_xc_lp90</code></a>).</p>
+<p>The explicit dependence on the number of electrons $N$ makes these functionals not semi-local functionals (see discussion for <a class="functional-link" href="../lda-x-rae/"><code>lda_x_rae</code></a>).</p>
+        </div>
+        <p class="source-note">Adapted from <a href="https://arxiv.org/abs/2602.17333">Tran, Lehtola, Pittalis, and Marques, <em>Semi-Local Exchange-Correlation Approximations in Density Functional Theory</em>, arXiv:2602.17333</a>.</p>
+      </section>
+
+        <section class="section">
+          <h2>Referenced Review Equations</h2>
+          <div class="review-equations">
+          <article class="review-equation-card" id="review-eq-eq-alpha">
+            <code>eq:alpha</code>
+            <div class="equation" data-tex="\alpha = \frac{\tau-\tau^{\text{W}}[n]}{\tau^{\text{TF}}[n]}"></div>
+          </article>
+
+          <article class="review-equation-card" id="review-eq-eq-lp90">
+            <code>eq:lp90</code>
+            <div class="equation" data-tex="e^\text{LP-LDA}_\text{xc} =
+  -a\frac{1+\frac{b}{N}}{1+\frac{c}{N}}\frac{1}{\left(\frac{4}{3}\pi\right)^{1/3}r_s + k}"></div>
+          </article>
+
+          <article class="review-equation-card" id="review-eq-eq-ldax3d2">
+            <code>eq:ldax3d2</code>
+            <div class="equation" data-tex="\begin{aligned}
+e_\text{x}^\text{LDA}(r_s,\zeta) = -A_\text{x}\frac{\phi_{4/3}(\zeta)}{r_s}
+\end{aligned}"></div>
+          </article>
+
+          <article class="review-equation-card" id="review-eq-eq-ldacwigner">
+            <code>eq:ldacwigner</code>
+            <div class="equation" data-tex="e_\text{c}^\text{Wigner}(r_s) = -\frac{a}{b + r_s}"></div>
+          </article>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <h2>Review References</h2>
+          <ol class="review-refs"><li id="review-ref-Lee1990-193" value="468">Lee, C.; Parr, R. G. Exchange-correlation functional for atoms and molecules. <em>Phys. Rev. A</em> <strong>1990</strong>, <em>42</em>, 193--200, DOI: <a href="https://doi.org/10.1103/PhysRevA.42.193">10.1103/PhysRevA.42.193</a></li></ol>
+        </section>
+
+        <section class="section">
+          <h2>Publications</h2>
+          <ol class="publication-refs"><li>Lee, C.; Parr, R. G. Exchange-correlation functional for atoms and molecules. <em>Phys. Rev. A</em> <strong>1990</strong>, <em>42</em>, 193--200, DOI: <a href="https://doi.org/10.1103/PhysRevA.42.193">10.1103/PhysRevA.42.193</a></li></ol>
+        </section>
+
+        <section class="section">
+          <div class="section-heading">
+            <h2>BibTeX</h2>
+            <button class="copy-button" type="button" data-copy-target="bibtex-code" aria-label="Copy BibTeX">Copy</button>
+          </div>
+          <pre><code id="bibtex-code">@article{Lee1990_193,
+  author = {Lee, Chengteh and Parr, Robert G.},
+  title = {Exchange-correlation functional for atoms and molecules},
+  journal = {Phys. Rev. A},
+  volume = {42},
+  issue = {1},
+  pages = {193--200},
+  year = {1990},
+  month = {Jul},
+  publisher = {American Physical Society},
+  doi = {10.1103/PhysRevA.42.193},
+  url = {http://link.aps.org/doi/10.1103/PhysRevA.42.193}
+}
+</code></pre>
+        </section>
+
+        <details>
+          <summary>All Libxc metadata</summary>
+          <dl class="metadata">
+            <dt>identifier</dt><dd>lda_xc_lp_a</dd>
+            <dt>family</dt><dd>lda</dd>
+            <dt>kind</dt><dd>exchange_correlation</dd>
+            <dt>derivatives</dt><dd>0, 1, 2</dd>
+            <dt>flags</dt><dd>dim3, exc, fxc, vxc, enforce_fhc</dd>
+<dt>cam_alpha</dt><dd>null</dd>
+<dt>cam_beta</dt><dd>null</dd>
+<dt>cam_omega</dt><dd>null</dd>
+<dt>density_threshold</dt><dd>1.0e-24</dd>
+<dt>exx_coefficient</dt><dd>null</dd>
+<dt>n_spin</dt><dd>1</dd>
+<dt>nlc_C</dt><dd>null</dd>
+<dt>nlc_b</dt><dd>null</dd>
+<dt>sigma_threshold</dt><dd>1.000000000000004e-32</dd>
+<dt>tau_threshold</dt><dd>1.0e-20</dd>
+<dt>zeta_threshold</dt><dd>2.220446049250313e-16</dd>
+          </dl>
+        </details>
+      </div>
+
+    </main>
+    <div id="command-palette" class="command-palette" aria-hidden="true" hidden>
+      <div class="command-backdrop" data-command-close></div>
+      <form class="command-panel" role="search">
+        <div class="search-box">
+          <input id="command-search" class="search-input command-search-input" type="search" autocomplete="off" placeholder="Search functionals..." aria-controls="command-search-suggestions">
+          <div id="command-search-suggestions" class="search-suggestions command-search-suggestions" role="listbox" hidden></div>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>mgga_x_m06_l</title>
+    <link rel="stylesheet" href="../../assets/styles.css?v=20260822-github">
+    <script defer src="../../assets/search.js?v=20260822-github"></script>
+    <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+    <script defer src="../../vendor/katex/katex.min.js"></script>
+    <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
+    <script defer src="../../assets/detail.js?v=20260822-github"></script>
+
+  </head>
+  <body>
+    <main class="shell">
+      <form class="global-search" role="search" action="../../" method="get">
+        <div class="search-box">
+          <input class="search-input global-search-input" name="q" type="search" autocomplete="off" placeholder="Search functionals..." aria-controls="global-search-suggestions">
+          <span class="search-shortcut" aria-hidden="true">Ctrl K</span>
+          <div id="global-search-suggestions" class="search-suggestions" role="listbox" hidden></div>
+        </div>
+      </form>
+
+      <a class="back" href="../../">Back to search</a>
+      <header class="top">
+        <a class="github-link" href="https://github.com/aouinaayoub/libxc-wiki" aria-label="View Libxc Wiki on GitHub" title="View source on GitHub">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .7a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2.23c-3.22.7-3.9-1.37-3.9-1.37-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.71.08-.71 1.16.08 1.78 1.2 1.78 1.2 1.04 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.74-1.55-2.57-.29-5.27-1.29-5.27-5.69 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.16 1.18a10.94 10.94 0 0 1 5.76 0c2.19-1.49 3.16-1.18 3.16-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.42-2.71 5.39-5.29 5.68.42.36.79 1.07.79 2.16v3.2c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .7Z"/></svg>
+        </a>
+
+        <p class="brand">META-GGA</p>
+        <h1><code class="title-code">mgga_x_m06_l</code></h1>
+        <div class="detail-tags"><span class="tag">meta-gga</span>
+<span class="tag">exchange</span></div>
+      </header>
+
+      <div class="detail-grid">
+      <section class="callout">
+        <p class="callout-label">Review excerpt</p>
+        <div class="review-html">
+<p>Benchmark calculations revealed that the hybrid M05<sup class="citation-marker"><a href="#review-ref-Zhao2005-161103">698</a></sup> and <a class="functional-link" href="../mgga-x-gvt4/"><code>mgga_x_gvt4</code></a> functionals give complementary results for a series of properties. While the former is rather accurate for noncovalent interactions and barrier heights, the latter is excellent for thermochemistry. These observations suggested Zhao and Truhlar<sup class="citation-marker"><a href="#review-ref-Zhao2006-194101">697</a></sup> to propose a functional form that can be seen as a mixture between the semi-local part of M05 and <a class="functional-link" href="../mgga-x-gvt4/"><code>mgga_x_gvt4</code></a>:</p>
+<div class="equation" data-tex="F_\text{x}^\text{M06-L} = F_\text{x}^\text{PBE}(s_\sigma)
+  f(w_\sigma)
+  + f^\text{GVT4}(x_\sigma, \tilde{z}_\sigma)"></div>
+<p>where $F_\text{x}^\text{PBE}$ is the <a class="functional-link" href="../gga-x-pbe/"><code>gga_x_pbe</code></a> enhancement factor (<a class="review-eq-link" href="#review-eq-eq-pbeenh">
+  <code>eq:pbeenh</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="F_\text{x}^{\text{PBE}} = 1 + \kappa\left[1 - \frac{\kappa}{\kappa + f_0(s_\sigma)}\right]"></span>
+  </span>
+</a>), $f^\text{GVT4}$ is defined by <a class="review-eq-link" href="#review-eq-eq-fgvt4">
+  <code>eq:fgvt4</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="\begin{aligned}
+f^\text{GVT4}(x_\sigma,\tilde{z}_\sigma) = &amp;
+  \frac{a}{\gamma_\sigma}
+  +\frac{b x_\sigma^2 + c \tilde{z}_\sigma}{\gamma_\sigma^2}  \\
+
+  &amp; +\frac{d x_\sigma^4 + ex_\sigma^2\tilde{z}_\sigma + f\tilde{z}_\sigma^2}{\gamma_\sigma^3}
+\end{aligned}"></span>
+  </span>
+</a>, and</p>
+<div class="equation" data-tex="f(w_\sigma)= \sum_{i=0}^m a_i w_\sigma^i"></div>
+<p>The variables $\tilde{z}_\sigma$ and $w_\sigma$ are given by <a class="review-eq-link" href="#review-eq-eq-ztilde-sigma">
+  <code>eq:ztilde-sigma</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="\tilde{z}_\sigma = 2\left(\tilde{t}_\sigma - C_\text{F}\right)"></span>
+  </span>
+</a>; <a class="review-eq-link" href="#review-eq-eq-b00w">
+  <code>eq:b00w</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="w_\sigma = \frac{\tau_\sigma^\text{TF} - \tau_\sigma}{\tau_\sigma^\text{TF} + \tau_\sigma}
+  = \frac{C_\text{F} - \tilde{t}_\sigma}{C_\text{F} + \tilde{t}_\sigma}"></span>
+  </span>
+</a>, respectively. The parameters $a_i$ in <a class="review-eq-link" href="#review-eq-eq-fwm06">
+  <code>eq:fwm06</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="f(w_\sigma)= \sum_{i=0}^m a_i w_\sigma^i"></span>
+  </span>
+</a> ($m=11$ was chosen) and the ones in <a class="review-eq-link" href="#review-eq-eq-fgvt4">
+  <code>eq:fgvt4</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="\begin{aligned}
+f^\text{GVT4}(x_\sigma,\tilde{z}_\sigma) = &amp;
+  \frac{a}{\gamma_\sigma}
+  +\frac{b x_\sigma^2 + c \tilde{z}_\sigma}{\gamma_\sigma^2}  \\
+
+  &amp; +\frac{d x_\sigma^4 + ex_\sigma^2\tilde{z}_\sigma + f\tilde{z}_\sigma^2}{\gamma_\sigma^3}
+\end{aligned}"></span>
+  </span>
+</a> were determined, along with those of the correlation counterpart <a class="functional-link" href="../mgga-c-m06-l/"><code>mgga_c_m06_l</code></a>, self-consistently by minimizing the error for a series of databases including thermochemistry, thermochemical kinetics, and noncovalent interactions. Note that the constraint $a_0+a=1$ was applied such that <a class="functional-link" href="../mgga-x-m06-l/"><code>mgga_x_m06_l</code></a> reduces to <a class="functional-link" href="../lda-x/"><code>lda_x</code></a> for the HEG. The M06-L functional (<a class="functional-link" href="../mgga-x-m06-l/"><code>mgga_x_m06_l</code></a> + <a class="functional-link" href="../mgga-c-m06-l/"><code>mgga_c_m06_l</code></a>) was then tested using 22 energetic databases, a set of bond lengths, and a set of 36 harmonic vibrational frequencies, yielding an excellent overall performance. The same functional form was refit in \citeyear{Wang2017:8487} as revM06-L (<a class="functional-link" href="../mgga-x-revm06-l/"><code>mgga_x_revm06_l</code></a> + <a class="functional-link" href="../mgga-c-revm06-l/"><code>mgga_c_revm06_l</code></a>) by Wang et al.<sup class="citation-marker"><a href="#review-ref-Wang2017-8487">699</a></sup>. Lehtola<sup class="citation-marker"><a href="#review-ref-Lehtola2023-JPCA-4180">700</a></sup> found M06-L to yield a nonphysical solution for the hydrogen atom, suggesting issues with overfitting.</p>
+        </div>
+        <p class="source-note">Adapted from <a href="https://arxiv.org/abs/2602.17333">Tran, Lehtola, Pittalis, and Marques, <em>Semi-Local Exchange-Correlation Approximations in Density Functional Theory</em>, arXiv:2602.17333</a>.</p>
+      </section>
+
+        <section class="section">
+          <h2>Referenced Review Equations</h2>
+          <div class="review-equations">
+          <article class="review-equation-card" id="review-eq-eq-pbeenh">
+            <code>eq:pbeenh</code>
+            <div class="equation" data-tex="F_\text{x}^{\text{PBE}} = 1 + \kappa\left[1 - \frac{\kappa}{\kappa + f_0(s_\sigma)}\right]"></div>
+          </article>
+
+          <article class="review-equation-card" id="review-eq-eq-fgvt4">
+            <code>eq:fgvt4</code>
+            <div class="equation" data-tex="\begin{aligned}
+f^\text{GVT4}(x_\sigma,\tilde{z}_\sigma) = &amp;
+  \frac{a}{\gamma_\sigma}
+  +\frac{b x_\sigma^2 + c \tilde{z}_\sigma}{\gamma_\sigma^2}  \\
+
+  &amp; +\frac{d x_\sigma^4 + ex_\sigma^2\tilde{z}_\sigma + f\tilde{z}_\sigma^2}{\gamma_\sigma^3}
+\end{aligned}"></div>
+          </article>
+
+          <article class="review-equation-card" id="review-eq-eq-ztilde-sigma">
+            <code>eq:ztilde-sigma</code>
+            <div class="equation" data-tex="\tilde{z}_\sigma = 2\left(\tilde{t}_\sigma - C_\text{F}\right)"></div>
+          </article>
+
+          <article class="review-equation-card" id="review-eq-eq-b00w">
+            <code>eq:b00w</code>
+            <div class="equation" data-tex="w_\sigma = \frac{\tau_\sigma^\text{TF} - \tau_\sigma}{\tau_\sigma^\text{TF} + \tau_\sigma}
+  = \frac{C_\text{F} - \tilde{t}_\sigma}{C_\text{F} + \tilde{t}_\sigma}"></div>
+          </article>
+
+          <article class="review-equation-card" id="review-eq-eq-fwm06">
+            <code>eq:fwm06</code>
+            <div class="equation" data-tex="f(w_\sigma)= \sum_{i=0}^m a_i w_\sigma^i"></div>
+          </article>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <h2>Review References</h2>
+          <ol class="review-refs"><li id="review-ref-Zhao2005-161103" value="698">Zhao, Y.; Schultz, N. E.; Truhlar, D. G. Exchange-correlation functional with broad accuracy for metallic and nonmetallic compounds, kinetics, and noncovalent interactions. <em>J. Chem. Phys.</em> <strong>2005</strong>, <em>123</em>, 161103, DOI: <a href="https://doi.org/10.1063/1.2126975">10.1063/1.2126975</a></li>
+<li id="review-ref-Zhao2006-194101" value="697">Zhao, Y.; Truhlar, D. G. A new local density functional for main-group thermochemistry, transition metal bonding, thermochemical kinetics, and noncovalent interactions. <em>J. Chem. Phys.</em> <strong>2006</strong>, <em>125</em>, 194101, DOI: <a href="https://doi.org/10.1063/1.2370993">10.1063/1.2370993</a></li>
+<li id="review-ref-Wang2017-8487" value="699">Wang, Y.; Jin, X.; Yu, H. S.; Truhlar, D. G.; He, X. Revised M06-L functional for improved accuracy on chemical reaction barrier heights, noncovalent interactions, and solid-state physics. <em>Proc. Natl. Acad. Sci. U. S. A.</em> <strong>2017</strong>, <em>114</em>, 8487--8492, DOI: <a href="https://doi.org/10.1073/pnas.1705670114">10.1073/pnas.1705670114</a></li>
+<li id="review-ref-Lehtola2023-JPCA-4180" value="700">Lehtola, S. Atomic Electronic Structure Calculations with Hermite Interpolating Polynomials. <em>J. Phys. Chem. A</em> <strong>2023</strong>, <em>127</em>, 4180--4193, DOI: <a href="https://doi.org/10.1021/acs.jpca.3c00729">10.1021/acs.jpca.3c00729</a></li></ol>
+        </section>
+
+        <section class="section">
+          <h2>Publications</h2>
+          <ol class="publication-refs"><li>Zhao, Y.; Truhlar, D. G. A new local density functional for main-group thermochemistry, transition metal bonding, thermochemical kinetics, and noncovalent interactions. <em>J. Chem. Phys.</em> <strong>2006</strong>, <em>125</em>, 194101, DOI: <a href="https://doi.org/10.1063/1.2370993">10.1063/1.2370993</a></li></ol>
+        </section>
+
+        <section class="section">
+          <div class="section-heading">
+            <h2>BibTeX</h2>
+            <button class="copy-button" type="button" data-copy-target="bibtex-code" aria-label="Copy BibTeX">Copy</button>
+          </div>
+          <pre><code id="bibtex-code">@article{Zhao2006_194101,
+  author = {Zhao, Y. and Truhlar, D. G.},
+  title = {A new local density functional for main-group thermochemistry, transition metal bonding, thermochemical kinetics, and noncovalent interactions},
+  journal = {J. Chem. Phys.},
+  year = {2006},
+  volume = {125},
+  number = {19},
+  pages = {194101},
+  doi = {10.1063/1.2370993},
+  url = {http://scitation.aip.org/content/aip/journal/jcp/125/19/10.1063/1.2370993}
+}
+</code></pre>
+        </section>
+
+        <details>
+          <summary>All Libxc metadata</summary>
+          <dl class="metadata">
+            <dt>identifier</dt><dd>mgga_x_m06_l</dd>
+            <dt>family</dt><dd>meta-gga</dd>
+            <dt>kind</dt><dd>exchange</dd>
+            <dt>derivatives</dt><dd>0, 1, 2</dd>
+            <dt>flags</dt><dd>dim3, exc, fxc, vxc, needs_tau, enforce_fhc</dd>
+<dt>cam_alpha</dt><dd>null</dd>
+<dt>cam_beta</dt><dd>null</dd>
+<dt>cam_omega</dt><dd>null</dd>
+<dt>density_threshold</dt><dd>1.0e-15</dd>
+<dt>exx_coefficient</dt><dd>null</dd>
+<dt>n_spin</dt><dd>1</dd>
+<dt>nlc_C</dt><dd>null</dd>
+<dt>nlc_b</dt><dd>null</dd>
+<dt>sigma_threshold</dt><dd>1.0000000000000027e-20</dd>
+<dt>tau_threshold</dt><dd>1.0e-20</dd>
+<dt>zeta_threshold</dt><dd>2.220446049250313e-16</dd>
+          </dl>
+        </details>
+      </div>
+
+    </main>
+    <div id="command-palette" class="command-palette" aria-hidden="true" hidden>
+      <div class="command-backdrop" data-command-close></div>
+      <form class="command-panel" role="search">
+        <div class="search-box">
+          <input id="command-search" class="search-input command-search-input" type="search" autocomplete="off" placeholder="Search functionals..." aria-controls="command-search-suggestions">
+          <div id="command-search-suggestions" class="search-suggestions command-search-suggestions" role="listbox" hidden></div>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

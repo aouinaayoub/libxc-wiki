@@ -1,0 +1,12 @@
+# Environment and editor noise
+.env
+.env.*
+*.log
+.DS_Store
+
+# Dependencies
+node_modules/
+docs/node_modules/
+
+# Intermediate extraction output
+docs/.generated/

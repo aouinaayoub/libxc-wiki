@@ -1,0 +1,17 @@
+{
+  "name": "libxc-wiki",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "vendor:katex": "node scripts/vendor-katex.mjs",
+    "build": "npm run vendor:katex && julia ../generate_site_data.jl",
+    "build:extract": "julia ../generate_site_data.jl",
+    "render:review": "node scripts/render-review.mjs",
+    "build:pandoc": "npm run build:extract && npm run render:review && npm run build",
+    "dev": "python3 -m http.server 4173 --bind 127.0.0.1"
+  },
+  "dependencies": {
+    "katex": "0.16.11"
+  }
+}

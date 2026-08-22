@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>mgga_x_ms2</title>
+    <link rel="stylesheet" href="../../assets/styles.css?v=20260822-github">
+    <script defer src="../../assets/search.js?v=20260822-github"></script>
+    <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+    <script defer src="../../vendor/katex/katex.min.js"></script>
+    <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
+    <script defer src="../../assets/detail.js?v=20260822-github"></script>
+
+  </head>
+  <body>
+    <main class="shell">
+      <form class="global-search" role="search" action="../../" method="get">
+        <div class="search-box">
+          <input class="search-input global-search-input" name="q" type="search" autocomplete="off" placeholder="Search functionals..." aria-controls="global-search-suggestions">
+          <span class="search-shortcut" aria-hidden="true">Ctrl K</span>
+          <div id="global-search-suggestions" class="search-suggestions" role="listbox" hidden></div>
+        </div>
+      </form>
+
+      <a class="back" href="../../">Back to search</a>
+      <header class="top">
+        <a class="github-link" href="https://github.com/aouinaayoub/libxc-wiki" aria-label="View Libxc Wiki on GitHub" title="View source on GitHub">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .7a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2.23c-3.22.7-3.9-1.37-3.9-1.37-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.71.08-.71 1.16.08 1.78 1.2 1.78 1.2 1.04 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.74-1.55-2.57-.29-5.27-1.29-5.27-5.69 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.16 1.18a10.94 10.94 0 0 1 5.76 0c2.19-1.49 3.16-1.18 3.16-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.42-2.71 5.39-5.29 5.68.42.36.79 1.07.79 2.16v3.2c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .7Z"/></svg>
+        </a>
+
+        <p class="brand">META-GGA</p>
+        <h1><code class="title-code">mgga_x_ms2</code></h1>
+        <div class="detail-tags"><span class="tag">meta-gga</span>
+<span class="tag">exchange</span></div>
+      </header>
+
+      <div class="detail-grid">
+      <section class="callout">
+        <p class="callout-label">Review excerpt</p>
+        <div class="review-html">
+<p>These two functionals have the same form as <a class="functional-link" href="../mgga-x-ms0/"><code>mgga_x_ms0</code></a>, but with one or two parameters empirically determined using various training sets: AE6 and BH6,<sup class="citation-marker"><a href="#review-ref-Lynch2003-8996">631</a>,<a href="#review-ref-Lynch2004-1460">632</a>,<a href="#review-ref-Haunschild2012-1">717</a></sup> G2/97,<sup class="citation-marker"><a href="#review-ref-Curtiss1997-1063">534</a>,<a href="#review-ref-Curtiss1998-42">659</a></sup> and BH42/03.<sup class="citation-marker"><a href="#review-ref-Zhao2004-2715">718</a></sup> In the one-parameter functional <a class="functional-link" href="../mgga-x-ms1/"><code>mgga_x_ms1</code></a>, only $\kappa=0.404$ (in <a class="review-eq-link" href="#review-eq-eq-pbeenh">
+  <code>eq:pbeenh</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="F_\text{x}^{\text{PBE}} = 1 + \kappa\left[1 - \frac{\kappa}{\kappa + f_0(s_\sigma)}\right]"></span>
+  </span>
+</a>) was optimized, while $c=0.18150$ (in <a class="review-eq-link" href="#review-eq-eq-f0-ms0a">
+  <code>eq:f0-ms0a</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="f_0(s_\sigma) = \mu^{\text{GE}} s_\sigma^2 + c"></span>
+  </span>
+</a>) was still chosen such that the functional reproduces the exact exchange energy of the H atom. For the two-parameter <a class="functional-link" href="../mgga-x-ms2/"><code>mgga_x_ms2</code></a>, both $\kappa=0.504$ and $b=4.0$ (in <a class="review-eq-link" href="#review-eq-eq-ms0f">
+  <code>eq:ms0f</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="f(\alpha_\sigma) = \frac{\left(1-\alpha_\sigma^2\right)^3}{1 + \alpha_\sigma^3 + b \alpha_\sigma^6}"></span>
+  </span>
+</a>) were optimized, leading to $c=0.14601$ (again from the H atom). Note that $b$ has a strong influence on the behavior of the enhancement factor for $\alpha_\sigma &gt; 1$.</p>
+<p>Compared to <a class="functional-link" href="../mgga-x-ms0/"><code>mgga_x_ms0</code></a>, these two functionals lead to improved results for heats of formation, while being of similar (good) accuracy for barrier heights and noncovalent interactions.</p>
+        </div>
+        <p class="source-note">Adapted from <a href="https://arxiv.org/abs/2602.17333">Tran, Lehtola, Pittalis, and Marques, <em>Semi-Local Exchange-Correlation Approximations in Density Functional Theory</em>, arXiv:2602.17333</a>.</p>
+      </section>
+
+        <section class="section">
+          <h2>Referenced Review Equations</h2>
+          <div class="review-equations">
+          <article class="review-equation-card" id="review-eq-eq-pbeenh">
+            <code>eq:pbeenh</code>
+            <div class="equation" data-tex="F_\text{x}^{\text{PBE}} = 1 + \kappa\left[1 - \frac{\kappa}{\kappa + f_0(s_\sigma)}\right]"></div>
+          </article>
+
+          <article class="review-equation-card" id="review-eq-eq-f0-ms0a">
+            <code>eq:f0-ms0a</code>
+            <div class="equation" data-tex="f_0(s_\sigma) = \mu^{\text{GE}} s_\sigma^2 + c"></div>
+          </article>
+
+          <article class="review-equation-card" id="review-eq-eq-ms0f">
+            <code>eq:ms0f</code>
+            <div class="equation" data-tex="f(\alpha_\sigma) = \frac{\left(1-\alpha_\sigma^2\right)^3}{1 + \alpha_\sigma^3 + b \alpha_\sigma^6}"></div>
+          </article>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <h2>Review References</h2>
+          <ol class="review-refs"><li id="review-ref-Lynch2003-8996" value="631">Lynch, B. J.; Truhlar, D. G. Small Representative Benchmarks for Thermochemical Calculations. <em>J. Phys. Chem. A</em> <strong>2003</strong>, <em>107</em>, 8996--8999, DOI: <a href="https://doi.org/10.1021/jp035287b">10.1021/jp035287b</a></li>
+<li id="review-ref-Lynch2004-1460" value="632">Lynch, B. J.; Truhlar, D. G. Small Representative Benchmarks for Thermochemical Calculations. <em>J. Phys. Chem. A</em> <strong>2004</strong>, <em>108</em>, 1460--1460, DOI: <a href="https://doi.org/10.1021/jp0379190">10.1021/jp0379190</a></li>
+<li id="review-ref-Haunschild2012-1" value="717">Haunschild, R.; Klopper, W. Theoretical reference values for the AE6 and BH6 test sets from explicitly correlated coupled-cluster theory. <em>Theor. Chem. Acc.</em> <strong>2012</strong>, <em>131</em>, 1--7, DOI: <a href="https://doi.org/10.1007/s00214-012-1112-3">10.1007/s00214-012-1112-3</a></li>
+<li id="review-ref-Curtiss1997-1063" value="534">Curtiss, L. A.; Raghavachari, K.; Redfern, P. C.; Pople, J. A. Assessment of Gaussian-2 and density functional theories for the computation of enthalpies of formation. <em>J. Chem. Phys.</em> <strong>1997</strong>, <em>106</em>, 1063--1079, DOI: <a href="https://doi.org/10.1063/1.473182">10.1063/1.473182</a></li>
+<li id="review-ref-Curtiss1998-42" value="659">Curtiss, L. A.; Redfern, P. C.; Raghavachari, K.; Pople, J. A. Assessment of Gaussian-2 and density functional theories for the computation of ionization potentials and electron affinities. <em>J. Chem. Phys.</em> <strong>1998</strong>, <em>109</em>, 42--55, DOI: <a href="https://doi.org/10.1063/1.476538">10.1063/1.476538</a></li>
+<li id="review-ref-Zhao2004-2715" value="718">Zhao, Y.; Lynch, B. J.; Truhlar, D. G. Development and Assessment of a New Hybrid Density Functional Model for Thermochemical Kinetics. <em>J. Phys. Chem. A</em> <strong>2004</strong>, <em>108</em>, 2715, DOI: <a href="https://doi.org/10.1021/jp049908s">10.1021/jp049908s</a></li></ol>
+        </section>
+
+        <section class="section">
+          <h2>Publications</h2>
+          <ol class="publication-refs"><li>Sun, J.; Haunschild, R.; Xiao, B.; Bulik, I. W.; Scuseria, G. E.; Perdew, J. P. Semilocal and hybrid meta-generalized gradient approximations based on the understanding of the kinetic-energy-density dependence. <em>J. Chem. Phys.</em> <strong>2013</strong>, <em>138</em>, 044113, DOI: <a href="https://doi.org/10.1063/1.4789414">10.1063/1.4789414</a></li></ol>
+        </section>
+
+        <section class="section">
+          <div class="section-heading">
+            <h2>BibTeX</h2>
+            <button class="copy-button" type="button" data-copy-target="bibtex-code" aria-label="Copy BibTeX">Copy</button>
+          </div>
+          <pre><code id="bibtex-code">@article{Sun2013_044113,
+  author = {Sun, J. and Haunschild, R. and Xiao, B. and Bulik, I. W. and Scuseria, G. E. and Perdew, J. P.},
+  title = {Semilocal and hybrid meta-generalized gradient approximations based on the understanding of the kinetic-energy-density dependence},
+  journal = {J. Chem. Phys.},
+  year = {2013},
+  volume = {138},
+  number = {4},
+  pages = {044113},
+  doi = {10.1063/1.4789414},
+  url = {http://scitation.aip.org/content/aip/journal/jcp/138/4/10.1063/1.4789414}
+}
+</code></pre>
+        </section>
+
+        <details>
+          <summary>All Libxc metadata</summary>
+          <dl class="metadata">
+            <dt>identifier</dt><dd>mgga_x_ms2</dd>
+            <dt>family</dt><dd>meta-gga</dd>
+            <dt>kind</dt><dd>exchange</dd>
+            <dt>derivatives</dt><dd>0, 1, 2</dd>
+            <dt>flags</dt><dd>dim3, exc, fxc, vxc, needs_tau, enforce_fhc</dd>
+<dt>cam_alpha</dt><dd>null</dd>
+<dt>cam_beta</dt><dd>null</dd>
+<dt>cam_omega</dt><dd>null</dd>
+<dt>density_threshold</dt><dd>1.0e-15</dd>
+<dt>exx_coefficient</dt><dd>null</dd>
+<dt>n_spin</dt><dd>1</dd>
+<dt>nlc_C</dt><dd>null</dd>
+<dt>nlc_b</dt><dd>null</dd>
+<dt>sigma_threshold</dt><dd>1.0000000000000027e-20</dd>
+<dt>tau_threshold</dt><dd>1.0e-20</dd>
+<dt>zeta_threshold</dt><dd>2.220446049250313e-16</dd>
+          </dl>
+        </details>
+      </div>
+
+    </main>
+    <div id="command-palette" class="command-palette" aria-hidden="true" hidden>
+      <div class="command-backdrop" data-command-close></div>
+      <form class="command-panel" role="search">
+        <div class="search-box">
+          <input id="command-search" class="search-input command-search-input" type="search" autocomplete="off" placeholder="Search functionals..." aria-controls="command-search-suggestions">
+          <div id="command-search-suggestions" class="search-suggestions command-search-suggestions" role="listbox" hidden></div>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

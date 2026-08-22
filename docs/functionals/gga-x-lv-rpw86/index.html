@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>gga_x_lv_rpw86</title>
+    <link rel="stylesheet" href="../../assets/styles.css?v=20260822-github">
+    <script defer src="../../assets/search.js?v=20260822-github"></script>
+    <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+    <script defer src="../../vendor/katex/katex.min.js"></script>
+    <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
+    <script defer src="../../assets/detail.js?v=20260822-github"></script>
+
+  </head>
+  <body>
+    <main class="shell">
+      <form class="global-search" role="search" action="../../" method="get">
+        <div class="search-box">
+          <input class="search-input global-search-input" name="q" type="search" autocomplete="off" placeholder="Search functionals..." aria-controls="global-search-suggestions">
+          <span class="search-shortcut" aria-hidden="true">Ctrl K</span>
+          <div id="global-search-suggestions" class="search-suggestions" role="listbox" hidden></div>
+        </div>
+      </form>
+
+      <a class="back" href="../../">Back to search</a>
+      <header class="top">
+        <a class="github-link" href="https://github.com/aouinaayoub/libxc-wiki" aria-label="View Libxc Wiki on GitHub" title="View source on GitHub">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .7a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2.23c-3.22.7-3.9-1.37-3.9-1.37-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.71.08-.71 1.16.08 1.78 1.2 1.78 1.2 1.04 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.74-1.55-2.57-.29-5.27-1.29-5.27-5.69 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.16 1.18a10.94 10.94 0 0 1 5.76 0c2.19-1.49 3.16-1.18 3.16-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.42-2.71 5.39-5.29 5.68.42.36.79 1.07.79 2.16v3.2c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .7Z"/></svg>
+        </a>
+
+        <p class="brand">GGA</p>
+        <h1><code class="title-code">gga_x_lv_rpw86</code></h1>
+        <div class="detail-tags"><span class="tag">gga</span>
+<span class="tag">exchange</span></div>
+      </header>
+
+      <div class="detail-grid">
+      <section class="callout">
+        <p class="callout-label">Review excerpt</p>
+        <div class="review-html">
+<p>This is an exchange functional based on the plasmon description within the non-local correlation functionals for van der Waals interactions.<sup class="citation-marker"><a href="#review-ref-Dion2004-PRL-246401">505</a>,<a href="#review-ref-Dion2005-PRL-109902">506</a></sup> In the regime with reduced-density gradient $s_\sigma \lesssim 2.5$ which dominates the non-local correlation component of the binding energy, the functional is made close to the Langreth&ndash;Vosko (LV) screened exchange<sup class="citation-marker"><a href="#review-ref-Langreth1990-175">574</a></sup> (defined below). For larger values of $s_\sigma$, dominated by exchange, the functional becomes similar to <a class="functional-link" href="../gga-x-rpw86/"><code>gga_x_rpw86</code></a> that includes the proper large-$s_\sigma$ behavior of exchange discussed in <sup class="citation-marker"><a href="#review-ref-Murray2009-2754">535</a></sup>. This leads to the following enhancement factor:</p>
+<div class="equation" data-tex="\begin{aligned}
+F_\text{x}^\text{LV-rPW86} = &amp; \frac{1}{1+\alpha s_\sigma^6}F_{\text{x}}^{\text{LV}}(s_\sigma)  \\
+ &amp;   + \frac{\alpha s_\sigma^6}{\beta + \alpha s_\sigma^6}F_{\text{x}}^{\text{rPW86}}(s_\sigma)
+\end{aligned}"></div>
+<p>where $F_\text{x}^\text{LV}=1+\mu_\text{LV}s^2$ with $\mu_\text{LV}=-Z_\text{ab}/9$ where  $Z_\text{ab}=-0.8491$,<sup class="citation-marker"><a href="#review-ref-Langreth1990-175">574</a></sup> while $F_{\text{x}}^{\text{rPW86}}$ is given by <a class="review-eq-link" href="#review-eq-eq-ggaxpw86">
+  <code>eq:ggaxpw86</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="F_\text{x}^{\text{PW86}} = \left(
+    1 + \frac{a}{m}s_\sigma^2 + bs_\sigma^4 + cs_\sigma^6\right)^{m}"></span>
+  </span>
+</a> with the coefficients of <a class="functional-link" href="../gga-x-rpw86/"><code>gga_x_rpw86</code></a>. The parameters $\alpha = 0.02178$ and $\beta = 1.15$ were determined such that $F_\text{x}^\text{LV-rPW86}$ reproduces at best $F_\text{x}^\text{LV}$ in the $0&lt;s_\sigma&lt;2$ interval and $F_{\text{x}}^{\text{rPW86}}$ in the $4&lt;s_\sigma&lt;10$ interval.</p>
+<p><a class="functional-link" href="../gga-x-lv-rpw86/"><code>gga_x_lv_rpw86</code></a> is used as the exchange component of the non-local van der Waals functional vdW-DF-cx.<sup class="citation-marker"><a href="#review-ref-Berland2014-035412">573</a></sup> This functional appears to perform well for the intermolecular distance and binding energy of weakly bound dimers (tested on the S22 set<sup class="citation-marker"><a href="#review-ref-Jurecka2006-1985">550</a></sup>), as well as for the lattice constants of layered materials and strongly-bound solids.</p>
+        </div>
+        <p class="source-note">Adapted from <a href="https://arxiv.org/abs/2602.17333">Tran, Lehtola, Pittalis, and Marques, <em>Semi-Local Exchange-Correlation Approximations in Density Functional Theory</em>, arXiv:2602.17333</a>.</p>
+      </section>
+
+        <section class="section">
+          <h2>Referenced Review Equations</h2>
+          <div class="review-equations">
+          <article class="review-equation-card" id="review-eq-eq-ggaxpw86">
+            <code>eq:ggaxpw86</code>
+            <div class="equation" data-tex="F_\text{x}^{\text{PW86}} = \left(
+    1 + \frac{a}{m}s_\sigma^2 + bs_\sigma^4 + cs_\sigma^6\right)^{m}"></div>
+          </article>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <h2>Review References</h2>
+          <ol class="review-refs"><li id="review-ref-Dion2004-PRL-246401" value="505">Dion, M.; Rydberg, H.; Schroder, E.; Langreth, D. C.; Lundqvist, B. I. Van der Waals Density Functional for General Geometries. <em>Phys. Rev. Lett.</em> <strong>2004</strong>, <em>92</em>, 246401, DOI: <a href="https://doi.org/10.1103/PhysRevLett.92.246401">10.1103/PhysRevLett.92.246401</a></li>
+<li id="review-ref-Dion2005-PRL-109902" value="506">Dion, M.; Rydberg, H.; Schroder, E.; Langreth, D. C.; Lundqvist, B. I. Erratum: Van der Waals Density Functional for General Geometries [Phys. Rev. Lett. 92 , 246401 (2004)]. <em>Phys. Rev. Lett.</em> <strong>2005</strong>, <em>95</em>, 109902, DOI: <a href="https://doi.org/10.1103/PhysRevLett.95.109902">10.1103/PhysRevLett.95.109902</a></li>
+<li id="review-ref-Langreth1990-175" value="574">Langreth, D. C.; Vosko, S. In <em>Density Functional Theory of Many-Fermion Systems</em>; Löwdin, P.-O., Ed.; Advances in Quantum Chemistry; Academic Press, 1990; Vol. 21; pp 175 -- 199, DOI: <a href="https://doi.org/10.1016/S0065-3276(08)60597-3">10.1016/S0065-3276(08)60597-3</a></li>
+<li id="review-ref-Murray2009-2754" value="535">Murray, E. D.; Lee, K.; Langreth, D. C. Investigation of Exchange Energy Density Functional Accuracy for Interacting Molecules. <em>J. Chem. Theory Comput.</em> <strong>2009</strong>, <em>5</em>, 2754, DOI: <a href="https://doi.org/10.1021/ct900365q">10.1021/ct900365q</a></li>
+<li id="review-ref-Berland2014-035412" value="573">Berland, K.; Hyldgaard, P. Exchange functional that tests the robustness of the plasmon description of the van der Waals density functional. <em>Phys. Rev. B</em> <strong>2014</strong>, <em>89</em>, 035412, DOI: <a href="https://doi.org/10.1103/PhysRevB.89.035412">10.1103/PhysRevB.89.035412</a></li>
+<li id="review-ref-Jurecka2006-1985" value="550">Jurecka, P.; Sponer, J.; Cerny, J.; Hobza, P. Benchmark database of accurate (MP2 and CCSD(T) complete basis set limit) interaction energies of small model complexes, DNA base pairs, and amino acid pairs. <em>Phys. Chem. Chem. Phys.</em> <strong>2006</strong>, <em>8</em>, 1985--1993, DOI: <a href="https://doi.org/10.1039/B600027D">10.1039/B600027D</a></li></ol>
+        </section>
+
+        <section class="section">
+          <h2>Publications</h2>
+          <ol class="publication-refs"><li>Berland, K.; Hyldgaard, P. Exchange functional that tests the robustness of the plasmon description of the van der Waals density functional. <em>Phys. Rev. B</em> <strong>2014</strong>, <em>89</em>, 035412, DOI: <a href="https://doi.org/10.1103/PhysRevB.89.035412">10.1103/PhysRevB.89.035412</a></li></ol>
+        </section>
+
+        <section class="section">
+          <div class="section-heading">
+            <h2>BibTeX</h2>
+            <button class="copy-button" type="button" data-copy-target="bibtex-code" aria-label="Copy BibTeX">Copy</button>
+          </div>
+          <pre><code id="bibtex-code">@article{Berland2014_035412,
+  author = {Berland, K. and Hyldgaard, P.},
+  title = {Exchange functional that tests the robustness of the plasmon description of the van der {Waals} density functional},
+  journal = {Phys. Rev. B},
+  volume = {89},
+  issue = {3},
+  pages = {035412},
+  year = {2014},
+  month = {Jan},
+  publisher = {American Physical Society},
+  doi = {10.1103/PhysRevB.89.035412},
+  url = {http://link.aps.org/doi/10.1103/PhysRevB.89.035412}
+}
+</code></pre>
+        </section>
+
+        <details>
+          <summary>All Libxc metadata</summary>
+          <dl class="metadata">
+            <dt>identifier</dt><dd>gga_x_lv_rpw86</dd>
+            <dt>family</dt><dd>gga</dd>
+            <dt>kind</dt><dd>exchange</dd>
+            <dt>derivatives</dt><dd>0, 1, 2</dd>
+            <dt>flags</dt><dd>dim3, exc, fxc, vxc, enforce_fhc</dd>
+<dt>cam_alpha</dt><dd>null</dd>
+<dt>cam_beta</dt><dd>null</dd>
+<dt>cam_omega</dt><dd>null</dd>
+<dt>density_threshold</dt><dd>1.0e-15</dd>
+<dt>exx_coefficient</dt><dd>null</dd>
+<dt>n_spin</dt><dd>1</dd>
+<dt>nlc_C</dt><dd>null</dd>
+<dt>nlc_b</dt><dd>null</dd>
+<dt>sigma_threshold</dt><dd>1.0000000000000027e-20</dd>
+<dt>tau_threshold</dt><dd>1.0e-20</dd>
+<dt>zeta_threshold</dt><dd>2.220446049250313e-16</dd>
+          </dl>
+        </details>
+      </div>
+
+    </main>
+    <div id="command-palette" class="command-palette" aria-hidden="true" hidden>
+      <div class="command-backdrop" data-command-close></div>
+      <form class="command-panel" role="search">
+        <div class="search-box">
+          <input id="command-search" class="search-input command-search-input" type="search" autocomplete="off" placeholder="Search functionals..." aria-controls="command-search-suggestions">
+          <div id="command-search-suggestions" class="search-suggestions command-search-suggestions" role="listbox" hidden></div>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

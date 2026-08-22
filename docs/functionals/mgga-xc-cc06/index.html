@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>mgga_xc_cc06</title>
+    <link rel="stylesheet" href="../../assets/styles.css?v=20260822-github">
+    <script defer src="../../assets/search.js?v=20260822-github"></script>
+    <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+    <script defer src="../../vendor/katex/katex.min.js"></script>
+    <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
+    <script defer src="../../assets/detail.js?v=20260822-github"></script>
+
+  </head>
+  <body>
+    <main class="shell">
+      <form class="global-search" role="search" action="../../" method="get">
+        <div class="search-box">
+          <input class="search-input global-search-input" name="q" type="search" autocomplete="off" placeholder="Search functionals..." aria-controls="global-search-suggestions">
+          <span class="search-shortcut" aria-hidden="true">Ctrl K</span>
+          <div id="global-search-suggestions" class="search-suggestions" role="listbox" hidden></div>
+        </div>
+      </form>
+
+      <a class="back" href="../../">Back to search</a>
+      <header class="top">
+        <a class="github-link" href="https://github.com/aouinaayoub/libxc-wiki" aria-label="View Libxc Wiki on GitHub" title="View source on GitHub">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .7a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2.23c-3.22.7-3.9-1.37-3.9-1.37-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.71.08-.71 1.16.08 1.78 1.2 1.78 1.2 1.04 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.74-1.55-2.57-.29-5.27-1.29-5.27-5.69 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.16 1.18a10.94 10.94 0 0 1 5.76 0c2.19-1.49 3.16-1.18 3.16-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.42-2.71 5.39-5.29 5.68.42.36.79 1.07.79 2.16v3.2c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .7Z"/></svg>
+        </a>
+
+        <p class="brand">META-GGA</p>
+        <h1><code class="title-code">mgga_xc_cc06</code></h1>
+        <div class="detail-tags"><span class="tag">meta-gga</span>
+<span class="tag">exchange</span>
+<span class="tag">correlation</span></div>
+      </header>
+
+      <div class="detail-grid">
+      <section class="callout">
+        <p class="callout-label">Review excerpt</p>
+        <div class="review-html">
+<p>By comparing the xc-energy density for bulk silicon calculated with variational MC<sup class="citation-marker"><a href="#review-ref-Hood1997-3350">808</a>,<a href="#review-ref-Hood1998-8972">809</a></sup> with the LDA approximation, Cancio and Chou<sup class="citation-marker"><a href="#review-ref-Cancio2006-081202">807</a></sup> remarked that the difference between these two quantities can be modeled by a simple function of the Laplacian of the density. They therefore proposed the following form:</p>
+<div class="equation" data-tex="e^\text{CC06}_\text{xc} = \left(e^\text{LDA}_\text{x} + e^\text{PW-LDA}_\text{c}\right)
+  F^\text{CC06}_\text{xc}(u)"></div>
+<p>where  $e^\text{LDA}_\text{x}$ is <a class="functional-link" href="../lda-x/"><code>lda_x</code></a>, $e^\text{PW-LDA}_\text{c}$ is <a class="functional-link" href="../lda-c-pw/"><code>lda_c_pw</code></a>, and the enhancement factor reads</p>
+<div class="equation" data-tex="F^\text{CC06}_\text{xc}(u) = 1 + \frac{\alpha + 
+  \beta\left[3/\left(4\pi\right)\right]^{2/3}u}{1 + \gamma\left[3/\left(4\pi\right)\right]^{2/3}u}"></div>
+<p>The three parameters were fit to reproduce the variational MC xc-energy density for bulk silicon, yielding $\alpha=-0.0007$, $\beta= 0.0080$, and $\gamma=0.026$. Note that since $\alpha$ is nonzero, the functional does not recover the correct HEG limit (LDA), i.e. $F^\text{CC06}_\text{xc}(u=0)=1+\alpha=0.9993$ instead of 1, albeit the deviation is  small. Note that $u$ in <a class="review-eq-link" href="#review-eq-eq-cc06">
+  <code>eq:cc06</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="F^\text{CC06}_\text{xc}(u) = 1 + \frac{\alpha + 
+  \beta\left[3/\left(4\pi\right)\right]^{2/3}u}{1 + \gamma\left[3/\left(4\pi\right)\right]^{2/3}u}"></span>
+  </span>
+</a> is given by <a class="review-eq-link" href="#review-eq-eq-u">
+  <code>eq:u</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="u^{m\text{D}} = \frac{\nabla^2 n}{n^\frac{m+2}{m}}"></span>
+  </span>
+</a> with $n=n_\uparrow+n_\downarrow$ also in the spin-polarized case.</p>
+        </div>
+        <p class="source-note">Adapted from <a href="https://arxiv.org/abs/2602.17333">Tran, Lehtola, Pittalis, and Marques, <em>Semi-Local Exchange-Correlation Approximations in Density Functional Theory</em>, arXiv:2602.17333</a>.</p>
+      </section>
+
+        <section class="section">
+          <h2>Referenced Review Equations</h2>
+          <div class="review-equations">
+          <article class="review-equation-card" id="review-eq-eq-cc06">
+            <code>eq:cc06</code>
+            <div class="equation" data-tex="F^\text{CC06}_\text{xc}(u) = 1 + \frac{\alpha + 
+  \beta\left[3/\left(4\pi\right)\right]^{2/3}u}{1 + \gamma\left[3/\left(4\pi\right)\right]^{2/3}u}"></div>
+          </article>
+
+          <article class="review-equation-card" id="review-eq-eq-u">
+            <code>eq:u</code>
+            <div class="equation" data-tex="u^{m\text{D}} = \frac{\nabla^2 n}{n^\frac{m+2}{m}}"></div>
+          </article>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <h2>Review References</h2>
+          <ol class="review-refs"><li id="review-ref-Hood1997-3350" value="808">Hood, R. Q.; Chou, M. Y.; Williamson, A. J.; Rajagopal, G.; Needs, R. J.; Foulkes, W. M. C. Quantum Monte Carlo Investigation of Exchange and Correlation in Silicon. <em>Phys. Rev. Lett.</em> <strong>1997</strong>, <em>78</em>, 3350--3353, DOI: <a href="https://doi.org/10.1103/PhysRevLett.78.3350">10.1103/PhysRevLett.78.3350</a></li>
+<li id="review-ref-Hood1998-8972" value="809">Hood, R. Q.; Chou, M. Y.; Williamson, A. J.; Rajagopal, G.; Needs, R. J. Exchange and correlation in silicon. <em>Phys. Rev. B</em> <strong>1998</strong>, <em>57</em>, 8972--8982, DOI: <a href="https://doi.org/10.1103/PhysRevB.57.8972">10.1103/PhysRevB.57.8972</a></li>
+<li id="review-ref-Cancio2006-081202" value="807">Cancio, A. C.; Chou, M. Y. Beyond the local approximation to exchange and correlation: The role of the Laplacian of the density in the energy density of Si. <em>Phys. Rev. B</em> <strong>2006</strong>, <em>74</em>, 081202, DOI: <a href="https://doi.org/10.1103/PhysRevB.74.081202">10.1103/PhysRevB.74.081202</a></li></ol>
+        </section>
+
+        <section class="section">
+          <h2>Publications</h2>
+          <ol class="publication-refs"><li>Cancio, A. C.; Chou, M. Y. Beyond the local approximation to exchange and correlation: The role of the Laplacian of the density in the energy density of Si. <em>Phys. Rev. B</em> <strong>2006</strong>, <em>74</em>, 081202, DOI: <a href="https://doi.org/10.1103/PhysRevB.74.081202">10.1103/PhysRevB.74.081202</a></li></ol>
+        </section>
+
+        <section class="section">
+          <div class="section-heading">
+            <h2>BibTeX</h2>
+            <button class="copy-button" type="button" data-copy-target="bibtex-code" aria-label="Copy BibTeX">Copy</button>
+          </div>
+          <pre><code id="bibtex-code">@article{Cancio2006_081202,
+  author = {Cancio, A. C. and Chou, M. Y.},
+  title = {Beyond the local approximation to exchange and correlation: The role of the {Laplacian} of the density in the energy density of {Si}},
+  journal = {Phys. Rev. B},
+  volume = {74},
+  issue = {8},
+  pages = {081202},
+  year = {2006},
+  month = {Aug},
+  publisher = {American Physical Society},
+  doi = {10.1103/PhysRevB.74.081202},
+  url = {http://link.aps.org/doi/10.1103/PhysRevB.74.081202}
+}
+</code></pre>
+        </section>
+
+        <details>
+          <summary>All Libxc metadata</summary>
+          <dl class="metadata">
+            <dt>identifier</dt><dd>mgga_xc_cc06</dd>
+            <dt>family</dt><dd>meta-gga</dd>
+            <dt>kind</dt><dd>exchange_correlation</dd>
+            <dt>derivatives</dt><dd>0, 1, 2</dd>
+            <dt>flags</dt><dd>dim3, exc, fxc, needs_laplacian, vxc, enforce_fhc</dd>
+<dt>cam_alpha</dt><dd>null</dd>
+<dt>cam_beta</dt><dd>null</dd>
+<dt>cam_omega</dt><dd>null</dd>
+<dt>density_threshold</dt><dd>1.0e-15</dd>
+<dt>exx_coefficient</dt><dd>null</dd>
+<dt>n_spin</dt><dd>1</dd>
+<dt>nlc_C</dt><dd>null</dd>
+<dt>nlc_b</dt><dd>null</dd>
+<dt>sigma_threshold</dt><dd>1.0000000000000027e-20</dd>
+<dt>tau_threshold</dt><dd>1.0e-20</dd>
+<dt>zeta_threshold</dt><dd>2.220446049250313e-16</dd>
+          </dl>
+        </details>
+      </div>
+
+    </main>
+    <div id="command-palette" class="command-palette" aria-hidden="true" hidden>
+      <div class="command-backdrop" data-command-close></div>
+      <form class="command-panel" role="search">
+        <div class="search-box">
+          <input id="command-search" class="search-input command-search-input" type="search" autocomplete="off" placeholder="Search functionals..." aria-controls="command-search-suggestions">
+          <div id="command-search-suggestions" class="search-suggestions command-search-suggestions" role="listbox" hidden></div>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

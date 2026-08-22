@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>mgga_c_bc95</title>
+    <link rel="stylesheet" href="../../assets/styles.css?v=20260822-github">
+    <script defer src="../../assets/search.js?v=20260822-github"></script>
+    <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+    <script defer src="../../vendor/katex/katex.min.js"></script>
+    <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
+    <script defer src="../../assets/detail.js?v=20260822-github"></script>
+
+  </head>
+  <body>
+    <main class="shell">
+      <form class="global-search" role="search" action="../../" method="get">
+        <div class="search-box">
+          <input class="search-input global-search-input" name="q" type="search" autocomplete="off" placeholder="Search functionals..." aria-controls="global-search-suggestions">
+          <span class="search-shortcut" aria-hidden="true">Ctrl K</span>
+          <div id="global-search-suggestions" class="search-suggestions" role="listbox" hidden></div>
+        </div>
+      </form>
+
+      <a class="back" href="../../">Back to search</a>
+      <header class="top">
+        <a class="github-link" href="https://github.com/aouinaayoub/libxc-wiki" aria-label="View Libxc Wiki on GitHub" title="View source on GitHub">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .7a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2.23c-3.22.7-3.9-1.37-3.9-1.37-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.71.08-.71 1.16.08 1.78 1.2 1.78 1.2 1.04 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.74-1.55-2.57-.29-5.27-1.29-5.27-5.69 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.16 1.18a10.94 10.94 0 0 1 5.76 0c2.19-1.49 3.16-1.18 3.16-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.42-2.71 5.39-5.29 5.68.42.36.79 1.07.79 2.16v3.2c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .7Z"/></svg>
+        </a>
+
+        <p class="brand">META-GGA</p>
+        <h1><code class="title-code">mgga_c_bc95</code></h1>
+        <div class="detail-tags"><span class="tag">meta-gga</span>
+<span class="tag">correlation</span></div>
+      </header>
+
+      <div class="detail-grid">
+      <section class="callout">
+        <p class="callout-label">Review excerpt</p>
+        <div class="review-html">
+<p>Becke<sup class="citation-marker"><a href="#review-ref-Becke1996-1040">182</a></sup> developed a correlation functional based on four minimal requirements: (i) correct HEG limit, (ii) separate handling of the parallel- and opposite-spin correlations (see the review), (iii) vanishing correlation energy for one-electron systems, and (iv) accurate fit to exact correlation energies of atoms. Requirement (iii) can be satisfied with the iso-orbital indicator $\alpha_\sigma$ that vanishes for any one-electron system and can therefore remove a part of the self-interaction error. However, Becke<sup class="citation-marker"><a href="#review-ref-Becke1996-1040">182</a></sup> observed that using in <a class="review-eq-link" href="#review-eq-eq-stollfunc">
+  <code>eq:stollfunc</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="\begin{aligned}
+e_\c[n_\uparrow,n_\downarrow] = &amp; \sum_{\sigma} 
+   e^\text{LDA}_{\c\,\sigma\sigma}(n_\sigma)F_{\c\,\sigma\sigma}[n_\sigma,0] 
+    \\
+
+  &amp; + e^\text{LDA}_{\c\,\uparrow\downarrow}(n_\uparrow,n_\downarrow)
+  F_{\c\,\uparrow\downarrow}[n_\uparrow,n_\downarrow]
+\end{aligned}"></span>
+  </span>
+</a> the simple form $F_{\text{c}\,\sigma\sigma}=\alpha_\sigma$ for the parallel-spin correlation (with $F_{\text{c}\,\uparrow\downarrow}=1$) leads to a considerable overestimation of the correlation energy. Therefore, inspired by the construction of his previous correlation functional <a class="functional-link" href="../mgga-c-b88/"><code>mgga_c_b88</code></a>, he introduced density-gradient dependent cutoffs:</p>
+<div class="equation" data-tex="\begin{aligned}
+F_{\text{c}\,\uparrow\downarrow}^\text{BC95} &amp; = 
+    \frac{1}{1 + c_{\uparrow\downarrow}2x_{\text{avg}}^2}
+  \\
+  F_{\text{c}\,\sigma\sigma}^\text{BC95} &amp; = 
+  \frac{ \alpha_\sigma}{\left(1 + c_{\sigma\sigma}x_\sigma^2\right)^2}
+\end{aligned}"></div>
+<p>where $x_{\text{avg}}^2$ is given by <a class="review-eq-link" href="#review-eq-eq-xavg">
+  <code>eq:xavg</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="x^2_\text{avg} = \frac{1}{2}\left(x^2_\uparrow+x^2_\downarrow\right)"></span>
+  </span>
+</a>. The parameters $c_{\uparrow\downarrow}=0.0031$ and $c_{\sigma\sigma}=0.038$ were fit to the correlation energies of the He and Ne atoms, respectively. <a class="functional-link" href="../lda-c-pw/"><code>lda_c_pw</code></a> is used as the LDA component in <a class="review-eq-link" href="#review-eq-eq-stollfunc">
+  <code>eq:stollfunc</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="\begin{aligned}
+e_\c[n_\uparrow,n_\downarrow] = &amp; \sum_{\sigma} 
+   e^\text{LDA}_{\c\,\sigma\sigma}(n_\sigma)F_{\c\,\sigma\sigma}[n_\sigma,0] 
+    \\
+
+  &amp; + e^\text{LDA}_{\c\,\uparrow\downarrow}(n_\uparrow,n_\downarrow)
+  F_{\c\,\uparrow\downarrow}[n_\uparrow,n_\downarrow]
+\end{aligned}"></span>
+  </span>
+</a>.</p>
+<p>The functional <a class="functional-link" href="../mgga-c-bc95/"><code>mgga_c_bc95</code></a> was combined with <a class="functional-link" href="../gga-x-b88/"><code>gga_x_b88</code></a> as well as HF exchange for calculations of the thermochemical properties of the molecules of the G2 dataset.<sup class="citation-marker"><a href="#review-ref-Pople1989-5622">651</a>,<a href="#review-ref-Curtiss1991-7221">430</a></sup></p>
+        </div>
+        <p class="source-note">Adapted from <a href="https://arxiv.org/abs/2602.17333">Tran, Lehtola, Pittalis, and Marques, <em>Semi-Local Exchange-Correlation Approximations in Density Functional Theory</em>, arXiv:2602.17333</a>.</p>
+      </section>
+
+        <section class="section">
+          <h2>Referenced Review Equations</h2>
+          <div class="review-equations">
+          <article class="review-equation-card" id="review-eq-eq-stollfunc">
+            <code>eq:stollfunc</code>
+            <div class="equation" data-tex="\begin{aligned}
+e_\c[n_\uparrow,n_\downarrow] = &amp; \sum_{\sigma} 
+   e^\text{LDA}_{\c\,\sigma\sigma}(n_\sigma)F_{\c\,\sigma\sigma}[n_\sigma,0] 
+    \\
+
+  &amp; + e^\text{LDA}_{\c\,\uparrow\downarrow}(n_\uparrow,n_\downarrow)
+  F_{\c\,\uparrow\downarrow}[n_\uparrow,n_\downarrow]
+\end{aligned}"></div>
+          </article>
+
+          <article class="review-equation-card" id="review-eq-eq-xavg">
+            <code>eq:xavg</code>
+            <div class="equation" data-tex="x^2_\text{avg} = \frac{1}{2}\left(x^2_\uparrow+x^2_\downarrow\right)"></div>
+          </article>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <h2>Review References</h2>
+          <ol class="review-refs"><li id="review-ref-Becke1996-1040" value="182">Becke, A. D. Density-functional thermochemistry. IV. A new dynamical correlation functional and implications for exact-exchange mixing. <em>J. Chem. Phys.</em> <strong>1996</strong>, <em>104</em>, 1040, DOI: <a href="https://doi.org/10.1063/1.470829">10.1063/1.470829</a></li>
+<li id="review-ref-Pople1989-5622" value="651">Pople, J. A.; Head-Gordon, M.; Fox, D. J.; Raghavachari, K.; Curtiss, L. A. Gaussian-1 theory: A general procedure for prediction of molecular energies. <em>J. Chem. Phys.</em> <strong>1989</strong>, <em>90</em>, 5622--5629, DOI: <a href="https://doi.org/10.1063/1.456415">10.1063/1.456415</a></li>
+<li id="review-ref-Curtiss1991-7221" value="430">Curtiss, L. A.; Raghavachari, K.; Trucks, G. W.; Pople, J. A. Gaussian‐2 theory for molecular energies of first‐ and second‐row compounds. <em>J. Chem. Phys.</em> <strong>1991</strong>, <em>94</em>, 7221--7230, DOI: <a href="https://doi.org/10.1063/1.460205">10.1063/1.460205</a></li></ol>
+        </section>
+
+        <section class="section">
+          <h2>Publications</h2>
+          <ol class="publication-refs"><li>Becke, A. D. Density-functional thermochemistry. IV. A new dynamical correlation functional and implications for exact-exchange mixing. <em>J. Chem. Phys.</em> <strong>1996</strong>, <em>104</em>, 1040, DOI: <a href="https://doi.org/10.1063/1.470829">10.1063/1.470829</a></li></ol>
+        </section>
+
+        <section class="section">
+          <div class="section-heading">
+            <h2>BibTeX</h2>
+            <button class="copy-button" type="button" data-copy-target="bibtex-code" aria-label="Copy BibTeX">Copy</button>
+          </div>
+          <pre><code id="bibtex-code">@article{Becke1996_1040,
+  author = {Becke, A. D.},
+  title = {Density-functional thermochemistry. {IV}. {A} new dynamical correlation functional and implications for exact-exchange mixing},
+  journal = {J. Chem. Phys.},
+  year = {1996},
+  volume = {104},
+  number = {3},
+  pages = {1040},
+  doi = {10.1063/1.470829},
+  url = {http://scitation.aip.org/content/aip/journal/jcp/104/3/10.1063/1.470829}
+}
+</code></pre>
+        </section>
+
+        <details>
+          <summary>All Libxc metadata</summary>
+          <dl class="metadata">
+            <dt>identifier</dt><dd>mgga_c_bc95</dd>
+            <dt>family</dt><dd>meta-gga</dd>
+            <dt>kind</dt><dd>correlation</dd>
+            <dt>derivatives</dt><dd>0, 1, 2</dd>
+            <dt>flags</dt><dd>dim3, exc, fxc, vxc, needs_tau, enforce_fhc</dd>
+<dt>cam_alpha</dt><dd>null</dd>
+<dt>cam_beta</dt><dd>null</dd>
+<dt>cam_omega</dt><dd>null</dd>
+<dt>density_threshold</dt><dd>1.0e-14</dd>
+<dt>exx_coefficient</dt><dd>null</dd>
+<dt>n_spin</dt><dd>1</dd>
+<dt>nlc_C</dt><dd>null</dd>
+<dt>nlc_b</dt><dd>null</dd>
+<dt>sigma_threshold</dt><dd>2.1544346900318888e-19</dd>
+<dt>tau_threshold</dt><dd>1.0e-20</dd>
+<dt>zeta_threshold</dt><dd>2.220446049250313e-16</dd>
+          </dl>
+        </details>
+      </div>
+
+    </main>
+    <div id="command-palette" class="command-palette" aria-hidden="true" hidden>
+      <div class="command-backdrop" data-command-close></div>
+      <form class="command-panel" role="search">
+        <div class="search-box">
+          <input id="command-search" class="search-input command-search-input" type="search" autocomplete="off" placeholder="Search functionals..." aria-controls="command-search-suggestions">
+          <div id="command-search-suggestions" class="search-suggestions command-search-suggestions" role="listbox" hidden></div>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

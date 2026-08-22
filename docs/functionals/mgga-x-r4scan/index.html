@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>mgga_x_r4scan</title>
+    <link rel="stylesheet" href="../../assets/styles.css?v=20260822-github">
+    <script defer src="../../assets/search.js?v=20260822-github"></script>
+    <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+    <script defer src="../../vendor/katex/katex.min.js"></script>
+    <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
+    <script defer src="../../assets/detail.js?v=20260822-github"></script>
+
+  </head>
+  <body>
+    <main class="shell">
+      <form class="global-search" role="search" action="../../" method="get">
+        <div class="search-box">
+          <input class="search-input global-search-input" name="q" type="search" autocomplete="off" placeholder="Search functionals..." aria-controls="global-search-suggestions">
+          <span class="search-shortcut" aria-hidden="true">Ctrl K</span>
+          <div id="global-search-suggestions" class="search-suggestions" role="listbox" hidden></div>
+        </div>
+      </form>
+
+      <a class="back" href="../../">Back to search</a>
+      <header class="top">
+        <a class="github-link" href="https://github.com/aouinaayoub/libxc-wiki" aria-label="View Libxc Wiki on GitHub" title="View source on GitHub">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .7a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2.23c-3.22.7-3.9-1.37-3.9-1.37-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.71.08-.71 1.16.08 1.78 1.2 1.78 1.2 1.04 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.74-1.55-2.57-.29-5.27-1.29-5.27-5.69 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.16 1.18a10.94 10.94 0 0 1 5.76 0c2.19-1.49 3.16-1.18 3.16-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.42-2.71 5.39-5.29 5.68.42.36.79 1.07.79 2.16v3.2c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .7Z"/></svg>
+        </a>
+
+        <p class="brand">META-GGA</p>
+        <h1><code class="title-code">mgga_x_r4scan</code></h1>
+        <div class="detail-tags"><span class="tag">meta-gga</span>
+<span class="tag">exchange</span></div>
+      </header>
+
+      <div class="detail-grid">
+      <section class="callout">
+        <p class="callout-label">Review excerpt</p>
+        <div class="review-html">
+<p><a class="functional-link" href="../mgga-x-r2scan/"><code>mgga_x_r2scan</code></a> was constructed to be smoother than <a class="functional-link" href="../mgga-x-scan/"><code>mgga_x_scan</code></a>, however the price to pay was to sacrifice the constraint of the fourth-order term in the density-gradient expansion.<sup class="citation-marker"><a href="#review-ref-Svendsen1996-17402">285</a></sup> In order to remedy this, Furness et al.<sup class="citation-marker"><a href="#review-ref-Furness2022-034109">773</a></sup> proposed to add a term, $\Delta F_4 g$, to the <a class="functional-link" href="../mgga-x-r2scan/"><code>mgga_x_r2scan</code></a> enhancement factor:</p>
+<div class="equation" data-tex="\begin{aligned}
+F_\text{x}^{\text{r}^4\text{SCAN}} = &amp; \left\{h_{\text{x}}^1(p_\sigma) + f(\tilde{\alpha}_\sigma)\left[h_{\text{x}}^0 - h_{\text{x}}^1(p_\sigma)\right] \right.  \\
+ &amp; \left. + \Delta F_4(p_\sigma,\tilde{\alpha}_\sigma)\right\}g(p_{\sigma})
+\end{aligned}"></div>
+<p>where</p>
+<div class="equation" data-tex="\begin{aligned}
+\Delta F_4(p_\sigma,\tilde{\alpha}_\sigma) = &amp; \left\{C_{2\text{x}}\left[(1-\tilde{\alpha}_{\sigma})-C_{\eta}p_{\sigma}\right] \right.  \\
+   &amp;+ C_{\tilde{\alpha}\tilde{\alpha}}(1-\tilde{\alpha}_{\sigma})^2 + C_{p\tilde{\alpha}}p_{\sigma}(1-\tilde{\alpha}_{\sigma}) \\
+   &amp;\left.+C_{pp}p_{\sigma}^2\right\}\Delta F_4^{\text{damp}}(p_\sigma,\tilde{\alpha}_\sigma)
+\end{aligned}"></div>
+<p>with</p>
+<div class="equation" data-tex="\begin{aligned}
+\Delta F_4^{\text{damp}}(p_\sigma,\tilde{\alpha}_\sigma) = &amp; \frac{2\tilde{\alpha}_{\sigma}^2}{1+\tilde{\alpha}_{\sigma}^4}  \\
+&amp;\times\E^{\displaystyle -(1-\tilde{\alpha}_{\sigma})^2/d_{\tilde{\alpha}4}^2-p_{\sigma}^2/d_{p4}^4}
+\end{aligned}"></div>
+<p>The constants in <a class="review-eq-link" href="#review-eq-eq-f4r4scan">
+  <code>eq:f4r4scan</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="\begin{aligned}
+\Delta F_4(p_\sigma,\tilde{\alpha}_\sigma) = &amp; \left\{C_{2\text{x}}\left[(1-\tilde{\alpha}_{\sigma})-C_{\eta}p_{\sigma}\right] \right.  \\
+
+   &amp;+ C_{\tilde{\alpha}\tilde{\alpha}}(1-\tilde{\alpha}_{\sigma})^2 + C_{p\tilde{\alpha}}p_{\sigma}(1-\tilde{\alpha}_{\sigma}) \\
+
+   &amp;\left.+C_{pp}p_{\sigma}^2\right\}\Delta F_4^{\text{damp}}(p_\sigma,\tilde{\alpha}_\sigma)
+\end{aligned}"></span>
+  </span>
+</a>; <a class="review-eq-link" href="#review-eq-eq-r4scan-df4damp">
+  <code>eq:r4scan-df4damp</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="\begin{aligned}
+\Delta F_4^{\text{damp}}(p_\sigma,\tilde{\alpha}_\sigma) = &amp; \frac{2\tilde{\alpha}_{\sigma}^2}{1+\tilde{\alpha}_{\sigma}^4}  \\
+
+&amp;\times\E^{\displaystyle -(1-\tilde{\alpha}_{\sigma})^2/d_{\tilde{\alpha}4}^2-p_{\sigma}^2/d_{p4}^4}
+\end{aligned}"></span>
+  </span>
+</a> are given by (see <sup class="citation-marker"><a href="#review-ref-Furness2022-034109">773</a></sup> for their relations to other constants) $C_{\tilde{\alpha}\tilde{\alpha}}\approx-0.059353$,<sup class="citation-marker"><a href="#review-ref-approximation1">501</a></sup> $C_{p\tilde{\alpha}}\approx0.040268$,<sup class="citation-marker"><a href="#review-ref-approximation1">501</a></sup> $C_{pp}\approx-0.088077$,<sup class="citation-marker"><a href="#review-ref-approximation1">501</a></sup> $d_{\tilde{\alpha}4}=0.178$, and $d_{p4}=0.802$. The two latter parameters were determined by minimizing the error for the xc energy of rare-gas atoms and jellium surface. The other parameters and functions are the same as in <a class="functional-link" href="../mgga-x-r2scan/"><code>mgga_x_r2scan</code></a>.</p>
+<p>The functional <a class="functional-link" href="../mgga-x-r4scan/"><code>mgga_x_r4scan</code></a> is not as smooth as <a class="functional-link" href="../mgga-x-r2scan/"><code>mgga_x_r2scan</code></a>, but still numerically more stable than the original <a class="functional-link" href="../mgga-x-scan/"><code>mgga_x_scan</code></a>. Using <a class="functional-link" href="../mgga-c-r2scan/"><code>mgga_c_r2scan</code></a> for correlation, the overall accuracy of <a class="functional-link" href="../mgga-x-r4scan/"><code>mgga_x_r4scan</code></a> is similar to <a class="functional-link" href="../mgga-x-r2scan/"><code>mgga_x_r2scan</code></a>, with however a slight increase of the error for the atomization energies of molecules. Furness et al.<sup class="citation-marker"><a href="#review-ref-Furness2022-034109">773</a></sup> recommend the use of r$^2$SCAN over r$^4$SCAN.</p>
+        </div>
+        <p class="source-note">Adapted from <a href="https://arxiv.org/abs/2602.17333">Tran, Lehtola, Pittalis, and Marques, <em>Semi-Local Exchange-Correlation Approximations in Density Functional Theory</em>, arXiv:2602.17333</a>.</p>
+      </section>
+
+        <section class="section">
+          <h2>Referenced Review Equations</h2>
+          <div class="review-equations">
+          <article class="review-equation-card" id="review-eq-eq-f4r4scan">
+            <code>eq:f4r4scan</code>
+            <div class="equation" data-tex="\begin{aligned}
+\Delta F_4(p_\sigma,\tilde{\alpha}_\sigma) = &amp; \left\{C_{2\text{x}}\left[(1-\tilde{\alpha}_{\sigma})-C_{\eta}p_{\sigma}\right] \right.  \\
+
+   &amp;+ C_{\tilde{\alpha}\tilde{\alpha}}(1-\tilde{\alpha}_{\sigma})^2 + C_{p\tilde{\alpha}}p_{\sigma}(1-\tilde{\alpha}_{\sigma}) \\
+
+   &amp;\left.+C_{pp}p_{\sigma}^2\right\}\Delta F_4^{\text{damp}}(p_\sigma,\tilde{\alpha}_\sigma)
+\end{aligned}"></div>
+          </article>
+
+          <article class="review-equation-card" id="review-eq-eq-r4scan-df4damp">
+            <code>eq:r4scan-df4damp</code>
+            <div class="equation" data-tex="\begin{aligned}
+\Delta F_4^{\text{damp}}(p_\sigma,\tilde{\alpha}_\sigma) = &amp; \frac{2\tilde{\alpha}_{\sigma}^2}{1+\tilde{\alpha}_{\sigma}^4}  \\
+
+&amp;\times\E^{\displaystyle -(1-\tilde{\alpha}_{\sigma})^2/d_{\tilde{\alpha}4}^2-p_{\sigma}^2/d_{p4}^4}
+\end{aligned}"></div>
+          </article>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <h2>Review References</h2>
+          <ol class="review-refs"><li id="review-ref-Svendsen1996-17402" value="285">Svendsen, P. S.; von Barth, U. Gradient expansion of the exchange energy from second-order density response theory. <em>Phys. Rev. B</em> <strong>1996</strong>, <em>54</em>, 17402--17413, DOI: <a href="https://doi.org/10.1103/PhysRevB.54.17402">10.1103/PhysRevB.54.17402</a></li>
+<li id="review-ref-Furness2022-034109" value="773">Furness, J. W.; Kaplan, A. D.; Ning, J.; Perdew, J. P.; Sun, J. Construction of meta-GGA functionals through restoration of exact constraint adherence to regularized SCAN functionals. <em>J. Chem. Phys.</em> <strong>2022</strong>, <em>156</em>, 034109, DOI: <a href="https://doi.org/10.1063/5.0073623">10.1063/5.0073623</a></li>
+<li id="review-ref-approximation1" value="501">The exact value is implemented in Libxc.</li></ol>
+        </section>
+
+        <section class="section">
+          <h2>Publications</h2>
+          <ol class="publication-refs"><li>Furness, J. W.; Kaplan, A. D.; Ning, J.; Perdew, J. P.; Sun, J. Construction of meta-GGA functionals through restoration of exact constraint adherence to regularized SCAN functionals. <em>J. Chem. Phys.</em> <strong>2022</strong>, <em>156</em>, 034109, DOI: <a href="https://doi.org/10.1063/5.0073623">10.1063/5.0073623</a></li></ol>
+        </section>
+
+        <section class="section">
+          <div class="section-heading">
+            <h2>BibTeX</h2>
+            <button class="copy-button" type="button" data-copy-target="bibtex-code" aria-label="Copy BibTeX">Copy</button>
+          </div>
+          <pre><code id="bibtex-code">@article{Furness2022_034109,
+  author = {Furness, James W. and Kaplan, Aaron D. and Ning, Jinliang and Perdew, John P. and Sun, Jianwei},
+  title = {Construction of meta-{GGA} functionals through restoration of exact constraint adherence to regularized {SCAN} functionals},
+  journal = {J. Chem. Phys.},
+  volume = {156},
+  number = {3},
+  pages = {034109},
+  year = {2022},
+  doi = {10.1063/5.0073623},
+  url = {https://doi.org/10.1063/5.0073623}
+}
+</code></pre>
+        </section>
+
+        <details>
+          <summary>All Libxc metadata</summary>
+          <dl class="metadata">
+            <dt>identifier</dt><dd>mgga_x_r4scan</dd>
+            <dt>family</dt><dd>meta-gga</dd>
+            <dt>kind</dt><dd>exchange</dd>
+            <dt>derivatives</dt><dd>0, 1, 2</dd>
+            <dt>flags</dt><dd>dim3, exc, fxc, vxc, needs_tau, enforce_fhc</dd>
+<dt>cam_alpha</dt><dd>null</dd>
+<dt>cam_beta</dt><dd>null</dd>
+<dt>cam_omega</dt><dd>null</dd>
+<dt>density_threshold</dt><dd>1.0e-11</dd>
+<dt>exx_coefficient</dt><dd>null</dd>
+<dt>n_spin</dt><dd>1</dd>
+<dt>nlc_C</dt><dd>null</dd>
+<dt>nlc_b</dt><dd>null</dd>
+<dt>sigma_threshold</dt><dd>2.1544346900318875e-15</dd>
+<dt>tau_threshold</dt><dd>1.0e-20</dd>
+<dt>zeta_threshold</dt><dd>2.220446049250313e-16</dd>
+          </dl>
+        </details>
+      </div>
+
+    </main>
+    <div id="command-palette" class="command-palette" aria-hidden="true" hidden>
+      <div class="command-backdrop" data-command-close></div>
+      <form class="command-panel" role="search">
+        <div class="search-box">
+          <input id="command-search" class="search-input command-search-input" type="search" autocomplete="off" placeholder="Search functionals..." aria-controls="command-search-suggestions">
+          <div id="command-search-suggestions" class="search-suggestions command-search-suggestions" role="listbox" hidden></div>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

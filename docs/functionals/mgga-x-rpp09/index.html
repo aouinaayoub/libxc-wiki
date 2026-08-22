@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>mgga_x_rpp09</title>
+    <link rel="stylesheet" href="../../assets/styles.css?v=20260822-github">
+    <script defer src="../../assets/search.js?v=20260822-github"></script>
+    <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+    <script defer src="../../vendor/katex/katex.min.js"></script>
+    <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
+    <script defer src="../../assets/detail.js?v=20260822-github"></script>
+
+  </head>
+  <body>
+    <main class="shell">
+      <form class="global-search" role="search" action="../../" method="get">
+        <div class="search-box">
+          <input class="search-input global-search-input" name="q" type="search" autocomplete="off" placeholder="Search functionals..." aria-controls="global-search-suggestions">
+          <span class="search-shortcut" aria-hidden="true">Ctrl K</span>
+          <div id="global-search-suggestions" class="search-suggestions" role="listbox" hidden></div>
+        </div>
+      </form>
+
+      <a class="back" href="../../">Back to search</a>
+      <header class="top">
+        <a class="github-link" href="https://github.com/aouinaayoub/libxc-wiki" aria-label="View Libxc Wiki on GitHub" title="View source on GitHub">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .7a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2.23c-3.22.7-3.9-1.37-3.9-1.37-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.71.08-.71 1.16.08 1.78 1.2 1.78 1.2 1.04 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.74-1.55-2.57-.29-5.27-1.29-5.27-5.69 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.16 1.18a10.94 10.94 0 0 1 5.76 0c2.19-1.49 3.16-1.18 3.16-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.42-2.71 5.39-5.29 5.68.42.36.79 1.07.79 2.16v3.2c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .7Z"/></svg>
+        </a>
+
+        <p class="brand">META-GGA</p>
+        <h1><code class="title-code">mgga_x_rpp09</code></h1>
+        <div class="detail-tags"><span class="tag">meta-gga</span>
+<span class="tag">exchange</span></div>
+      </header>
+
+      <div class="detail-grid">
+      <section class="callout">
+        <p class="callout-label">Review excerpt</p>
+        <div class="review-html">
+<p>This exchange potential was designed to correct deficiencies of <a class="functional-link" href="../mgga-x-bj06/"><code>mgga_x_bj06</code></a>. Its mathematical form reads</p>
+<div class="equation" data-tex="v^\text{RPP09}_{\text{x}\sigma} = v^\text{Slater}_{\text{x}\sigma} + \frac{1}{\pi}\sqrt{\frac{5}{6}}\sqrt{\frac{D_\sigma}{n_\sigma}}"></div>
+<p>where $v^\text{Slater}_{\text{x}\sigma}$ is the Slater potential<sup class="citation-marker"><a href="#review-ref-Slater1951-385">50</a></sup> given by <a class="review-eq-link" href="#review-eq-eq-Ux-spin">
+  <code>eq:Ux-spin</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="U_{\x\sigma}(\br) = \mint{r&#39;} \frac{h_{\x\sigma}(\br,\br&#39;)}{|\br - \br&#39;|} = 2e_{\x\sigma}(\br)"></span>
+  </span>
+</a> and</p>
+<div class="equation" data-tex="D_\sigma = \tau_\sigma - \tau_\sigma ^{\text{W}} - \frac{\left\vert\bj_\sigma\right\vert^2}{2n_\sigma}"></div>
+<p>Thus, the difference from <a class="functional-link" href="../mgga-x-bj06/"><code>mgga_x_bj06</code></a> is the function $D_\sigma$ that is given by $D_\sigma=\tau_\sigma$ in the case of <a class="functional-link" href="../mgga-x-bj06/"><code>mgga_x_bj06</code></a>, see <a class="review-eq-link" href="#review-eq-eq-mggaxbj06-pot">
+  <code>eq:mggaxbj06:pot</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="v^\text{BJ06}_{\text{x}\sigma} = v^\text{Slater}_{\text{x}\sigma} + \frac{1}{\pi}\sqrt{\frac{5}{6}}\sqrt{\frac{\tau_\sigma}{n_\sigma}}"></span>
+  </span>
+</a>. Thanks to this new form for $D_\sigma$, the <a class="functional-link" href="../mgga-x-rpp09/"><code>mgga_x_rpp09</code></a> potential is gauge invariant, exact for any single-orbital system, and approaches zero asymptotically at $r\to\infty$, which was not the case of <a class="functional-link" href="../mgga-x-bj06/"><code>mgga_x_bj06</code></a>.</p>
+<p>In <sup class="citation-marker"><a href="#review-ref-Oliveira2010-3664">711</a></sup> it was shown that <a class="functional-link" href="../mgga-x-rpp09/"><code>mgga_x_rpp09</code></a> is more accurate than <a class="functional-link" href="../mgga-x-bj06/"><code>mgga_x_bj06</code></a> for ionization potentials and electron affinities of atoms and molecules. However, the relative accuracy of the two potentials for polarizabilities depends on the type of systems.</p>
+<p>Note that the Slater potential in <a class="review-eq-link" href="#review-eq-eq-rpp-v">
+  <code>eq:rpp-v</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="v^\text{RPP09}_{\text{x}\sigma} = v^\text{Slater}_{\text{x}\sigma} + \frac{1}{\pi}\sqrt{\frac{5}{6}}\sqrt{\frac{D_\sigma}{n_\sigma}}"></span>
+  </span>
+</a> is replaced by <a class="review-eq-link" href="#review-eq-eq-vxbrhole">
+  <code>eq:vxbrhole</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="v^\text{BR89,hole}_{\text{x}\sigma}=2e^\text{BR89}_{\text{x}\sigma}"></span>
+  </span>
+</a> for the implementation of <a class="functional-link" href="../mgga-x-rpp09/"><code>mgga_x_rpp09</code></a> in Libxc.</p>
+        </div>
+        <p class="source-note">Adapted from <a href="https://arxiv.org/abs/2602.17333">Tran, Lehtola, Pittalis, and Marques, <em>Semi-Local Exchange-Correlation Approximations in Density Functional Theory</em>, arXiv:2602.17333</a>.</p>
+      </section>
+
+        <section class="section">
+          <h2>Referenced Review Equations</h2>
+          <div class="review-equations">
+          <article class="review-equation-card" id="review-eq-eq-Ux-spin">
+            <code>eq:Ux-spin</code>
+            <div class="equation" data-tex="U_{\x\sigma}(\br) = \mint{r&#39;} \frac{h_{\x\sigma}(\br,\br&#39;)}{|\br - \br&#39;|} = 2e_{\x\sigma}(\br)"></div>
+          </article>
+
+          <article class="review-equation-card" id="review-eq-eq-mggaxbj06-pot">
+            <code>eq:mggaxbj06:pot</code>
+            <div class="equation" data-tex="v^\text{BJ06}_{\text{x}\sigma} = v^\text{Slater}_{\text{x}\sigma} + \frac{1}{\pi}\sqrt{\frac{5}{6}}\sqrt{\frac{\tau_\sigma}{n_\sigma}}"></div>
+          </article>
+
+          <article class="review-equation-card" id="review-eq-eq-rpp-v">
+            <code>eq:rpp-v</code>
+            <div class="equation" data-tex="v^\text{RPP09}_{\text{x}\sigma} = v^\text{Slater}_{\text{x}\sigma} + \frac{1}{\pi}\sqrt{\frac{5}{6}}\sqrt{\frac{D_\sigma}{n_\sigma}}"></div>
+          </article>
+
+          <article class="review-equation-card" id="review-eq-eq-vxbrhole">
+            <code>eq:vxbrhole</code>
+            <div class="equation" data-tex="v^\text{BR89,hole}_{\text{x}\sigma}=2e^\text{BR89}_{\text{x}\sigma}"></div>
+          </article>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <h2>Review References</h2>
+          <ol class="review-refs"><li id="review-ref-Slater1951-385" value="50">Slater, J. C. A Simplification of the Hartree--Fock Method. <em>Phys. Rev.</em> <strong>1951</strong>, <em>81</em>, 385, DOI: <a href="https://doi.org/10.1103/PhysRev.81.385">10.1103/PhysRev.81.385</a></li>
+<li id="review-ref-Oliveira2010-3664" value="711">Oliveira, M. J. T.; Rasanen, E.; Pittalis, S.; Marques, M. A. L. Toward an All-Around Semilocal Potential for Electronic Exchange. <em>J. Chem. Theory Comput.</em> <strong>2010</strong>, <em>6</em>, 3664--3670, DOI: <a href="https://doi.org/10.1021/ct100448x">10.1021/ct100448x</a></li></ol>
+        </section>
+
+        <section class="section">
+          <h2>Publications</h2>
+          <ol class="publication-refs"><li>Rasanen, E.; Pittalis, S.; Proetto, C. R. Universal correction for the Becke--Johnson exchange potential. <em>J. Chem. Phys.</em> <strong>2010</strong>, <em>132</em>, 044112, DOI: <a href="https://doi.org/10.1063/1.3300063">10.1063/1.3300063</a></li></ol>
+        </section>
+
+        <section class="section">
+          <div class="section-heading">
+            <h2>BibTeX</h2>
+            <button class="copy-button" type="button" data-copy-target="bibtex-code" aria-label="Copy BibTeX">Copy</button>
+          </div>
+          <pre><code id="bibtex-code">@article{Rasanen2010_044112,
+  author = {R\&quot;{a}s\&quot;{a}nen, E. and Pittalis, S. and Proetto, C. R.},
+  title = {Universal correction for the {Becke}--{Johnson} exchange potential},
+  journal = {J. Chem. Phys.},
+  year = {2010},
+  volume = {132},
+  number = {4},
+  pages = {044112},
+  doi = {10.1063/1.3300063},
+  url = {http://scitation.aip.org/content/aip/journal/jcp/132/4/10.1063/1.3300063}
+}
+</code></pre>
+        </section>
+
+        <details>
+          <summary>All Libxc metadata</summary>
+          <dl class="metadata">
+            <dt>identifier</dt><dd>mgga_x_rpp09</dd>
+            <dt>family</dt><dd>meta-gga</dd>
+            <dt>kind</dt><dd>exchange</dd>
+            <dt>derivatives</dt><dd>1, 2</dd>
+            <dt>flags</dt><dd>dim3, fxc, needs_laplacian, vxc, needs_tau, enforce_fhc</dd>
+<dt>cam_alpha</dt><dd>null</dd>
+<dt>cam_beta</dt><dd>null</dd>
+<dt>cam_omega</dt><dd>null</dd>
+<dt>density_threshold</dt><dd>1.0e-15</dd>
+<dt>exx_coefficient</dt><dd>null</dd>
+<dt>n_spin</dt><dd>1</dd>
+<dt>nlc_C</dt><dd>null</dd>
+<dt>nlc_b</dt><dd>null</dd>
+<dt>sigma_threshold</dt><dd>1.0000000000000027e-20</dd>
+<dt>tau_threshold</dt><dd>1.0e-20</dd>
+<dt>zeta_threshold</dt><dd>2.220446049250313e-16</dd>
+          </dl>
+        </details>
+      </div>
+
+    </main>
+    <div id="command-palette" class="command-palette" aria-hidden="true" hidden>
+      <div class="command-backdrop" data-command-close></div>
+      <form class="command-panel" role="search">
+        <div class="search-box">
+          <input id="command-search" class="search-input command-search-input" type="search" autocomplete="off" placeholder="Search functionals..." aria-controls="command-search-suggestions">
+          <div id="command-search-suggestions" class="search-suggestions command-search-suggestions" role="listbox" hidden></div>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

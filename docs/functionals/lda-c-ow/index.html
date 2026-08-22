@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>lda_c_ow</title>
+    <link rel="stylesheet" href="../../assets/styles.css?v=20260822-github">
+    <script defer src="../../assets/search.js?v=20260822-github"></script>
+    <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+    <script defer src="../../vendor/katex/katex.min.js"></script>
+    <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
+    <script defer src="../../assets/detail.js?v=20260822-github"></script>
+
+  </head>
+  <body>
+    <main class="shell">
+      <form class="global-search" role="search" action="../../" method="get">
+        <div class="search-box">
+          <input class="search-input global-search-input" name="q" type="search" autocomplete="off" placeholder="Search functionals..." aria-controls="global-search-suggestions">
+          <span class="search-shortcut" aria-hidden="true">Ctrl K</span>
+          <div id="global-search-suggestions" class="search-suggestions" role="listbox" hidden></div>
+        </div>
+      </form>
+
+      <a class="back" href="../../">Back to search</a>
+      <header class="top">
+        <a class="github-link" href="https://github.com/aouinaayoub/libxc-wiki" aria-label="View Libxc Wiki on GitHub" title="View source on GitHub">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .7a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2.23c-3.22.7-3.9-1.37-3.9-1.37-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.71.08-.71 1.16.08 1.78 1.2 1.78 1.2 1.04 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.74-1.55-2.57-.29-5.27-1.29-5.27-5.69 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.16 1.18a10.94 10.94 0 0 1 5.76 0c2.19-1.49 3.16-1.18 3.16-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.42-2.71 5.39-5.29 5.68.42.36.79 1.07.79 2.16v3.2c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .7Z"/></svg>
+        </a>
+
+        <p class="brand">LDA</p>
+        <h1><code class="title-code">lda_c_ow</code></h1>
+        <div class="detail-tags"><span class="tag">lda</span>
+<span class="tag">correlation</span></div>
+      </header>
+
+      <div class="detail-grid">
+      <section class="callout">
+        <p class="callout-label">Review excerpt</p>
+        <div class="review-html">
+<p>Stewart and Gill<sup class="citation-marker"><a href="#review-ref-Stewart1995-4337">412</a></sup> tried to develop a functional that retains the accuracy of <a class="functional-link" href="../gga-c-lyp/"><code>gga_c_lyp</code></a> with a simpler analytical formula that is more physically transparent. With that in mind, they decided to retain the first term of the <a class="functional-link" href="../gga-c-lyp/"><code>gga_c_lyp</code></a> correlation energy, leading to</p>
+<div class="equation" data-tex="e_\text{c}^\text{OW}(r_s) = -\left(1-\zeta^2\right)\frac{a}{b + r_s}"></div>
+<p>where $a$ and $b$ are parameters, and OW stands for optimized Wigner. This is thus a generalization of <a class="functional-link" href="../lda-c-wigner/"><code>lda_c_wigner</code></a> (<a class="review-eq-link" href="#review-eq-eq-ldacwigner">
+  <code>eq:ldacwigner</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="e_\text{c}^\text{Wigner}(r_s) = -\frac{a}{b + r_s}"></span>
+  </span>
+</a>) to the spin-polarized case. Two versions of this functional were given: (i) <a class="functional-link" href="../lda-c-ow-lyp/"><code>lda_c_ow_lyp</code></a>, where $a=0.04918b$ and $b=\left[3/\left(4\pi\right)\right]^{1/3}/0.349$ were fixed to their values in the <a class="functional-link" href="../gga-c-lyp/"><code>gga_c_lyp</code></a> functional, and (ii) <a class="functional-link" href="../lda-c-ow/"><code>lda_c_ow</code></a>, with $b$ unchanged, but $a=0.0526b$ optimized to reproduce the correlation energy of the ten lightest atoms (H to Ne). Tests of their correlation functionals on the G2 dataset<sup class="citation-marker"><a href="#review-ref-Curtiss1991-7221">430</a>,<a href="#review-ref-Gill1992-499">431</a></sup> in combination with <a class="functional-link" href="../gga-x-b88/"><code>gga_x_b88</code></a> led to the finding that <a class="functional-link" href="../lda-c-ow-lyp/"><code>lda_c_ow_lyp</code></a> gives overall similar results to the more complicated <a class="functional-link" href="../gga-c-lyp/"><code>gga_c_lyp</code></a>.</p>
+        </div>
+        <p class="source-note">Adapted from <a href="https://arxiv.org/abs/2602.17333">Tran, Lehtola, Pittalis, and Marques, <em>Semi-Local Exchange-Correlation Approximations in Density Functional Theory</em>, arXiv:2602.17333</a>.</p>
+      </section>
+
+        <section class="section">
+          <h2>Referenced Review Equations</h2>
+          <div class="review-equations">
+          <article class="review-equation-card" id="review-eq-eq-ldacwigner">
+            <code>eq:ldacwigner</code>
+            <div class="equation" data-tex="e_\text{c}^\text{Wigner}(r_s) = -\frac{a}{b + r_s}"></div>
+          </article>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <h2>Review References</h2>
+          <ol class="review-refs"><li id="review-ref-Stewart1995-4337" value="412">Stewart, P. A.; Gill, P. M. W. Becke--Wigner: a simple but powerful density functional. <em>J. Chem. Soc., Faraday Trans.</em> <strong>1995</strong>, <em>91</em>, 4337--4341, DOI: <a href="https://doi.org/10.1039/FT9959104337">10.1039/FT9959104337</a></li>
+<li id="review-ref-Curtiss1991-7221" value="430">Curtiss, L. A.; Raghavachari, K.; Trucks, G. W.; Pople, J. A. Gaussian‐2 theory for molecular energies of first‐ and second‐row compounds. <em>J. Chem. Phys.</em> <strong>1991</strong>, <em>94</em>, 7221--7230, DOI: <a href="https://doi.org/10.1063/1.460205">10.1063/1.460205</a></li>
+<li id="review-ref-Gill1992-499" value="431">Gill, P. M.; Johnson, B. G.; Pople, J. A.; Frisch, M. J. The performance of the Becke-Lee-Yang-Parr (B-LYP) density functional theory with various basis sets. <em>Chem. Phys. Lett.</em> <strong>1992</strong>, <em>197</em>, 499--505, DOI: <a href="https://doi.org/10.1016/0009-2614(92)85807-M">10.1016/0009-2614(92)85807-M</a></li></ol>
+        </section>
+
+        <section class="section">
+          <h2>Publications</h2>
+          <ol class="publication-refs"><li>Stewart, P. A.; Gill, P. M. W. Becke--Wigner: a simple but powerful density functional. <em>J. Chem. Soc., Faraday Trans.</em> <strong>1995</strong>, <em>91</em>, 4337--4341, DOI: <a href="https://doi.org/10.1039/FT9959104337">10.1039/FT9959104337</a></li></ol>
+        </section>
+
+        <section class="section">
+          <div class="section-heading">
+            <h2>BibTeX</h2>
+            <button class="copy-button" type="button" data-copy-target="bibtex-code" aria-label="Copy BibTeX">Copy</button>
+          </div>
+          <pre><code id="bibtex-code">@article{Stewart1995_4337,
+  author = {Stewart, Phillip A. and Gill, Peter M. W.},
+  title = {{Becke}--{Wigner}: a simple but powerful density functional},
+  journal = {J. Chem. Soc., Faraday Trans.},
+  year = {1995},
+  volume = {91},
+  issue = {24},
+  pages = {4337-4341},
+  publisher = {The Royal Society of Chemistry},
+  doi = {10.1039/FT9959104337},
+  url = {https://doi.org/10.1039/FT9959104337}
+}
+</code></pre>
+        </section>
+
+        <details>
+          <summary>All Libxc metadata</summary>
+          <dl class="metadata">
+            <dt>identifier</dt><dd>lda_c_ow</dd>
+            <dt>family</dt><dd>lda</dd>
+            <dt>kind</dt><dd>correlation</dd>
+            <dt>derivatives</dt><dd>0, 1, 2</dd>
+            <dt>flags</dt><dd>dim3, exc, fxc, vxc, enforce_fhc</dd>
+<dt>cam_alpha</dt><dd>null</dd>
+<dt>cam_beta</dt><dd>null</dd>
+<dt>cam_omega</dt><dd>null</dd>
+<dt>density_threshold</dt><dd>1.0e-24</dd>
+<dt>exx_coefficient</dt><dd>null</dd>
+<dt>n_spin</dt><dd>1</dd>
+<dt>nlc_C</dt><dd>null</dd>
+<dt>nlc_b</dt><dd>null</dd>
+<dt>sigma_threshold</dt><dd>1.000000000000004e-32</dd>
+<dt>tau_threshold</dt><dd>1.0e-20</dd>
+<dt>zeta_threshold</dt><dd>2.220446049250313e-16</dd>
+          </dl>
+        </details>
+      </div>
+
+    </main>
+    <div id="command-palette" class="command-palette" aria-hidden="true" hidden>
+      <div class="command-backdrop" data-command-close></div>
+      <form class="command-panel" role="search">
+        <div class="search-box">
+          <input id="command-search" class="search-input command-search-input" type="search" autocomplete="off" placeholder="Search functionals..." aria-controls="command-search-suggestions">
+          <div id="command-search-suggestions" class="search-suggestions command-search-suggestions" role="listbox" hidden></div>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

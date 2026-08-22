@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>gga_c_q2d</title>
+    <link rel="stylesheet" href="../../assets/styles.css?v=20260822-github">
+    <script defer src="../../assets/search.js?v=20260822-github"></script>
+    <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+    <script defer src="../../vendor/katex/katex.min.js"></script>
+    <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
+    <script defer src="../../assets/detail.js?v=20260822-github"></script>
+
+  </head>
+  <body>
+    <main class="shell">
+      <form class="global-search" role="search" action="../../" method="get">
+        <div class="search-box">
+          <input class="search-input global-search-input" name="q" type="search" autocomplete="off" placeholder="Search functionals..." aria-controls="global-search-suggestions">
+          <span class="search-shortcut" aria-hidden="true">Ctrl K</span>
+          <div id="global-search-suggestions" class="search-suggestions" role="listbox" hidden></div>
+        </div>
+      </form>
+
+      <a class="back" href="../../">Back to search</a>
+      <header class="top">
+        <a class="github-link" href="https://github.com/aouinaayoub/libxc-wiki" aria-label="View Libxc Wiki on GitHub" title="View source on GitHub">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .7a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2.23c-3.22.7-3.9-1.37-3.9-1.37-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.71.08-.71 1.16.08 1.78 1.2 1.78 1.2 1.04 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.74-1.55-2.57-.29-5.27-1.29-5.27-5.69 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.16 1.18a10.94 10.94 0 0 1 5.76 0c2.19-1.49 3.16-1.18 3.16-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.42-2.71 5.39-5.29 5.68.42.36.79 1.07.79 2.16v3.2c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .7Z"/></svg>
+        </a>
+
+        <p class="brand">GGA</p>
+        <h1><code class="title-code">gga_c_q2d</code></h1>
+        <div class="detail-tags"><span class="tag">gga</span>
+<span class="tag">correlation</span></div>
+      </header>
+
+      <div class="detail-grid">
+      <section class="callout">
+        <p class="callout-label">Review excerpt</p>
+        <div class="review-html">
+<p>This functional is the correlation counterpart of <a class="functional-link" href="../gga-x-q2d/"><code>gga_x_q2d</code></a>, and it was constructed following the same ideas; both functionals are designed for the quasi-2D regime. It consists of an interpolation between the <a class="functional-link" href="../gga-c-pbe/"><code>gga_c_pbe</code></a> functional and the 2D limit given by <a class="functional-link" href="../lda-c-2d-amgb/"><code>lda_c_2d_amgb</code></a>:</p>
+<div class="equation" data-tex="\begin{aligned}
+e_\text{c}^\text{Q2D} = e_\text{c}^\text{PBE}(r_s,\zeta,t)
+  + \frac{t^4(1+t^2)}{d+t^6}  \\
+  \times \left[-e_\text{c}^\text{PBE}(r_s,\zeta,t) + e_\text{c}^\text{AMGB-2D}(r_s^{2\text{D}}, \zeta)\right]
+\end{aligned}"></div>
+<p>where $r_s^{2\text{D}}$ is given by the two-dimensional Wigner-Seitz radius <span class="inline-equation">\(\begin{aligned}
+r_s^{2\text{D}} &amp;= \frac{1}{\sqrt{\pi n}}
+\end{aligned}\)</span> which is connected to the common 3D variables $n$ and $s$ through the following relation:<sup class="citation-marker"><a href="#review-ref-Constantin2008-155106">568</a></sup></p>
+<div class="equation" data-tex="r_s^{2\text{D}} = 1.704 n^{-1/3} \sqrt{s}"></div>
+<p>The coefficient $d=10^6$ in <a class="review-eq-link" href="#review-eq-eq-ecq2d">
+  <code>eq:ecq2d</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="\begin{aligned}
+e_\text{c}^\text{Q2D} = e_\text{c}^\text{PBE}(r_s,\zeta,t)
+  + \frac{t^4(1+t^2)}{d+t^6}  \\
+
+  \times \left[-e_\text{c}^\text{PBE}(r_s,\zeta,t) + e_\text{c}^\text{AMGB-2D}(r_s^{2\text{D}}, \zeta)\right]
+\end{aligned}"></span>
+  </span>
+</a> was fit to a reference system, namely an infinite-barrier quantum well.</p>
+        </div>
+        <p class="source-note">Adapted from <a href="https://arxiv.org/abs/2602.17333">Tran, Lehtola, Pittalis, and Marques, <em>Semi-Local Exchange-Correlation Approximations in Density Functional Theory</em>, arXiv:2602.17333</a>.</p>
+      </section>
+
+        <section class="section">
+          <h2>Referenced Review Equations</h2>
+          <div class="review-equations">
+          <article class="review-equation-card" id="review-eq-eq-ecq2d">
+            <code>eq:ecq2d</code>
+            <div class="equation" data-tex="\begin{aligned}
+e_\text{c}^\text{Q2D} = e_\text{c}^\text{PBE}(r_s,\zeta,t)
+  + \frac{t^4(1+t^2)}{d+t^6}  \\
+
+  \times \left[-e_\text{c}^\text{PBE}(r_s,\zeta,t) + e_\text{c}^\text{AMGB-2D}(r_s^{2\text{D}}, \zeta)\right]
+\end{aligned}"></div>
+          </article>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <h2>Review References</h2>
+          <ol class="review-refs"><li id="review-ref-Constantin2008-155106" value="568">Constantin, L. A. Dimensional crossover of the exchange-correlation energy at the semilocal level. <em>Phys. Rev. B</em> <strong>2008</strong>, <em>78</em>, 155106, DOI: <a href="https://doi.org/10.1103/PhysRevB.78.155106">10.1103/PhysRevB.78.155106</a></li></ol>
+        </section>
+
+        <section class="section">
+          <h2>Publications</h2>
+          <ol class="publication-refs"><li>Chiodo, L.; Constantin, L. A.; Fabiano, E.; Della Sala, F. Nonuniform Scaling Applied to Surface Energies of Transition Metals. <em>Phys. Rev. Lett.</em> <strong>2012</strong>, <em>108</em>, 126402, DOI: <a href="https://doi.org/10.1103/PhysRevLett.108.126402">10.1103/PhysRevLett.108.126402</a></li></ol>
+        </section>
+
+        <section class="section">
+          <div class="section-heading">
+            <h2>BibTeX</h2>
+            <button class="copy-button" type="button" data-copy-target="bibtex-code" aria-label="Copy BibTeX">Copy</button>
+          </div>
+          <pre><code id="bibtex-code">@article{Chiodo2012_126402,
+  author = {Chiodo, L. and Constantin, L. A. and Fabiano, E. and Della Sala, F.},
+  title = {Nonuniform Scaling Applied to Surface Energies of Transition Metals},
+  journal = {Phys. Rev. Lett.},
+  volume = {108},
+  issue = {12},
+  pages = {126402},
+  year = {2012},
+  month = {Mar},
+  publisher = {American Physical Society},
+  doi = {10.1103/PhysRevLett.108.126402},
+  url = {http://link.aps.org/doi/10.1103/PhysRevLett.108.126402}
+}
+</code></pre>
+        </section>
+
+        <details>
+          <summary>All Libxc metadata</summary>
+          <dl class="metadata">
+            <dt>identifier</dt><dd>gga_c_q2d</dd>
+            <dt>family</dt><dd>gga</dd>
+            <dt>kind</dt><dd>correlation</dd>
+            <dt>derivatives</dt><dd>0, 1, 2</dd>
+            <dt>flags</dt><dd>dim3, exc, fxc, vxc, enforce_fhc</dd>
+<dt>cam_alpha</dt><dd>null</dd>
+<dt>cam_beta</dt><dd>null</dd>
+<dt>cam_omega</dt><dd>null</dd>
+<dt>density_threshold</dt><dd>1.0e-10</dd>
+<dt>exx_coefficient</dt><dd>null</dd>
+<dt>n_spin</dt><dd>1</dd>
+<dt>nlc_C</dt><dd>null</dd>
+<dt>nlc_b</dt><dd>null</dd>
+<dt>sigma_threshold</dt><dd>4.641588833612787e-14</dd>
+<dt>tau_threshold</dt><dd>1.0e-20</dd>
+<dt>zeta_threshold</dt><dd>2.220446049250313e-16</dd>
+          </dl>
+        </details>
+      </div>
+
+    </main>
+    <div id="command-palette" class="command-palette" aria-hidden="true" hidden>
+      <div class="command-backdrop" data-command-close></div>
+      <form class="command-panel" role="search">
+        <div class="search-box">
+          <input id="command-search" class="search-input command-search-input" type="search" autocomplete="off" placeholder="Search functionals..." aria-controls="command-search-suggestions">
+          <div id="command-search-suggestions" class="search-suggestions command-search-suggestions" role="listbox" hidden></div>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

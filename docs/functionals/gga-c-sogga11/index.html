@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>gga_c_sogga11</title>
+    <link rel="stylesheet" href="../../assets/styles.css?v=20260822-github">
+    <script defer src="../../assets/search.js?v=20260822-github"></script>
+    <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+    <script defer src="../../vendor/katex/katex.min.js"></script>
+    <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
+    <script defer src="../../assets/detail.js?v=20260822-github"></script>
+
+  </head>
+  <body>
+    <main class="shell">
+      <form class="global-search" role="search" action="../../" method="get">
+        <div class="search-box">
+          <input class="search-input global-search-input" name="q" type="search" autocomplete="off" placeholder="Search functionals..." aria-controls="global-search-suggestions">
+          <span class="search-shortcut" aria-hidden="true">Ctrl K</span>
+          <div id="global-search-suggestions" class="search-suggestions" role="listbox" hidden></div>
+        </div>
+      </form>
+
+      <a class="back" href="../../">Back to search</a>
+      <header class="top">
+        <a class="github-link" href="https://github.com/aouinaayoub/libxc-wiki" aria-label="View Libxc Wiki on GitHub" title="View source on GitHub">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .7a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2.23c-3.22.7-3.9-1.37-3.9-1.37-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.71.08-.71 1.16.08 1.78 1.2 1.78 1.2 1.04 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.74-1.55-2.57-.29-5.27-1.29-5.27-5.69 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.16 1.18a10.94 10.94 0 0 1 5.76 0c2.19-1.49 3.16-1.18 3.16-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.42-2.71 5.39-5.29 5.68.42.36.79 1.07.79 2.16v3.2c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .7Z"/></svg>
+        </a>
+
+        <p class="brand">GGA</p>
+        <h1><code class="title-code">gga_c_sogga11</code></h1>
+        <div class="detail-tags"><span class="tag">gga</span>
+<span class="tag">correlation</span></div>
+      </header>
+
+      <div class="detail-grid">
+      <section class="callout">
+        <p class="callout-label">Review excerpt</p>
+        <div class="review-html">
+<p>Peverati et al.<sup class="citation-marker"><a href="#review-ref-Peverati2011-1991">560</a></sup> chose for this correlation functional a mathematical expression that is rather similar to the associated exchange part <a class="functional-link" href="../gga-x-sogga11/"><code>gga_x_sogga11</code></a>:</p>
+<div class="equation" data-tex="\begin{aligned}
+e_\text{c}^\text{SOGGA11} = &amp; e_\text{c}^\text{PW-LDA}(r_s,\zeta)  \\
+  &amp; \times\left[g_1(r_s, \zeta, t) + g_2(r_s, \zeta, t)\right]
+\end{aligned}"></div>
+<p>where $e_\text{c}^\text{PW-LDA}$ is <a class="functional-link" href="../lda-c-pw/"><code>lda_c_pw</code></a> and (compare to <a class="review-eq-link" href="#review-eq-eq-sogga11gs">
+  <code>eq:sogga11gs</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="\begin{aligned}
+g_1(s_\sigma) =&amp; \sum_{i=0}^m a_i \left( 1 - \frac{1}{1 + \frac{\mu}{\kappa} s_\sigma^2} \right)^i \\
+    g_2(s_\sigma) =&amp; \sum_{i=0}^m b_i \left( 1 - \E^{-\mu s_\sigma^2/\kappa} \right)^i
+\end{aligned}"></span>
+  </span>
+</a>)</p>
+<p>\label{eq:g1sogga}</p>
+<div class="equation" data-tex="\begin{aligned}
+g_1(r_s, \zeta, t) =&amp; \sum_{i=0}^m a_i \left[ 1 - \frac{1}{1 + y(r_s, \zeta, t)} \right]^i \\
+    g_2(r_s, \zeta, t) =&amp; \sum_{i=0}^m b_i \left[ 1 - \E^{-y(r_s, \zeta, t)} \right]^i
+\end{aligned}"></div>
+<p>with the function $y(r_s, \zeta, t)$ defined as</p>
+<div class="equation" data-tex="y(r_s, \zeta, t) = -\frac{\beta\phi_{2/3}^3t^2}{e_\text{c}^\text{PW-LDA}(r_s,\zeta)}"></div>
+<p>The HEG limit imposes the constraint $a_0+b_0=1$, while the density-gradient expansion to second order implies $\beta=\beta^{\text{MB}}$, coupled with $a_1+b_1=-1$. With these constraints imposed, the parameters $a_i$ and $b_i$ in <a class="review-eq-link" href="#review-eq-eq-g1sogga">
+  <code>eq:g1sogga</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="\begin{aligned}
+g_1(r_s, \zeta, t) =&amp; \sum_{i=0}^m a_i \left[ 1 - \frac{1}{1 + y(r_s, \zeta, t)} \right]^i \\
+    g_2(r_s, \zeta, t) =&amp; \sum_{i=0}^m b_i \left[ 1 - \E^{-y(r_s, \zeta, t)} \right]^i
+\end{aligned}"></span>
+  </span>
+</a> (with $m=5$) were optimized together with <a class="functional-link" href="../gga-x-sogga11/"><code>gga_x_sogga11</code></a>. It is relatively easy to see that <a class="review-eq-link" href="#review-eq-eq-ysogga11">
+  <code>eq:ysogga11</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="y(r_s, \zeta, t) = -\frac{\beta\phi_{2/3}^3t^2}{e_\text{c}^\text{PW-LDA}(r_s,\zeta)}"></span>
+  </span>
+</a> is dimensionless, and that it is the leading order term in the expansion of $H_0$ (<a class="review-eq-link" href="#review-eq-eq-ggac-pw91h0">
+  <code>eq:ggac:pw91h0</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="H_0(\phi_{2/3}, t, A) = \gamma \phi_{2/3}^3 \ln\left[1 + \frac{\beta}{\gamma}
+  \frac{t^2 + A t^4}{1 + A (t^2 + A t^4)}\right]"></span>
+  </span>
+</a>) in powers of $t$.</p>
+        </div>
+        <p class="source-note">Adapted from <a href="https://arxiv.org/abs/2602.17333">Tran, Lehtola, Pittalis, and Marques, <em>Semi-Local Exchange-Correlation Approximations in Density Functional Theory</em>, arXiv:2602.17333</a>.</p>
+      </section>
+
+        <section class="section">
+          <h2>Referenced Review Equations</h2>
+          <div class="review-equations">
+          <article class="review-equation-card" id="review-eq-eq-sogga11gs">
+            <code>eq:sogga11gs</code>
+            <div class="equation" data-tex="\begin{aligned}
+g_1(s_\sigma) =&amp; \sum_{i=0}^m a_i \left( 1 - \frac{1}{1 + \frac{\mu}{\kappa} s_\sigma^2} \right)^i \\
+    g_2(s_\sigma) =&amp; \sum_{i=0}^m b_i \left( 1 - \E^{-\mu s_\sigma^2/\kappa} \right)^i
+\end{aligned}"></div>
+          </article>
+
+          <article class="review-equation-card" id="review-eq-eq-g1sogga">
+            <code>eq:g1sogga</code>
+            <div class="equation" data-tex="\begin{aligned}
+g_1(r_s, \zeta, t) =&amp; \sum_{i=0}^m a_i \left[ 1 - \frac{1}{1 + y(r_s, \zeta, t)} \right]^i \\
+    g_2(r_s, \zeta, t) =&amp; \sum_{i=0}^m b_i \left[ 1 - \E^{-y(r_s, \zeta, t)} \right]^i
+\end{aligned}"></div>
+          </article>
+
+          <article class="review-equation-card" id="review-eq-eq-ysogga11">
+            <code>eq:ysogga11</code>
+            <div class="equation" data-tex="y(r_s, \zeta, t) = -\frac{\beta\phi_{2/3}^3t^2}{e_\text{c}^\text{PW-LDA}(r_s,\zeta)}"></div>
+          </article>
+
+          <article class="review-equation-card" id="review-eq-eq-ggac-pw91h0">
+            <code>eq:ggac:pw91h0</code>
+            <div class="equation" data-tex="H_0(\phi_{2/3}, t, A) = \gamma \phi_{2/3}^3 \ln\left[1 + \frac{\beta}{\gamma}
+  \frac{t^2 + A t^4}{1 + A (t^2 + A t^4)}\right]"></div>
+          </article>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <h2>Review References</h2>
+          <ol class="review-refs"><li id="review-ref-Peverati2011-1991" value="560">Peverati, R.; Zhao, Y.; Truhlar, D. G. Generalized Gradient Approximation That Recovers the Second-Order Density-Gradient Expansion with Optimized Across-the-Board Performance. <em>J. Phys. Chem. Lett.</em> <strong>2011</strong>, <em>2</em>, 1991, DOI: <a href="https://doi.org/10.1021/jz200616w">10.1021/jz200616w</a></li></ol>
+        </section>
+
+        <section class="section">
+          <h2>Publications</h2>
+          <ol class="publication-refs"><li>Peverati, R.; Zhao, Y.; Truhlar, D. G. Generalized Gradient Approximation That Recovers the Second-Order Density-Gradient Expansion with Optimized Across-the-Board Performance. <em>J. Phys. Chem. Lett.</em> <strong>2011</strong>, <em>2</em>, 1991, DOI: <a href="https://doi.org/10.1021/jz200616w">10.1021/jz200616w</a></li></ol>
+        </section>
+
+        <section class="section">
+          <div class="section-heading">
+            <h2>BibTeX</h2>
+            <button class="copy-button" type="button" data-copy-target="bibtex-code" aria-label="Copy BibTeX">Copy</button>
+          </div>
+          <pre><code id="bibtex-code">@article{Peverati2011_1991,
+  author = {Peverati, R. and Zhao, Y. and Truhlar, D. G.},
+  title = {Generalized Gradient Approximation That Recovers the Second-Order Density-Gradient Expansion with Optimized Across-the-Board Performance},
+  journal = {J. Phys. Chem. Lett.},
+  volume = {2},
+  number = {16},
+  pages = {1991},
+  year = {2011},
+  doi = {10.1021/jz200616w},
+  url = {http://pubs.acs.org/doi/abs/10.1021/jz200616w}
+}
+</code></pre>
+        </section>
+
+        <details>
+          <summary>All Libxc metadata</summary>
+          <dl class="metadata">
+            <dt>identifier</dt><dd>gga_c_sogga11</dd>
+            <dt>family</dt><dd>gga</dd>
+            <dt>kind</dt><dd>correlation</dd>
+            <dt>derivatives</dt><dd>0, 1, 2</dd>
+            <dt>flags</dt><dd>dim3, exc, fxc, vxc, enforce_fhc</dd>
+<dt>cam_alpha</dt><dd>null</dd>
+<dt>cam_beta</dt><dd>null</dd>
+<dt>cam_omega</dt><dd>null</dd>
+<dt>density_threshold</dt><dd>1.0e-14</dd>
+<dt>exx_coefficient</dt><dd>null</dd>
+<dt>n_spin</dt><dd>1</dd>
+<dt>nlc_C</dt><dd>null</dd>
+<dt>nlc_b</dt><dd>null</dd>
+<dt>sigma_threshold</dt><dd>2.1544346900318888e-19</dd>
+<dt>tau_threshold</dt><dd>1.0e-20</dd>
+<dt>zeta_threshold</dt><dd>2.220446049250313e-16</dd>
+          </dl>
+        </details>
+      </div>
+
+    </main>
+    <div id="command-palette" class="command-palette" aria-hidden="true" hidden>
+      <div class="command-backdrop" data-command-close></div>
+      <form class="command-panel" role="search">
+        <div class="search-box">
+          <input id="command-search" class="search-input command-search-input" type="search" autocomplete="off" placeholder="Search functionals..." aria-controls="command-search-suggestions">
+          <div id="command-search-suggestions" class="search-suggestions command-search-suggestions" role="listbox" hidden></div>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

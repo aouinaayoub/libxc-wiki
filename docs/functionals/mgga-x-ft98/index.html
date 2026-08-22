@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>mgga_x_ft98</title>
+    <link rel="stylesheet" href="../../assets/styles.css?v=20260822-github">
+    <script defer src="../../assets/search.js?v=20260822-github"></script>
+    <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+    <script defer src="../../vendor/katex/katex.min.js"></script>
+    <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
+    <script defer src="../../assets/detail.js?v=20260822-github"></script>
+
+  </head>
+  <body>
+    <main class="shell">
+      <form class="global-search" role="search" action="../../" method="get">
+        <div class="search-box">
+          <input class="search-input global-search-input" name="q" type="search" autocomplete="off" placeholder="Search functionals..." aria-controls="global-search-suggestions">
+          <span class="search-shortcut" aria-hidden="true">Ctrl K</span>
+          <div id="global-search-suggestions" class="search-suggestions" role="listbox" hidden></div>
+        </div>
+      </form>
+
+      <a class="back" href="../../">Back to search</a>
+      <header class="top">
+        <a class="github-link" href="https://github.com/aouinaayoub/libxc-wiki" aria-label="View Libxc Wiki on GitHub" title="View source on GitHub">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .7a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2.23c-3.22.7-3.9-1.37-3.9-1.37-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.71.08-.71 1.16.08 1.78 1.2 1.78 1.2 1.04 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.74-1.55-2.57-.29-5.27-1.29-5.27-5.69 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.16 1.18a10.94 10.94 0 0 1 5.76 0c2.19-1.49 3.16-1.18 3.16-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.42-2.71 5.39-5.29 5.68.42.36.79 1.07.79 2.16v3.2c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .7Z"/></svg>
+        </a>
+
+        <p class="brand">META-GGA</p>
+        <h1><code class="title-code">mgga_x_ft98</code></h1>
+        <div class="detail-tags"><span class="tag">meta-gga</span>
+<span class="tag">exchange</span></div>
+      </header>
+
+      <div class="detail-grid">
+      <section class="callout">
+        <p class="callout-label">Review excerpt</p>
+        <div class="review-html">
+<p>This is a $\nabla^2 n$-MGGA functional. Its enhancement factor is given by</p>
+<div class="equation" data-tex="\begin{aligned}
+F_\text{x}^\text{FT98} =   \\
+  \left[\frac{1+af_1(x_\sigma)x_\sigma^2+bf_2(x_\sigma,u_\sigma)\left(x_\sigma^2-u_\sigma\right)^2}{1+36C_{\text{x}}^2bx_\sigma^2}\right]^{1/2}
+\end{aligned}"></div>
+<p>where</p>
+<div class="equation" data-tex="f_1(x_\sigma)=\frac{\left(1+a_1x_\sigma^2\right)^{1/2}}{\left(1+b_1x_\sigma^2\right)^{3/4}}"></div>
+<p>and</p>
+<div class="equation" data-tex="f_2(x_\sigma,u_\sigma)=\frac{\left[1+a_2q_1(x_\sigma,u_\sigma)\right]\left[1+q_2(x_\sigma,u_\sigma)\right]}{\left[1+\left(2^{1/3}-1\right)q_2(x_\sigma,u_\sigma)\right]^3}"></div>
+<p>with</p>
+<div class="equation" data-tex="q_1(x_\sigma,u_\sigma)=\frac{\left(x_\sigma^2-u_\sigma\right)^2}{\left(1+x_\sigma^2\right)^2}"></div>
+<p>and</p>
+<div class="equation" data-tex="\begin{aligned}
+q_2(x_\sigma,u_\sigma) =  \\
+\frac{\left(b_2^2+1\right)^{1/2}-b_2}{x_\sigma^4-u_\sigma^2-b_2 + \left[(x_\sigma^4-u_\sigma^2-b_2)^2+1\right]^{1/2}}
+\end{aligned}"></div>
+<p>The functions $f_1$ and $f_2$ were chosen such that</p>
+<div class="equation" data-tex="\lim_{x_\sigma\to0}f_1(x_\sigma)=1"></div>
+<div class="equation" data-tex="\lim_{x_\sigma\to0}\lim_{u_\sigma\to0}f_2(x_\sigma,u_\sigma)=1"></div>
+<div class="equation" data-tex="\lim_{x_\sigma\to\infty}\lim_{u_\sigma\to\infty}f_2(x_\sigma,u_\sigma)=1"></div>
+<div class="equation" data-tex="\lim_{x_\sigma\to \text{const}}\lim_{u_\sigma\to-\infty}f_2(x_\sigma,u_\sigma)\propto r"></div>
+<p>where $r$ is the distance into the vacuum far from the finite system. These conditions guarantee (i) the recovery of the small density-gradient expansion at fourth order <sup class="citation-marker"><a href="#review-ref-Svendsen1996-17402">285</a></sup> (<a class="review-eq-link" href="#review-eq-eq-lim1-ft98">
+  <code>eq:lim1-ft98</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="\lim_{x_\sigma\to0}f_1(x_\sigma)=1"></span>
+  </span>
+</a>; <a class="review-eq-link" href="#review-eq-eq-lim2-ft98">
+  <code>eq:lim2-ft98</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="\lim_{x_\sigma\to0}\lim_{u_\sigma\to0}f_2(x_\sigma,u_\sigma)=1"></span>
+  </span>
+</a>), (ii) a $-1/r$-type asymptotic behavior for the exchange energy density and potential (<a class="review-eq-link" href="#review-eq-eq-lim3-ft98">
+  <code>eq:lim3-ft98</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="\lim_{x_\sigma\to\infty}\lim_{u_\sigma\to\infty}f_2(x_\sigma,u_\sigma)=1"></span>
+  </span>
+</a>), and (iii) a finite value of the exchange energy density close to the nuclei (<a class="review-eq-link" href="#review-eq-eq-lim4-ft98">
+  <code>eq:lim4-ft98</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="\lim_{x_\sigma\to \text{const}}\lim_{u_\sigma\to-\infty}f_2(x_\sigma,u_\sigma)\propto r"></span>
+  </span>
+</a>).</p>
+<p>In <a class="review-eq-link" href="#review-eq-eq-f-ft98">
+  <code>eq:f-ft98</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="\begin{aligned}
+F_\text{x}^\text{FT98} =   \\
+
+  \left[\frac{1+af_1(x_\sigma)x_\sigma^2+bf_2(x_\sigma,u_\sigma)\left(x_\sigma^2-u_\sigma\right)^2}{1+36C_{\text{x}}^2bx_\sigma^2}\right]^{1/2}
+\end{aligned}"></span>
+  </span>
+</a>, $a\approx0.00528014$<sup class="citation-marker"><a href="#review-ref-approximation3">633</a></sup> and $b\approx0.00003904539$<sup class="citation-marker"><a href="#review-ref-approximation3">633</a></sup> were determined such that the coefficients in the small density-gradient expansion at fourth order of <a class="review-eq-link" href="#review-eq-eq-f-ft98">
+  <code>eq:f-ft98</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="\begin{aligned}
+F_\text{x}^\text{FT98} =   \\
+
+  \left[\frac{1+af_1(x_\sigma)x_\sigma^2+bf_2(x_\sigma,u_\sigma)\left(x_\sigma^2-u_\sigma\right)^2}{1+36C_{\text{x}}^2bx_\sigma^2}\right]^{1/2}
+\end{aligned}"></span>
+  </span>
+</a> have the correct values.<sup class="citation-marker"><a href="#review-ref-Svendsen1996-17402">285</a></sup> The $a_i$ and $b_i$ parameters in <a class="review-eq-link" href="#review-eq-eq-f1-ft98">
+  <code>eq:f1-ft98</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="f_1(x_\sigma)=\frac{\left(1+a_1x_\sigma^2\right)^{1/2}}{\left(1+b_1x_\sigma^2\right)^{3/4}}"></span>
+  </span>
+</a>; <a class="review-eq-link" href="#review-eq-eq-f2-ft98">
+  <code>eq:f2-ft98</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="f_2(x_\sigma,u_\sigma)=\frac{\left[1+a_2q_1(x_\sigma,u_\sigma)\right]\left[1+q_2(x_\sigma,u_\sigma)\right]}{\left[1+\left(2^{1/3}-1\right)q_2(x_\sigma,u_\sigma)\right]^3}"></span>
+  </span>
+</a>; <a class="review-eq-link" href="#review-eq-eq-q2-ft98">
+  <code>eq:q2-ft98</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="\begin{aligned}
+q_2(x_\sigma,u_\sigma) =  \\
+
+\frac{\left(b_2^2+1\right)^{1/2}-b_2}{x_\sigma^4-u_\sigma^2-b_2 + \left[(x_\sigma^4-u_\sigma^2-b_2)^2+1\right]^{1/2}}
+\end{aligned}"></span>
+  </span>
+</a> were obtained by fitting to the exact exchange energy of a set of atoms (H, He, Be, Ne, Mg, Ar, Ca, Kr, Sr, and Xe), leading to $a_1=2.816049$, $a_2=0.879058$, $b_1=0.398773$, and $b_2=66.364138$.</p>
+<p>When combined with <code>mgga_c_ft98</code> for correlation, the functional has an accuracy similar to that of the B3LYP hybrid functional<sup class="citation-marker"><a href="#review-ref-Stephens1994-11623">423</a></sup> for atomization energies, geometries, and dipole moments of molecules.</p>
+        </div>
+        <p class="source-note">Adapted from <a href="https://arxiv.org/abs/2602.17333">Tran, Lehtola, Pittalis, and Marques, <em>Semi-Local Exchange-Correlation Approximations in Density Functional Theory</em>, arXiv:2602.17333</a>.</p>
+      </section>
+
+        <section class="section">
+          <h2>Referenced Review Equations</h2>
+          <div class="review-equations">
+          <article class="review-equation-card" id="review-eq-eq-lim1-ft98">
+            <code>eq:lim1-ft98</code>
+            <div class="equation" data-tex="\lim_{x_\sigma\to0}f_1(x_\sigma)=1"></div>
+          </article>
+
+          <article class="review-equation-card" id="review-eq-eq-lim2-ft98">
+            <code>eq:lim2-ft98</code>
+            <div class="equation" data-tex="\lim_{x_\sigma\to0}\lim_{u_\sigma\to0}f_2(x_\sigma,u_\sigma)=1"></div>
+          </article>
+
+          <article class="review-equation-card" id="review-eq-eq-lim3-ft98">
+            <code>eq:lim3-ft98</code>
+            <div class="equation" data-tex="\lim_{x_\sigma\to\infty}\lim_{u_\sigma\to\infty}f_2(x_\sigma,u_\sigma)=1"></div>
+          </article>
+
+          <article class="review-equation-card" id="review-eq-eq-lim4-ft98">
+            <code>eq:lim4-ft98</code>
+            <div class="equation" data-tex="\lim_{x_\sigma\to \text{const}}\lim_{u_\sigma\to-\infty}f_2(x_\sigma,u_\sigma)\propto r"></div>
+          </article>
+
+          <article class="review-equation-card" id="review-eq-eq-f-ft98">
+            <code>eq:f-ft98</code>
+            <div class="equation" data-tex="\begin{aligned}
+F_\text{x}^\text{FT98} =   \\
+
+  \left[\frac{1+af_1(x_\sigma)x_\sigma^2+bf_2(x_\sigma,u_\sigma)\left(x_\sigma^2-u_\sigma\right)^2}{1+36C_{\text{x}}^2bx_\sigma^2}\right]^{1/2}
+\end{aligned}"></div>
+          </article>
+
+          <article class="review-equation-card" id="review-eq-eq-f1-ft98">
+            <code>eq:f1-ft98</code>
+            <div class="equation" data-tex="f_1(x_\sigma)=\frac{\left(1+a_1x_\sigma^2\right)^{1/2}}{\left(1+b_1x_\sigma^2\right)^{3/4}}"></div>
+          </article>
+
+          <article class="review-equation-card" id="review-eq-eq-f2-ft98">
+            <code>eq:f2-ft98</code>
+            <div class="equation" data-tex="f_2(x_\sigma,u_\sigma)=\frac{\left[1+a_2q_1(x_\sigma,u_\sigma)\right]\left[1+q_2(x_\sigma,u_\sigma)\right]}{\left[1+\left(2^{1/3}-1\right)q_2(x_\sigma,u_\sigma)\right]^3}"></div>
+          </article>
+
+          <article class="review-equation-card" id="review-eq-eq-q2-ft98">
+            <code>eq:q2-ft98</code>
+            <div class="equation" data-tex="\begin{aligned}
+q_2(x_\sigma,u_\sigma) =  \\
+
+\frac{\left(b_2^2+1\right)^{1/2}-b_2}{x_\sigma^4-u_\sigma^2-b_2 + \left[(x_\sigma^4-u_\sigma^2-b_2)^2+1\right]^{1/2}}
+\end{aligned}"></div>
+          </article>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <h2>Review References</h2>
+          <ol class="review-refs"><li id="review-ref-Svendsen1996-17402" value="285">Svendsen, P. S.; von Barth, U. Gradient expansion of the exchange energy from second-order density response theory. <em>Phys. Rev. B</em> <strong>1996</strong>, <em>54</em>, 17402--17413, DOI: <a href="https://doi.org/10.1103/PhysRevB.54.17402">10.1103/PhysRevB.54.17402</a></li>
+<li id="review-ref-approximation3" value="633">The approximate value is the one implemented in Libxc.</li>
+<li id="review-ref-Stephens1994-11623" value="423">Stephens, P. J.; Devlin, F. J.; Chabalowski, C. F.; Frisch, M. J. Ab Initio Calculation of Vibrational Absorption and Circular Dichroism Spectra Using Density Functional Force Fields. <em>J. Phys. Chem.</em> <strong>1994</strong>, <em>98</em>, 11623, DOI: <a href="https://doi.org/10.1021/j100096a001">10.1021/j100096a001</a></li></ol>
+        </section>
+
+        <section class="section">
+          <h2>Publications</h2>
+          <ol class="publication-refs"><li>Filatov, M.; Thiel, W. Exchange-correlation density functional beyond the gradient approximation. <em>Phys. Rev. A</em> <strong>1998</strong>, <em>57</em>, 189--199, DOI: <a href="https://doi.org/10.1103/PhysRevA.57.189">10.1103/PhysRevA.57.189</a></li></ol>
+        </section>
+
+        <section class="section">
+          <div class="section-heading">
+            <h2>BibTeX</h2>
+            <button class="copy-button" type="button" data-copy-target="bibtex-code" aria-label="Copy BibTeX">Copy</button>
+          </div>
+          <pre><code id="bibtex-code">@article{Filatov1998_189,
+  author = {Filatov, Michael and Thiel, Walter},
+  title = {Exchange-correlation density functional beyond the gradient approximation},
+  journal = {Phys. Rev. A},
+  volume = {57},
+  issue = {1},
+  pages = {189--199},
+  year = {1998},
+  month = {Jan},
+  publisher = {American Physical Society},
+  doi = {10.1103/PhysRevA.57.189},
+  url = {https://link.aps.org/doi/10.1103/PhysRevA.57.189}
+}
+</code></pre>
+        </section>
+
+        <details>
+          <summary>All Libxc metadata</summary>
+          <dl class="metadata">
+            <dt>identifier</dt><dd>mgga_x_ft98</dd>
+            <dt>family</dt><dd>meta-gga</dd>
+            <dt>kind</dt><dd>exchange</dd>
+            <dt>derivatives</dt><dd>0, 1, 2</dd>
+            <dt>flags</dt><dd>dim3, exc, fxc, needs_laplacian, vxc, needs_tau, enforce_fhc</dd>
+<dt>cam_alpha</dt><dd>null</dd>
+<dt>cam_beta</dt><dd>null</dd>
+<dt>cam_omega</dt><dd>null</dd>
+<dt>density_threshold</dt><dd>1.0e-12</dd>
+<dt>exx_coefficient</dt><dd>null</dd>
+<dt>n_spin</dt><dd>1</dd>
+<dt>nlc_C</dt><dd>null</dd>
+<dt>nlc_b</dt><dd>null</dd>
+<dt>sigma_threshold</dt><dd>1.0000000000000021e-16</dd>
+<dt>tau_threshold</dt><dd>1.0e-20</dd>
+<dt>zeta_threshold</dt><dd>2.220446049250313e-16</dd>
+          </dl>
+        </details>
+      </div>
+
+    </main>
+    <div id="command-palette" class="command-palette" aria-hidden="true" hidden>
+      <div class="command-backdrop" data-command-close></div>
+      <form class="command-panel" role="search">
+        <div class="search-box">
+          <input id="command-search" class="search-input command-search-input" type="search" autocomplete="off" placeholder="Search functionals..." aria-controls="command-search-suggestions">
+          <div id="command-search-suggestions" class="search-suggestions command-search-suggestions" role="listbox" hidden></div>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

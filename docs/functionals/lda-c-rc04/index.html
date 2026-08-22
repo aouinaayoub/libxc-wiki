@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>lda_c_rc04</title>
+    <link rel="stylesheet" href="../../assets/styles.css?v=20260822-github">
+    <script defer src="../../assets/search.js?v=20260822-github"></script>
+    <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+    <script defer src="../../vendor/katex/katex.min.js"></script>
+    <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
+    <script defer src="../../assets/detail.js?v=20260822-github"></script>
+
+  </head>
+  <body>
+    <main class="shell">
+      <form class="global-search" role="search" action="../../" method="get">
+        <div class="search-box">
+          <input class="search-input global-search-input" name="q" type="search" autocomplete="off" placeholder="Search functionals..." aria-controls="global-search-suggestions">
+          <span class="search-shortcut" aria-hidden="true">Ctrl K</span>
+          <div id="global-search-suggestions" class="search-suggestions" role="listbox" hidden></div>
+        </div>
+      </form>
+
+      <a class="back" href="../../">Back to search</a>
+      <header class="top">
+        <a class="github-link" href="https://github.com/aouinaayoub/libxc-wiki" aria-label="View Libxc Wiki on GitHub" title="View source on GitHub">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .7a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2.23c-3.22.7-3.9-1.37-3.9-1.37-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.71.08-.71 1.16.08 1.78 1.2 1.78 1.2 1.04 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.74-1.55-2.57-.29-5.27-1.29-5.27-5.69 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.16 1.18a10.94 10.94 0 0 1 5.76 0c2.19-1.49 3.16-1.18 3.16-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.42-2.71 5.39-5.29 5.68.42.36.79 1.07.79 2.16v3.2c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .7Z"/></svg>
+        </a>
+
+        <p class="brand">LDA</p>
+        <h1><code class="title-code">lda_c_rc04</code></h1>
+        <div class="detail-tags"><span class="tag">lda</span>
+<span class="tag">correlation</span></div>
+      </header>
+
+      <div class="detail-grid">
+      <section class="callout">
+        <p class="callout-label">Review excerpt</p>
+        <div class="review-html">
+<p>Ragot and Cortona<sup class="citation-marker"><a href="#review-ref-Ragot2004-7671">440</a></sup> modified the procedure of Colle and Salvetti<sup class="citation-marker"><a href="#review-ref-Colle1975-329">441</a></sup> in order to include explicitly the contribution of the kinetic energy to the correlation energy. This was done by deducing a Gaussian approximation to the one-particle density matrix that goes beyond HF. By applying this approximation to the HEG they arrived at an expression for the correlation kinetic energy $\tau_\text{c}$. Finally, the correlation energy was obtained by standard integration of the following relation that is valid for the HEG:<sup class="citation-marker"><a href="#review-ref-Perdew1992-13244">278</a>,<a href="#review-ref-Perdew2018-PRB-79904">279</a>,<a href="#review-ref-Perdew1992-12947">442</a></sup></p>
+<div class="equation" data-tex="\tau_\text{c} = -\frac{\partial (r_s e_\text{c})}{\partial r_s}"></div>
+<p>After taking into account some asymptotic considerations, the final form of the functional reads</p>
+<div class="equation" data-tex="e_\text{c}^{\text{RC04}}(r_s) = \frac{A\arctan(B + C r_s) + D}{r_s}"></div>
+<p>with the parameters $A=-0.655868$, $B=4.888270$, $C=3.177037$, and $D=0.897889$. Although the original work<sup class="citation-marker"><a href="#review-ref-Ragot2004-7671">440</a></sup> only presented the spin-unpolarized form of the functional, later works<sup class="citation-marker"><a href="#review-ref-Tognetti2008-034101">443</a>,<a href="#review-ref-Tognetti2008-536">444</a></sup> (see <a class="functional-link" href="../gga-c-tca/"><code>gga_c_tca</code></a> and <a class="functional-link" href="../gga-c-revtca/"><code>gga_c_revtca</code></a>) suggested that the spin-dependent extension could be built by multiplying <a class="review-eq-link" href="#review-eq-eq-ecrc04">
+  <code>eq:ecrc04</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="e_\text{c}^{\text{RC04}}(r_s) = \frac{A\arctan(B + C r_s) + D}{r_s}"></span>
+  </span>
+</a> by $\phi_{2/3}^3(\zeta)$.</p>
+        </div>
+        <p class="source-note">Adapted from <a href="https://arxiv.org/abs/2602.17333">Tran, Lehtola, Pittalis, and Marques, <em>Semi-Local Exchange-Correlation Approximations in Density Functional Theory</em>, arXiv:2602.17333</a>.</p>
+      </section>
+
+        <section class="section">
+          <h2>Referenced Review Equations</h2>
+          <div class="review-equations">
+          <article class="review-equation-card" id="review-eq-eq-ecrc04">
+            <code>eq:ecrc04</code>
+            <div class="equation" data-tex="e_\text{c}^{\text{RC04}}(r_s) = \frac{A\arctan(B + C r_s) + D}{r_s}"></div>
+          </article>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <h2>Review References</h2>
+          <ol class="review-refs"><li id="review-ref-Ragot2004-7671" value="440">Ragot, S.; Cortona, P. Correlation energy of many-electron systems: A modified Colle--Salvetti approach. <em>J. Chem. Phys.</em> <strong>2004</strong>, <em>121</em>, 7671, DOI: <a href="https://doi.org/10.1063/1.1792153">10.1063/1.1792153</a></li>
+<li id="review-ref-Colle1975-329" value="441">Colle, R.; Salvetti, O. Approximate calculation of the correlation energy for the closed shells. <em>Theor. Chim. Acta</em> <strong>1975</strong>, <em>37</em>, 329, DOI: <a href="https://doi.org/10.1007/BF01028401">10.1007/BF01028401</a></li>
+<li id="review-ref-Perdew1992-13244" value="278">Perdew, J. P.; Wang, Y. Accurate and simple analytic representation of the electron-gas correlation energy. <em>Phys. Rev. B</em> <strong>1992</strong>, <em>45</em>, 13244, DOI: <a href="https://doi.org/10.1103/PhysRevB.45.13244">10.1103/PhysRevB.45.13244</a></li>
+<li id="review-ref-Perdew2018-PRB-79904" value="279">Perdew, J. P.; Wang, Y. Erratum: Accurate and simple analytic representation of the electron-gas correlation energy [Phys. Rev. B 45, 13244 (1992)]. <em>Phys. Rev. B</em> <strong>2018</strong>, <em>98</em>, 079904, DOI: <a href="https://doi.org/10.1103/physrevb.98.079904">10.1103/physrevb.98.079904</a></li>
+<li id="review-ref-Perdew1992-12947" value="442">Perdew, J. P.; Wang, Y. Pair-distribution function and its coupling-constant average for the spin-polarized electron gas. <em>Phys. Rev. B</em> <strong>1992</strong>, <em>46</em>, 12947--12954, DOI: <a href="https://doi.org/10.1103/PhysRevB.46.12947">10.1103/PhysRevB.46.12947</a></li>
+<li id="review-ref-Tognetti2008-034101" value="443">Tognetti, V.; Cortona, P.; Adamo, C. A new parameter-free correlation functional based on an average atomic reduced density gradient analysis. <em>J. Chem. Phys.</em> <strong>2008</strong>, <em>128</em>, 034101, DOI: <a href="https://doi.org/10.1063/1.2816137">10.1063/1.2816137</a></li>
+<li id="review-ref-Tognetti2008-536" value="444">Tognetti, V.; Cortona, P.; Adamo, C. Increasing physical constraints and improving performances in a parameter-free GGA functional. <em>Chem. Phys. Lett.</em> <strong>2008</strong>, <em>460</em>, 536, DOI: <a href="https://doi.org/10.1016/j.cplett.2008.06.032">10.1016/j.cplett.2008.06.032</a></li></ol>
+        </section>
+
+        <section class="section">
+          <h2>Publications</h2>
+          <ol class="publication-refs"><li>Ragot, S.; Cortona, P. Correlation energy of many-electron systems: A modified Colle--Salvetti approach. <em>J. Chem. Phys.</em> <strong>2004</strong>, <em>121</em>, 7671, DOI: <a href="https://doi.org/10.1063/1.1792153">10.1063/1.1792153</a></li></ol>
+        </section>
+
+        <section class="section">
+          <div class="section-heading">
+            <h2>BibTeX</h2>
+            <button class="copy-button" type="button" data-copy-target="bibtex-code" aria-label="Copy BibTeX">Copy</button>
+          </div>
+          <pre><code id="bibtex-code">@article{Ragot2004_7671,
+  author = {Ragot, S. and Cortona, P.},
+  title = {Correlation energy of many-electron systems: A modified {Colle}--{Salvetti} approach},
+  journal = {J. Chem. Phys.},
+  year = {2004},
+  volume = {121},
+  number = {16},
+  pages = {7671},
+  url = {http://scitation.aip.org/content/aip/journal/jcp/121/16/10.1063/1.1792153},
+  doi = {10.1063/1.1792153}
+}
+</code></pre>
+        </section>
+
+        <details>
+          <summary>All Libxc metadata</summary>
+          <dl class="metadata">
+            <dt>identifier</dt><dd>lda_c_rc04</dd>
+            <dt>family</dt><dd>lda</dd>
+            <dt>kind</dt><dd>correlation</dd>
+            <dt>derivatives</dt><dd>0, 1, 2</dd>
+            <dt>flags</dt><dd>dim3, exc, fxc, vxc, enforce_fhc</dd>
+<dt>cam_alpha</dt><dd>null</dd>
+<dt>cam_beta</dt><dd>null</dd>
+<dt>cam_omega</dt><dd>null</dd>
+<dt>density_threshold</dt><dd>1.0e-14</dd>
+<dt>exx_coefficient</dt><dd>null</dd>
+<dt>n_spin</dt><dd>1</dd>
+<dt>nlc_C</dt><dd>null</dd>
+<dt>nlc_b</dt><dd>null</dd>
+<dt>sigma_threshold</dt><dd>2.1544346900318888e-19</dd>
+<dt>tau_threshold</dt><dd>1.0e-20</dd>
+<dt>zeta_threshold</dt><dd>2.220446049250313e-16</dd>
+          </dl>
+        </details>
+      </div>
+
+    </main>
+    <div id="command-palette" class="command-palette" aria-hidden="true" hidden>
+      <div class="command-backdrop" data-command-close></div>
+      <form class="command-panel" role="search">
+        <div class="search-box">
+          <input id="command-search" class="search-input command-search-input" type="search" autocomplete="off" placeholder="Search functionals..." aria-controls="command-search-suggestions">
+          <div id="command-search-suggestions" class="search-suggestions command-search-suggestions" role="listbox" hidden></div>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

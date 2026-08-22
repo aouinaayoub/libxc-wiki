@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>gga_x_fd_lb94</title>
+    <link rel="stylesheet" href="../../assets/styles.css?v=20260822-github">
+    <script defer src="../../assets/search.js?v=20260822-github"></script>
+    <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+    <script defer src="../../vendor/katex/katex.min.js"></script>
+    <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
+    <script defer src="../../assets/detail.js?v=20260822-github"></script>
+
+  </head>
+  <body>
+    <main class="shell">
+      <form class="global-search" role="search" action="../../" method="get">
+        <div class="search-box">
+          <input class="search-input global-search-input" name="q" type="search" autocomplete="off" placeholder="Search functionals..." aria-controls="global-search-suggestions">
+          <span class="search-shortcut" aria-hidden="true">Ctrl K</span>
+          <div id="global-search-suggestions" class="search-suggestions" role="listbox" hidden></div>
+        </div>
+      </form>
+
+      <a class="back" href="../../">Back to search</a>
+      <header class="top">
+        <a class="github-link" href="https://github.com/aouinaayoub/libxc-wiki" aria-label="View Libxc Wiki on GitHub" title="View source on GitHub">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .7a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2.23c-3.22.7-3.9-1.37-3.9-1.37-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.71.08-.71 1.16.08 1.78 1.2 1.78 1.2 1.04 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.74-1.55-2.57-.29-5.27-1.29-5.27-5.69 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.16 1.18a10.94 10.94 0 0 1 5.76 0c2.19-1.49 3.16-1.18 3.16-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.42-2.71 5.39-5.29 5.68.42.36.79 1.07.79 2.16v3.2c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .7Z"/></svg>
+        </a>
+
+        <p class="brand">GGA</p>
+        <h1><code class="title-code">gga_x_fd_lb94</code></h1>
+        <div class="detail-tags"><span class="tag">gga</span>
+<span class="tag">exchange</span></div>
+      </header>
+
+      <div class="detail-grid">
+      <section class="callout">
+        <p class="callout-label">Review excerpt</p>
+        <div class="review-html">
+<p><a class="functional-link" href="../gga-x-lb/"><code>gga_x_lb</code></a> was introduced by direct modeling of the potential $v_{\text{x}\sigma}^{\text{LB}}$ itself, bypassing the usual derivation from an energy functional. It has since been demonstrated that no energy functional whose functional derivative yields this potential exists.<sup class="citation-marker"><a href="#review-ref-Gaiduk2009-044107">495</a>,<a href="#review-ref-Karolewski2009-712">496</a></sup> Gaiduk and Staroverov<sup class="citation-marker"><a href="#review-ref-Gaiduk2011-012509">557</a></sup> showed how to complement such ``stray&#39;&#39; potential by additional terms so that it becomes a proper functional derivative. By applying their method to <a class="functional-link" href="../gga-x-lb/"><code>gga_x_lb</code></a>, they obtained the following functional:</p>
+<div class="equation" data-tex="\begin{aligned}
+F_\text{x}^{\text{fd-LB94}} = &amp;
+1 -\frac{1}{C_{\text{x}}}x_\sigma\left[J_0(\xi^{-1}x_\sigma)\ln\left(\xi^{-1}x_\sigma\right) \right. \\
+&amp; \left.-J_1(\xi^{-1}x_\sigma)\right]
+\end{aligned}"></div>
+<p>where $\xi=2^{1/3}$ and</p>
+<div class="equation" data-tex="J_n(x)=-\frac{3}{4}\int_{0}^{x}\text{d}t\frac{\beta\xi\ln^nt}{1+3\beta\xi t\ln\left[\xi t+\sqrt{\left(\xi t\right)^2+1}\right]}"></div>
+<p>with $\beta=0.05$. However, <a class="review-eq-link" href="#review-eq-eq-f-fd-lb94">
+  <code>eq:f-fd-lb94</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="\begin{aligned}
+F_\text{x}^{\text{fd-LB94}} = &amp;
+1 -\frac{1}{C_{\text{x}}}x_\sigma\left[J_0(\xi^{-1}x_\sigma)\ln\left(\xi^{-1}x_\sigma\right) \right. \\
+
+&amp; \left.-J_1(\xi^{-1}x_\sigma)\right]
+\end{aligned}"></span>
+  </span>
+</a> leads to a functional derivative that has no resemblance to the original potential <a class="functional-link" href="../gga-x-lb/"><code>gga_x_lb</code></a>. Furthermore, the exchange energies of atoms are unrealistically too large by roughly 50\%. Nevertheless, by choosing a much smaller value of $\beta=0.004$, leading to <a class="functional-link" href="../gga-x-fd-revlb94/"><code>gga_x_fd_revlb94</code></a>, much more reasonable exchange energies are obtained.</p>
+        </div>
+        <p class="source-note">Adapted from <a href="https://arxiv.org/abs/2602.17333">Tran, Lehtola, Pittalis, and Marques, <em>Semi-Local Exchange-Correlation Approximations in Density Functional Theory</em>, arXiv:2602.17333</a>.</p>
+      </section>
+
+        <section class="section">
+          <h2>Referenced Review Equations</h2>
+          <div class="review-equations">
+          <article class="review-equation-card" id="review-eq-eq-f-fd-lb94">
+            <code>eq:f-fd-lb94</code>
+            <div class="equation" data-tex="\begin{aligned}
+F_\text{x}^{\text{fd-LB94}} = &amp;
+1 -\frac{1}{C_{\text{x}}}x_\sigma\left[J_0(\xi^{-1}x_\sigma)\ln\left(\xi^{-1}x_\sigma\right) \right. \\
+
+&amp; \left.-J_1(\xi^{-1}x_\sigma)\right]
+\end{aligned}"></div>
+          </article>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <h2>Review References</h2>
+          <ol class="review-refs"><li id="review-ref-Gaiduk2009-044107" value="495">Gaiduk, A. P.; Staroverov, V. N. How to tell when a model Kohn--Sham potential is not a functional derivative. <em>J. Chem. Phys.</em> <strong>2009</strong>, <em>131</em>, 044107, DOI: <a href="https://doi.org/10.1063/1.3176515">10.1063/1.3176515</a></li>
+<li id="review-ref-Karolewski2009-712" value="496">Karolewski, A.; Armiento, R.; Kummel, S. Polarizabilities of Polyacetylene from a Field-Counteracting Semilocal Functional. <em>J. Chem. Theory Comput.</em> <strong>2009</strong>, <em>5</em>, 712--718, DOI: <a href="https://doi.org/10.1021/ct8005198">10.1021/ct8005198</a></li>
+<li id="review-ref-Gaiduk2011-012509" value="557">Gaiduk, A. P.; Staroverov, V. N. Construction of integrable model Kohn--Sham potentials by analysis of the structure of functional derivatives. <em>Phys. Rev. A</em> <strong>2011</strong>, <em>83</em>, 012509, DOI: <a href="https://doi.org/10.1103/PhysRevA.83.012509">10.1103/PhysRevA.83.012509</a></li></ol>
+        </section>
+
+        <section class="section">
+          <h2>Publications</h2>
+          <ol class="publication-refs"><li>Gaiduk, A. P.; Staroverov, V. N. Construction of integrable model Kohn--Sham potentials by analysis of the structure of functional derivatives. <em>Phys. Rev. A</em> <strong>2011</strong>, <em>83</em>, 012509, DOI: <a href="https://doi.org/10.1103/PhysRevA.83.012509">10.1103/PhysRevA.83.012509</a></li></ol>
+        </section>
+
+        <section class="section">
+          <div class="section-heading">
+            <h2>BibTeX</h2>
+            <button class="copy-button" type="button" data-copy-target="bibtex-code" aria-label="Copy BibTeX">Copy</button>
+          </div>
+          <pre><code id="bibtex-code">@article{Gaiduk2011_012509,
+  author = {Gaiduk, Alex P. and Staroverov, Viktor N.},
+  title = {Construction of integrable model {Kohn}--{Sham} potentials by analysis of the structure of functional derivatives},
+  journal = {Phys. Rev. A},
+  volume = {83},
+  issue = {1},
+  pages = {012509},
+  year = {2011},
+  month = {Jan},
+  publisher = {American Physical Society},
+  doi = {10.1103/PhysRevA.83.012509},
+  url = {https://link.aps.org/doi/10.1103/PhysRevA.83.012509}
+}
+</code></pre>
+        </section>
+
+        <details>
+          <summary>All Libxc metadata</summary>
+          <dl class="metadata">
+            <dt>identifier</dt><dd>gga_x_fd_lb94</dd>
+            <dt>family</dt><dd>gga</dd>
+            <dt>kind</dt><dd>exchange</dd>
+            <dt>derivatives</dt><dd>0, 1, 2</dd>
+            <dt>flags</dt><dd>dim3, exc, fxc, vxc, enforce_fhc</dd>
+<dt>cam_alpha</dt><dd>null</dd>
+<dt>cam_beta</dt><dd>null</dd>
+<dt>cam_omega</dt><dd>null</dd>
+<dt>density_threshold</dt><dd>1.0e-15</dd>
+<dt>exx_coefficient</dt><dd>null</dd>
+<dt>n_spin</dt><dd>1</dd>
+<dt>nlc_C</dt><dd>null</dd>
+<dt>nlc_b</dt><dd>null</dd>
+<dt>sigma_threshold</dt><dd>1.0000000000000027e-20</dd>
+<dt>tau_threshold</dt><dd>1.0e-20</dd>
+<dt>zeta_threshold</dt><dd>2.220446049250313e-16</dd>
+          </dl>
+        </details>
+      </div>
+
+    </main>
+    <div id="command-palette" class="command-palette" aria-hidden="true" hidden>
+      <div class="command-backdrop" data-command-close></div>
+      <form class="command-panel" role="search">
+        <div class="search-box">
+          <input id="command-search" class="search-input command-search-input" type="search" autocomplete="off" placeholder="Search functionals..." aria-controls="command-search-suggestions">
+          <div id="command-search-suggestions" class="search-suggestions command-search-suggestions" role="listbox" hidden></div>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

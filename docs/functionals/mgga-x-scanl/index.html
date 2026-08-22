@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>mgga_x_scanl</title>
+    <link rel="stylesheet" href="../../assets/styles.css?v=20260822-github">
+    <script defer src="../../assets/search.js?v=20260822-github"></script>
+    <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+    <script defer src="../../vendor/katex/katex.min.js"></script>
+    <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
+    <script defer src="../../assets/detail.js?v=20260822-github"></script>
+
+  </head>
+  <body>
+    <main class="shell">
+      <form class="global-search" role="search" action="../../" method="get">
+        <div class="search-box">
+          <input class="search-input global-search-input" name="q" type="search" autocomplete="off" placeholder="Search functionals..." aria-controls="global-search-suggestions">
+          <span class="search-shortcut" aria-hidden="true">Ctrl K</span>
+          <div id="global-search-suggestions" class="search-suggestions" role="listbox" hidden></div>
+        </div>
+      </form>
+
+      <a class="back" href="../../">Back to search</a>
+      <header class="top">
+        <a class="github-link" href="https://github.com/aouinaayoub/libxc-wiki" aria-label="View Libxc Wiki on GitHub" title="View source on GitHub">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .7a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2.23c-3.22.7-3.9-1.37-3.9-1.37-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.71.08-.71 1.16.08 1.78 1.2 1.78 1.2 1.04 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.74-1.55-2.57-.29-5.27-1.29-5.27-5.69 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.16 1.18a10.94 10.94 0 0 1 5.76 0c2.19-1.49 3.16-1.18 3.16-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.42-2.71 5.39-5.29 5.68.42.36.79 1.07.79 2.16v3.2c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .7Z"/></svg>
+        </a>
+
+        <p class="brand">META-GGA</p>
+        <h1><code class="title-code">mgga_x_scanl</code></h1>
+        <div class="detail-tags"><span class="tag">meta-gga</span>
+<span class="tag">exchange</span></div>
+      </header>
+
+      <div class="detail-grid">
+      <section class="callout">
+        <p class="callout-label">Review excerpt</p>
+        <div class="review-html">
+<p>Mejia-Rodriguez and Trickey proposed and tested various deorbitalized versions of the $\tau$-MGGA functionals TPSS (<a class="functional-link" href="../mgga-x-tpss/"><code>mgga_x_tpss</code></a> + <a class="functional-link" href="../mgga-c-tpss/"><code>mgga_c_tpss</code></a>), SCAN (<a class="functional-link" href="../mgga-x-scan/"><code>mgga_x_scan</code></a> + <a class="functional-link" href="../mgga-c-scan/"><code>mgga_c_scan</code></a>), and MVS (<a class="functional-link" href="../mgga-x-mvs/"><code>mgga_x_mvs</code></a> + <a class="functional-link" href="../gga-c-regtpss/"><code>gga_c_regtpss</code></a>). The replacement of the kinetic-energy density $\tau_{\sigma}$ by an orbital-free expression depending on $n_\sigma$, $\nabla n_\sigma$, and $\nabla^2 n_\sigma$ was achieved using six different approximations, leading overall to 18 deorbitalized functionals. Among them, <a class="functional-link" href="../mgga-x-scanl/"><code>mgga_x_scanl</code></a> and <code>mgga_x_mvsl</code> are the most interesting for accuracy, and they are described below.</p>
+<p><a class="functional-link" href="../mgga-x-scanl/"><code>mgga_x_scanl</code></a> uses PC07opt,<sup class="citation-marker"><a href="#review-ref-Mejia2017-052512">737</a></sup> a reoptimized version of the PC07 expression,<sup class="citation-marker"><a href="#review-ref-Perdew2007-155109">740</a></sup> for $\tau_{\sigma}$. Its expression is given by</p>
+<div class="equation" data-tex="\tau_{\sigma}^{\text{PC07}} = \tau_{\sigma}^{\text{TF}}F_{t}^{\text{PC07}}(p_\sigma,q_\sigma)"></div>
+<p>where $\tau_{\sigma}^{\text{TF}}$ is given by <a class="review-eq-link" href="#review-eq-eq-tautf-sigma">
+  <code>eq:tautf-sigma</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="\tau_{\sigma}^{\text{TF}} = C_{\text{F}}n_{\sigma}^{5/3}"></span>
+  </span>
+</a> and</p>
+<div class="equation" data-tex="F_{t}^{\text{PC07}} = F_{t}^{\text{W}} + z_\sigma^{\text{PC07}}\theta^{\text{PC07}}(z_\sigma^{\text{PC07}})"></div>
+<p>with $F_t^{\text{W}}=\left(5/3\right)p_\sigma$, $z_\sigma^{\text{PC07}}=F_t^{\text{MGE4}}-F_t^{\text{W}}$,</p>
+<div class="equation" data-tex="\begin{aligned}
+\theta^{\text{PC07}}(z) =  \\
+ \left\{
+  \begin{array}{ll}
+    0, &amp; z \le  0 \\
+    \left[\frac{\displaystyle 1+\E^{a/(a-z)}}{\displaystyle \E^{a/z}+\E^{a/(a-z)}}\right]^b, &amp; 0 &lt; z &lt; a \\
+    1,     &amp; z \ge a
+  \end{array}
+  \right.
+\end{aligned}"></div>
+<p>and</p>
+<div class="equation" data-tex="F_{t}^{\text{MGE4}} = \frac{\displaystyle F_t^{(0)}+F_t^{(2)}+F_t^{(4)}}{\displaystyle \sqrt{1+\left[\frac{F_t^{(4)}}{1+F_t^{\text{W}}}\right]^2}}"></div>
+<p>where $F_t^{(0)}=1$, $F_t^{(2)}=\left(1/9\right)F_t^{\text{W}}+\left(20/9\right)q_\sigma$, and $F_t^{(4)}=\left(8/81\right)q_\sigma^2-\left(1/9\right)p_\sigma q_\sigma+\left(8/243\right)p_\sigma^2$. Perdew and Constantin<sup class="citation-marker"><a href="#review-ref-Perdew2007-155109">740</a></sup> fit the kinetic energy of atomic and jellium systems to find the parameters $a=0.5389$ and $b=3$ in <a class="review-eq-link" href="#review-eq-eq-thetapc07">
+  <code>eq:thetapc07</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="\begin{aligned}
+\theta^{\text{PC07}}(z) =  \\
+
+ \left\{
+  \begin{array}{ll}
+    0, &amp; z \le  0 \\
+
+    \left[\frac{\displaystyle 1+\E^{a/(a-z)}}{\displaystyle \E^{a/z}+\E^{a/(a-z)}}\right]^b, &amp; 0 &lt; z &lt; a \\
+
+    1,     &amp; z \ge a
+  \end{array}
+  \right.
+\end{aligned}"></span>
+  </span>
+</a> (PC07). Mejia-Rodriguez and Trickey<sup class="citation-marker"><a href="#review-ref-Mejia2017-052512">737</a></sup> proposed the new values $a=1.784720$ and $b=0.258304$, leading to PC07opt.</p>
+<p>The orbital-free kinetic-energy density used in <code>mgga_x_mvsl</code>, which is based on the form developed in <sup class="citation-marker"><a href="#review-ref-Cancio2017-618">741</a></sup>, is given by</p>
+<div class="equation" data-tex="\tau_{\sigma}^{\text{CRopt}} = \tau_{\sigma}^{\text{TF}}F_{t}^{\text{CRopt}}(p_\sigma,q_\sigma)"></div>
+<p>where</p>
+<div class="equation" data-tex="F_{t}^{\text{CRopt}} = 1 + F_{t}^{\text{W}} + z_\sigma^{\text{CRopt}}\theta^{\text{CR}}(z_\sigma^{\text{CRopt}})"></div>
+<p>with $z_\sigma^{\text{CRopt}} = ap_\sigma+ bq_\sigma - F_t^{\text{W}}$, where $a=-0.295491$ and $b=2.615740$,<sup class="citation-marker"><a href="#review-ref-Mejia2017-052512">737</a></sup> and</p>
+<div class="equation" data-tex="\theta^{\text{CR}}(z) = \left\{1 - \E^{-1/\left\vert z\right\vert^c}\left[1-H(z)\right]\right\}^{1/c}"></div>
+<p>where $H(z)$ is the Heaviside step function and $c=4$.</p>
+<p>SCAN-L (<a class="functional-link" href="../mgga-x-scanl/"><code>mgga_x_scanl</code></a> + <a class="functional-link" href="../mgga-c-scanl/"><code>mgga_c_scanl</code></a>) leads to an accuracy that is quite close to that of the parent SCAN functional for molecular and solid-state properties. However, the band gaps of solids are exceptions: they are smaller with SCAN-L, which can be explained by the xc derivative discontinuity.<sup class="citation-marker"><a href="#review-ref-Perdew1982-1691">332</a></sup> Note that <a class="functional-link" href="../mgga-x-revscanl/"><code>mgga_x_revscanl</code></a>, a deorbitalized version of <a class="functional-link" href="../mgga-x-revscan/"><code>mgga_x_revscan</code></a> also using $\tau_{\sigma}^{\text{PC07}}$, has not been discussed in the literature, but is available in Libxc. The <code>mgga_x_mvsl</code> functional was tested more extensively in <sup class="citation-marker"><a href="#review-ref-Francisco2025-10240">742</a></sup>, where it was shown that it is more accurate than the parent <a class="functional-link" href="../mgga-x-mvs/"><code>mgga_x_mvs</code></a> functional for various molecular and solid-state properties (excluding band gaps).</p>
+        </div>
+        <p class="source-note">Adapted from <a href="https://arxiv.org/abs/2602.17333">Tran, Lehtola, Pittalis, and Marques, <em>Semi-Local Exchange-Correlation Approximations in Density Functional Theory</em>, arXiv:2602.17333</a>.</p>
+      </section>
+
+        <section class="section">
+          <h2>Referenced Review Equations</h2>
+          <div class="review-equations">
+          <article class="review-equation-card" id="review-eq-eq-tautf-sigma">
+            <code>eq:tautf-sigma</code>
+            <div class="equation" data-tex="\tau_{\sigma}^{\text{TF}} = C_{\text{F}}n_{\sigma}^{5/3}"></div>
+          </article>
+
+          <article class="review-equation-card" id="review-eq-eq-thetapc07">
+            <code>eq:thetapc07</code>
+            <div class="equation" data-tex="\begin{aligned}
+\theta^{\text{PC07}}(z) =  \\
+
+ \left\{
+  \begin{array}{ll}
+    0, &amp; z \le  0 \\
+
+    \left[\frac{\displaystyle 1+\E^{a/(a-z)}}{\displaystyle \E^{a/z}+\E^{a/(a-z)}}\right]^b, &amp; 0 &lt; z &lt; a \\
+
+    1,     &amp; z \ge a
+  \end{array}
+  \right.
+\end{aligned}"></div>
+          </article>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <h2>Review References</h2>
+          <ol class="review-refs"><li id="review-ref-Mejia2017-052512" value="737">Mejia-Rodriguez, D.; Trickey, S. B. Deorbitalization strategies for meta-generalized-gradient-approximation exchange-correlation functionals. <em>Phys. Rev. A</em> <strong>2017</strong>, <em>96</em>, 052512, DOI: <a href="https://doi.org/10.1103/PhysRevA.96.052512">10.1103/PhysRevA.96.052512</a></li>
+<li id="review-ref-Perdew2007-155109" value="740">Perdew, J. P.; Constantin, L. A. Laplacian-level density functionals for the kinetic energy density and exchange-correlation energy. <em>Phys. Rev. B</em> <strong>2007</strong>, <em>75</em>, 155109, DOI: <a href="https://doi.org/10.1103/PhysRevB.75.155109">10.1103/PhysRevB.75.155109</a></li>
+<li id="review-ref-Cancio2017-618" value="741">Cancio, A. C.; Redd, J. J. Visualisation and orbital-free parametrisation of the large-$Z$ scaling of the kinetic energy density of atoms. <em>Mol. Phys.</em> <strong>2017</strong>, <em>115</em>, 618--635, DOI: <a href="https://doi.org/10.1080/00268976.2016.1246757">10.1080/00268976.2016.1246757</a></li>
+<li id="review-ref-Perdew1982-1691" value="332">Perdew, J. P.; Parr, R. G.; Levy, M.; Balduz, J. L. Density-Functional Theory for Fractional Particle Number: Derivative Discontinuities of the Energy. <em>Phys. Rev. Lett.</em> <strong>1982</strong>, <em>49</em>, 1691--1694, DOI: <a href="https://doi.org/10.1103/PhysRevLett.49.1691">10.1103/PhysRevLett.49.1691</a></li>
+<li id="review-ref-Francisco2025-10240" value="742">Francisco, H.; Cancio, A. C.; Trickey, S. B. Removing Orbital-Dependence to Improve Exchange-Correlation Functional Accuracy. <em>J. Phys. Chem. A</em> <strong>2025</strong>, <em>129</em>, 10240--10250, DOI: <a href="https://doi.org/10.1021/acs.jpca.5c04829">10.1021/acs.jpca.5c04829</a></li></ol>
+        </section>
+
+        <section class="section">
+          <h2>Publications</h2>
+          <ol class="publication-refs"><li>Mejia-Rodriguez, D.; Trickey, S. B. Deorbitalization strategies for meta-generalized-gradient-approximation exchange-correlation functionals. <em>Phys. Rev. A</em> <strong>2017</strong>, <em>96</em>, 052512, DOI: <a href="https://doi.org/10.1103/PhysRevA.96.052512">10.1103/PhysRevA.96.052512</a></li>
+<li>Mejia-Rodriguez, D.; Trickey, S. B. Deorbitalized meta-GGA exchange-correlation functionals in solids. <em>Phys. Rev. B</em> <strong>2018</strong>, <em>98</em>, 115161, DOI: <a href="https://doi.org/10.1103/PhysRevB.98.115161">10.1103/PhysRevB.98.115161</a></li>
+<li>Sun, J.; Ruzsinszky, A.; Perdew, J. P. Strongly Constrained and Appropriately Normed Semilocal Density Functional. <em>Phys. Rev. Lett.</em> <strong>2015</strong>, <em>115</em>, 036402, DOI: <a href="https://doi.org/10.1103/PhysRevLett.115.036402">10.1103/PhysRevLett.115.036402</a></li></ol>
+        </section>
+
+        <section class="section">
+          <div class="section-heading">
+            <h2>BibTeX</h2>
+            <button class="copy-button" type="button" data-copy-target="bibtex-code" aria-label="Copy BibTeX">Copy</button>
+          </div>
+          <pre><code id="bibtex-code">@article{Mejia2017_052512,
+  author = {Mejia-Rodriguez, Daniel and Trickey, S. B.},
+  title = {Deorbitalization strategies for meta-generalized-gradient-approximation exchange-correlation functionals},
+  journal = {Phys. Rev. A},
+  volume = {96},
+  issue = {5},
+  pages = {052512},
+  year = {2017},
+  month = {Nov},
+  publisher = {American Physical Society},
+  doi = {10.1103/PhysRevA.96.052512},
+  url = {https://link.aps.org/doi/10.1103/PhysRevA.96.052512}
+}
+
+
+@article{Mejia2018_115161,
+  author = {Mejia-Rodriguez, Daniel and Trickey, S. B.},
+  title = {Deorbitalized meta-{GGA} exchange-correlation functionals in solids},
+  journal = {Phys. Rev. B},
+  volume = {98},
+  issue = {11},
+  pages = {115161},
+  year = {2018},
+  month = {Sep},
+  publisher = {American Physical Society},
+  doi = {10.1103/PhysRevB.98.115161},
+  url = {https://link.aps.org/doi/10.1103/PhysRevB.98.115161}
+}
+
+
+@article{Sun2015_036402,
+  author = {Sun, Jianwei and Ruzsinszky, Adrienn and Perdew, John P.},
+  title = {Strongly Constrained and Appropriately Normed Semilocal Density Functional},
+  journal = {Phys. Rev. Lett.},
+  volume = {115},
+  issue = {3},
+  pages = {036402},
+  year = {2015},
+  month = {Jul},
+  publisher = {American Physical Society},
+  doi = {10.1103/PhysRevLett.115.036402},
+  url = {http://link.aps.org/doi/10.1103/PhysRevLett.115.036402}
+}
+</code></pre>
+        </section>
+
+        <details>
+          <summary>All Libxc metadata</summary>
+          <dl class="metadata">
+            <dt>identifier</dt><dd>mgga_x_scanl</dd>
+            <dt>family</dt><dd>meta-gga</dd>
+            <dt>kind</dt><dd>exchange</dd>
+            <dt>derivatives</dt><dd>0, 1, 2</dd>
+            <dt>flags</dt><dd>dim3, exc, fxc, needs_laplacian, vxc, enforce_fhc</dd>
+<dt>cam_alpha</dt><dd>null</dd>
+<dt>cam_beta</dt><dd>null</dd>
+<dt>cam_omega</dt><dd>null</dd>
+<dt>density_threshold</dt><dd>1.0e-15</dd>
+<dt>exx_coefficient</dt><dd>null</dd>
+<dt>n_spin</dt><dd>1</dd>
+<dt>nlc_C</dt><dd>null</dd>
+<dt>nlc_b</dt><dd>null</dd>
+<dt>sigma_threshold</dt><dd>1.0000000000000027e-20</dd>
+<dt>tau_threshold</dt><dd>1.0e-20</dd>
+<dt>zeta_threshold</dt><dd>2.220446049250313e-16</dd>
+          </dl>
+        </details>
+      </div>
+
+    </main>
+    <div id="command-palette" class="command-palette" aria-hidden="true" hidden>
+      <div class="command-backdrop" data-command-close></div>
+      <form class="command-panel" role="search">
+        <div class="search-box">
+          <input id="command-search" class="search-input command-search-input" type="search" autocomplete="off" placeholder="Search functionals..." aria-controls="command-search-suggestions">
+          <div id="command-search-suggestions" class="search-suggestions command-search-suggestions" role="listbox" hidden></div>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

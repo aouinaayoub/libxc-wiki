@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>mgga_x_hlta</title>
+    <link rel="stylesheet" href="../../assets/styles.css?v=20260822-github">
+    <script defer src="../../assets/search.js?v=20260822-github"></script>
+    <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+    <script defer src="../../vendor/katex/katex.min.js"></script>
+    <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
+    <script defer src="../../assets/detail.js?v=20260822-github"></script>
+
+  </head>
+  <body>
+    <main class="shell">
+      <form class="global-search" role="search" action="../../" method="get">
+        <div class="search-box">
+          <input class="search-input global-search-input" name="q" type="search" autocomplete="off" placeholder="Search functionals..." aria-controls="global-search-suggestions">
+          <span class="search-shortcut" aria-hidden="true">Ctrl K</span>
+          <div id="global-search-suggestions" class="search-suggestions" role="listbox" hidden></div>
+        </div>
+      </form>
+
+      <a class="back" href="../../">Back to search</a>
+      <header class="top">
+        <a class="github-link" href="https://github.com/aouinaayoub/libxc-wiki" aria-label="View Libxc Wiki on GitHub" title="View source on GitHub">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .7a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2.23c-3.22.7-3.9-1.37-3.9-1.37-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.71.08-.71 1.16.08 1.78 1.2 1.78 1.2 1.04 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.74-1.55-2.57-.29-5.27-1.29-5.27-5.69 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.16 1.18a10.94 10.94 0 0 1 5.76 0c2.19-1.49 3.16-1.18 3.16-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.42-2.71 5.39-5.29 5.68.42.36.79 1.07.79 2.16v3.2c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .7Z"/></svg>
+        </a>
+
+        <p class="brand">META-GGA</p>
+        <h1><code class="title-code">mgga_x_hlta</code></h1>
+        <div class="detail-tags"><span class="tag">meta-gga</span>
+<span class="tag">exchange</span></div>
+      </header>
+
+      <div class="detail-grid">
+      <section class="callout">
+        <p class="callout-label">Review excerpt</p>
+        <div class="review-html">
+<p>The functionals <a class="functional-link" href="../mgga-x-lta/"><code>mgga_x_lta</code></a> and <a class="functional-link" href="../mgga-x-tlda/"><code>mgga_x_tlda</code></a> were derived by converting (with the help of <a class="review-eq-link" href="#review-eq-eq-tf-inverted">
+  <code>eq:tf-inverted</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="\tilde{n}_\sigma = \left(\frac{\tau_\sigma}{C_{\text{F}}}\right)^{3/5}"></span>
+  </span>
+</a>) the dependence on $n_{\sigma}$ in <a class="functional-link" href="../lda-x/"><code>lda_x</code></a> into a dependence on $\tau_{\sigma}$. The difference between the two functionals is that the $n_{\sigma}\to\tau_{\sigma}$ conversion is done in the exchange-energy per volume in the case of <a class="functional-link" href="../mgga-x-lta/"><code>mgga_x_lta</code></a>, and only in the exchange-energy per particle for <a class="functional-link" href="../mgga-x-tlda/"><code>mgga_x_tlda</code></a>. A more general approach is to replace $n_{\sigma}$ by</p>
+<div class="equation" data-tex="n_{\sigma}^{\text{eff}}=\tilde{n}_{\sigma}^{x}n_{\sigma}^{1-x}"></div>
+<p>where $\tilde{n}_{\sigma}$ is <a class="review-eq-link" href="#review-eq-eq-tf-inverted">
+  <code>eq:tf-inverted</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="\tilde{n}_\sigma = \left(\frac{\tau_\sigma}{C_{\text{F}}}\right)^{3/5}"></span>
+  </span>
+</a> and $x$ a parameter. <a class="functional-link" href="../mgga-x-lta/"><code>mgga_x_lta</code></a> and <a class="functional-link" href="../mgga-x-tlda/"><code>mgga_x_tlda</code></a> correspond to $x=1$ and $1/4$, respectively. This leads to an enhancement factor given by</p>
+<div class="equation" data-tex="F_{\text{x}}^{x\text{LTA}} = \left(\frac{\tilde{t}_{\sigma}}{C_{\text{F}}}\right)^{4x/5}"></div>
+<p>This defines a new type of functional that was termed meta-LDA (MLDA), which recovers the HEG limit <a class="functional-link" href="../lda-x/"><code>lda_x</code></a>. <a class="review-eq-link" href="#review-eq-eq-fxlta">
+  <code>eq:fxlta</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="F_{\text{x}}^{x\text{LTA}} = \left(\frac{\tilde{t}_{\sigma}}{C_{\text{F}}}\right)^{4x/5}"></span>
+  </span>
+</a> has been tested on atoms (total and exchange energy) and molecules (atomization energy) for various values of the parameter $x$, and with or without correlation (e.g., <a class="functional-link" href="../mgga-c-hltapw/"><code>mgga_c_hltapw</code></a> that also uses <a class="review-eq-link" href="#review-eq-eq-nxlta">
+  <code>eq:nxlta</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="n_{\sigma}^{\text{eff}}=\tilde{n}_{\sigma}^{x}n_{\sigma}^{1-x}"></span>
+  </span>
+</a>). It was shown that choosing $x=1/2$ (<a class="functional-link" href="../mgga-x-hlta/"><code>mgga_x_hlta</code></a>) and adding <a class="functional-link" href="../mgga-c-hltapw/"><code>mgga_c_hltapw</code></a> for correlation leads to a mean error for the atomization energy of molecules that is one third of the mean error obtained with LDA. This error is, however, still much larger than the errors from standard GGA functionals like BLYP (<a class="functional-link" href="../gga-x-b88/"><code>gga_x_b88</code></a> + <a class="functional-link" href="../gga-c-lyp/"><code>gga_c_lyp</code></a>) or PBE (<a class="functional-link" href="../gga-x-pbe/"><code>gga_x_pbe</code></a> + <a class="functional-link" href="../gga-c-pbe/"><code>gga_c_pbe</code></a>).</p>
+        </div>
+        <p class="source-note">Adapted from <a href="https://arxiv.org/abs/2602.17333">Tran, Lehtola, Pittalis, and Marques, <em>Semi-Local Exchange-Correlation Approximations in Density Functional Theory</em>, arXiv:2602.17333</a>.</p>
+      </section>
+
+        <section class="section">
+          <h2>Referenced Review Equations</h2>
+          <div class="review-equations">
+          <article class="review-equation-card" id="review-eq-eq-tf-inverted">
+            <code>eq:tf-inverted</code>
+            <div class="equation" data-tex="\tilde{n}_\sigma = \left(\frac{\tau_\sigma}{C_{\text{F}}}\right)^{3/5}"></div>
+          </article>
+
+          <article class="review-equation-card" id="review-eq-eq-fxlta">
+            <code>eq:fxlta</code>
+            <div class="equation" data-tex="F_{\text{x}}^{x\text{LTA}} = \left(\frac{\tilde{t}_{\sigma}}{C_{\text{F}}}\right)^{4x/5}"></div>
+          </article>
+
+          <article class="review-equation-card" id="review-eq-eq-nxlta">
+            <code>eq:nxlta</code>
+            <div class="equation" data-tex="n_{\sigma}^{\text{eff}}=\tilde{n}_{\sigma}^{x}n_{\sigma}^{1-x}"></div>
+          </article>
+
+          </div>
+        </section>
+
+
+        <section class="section">
+          <h2>Publications</h2>
+          <ol class="publication-refs"><li>Lehtola, S.; Marques, M. A. L. Meta-Local Density Functionals: A New Rung on Jacob&#39;s Ladder. <em>J. Chem. Theory Comput.</em> <strong>2021</strong>, <em>17</em>, 943--948, DOI: <a href="https://doi.org/10.1021/acs.jctc.0c01147">10.1021/acs.jctc.0c01147</a></li></ol>
+        </section>
+
+        <section class="section">
+          <div class="section-heading">
+            <h2>BibTeX</h2>
+            <button class="copy-button" type="button" data-copy-target="bibtex-code" aria-label="Copy BibTeX">Copy</button>
+          </div>
+          <pre><code id="bibtex-code">@article{Lehtola2021_943,
+  author = {Lehtola, Susi and Marques, Miguel A. L.},
+  title = {Meta-Local Density Functionals: A New Rung on {Jacob}&#39;s Ladder},
+  journal = {J. Chem. Theory Comput.},
+  volume = {17},
+  number = {2},
+  pages = {943-948},
+  year = {2021},
+  doi = {10.1021/acs.jctc.0c01147},
+  url = {https://doi.org/10.1021/acs.jctc.0c01147}
+}
+</code></pre>
+        </section>
+
+        <details>
+          <summary>All Libxc metadata</summary>
+          <dl class="metadata">
+            <dt>identifier</dt><dd>mgga_x_hlta</dd>
+            <dt>family</dt><dd>meta-gga</dd>
+            <dt>kind</dt><dd>exchange</dd>
+            <dt>derivatives</dt><dd>0, 1, 2</dd>
+            <dt>flags</dt><dd>dim3, exc, fxc, vxc, needs_tau, enforce_fhc</dd>
+<dt>cam_alpha</dt><dd>null</dd>
+<dt>cam_beta</dt><dd>null</dd>
+<dt>cam_omega</dt><dd>null</dd>
+<dt>density_threshold</dt><dd>1.0e-15</dd>
+<dt>exx_coefficient</dt><dd>null</dd>
+<dt>n_spin</dt><dd>1</dd>
+<dt>nlc_C</dt><dd>null</dd>
+<dt>nlc_b</dt><dd>null</dd>
+<dt>sigma_threshold</dt><dd>1.0000000000000027e-20</dd>
+<dt>tau_threshold</dt><dd>1.0e-20</dd>
+<dt>zeta_threshold</dt><dd>2.220446049250313e-16</dd>
+          </dl>
+        </details>
+      </div>
+
+    </main>
+    <div id="command-palette" class="command-palette" aria-hidden="true" hidden>
+      <div class="command-backdrop" data-command-close></div>
+      <form class="command-panel" role="search">
+        <div class="search-box">
+          <input id="command-search" class="search-input command-search-input" type="search" autocomplete="off" placeholder="Search functionals..." aria-controls="command-search-suggestions">
+          <div id="command-search-suggestions" class="search-suggestions command-search-suggestions" role="listbox" hidden></div>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>lda_xc_ksdt</title>
+    <link rel="stylesheet" href="../../assets/styles.css?v=20260822-github">
+    <script defer src="../../assets/search.js?v=20260822-github"></script>
+    <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+    <script defer src="../../vendor/katex/katex.min.js"></script>
+    <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
+    <script defer src="../../assets/detail.js?v=20260822-github"></script>
+
+  </head>
+  <body>
+    <main class="shell">
+      <form class="global-search" role="search" action="../../" method="get">
+        <div class="search-box">
+          <input class="search-input global-search-input" name="q" type="search" autocomplete="off" placeholder="Search functionals..." aria-controls="global-search-suggestions">
+          <span class="search-shortcut" aria-hidden="true">Ctrl K</span>
+          <div id="global-search-suggestions" class="search-suggestions" role="listbox" hidden></div>
+        </div>
+      </form>
+
+      <a class="back" href="../../">Back to search</a>
+      <header class="top">
+        <a class="github-link" href="https://github.com/aouinaayoub/libxc-wiki" aria-label="View Libxc Wiki on GitHub" title="View source on GitHub">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .7a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2.23c-3.22.7-3.9-1.37-3.9-1.37-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.71.08-.71 1.16.08 1.78 1.2 1.78 1.2 1.04 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.74-1.55-2.57-.29-5.27-1.29-5.27-5.69 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.16 1.18a10.94 10.94 0 0 1 5.76 0c2.19-1.49 3.16-1.18 3.16-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.42-2.71 5.39-5.29 5.68.42.36.79 1.07.79 2.16v3.2c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .7Z"/></svg>
+        </a>
+
+        <p class="brand">LDA</p>
+        <h1><code class="title-code">lda_xc_ksdt</code></h1>
+        <div class="detail-tags"><span class="tag">lda</span>
+<span class="tag">exchange</span>
+<span class="tag">correlation</span></div>
+      </header>
+
+      <div class="detail-grid">
+      <section class="callout">
+        <p class="callout-label">Review excerpt</p>
+        <div class="review-html">
+<p>Karasiev et al.<sup class="citation-marker"><a href="#review-ref-Karasiev2014-076403">476</a></sup> proposed an analytical parametrization for the xc free energy of the HEG, with full dependence on the temperature $\tau_{\text{e}}$. It uses an explicit dependence on the reduced temperature $\theta = \tau_{\text{e}}/\tau_{\text{e}}^\text{F}$, where</p>
+<div class="equation" data-tex="\tau_{\text{e}}^\text{F}=\frac{k_\text{F}^2}{2k_\text{B}}=\frac{\left(\frac{9\pi}{4}\right)^{2/3}}{2k_\text{B}r_s^2}"></div>
+<p>is the Fermi temperature, and an interpolation for the spin-polarization $\zeta$. They used a Pad\&#39;e form for both the paramagnetic and ferromagnetic cases:</p>
+<div class="equation" data-tex="\tilde f_{\text{xc}}^{\text{KSDT}}(r_s, \theta) =
+-\frac1{r_s}\frac{\omega a(\theta) + b(\theta) r_s^{1/2} + c(\theta) r_s}
+{1 + d(\theta) r_s^{1/2}+ e(\theta)r_s}"></div>
+<p>where $\omega_0 = 1$ and $\omega_1 = 2^{1/3}$ for the paramagnetic and ferromagnetic case, respectively. The functions in <a class="review-eq-link" href="#review-eq-eq-fxc-ksdt">
+  <code>eq:fxc-ksdt</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="\tilde f_{\text{xc}}^{\text{KSDT}}(r_s, \theta) =
+-\frac1{r_s}\frac{\omega a(\theta) + b(\theta) r_s^{1/2} + c(\theta) r_s}
+{1 + d(\theta) r_s^{1/2}+ e(\theta)r_s}"></span>
+  </span>
+</a> are given by</p>
+<p>\label{eq:abcde-ksdt}</p>
+<div class="equation" data-tex="\begin{aligned}
+a(\theta) &amp; = a_0\tanh\left(\frac{1}{\theta}\right) \frac{a_1 + a_2\theta^2 + a_3\theta^3 + a_4\theta^4}{1 + a_5\theta^2 + a_6\theta^4} \\
+  b(\theta) &amp; = \tanh\left(\frac{1}{\sqrt\theta}\right) \frac{b_1 + b_2\theta^2 + b_3\theta^4}{1 + b_4\theta^2 + b_5\theta^4} \\
+  c(\theta) &amp; = \left(c_1 + c_2\E^{-c_3/\theta}\right)e(\theta) \\
+  d(\theta) &amp; = \tanh\left(\frac{1}{\sqrt\theta}\right) \frac{d_1 + d_2\theta^2 + d_3\theta^4}{1 + d_4\theta^2 + d_5\theta^4} \\
+  e(\theta) &amp; = \tanh\left(\frac{1}{\theta}\right) \frac{e_1 + e_2\theta^2 + e_3\theta^4}{1 + e_4\theta^2 + e_5\theta^4}
+\end{aligned}"></div>
+<p>In the above functions, $a_0=1/(\pi\lambda)$ with $\lambda=\left[4/(9\pi)\right]^{1/3}$, while $b_1$, $c_1$, $d_1$, and $e_1$ were fit to $\tau_{\text{e}}=0$ MC data<sup class="citation-marker"><a href="#review-ref-Spink2013-085121">463</a></sup> and the remaining parameters were fit to finite-$\tau_{\text{e}}$ MC data,<sup class="citation-marker"><a href="#review-ref-Brown2013-146405">478</a></sup> keeping the ratio $b_3/b_5$ fixed.</p>
+<p>Finally, the $\zeta$-dependent xc free-energy functional is written as</p>
+<div class="equation" data-tex="\begin{aligned}
+f_{\text{xc}}^{\text{KSDT}}(r_s, \zeta, \theta) = &amp;
+  \tilde f_{\text{xc}\;\text{F}}^{\text{KSDT}}(r_s, \theta/2^{2/3})\Phi(r_s, \zeta, \theta)  \\
+  &amp; + \tilde f_{\text{xc}\;\text{P}}^{\text{KSDT}}(r_s, \theta)[1 - \Phi(r_s, \zeta, \theta]
+\end{aligned}"></div>
+<p>The interpolating function $\Phi$, previously developed by Perrot and Dharma-wardana,<sup class="citation-marker"><a href="#review-ref-Perrot2000-16536">479</a>,<a href="#review-ref-Perrot2003-079901">480</a></sup> is defined as</p>
+<div class="equation" data-tex="\Phi(r_s, \zeta, \theta) = \frac{(1 + \zeta)^{\alpha(r_s,\theta)} + (1 - \zeta)^{\alpha(r_s,\theta)} - 2}
+      {2^{\alpha(r_s,\theta)} - 2}"></div>
+<p>with</p>
+<div class="equation" data-tex="\alpha(r_s,\theta) = 2 - \frac{g_1 + g_2r_s}{1 + g_3r_s}\E^{-\theta (l_1 + l_2\theta\sqrt{r_s})}"></div>
+<p>In <sup class="citation-marker"><a href="#review-ref-Karasiev2018-076401">477</a></sup>, it was reported that an error was made during the parametrization of <a class="functional-link" href="../lda-xc-ksdt/"><code>lda_xc_ksdt</code></a>, and corrected values of the parameters $b_i$, $c_i$, $d_i$, and $e_i$ in <a class="review-eq-link" href="#review-eq-eq-abcde-ksdt">
+  <code>eq:abcde-ksdt</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="\begin{aligned}
+a(\theta) &amp; = a_0\tanh\left(\frac{1}{\theta}\right) \frac{a_1 + a_2\theta^2 + a_3\theta^3 + a_4\theta^4}{1 + a_5\theta^2 + a_6\theta^4} \\
+  b(\theta) &amp; = \tanh\left(\frac{1}{\sqrt\theta}\right) \frac{b_1 + b_2\theta^2 + b_3\theta^4}{1 + b_4\theta^2 + b_5\theta^4} \\
+  c(\theta) &amp; = \left(c_1 + c_2\E^{-c_3/\theta}\right)e(\theta) \\
+  d(\theta) &amp; = \tanh\left(\frac{1}{\sqrt\theta}\right) \frac{d_1 + d_2\theta^2 + d_3\theta^4}{1 + d_4\theta^2 + d_5\theta^4} \\
+  e(\theta) &amp; = \tanh\left(\frac{1}{\theta}\right) \frac{e_1 + e_2\theta^2 + e_3\theta^4}{1 + e_4\theta^2 + e_5\theta^4}
+\end{aligned}"></span>
+  </span>
+</a> for the paramagnetic case were given (<a class="functional-link" href="../lda-xc-corrksdt/"><code>lda_xc_corrksdt</code></a>).</p>
+        </div>
+        <p class="source-note">Adapted from <a href="https://arxiv.org/abs/2602.17333">Tran, Lehtola, Pittalis, and Marques, <em>Semi-Local Exchange-Correlation Approximations in Density Functional Theory</em>, arXiv:2602.17333</a>.</p>
+      </section>
+
+        <section class="section">
+          <h2>Referenced Review Equations</h2>
+          <div class="review-equations">
+          <article class="review-equation-card" id="review-eq-eq-fxc-ksdt">
+            <code>eq:fxc-ksdt</code>
+            <div class="equation" data-tex="\tilde f_{\text{xc}}^{\text{KSDT}}(r_s, \theta) =
+-\frac1{r_s}\frac{\omega a(\theta) + b(\theta) r_s^{1/2} + c(\theta) r_s}
+{1 + d(\theta) r_s^{1/2}+ e(\theta)r_s}"></div>
+          </article>
+
+          <article class="review-equation-card" id="review-eq-eq-abcde-ksdt">
+            <code>eq:abcde-ksdt</code>
+            <div class="equation" data-tex="\begin{aligned}
+a(\theta) &amp; = a_0\tanh\left(\frac{1}{\theta}\right) \frac{a_1 + a_2\theta^2 + a_3\theta^3 + a_4\theta^4}{1 + a_5\theta^2 + a_6\theta^4} \\
+  b(\theta) &amp; = \tanh\left(\frac{1}{\sqrt\theta}\right) \frac{b_1 + b_2\theta^2 + b_3\theta^4}{1 + b_4\theta^2 + b_5\theta^4} \\
+  c(\theta) &amp; = \left(c_1 + c_2\E^{-c_3/\theta}\right)e(\theta) \\
+  d(\theta) &amp; = \tanh\left(\frac{1}{\sqrt\theta}\right) \frac{d_1 + d_2\theta^2 + d_3\theta^4}{1 + d_4\theta^2 + d_5\theta^4} \\
+  e(\theta) &amp; = \tanh\left(\frac{1}{\theta}\right) \frac{e_1 + e_2\theta^2 + e_3\theta^4}{1 + e_4\theta^2 + e_5\theta^4}
+\end{aligned}"></div>
+          </article>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <h2>Review References</h2>
+          <ol class="review-refs"><li id="review-ref-Karasiev2014-076403" value="476">Karasiev, V. V.; Sjostrom, T.; Dufty, J.; Trickey, S. B. Accurate Homogeneous Electron Gas Exchange-Correlation Free Energy for Local Spin-Density Calculations. <em>Phys. Rev. Lett.</em> <strong>2014</strong>, <em>112</em>, 076403, DOI: <a href="https://doi.org/10.1103/PhysRevLett.112.076403">10.1103/PhysRevLett.112.076403</a></li>
+<li id="review-ref-Spink2013-085121" value="463">Spink, G. G.; Needs, R. J.; Drummond, N. D. Quantum Monte Carlo study of the three-dimensional spin-polarized homogeneous electron gas. <em>Phys. Rev. B</em> <strong>2013</strong>, <em>88</em>, 085121, DOI: <a href="https://doi.org/10.1103/PhysRevB.88.085121">10.1103/PhysRevB.88.085121</a></li>
+<li id="review-ref-Brown2013-146405" value="478">Brown, E. W.; Clark, B. K.; DuBois, J. L.; Ceperley, D. M. Path-Integral Monte Carlo Simulation of the Warm Dense Homogeneous Electron Gas. <em>Phys. Rev. Lett.</em> <strong>2013</strong>, <em>110</em>, 146405, DOI: <a href="https://doi.org/10.1103/PhysRevLett.110.146405">10.1103/PhysRevLett.110.146405</a></li>
+<li id="review-ref-Perrot2000-16536" value="479">Perrot, F.; Dharma-wardana, M. W. C. Spin-polarized electron liquid at arbitrary temperatures: Exchange-correlation energies, electron-distribution functions, and the static response functions. <em>Phys. Rev. B</em> <strong>2000</strong>, <em>62</em>, 16536--16548, DOI: <a href="https://doi.org/10.1103/PhysRevB.62.16536">10.1103/PhysRevB.62.16536</a></li>
+<li id="review-ref-Perrot2003-079901" value="480">Perrot, F.; Dharma-wardana, M. W. C. Erratum: Spin-polarized electron electron liquid at arbitrary temperatures: Exchange-correlation energies, electron-distribution functions, and the static response functions [Phys. Rev. B 62, 16 536 (2000)]. <em>Phys. Rev. B</em> <strong>2003</strong>, <em>67</em>, 079901, DOI: <a href="https://doi.org/10.1103/PhysRevB.67.079901">10.1103/PhysRevB.67.079901</a></li>
+<li id="review-ref-Karasiev2018-076401" value="477">Karasiev, V. V.; Dufty, J. W.; Trickey, S. B. Nonempirical Semilocal Free-Energy Density Functional for Matter under Extreme Conditions. <em>Phys. Rev. Lett.</em> <strong>2018</strong>, <em>120</em>, 076401, DOI: <a href="https://doi.org/10.1103/PhysRevLett.120.076401">10.1103/PhysRevLett.120.076401</a></li></ol>
+        </section>
+
+        <section class="section">
+          <h2>Publications</h2>
+          <ol class="publication-refs"><li>Karasiev, V. V.; Sjostrom, T.; Dufty, J.; Trickey, S. B. Accurate Homogeneous Electron Gas Exchange-Correlation Free Energy for Local Spin-Density Calculations. <em>Phys. Rev. Lett.</em> <strong>2014</strong>, <em>112</em>, 076403, DOI: <a href="https://doi.org/10.1103/PhysRevLett.112.076403">10.1103/PhysRevLett.112.076403</a></li></ol>
+        </section>
+
+        <section class="section">
+          <div class="section-heading">
+            <h2>BibTeX</h2>
+            <button class="copy-button" type="button" data-copy-target="bibtex-code" aria-label="Copy BibTeX">Copy</button>
+          </div>
+          <pre><code id="bibtex-code">@article{Karasiev2014_076403,
+  author = {Karasiev, Valentin V. and Sjostrom, Travis and Dufty, James and Trickey, S. B.},
+  title = {Accurate Homogeneous Electron Gas Exchange-Correlation Free Energy for Local Spin-Density Calculations},
+  journal = {Phys. Rev. Lett.},
+  volume = {112},
+  issue = {7},
+  pages = {076403},
+  year = {2014},
+  month = {Feb},
+  publisher = {American Physical Society},
+  doi = {10.1103/PhysRevLett.112.076403},
+  url = {http://link.aps.org/doi/10.1103/PhysRevLett.112.076403}
+}
+</code></pre>
+        </section>
+
+        <details>
+          <summary>All Libxc metadata</summary>
+          <dl class="metadata">
+            <dt>identifier</dt><dd>lda_xc_ksdt</dd>
+            <dt>family</dt><dd>lda</dd>
+            <dt>kind</dt><dd>exchange_correlation</dd>
+            <dt>derivatives</dt><dd>0, 1, 2</dd>
+            <dt>flags</dt><dd>dim3, exc, fxc, vxc, enforce_fhc</dd>
+<dt>cam_alpha</dt><dd>null</dd>
+<dt>cam_beta</dt><dd>null</dd>
+<dt>cam_omega</dt><dd>null</dd>
+<dt>density_threshold</dt><dd>1.0e-15</dd>
+<dt>exx_coefficient</dt><dd>null</dd>
+<dt>n_spin</dt><dd>1</dd>
+<dt>nlc_C</dt><dd>null</dd>
+<dt>nlc_b</dt><dd>null</dd>
+<dt>sigma_threshold</dt><dd>1.0000000000000027e-20</dd>
+<dt>tau_threshold</dt><dd>1.0e-20</dd>
+<dt>zeta_threshold</dt><dd>2.220446049250313e-16</dd>
+          </dl>
+        </details>
+      </div>
+
+    </main>
+    <div id="command-palette" class="command-palette" aria-hidden="true" hidden>
+      <div class="command-backdrop" data-command-close></div>
+      <form class="command-panel" role="search">
+        <div class="search-box">
+          <input id="command-search" class="search-input command-search-input" type="search" autocomplete="off" placeholder="Search functionals..." aria-controls="command-search-suggestions">
+          <div id="command-search-suggestions" class="search-suggestions command-search-suggestions" role="listbox" hidden></div>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

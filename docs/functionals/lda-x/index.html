@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>lda_x</title>
+    <link rel="stylesheet" href="../../assets/styles.css?v=20260822-github">
+    <script defer src="../../assets/search.js?v=20260822-github"></script>
+    <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+    <script defer src="../../vendor/katex/katex.min.js"></script>
+    <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
+    <script defer src="../../assets/detail.js?v=20260822-github"></script>
+
+  </head>
+  <body>
+    <main class="shell">
+      <form class="global-search" role="search" action="../../" method="get">
+        <div class="search-box">
+          <input class="search-input global-search-input" name="q" type="search" autocomplete="off" placeholder="Search functionals..." aria-controls="global-search-suggestions">
+          <span class="search-shortcut" aria-hidden="true">Ctrl K</span>
+          <div id="global-search-suggestions" class="search-suggestions" role="listbox" hidden></div>
+        </div>
+      </form>
+
+      <a class="back" href="../../">Back to search</a>
+      <header class="top">
+        <a class="github-link" href="https://github.com/aouinaayoub/libxc-wiki" aria-label="View Libxc Wiki on GitHub" title="View source on GitHub">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .7a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2.23c-3.22.7-3.9-1.37-3.9-1.37-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.71.08-.71 1.16.08 1.78 1.2 1.78 1.2 1.04 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.74-1.55-2.57-.29-5.27-1.29-5.27-5.69 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.16 1.18a10.94 10.94 0 0 1 5.76 0c2.19-1.49 3.16-1.18 3.16-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.42-2.71 5.39-5.29 5.68.42.36.79 1.07.79 2.16v3.2c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .7Z"/></svg>
+        </a>
+
+        <p class="brand">LDA</p>
+        <h1><code class="title-code">lda_x</code></h1>
+        <div class="detail-tags"><span class="tag">lda</span>
+<span class="tag">exchange</span></div>
+      </header>
+
+      <div class="detail-grid">
+      <section class="callout">
+        <p class="callout-label">Review excerpt</p>
+        <div class="review-html">
+<p>The exchange energy of the HEG is trivial to calculate, yielding the exchange LDA functional</p>
+<div class="equation" data-tex="\begin{aligned}
+e_\text{x}^\text{LDA}(n_\uparrow,n_\downarrow) = 
+  -C_{\text{x}}\frac{n_\uparrow^{4/3}+n_\downarrow^{4/3}}{n}
+\end{aligned}"></div>
+<p>or, alternatively,</p>
+<div class="equation" data-tex="\begin{aligned}
+e_\text{x}^\text{LDA}(r_s,\zeta) = -A_\text{x}\frac{\phi_{4/3}(\zeta)}{r_s}
+\end{aligned}"></div>
+<p>where $A_\text{x}$, $C_{\text{x}}$, and $\phi_{4/3}$ are given by <a class="review-eq-link" href="#review-eq-eq-cx">
+  <code>eq:cx</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="C_{\text{x}} = \frac32 \left( \frac{3}{4 \pi}\right)^{1/3} = \frac{3}{4}\left(\frac{6}{\pi}\right)^{1/3} \approx 0.930526"></span>
+  </span>
+</a>; <a class="review-eq-link" href="#review-eq-eq-Axzeta">
+  <code>eq:Axzeta</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="A_\text{x} = \frac{3}{4}\left(\frac{3}{2\pi}\right)^{2/3} \approx 0.458165"></span>
+  </span>
+</a>; <a class="review-eq-link" href="#review-eq-eq-phi">
+  <code>eq:phi</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="\begin{aligned}
+\phi_p(\zeta) = &amp; \frac{1}{2} \left[(1+\zeta)^{p} + (1-\zeta)^{p}\right]  \\
+
+    = &amp; 2^{p-1}\frac{n_{\uparrow}^{p}+n_{\downarrow}^{p}}{n^{p}}
+\end{aligned}"></span>
+  </span>
+</a>, respectively. With few exceptions, GGA and MGGA exchange functionals recover <a class="functional-link" href="../lda-x/"><code>lda_x</code></a> when evaluated for the HEG. Note that even though the LDA exchange has been surpassed by more modern functionals, it is still sometimes used in applications (combined with a LDA correlation functional) in modern literature.</p>
+<p>Gaspar<sup class="citation-marker"><a href="#review-ref-Gaspar1954-263">401</a></sup>, and later Kohn and Sham<sup class="citation-marker"><a href="#review-ref-Kohn1965-PR-1133">2</a></sup>, derived the corresponding potential by minimizing the total energy:</p>
+<div class="equation" data-tex="v_{\text{x}\sigma}^\text{LDA}=-\left(\frac{6}{\pi}\right)^{1/3}n_{\sigma}^{1/3}"></div>
+        </div>
+        <p class="source-note">Adapted from <a href="https://arxiv.org/abs/2602.17333">Tran, Lehtola, Pittalis, and Marques, <em>Semi-Local Exchange-Correlation Approximations in Density Functional Theory</em>, arXiv:2602.17333</a>.</p>
+      </section>
+
+        <section class="section">
+          <h2>Referenced Review Equations</h2>
+          <div class="review-equations">
+          <article class="review-equation-card" id="review-eq-eq-cx">
+            <code>eq:cx</code>
+            <div class="equation" data-tex="C_{\text{x}} = \frac32 \left( \frac{3}{4 \pi}\right)^{1/3} = \frac{3}{4}\left(\frac{6}{\pi}\right)^{1/3} \approx 0.930526"></div>
+          </article>
+
+          <article class="review-equation-card" id="review-eq-eq-Axzeta">
+            <code>eq:Axzeta</code>
+            <div class="equation" data-tex="A_\text{x} = \frac{3}{4}\left(\frac{3}{2\pi}\right)^{2/3} \approx 0.458165"></div>
+          </article>
+
+          <article class="review-equation-card" id="review-eq-eq-phi">
+            <code>eq:phi</code>
+            <div class="equation" data-tex="\begin{aligned}
+\phi_p(\zeta) = &amp; \frac{1}{2} \left[(1+\zeta)^{p} + (1-\zeta)^{p}\right]  \\
+
+    = &amp; 2^{p-1}\frac{n_{\uparrow}^{p}+n_{\downarrow}^{p}}{n^{p}}
+\end{aligned}"></div>
+          </article>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <h2>Review References</h2>
+          <ol class="review-refs"><li id="review-ref-Gaspar1954-263" value="401">Gaspar, R. Uber eine Approximation des Hartree-Fockschen Potentials Durch eine Universelle Potentialfunktion. <em>Acta Phys. Hung.</em> <strong>1954</strong>, <em>3</em>, 263, DOI: <a href="https://doi.org/10.1007/BF03156228">10.1007/BF03156228</a></li>
+<li id="review-ref-Kohn1965-PR-1133" value="2">Kohn, W.; Sham, L. J. Self-Consistent Equations Including Exchange and Correlation Effects. <em>Phys. Rev.</em> <strong>1965</strong>, <em>140</em>, A1133--A1138, DOI: <a href="https://doi.org/10.1103/PhysRev.140.A1133">10.1103/PhysRev.140.A1133</a></li></ol>
+        </section>
+
+        <section class="section">
+          <h2>Publications</h2>
+          <ol class="publication-refs"><li>Dirac, P. A. M. Note on Exchange Phenomena in the Thomas Atom. <em>Math. Proc. Cambridge Philos. Soc.</em> <strong>1930</strong>, <em>26</em>, 376--385, DOI: <a href="https://doi.org/10.1017/S0305004100016108">10.1017/S0305004100016108</a></li>
+<li>Bloch, F. Bemerkung zur Elektronentheorie des Ferromagnetismus und der elektrischen Leitfahigkeit. <em>Z. Phys.</em> <strong>1929</strong>, <em>57</em>, 545--555, DOI: <a href="https://doi.org/10.1007/BF01340281">10.1007/BF01340281</a></li></ol>
+        </section>
+
+        <section class="section">
+          <div class="section-heading">
+            <h2>BibTeX</h2>
+            <button class="copy-button" type="button" data-copy-target="bibtex-code" aria-label="Copy BibTeX">Copy</button>
+          </div>
+          <pre><code id="bibtex-code">@article{Dirac1930_376,
+  author = {Dirac, P. A. M.},
+  title = {Note on Exchange Phenomena in the {Thomas} Atom},
+  journal = {Math. Proc. Cambridge Philos. Soc.},
+  volume = {26},
+  issue = {03},
+  month = {7},
+  pages = {376},
+  year = {1930},
+  issn = {1469-8064},
+  doi = {10.1017/S0305004100016108},
+  url = {http://journals.cambridge.org/article\_S0305004100016108}
+}
+
+
+@article{Bloch1929_545,
+  author = {Bloch, F.},
+  title = {Bemerkung zur {Elektronentheorie} des {Ferromagnetismus} und der elektrischen {Leitf\&quot;{a}higkeit}},
+  journal = {Z. Phys.},
+  volume = {57},
+  number = {7-8},
+  pages = {545},
+  year = {1929},
+  issn = {0044-3328},
+  publisher = {{Springer}-{Verlag}},
+  doi = {10.1007/BF01340281},
+  url = {http://link.springer.com/article/10.1007\\%2FBF01340281}
+}
+</code></pre>
+        </section>
+
+        <details>
+          <summary>All Libxc metadata</summary>
+          <dl class="metadata">
+            <dt>identifier</dt><dd>lda_x</dd>
+            <dt>family</dt><dd>lda</dd>
+            <dt>kind</dt><dd>exchange</dd>
+            <dt>derivatives</dt><dd>0, 1, 2</dd>
+            <dt>flags</dt><dd>dim3, exc, fxc, vxc, enforce_fhc</dd>
+<dt>cam_alpha</dt><dd>null</dd>
+<dt>cam_beta</dt><dd>null</dd>
+<dt>cam_omega</dt><dd>null</dd>
+<dt>density_threshold</dt><dd>1.0e-15</dd>
+<dt>exx_coefficient</dt><dd>null</dd>
+<dt>n_spin</dt><dd>1</dd>
+<dt>nlc_C</dt><dd>null</dd>
+<dt>nlc_b</dt><dd>null</dd>
+<dt>sigma_threshold</dt><dd>1.0000000000000027e-20</dd>
+<dt>tau_threshold</dt><dd>1.0e-20</dd>
+<dt>zeta_threshold</dt><dd>2.220446049250313e-16</dd>
+          </dl>
+        </details>
+      </div>
+
+    </main>
+    <div id="command-palette" class="command-palette" aria-hidden="true" hidden>
+      <div class="command-backdrop" data-command-close></div>
+      <form class="command-panel" role="search">
+        <div class="search-box">
+          <input id="command-search" class="search-input command-search-input" type="search" autocomplete="off" placeholder="Search functionals..." aria-controls="command-search-suggestions">
+          <div id="command-search-suggestions" class="search-suggestions command-search-suggestions" role="listbox" hidden></div>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

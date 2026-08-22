@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>gga_c_pw91</title>
+    <link rel="stylesheet" href="../../assets/styles.css?v=20260822-github">
+    <script defer src="../../assets/search.js?v=20260822-github"></script>
+    <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+    <script defer src="../../vendor/katex/katex.min.js"></script>
+    <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
+    <script defer src="../../assets/detail.js?v=20260822-github"></script>
+
+  </head>
+  <body>
+    <main class="shell">
+      <form class="global-search" role="search" action="../../" method="get">
+        <div class="search-box">
+          <input class="search-input global-search-input" name="q" type="search" autocomplete="off" placeholder="Search functionals..." aria-controls="global-search-suggestions">
+          <span class="search-shortcut" aria-hidden="true">Ctrl K</span>
+          <div id="global-search-suggestions" class="search-suggestions" role="listbox" hidden></div>
+        </div>
+      </form>
+
+      <a class="back" href="../../">Back to search</a>
+      <header class="top">
+        <a class="github-link" href="https://github.com/aouinaayoub/libxc-wiki" aria-label="View Libxc Wiki on GitHub" title="View source on GitHub">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .7a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2.23c-3.22.7-3.9-1.37-3.9-1.37-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.71.08-.71 1.16.08 1.78 1.2 1.78 1.2 1.04 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.74-1.55-2.57-.29-5.27-1.29-5.27-5.69 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.16 1.18a10.94 10.94 0 0 1 5.76 0c2.19-1.49 3.16-1.18 3.16-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.42-2.71 5.39-5.29 5.68.42.36.79 1.07.79 2.16v3.2c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .7Z"/></svg>
+        </a>
+
+        <p class="brand">GGA</p>
+        <h1><code class="title-code">gga_c_pw91</code></h1>
+        <div class="detail-tags"><span class="tag">gga</span>
+<span class="tag">correlation</span></div>
+      </header>
+
+      <div class="detail-grid">
+      <section class="callout">
+        <p class="callout-label">Review excerpt</p>
+        <div class="review-html">
+<p>Akin to several of its predecessors, e.g. <a class="functional-link" href="../gga-c-lm/"><code>gga_c_lm</code></a> or <a class="functional-link" href="../gga-c-p86/"><code>gga_c_p86</code></a>, the correlation component of the famous PW91 (<a class="functional-link" href="../gga-x-pw91/"><code>gga_x_pw91</code></a> + <a class="functional-link" href="../gga-c-pw91/"><code>gga_c_pw91</code></a>) functional has no empirical parameters. For small density gradients, it reduces to the second-order density-gradient expansion with coefficients from Rasolt and Geldart<sup class="citation-marker"><a href="#review-ref-Rasolt1986-1325">592</a></sup> (see <a class="review-eq-link" href="#review-eq-eq-ggacp86-rgc">
+  <code>eq:ggacp86:rgc</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="C_\text{c}(r_s) = a^\text{RG} + \frac{b^\text{RG} + \alpha^\text{RG} r_s + \beta^\text{RG} r_s^2}
+  {1 + \gamma^\text{RG} r_s + \delta^\text{RG} r_s^2 + 10^4\beta^\text{RG} r_s^3}"></span>
+  </span>
+</a>). The functional form reads</p>
+<div class="equation" data-tex="\begin{aligned}
+e_\text{c}^{\text{PW91}} = &amp; e_\text{c}^\text{PW-LDA}(r_s, \zeta) + H_0(\phi_{2/3}, t, A)  \\
+  &amp; + H_1(r_s, \phi_{2/3}, t)
+\end{aligned}"></div>
+<p>As we can see, there are two correcting terms to the <a class="functional-link" href="../lda-c-pw/"><code>lda_c_pw</code></a> term. The first one is</p>
+<div class="equation" data-tex="H_0(\phi_{2/3}, t, A) = \gamma \phi_{2/3}^3 \ln\left[1 + \frac{\beta}{\gamma}
+  \frac{t^2 + A t^4}{1 + A (t^2 + A t^4)}\right]"></div>
+<p>where $A$ is defined as</p>
+<div class="equation" data-tex="A(r_s, \zeta, \phi_{2/3}) = \frac{\beta}{\gamma w_1}"></div>
+<p>with</p>
+<div class="equation" data-tex="w_1 = \E^{-e^\text{PW-LDA}_{\text{c}}(r_s,\zeta)/\left(\gamma\phi_{2/3}^3\right)} - 1"></div>
+<p>The parameters entering into <a class="review-eq-link" href="#review-eq-eq-ggac-pw91h0">
+  <code>eq:ggac:pw91h0</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="H_0(\phi_{2/3}, t, A) = \gamma \phi_{2/3}^3 \ln\left[1 + \frac{\beta}{\gamma}
+  \frac{t^2 + A t^4}{1 + A (t^2 + A t^4)}\right]"></span>
+  </span>
+</a>; <a class="review-eq-link" href="#review-eq-eq-pw91a">
+  <code>eq:pw91a</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="A(r_s, \zeta, \phi_{2/3}) = \frac{\beta}{\gamma w_1}"></span>
+  </span>
+</a> are $\beta=\beta^{\text{MB}}$ and $\gamma=\beta^{2} /\left(2\alpha\right)$, with $\alpha=0.09$, $\nu =(16 / \pi)(3\pi^2)^{1/3}$, and $C_\text{c}(0)=a^\text{RG}+b^\text{RG}$, which is the value of the Rasolt and Geldart<sup class="citation-marker"><a href="#review-ref-Rasolt1986-1325">592</a></sup> second-order density-gradient expansion at $r_s=0$ (see <a class="review-eq-link" href="#review-eq-eq-ggacp86-rgc">
+  <code>eq:ggacp86:rgc</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="C_\text{c}(r_s) = a^\text{RG} + \frac{b^\text{RG} + \alpha^\text{RG} r_s + \beta^\text{RG} r_s^2}
+  {1 + \gamma^\text{RG} r_s + \delta^\text{RG} r_s^2 + 10^4\beta^\text{RG} r_s^3}"></span>
+  </span>
+</a>).</p>
+<p>The second term, $H_1$, reads</p>
+<div class="equation" data-tex="\begin{aligned}
+H_1(r_s, \phi_{2/3}, t) =&amp; \nu \left[C_\text{c}(r_s) - C_\text{c}(0) - \frac{3}{7}c_x\right]  \\
+ &amp;\times \phi_{2/3}^3 t^2 \E^{-a_1 r_s \phi_{2/3}^4 t^2}
+\end{aligned}"></div>
+<p>where $C_\text{c}(r_s)$ is <a class="review-eq-link" href="#review-eq-eq-ggacp86-rgc">
+  <code>eq:ggacp86:rgc</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="C_\text{c}(r_s) = a^\text{RG} + \frac{b^\text{RG} + \alpha^\text{RG} r_s + \beta^\text{RG} r_s^2}
+  {1 + \gamma^\text{RG} r_s + \delta^\text{RG} r_s^2 + 10^4\beta^\text{RG} r_s^3}"></span>
+  </span>
+</a>, $a_1 = 400 \left[4/\left(9\pi\right)\right]^{1/3}/\pi$, and $c_x=-a^\text{RG}$ is the coefficient of the density-gradient correction for exchange (see <a class="review-eq-link" href="#review-eq-eq-ggacp86-rgc">
+  <code>eq:ggacp86:rgc</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="C_\text{c}(r_s) = a^\text{RG} + \frac{b^\text{RG} + \alpha^\text{RG} r_s + \beta^\text{RG} r_s^2}
+  {1 + \gamma^\text{RG} r_s + \delta^\text{RG} r_s^2 + 10^4\beta^\text{RG} r_s^3}"></span>
+  </span>
+</a>).</p>
+        </div>
+        <p class="source-note">Adapted from <a href="https://arxiv.org/abs/2602.17333">Tran, Lehtola, Pittalis, and Marques, <em>Semi-Local Exchange-Correlation Approximations in Density Functional Theory</em>, arXiv:2602.17333</a>.</p>
+      </section>
+
+        <section class="section">
+          <h2>Referenced Review Equations</h2>
+          <div class="review-equations">
+          <article class="review-equation-card" id="review-eq-eq-ggacp86-rgc">
+            <code>eq:ggacp86:rgc</code>
+            <div class="equation" data-tex="C_\text{c}(r_s) = a^\text{RG} + \frac{b^\text{RG} + \alpha^\text{RG} r_s + \beta^\text{RG} r_s^2}
+  {1 + \gamma^\text{RG} r_s + \delta^\text{RG} r_s^2 + 10^4\beta^\text{RG} r_s^3}"></div>
+          </article>
+
+          <article class="review-equation-card" id="review-eq-eq-ggac-pw91h0">
+            <code>eq:ggac:pw91h0</code>
+            <div class="equation" data-tex="H_0(\phi_{2/3}, t, A) = \gamma \phi_{2/3}^3 \ln\left[1 + \frac{\beta}{\gamma}
+  \frac{t^2 + A t^4}{1 + A (t^2 + A t^4)}\right]"></div>
+          </article>
+
+          <article class="review-equation-card" id="review-eq-eq-pw91a">
+            <code>eq:pw91a</code>
+            <div class="equation" data-tex="A(r_s, \zeta, \phi_{2/3}) = \frac{\beta}{\gamma w_1}"></div>
+          </article>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <h2>Review References</h2>
+          <ol class="review-refs"><li id="review-ref-Rasolt1986-1325" value="592">Rasolt, M.; Geldart, D. J. W. Exchange and correlation energy in a nonuniform fermion fluid. <em>Phys. Rev. B</em> <strong>1986</strong>, <em>34</em>, 1325--1328, DOI: <a href="https://doi.org/10.1103/PhysRevB.34.1325">10.1103/PhysRevB.34.1325</a></li></ol>
+        </section>
+
+        <section class="section">
+          <h2>Publications</h2>
+          <ol class="publication-refs"><li>Perdew, J. P.. J. P. Perdew. In P. Ziesche and H. Eschrig, editors, Proceedings of the 75. WE-Heraeus-Seminar and 21st Annual International Symposium on Electronic Structure of Solids, 11. Berlin, 1991. Akademie Verlag.</li>
+<li>Perdew, J. P.; Chevary, J. A.; Vosko, S. H.; Jackson, K. A.; Pederson, M. R.; Singh, D. J.; Fiolhais, C. Atoms, molecules, solids, and surfaces: Applications of the generalized gradient approximation for exchange and correlation. <em>Phys. Rev. B</em> <strong>1992</strong>, <em>46</em>, 6671, DOI: <a href="https://doi.org/10.1103/PhysRevB.46.6671">10.1103/PhysRevB.46.6671</a></li>
+<li>Perdew, J. P.; Chevary, J. A.; Vosko, S. H.; Jackson, K. A.; Pederson, M. R.; Singh, D. J.; Fiolhais, C. Erratum: Atoms, molecules, solids, and surfaces: Applications of the generalized gradient approximation for exchange and correlation. <em>Phys. Rev. B</em> <strong>1993</strong>, <em>48</em>, 4978, DOI: <a href="https://doi.org/10.1103/PhysRevB.48.4978.2">10.1103/PhysRevB.48.4978.2</a></li></ol>
+        </section>
+
+        <section class="section">
+          <div class="section-heading">
+            <h2>BibTeX</h2>
+            <button class="copy-button" type="button" data-copy-target="bibtex-code" aria-label="Copy BibTeX">Copy</button>
+          </div>
+          <pre><code id="bibtex-code">@inproceedings{Perdew1991,
+  author = {Perdew, J. P.},
+  editor = {Ziesche, P. and Eschrig, H.},
+  title = {},
+  booktitle = {Proceedings of the 75. WE-Heraeus-Seminar and 21st Annual International Symposium on Electronic Structure of Solids},
+  pages = {11},
+  year = {1991},
+  address = {Berlin},
+  publisher = {Akademie Verlag}
+}
+
+
+@article{Perdew1992_6671,
+  author = {Perdew, J. P. and Chevary, J. A. and Vosko, S. H. and Jackson, K. A. and Pederson, M. R. and Singh, D. J. and Fiolhais, C.},
+  title = {Atoms, molecules, solids, and surfaces: Applications of the generalized gradient approximation for exchange and correlation},
+  journal = {Phys. Rev. B},
+  volume = {46},
+  issue = {11},
+  pages = {6671},
+  year = {1992},
+  month = {Sep},
+  publisher = {American Physical Society},
+  doi = {10.1103/PhysRevB.46.6671},
+  url = {http://link.aps.org/doi/10.1103/PhysRevB.46.6671}
+}
+
+
+@article{Perdew1993_4978,
+  author = {Perdew, J. P. and Chevary, J. A. and Vosko, S. H. and Jackson, K. A. and Pederson, M. R. and Singh, D. J. and Fiolhais, C.},
+  title = {Erratum: {Atoms}, molecules, solids, and surfaces: Applications of the generalized gradient approximation for exchange and correlation},
+  journal = {Phys. Rev. B},
+  volume = {48},
+  issue = {7},
+  pages = {4978},
+  year = {1993},
+  month = {Aug},
+  publisher = {American Physical Society},
+  doi = {10.1103/PhysRevB.48.4978.2},
+  url = {http://link.aps.org/doi/10.1103/PhysRevB.48.4978.2}
+}
+</code></pre>
+        </section>
+
+        <details>
+          <summary>All Libxc metadata</summary>
+          <dl class="metadata">
+            <dt>identifier</dt><dd>gga_c_pw91</dd>
+            <dt>family</dt><dd>gga</dd>
+            <dt>kind</dt><dd>correlation</dd>
+            <dt>derivatives</dt><dd>0, 1, 2</dd>
+            <dt>flags</dt><dd>dim3, exc, fxc, vxc, enforce_fhc</dd>
+<dt>cam_alpha</dt><dd>null</dd>
+<dt>cam_beta</dt><dd>null</dd>
+<dt>cam_omega</dt><dd>null</dd>
+<dt>density_threshold</dt><dd>1.0e-12</dd>
+<dt>exx_coefficient</dt><dd>null</dd>
+<dt>n_spin</dt><dd>1</dd>
+<dt>nlc_C</dt><dd>null</dd>
+<dt>nlc_b</dt><dd>null</dd>
+<dt>sigma_threshold</dt><dd>1.0000000000000021e-16</dd>
+<dt>tau_threshold</dt><dd>1.0e-20</dd>
+<dt>zeta_threshold</dt><dd>2.220446049250313e-16</dd>
+          </dl>
+        </details>
+      </div>
+
+    </main>
+    <div id="command-palette" class="command-palette" aria-hidden="true" hidden>
+      <div class="command-backdrop" data-command-close></div>
+      <form class="command-panel" role="search">
+        <div class="search-box">
+          <input id="command-search" class="search-input command-search-input" type="search" autocomplete="off" placeholder="Search functionals..." aria-controls="command-search-suggestions">
+          <div id="command-search-suggestions" class="search-suggestions command-search-suggestions" role="listbox" hidden></div>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

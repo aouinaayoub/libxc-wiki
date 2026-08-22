@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>gga_c_zpbeint</title>
+    <link rel="stylesheet" href="../../assets/styles.css?v=20260822-github">
+    <script defer src="../../assets/search.js?v=20260822-github"></script>
+    <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+    <script defer src="../../vendor/katex/katex.min.js"></script>
+    <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
+    <script defer src="../../assets/detail.js?v=20260822-github"></script>
+
+  </head>
+  <body>
+    <main class="shell">
+      <form class="global-search" role="search" action="../../" method="get">
+        <div class="search-box">
+          <input class="search-input global-search-input" name="q" type="search" autocomplete="off" placeholder="Search functionals..." aria-controls="global-search-suggestions">
+          <span class="search-shortcut" aria-hidden="true">Ctrl K</span>
+          <div id="global-search-suggestions" class="search-suggestions" role="listbox" hidden></div>
+        </div>
+      </form>
+
+      <a class="back" href="../../">Back to search</a>
+      <header class="top">
+        <a class="github-link" href="https://github.com/aouinaayoub/libxc-wiki" aria-label="View Libxc Wiki on GitHub" title="View source on GitHub">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .7a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2.23c-3.22.7-3.9-1.37-3.9-1.37-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.71.08-.71 1.16.08 1.78 1.2 1.78 1.2 1.04 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.74-1.55-2.57-.29-5.27-1.29-5.27-5.69 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.16 1.18a10.94 10.94 0 0 1 5.76 0c2.19-1.49 3.16-1.18 3.16-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.42-2.71 5.39-5.29 5.68.42.36.79 1.07.79 2.16v3.2c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .7Z"/></svg>
+        </a>
+
+        <p class="brand">GGA</p>
+        <h1><code class="title-code">gga_c_zpbeint</code></h1>
+        <div class="detail-tags"><span class="tag">gga</span>
+<span class="tag">correlation</span></div>
+      </header>
+
+      <div class="detail-grid">
+      <section class="callout">
+        <p class="callout-label">Review excerpt</p>
+        <div class="review-html">
+<p>Constantin et al.<sup class="citation-marker"><a href="#review-ref-Constantin2011-233103">630</a></sup> tried to improve calculated atomization energies of molecules and solids by introducing a simple spin-dependent correction to existing functionals for the rapidly varying density regime. The general form of these new functionals is given by</p>
+<div class="equation" data-tex="e_\text{c}^{\text{zPBE-type}} = e_\text{c}^{\text{LDA}}(r_s, \zeta)
+  + f(t,\zeta) H_0(\phi_{2/3}, t, A)"></div>
+<p>where $e_\text{c}^{\text{LDA}}$ is a LDA correlation functional (which might be <a class="functional-link" href="../lda-c-pw/"><code>lda_c_pw</code></a> although it is not specified) and $H_0$ is the gradient correction of the <a class="functional-link" href="../gga-c-pbe/"><code>gga_c_pbe</code></a> functional given by <a class="review-eq-link" href="#review-eq-eq-ggac-pw91h0">
+  <code>eq:ggac:pw91h0</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="H_0(\phi_{2/3}, t, A) = \gamma \phi_{2/3}^3 \ln\left[1 + \frac{\beta}{\gamma}
+  \frac{t^2 + A t^4}{1 + A (t^2 + A t^4)}\right]"></span>
+  </span>
+</a>. The function $f$ was chosen such that it reduces to unity for spin-unpolarized systems, as well as for spin-polarized densities that are slowly varying ($t\to0$). Its form reads</p>
+<div class="equation" data-tex="f(t,\zeta) = \phi_{2/3}^{\alpha t^3}(\zeta)"></div>
+<p>Several underlying PBE-type functionals were used in <sup class="citation-marker"><a href="#review-ref-Constantin2011-233103">630</a></sup>. However, only two showed improved results for finite values of $\alpha$, namely <a class="functional-link" href="../gga-c-pbeint/"><code>gga_c_pbeint</code></a> and <a class="functional-link" href="../gga-c-pbe-sol/"><code>gga_c_pbe_sol</code></a> (combined with <a class="functional-link" href="../gga-x-pbeint/"><code>gga_x_pbeint</code></a> and <a class="functional-link" href="../gga-x-pbe-sol/"><code>gga_x_pbe_sol</code></a>, respectively). The resulting corrected functionals, <a class="functional-link" href="../gga-c-zpbeint/"><code>gga_c_zpbeint</code></a> and <a class="functional-link" href="../gga-c-zpbesol/"><code>gga_c_zpbesol</code></a>, use $\alpha=2.4$ and $\alpha=4.8$, respectively, which were obtained through minimization of the error in the atomization energies of the AE6 test set.<sup class="citation-marker"><a href="#review-ref-Lynch2003-8996">631</a>,<a href="#review-ref-Lynch2004-1460">632</a></sup></p>
+<p>Tests on molecules and solids for various properties showed that zPBEint is overall more accurate than zPBEsol, PBE (<a class="functional-link" href="../gga-x-pbe/"><code>gga_x_pbe</code></a> + <a class="functional-link" href="../gga-c-pbe/"><code>gga_c_pbe</code></a>), PBEsol (<a class="functional-link" href="../gga-x-pbe-sol/"><code>gga_x_pbe_sol</code></a> + <a class="functional-link" href="../gga-c-pbe-sol/"><code>gga_c_pbe_sol</code></a>), and PBEint (<a class="functional-link" href="../gga-x-pbeint/"><code>gga_x_pbeint</code></a> + <a class="functional-link" href="../gga-c-pbeint/"><code>gga_c_pbeint</code></a>).</p>
+        </div>
+        <p class="source-note">Adapted from <a href="https://arxiv.org/abs/2602.17333">Tran, Lehtola, Pittalis, and Marques, <em>Semi-Local Exchange-Correlation Approximations in Density Functional Theory</em>, arXiv:2602.17333</a>.</p>
+      </section>
+
+        <section class="section">
+          <h2>Referenced Review Equations</h2>
+          <div class="review-equations">
+          <article class="review-equation-card" id="review-eq-eq-ggac-pw91h0">
+            <code>eq:ggac:pw91h0</code>
+            <div class="equation" data-tex="H_0(\phi_{2/3}, t, A) = \gamma \phi_{2/3}^3 \ln\left[1 + \frac{\beta}{\gamma}
+  \frac{t^2 + A t^4}{1 + A (t^2 + A t^4)}\right]"></div>
+          </article>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <h2>Review References</h2>
+          <ol class="review-refs"><li id="review-ref-Constantin2011-233103" value="630">Constantin, L. A.; Fabiano, E.; Della Sala, F. Improving atomization energies of molecules and solids with a spin-dependent gradient correction from one-electron density analysis. <em>Phys. Rev. B</em> <strong>2011</strong>, <em>84</em>, 233103, DOI: <a href="https://doi.org/10.1103/PhysRevB.84.233103">10.1103/PhysRevB.84.233103</a></li>
+<li id="review-ref-Lynch2003-8996" value="631">Lynch, B. J.; Truhlar, D. G. Small Representative Benchmarks for Thermochemical Calculations. <em>J. Phys. Chem. A</em> <strong>2003</strong>, <em>107</em>, 8996--8999, DOI: <a href="https://doi.org/10.1021/jp035287b">10.1021/jp035287b</a></li>
+<li id="review-ref-Lynch2004-1460" value="632">Lynch, B. J.; Truhlar, D. G. Small Representative Benchmarks for Thermochemical Calculations. <em>J. Phys. Chem. A</em> <strong>2004</strong>, <em>108</em>, 1460--1460, DOI: <a href="https://doi.org/10.1021/jp0379190">10.1021/jp0379190</a></li></ol>
+        </section>
+
+        <section class="section">
+          <h2>Publications</h2>
+          <ol class="publication-refs"><li>Constantin, L. A.; Fabiano, E.; Della Sala, F. Improving atomization energies of molecules and solids with a spin-dependent gradient correction from one-electron density analysis. <em>Phys. Rev. B</em> <strong>2011</strong>, <em>84</em>, 233103, DOI: <a href="https://doi.org/10.1103/PhysRevB.84.233103">10.1103/PhysRevB.84.233103</a></li></ol>
+        </section>
+
+        <section class="section">
+          <div class="section-heading">
+            <h2>BibTeX</h2>
+            <button class="copy-button" type="button" data-copy-target="bibtex-code" aria-label="Copy BibTeX">Copy</button>
+          </div>
+          <pre><code id="bibtex-code">@article{Constantin2011_233103,
+  author = {Constantin, L. A. and Fabiano, E. and Della Sala, F.},
+  title = {Improving atomization energies of molecules and solids with a spin-dependent gradient correction from one-electron density analysis},
+  journal = {Phys. Rev. B},
+  volume = {84},
+  issue = {23},
+  pages = {233103},
+  year = {2011},
+  month = {Dec},
+  publisher = {American Physical Society},
+  doi = {10.1103/PhysRevB.84.233103},
+  url = {http://link.aps.org/doi/10.1103/PhysRevB.84.233103}
+}
+</code></pre>
+        </section>
+
+        <details>
+          <summary>All Libxc metadata</summary>
+          <dl class="metadata">
+            <dt>identifier</dt><dd>gga_c_zpbeint</dd>
+            <dt>family</dt><dd>gga</dd>
+            <dt>kind</dt><dd>correlation</dd>
+            <dt>derivatives</dt><dd>0, 1, 2</dd>
+            <dt>flags</dt><dd>dim3, exc, fxc, vxc, enforce_fhc</dd>
+<dt>cam_alpha</dt><dd>null</dd>
+<dt>cam_beta</dt><dd>null</dd>
+<dt>cam_omega</dt><dd>null</dd>
+<dt>density_threshold</dt><dd>1.0e-12</dd>
+<dt>exx_coefficient</dt><dd>null</dd>
+<dt>n_spin</dt><dd>1</dd>
+<dt>nlc_C</dt><dd>null</dd>
+<dt>nlc_b</dt><dd>null</dd>
+<dt>sigma_threshold</dt><dd>1.0000000000000021e-16</dd>
+<dt>tau_threshold</dt><dd>1.0e-20</dd>
+<dt>zeta_threshold</dt><dd>2.220446049250313e-16</dd>
+          </dl>
+        </details>
+      </div>
+
+    </main>
+    <div id="command-palette" class="command-palette" aria-hidden="true" hidden>
+      <div class="command-backdrop" data-command-close></div>
+      <form class="command-panel" role="search">
+        <div class="search-box">
+          <input id="command-search" class="search-input command-search-input" type="search" autocomplete="off" placeholder="Search functionals..." aria-controls="command-search-suggestions">
+          <div id="command-search-suggestions" class="search-suggestions command-search-suggestions" role="listbox" hidden></div>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

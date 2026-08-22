@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>gga_c_wl</title>
+    <link rel="stylesheet" href="../../assets/styles.css?v=20260822-github">
+    <script defer src="../../assets/search.js?v=20260822-github"></script>
+    <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+    <script defer src="../../vendor/katex/katex.min.js"></script>
+    <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
+    <script defer src="../../assets/detail.js?v=20260822-github"></script>
+
+  </head>
+  <body>
+    <main class="shell">
+      <form class="global-search" role="search" action="../../" method="get">
+        <div class="search-box">
+          <input class="search-input global-search-input" name="q" type="search" autocomplete="off" placeholder="Search functionals..." aria-controls="global-search-suggestions">
+          <span class="search-shortcut" aria-hidden="true">Ctrl K</span>
+          <div id="global-search-suggestions" class="search-suggestions" role="listbox" hidden></div>
+        </div>
+      </form>
+
+      <a class="back" href="../../">Back to search</a>
+      <header class="top">
+        <a class="github-link" href="https://github.com/aouinaayoub/libxc-wiki" aria-label="View Libxc Wiki on GitHub" title="View source on GitHub">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .7a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2.23c-3.22.7-3.9-1.37-3.9-1.37-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.71.08-.71 1.16.08 1.78 1.2 1.78 1.2 1.04 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.74-1.55-2.57-.29-5.27-1.29-5.27-5.69 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.16 1.18a10.94 10.94 0 0 1 5.76 0c2.19-1.49 3.16-1.18 3.16-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.42-2.71 5.39-5.29 5.68.42.36.79 1.07.79 2.16v3.2c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .7Z"/></svg>
+        </a>
+
+        <p class="brand">GGA</p>
+        <h1><code class="title-code">gga_c_wl</code></h1>
+        <div class="detail-tags"><span class="tag">gga</span>
+<span class="tag">correlation</span></div>
+      </header>
+
+      <div class="detail-grid">
+      <section class="callout">
+        <p class="callout-label">Review excerpt</p>
+        <div class="review-html">
+<p>This functional from Wilson and Levy<sup class="citation-marker"><a href="#review-ref-Wilson1990-12930">606</a></sup> can be seen as a GGA extension of the <a class="functional-link" href="../lda-c-wigner/"><code>lda_c_wigner</code></a> functional, where the extra freedom given by the inclusion of the density gradient $\nabla n_\sigma$ is used such that some coordinate scaling requirements are satisfied. It has the following analytical form:</p>
+<div class="equation" data-tex="e_\text{c}^{\text{WL}} = \sqrt{1 - \zeta^2} 
+  \frac{a + b x}{c + d (x_\uparrow + x_\downarrow) + r_s}"></div>
+<p>The values of the constants, which were obtained by fitting accurate reference correlation energies of eight atomic systems (He, Li$^{+}$, Be$^{2+}$, Be, B$^{+}$, Ne, Mg, and Ar) are $a=-0.74860$, $b=0.06001$, $c=3.60073$, and $d=0.90000$. <a class="functional-link" href="../gga-c-wl/"><code>gga_c_wl</code></a> is an extremely simple functional that leads to accurate atomic correlation energies. Furthermore, this functional provides accurate ionization potentials and atomization energies when combined with HF exchange, while other correlation functionals, such as <a class="functional-link" href="../gga-c-lyp/"><code>gga_c_lyp</code></a> or <a class="functional-link" href="../gga-c-pw91/"><code>gga_c_pw91</code></a>, are usually not compatible with HF exchange.<sup class="citation-marker"><a href="#review-ref-Fuentealba1994-566">607</a></sup> However, the price to pay is that the combination of <a class="functional-link" href="../gga-c-wl/"><code>gga_c_wl</code></a> with common GGA exchange functionals may yield quite inaccurate results, due to the lack of error cancellation between exchange and correlation that is common at the GGA and MGGA levels.</p>
+        </div>
+        <p class="source-note">Adapted from <a href="https://arxiv.org/abs/2602.17333">Tran, Lehtola, Pittalis, and Marques, <em>Semi-Local Exchange-Correlation Approximations in Density Functional Theory</em>, arXiv:2602.17333</a>.</p>
+      </section>
+
+
+        <section class="section">
+          <h2>Review References</h2>
+          <ol class="review-refs"><li id="review-ref-Wilson1990-12930" value="606">Wilson, L. C.; Levy, M. Nonlocal Wigner-like correlation-energy density functional through coordinate scaling. <em>Phys. Rev. B</em> <strong>1990</strong>, <em>41</em>, 12930, DOI: <a href="https://doi.org/10.1103/PhysRevB.41.12930">10.1103/PhysRevB.41.12930</a></li>
+<li id="review-ref-Fuentealba1994-566" value="607">Fuentealba, P.; Savin, A. A test for the Wilson--Levy correlation energy functional. <em>Chem. Phys. Lett.</em> <strong>1994</strong>, <em>217</em>, 566 -- 570, DOI: <a href="https://doi.org/10.1016/0009-2614(93)E1422-D">10.1016/0009-2614(93)E1422-D</a></li></ol>
+        </section>
+
+        <section class="section">
+          <h2>Publications</h2>
+          <ol class="publication-refs"><li>Wilson, L. C.; Levy, M. Nonlocal Wigner-like correlation-energy density functional through coordinate scaling. <em>Phys. Rev. B</em> <strong>1990</strong>, <em>41</em>, 12930, DOI: <a href="https://doi.org/10.1103/PhysRevB.41.12930">10.1103/PhysRevB.41.12930</a></li></ol>
+        </section>
+
+        <section class="section">
+          <div class="section-heading">
+            <h2>BibTeX</h2>
+            <button class="copy-button" type="button" data-copy-target="bibtex-code" aria-label="Copy BibTeX">Copy</button>
+          </div>
+          <pre><code id="bibtex-code">@article{Wilson1990_12930,
+  author = {Wilson, L. C. and Levy, M.},
+  title = {Nonlocal {Wigner}-like correlation-energy density functional through coordinate scaling},
+  journal = {Phys. Rev. B},
+  volume = {41},
+  issue = {18},
+  pages = {12930},
+  year = {1990},
+  month = {Jun},
+  publisher = {American Physical Society},
+  doi = {10.1103/PhysRevB.41.12930},
+  url = {http://link.aps.org/doi/10.1103/PhysRevB.41.12930}
+}
+</code></pre>
+        </section>
+
+        <details>
+          <summary>All Libxc metadata</summary>
+          <dl class="metadata">
+            <dt>identifier</dt><dd>gga_c_wl</dd>
+            <dt>family</dt><dd>gga</dd>
+            <dt>kind</dt><dd>correlation</dd>
+            <dt>derivatives</dt><dd>0, 1, 2</dd>
+            <dt>flags</dt><dd>dim3, exc, fxc, vxc, enforce_fhc</dd>
+<dt>cam_alpha</dt><dd>null</dd>
+<dt>cam_beta</dt><dd>null</dd>
+<dt>cam_omega</dt><dd>null</dd>
+<dt>density_threshold</dt><dd>1.0e-12</dd>
+<dt>exx_coefficient</dt><dd>null</dd>
+<dt>n_spin</dt><dd>1</dd>
+<dt>nlc_C</dt><dd>null</dd>
+<dt>nlc_b</dt><dd>null</dd>
+<dt>sigma_threshold</dt><dd>1.0000000000000021e-16</dd>
+<dt>tau_threshold</dt><dd>1.0e-20</dd>
+<dt>zeta_threshold</dt><dd>2.220446049250313e-16</dd>
+          </dl>
+        </details>
+      </div>
+
+    </main>
+    <div id="command-palette" class="command-palette" aria-hidden="true" hidden>
+      <div class="command-backdrop" data-command-close></div>
+      <form class="command-panel" role="search">
+        <div class="search-box">
+          <input id="command-search" class="search-input command-search-input" type="search" autocomplete="off" placeholder="Search functionals..." aria-controls="command-search-suggestions">
+          <div id="command-search-suggestions" class="search-suggestions command-search-suggestions" role="listbox" hidden></div>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

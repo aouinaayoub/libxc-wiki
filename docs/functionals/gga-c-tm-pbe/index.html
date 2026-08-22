@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>gga_c_tm_pbe</title>
+    <link rel="stylesheet" href="../../assets/styles.css?v=20260822-github">
+    <script defer src="../../assets/search.js?v=20260822-github"></script>
+    <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+    <script defer src="../../vendor/katex/katex.min.js"></script>
+    <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
+    <script defer src="../../assets/detail.js?v=20260822-github"></script>
+
+  </head>
+  <body>
+    <main class="shell">
+      <form class="global-search" role="search" action="../../" method="get">
+        <div class="search-box">
+          <input class="search-input global-search-input" name="q" type="search" autocomplete="off" placeholder="Search functionals..." aria-controls="global-search-suggestions">
+          <span class="search-shortcut" aria-hidden="true">Ctrl K</span>
+          <div id="global-search-suggestions" class="search-suggestions" role="listbox" hidden></div>
+        </div>
+      </form>
+
+      <a class="back" href="../../">Back to search</a>
+      <header class="top">
+        <a class="github-link" href="https://github.com/aouinaayoub/libxc-wiki" aria-label="View Libxc Wiki on GitHub" title="View source on GitHub">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .7a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2.23c-3.22.7-3.9-1.37-3.9-1.37-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.71.08-.71 1.16.08 1.78 1.2 1.78 1.2 1.04 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.74-1.55-2.57-.29-5.27-1.29-5.27-5.69 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.16 1.18a10.94 10.94 0 0 1 5.76 0c2.19-1.49 3.16-1.18 3.16-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.42-2.71 5.39-5.29 5.68.42.36.79 1.07.79 2.16v3.2c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .7Z"/></svg>
+        </a>
+
+        <p class="brand">GGA</p>
+        <h1><code class="title-code">gga_c_tm_pbe</code></h1>
+        <div class="detail-tags"><span class="tag">gga</span>
+<span class="tag">correlation</span></div>
+      </header>
+
+      <div class="detail-grid">
+      <section class="callout">
+        <p class="callout-label">Review excerpt</p>
+        <div class="review-html">
+<p>Using reference correlation energies of the He&ndash;Ar atoms,<sup class="citation-marker"><a href="#review-ref-Chakravorty1996-6167">629</a></sup> existing correlation functionals were reoptimized.</p>
+<p><a class="functional-link" href="../gga-c-tm-lyp/"><code>gga_c_tm_lyp</code></a> is a reoptimization of <a class="functional-link" href="../gga-c-lyp/"><code>gga_c_lyp</code></a>. The new values of the parameters in <a class="review-eq-link" href="#review-eq-eq-ec-lyp">
+  <code>eq:ec-lyp</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="\begin{aligned}
+e_\text{c}^{\text{LYP}} = &amp; a\Bigg\{-\frac{1-\zeta^2}{1+\bar{d}r_s}  \\
+
+ &amp; -\omega x^2\left[\frac{1}{72}\left(1-\zeta^2\right)(47 - 7\delta)-\frac{2}{3}\right]  \\
+
+ &amp; -\omega 2^{-2/3}C_\text{F}\left(1-\zeta^2\right)\phi_{8/3}(\zeta)
+   \\
+
+ &amp; +\frac{\omega}{8}(1-\zeta^2)\left(\frac{5}{2}-\frac{\delta}{18}\right)
+  x^2_{\text{tot},8/3}(\zeta)  \\
+
+  &amp; +\frac{\omega}{144}\left(1-\zeta^2\right)(\delta - 11)
+  x^2_{\text{tot},11/3}(\zeta) \\
+
+ &amp; -\frac{\omega}{2^{8/3}}\left[
+    \frac{2^{8/3}}{3}x^2_{\text{tot},8/3}(\zeta) \right. \\
+
+  &amp;  -\frac{1}{4}x_\downarrow^2(1+\zeta)^2(1-\zeta)^{8/3}  \\
+
+  &amp; \left. -\frac{1}{4}x_\uparrow^2(1-\zeta)^2(1+\zeta)^{8/3}
+  \right]
+  \Bigg\}
+\end{aligned}"></span>
+  </span>
+</a>; <a class="review-eq-link" href="#review-eq-eq-lyp-w-omega">
+  <code>eq:lyp-w-omega</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="\begin{aligned}
+\omega &amp; = \frac{b\E^{-\bar{c}r_s}}{1 + \bar{d}r_s} \\
+    \delta &amp; = \bar{c}r_s + \frac{\bar{d}r_s}{1 + \bar{d}r_s}
+\end{aligned}"></span>
+  </span>
+</a> are $a=0.0393$, $b=0.21$, $\bar c=0.41(4\pi/3)^{1/3}$, and $\bar d=0.15(4\pi/3)^{1/3}$.</p>
+<p><a class="functional-link" href="../gga-c-tm-pbe/"><code>gga_c_tm_pbe</code></a> is a reoptimization of <a class="functional-link" href="../gga-c-pbe/"><code>gga_c_pbe</code></a>. The new values of $\beta$ and $\gamma$ in <a class="review-eq-link" href="#review-eq-eq-ggac-pw91h0">
+  <code>eq:ggac:pw91h0</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="H_0(\phi_{2/3}, t, A) = \gamma \phi_{2/3}^3 \ln\left[1 + \frac{\beta}{\gamma}
+  \frac{t^2 + A t^4}{1 + A (t^2 + A t^4)}\right]"></span>
+  </span>
+</a>; <a class="review-eq-link" href="#review-eq-eq-pw91a">
+  <code>eq:pw91a</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="A(r_s, \zeta, \phi_{2/3}) = \frac{\beta}{\gamma w_1}"></span>
+  </span>
+</a> are $\gamma=-0.0156$ and $\beta=3.38\gamma=-0.052728$.</p>
+<p><code>gga_c_tm_wpbe</code> is a reparametrization of the correlation part of <a class="functional-link" href="../gga-xc-pbe1w/"><code>gga_xc_pbe1w</code></a>, where the parameter $a_{\text{c}}$ in <a class="review-eq-link" href="#review-eq-eq-e-1w">
+  <code>eq:e-1w</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="e_\text{xc} = e_\text{x}^{\text{GGA}} + \left(1-a_{\text{c}}\right)e_\text{c}^{\text{LDA}}
+  + a_{\text{c}}e_\text{c}^{\text{GGA}}"></span>
+  </span>
+</a> was reoptimized to 0.955. Note that <a class="functional-link" href="../lda-c-pw/"><code>lda_c_pw</code></a> is here used as the LDA component, while it appears that <a class="functional-link" href="../lda-c-vwn/"><code>lda_c_vwn</code></a> was used in the original <a class="functional-link" href="../gga-xc-pbe1w/"><code>gga_xc_pbe1w</code></a> functional.</p>
+<p><code>gga_c_tm_cs1</code> is a reparametrization of <a class="functional-link" href="../gga-c-cs1/"><code>gga_c_cs1</code></a>, and the new values of the parameters in <a class="review-eq-link" href="#review-eq-eq-cs1ab">
+  <code>eq:cs1ab</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="e_{\text{c}\,\uparrow\downarrow}^{\text{CS1}} = \frac{1}{n^2}\frac{n_\uparrow n_\downarrow}{1 + d n^{-1/3}}
+  \left[C_3 + C_4\frac{\gamma^2 x^4}{\left(1 + \gamma x^2\right)^2}\right]"></span>
+  </span>
+</a>; <a class="review-eq-link" href="#review-eq-eq-cs1aa">
+  <code>eq:cs1aa</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="e_{\text{c}\,\sigma\sigma}^{\text{CS1}} = \frac{1}{n}\frac{n_\sigma}{1 + d n_\sigma^{-1/3}}
+  \left[C_1 + C_2\frac{\gamma^2x_\sigma^4}{\left(1 + \gamma x_\sigma^2\right)^2}\right]"></span>
+  </span>
+</a> are $C_1=-0.0398$, $C_2=6.5$, $C_3=-0.0747$, $C_4=-19$, $d=0.514$ and $\gamma=0.00062$.</p>
+<p>Compared to their respective original functional, all reoptimized versions improve the correlation energy of the neutral atoms He&ndash;Ar and cations Li$^{+}$&ndash;K$^{+}$. However, all reoptimized functionals except <code>gga_c_tm_cs1</code> lead to an increase of the average error for the heavier closed-shell atoms from Ca to Rn.</p>
+        </div>
+        <p class="source-note">Adapted from <a href="https://arxiv.org/abs/2602.17333">Tran, Lehtola, Pittalis, and Marques, <em>Semi-Local Exchange-Correlation Approximations in Density Functional Theory</em>, arXiv:2602.17333</a>.</p>
+      </section>
+
+        <section class="section">
+          <h2>Referenced Review Equations</h2>
+          <div class="review-equations">
+          <article class="review-equation-card" id="review-eq-eq-ec-lyp">
+            <code>eq:ec-lyp</code>
+            <div class="equation" data-tex="\begin{aligned}
+e_\text{c}^{\text{LYP}} = &amp; a\Bigg\{-\frac{1-\zeta^2}{1+\bar{d}r_s}  \\
+
+ &amp; -\omega x^2\left[\frac{1}{72}\left(1-\zeta^2\right)(47 - 7\delta)-\frac{2}{3}\right]  \\
+
+ &amp; -\omega 2^{-2/3}C_\text{F}\left(1-\zeta^2\right)\phi_{8/3}(\zeta)
+   \\
+
+ &amp; +\frac{\omega}{8}(1-\zeta^2)\left(\frac{5}{2}-\frac{\delta}{18}\right)
+  x^2_{\text{tot},8/3}(\zeta)  \\
+
+  &amp; +\frac{\omega}{144}\left(1-\zeta^2\right)(\delta - 11)
+  x^2_{\text{tot},11/3}(\zeta) \\
+
+ &amp; -\frac{\omega}{2^{8/3}}\left[
+    \frac{2^{8/3}}{3}x^2_{\text{tot},8/3}(\zeta) \right. \\
+
+  &amp;  -\frac{1}{4}x_\downarrow^2(1+\zeta)^2(1-\zeta)^{8/3}  \\
+
+  &amp; \left. -\frac{1}{4}x_\uparrow^2(1-\zeta)^2(1+\zeta)^{8/3}
+  \right]
+  \Bigg\}
+\end{aligned}"></div>
+          </article>
+
+          <article class="review-equation-card" id="review-eq-eq-lyp-w-omega">
+            <code>eq:lyp-w-omega</code>
+            <div class="equation" data-tex="\begin{aligned}
+\omega &amp; = \frac{b\E^{-\bar{c}r_s}}{1 + \bar{d}r_s} \\
+    \delta &amp; = \bar{c}r_s + \frac{\bar{d}r_s}{1 + \bar{d}r_s}
+\end{aligned}"></div>
+          </article>
+
+          <article class="review-equation-card" id="review-eq-eq-ggac-pw91h0">
+            <code>eq:ggac:pw91h0</code>
+            <div class="equation" data-tex="H_0(\phi_{2/3}, t, A) = \gamma \phi_{2/3}^3 \ln\left[1 + \frac{\beta}{\gamma}
+  \frac{t^2 + A t^4}{1 + A (t^2 + A t^4)}\right]"></div>
+          </article>
+
+          <article class="review-equation-card" id="review-eq-eq-pw91a">
+            <code>eq:pw91a</code>
+            <div class="equation" data-tex="A(r_s, \zeta, \phi_{2/3}) = \frac{\beta}{\gamma w_1}"></div>
+          </article>
+
+          <article class="review-equation-card" id="review-eq-eq-e-1w">
+            <code>eq:e-1w</code>
+            <div class="equation" data-tex="e_\text{xc} = e_\text{x}^{\text{GGA}} + \left(1-a_{\text{c}}\right)e_\text{c}^{\text{LDA}}
+  + a_{\text{c}}e_\text{c}^{\text{GGA}}"></div>
+          </article>
+
+          <article class="review-equation-card" id="review-eq-eq-cs1ab">
+            <code>eq:cs1ab</code>
+            <div class="equation" data-tex="e_{\text{c}\,\uparrow\downarrow}^{\text{CS1}} = \frac{1}{n^2}\frac{n_\uparrow n_\downarrow}{1 + d n^{-1/3}}
+  \left[C_3 + C_4\frac{\gamma^2 x^4}{\left(1 + \gamma x^2\right)^2}\right]"></div>
+          </article>
+
+          <article class="review-equation-card" id="review-eq-eq-cs1aa">
+            <code>eq:cs1aa</code>
+            <div class="equation" data-tex="e_{\text{c}\,\sigma\sigma}^{\text{CS1}} = \frac{1}{n}\frac{n_\sigma}{1 + d n_\sigma^{-1/3}}
+  \left[C_1 + C_2\frac{\gamma^2x_\sigma^4}{\left(1 + \gamma x_\sigma^2\right)^2}\right]"></div>
+          </article>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <h2>Review References</h2>
+          <ol class="review-refs"><li id="review-ref-Chakravorty1996-6167" value="629">Chakravorty, S. J.; Davidson, E. R. Refinement of the Asymptotic Z Expansion for the Ground-State Correlation Energies of Atomic Ions. <em>J. Phys. Chem.</em> <strong>1996</strong>, <em>100</em>, 6167--6172, DOI: <a href="https://doi.org/10.1021/jp952803s">10.1021/jp952803s</a></li></ol>
+        </section>
+
+        <section class="section">
+          <h2>Publications</h2>
+          <ol class="publication-refs"><li>Thakkar, A. J.; McCarthy, S. P. Toward improved density functionals for the correlation energy. <em>J. Chem. Phys.</em> <strong>2009</strong>, <em>131</em>, 134109, DOI: <a href="https://doi.org/10.1063/1.3243845">10.1063/1.3243845</a></li></ol>
+        </section>
+
+        <section class="section">
+          <div class="section-heading">
+            <h2>BibTeX</h2>
+            <button class="copy-button" type="button" data-copy-target="bibtex-code" aria-label="Copy BibTeX">Copy</button>
+          </div>
+          <pre><code id="bibtex-code">@article{Thakkar2009_134109,
+  author = {Thakkar, Ajit J. and McCarthy, Shane P.},
+  title = {Toward improved density functionals for the correlation energy},
+  journal = {J. Chem. Phys.},
+  volume = {131},
+  number = {13},
+  pages = {134109},
+  year = {2009},
+  doi = {10.1063/1.3243845},
+  url = {https://doi.org/10.1063/1.3243845}
+}
+</code></pre>
+        </section>
+
+        <details>
+          <summary>All Libxc metadata</summary>
+          <dl class="metadata">
+            <dt>identifier</dt><dd>gga_c_tm_pbe</dd>
+            <dt>family</dt><dd>gga</dd>
+            <dt>kind</dt><dd>correlation</dd>
+            <dt>derivatives</dt><dd>0, 1, 2</dd>
+            <dt>flags</dt><dd>dim3, exc, fxc, vxc, enforce_fhc</dd>
+<dt>cam_alpha</dt><dd>null</dd>
+<dt>cam_beta</dt><dd>null</dd>
+<dt>cam_omega</dt><dd>null</dd>
+<dt>density_threshold</dt><dd>1.0e-12</dd>
+<dt>exx_coefficient</dt><dd>null</dd>
+<dt>n_spin</dt><dd>1</dd>
+<dt>nlc_C</dt><dd>null</dd>
+<dt>nlc_b</dt><dd>null</dd>
+<dt>sigma_threshold</dt><dd>1.0000000000000021e-16</dd>
+<dt>tau_threshold</dt><dd>1.0e-20</dd>
+<dt>zeta_threshold</dt><dd>2.220446049250313e-16</dd>
+          </dl>
+        </details>
+      </div>
+
+    </main>
+    <div id="command-palette" class="command-palette" aria-hidden="true" hidden>
+      <div class="command-backdrop" data-command-close></div>
+      <form class="command-panel" role="search">
+        <div class="search-box">
+          <input id="command-search" class="search-input command-search-input" type="search" autocomplete="off" placeholder="Search functionals..." aria-controls="command-search-suggestions">
+          <div id="command-search-suggestions" class="search-suggestions command-search-suggestions" role="listbox" hidden></div>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

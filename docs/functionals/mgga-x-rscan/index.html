@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>mgga_x_rscan</title>
+    <link rel="stylesheet" href="../../assets/styles.css?v=20260822-github">
+    <script defer src="../../assets/search.js?v=20260822-github"></script>
+    <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+    <script defer src="../../vendor/katex/katex.min.js"></script>
+    <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
+    <script defer src="../../assets/detail.js?v=20260822-github"></script>
+
+  </head>
+  <body>
+    <main class="shell">
+      <form class="global-search" role="search" action="../../" method="get">
+        <div class="search-box">
+          <input class="search-input global-search-input" name="q" type="search" autocomplete="off" placeholder="Search functionals..." aria-controls="global-search-suggestions">
+          <span class="search-shortcut" aria-hidden="true">Ctrl K</span>
+          <div id="global-search-suggestions" class="search-suggestions" role="listbox" hidden></div>
+        </div>
+      </form>
+
+      <a class="back" href="../../">Back to search</a>
+      <header class="top">
+        <a class="github-link" href="https://github.com/aouinaayoub/libxc-wiki" aria-label="View Libxc Wiki on GitHub" title="View source on GitHub">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .7a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2.23c-3.22.7-3.9-1.37-3.9-1.37-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.71.08-.71 1.16.08 1.78 1.2 1.78 1.2 1.04 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.74-1.55-2.57-.29-5.27-1.29-5.27-5.69 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.16 1.18a10.94 10.94 0 0 1 5.76 0c2.19-1.49 3.16-1.18 3.16-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.42-2.71 5.39-5.29 5.68.42.36.79 1.07.79 2.16v3.2c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .7Z"/></svg>
+        </a>
+
+        <p class="brand">META-GGA</p>
+        <h1><code class="title-code">mgga_x_rscan</code></h1>
+        <div class="detail-tags"><span class="tag">meta-gga</span>
+<span class="tag">exchange</span></div>
+      </header>
+
+      <div class="detail-grid">
+      <section class="callout">
+        <p class="callout-label">Review excerpt</p>
+        <div class="review-html">
+<p>To alleviate the numerical problems encountered with the SCAN (<a class="functional-link" href="../mgga-x-scan/"><code>mgga_x_scan</code></a> + <a class="functional-link" href="../mgga-c-scan/"><code>mgga_c_scan</code></a>) functional, Bartok and Yates<sup class="citation-marker"><a href="#review-ref-Bartok2019-161101">395</a></sup> proposed to substitute the iso-orbital indicator $\alpha_{\sigma}$ (<a class="review-eq-link" href="#review-eq-eq-alpha-sigma">
+  <code>eq:alpha-sigma</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="\alpha_{\sigma} = \frac{\tau_{\sigma}-\tau_{\sigma}^{\text{W}}}{\tau_{\sigma}^{\text{TF}}}"></span>
+  </span>
+</a>) in <a class="functional-link" href="../mgga-x-scan/"><code>mgga_x_scan</code></a> by the regularized $\alpha_{\sigma}&#39;$, defined as</p>
+<div class="equation" data-tex="\alpha_{\sigma}&#39; = \frac{\displaystyle \tilde{\alpha}_{\sigma}^3}{\displaystyle \tilde{\alpha}_{\sigma}^2+\alpha_{\text{r}}}"></div>
+<p>where</p>
+<div class="equation" data-tex="\tilde{\alpha}_{\sigma} = \frac{\displaystyle \tau_{\sigma}-\tau_{\sigma}^{\text{W}}}{\displaystyle \tau_{\sigma}^{\text{TF}}+\frac{1}{2}\tau_{\text{r}}}"></div>
+<p>and $\alpha_{\text{r}}=10^{-3}$ and $\tau_{\text{r}}=10^{-4}$ are small regularization constants. The introduction of $\tau_{\text{r}}$ cures the divergence in $\alpha_\sigma$ occurring in low-density regions dominated by a single orbital. Furthermore, thanks to $\alpha_{\text{r}}$, the derivatives of $\alpha_{\sigma}&#39;$  with respect to $n_\sigma$, $\nabla n_\sigma$, and $\tau_\sigma$ vanish, reducing numerical noise.</p>
+<p>Another reason for the numerical instability of SCAN is that the switching function given by <a class="review-eq-link" href="#review-eq-eq-scanfalpha">
+  <code>eq:scanfalpha</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="f(\alpha) = \E^{-c_1\alpha/\left(1-\alpha\right)}\theta(1-\alpha)
+  - d \E^{c_2/\left(1-\alpha\right)}\theta(\alpha - 1)"></span>
+  </span>
+</a> has highly oscillatory derivatives around $\alpha_{\sigma}\approx1$. To remedy this problem, <a class="review-eq-link" href="#review-eq-eq-scanfalpha">
+  <code>eq:scanfalpha</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="f(\alpha) = \E^{-c_1\alpha/\left(1-\alpha\right)}\theta(1-\alpha)
+  - d \E^{c_2/\left(1-\alpha\right)}\theta(\alpha - 1)"></span>
+  </span>
+</a> is replaced by the following function in the interval $\alpha_{\sigma}&#39;\in(0, 2.5)$:</p>
+<div class="equation" data-tex="f(\alpha_{\sigma}&#39;) = \sum_{n=0}^{7}c_{n}(\alpha_{\sigma}&#39;)^{n}"></div>
+<p>When used with the corresponding correlation functional <a class="functional-link" href="../mgga-c-rscan/"><code>mgga_c_rscan</code></a>, the accuracy of rSCAN is usually quite similar to the native SCAN, although an increase of the error is observed for formation enthalpies of molecules.<sup class="citation-marker"><a href="#review-ref-Mejia2019-207101">750</a>,<a href="#review-ref-Bartok2019-JCP-207102">751</a></sup> It was also noted<sup class="citation-marker"><a href="#review-ref-Bartok2019-161101">395</a>,<a href="#review-ref-Furness2020-8208">752</a>,<a href="#review-ref-Furness2020-9248">753</a></sup> that rSCAN does not satisfy some exact constraints that were originally obeyed by SCAN (see discussion for <a class="functional-link" href="../mgga-x-r2scan/"><code>mgga_x_r2scan</code></a> and <a class="functional-link" href="../mgga-c-r2scan/"><code>mgga_c_r2scan</code></a>).</p>
+        </div>
+        <p class="source-note">Adapted from <a href="https://arxiv.org/abs/2602.17333">Tran, Lehtola, Pittalis, and Marques, <em>Semi-Local Exchange-Correlation Approximations in Density Functional Theory</em>, arXiv:2602.17333</a>.</p>
+      </section>
+
+        <section class="section">
+          <h2>Referenced Review Equations</h2>
+          <div class="review-equations">
+          <article class="review-equation-card" id="review-eq-eq-alpha-sigma">
+            <code>eq:alpha-sigma</code>
+            <div class="equation" data-tex="\alpha_{\sigma} = \frac{\tau_{\sigma}-\tau_{\sigma}^{\text{W}}}{\tau_{\sigma}^{\text{TF}}}"></div>
+          </article>
+
+          <article class="review-equation-card" id="review-eq-eq-scanfalpha">
+            <code>eq:scanfalpha</code>
+            <div class="equation" data-tex="f(\alpha) = \E^{-c_1\alpha/\left(1-\alpha\right)}\theta(1-\alpha)
+  - d \E^{c_2/\left(1-\alpha\right)}\theta(\alpha - 1)"></div>
+          </article>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <h2>Review References</h2>
+          <ol class="review-refs"><li id="review-ref-Bartok2019-161101" value="395">Bartok, A. P.; Yates, J. R. Regularized SCAN functional. <em>J. Chem. Phys.</em> <strong>2019</strong>, <em>150</em>, 161101, DOI: <a href="https://doi.org/10.1063/1.5094646">10.1063/1.5094646</a></li>
+<li id="review-ref-Mejia2019-207101" value="750">Mejia-Rodriguez, D.; Trickey, S. B. Comment on &quot;Regularized SCAN functional&quot; [J. Chem. Phys. 150, 161101 (2019)]. <em>J. Chem. Phys.</em> <strong>2019</strong>, <em>151</em>, 207101, DOI: <a href="https://doi.org/10.1063/1.5120408">10.1063/1.5120408</a></li>
+<li id="review-ref-Bartok2019-JCP-207102" value="751">Bartok, A. P.; Yates, J. R. Response to &quot;Comment on &#39;Regularized SCAN functional&#39;&quot; [J. Chem. Phys. 151, 207101 (2019)]. <em>J. Chem. Phys.</em> <strong>2019</strong>, <em>151</em>, 207102, DOI: <a href="https://doi.org/10.1063/1.5128484">10.1063/1.5128484</a></li>
+<li id="review-ref-Furness2020-8208" value="752">Furness, J. W.; Kaplan, A. D.; Ning, J.; Perdew, J. P.; Sun, J. Accurate and Numerically Efficient r$^2$SCAN Meta-Generalized Gradient Approximation. <em>J. Phys. Chem. Lett.</em> <strong>2020</strong>, <em>11</em>, 8208--8215, DOI: <a href="https://doi.org/10.1021/acs.jpclett.0c02405">10.1021/acs.jpclett.0c02405</a></li>
+<li id="review-ref-Furness2020-9248" value="753">Furness, J. W.; Kaplan, A. D.; Ning, J.; Perdew, J. P.; Sun, J. Correction to &quot;Accurate and Numerically Efficient r$^2$SCAN Meta-Generalized Gradient Approximation&quot;. <em>J. Phys. Chem. Lett.</em> <strong>2020</strong>, <em>11</em>, 9248--9248, DOI: <a href="https://doi.org/10.1021/acs.jpclett.0c03077">10.1021/acs.jpclett.0c03077</a></li></ol>
+        </section>
+
+        <section class="section">
+          <h2>Publications</h2>
+          <ol class="publication-refs"><li>Bartok, A. P.; Yates, J. R. Regularized SCAN functional. <em>J. Chem. Phys.</em> <strong>2019</strong>, <em>150</em>, 161101, DOI: <a href="https://doi.org/10.1063/1.5094646">10.1063/1.5094646</a></li></ol>
+        </section>
+
+        <section class="section">
+          <div class="section-heading">
+            <h2>BibTeX</h2>
+            <button class="copy-button" type="button" data-copy-target="bibtex-code" aria-label="Copy BibTeX">Copy</button>
+          </div>
+          <pre><code id="bibtex-code">@article{Bartok2019_161101,
+  author = {Bart\&#39;{o}k, Albert P. and Yates, Jonathan R.},
+  title = {Regularized {SCAN} functional},
+  journal = {J. Chem. Phys.},
+  volume = {150},
+  number = {16},
+  pages = {161101},
+  year = {2019},
+  doi = {10.1063/1.5094646},
+  url = {https://doi.org/10.1063/1.5094646}
+}
+</code></pre>
+        </section>
+
+        <details>
+          <summary>All Libxc metadata</summary>
+          <dl class="metadata">
+            <dt>identifier</dt><dd>mgga_x_rscan</dd>
+            <dt>family</dt><dd>meta-gga</dd>
+            <dt>kind</dt><dd>exchange</dd>
+            <dt>derivatives</dt><dd>0, 1, 2</dd>
+            <dt>flags</dt><dd>dim3, exc, fxc, vxc, needs_tau, enforce_fhc</dd>
+<dt>cam_alpha</dt><dd>null</dd>
+<dt>cam_beta</dt><dd>null</dd>
+<dt>cam_omega</dt><dd>null</dd>
+<dt>density_threshold</dt><dd>1.0e-11</dd>
+<dt>exx_coefficient</dt><dd>null</dd>
+<dt>n_spin</dt><dd>1</dd>
+<dt>nlc_C</dt><dd>null</dd>
+<dt>nlc_b</dt><dd>null</dd>
+<dt>sigma_threshold</dt><dd>2.1544346900318875e-15</dd>
+<dt>tau_threshold</dt><dd>1.0e-20</dd>
+<dt>zeta_threshold</dt><dd>2.220446049250313e-16</dd>
+          </dl>
+        </details>
+      </div>
+
+    </main>
+    <div id="command-palette" class="command-palette" aria-hidden="true" hidden>
+      <div class="command-backdrop" data-command-close></div>
+      <form class="command-panel" role="search">
+        <div class="search-box">
+          <input id="command-search" class="search-input command-search-input" type="search" autocomplete="off" placeholder="Search functionals..." aria-controls="command-search-suggestions">
+          <div id="command-search-suggestions" class="search-suggestions command-search-suggestions" role="listbox" hidden></div>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

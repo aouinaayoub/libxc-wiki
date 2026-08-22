@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>mgga_x_tb09</title>
+    <link rel="stylesheet" href="../../assets/styles.css?v=20260822-github">
+    <script defer src="../../assets/search.js?v=20260822-github"></script>
+    <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+    <script defer src="../../vendor/katex/katex.min.js"></script>
+    <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
+    <script defer src="../../assets/detail.js?v=20260822-github"></script>
+
+  </head>
+  <body>
+    <main class="shell">
+      <form class="global-search" role="search" action="../../" method="get">
+        <div class="search-box">
+          <input class="search-input global-search-input" name="q" type="search" autocomplete="off" placeholder="Search functionals..." aria-controls="global-search-suggestions">
+          <span class="search-shortcut" aria-hidden="true">Ctrl K</span>
+          <div id="global-search-suggestions" class="search-suggestions" role="listbox" hidden></div>
+        </div>
+      </form>
+
+      <a class="back" href="../../">Back to search</a>
+      <header class="top">
+        <a class="github-link" href="https://github.com/aouinaayoub/libxc-wiki" aria-label="View Libxc Wiki on GitHub" title="View source on GitHub">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .7a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2.23c-3.22.7-3.9-1.37-3.9-1.37-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.71.08-.71 1.16.08 1.78 1.2 1.78 1.2 1.04 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.74-1.55-2.57-.29-5.27-1.29-5.27-5.69 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.16 1.18a10.94 10.94 0 0 1 5.76 0c2.19-1.49 3.16-1.18 3.16-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.42-2.71 5.39-5.29 5.68.42.36.79 1.07.79 2.16v3.2c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .7Z"/></svg>
+        </a>
+
+        <p class="brand">META-GGA</p>
+        <h1><code class="title-code">mgga_x_tb09</code></h1>
+        <div class="detail-tags"><span class="tag">meta-gga</span>
+<span class="tag">exchange</span></div>
+      </header>
+
+      <div class="detail-grid">
+      <section class="callout">
+        <p class="callout-label">Review excerpt</p>
+        <div class="review-html">
+<p>Inspired by the improved description of the band gap of insulators and semiconductors by <a class="functional-link" href="../mgga-x-bj06/"><code>mgga_x_bj06</code></a> over the standard LDA and PBE (<a class="functional-link" href="../gga-x-pbe/"><code>gga_x_pbe</code></a> + <a class="functional-link" href="../gga-c-pbe/"><code>gga_c_pbe</code></a>) functionals,<sup class="citation-marker"><a href="#review-ref-Tran2007-196208">708</a></sup> Tran and Blaha<sup class="citation-marker"><a href="#review-ref-Tran2009-226401">707</a></sup> suggested the following modification of <a class="functional-link" href="../mgga-x-bj06/"><code>mgga_x_bj06</code></a> as a further improvement:</p>
+<div class="equation" data-tex="v^\text{TB09}_{\text{x}\sigma} = c v^\text{BR89,hole}_{\text{x}\sigma} + (3c-2)\frac{1}{\pi}\sqrt{\frac{5}{6}}\sqrt{\frac{\tau_\sigma}{n_\sigma}}"></div>
+<p>where $v^\text{BR89,hole}_{\text{x}\sigma}$ is <a class="review-eq-link" href="#review-eq-eq-vxbrhole">
+  <code>eq:vxbrhole</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="v^\text{BR89,hole}_{\text{x}\sigma}=2e^\text{BR89}_{\text{x}\sigma}"></span>
+  </span>
+</a> with $\gamma=0.8$. For the parameter $c$, a system-dependent expression is chosen:</p>
+<div class="equation" data-tex="c = \alpha + \beta \left[ \frac{1}{V_{\text{cell}}} \int_{\text{cell}}\!\D\br&#39;\, \frac{|\nabla n(\br&#39;)|}{n(\br&#39;)} \right]^e"></div>
+<p>where $V_{\text{cell}}$ is the volume of the unit cell and $e=1/2$. Associated with the LDA correlation potential from <a class="functional-link" href="../lda-c-pw/"><code>lda_c_pw</code></a>, $\alpha=-0.012$ and $\beta=1.023$ were obtained by fitting to the experimental band gaps of a set of 23 solids.</p>
+<p><a class="functional-link" href="../mgga-x-tb09/"><code>mgga_x_tb09</code></a> is to date the most accurate semi-local method for the calculation of band gaps of semiconductors and insulators.<sup class="citation-marker"><a href="#review-ref-Borlido2019-5069">408</a>,<a href="#review-ref-Borlido2020-96">409</a>,<a href="#review-ref-Tran2019-110902">709</a></sup> Note that the TB09 potential (<a class="functional-link" href="../mgga-x-tb09/"><code>mgga_x_tb09</code></a> + <a class="functional-link" href="../lda-c-pw/"><code>lda_c_pw</code></a>) is also commonly called the modified Becke-Johnson (mBJ) potential.</p>
+<p>As is obvious from <a class="review-eq-link" href="#review-eq-eq-tb09-c">
+  <code>eq:tb09-c</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="c = \alpha + \beta \left[ \frac{1}{V_{\text{cell}}} \int_{\text{cell}}\!\D\br&#39;\, \frac{|\nabla n(\br&#39;)|}{n(\br&#39;)} \right]^e"></span>
+  </span>
+</a>, this functional is not formally a semi-local functional. It is also important to note that because of this, <a class="review-eq-link" href="#review-eq-eq-tb09-c">
+  <code>eq:tb09-c</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="c = \alpha + \beta \left[ \frac{1}{V_{\text{cell}}} \int_{\text{cell}}\!\D\br&#39;\, \frac{|\nabla n(\br&#39;)|}{n(\br&#39;)} \right]^e"></span>
+  </span>
+</a> is not implemented in Libxc. Instead, $c$ in <a class="review-eq-link" href="#review-eq-eq-tb09-v">
+  <code>eq:tb09-v</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="v^\text{TB09}_{\text{x}\sigma} = c v^\text{BR89,hole}_{\text{x}\sigma} + (3c-2)\frac{1}{\pi}\sqrt{\frac{5}{6}}\sqrt{\frac{\tau_\sigma}{n_\sigma}}"></span>
+  </span>
+</a> is handled as a parameter that has to be provided by the DFT code calling Libxc.</p>
+<p>As is also seen from the definition of $c$, this potential is meant to be used only for bulk periodic systems, since for systems with vacuum or an interface, the average of $\left\vert\nabla n\right\vert/n$ in the unit cell has no meaning and <a class="review-eq-link" href="#review-eq-eq-tb09-c">
+  <code>eq:tb09-c</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="c = \alpha + \beta \left[ \frac{1}{V_{\text{cell}}} \int_{\text{cell}}\!\D\br&#39;\, \frac{|\nabla n(\br&#39;)|}{n(\br&#39;)} \right]^e"></span>
+  </span>
+</a> cannot be used. For such systems, a solution is either to fix $c$ to a suitable value or to use <code>mgga_x_lmbj</code> that depends on a local average of $\left\vert\nabla n\right\vert/n$.</p>
+        </div>
+        <p class="source-note">Adapted from <a href="https://arxiv.org/abs/2602.17333">Tran, Lehtola, Pittalis, and Marques, <em>Semi-Local Exchange-Correlation Approximations in Density Functional Theory</em>, arXiv:2602.17333</a>.</p>
+      </section>
+
+        <section class="section">
+          <h2>Referenced Review Equations</h2>
+          <div class="review-equations">
+          <article class="review-equation-card" id="review-eq-eq-vxbrhole">
+            <code>eq:vxbrhole</code>
+            <div class="equation" data-tex="v^\text{BR89,hole}_{\text{x}\sigma}=2e^\text{BR89}_{\text{x}\sigma}"></div>
+          </article>
+
+          <article class="review-equation-card" id="review-eq-eq-tb09-c">
+            <code>eq:tb09-c</code>
+            <div class="equation" data-tex="c = \alpha + \beta \left[ \frac{1}{V_{\text{cell}}} \int_{\text{cell}}\!\D\br&#39;\, \frac{|\nabla n(\br&#39;)|}{n(\br&#39;)} \right]^e"></div>
+          </article>
+
+          <article class="review-equation-card" id="review-eq-eq-tb09-v">
+            <code>eq:tb09-v</code>
+            <div class="equation" data-tex="v^\text{TB09}_{\text{x}\sigma} = c v^\text{BR89,hole}_{\text{x}\sigma} + (3c-2)\frac{1}{\pi}\sqrt{\frac{5}{6}}\sqrt{\frac{\tau_\sigma}{n_\sigma}}"></div>
+          </article>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <h2>Review References</h2>
+          <ol class="review-refs"><li id="review-ref-Tran2007-196208" value="708">Tran, F.; Blaha, P.; Schwarz, K. Band gap calculations with Becke-Johnson exchange potential. <em>J. Phys.: Condens. Matter</em> <strong>2007</strong>, <em>19</em>, 196208, DOI: <a href="https://doi.org/10.1088/0953-8984/19/19/196208">10.1088/0953-8984/19/19/196208</a></li>
+<li id="review-ref-Tran2009-226401" value="707">Tran, F.; Blaha, P. Accurate Band Gaps of Semiconductors and Insulators with a Semilocal Exchange-Correlation Potential. <em>Phys. Rev. Lett.</em> <strong>2009</strong>, <em>102</em>, 226401, DOI: <a href="https://doi.org/10.1103/PhysRevLett.102.226401">10.1103/PhysRevLett.102.226401</a></li>
+<li id="review-ref-Borlido2019-5069" value="408">Borlido, P.; Aull, T.; Huran, A. W.; Tran, F.; Marques, M. A. L.; Botti, S. Large-Scale Benchmark of ExchangetextendashCorrelation Functionals for the Determination of Electronic Band Gaps of Solids. <em>J. Chem. Theory Comput.</em> <strong>2019</strong>, <em>15</em>, 5069--5079, DOI: <a href="https://doi.org/10.1021/acs.jctc.9b00322">10.1021/acs.jctc.9b00322</a></li>
+<li id="review-ref-Borlido2020-96" value="409">Borlido, P.; Schmidt, J.; Huran, A. W.; Tran, F.; Marques, M. A. L.; Botti, S. Exchange-correlation functionals for band gaps of solids: benchmark, reparametrization and machine learning. <em>npj Comput. Mater.</em> <strong>2020</strong>, <em>6</em>, 96, DOI: <a href="https://doi.org/10.1038/s41524-020-00360-0">10.1038/s41524-020-00360-0</a></li>
+<li id="review-ref-Tran2019-110902" value="709">Tran, F.; Doumont, J.; Kalantari, L.; Huran, A. W.; Marques, M. A. L.; Blaha, P. Semilocal exchange-correlation potentials for solid-state calculations: Current status and future directions. <em>J. Appl. Phys.</em> <strong>2019</strong>, <em>126</em>, 110902, DOI: <a href="https://doi.org/10.1063/1.5118863">10.1063/1.5118863</a></li></ol>
+        </section>
+
+        <section class="section">
+          <h2>Publications</h2>
+          <ol class="publication-refs"><li>Tran, F.; Blaha, P. Accurate Band Gaps of Semiconductors and Insulators with a Semilocal Exchange-Correlation Potential. <em>Phys. Rev. Lett.</em> <strong>2009</strong>, <em>102</em>, 226401, DOI: <a href="https://doi.org/10.1103/PhysRevLett.102.226401">10.1103/PhysRevLett.102.226401</a></li></ol>
+        </section>
+
+        <section class="section">
+          <div class="section-heading">
+            <h2>BibTeX</h2>
+            <button class="copy-button" type="button" data-copy-target="bibtex-code" aria-label="Copy BibTeX">Copy</button>
+          </div>
+          <pre><code id="bibtex-code">@article{Tran2009_226401,
+  author = {Tran, F. and Blaha, P.},
+  title = {Accurate Band Gaps of Semiconductors and Insulators with a Semilocal Exchange-Correlation Potential},
+  journal = {Phys. Rev. Lett.},
+  volume = {102},
+  issue = {22},
+  pages = {226401},
+  year = {2009},
+  month = {Jun},
+  publisher = {American Physical Society},
+  doi = {10.1103/PhysRevLett.102.226401},
+  url = {http://link.aps.org/doi/10.1103/PhysRevLett.102.226401}
+}
+</code></pre>
+        </section>
+
+        <details>
+          <summary>All Libxc metadata</summary>
+          <dl class="metadata">
+            <dt>identifier</dt><dd>mgga_x_tb09</dd>
+            <dt>family</dt><dd>meta-gga</dd>
+            <dt>kind</dt><dd>exchange</dd>
+            <dt>derivatives</dt><dd>1, 2</dd>
+            <dt>flags</dt><dd>dim3, fxc, needs_laplacian, vxc, needs_tau, enforce_fhc</dd>
+<dt>cam_alpha</dt><dd>null</dd>
+<dt>cam_beta</dt><dd>null</dd>
+<dt>cam_omega</dt><dd>null</dd>
+<dt>density_threshold</dt><dd>1.0e-23</dd>
+<dt>exx_coefficient</dt><dd>null</dd>
+<dt>n_spin</dt><dd>1</dd>
+<dt>nlc_C</dt><dd>null</dd>
+<dt>nlc_b</dt><dd>null</dd>
+<dt>sigma_threshold</dt><dd>2.154434690031892e-31</dd>
+<dt>tau_threshold</dt><dd>1.0e-20</dd>
+<dt>zeta_threshold</dt><dd>2.220446049250313e-16</dd>
+          </dl>
+        </details>
+      </div>
+
+    </main>
+    <div id="command-palette" class="command-palette" aria-hidden="true" hidden>
+      <div class="command-backdrop" data-command-close></div>
+      <form class="command-panel" role="search">
+        <div class="search-box">
+          <input id="command-search" class="search-input command-search-input" type="search" autocomplete="off" placeholder="Search functionals..." aria-controls="command-search-suggestions">
+          <div id="command-search-suggestions" class="search-suggestions command-search-suggestions" role="listbox" hidden></div>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>mgga_x_task</title>
+    <link rel="stylesheet" href="../../assets/styles.css?v=20260822-github">
+    <script defer src="../../assets/search.js?v=20260822-github"></script>
+    <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+    <script defer src="../../vendor/katex/katex.min.js"></script>
+    <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
+    <script defer src="../../assets/detail.js?v=20260822-github"></script>
+
+  </head>
+  <body>
+    <main class="shell">
+      <form class="global-search" role="search" action="../../" method="get">
+        <div class="search-box">
+          <input class="search-input global-search-input" name="q" type="search" autocomplete="off" placeholder="Search functionals..." aria-controls="global-search-suggestions">
+          <span class="search-shortcut" aria-hidden="true">Ctrl K</span>
+          <div id="global-search-suggestions" class="search-suggestions" role="listbox" hidden></div>
+        </div>
+      </form>
+
+      <a class="back" href="../../">Back to search</a>
+      <header class="top">
+        <a class="github-link" href="https://github.com/aouinaayoub/libxc-wiki" aria-label="View Libxc Wiki on GitHub" title="View source on GitHub">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .7a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2.23c-3.22.7-3.9-1.37-3.9-1.37-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.71.08-.71 1.16.08 1.78 1.2 1.78 1.2 1.04 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.74-1.55-2.57-.29-5.27-1.29-5.27-5.69 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.16 1.18a10.94 10.94 0 0 1 5.76 0c2.19-1.49 3.16-1.18 3.16-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.42-2.71 5.39-5.29 5.68.42.36.79 1.07.79 2.16v3.2c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .7Z"/></svg>
+        </a>
+
+        <p class="brand">META-GGA</p>
+        <h1><code class="title-code">mgga_x_task</code></h1>
+        <div class="detail-tags"><span class="tag">meta-gga</span>
+<span class="tag">exchange</span></div>
+      </header>
+
+      <div class="detail-grid">
+      <section class="callout">
+        <p class="callout-label">Review excerpt</p>
+        <div class="review-html">
+<p>Aschebrock and Kummel<sup class="citation-marker"><a href="#review-ref-Aschebrock2019-033082">756</a></sup> recognized that a positive and large derivative discontinuity can be obtained from a MGGA functional if the enhancement factor satisfies</p>
+<div class="equation" data-tex="\frac{\partial F_{\text{x}}}{\partial\alpha_{\sigma}}&lt;0"></div>
+<p>As a function $F_{\text{x}}$ that fulfills this condition they proposed</p>
+<div class="equation" data-tex="\begin{aligned}
+F_\text{x}^\text{TASK} = &amp; h_{\text{x}}^0 g(s_\sigma) + \left[1-f(\alpha_{\sigma})\right]  \\
+  &amp; \times\left[h_{\text{x}}^1(s_\sigma)-h_{\text{x}}^0\right]g^d(s_\sigma)
+\end{aligned}"></div>
+<p>that has the same form as <a class="review-eq-link" href="#review-eq-eq-fscan">
+  <code>eq:fscan</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="\begin{aligned}
+F_\text{x}^\text{SCAN} = &amp; \left\{h_{\text{x}}^1(s_\sigma,\alpha_\sigma)
+  + f(\alpha_\sigma)\right.  \\
+
+  &amp; \left.\times\left[h_{\text{x}}^0 - h_{\text{x}}^1(s_\sigma,\alpha_\sigma)\right]\right\}g(s_\sigma)
+\end{aligned}"></span>
+  </span>
+</a> of <a class="functional-link" href="../mgga-x-scan/"><code>mgga_x_scan</code></a> if the power $d=1$. The definitions of the various quantities in <a class="review-eq-link" href="#review-eq-eq-ftask">
+  <code>eq:ftask</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="\begin{aligned}
+F_\text{x}^\text{TASK} = &amp; h_{\text{x}}^0 g(s_\sigma) + \left[1-f(\alpha_{\sigma})\right]  \\
+
+  &amp; \times\left[h_{\text{x}}^1(s_\sigma)-h_{\text{x}}^0\right]g^d(s_\sigma)
+\end{aligned}"></span>
+  </span>
+</a> are as follows. $h_{\text{x}}^0=1.174$, such that the strongly tightened LO bound, $F_\text{x}\le 1.174$,<sup class="citation-marker"><a href="#review-ref-Perdew2014-18A533">725</a></sup> as well as $F_\text{x}(s_{\sigma},\alpha_{\sigma})\le F_\text{x}(s_{\sigma},\alpha_{\sigma}=0)\le 1.174$ are obeyed. The function $g$ is given by</p>
+<div class="equation" data-tex="g(s_\sigma) = 1 - \E^{-cs_{\sigma}^{-1/2}}"></div>
+<p>where $c=4.9479$ so that the correct energy of the H atom is obtained. The functions $h_{\text{x}}^1$ and $f$ are given by</p>
+<div class="equation" data-tex="h_{\text{x}}^1(s_\sigma) = \sum_{i=0}^2 a_i R_i(s_{\sigma}^2)"></div>
+<p>where $R_i$ are Chebyshev rational functions, $a_0=0.938719$, $a_1=-0.076371$, and $a_2=-0.0150899$, and</p>
+<div class="equation" data-tex="f(\alpha_{\sigma}) = \sum_{i=0}^4 b_i R_i(\alpha_{\sigma})"></div>
+<p>where $b_0=-0.628591$, $b_1=-2.10315$, $b_2=-0.5$, $b_3=0.103153$, and $b_4=0.128591$. The coefficients $a_i$ and $b_i$ were determined such that (i) the fourth-order density-gradient expansion of exchange <sup class="citation-marker"><a href="#review-ref-Svendsen1996-17402">285</a></sup> in the limit of a slowly varying density with $\alpha_\sigma\approx1$ is recovered and (ii) $f(\alpha_{\sigma}\to\infty)=-3$, which ensures that $\partial F_{\text{x}}/\partial\alpha_{\sigma}$ satisfies <a class="review-eq-link" href="#review-eq-eq-task-alpha">
+  <code>eq:task-alpha</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="\frac{\partial F_{\text{x}}}{\partial\alpha_{\sigma}}&lt;0"></span>
+  </span>
+</a> and that it has a sizable value at small $\alpha_{\sigma}$. Finally, the power $d=10$ in <a class="review-eq-link" href="#review-eq-eq-ftask">
+  <code>eq:ftask</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="\begin{aligned}
+F_\text{x}^\text{TASK} = &amp; h_{\text{x}}^0 g(s_\sigma) + \left[1-f(\alpha_{\sigma})\right]  \\
+
+  &amp; \times\left[h_{\text{x}}^1(s_\sigma)-h_{\text{x}}^0\right]g^d(s_\sigma)
+\end{aligned}"></span>
+  </span>
+</a> was chosen for a fast decay of $F_\text{x}^\text{TASK}$ in the asymptotic region, where $s_\sigma$ is large, and to ensure a negative exchange-energy density.</p>
+<p>By requiring a large derivative discontinuity, which is equivalent to incorporating a strong amount of nonlocality (termed ultranonlocality), the gaps are much larger than those obtained with standard functionals, like PBE (<a class="functional-link" href="../gga-x-pbe/"><code>gga_x_pbe</code></a> + <a class="functional-link" href="../gga-c-pbe/"><code>gga_c_pbe</code></a>) or SCAN (<a class="functional-link" href="../mgga-x-scan/"><code>mgga_x_scan</code></a> + <a class="functional-link" href="../mgga-c-scan/"><code>mgga_c_scan</code></a>), and in good agreement with experiment. Combined with <a class="functional-link" href="../mgga-c-ccalda/"><code>mgga_c_ccalda</code></a> for the correlation, the functional leads to atomization energies of molecules that are quite accurate and competes with PBE or SCAN.<sup class="citation-marker"><a href="#review-ref-Lebeda2022-023061">757</a></sup> However, the functional does not work for hydrogen bonds.<sup class="citation-marker"><a href="#review-ref-Ahmed2025-PCCP-8706">758</a></sup></p>
+        </div>
+        <p class="source-note">Adapted from <a href="https://arxiv.org/abs/2602.17333">Tran, Lehtola, Pittalis, and Marques, <em>Semi-Local Exchange-Correlation Approximations in Density Functional Theory</em>, arXiv:2602.17333</a>.</p>
+      </section>
+
+        <section class="section">
+          <h2>Referenced Review Equations</h2>
+          <div class="review-equations">
+          <article class="review-equation-card" id="review-eq-eq-fscan">
+            <code>eq:fscan</code>
+            <div class="equation" data-tex="\begin{aligned}
+F_\text{x}^\text{SCAN} = &amp; \left\{h_{\text{x}}^1(s_\sigma,\alpha_\sigma)
+  + f(\alpha_\sigma)\right.  \\
+
+  &amp; \left.\times\left[h_{\text{x}}^0 - h_{\text{x}}^1(s_\sigma,\alpha_\sigma)\right]\right\}g(s_\sigma)
+\end{aligned}"></div>
+          </article>
+
+          <article class="review-equation-card" id="review-eq-eq-ftask">
+            <code>eq:ftask</code>
+            <div class="equation" data-tex="\begin{aligned}
+F_\text{x}^\text{TASK} = &amp; h_{\text{x}}^0 g(s_\sigma) + \left[1-f(\alpha_{\sigma})\right]  \\
+
+  &amp; \times\left[h_{\text{x}}^1(s_\sigma)-h_{\text{x}}^0\right]g^d(s_\sigma)
+\end{aligned}"></div>
+          </article>
+
+          <article class="review-equation-card" id="review-eq-eq-task-alpha">
+            <code>eq:task-alpha</code>
+            <div class="equation" data-tex="\frac{\partial F_{\text{x}}}{\partial\alpha_{\sigma}}&lt;0"></div>
+          </article>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <h2>Review References</h2>
+          <ol class="review-refs"><li id="review-ref-Aschebrock2019-033082" value="756">Aschebrock, T.; Kummel, S. Ultranonlocality and accurate band gaps from a meta-generalized gradient approximation. <em>Phys. Rev. Res.</em> <strong>2019</strong>, <em>1</em>, 033082, DOI: <a href="https://doi.org/10.1103/PhysRevResearch.1.033082">10.1103/PhysRevResearch.1.033082</a></li>
+<li id="review-ref-Perdew2014-18A533" value="725">Perdew, J. P.; Ruzsinszky, A.; Sun, J.; Burke, K. Gedanken densities and exact constraints in density functional theory. <em>J. Chem. Phys.</em> <strong>2014</strong>, <em>140</em>, 18A533, DOI: <a href="https://doi.org/10.1063/1.4870763">10.1063/1.4870763</a></li>
+<li id="review-ref-Svendsen1996-17402" value="285">Svendsen, P. S.; von Barth, U. Gradient expansion of the exchange energy from second-order density response theory. <em>Phys. Rev. B</em> <strong>1996</strong>, <em>54</em>, 17402--17413, DOI: <a href="https://doi.org/10.1103/PhysRevB.54.17402">10.1103/PhysRevB.54.17402</a></li>
+<li id="review-ref-Lebeda2022-023061" value="757">Lebeda, T.; Aschebrock, T.; Kummel, S. First steps towards achieving both ultranonlocality and a reliable description of electronic binding in a meta-generalized gradient approximation. <em>Phys. Rev. Res.</em> <strong>2022</strong>, <em>4</em>, 023061, DOI: <a href="https://doi.org/10.1103/PhysRevResearch.4.023061">10.1103/PhysRevResearch.4.023061</a></li>
+<li id="review-ref-Ahmed2025-PCCP-8706" value="758">Ahmed, U.; Johansson, M. P.; Lehtola, S.; Sundholm, D. Density functional benchmark for quadruple hydrogen bonds. <em>Phys. Chem. Chem. Phys.</em> <strong>2025</strong>, <em>27</em>, 8706, DOI: <a href="https://doi.org/10.1039/d5cp00836k">10.1039/d5cp00836k</a></li></ol>
+        </section>
+
+        <section class="section">
+          <h2>Publications</h2>
+          <ol class="publication-refs"><li>Aschebrock, T.; Kummel, S. Ultranonlocality and accurate band gaps from a meta-generalized gradient approximation. <em>Phys. Rev. Res.</em> <strong>2019</strong>, <em>1</em>, 033082, DOI: <a href="https://doi.org/10.1103/PhysRevResearch.1.033082">10.1103/PhysRevResearch.1.033082</a></li></ol>
+        </section>
+
+        <section class="section">
+          <div class="section-heading">
+            <h2>BibTeX</h2>
+            <button class="copy-button" type="button" data-copy-target="bibtex-code" aria-label="Copy BibTeX">Copy</button>
+          </div>
+          <pre><code id="bibtex-code">@article{Aschebrock2019_033082,
+  author = {Aschebrock, Thilo and K\&quot;{u}mmel, Stephan},
+  title = {Ultranonlocality and accurate band gaps from a meta-generalized gradient approximation},
+  journal = {Phys. Rev. Res.},
+  volume = {1},
+  issue = {3},
+  pages = {033082},
+  year = {2019},
+  month = {Nov},
+  publisher = {American Physical Society},
+  doi = {10.1103/PhysRevResearch.1.033082},
+  url = {https://link.aps.org/doi/10.1103/PhysRevResearch.1.033082}
+}
+</code></pre>
+        </section>
+
+        <details>
+          <summary>All Libxc metadata</summary>
+          <dl class="metadata">
+            <dt>identifier</dt><dd>mgga_x_task</dd>
+            <dt>family</dt><dd>meta-gga</dd>
+            <dt>kind</dt><dd>exchange</dd>
+            <dt>derivatives</dt><dd>0, 1, 2</dd>
+            <dt>flags</dt><dd>dim3, exc, fxc, vxc, needs_tau, enforce_fhc</dd>
+<dt>cam_alpha</dt><dd>null</dd>
+<dt>cam_beta</dt><dd>null</dd>
+<dt>cam_omega</dt><dd>null</dd>
+<dt>density_threshold</dt><dd>1.0e-15</dd>
+<dt>exx_coefficient</dt><dd>null</dd>
+<dt>n_spin</dt><dd>1</dd>
+<dt>nlc_C</dt><dd>null</dd>
+<dt>nlc_b</dt><dd>null</dd>
+<dt>sigma_threshold</dt><dd>1.0000000000000027e-20</dd>
+<dt>tau_threshold</dt><dd>1.0e-20</dd>
+<dt>zeta_threshold</dt><dd>2.220446049250313e-16</dd>
+          </dl>
+        </details>
+      </div>
+
+    </main>
+    <div id="command-palette" class="command-palette" aria-hidden="true" hidden>
+      <div class="command-backdrop" data-command-close></div>
+      <form class="command-panel" role="search">
+        <div class="search-box">
+          <input id="command-search" class="search-input command-search-input" type="search" autocomplete="off" placeholder="Search functionals..." aria-controls="command-search-suggestions">
+          <div id="command-search-suggestions" class="search-suggestions command-search-suggestions" role="listbox" hidden></div>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

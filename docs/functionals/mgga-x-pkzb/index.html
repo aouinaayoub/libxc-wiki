@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>mgga_x_pkzb</title>
+    <link rel="stylesheet" href="../../assets/styles.css?v=20260822-github">
+    <script defer src="../../assets/search.js?v=20260822-github"></script>
+    <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+    <script defer src="../../vendor/katex/katex.min.js"></script>
+    <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
+    <script defer src="../../assets/detail.js?v=20260822-github"></script>
+
+  </head>
+  <body>
+    <main class="shell">
+      <form class="global-search" role="search" action="../../" method="get">
+        <div class="search-box">
+          <input class="search-input global-search-input" name="q" type="search" autocomplete="off" placeholder="Search functionals..." aria-controls="global-search-suggestions">
+          <span class="search-shortcut" aria-hidden="true">Ctrl K</span>
+          <div id="global-search-suggestions" class="search-suggestions" role="listbox" hidden></div>
+        </div>
+      </form>
+
+      <a class="back" href="../../">Back to search</a>
+      <header class="top">
+        <a class="github-link" href="https://github.com/aouinaayoub/libxc-wiki" aria-label="View Libxc Wiki on GitHub" title="View source on GitHub">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .7a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2.23c-3.22.7-3.9-1.37-3.9-1.37-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.71.08-.71 1.16.08 1.78 1.2 1.78 1.2 1.04 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.74-1.55-2.57-.29-5.27-1.29-5.27-5.69 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.16 1.18a10.94 10.94 0 0 1 5.76 0c2.19-1.49 3.16-1.18 3.16-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.42-2.71 5.39-5.29 5.68.42.36.79 1.07.79 2.16v3.2c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .7Z"/></svg>
+        </a>
+
+        <p class="brand">META-GGA</p>
+        <h1><code class="title-code">mgga_x_pkzb</code></h1>
+        <div class="detail-tags"><span class="tag">meta-gga</span>
+<span class="tag">exchange</span></div>
+      </header>
+
+      <div class="detail-grid">
+      <section class="callout">
+        <p class="callout-label">Review excerpt</p>
+        <div class="review-html">
+<p>Perdew et al.<sup class="citation-marker"><a href="#review-ref-Perdew1999-PRL-2544">13</a></sup> constructed an enhancement factor that recovers the fourth-order gradient expansion<sup class="citation-marker"><a href="#review-ref-Svendsen1996-17402">285</a></sup> in the limit of a slowly varying density. It has the same form as the enhancement factor of <a class="functional-link" href="../gga-x-pbe/"><code>gga_x_pbe</code></a> (see <a class="review-eq-link" href="#review-eq-eq-pbeenh">
+  <code>eq:pbeenh</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="F_\text{x}^{\text{PBE}} = 1 + \kappa\left[1 - \frac{\kappa}{\kappa + f_0(s_\sigma)}\right]"></span>
+  </span>
+</a>), but with the function $f_0$ replaced by</p>
+<div class="equation" data-tex="\begin{aligned}
+f_0^\text{PKZB} = &amp; \mu^\text{GE} p_\sigma
+  + \frac{146}{2025} \tilde q_\sigma^2 - \frac{73}{405} \tilde q_\sigma p_\sigma  \\
+  &amp; + \left[D + \frac{\left(\mu^\text{GE}\right)^2}{\kappa}\right] p_\sigma^2
+\end{aligned}"></div>
+<p>where $\tilde q_\sigma$ is defined as</p>
+<div class="equation" data-tex="\tilde q_\sigma = 6C_s^2\tilde{t}_\sigma - \frac{9}{20} - \frac{p_\sigma}{12}"></div>
+<p>The constant $D$ is not known from the density-gradient expansion, and was therefore fit in order to minimize the error in the atomization energies of 20 molecules,<sup class="citation-marker"><a href="#review-ref-Perdew1996-3865">165</a>,<a href="#review-ref-Perdew1997-1396">166</a></sup> leading to $D=0.113$. Finally, $\kappa=\kappa^{\text{PBE}}$ in <a class="review-eq-link" href="#review-eq-eq-pkzbf0">
+  <code>eq:pkzbf0</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="\begin{aligned}
+f_0^\text{PKZB} = &amp; \mu^\text{GE} p_\sigma
+  + \frac{146}{2025} \tilde q_\sigma^2 - \frac{73}{405} \tilde q_\sigma p_\sigma  \\
+
+  &amp; + \left[D + \frac{\left(\mu^\text{GE}\right)^2}{\kappa}\right] p_\sigma^2
+\end{aligned}"></span>
+  </span>
+</a>; <a class="review-eq-link" href="#review-eq-eq-pbeenh">
+  <code>eq:pbeenh</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="F_\text{x}^{\text{PBE}} = 1 + \kappa\left[1 - \frac{\kappa}{\kappa + f_0(s_\sigma)}\right]"></span>
+  </span>
+</a> is the same value as in <a class="functional-link" href="../gga-x-pbe/"><code>gga_x_pbe</code></a>.</p>
+<p>When combined with <a class="functional-link" href="../mgga-c-pkzb/"><code>mgga_c_pkzb</code></a>, this functional yields molecular atomization energies and metal surface energies that are significantly improved over those of PBE (<a class="functional-link" href="../gga-x-pbe/"><code>gga_x_pbe</code></a> + <a class="functional-link" href="../gga-c-pbe/"><code>gga_c_pbe</code></a>), while lattice constants are slightly improved (see the Erratum<sup class="citation-marker"><a href="#review-ref-Perdew1999-PRL-5179">14</a></sup>).</p>
+        </div>
+        <p class="source-note">Adapted from <a href="https://arxiv.org/abs/2602.17333">Tran, Lehtola, Pittalis, and Marques, <em>Semi-Local Exchange-Correlation Approximations in Density Functional Theory</em>, arXiv:2602.17333</a>.</p>
+      </section>
+
+        <section class="section">
+          <h2>Referenced Review Equations</h2>
+          <div class="review-equations">
+          <article class="review-equation-card" id="review-eq-eq-pbeenh">
+            <code>eq:pbeenh</code>
+            <div class="equation" data-tex="F_\text{x}^{\text{PBE}} = 1 + \kappa\left[1 - \frac{\kappa}{\kappa + f_0(s_\sigma)}\right]"></div>
+          </article>
+
+          <article class="review-equation-card" id="review-eq-eq-pkzbf0">
+            <code>eq:pkzbf0</code>
+            <div class="equation" data-tex="\begin{aligned}
+f_0^\text{PKZB} = &amp; \mu^\text{GE} p_\sigma
+  + \frac{146}{2025} \tilde q_\sigma^2 - \frac{73}{405} \tilde q_\sigma p_\sigma  \\
+
+  &amp; + \left[D + \frac{\left(\mu^\text{GE}\right)^2}{\kappa}\right] p_\sigma^2
+\end{aligned}"></div>
+          </article>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <h2>Review References</h2>
+          <ol class="review-refs"><li id="review-ref-Perdew1999-PRL-2544" value="13">Perdew, J.; Kurth, S.; Zupan, A.; Blaha, P. Accurate Density Functional with Correct Formal Properties: A Step Beyond the Generalized Gradient Approximation. <em>Phys. Rev. Lett.</em> <strong>1999</strong>, <em>82</em>, 2544--2547, DOI: <a href="https://doi.org/10.1103/PhysRevLett.82.2544">10.1103/PhysRevLett.82.2544</a></li>
+<li id="review-ref-Svendsen1996-17402" value="285">Svendsen, P. S.; von Barth, U. Gradient expansion of the exchange energy from second-order density response theory. <em>Phys. Rev. B</em> <strong>1996</strong>, <em>54</em>, 17402--17413, DOI: <a href="https://doi.org/10.1103/PhysRevB.54.17402">10.1103/PhysRevB.54.17402</a></li>
+<li id="review-ref-Perdew1996-3865" value="165">Perdew, J. P.; Burke, K.; Ernzerhof, M. Generalized Gradient Approximation Made Simple. <em>Phys. Rev. Lett.</em> <strong>1996</strong>, <em>77</em>, 3865, DOI: <a href="https://doi.org/10.1103/PhysRevLett.77.3865">10.1103/PhysRevLett.77.3865</a></li>
+<li id="review-ref-Perdew1997-1396" value="166">Perdew, J. P.; Burke, K.; Ernzerhof, M. Errata: Generalized Gradient Approximation Made Simple [Phys. Rev. Lett. 77, 3865 (1996)]. <em>Phys. Rev. Lett.</em> <strong>1997</strong>, <em>78</em>, 1396, DOI: <a href="https://doi.org/10.1103/PhysRevLett.78.1396">10.1103/PhysRevLett.78.1396</a></li>
+<li id="review-ref-Perdew1999-PRL-5179" value="14">Perdew, J. P.; Kurth, S.; Zupan, A.; Blaha, P. Erratum: Accurate Density Functional with Correct Formal Properties: A Step Beyond the Generalized Gradient Approximation [Phys. Rev. Lett. 82, 2544 (1999)]. <em>Phys. Rev. Lett.</em> <strong>1999</strong>, <em>82</em>, 5179--5179, DOI: <a href="https://doi.org/10.1103/PhysRevLett.82.5179">10.1103/PhysRevLett.82.5179</a></li></ol>
+        </section>
+
+        <section class="section">
+          <h2>Publications</h2>
+          <ol class="publication-refs"><li>Perdew, J.; Kurth, S.; Zupan, A.; Blaha, P. Accurate Density Functional with Correct Formal Properties: A Step Beyond the Generalized Gradient Approximation. <em>Phys. Rev. Lett.</em> <strong>1999</strong>, <em>82</em>, 2544--2547, DOI: <a href="https://doi.org/10.1103/PhysRevLett.82.2544">10.1103/PhysRevLett.82.2544</a></li></ol>
+        </section>
+
+        <section class="section">
+          <div class="section-heading">
+            <h2>BibTeX</h2>
+            <button class="copy-button" type="button" data-copy-target="bibtex-code" aria-label="Copy BibTeX">Copy</button>
+          </div>
+          <pre><code id="bibtex-code">@article{Perdew1999_2544,
+  author = {Perdew, J. P. and Kurth, S. and Zupan, A. and Blaha, P.},
+  title = {Accurate Density Functional with Correct Formal Properties: A Step Beyond the Generalized Gradient Approximation},
+  journal = {Phys. Rev. Lett.},
+  volume = {82},
+  issue = {12},
+  pages = {2544},
+  year = {1999},
+  month = {Mar},
+  publisher = {American Physical Society},
+  doi = {10.1103/PhysRevLett.82.2544},
+  url = {http://link.aps.org/doi/10.1103/PhysRevLett.82.2544}
+}
+</code></pre>
+        </section>
+
+        <details>
+          <summary>All Libxc metadata</summary>
+          <dl class="metadata">
+            <dt>identifier</dt><dd>mgga_x_pkzb</dd>
+            <dt>family</dt><dd>meta-gga</dd>
+            <dt>kind</dt><dd>exchange</dd>
+            <dt>derivatives</dt><dd>0, 1, 2</dd>
+            <dt>flags</dt><dd>dim3, exc, fxc, vxc, needs_tau, enforce_fhc</dd>
+<dt>cam_alpha</dt><dd>null</dd>
+<dt>cam_beta</dt><dd>null</dd>
+<dt>cam_omega</dt><dd>null</dd>
+<dt>density_threshold</dt><dd>1.0e-15</dd>
+<dt>exx_coefficient</dt><dd>null</dd>
+<dt>n_spin</dt><dd>1</dd>
+<dt>nlc_C</dt><dd>null</dd>
+<dt>nlc_b</dt><dd>null</dd>
+<dt>sigma_threshold</dt><dd>1.0000000000000027e-20</dd>
+<dt>tau_threshold</dt><dd>1.0e-20</dd>
+<dt>zeta_threshold</dt><dd>2.220446049250313e-16</dd>
+          </dl>
+        </details>
+      </div>
+
+    </main>
+    <div id="command-palette" class="command-palette" aria-hidden="true" hidden>
+      <div class="command-backdrop" data-command-close></div>
+      <form class="command-panel" role="search">
+        <div class="search-box">
+          <input id="command-search" class="search-input command-search-input" type="search" autocomplete="off" placeholder="Search functionals..." aria-controls="command-search-suggestions">
+          <div id="command-search-suggestions" class="search-suggestions command-search-suggestions" role="listbox" hidden></div>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

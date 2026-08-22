@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>mgga_x_tpss</title>
+    <link rel="stylesheet" href="../../assets/styles.css?v=20260822-github">
+    <script defer src="../../assets/search.js?v=20260822-github"></script>
+    <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+    <script defer src="../../vendor/katex/katex.min.js"></script>
+    <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
+    <script defer src="../../assets/detail.js?v=20260822-github"></script>
+
+  </head>
+  <body>
+    <main class="shell">
+      <form class="global-search" role="search" action="../../" method="get">
+        <div class="search-box">
+          <input class="search-input global-search-input" name="q" type="search" autocomplete="off" placeholder="Search functionals..." aria-controls="global-search-suggestions">
+          <span class="search-shortcut" aria-hidden="true">Ctrl K</span>
+          <div id="global-search-suggestions" class="search-suggestions" role="listbox" hidden></div>
+        </div>
+      </form>
+
+      <a class="back" href="../../">Back to search</a>
+      <header class="top">
+        <a class="github-link" href="https://github.com/aouinaayoub/libxc-wiki" aria-label="View Libxc Wiki on GitHub" title="View source on GitHub">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .7a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2.23c-3.22.7-3.9-1.37-3.9-1.37-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.71.08-.71 1.16.08 1.78 1.2 1.78 1.2 1.04 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.74-1.55-2.57-.29-5.27-1.29-5.27-5.69 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.16 1.18a10.94 10.94 0 0 1 5.76 0c2.19-1.49 3.16-1.18 3.16-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.42-2.71 5.39-5.29 5.68.42.36.79 1.07.79 2.16v3.2c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .7Z"/></svg>
+        </a>
+
+        <p class="brand">META-GGA</p>
+        <h1><code class="title-code">mgga_x_tpss</code></h1>
+        <div class="detail-tags"><span class="tag">meta-gga</span>
+<span class="tag">exchange</span></div>
+      </header>
+
+      <div class="detail-grid">
+      <section class="callout">
+        <p class="callout-label">Review excerpt</p>
+        <div class="review-html">
+<p>This functional was developed to correct some deficiencies of PKZB (<a class="functional-link" href="../mgga-x-pkzb/"><code>mgga_x_pkzb</code></a> + <a class="functional-link" href="../mgga-c-pkzb/"><code>mgga_c_pkzb</code></a>), namely the poor description of equilibrium bond lengths<sup class="citation-marker"><a href="#review-ref-Adamo2000-2643">693</a></sup> and hydrogen-bonded complexes.<sup class="citation-marker"><a href="#review-ref-Rabuck2000-439">694</a></sup> It is still constructed based on the <a class="functional-link" href="../gga-x-pbe/"><code>gga_x_pbe</code></a> enhancement factor and the fourth-order density-gradient expansion from <sup class="citation-marker"><a href="#review-ref-Svendsen1996-17402">285</a></sup>, adding a few more constraints.</p>
+<p>The function $f_0$ (see <a class="review-eq-link" href="#review-eq-eq-pbeenh">
+  <code>eq:pbeenh</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="F_\text{x}^{\text{PBE}} = 1 + \kappa\left[1 - \frac{\kappa}{\kappa + f_0(s_\sigma)}\right]"></span>
+  </span>
+</a>; <a class="review-eq-link" href="#review-eq-eq-pkzbf0">
+  <code>eq:pkzbf0</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="\begin{aligned}
+f_0^\text{PKZB} = &amp; \mu^\text{GE} p_\sigma
+  + \frac{146}{2025} \tilde q_\sigma^2 - \frac{73}{405} \tilde q_\sigma p_\sigma  \\
+
+  &amp; + \left[D + \frac{\left(\mu^\text{GE}\right)^2}{\kappa}\right] p_\sigma^2
+\end{aligned}"></span>
+  </span>
+</a>) is now generalized to</p>
+<div class="equation" data-tex="\begin{aligned}
+f_0^\text{TPSS} = \frac{1}{\left(1+\sqrt{e}p_\sigma\right)^2}\left\{
+  \left[\mu^\text{GE} + c\frac{z_\sigma^f}{(1+z_\sigma^2)^2}\right] p_\sigma
+  \right.
+   \\
+  + \frac{146}{2025} \tilde q_{\sigma}^2 
+  - \frac{73}{405\sqrt{2}} \tilde q_{\sigma} \sqrt{\frac{9}{25}z_\sigma^2 + p_\sigma^2}
+   \\
+  \left.+ \frac{\left(\mu^\text{GE}\right)^2}{\kappa} p_\sigma^2
+  + 2\sqrt{e}\mu^\text{GE}\frac{9}{25}z_\sigma^2 + e \mu^\text{PBE} p_\sigma^3
+  \right\}
+\end{aligned}"></div>
+<p>with $f=2$. Compared to <a class="review-eq-link" href="#review-eq-eq-pkzbf0">
+  <code>eq:pkzbf0</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="\begin{aligned}
+f_0^\text{PKZB} = &amp; \mu^\text{GE} p_\sigma
+  + \frac{146}{2025} \tilde q_\sigma^2 - \frac{73}{405} \tilde q_\sigma p_\sigma  \\
+
+  &amp; + \left[D + \frac{\left(\mu^\text{GE}\right)^2}{\kappa}\right] p_\sigma^2
+\end{aligned}"></span>
+  </span>
+</a> a few differences can be observed. First, there is the dependence on the variable $z_\sigma$ (<a class="review-eq-link" href="#review-eq-eq-z-sigma">
+  <code>eq:z-sigma</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="z_\sigma = \frac{\tau_\sigma^{\text{W}}}{\tau_\sigma}"></span>
+  </span>
+</a>). Then, the constant $D$ in <a class="functional-link" href="../mgga-x-pkzb/"><code>mgga_x_pkzb</code></a> is set to zero, which is consistent with the best numerical estimate for this coefficient.<sup class="citation-marker"><a href="#review-ref-Svendsen1996-17402">285</a></sup> Finally, the function $\tilde q_\sigma$ is replaced by</p>
+<div class="equation" data-tex="\tilde q_{\sigma} = \frac{9}{20} \frac{\alpha_\sigma -1}
+  {\sqrt{1+b\alpha_\sigma(\alpha_\sigma-1)}} + \frac{2}{3}p_\sigma"></div>
+<p>This function employs the iso-orbital indicator $\alpha_\sigma$ that, as noted in the review, is related to the curvature of the exchange hole and (even more directly) to the electron-localization function of Becke and Edgecombe.<sup class="citation-marker"><a href="#review-ref-Becke1990-JCP-5397">240</a>,<a href="#review-ref-Savin1997-1808">695</a>,<a href="#review-ref-Burnus2005-010501">246</a>,<a href="#review-ref-Pittalis2015-075109">241</a>,<a href="#review-ref-Desmarais2024-136401">248</a></sup></p>
+<p>Besides the usual constants $\mu^\text{GE}$ and $\mu^\text{PBE}$, the parameters $c=1.59096$ and $e=1.537$ were chosen to eliminate the divergence of the functional at the nucleus for a two-electron density and to yield the exact exchange energy of the H atom. Finally, the parameter $b=0.40$ was chosen as the smallest value such that the enhancement factor increases monotonically as a function of $p_\sigma$.</p>
+<p>TPSS (<a class="functional-link" href="../mgga-x-tpss/"><code>mgga_x_tpss</code></a> + <a class="functional-link" href="../mgga-c-tpss/"><code>mgga_c_tpss</code></a>), which was quite popular, gives generally good results for a wide range of systems and properties, correcting the overestimated PKZB bond lengths in molecules, hydrogen-bonded complexes, and ionic solids.</p>
+        </div>
+        <p class="source-note">Adapted from <a href="https://arxiv.org/abs/2602.17333">Tran, Lehtola, Pittalis, and Marques, <em>Semi-Local Exchange-Correlation Approximations in Density Functional Theory</em>, arXiv:2602.17333</a>.</p>
+      </section>
+
+        <section class="section">
+          <h2>Referenced Review Equations</h2>
+          <div class="review-equations">
+          <article class="review-equation-card" id="review-eq-eq-pbeenh">
+            <code>eq:pbeenh</code>
+            <div class="equation" data-tex="F_\text{x}^{\text{PBE}} = 1 + \kappa\left[1 - \frac{\kappa}{\kappa + f_0(s_\sigma)}\right]"></div>
+          </article>
+
+          <article class="review-equation-card" id="review-eq-eq-pkzbf0">
+            <code>eq:pkzbf0</code>
+            <div class="equation" data-tex="\begin{aligned}
+f_0^\text{PKZB} = &amp; \mu^\text{GE} p_\sigma
+  + \frac{146}{2025} \tilde q_\sigma^2 - \frac{73}{405} \tilde q_\sigma p_\sigma  \\
+
+  &amp; + \left[D + \frac{\left(\mu^\text{GE}\right)^2}{\kappa}\right] p_\sigma^2
+\end{aligned}"></div>
+          </article>
+
+          <article class="review-equation-card" id="review-eq-eq-z-sigma">
+            <code>eq:z-sigma</code>
+            <div class="equation" data-tex="z_\sigma = \frac{\tau_\sigma^{\text{W}}}{\tau_\sigma}"></div>
+          </article>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <h2>Review References</h2>
+          <ol class="review-refs"><li id="review-ref-Adamo2000-2643" value="693">Adamo, C.; Ernzerhof, M.; Scuseria, G. E. The meta-GGA functional: Thermochemistry with a kinetic energy density dependent exchange-correlation functional. <em>J. Chem. Phys.</em> <strong>2000</strong>, <em>112</em>, 2643--2649, DOI: <a href="https://doi.org/10.1063/1.480838">10.1063/1.480838</a></li>
+<li id="review-ref-Rabuck2000-439" value="694">Rabuck, D. A.; Scuseria, E. G. Performance of recently developed kinetic energy density functionals for the calculation of hydrogen binding strengths and hydrogen-bonded structures. <em>Theor. Chem. Acc.</em> <strong>2000</strong>, <em>104</em>, 439--444, DOI: <a href="https://doi.org/10.1007/s002140000163">10.1007/s002140000163</a></li>
+<li id="review-ref-Svendsen1996-17402" value="285">Svendsen, P. S.; von Barth, U. Gradient expansion of the exchange energy from second-order density response theory. <em>Phys. Rev. B</em> <strong>1996</strong>, <em>54</em>, 17402--17413, DOI: <a href="https://doi.org/10.1103/PhysRevB.54.17402">10.1103/PhysRevB.54.17402</a></li>
+<li id="review-ref-Becke1990-JCP-5397" value="240">Becke, A. D.; Edgecombe, K. E. A simple measure of electron localization in atomic and molecular systems. <em>J. Chem. Phys.</em> <strong>1990</strong>, <em>92</em>, 5397, DOI: <a href="https://doi.org/10.1063/1.458517">10.1063/1.458517</a></li>
+<li id="review-ref-Savin1997-1808" value="695">Savin, A.; Nesper, R.; Wengert, S.; Fässler, T. F. ELF: The Electron Localization Function. <em>Angew. Chem., Int. Ed. Engl.</em> <strong>1997</strong>, <em>36</em>, 1808--1832, DOI: <a href="https://doi.org/10.1002/anie.199718081">10.1002/anie.199718081</a></li>
+<li id="review-ref-Burnus2005-010501" value="246">Burnus, T.; Marques, M. A. L.; Gross, E. K. U. Time-dependent electron localization function. <em>Phys. Rev. A</em> <strong>2005</strong>, <em>71</em>, 010501, DOI: <a href="https://doi.org/10.1103/PhysRevA.71.010501">10.1103/PhysRevA.71.010501</a></li>
+<li id="review-ref-Pittalis2015-075109" value="241">Pittalis, S.; Troiani, F.; Rozzi, C. A.; Vignale, G. Ab initio theory of spin entanglement in atoms and molecules. <em>Phys. Rev. B</em> <strong>2015</strong>, <em>91</em>, 075109, DOI: <a href="https://doi.org/10.1103/PhysRevB.91.075109">10.1103/PhysRevB.91.075109</a></li>
+<li id="review-ref-Desmarais2024-136401" value="248">Desmarais, J. K.; Vignale, G.; Bencheikh, K.; Erba, A.; Pittalis, S. Electron Localization Function for Noncollinear Spins. <em>Phys. Rev. Lett.</em> <strong>2024</strong>, <em>133</em>, 136401, DOI: <a href="https://doi.org/10.1103/PhysRevLett.133.136401">10.1103/PhysRevLett.133.136401</a></li></ol>
+        </section>
+
+        <section class="section">
+          <h2>Publications</h2>
+          <ol class="publication-refs"><li>Tao, J.; Perdew, J. P.; Staroverov, V. N.; Scuseria, G. E. Climbing the Density Functional Ladder: Nonempirical Meta-Generalized Gradient Approximation Designed for Molecules and Solids. <em>Phys. Rev. Lett.</em> <strong>2003</strong>, <em>91</em>, 146401, DOI: <a href="https://doi.org/10.1103/PhysRevLett.91.146401">10.1103/PhysRevLett.91.146401</a></li>
+<li>Perdew, J. P.; Tao, J.; Staroverov, V. N.; Scuseria, G. E. Meta-generalized gradient approximation: Explanation of a realistic nonempirical density functional. <em>J. Chem. Phys.</em> <strong>2004</strong>, <em>120</em>, 6898, DOI: <a href="https://doi.org/10.1063/1.1665298">10.1063/1.1665298</a></li></ol>
+        </section>
+
+        <section class="section">
+          <div class="section-heading">
+            <h2>BibTeX</h2>
+            <button class="copy-button" type="button" data-copy-target="bibtex-code" aria-label="Copy BibTeX">Copy</button>
+          </div>
+          <pre><code id="bibtex-code">@article{Tao2003_146401,
+  author = {Tao, J. and Perdew, J. P. and Staroverov, V. N. and Scuseria, G. E.},
+  title = {Climbing the Density Functional Ladder: Nonempirical Meta-Generalized Gradient Approximation Designed for Molecules and Solids},
+  journal = {Phys. Rev. Lett.},
+  volume = {91},
+  issue = {14},
+  pages = {146401},
+  year = {2003},
+  month = {Sep},
+  publisher = {American Physical Society},
+  doi = {10.1103/PhysRevLett.91.146401},
+  url = {http://link.aps.org/doi/10.1103/PhysRevLett.91.146401}
+}
+
+
+@article{Perdew2004_6898,
+  author = {Perdew, J. P. and Tao, J. and Staroverov, V. N. and Scuseria, G. E.},
+  title = {Meta-generalized gradient approximation: Explanation of a realistic nonempirical density functional},
+  journal = {J. Chem. Phys.},
+  year = {2004},
+  volume = {120},
+  number = {15},
+  pages = {6898},
+  doi = {10.1063/1.1665298},
+  url = {http://scitation.aip.org/content/aip/journal/jcp/120/15/10.1063/1.1665298}
+}
+</code></pre>
+        </section>
+
+        <details>
+          <summary>All Libxc metadata</summary>
+          <dl class="metadata">
+            <dt>identifier</dt><dd>mgga_x_tpss</dd>
+            <dt>family</dt><dd>meta-gga</dd>
+            <dt>kind</dt><dd>exchange</dd>
+            <dt>derivatives</dt><dd>0, 1, 2</dd>
+            <dt>flags</dt><dd>dim3, exc, fxc, vxc, needs_tau, enforce_fhc</dd>
+<dt>cam_alpha</dt><dd>null</dd>
+<dt>cam_beta</dt><dd>null</dd>
+<dt>cam_omega</dt><dd>null</dd>
+<dt>density_threshold</dt><dd>1.0e-15</dd>
+<dt>exx_coefficient</dt><dd>null</dd>
+<dt>n_spin</dt><dd>1</dd>
+<dt>nlc_C</dt><dd>null</dd>
+<dt>nlc_b</dt><dd>null</dd>
+<dt>sigma_threshold</dt><dd>1.0000000000000027e-20</dd>
+<dt>tau_threshold</dt><dd>1.0e-20</dd>
+<dt>zeta_threshold</dt><dd>2.220446049250313e-16</dd>
+          </dl>
+        </details>
+      </div>
+
+    </main>
+    <div id="command-palette" class="command-palette" aria-hidden="true" hidden>
+      <div class="command-backdrop" data-command-close></div>
+      <form class="command-panel" role="search">
+        <div class="search-box">
+          <input id="command-search" class="search-input command-search-input" type="search" autocomplete="off" placeholder="Search functionals..." aria-controls="command-search-suggestions">
+          <div id="command-search-suggestions" class="search-suggestions command-search-suggestions" role="listbox" hidden></div>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

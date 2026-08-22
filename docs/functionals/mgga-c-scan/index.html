@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>mgga_c_scan</title>
+    <link rel="stylesheet" href="../../assets/styles.css?v=20260822-github">
+    <script defer src="../../assets/search.js?v=20260822-github"></script>
+    <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+    <script defer src="../../vendor/katex/katex.min.js"></script>
+    <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
+    <script defer src="../../assets/detail.js?v=20260822-github"></script>
+
+  </head>
+  <body>
+    <main class="shell">
+      <form class="global-search" role="search" action="../../" method="get">
+        <div class="search-box">
+          <input class="search-input global-search-input" name="q" type="search" autocomplete="off" placeholder="Search functionals..." aria-controls="global-search-suggestions">
+          <span class="search-shortcut" aria-hidden="true">Ctrl K</span>
+          <div id="global-search-suggestions" class="search-suggestions" role="listbox" hidden></div>
+        </div>
+      </form>
+
+      <a class="back" href="../../">Back to search</a>
+      <header class="top">
+        <a class="github-link" href="https://github.com/aouinaayoub/libxc-wiki" aria-label="View Libxc Wiki on GitHub" title="View source on GitHub">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .7a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2.23c-3.22.7-3.9-1.37-3.9-1.37-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.71.08-.71 1.16.08 1.78 1.2 1.78 1.2 1.04 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.74-1.55-2.57-.29-5.27-1.29-5.27-5.69 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.16 1.18a10.94 10.94 0 0 1 5.76 0c2.19-1.49 3.16-1.18 3.16-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.42-2.71 5.39-5.29 5.68.42.36.79 1.07.79 2.16v3.2c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .7Z"/></svg>
+        </a>
+
+        <p class="brand">META-GGA</p>
+        <h1><code class="title-code">mgga_c_scan</code></h1>
+        <div class="detail-tags"><span class="tag">meta-gga</span>
+<span class="tag">correlation</span></div>
+      </header>
+
+      <div class="detail-grid">
+      <section class="callout">
+        <p class="callout-label">Review excerpt</p>
+        <div class="review-html">
+<p>The correlation component of the popular SCAN functional is written as an interpolation in the variable $\alpha_{\text{c}}$ (<a class="review-eq-link" href="#review-eq-eq-alpha-sigma2">
+  <code>eq:alpha-sigma2</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="\alpha_{\text{c}} = \frac{\tau - \tau^{\text{W}}[n]}{\tau^{\text{TF}}[n_{\uparrow},n_{\downarrow}]}"></span>
+  </span>
+</a>), similarly to its exchange counterpart <a class="functional-link" href="../mgga-x-scan/"><code>mgga_x_scan</code></a>:</p>
+<div class="equation" data-tex="e_\text{c}^\text{SCAN} = e_\text{c}^1 + 
+  f(\alpha_{\text{c}})\left(e_\text{c}^0 - e_\text{c}^1\right)"></div>
+<p>The interpolation function $f$ is the same as in <a class="functional-link" href="../mgga-x-scan/"><code>mgga_x_scan</code></a>, <a class="review-eq-link" href="#review-eq-eq-scanfalpha">
+  <code>eq:scanfalpha</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="f(\alpha) = \E^{-c_1\alpha/\left(1-\alpha\right)}\theta(1-\alpha)
+  - d \E^{c_2/\left(1-\alpha\right)}\theta(\alpha - 1)"></span>
+  </span>
+</a>. The three parameters ($c_\text{1c}=0.64$, $c_\text{2c}=1.5$, and $d_\text{c}=0.7$) entering $f$ were fit together with the four parameters of the exchange part, as explained for <a class="functional-link" href="../mgga-x-scan/"><code>mgga_x_scan</code></a>.</p>
+<p>The function $e_\text{c}^1 = e_\text{c}^\text{SCAN}(\alpha_\text{c}=1)$ was taken as a variant of <a class="functional-link" href="../gga-c-pbe/"><code>gga_c_pbe</code></a> altered to improve the 2D limit under nonuniform scaling. The differences to <a class="functional-link" href="../gga-c-pbe/"><code>gga_c_pbe</code></a> (<a class="review-eq-link" href="#review-eq-eq-ecpbe">
+  <code>eq:ecpbe</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="e_\text{c}^{\text{PBE}} = e_\text{c}^\text{PW-LDA}(r_s, \zeta) + H_0(\phi_{2/3}, t, A)"></span>
+  </span>
+</a>; <a class="review-eq-link" href="#review-eq-eq-ggac-pw91h0">
+  <code>eq:ggac:pw91h0</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="H_0(\phi_{2/3}, t, A) = \gamma \phi_{2/3}^3 \ln\left[1 + \frac{\beta}{\gamma}
+  \frac{t^2 + A t^4}{1 + A (t^2 + A t^4)}\right]"></span>
+  </span>
+</a>) are the replacements of the constant $\beta$ by <a class="review-eq-link" href="#review-eq-eq-vpbe-beta">
+  <code>eq:vpbe-beta</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="\beta(r_s) = \beta_0\frac{1 + a r_s}{1 + b r_s}"></span>
+  </span>
+</a> and of the function $H_0$ by</p>
+<div class="equation" data-tex="H_1^\text{SCAN} = \gamma \phi_{2/3}^3 \ln\left\{1 + \frac{\beta}{\gamma A}
+  \left[1 - g(At^2)\right]\right\}"></div>
+<p>with</p>
+<div class="equation" data-tex="g(At^2) = \frac{1}{\left(1 + 4 A t^2\right)^{1/4}}"></div>
+<p>The function $e_\text{c}^0=e_\text{c}^\text{SCAN}(\alpha_\text{c}=0)$ was modeled in analogy with $e_\text{c}^1$, and realizing that this function could only depend on $s$ (<a class="review-eq-link" href="#review-eq-eq-s">
+  <code>eq:s</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="s = \frac{|\nabla n|}{2 n k_\text{F}} = 2^{1/3}C_{s}x =
+  \left(\frac{3}{2\pi}\right)^{1/3}\left\vert\nabla r_s\right\vert"></span>
+  </span>
+</a>) and not on $t$ (<a class="review-eq-link" href="#review-eq-eq-pw91t">
+  <code>eq:pw91t</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="\begin{aligned}
+t = &amp; \frac{\left\vert\nabla n\right\vert}{2\phi_{2/3}(\zeta)k_{s}n}  \\
+
+  = &amp; \frac{x}{4\times 2^{1/3}\phi_{2/3}(\zeta)\sqrt{r_s}}
+\end{aligned}"></span>
+  </span>
+</a>). It reads</p>
+<div class="equation" data-tex="e_\text{c}^0 =  \left[e^\text{SCAN}_\text{c,LDA}(r_s)
+  + H^\text{SCAN}_0(r_s,s)\right]G_\text{c}(\zeta)"></div>
+<p>The $\zeta$-dependent function</p>
+<div class="equation" data-tex="G_\text{c}(\zeta) = \left\{1 - 2.3631\left[\phi_{4/3}(\zeta) - 1\right]\right\} \left(1 - \zeta^{12}\right)"></div>
+<p>was chosen such that (i) the correlation energy is zero for any one-electron systems, and (ii) $e^\text{SCAN}_\text{xc}/e_{\text{x}}^{\text{LDA}}$ ($e_{\text{x}}^{\text{LDA}}$ is <a class="review-eq-link" href="#review-eq-eq-ldax3d">
+  <code>eq:ldax3d</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="\begin{aligned}
+e_\text{x}^\text{LDA}(n_\uparrow,n_\downarrow) = 
+  -C_{\text{x}}\frac{n_\uparrow^{4/3}+n_\downarrow^{4/3}}{n}
+\end{aligned}"></span>
+  </span>
+</a>) is independent of $\zeta$ in the interval $0 \le |\zeta| &lt; 0.7$ when $r_s\to\infty$, $s=0$, and $\alpha_\text{c}=0$.<sup class="citation-marker"><a href="#review-ref-Perdew2004-6898">798</a></sup></p>
+<p>The LDA-type component $e^\text{SCAN}_\text{c,LDA}$ reads</p>
+<div class="equation" data-tex="e^\text{SCAN}_\text{c,LDA}(r_s) = -\frac{b_\text{1c}}{1 + b_\text{2c} \sqrt{r_s} + b_\text{3c} r_s}"></div>
+<p>The parameters $b_{i\text{c}}$ were determined as follows: $b_\text{1c}=0.0285764$ was fit to reproduce the high-density limit of the two-electron ion with nuclear charge $Z\to\infty$;<sup class="citation-marker"><a href="#review-ref-Ivanov1998-3151">799</a></sup> $b_\text{2c}=0.0889$ was adjusted to reproduce the xc energy of the He atom;<sup class="citation-marker"><a href="#review-ref-Becke1988-3098">174</a></sup> finally, $b_\text{3c}=0.125541$ was obtained from the lower bound on the xc energies of two-electron systems.<sup class="citation-marker"><a href="#review-ref-Lieb1981-427">167</a></sup></p>
+<p>The remaining quantity, $H^\text{SCAN}_0$, is given by</p>
+<div class="equation" data-tex="\begin{aligned}
+H^\text{SCAN}_0(r_s, s) = &amp; b_\text{1c} \ln\left\{1 + w_0(r_s) \right. \\
+  &amp; \left.\times[1 - g_\infty(\zeta=0, s)]\right\}
+\end{aligned}"></div>
+<p>where</p>
+<div class="equation" data-tex="w_0(r_s) = \E^{-e^\text{SCAN}_\text{c,LDA}(r_s)/b_\text{1c}} - 1"></div>
+<p>with $g_\infty(\zeta=0, s)$ being the $r_s\to\infty$ limit of <a class="review-eq-link" href="#review-eq-eq-scang">
+  <code>eq:scang</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="g(At^2) = \frac{1}{\left(1 + 4 A t^2\right)^{1/4}}"></span>
+  </span>
+</a>:</p>
+<div class="equation" data-tex="g_\infty(\zeta=0, s) = \frac{1}{\left(1+4\chi_\infty s^2\right)^{1/4}}"></div>
+<p>with $\chi_\infty \approx 0.128026$.<sup class="citation-marker"><a href="#review-ref-approximation2">588</a></sup></p>
+        </div>
+        <p class="source-note">Adapted from <a href="https://arxiv.org/abs/2602.17333">Tran, Lehtola, Pittalis, and Marques, <em>Semi-Local Exchange-Correlation Approximations in Density Functional Theory</em>, arXiv:2602.17333</a>.</p>
+      </section>
+
+        <section class="section">
+          <h2>Referenced Review Equations</h2>
+          <div class="review-equations">
+          <article class="review-equation-card" id="review-eq-eq-alpha-sigma2">
+            <code>eq:alpha-sigma2</code>
+            <div class="equation" data-tex="\alpha_{\text{c}} = \frac{\tau - \tau^{\text{W}}[n]}{\tau^{\text{TF}}[n_{\uparrow},n_{\downarrow}]}"></div>
+          </article>
+
+          <article class="review-equation-card" id="review-eq-eq-scanfalpha">
+            <code>eq:scanfalpha</code>
+            <div class="equation" data-tex="f(\alpha) = \E^{-c_1\alpha/\left(1-\alpha\right)}\theta(1-\alpha)
+  - d \E^{c_2/\left(1-\alpha\right)}\theta(\alpha - 1)"></div>
+          </article>
+
+          <article class="review-equation-card" id="review-eq-eq-ecpbe">
+            <code>eq:ecpbe</code>
+            <div class="equation" data-tex="e_\text{c}^{\text{PBE}} = e_\text{c}^\text{PW-LDA}(r_s, \zeta) + H_0(\phi_{2/3}, t, A)"></div>
+          </article>
+
+          <article class="review-equation-card" id="review-eq-eq-ggac-pw91h0">
+            <code>eq:ggac:pw91h0</code>
+            <div class="equation" data-tex="H_0(\phi_{2/3}, t, A) = \gamma \phi_{2/3}^3 \ln\left[1 + \frac{\beta}{\gamma}
+  \frac{t^2 + A t^4}{1 + A (t^2 + A t^4)}\right]"></div>
+          </article>
+
+          <article class="review-equation-card" id="review-eq-eq-vpbe-beta">
+            <code>eq:vpbe-beta</code>
+            <div class="equation" data-tex="\beta(r_s) = \beta_0\frac{1 + a r_s}{1 + b r_s}"></div>
+          </article>
+
+          <article class="review-equation-card" id="review-eq-eq-s">
+            <code>eq:s</code>
+            <div class="equation" data-tex="s = \frac{|\nabla n|}{2 n k_\text{F}} = 2^{1/3}C_{s}x =
+  \left(\frac{3}{2\pi}\right)^{1/3}\left\vert\nabla r_s\right\vert"></div>
+          </article>
+
+          <article class="review-equation-card" id="review-eq-eq-pw91t">
+            <code>eq:pw91t</code>
+            <div class="equation" data-tex="\begin{aligned}
+t = &amp; \frac{\left\vert\nabla n\right\vert}{2\phi_{2/3}(\zeta)k_{s}n}  \\
+
+  = &amp; \frac{x}{4\times 2^{1/3}\phi_{2/3}(\zeta)\sqrt{r_s}}
+\end{aligned}"></div>
+          </article>
+
+          <article class="review-equation-card" id="review-eq-eq-ldax3d">
+            <code>eq:ldax3d</code>
+            <div class="equation" data-tex="\begin{aligned}
+e_\text{x}^\text{LDA}(n_\uparrow,n_\downarrow) = 
+  -C_{\text{x}}\frac{n_\uparrow^{4/3}+n_\downarrow^{4/3}}{n}
+\end{aligned}"></div>
+          </article>
+
+          <article class="review-equation-card" id="review-eq-eq-scang">
+            <code>eq:scang</code>
+            <div class="equation" data-tex="g(At^2) = \frac{1}{\left(1 + 4 A t^2\right)^{1/4}}"></div>
+          </article>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <h2>Review References</h2>
+          <ol class="review-refs"><li id="review-ref-Perdew2004-6898" value="798">Perdew, J. P.; Tao, J.; Staroverov, V. N.; Scuseria, G. E. Meta-generalized gradient approximation: Explanation of a realistic nonempirical density functional. <em>J. Chem. Phys.</em> <strong>2004</strong>, <em>120</em>, 6898, DOI: <a href="https://doi.org/10.1063/1.1665298">10.1063/1.1665298</a></li>
+<li id="review-ref-Ivanov1998-3151" value="799">Ivanov, S.; Levy, M. Connections between High-Density Scaling Limits of DFT Correlation Energies and Second-Order Z-1 Quantum Chemistry Correlation Energy. <em>J. Phys. Chem. A</em> <strong>1998</strong>, <em>102</em>, 3151--3156, DOI: <a href="https://doi.org/10.1021/jp9731415">10.1021/jp9731415</a></li>
+<li id="review-ref-Becke1988-3098" value="174">Becke, A. D. Density-functional exchange-energy approximation with correct asymptotic behavior. <em>Phys. Rev. A</em> <strong>1988</strong>, <em>38</em>, 3098, DOI: <a href="https://doi.org/10.1103/PhysRevA.38.3098">10.1103/PhysRevA.38.3098</a></li>
+<li id="review-ref-Lieb1981-427" value="167">Lieb, E. H.; Oxford, S. Improved lower bound on the indirect Coulomb energy. <em>Int. J. Quantum Chem.</em> <strong>1981</strong>, <em>19</em>, 427--439, DOI: <a href="https://doi.org/10.1002/qua.560190306">10.1002/qua.560190306</a></li>
+<li id="review-ref-approximation2" value="588">The value in Libxc is implemented with much more accuracy.</li></ol>
+        </section>
+
+        <section class="section">
+          <h2>Publications</h2>
+          <ol class="publication-refs"><li>Sun, J.; Ruzsinszky, A.; Perdew, J. P. Strongly Constrained and Appropriately Normed Semilocal Density Functional. <em>Phys. Rev. Lett.</em> <strong>2015</strong>, <em>115</em>, 036402, DOI: <a href="https://doi.org/10.1103/PhysRevLett.115.036402">10.1103/PhysRevLett.115.036402</a></li></ol>
+        </section>
+
+        <section class="section">
+          <div class="section-heading">
+            <h2>BibTeX</h2>
+            <button class="copy-button" type="button" data-copy-target="bibtex-code" aria-label="Copy BibTeX">Copy</button>
+          </div>
+          <pre><code id="bibtex-code">@article{Sun2015_036402,
+  author = {Sun, Jianwei and Ruzsinszky, Adrienn and Perdew, John P.},
+  title = {Strongly Constrained and Appropriately Normed Semilocal Density Functional},
+  journal = {Phys. Rev. Lett.},
+  volume = {115},
+  issue = {3},
+  pages = {036402},
+  year = {2015},
+  month = {Jul},
+  publisher = {American Physical Society},
+  doi = {10.1103/PhysRevLett.115.036402},
+  url = {http://link.aps.org/doi/10.1103/PhysRevLett.115.036402}
+}
+</code></pre>
+        </section>
+
+        <details>
+          <summary>All Libxc metadata</summary>
+          <dl class="metadata">
+            <dt>identifier</dt><dd>mgga_c_scan</dd>
+            <dt>family</dt><dd>meta-gga</dd>
+            <dt>kind</dt><dd>correlation</dd>
+            <dt>derivatives</dt><dd>0, 1, 2</dd>
+            <dt>flags</dt><dd>dim3, exc, fxc, vxc, needs_tau, enforce_fhc</dd>
+<dt>cam_alpha</dt><dd>null</dd>
+<dt>cam_beta</dt><dd>null</dd>
+<dt>cam_omega</dt><dd>null</dd>
+<dt>density_threshold</dt><dd>1.0e-15</dd>
+<dt>exx_coefficient</dt><dd>null</dd>
+<dt>n_spin</dt><dd>1</dd>
+<dt>nlc_C</dt><dd>null</dd>
+<dt>nlc_b</dt><dd>null</dd>
+<dt>sigma_threshold</dt><dd>1.0000000000000027e-20</dd>
+<dt>tau_threshold</dt><dd>1.0e-20</dd>
+<dt>zeta_threshold</dt><dd>2.220446049250313e-16</dd>
+          </dl>
+        </details>
+      </div>
+
+    </main>
+    <div id="command-palette" class="command-palette" aria-hidden="true" hidden>
+      <div class="command-backdrop" data-command-close></div>
+      <form class="command-panel" role="search">
+        <div class="search-box">
+          <input id="command-search" class="search-input command-search-input" type="search" autocomplete="off" placeholder="Search functionals..." aria-controls="command-search-suggestions">
+          <div id="command-search-suggestions" class="search-suggestions command-search-suggestions" role="listbox" hidden></div>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

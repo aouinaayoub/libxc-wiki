@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>mgga_x_revm06_l</title>
+    <link rel="stylesheet" href="../../assets/styles.css?v=20260822-github">
+    <script defer src="../../assets/search.js?v=20260822-github"></script>
+    <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+    <script defer src="../../vendor/katex/katex.min.js"></script>
+    <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
+    <script defer src="../../assets/detail.js?v=20260822-github"></script>
+
+  </head>
+  <body>
+    <main class="shell">
+      <form class="global-search" role="search" action="../../" method="get">
+        <div class="search-box">
+          <input class="search-input global-search-input" name="q" type="search" autocomplete="off" placeholder="Search functionals..." aria-controls="global-search-suggestions">
+          <span class="search-shortcut" aria-hidden="true">Ctrl K</span>
+          <div id="global-search-suggestions" class="search-suggestions" role="listbox" hidden></div>
+        </div>
+      </form>
+
+      <a class="back" href="../../">Back to search</a>
+      <header class="top">
+        <a class="github-link" href="https://github.com/aouinaayoub/libxc-wiki" aria-label="View Libxc Wiki on GitHub" title="View source on GitHub">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .7a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2.23c-3.22.7-3.9-1.37-3.9-1.37-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.71.08-.71 1.16.08 1.78 1.2 1.78 1.2 1.04 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.74-1.55-2.57-.29-5.27-1.29-5.27-5.69 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.16 1.18a10.94 10.94 0 0 1 5.76 0c2.19-1.49 3.16-1.18 3.16-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.42-2.71 5.39-5.29 5.68.42.36.79 1.07.79 2.16v3.2c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .7Z"/></svg>
+        </a>
+
+        <p class="brand">META-GGA</p>
+        <h1><code class="title-code">mgga_x_revm06_l</code></h1>
+        <div class="detail-tags"><span class="tag">meta-gga</span>
+<span class="tag">exchange</span></div>
+      </header>
+
+      <div class="detail-grid">
+      <section class="callout">
+        <p class="callout-label">Review excerpt</p>
+        <div class="review-html">
+<p>This functional has the same form as <a class="functional-link" href="../mgga-x-m06-l/"><code>mgga_x_m06_l</code></a> and was combined with the corresponding correlation <a class="functional-link" href="../mgga-c-revm06-l/"><code>mgga_c_revm06_l</code></a> for a reoptimization of the parameters. Compared to M06-L (<a class="functional-link" href="../mgga-x-m06-l/"><code>mgga_x_m06_l</code></a> + <a class="functional-link" href="../mgga-c-m06-l/"><code>mgga_c_m06_l</code></a>), the functional is made less prone to numerical problems by imposing some degree of smoothness and removing large terms in <a class="review-eq-link" href="#review-eq-eq-fgvt4">
+  <code>eq:fgvt4</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="\begin{aligned}
+f^\text{GVT4}(x_\sigma,\tilde{z}_\sigma) = &amp;
+  \frac{a}{\gamma_\sigma}
+  +\frac{b x_\sigma^2 + c \tilde{z}_\sigma}{\gamma_\sigma^2}  \\
+
+  &amp; +\frac{d x_\sigma^4 + ex_\sigma^2\tilde{z}_\sigma + f\tilde{z}_\sigma^2}{\gamma_\sigma^3}
+\end{aligned}"></span>
+  </span>
+</a>, which is the second term in <a class="review-eq-link" href="#review-eq-eq-m06-l">
+  <code>eq:m06-l</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="F_\text{x}^\text{M06-L} = F_\text{x}^\text{PBE}(s_\sigma)
+  f(w_\sigma)
+  + f^\text{GVT4}(x_\sigma, \tilde{z}_\sigma)"></span>
+  </span>
+</a> (M06-L and revM06-L have overall 34 and 31 parameters, respectively). With respect to M06-L, the results are improved for both molecular and solid-state properties.</p>
+        </div>
+        <p class="source-note">Adapted from <a href="https://arxiv.org/abs/2602.17333">Tran, Lehtola, Pittalis, and Marques, <em>Semi-Local Exchange-Correlation Approximations in Density Functional Theory</em>, arXiv:2602.17333</a>.</p>
+      </section>
+
+        <section class="section">
+          <h2>Referenced Review Equations</h2>
+          <div class="review-equations">
+          <article class="review-equation-card" id="review-eq-eq-fgvt4">
+            <code>eq:fgvt4</code>
+            <div class="equation" data-tex="\begin{aligned}
+f^\text{GVT4}(x_\sigma,\tilde{z}_\sigma) = &amp;
+  \frac{a}{\gamma_\sigma}
+  +\frac{b x_\sigma^2 + c \tilde{z}_\sigma}{\gamma_\sigma^2}  \\
+
+  &amp; +\frac{d x_\sigma^4 + ex_\sigma^2\tilde{z}_\sigma + f\tilde{z}_\sigma^2}{\gamma_\sigma^3}
+\end{aligned}"></div>
+          </article>
+
+          <article class="review-equation-card" id="review-eq-eq-m06-l">
+            <code>eq:m06-l</code>
+            <div class="equation" data-tex="F_\text{x}^\text{M06-L} = F_\text{x}^\text{PBE}(s_\sigma)
+  f(w_\sigma)
+  + f^\text{GVT4}(x_\sigma, \tilde{z}_\sigma)"></div>
+          </article>
+
+          </div>
+        </section>
+
+
+        <section class="section">
+          <h2>Publications</h2>
+          <ol class="publication-refs"><li>Wang, Y.; Jin, X.; Yu, H. S.; Truhlar, D. G.; He, X. Revised M06-L functional for improved accuracy on chemical reaction barrier heights, noncovalent interactions, and solid-state physics. <em>Proc. Natl. Acad. Sci. U. S. A.</em> <strong>2017</strong>, <em>114</em>, 8487--8492, DOI: <a href="https://doi.org/10.1073/pnas.1705670114">10.1073/pnas.1705670114</a></li></ol>
+        </section>
+
+        <section class="section">
+          <div class="section-heading">
+            <h2>BibTeX</h2>
+            <button class="copy-button" type="button" data-copy-target="bibtex-code" aria-label="Copy BibTeX">Copy</button>
+          </div>
+          <pre><code id="bibtex-code">@article{Wang2017_8487,
+  author = {Wang, Ying and Jin, Xinsheng and Yu, Haoyu S. and Truhlar, Donald G. and He, Xiao},
+  title = {Revised {M06}-{L} functional for improved accuracy on chemical reaction barrier heights, noncovalent interactions, and solid-state physics},
+  volume = {114},
+  number = {32},
+  pages = {8487-8492},
+  year = {2017},
+  doi = {10.1073/pnas.1705670114},
+  url = {http://www.pnas.org/content/114/32/8487.abstract},
+  journal = {Proc. Natl. Acad. Sci. U. S. A.}
+}
+</code></pre>
+        </section>
+
+        <details>
+          <summary>All Libxc metadata</summary>
+          <dl class="metadata">
+            <dt>identifier</dt><dd>mgga_x_revm06_l</dd>
+            <dt>family</dt><dd>meta-gga</dd>
+            <dt>kind</dt><dd>exchange</dd>
+            <dt>derivatives</dt><dd>0, 1, 2</dd>
+            <dt>flags</dt><dd>dim3, exc, fxc, vxc, needs_tau, enforce_fhc</dd>
+<dt>cam_alpha</dt><dd>null</dd>
+<dt>cam_beta</dt><dd>null</dd>
+<dt>cam_omega</dt><dd>null</dd>
+<dt>density_threshold</dt><dd>1.0e-15</dd>
+<dt>exx_coefficient</dt><dd>null</dd>
+<dt>n_spin</dt><dd>1</dd>
+<dt>nlc_C</dt><dd>null</dd>
+<dt>nlc_b</dt><dd>null</dd>
+<dt>sigma_threshold</dt><dd>1.0000000000000027e-20</dd>
+<dt>tau_threshold</dt><dd>1.0e-20</dd>
+<dt>zeta_threshold</dt><dd>2.220446049250313e-16</dd>
+          </dl>
+        </details>
+      </div>
+
+    </main>
+    <div id="command-palette" class="command-palette" aria-hidden="true" hidden>
+      <div class="command-backdrop" data-command-close></div>
+      <form class="command-panel" role="search">
+        <div class="search-box">
+          <input id="command-search" class="search-input command-search-input" type="search" autocomplete="off" placeholder="Search functionals..." aria-controls="command-search-suggestions">
+          <div id="command-search-suggestions" class="search-suggestions command-search-suggestions" role="listbox" hidden></div>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

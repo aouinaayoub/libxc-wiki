@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>lda_c_1d_loos</title>
+    <link rel="stylesheet" href="../../assets/styles.css?v=20260822-github">
+    <script defer src="../../assets/search.js?v=20260822-github"></script>
+    <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+    <script defer src="../../vendor/katex/katex.min.js"></script>
+    <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
+    <script defer src="../../assets/detail.js?v=20260822-github"></script>
+
+  </head>
+  <body>
+    <main class="shell">
+      <form class="global-search" role="search" action="../../" method="get">
+        <div class="search-box">
+          <input class="search-input global-search-input" name="q" type="search" autocomplete="off" placeholder="Search functionals..." aria-controls="global-search-suggestions">
+          <span class="search-shortcut" aria-hidden="true">Ctrl K</span>
+          <div id="global-search-suggestions" class="search-suggestions" role="listbox" hidden></div>
+        </div>
+      </form>
+
+      <a class="back" href="../../">Back to search</a>
+      <header class="top">
+        <a class="github-link" href="https://github.com/aouinaayoub/libxc-wiki" aria-label="View Libxc Wiki on GitHub" title="View source on GitHub">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .7a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2.23c-3.22.7-3.9-1.37-3.9-1.37-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.71.08-.71 1.16.08 1.78 1.2 1.78 1.2 1.04 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.74-1.55-2.57-.29-5.27-1.29-5.27-5.69 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.16 1.18a10.94 10.94 0 0 1 5.76 0c2.19-1.49 3.16-1.18 3.16-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.42-2.71 5.39-5.29 5.68.42.36.79 1.07.79 2.16v3.2c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .7Z"/></svg>
+        </a>
+
+        <p class="brand">LDA</p>
+        <h1><code class="title-code">lda_c_1d_loos</code></h1>
+        <div class="detail-tags"><span class="tag">lda</span>
+<span class="tag">correlation</span>
+<span class="tag">dim1</span></div>
+      </header>
+
+      <div class="detail-grid">
+      <section class="callout">
+        <p class="callout-label">Review excerpt</p>
+        <div class="review-html">
+<p>This is a functional for the correlation energy in the 1D HEG developed assuming full spin polarization. First, Loos<sup class="citation-marker"><a href="#review-ref-Loos2013-064108">449</a></sup> derived the expansion for the high-density limit:</p>
+<div class="equation" data-tex="e_\text{c}^{\text{high}}(r_s^{1\text{D}}) = \epsilon_0 + \epsilon_1r_s^{1\text{D}} + \ldots"></div>
+<p>where $\epsilon_0=-\pi^2/360$ and $\epsilon_1=0.00845$. Then, by considering the low-density expansion given by<sup class="citation-marker"><a href="#review-ref-Loos2013-164124">450</a>,<a href="#review-ref-Fogler2005-056405">451</a></sup></p>
+<div class="equation" data-tex="e_\text{c}^{\text{low}}(r_s^{1\text{D}}) =
+\frac{\eta_0}{r_s^{1\text{D}}} + \frac{\eta_1}{\left(r_s^{1\text{D}}\right)^{3/2}} + \ldots"></div>
+<p>where $\eta_0=-\ln\left(\sqrt{2\pi}\right)+3/4$ and $\eta_1=0.359933$, he proposed the following interpolation (see <sup class="citation-marker"><a href="#review-ref-Cioslowski2012-044109">452</a></sup>) between <a class="review-eq-link" href="#review-eq-eq-eclooshigh">
+  <code>eq:eclooshigh</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="e_\text{c}^{\text{high}}(r_s^{1\text{D}}) = \epsilon_0 + \epsilon_1r_s^{1\text{D}} + \ldots"></span>
+  </span>
+</a>; <a class="review-eq-link" href="#review-eq-eq-eclooslow">
+  <code>eq:eclooslow</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="e_\text{c}^{\text{low}}(r_s^{1\text{D}}) =
+\frac{\eta_0}{r_s^{1\text{D}}} + \frac{\eta_1}{\left(r_s^{1\text{D}}\right)^{3/2}} + \ldots"></span>
+  </span>
+</a>:</p>
+<div class="equation" data-tex="e_\text{c}^{\text{Loos-1D}}(r_s^{1\text{D}}) = \gamma^2\sum_{i=0}^{3}c_i\gamma^i\left(1-\gamma\right)^{3-i}"></div>
+<p>where</p>
+<div class="equation" data-tex="\gamma(r_s^{1\text{D}}) = \frac{\sqrt{1+4kr_s^{1\text{D}}}-1}{2kr_s^{1\text{D}}}"></div>
+<p>and $c_0=k\eta_0$, $c_1=4k\eta_0+k^{3/2}\eta_1$, $c_2=5\epsilon_0+\epsilon_1/k$, $c_3=\epsilon_1$, and $k=0.414254$. The value of $k$ was determined from MC data.<sup class="citation-marker"><a href="#review-ref-Lee2011-245114">453</a>,<a href="#review-ref-Loos2013-164124">450</a></sup> Loos<sup class="citation-marker"><a href="#review-ref-Loos2013-064108">449</a></sup> reports an agreement between <a class="review-eq-link" href="#review-eq-eq-ecloos1d">
+  <code>eq:ecloos1d</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="e_\text{c}^{\text{Loos-1D}}(r_s^{1\text{D}}) = \gamma^2\sum_{i=0}^{3}c_i\gamma^i\left(1-\gamma\right)^{3-i}"></span>
+  </span>
+</a> and the MC data within 0.1 <span class="inline-equation">\(\mathrm{m}E_{\mathrm{h}}\)</span>.</p>
+        </div>
+        <p class="source-note">Adapted from <a href="https://arxiv.org/abs/2602.17333">Tran, Lehtola, Pittalis, and Marques, <em>Semi-Local Exchange-Correlation Approximations in Density Functional Theory</em>, arXiv:2602.17333</a>.</p>
+      </section>
+
+        <section class="section">
+          <h2>Referenced Review Equations</h2>
+          <div class="review-equations">
+          <article class="review-equation-card" id="review-eq-eq-eclooshigh">
+            <code>eq:eclooshigh</code>
+            <div class="equation" data-tex="e_\text{c}^{\text{high}}(r_s^{1\text{D}}) = \epsilon_0 + \epsilon_1r_s^{1\text{D}} + \ldots"></div>
+          </article>
+
+          <article class="review-equation-card" id="review-eq-eq-eclooslow">
+            <code>eq:eclooslow</code>
+            <div class="equation" data-tex="e_\text{c}^{\text{low}}(r_s^{1\text{D}}) =
+\frac{\eta_0}{r_s^{1\text{D}}} + \frac{\eta_1}{\left(r_s^{1\text{D}}\right)^{3/2}} + \ldots"></div>
+          </article>
+
+          <article class="review-equation-card" id="review-eq-eq-ecloos1d">
+            <code>eq:ecloos1d</code>
+            <div class="equation" data-tex="e_\text{c}^{\text{Loos-1D}}(r_s^{1\text{D}}) = \gamma^2\sum_{i=0}^{3}c_i\gamma^i\left(1-\gamma\right)^{3-i}"></div>
+          </article>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <h2>Review References</h2>
+          <ol class="review-refs"><li id="review-ref-Loos2013-064108" value="449">Loos, P.-F. High-density correlation energy expansion of the one-dimensional uniform electron gas. <em>J. Chem. Phys.</em> <strong>2013</strong>, <em>138</em>, 064108, DOI: <a href="https://doi.org/10.1063/1.4790613">10.1063/1.4790613</a></li>
+<li id="review-ref-Loos2013-164124" value="450">Loos, P.-F.; Gill, P. M. W. Uniform electron gases. I. Electrons on a ring. <em>J. Chem. Phys.</em> <strong>2013</strong>, <em>138</em>, 164124, DOI: <a href="https://doi.org/10.1063/1.4802589">10.1063/1.4802589</a></li>
+<li id="review-ref-Fogler2005-056405" value="451">Fogler, M. M. Ground-State Energy of the Electron Liquid in Ultrathin Wires. <em>Phys. Rev. Lett.</em> <strong>2005</strong>, <em>94</em>, 056405, DOI: <a href="https://doi.org/10.1103/PhysRevLett.94.056405">10.1103/PhysRevLett.94.056405</a></li>
+<li id="review-ref-Cioslowski2012-044109" value="452">Cioslowski, J. Robust interpolation between weak- and strong-correlation regimes of quantum systems. <em>J. Chem. Phys.</em> <strong>2012</strong>, <em>136</em>, 044109, DOI: <a href="https://doi.org/10.1063/1.3679657">10.1063/1.3679657</a></li>
+<li id="review-ref-Lee2011-245114" value="453">Lee, R. M.; Drummond, N. D. Ground-state properties of the one-dimensional electron liquid. <em>Phys. Rev. B</em> <strong>2011</strong>, <em>83</em>, 245114, DOI: <a href="https://doi.org/10.1103/PhysRevB.83.245114">10.1103/PhysRevB.83.245114</a></li></ol>
+        </section>
+
+        <section class="section">
+          <h2>Publications</h2>
+          <ol class="publication-refs"><li>Loos, P.-F. High-density correlation energy expansion of the one-dimensional uniform electron gas. <em>J. Chem. Phys.</em> <strong>2013</strong>, <em>138</em>, 064108, DOI: <a href="https://doi.org/10.1063/1.4790613">10.1063/1.4790613</a></li></ol>
+        </section>
+
+        <section class="section">
+          <div class="section-heading">
+            <h2>BibTeX</h2>
+            <button class="copy-button" type="button" data-copy-target="bibtex-code" aria-label="Copy BibTeX">Copy</button>
+          </div>
+          <pre><code id="bibtex-code">@article{Loos2013_064108,
+  author = {Loos, P.-F.},
+  title = {High-density correlation energy expansion of the one-dimensional uniform electron gas},
+  journal = {J. Chem. Phys.},
+  year = {2013},
+  volume = {138},
+  number = {6},
+  pages = {064108},
+  doi = {10.1063/1.4790613},
+  url = {http://scitation.aip.org/content/aip/journal/jcp/138/6/10.1063/1.4790613}
+}
+</code></pre>
+        </section>
+
+        <details>
+          <summary>All Libxc metadata</summary>
+          <dl class="metadata">
+            <dt>identifier</dt><dd>lda_c_1d_loos</dd>
+            <dt>family</dt><dd>lda</dd>
+            <dt>kind</dt><dd>correlation</dd>
+            <dt>derivatives</dt><dd>0, 1, 2</dd>
+            <dt>flags</dt><dd>exc, dim1, fxc, vxc, enforce_fhc</dd>
+<dt>cam_alpha</dt><dd>null</dd>
+<dt>cam_beta</dt><dd>null</dd>
+<dt>cam_omega</dt><dd>null</dd>
+<dt>density_threshold</dt><dd>5.0e-28</dd>
+<dt>exx_coefficient</dt><dd>null</dd>
+<dt>n_spin</dt><dd>1</dd>
+<dt>nlc_C</dt><dd>null</dd>
+<dt>nlc_b</dt><dd>null</dd>
+<dt>sigma_threshold</dt><dd>3.968502629920517e-37</dd>
+<dt>tau_threshold</dt><dd>1.0e-20</dd>
+<dt>zeta_threshold</dt><dd>2.220446049250313e-16</dd>
+          </dl>
+        </details>
+      </div>
+
+    </main>
+    <div id="command-palette" class="command-palette" aria-hidden="true" hidden>
+      <div class="command-backdrop" data-command-close></div>
+      <form class="command-panel" role="search">
+        <div class="search-box">
+          <input id="command-search" class="search-input command-search-input" type="search" autocomplete="off" placeholder="Search functionals..." aria-controls="command-search-suggestions">
+          <div id="command-search-suggestions" class="search-suggestions command-search-suggestions" role="listbox" hidden></div>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>lda_xc_teter93</title>
+    <link rel="stylesheet" href="../../assets/styles.css?v=20260822-github">
+    <script defer src="../../assets/search.js?v=20260822-github"></script>
+    <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+    <script defer src="../../vendor/katex/katex.min.js"></script>
+    <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
+    <script defer src="../../assets/detail.js?v=20260822-github"></script>
+
+  </head>
+  <body>
+    <main class="shell">
+      <form class="global-search" role="search" action="../../" method="get">
+        <div class="search-box">
+          <input class="search-input global-search-input" name="q" type="search" autocomplete="off" placeholder="Search functionals..." aria-controls="global-search-suggestions">
+          <span class="search-shortcut" aria-hidden="true">Ctrl K</span>
+          <div id="global-search-suggestions" class="search-suggestions" role="listbox" hidden></div>
+        </div>
+      </form>
+
+      <a class="back" href="../../">Back to search</a>
+      <header class="top">
+        <a class="github-link" href="https://github.com/aouinaayoub/libxc-wiki" aria-label="View Libxc Wiki on GitHub" title="View source on GitHub">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .7a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2.23c-3.22.7-3.9-1.37-3.9-1.37-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.71.08-.71 1.16.08 1.78 1.2 1.78 1.2 1.04 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.74-1.55-2.57-.29-5.27-1.29-5.27-5.69 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.16 1.18a10.94 10.94 0 0 1 5.76 0c2.19-1.49 3.16-1.18 3.16-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.42-2.71 5.39-5.29 5.68.42.36.79 1.07.79 2.16v3.2c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .7Z"/></svg>
+        </a>
+
+        <p class="brand">LDA</p>
+        <h1><code class="title-code">lda_xc_teter93</code></h1>
+        <div class="detail-tags"><span class="tag">lda</span>
+<span class="tag">exchange</span>
+<span class="tag">correlation</span></div>
+      </header>
+
+      <div class="detail-grid">
+      <section class="callout">
+        <p class="callout-label">Review excerpt</p>
+        <div class="review-html">
+<p>The most popular functionals at the time of the work of Goedecker et al.<sup class="citation-marker"><a href="#review-ref-Goedecker1996-1703">470</a></sup> suffered from various problems: (i) analytical expressions that were complicated and often involved logarithms or exponentials that are expensive to evaluate, and (ii) functional derivatives that had discontinuities. To resolve these issues, Teter proposed a simple Pad\&#39;e approximation for the total xc energy density:</p>
+<div class="equation" data-tex="\begin{aligned}
+e_\text{xc}^{\text{Teter93}}(r_s,\zeta) =  \\
+  - \frac
+  {a_0(\zeta) + a_1(\zeta)r_s + a_2(\zeta)r_s^2 + a_3(\zeta)r_s^3}
+  {b_1(\zeta)r_s + b_2(\zeta)r_s^2 + b_3(\zeta)r_s^3 + b_4(\zeta)r_s^4}
+\end{aligned}"></div>
+<p>where $a_i(\zeta)$ and $b_i(\zeta)$ are spin-interpolated with</p>
+<div class="equation" data-tex="\begin{aligned}
+a_i(\zeta) = a_i + a_{i}&#39; f_\text{c}(\zeta) \\
+  b_i(\zeta) = b_i + b_{i}&#39; f_\text{c}(\zeta)
+\end{aligned}"></div>
+<p>where $f_\text{c}(\zeta)$ is defined by <a class="review-eq-link" href="#review-eq-eq-fzeta">
+  <code>eq:fzeta</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="f_\text{c}(\zeta) = \frac{\phi_{4/3}(\zeta) - 1}{2^{1/3} - 1}"></span>
+  </span>
+</a>. It was shown that <a class="review-eq-link" href="#review-eq-eq-excteter">
+  <code>eq:excteter</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="\begin{aligned}
+e_\text{xc}^{\text{Teter93}}(r_s,\zeta) =  \\
+
+  - \frac
+  {a_0(\zeta) + a_1(\zeta)r_s + a_2(\zeta)r_s^2 + a_3(\zeta)r_s^3}
+  {b_1(\zeta)r_s + b_2(\zeta)r_s^2 + b_3(\zeta)r_s^3 + b_4(\zeta)r_s^4}
+\end{aligned}"></span>
+  </span>
+</a> reproduces accurately the results from <a class="functional-link" href="../lda-c-pw/"><code>lda_c_pw</code></a>.</p>
+<p>Note that this functional was originally developed and implemented in ABINIT<sup class="citation-marker"><a href="#review-ref-Gonze2020-CPC-107042">88</a></sup> by Teter in 1993, which explains its name (<a class="functional-link" href="../lda-xc-teter93/"><code>lda_xc_teter93</code></a>). The functional was then published only a couple of years later.<sup class="citation-marker"><a href="#review-ref-Goedecker1996-1703">470</a></sup></p>
+        </div>
+        <p class="source-note">Adapted from <a href="https://arxiv.org/abs/2602.17333">Tran, Lehtola, Pittalis, and Marques, <em>Semi-Local Exchange-Correlation Approximations in Density Functional Theory</em>, arXiv:2602.17333</a>.</p>
+      </section>
+
+        <section class="section">
+          <h2>Referenced Review Equations</h2>
+          <div class="review-equations">
+          <article class="review-equation-card" id="review-eq-eq-fzeta">
+            <code>eq:fzeta</code>
+            <div class="equation" data-tex="f_\text{c}(\zeta) = \frac{\phi_{4/3}(\zeta) - 1}{2^{1/3} - 1}"></div>
+          </article>
+
+          <article class="review-equation-card" id="review-eq-eq-excteter">
+            <code>eq:excteter</code>
+            <div class="equation" data-tex="\begin{aligned}
+e_\text{xc}^{\text{Teter93}}(r_s,\zeta) =  \\
+
+  - \frac
+  {a_0(\zeta) + a_1(\zeta)r_s + a_2(\zeta)r_s^2 + a_3(\zeta)r_s^3}
+  {b_1(\zeta)r_s + b_2(\zeta)r_s^2 + b_3(\zeta)r_s^3 + b_4(\zeta)r_s^4}
+\end{aligned}"></div>
+          </article>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <h2>Review References</h2>
+          <ol class="review-refs"><li id="review-ref-Goedecker1996-1703" value="470">Goedecker, S.; Teter, M.; Hutter, J. Separable dual-space Gaussian pseudopotentials. <em>Phys. Rev. B</em> <strong>1996</strong>, <em>54</em>, 1703, DOI: <a href="https://doi.org/10.1103/PhysRevB.54.1703">10.1103/PhysRevB.54.1703</a></li>
+<li id="review-ref-Gonze2020-CPC-107042" value="88">Gonze, X.; Amadon, B.; Antonius, G.; Arnardi, F.; Baguet, L.; Beuken, J.-M.; Bieder, J.; Bottin, F.; Bouchet, J.; Bousquet, E. et al. The sc Abinit project: Impact, environment and recent developments. <em>Comput. Phys. Commun.</em> <strong>2020</strong>, <em>248</em>, 107042, DOI: <a href="https://doi.org/10.1016/j.cpc.2019.107042">10.1016/j.cpc.2019.107042</a></li></ol>
+        </section>
+
+        <section class="section">
+          <h2>Publications</h2>
+          <ol class="publication-refs"><li>Goedecker, S.; Teter, M.; Hutter, J. Separable dual-space Gaussian pseudopotentials. <em>Phys. Rev. B</em> <strong>1996</strong>, <em>54</em>, 1703, DOI: <a href="https://doi.org/10.1103/PhysRevB.54.1703">10.1103/PhysRevB.54.1703</a></li></ol>
+        </section>
+
+        <section class="section">
+          <div class="section-heading">
+            <h2>BibTeX</h2>
+            <button class="copy-button" type="button" data-copy-target="bibtex-code" aria-label="Copy BibTeX">Copy</button>
+          </div>
+          <pre><code id="bibtex-code">@article{Goedecker1996_1703,
+  author = {Goedecker, S. and Teter, M. and Hutter, J.},
+  title = {Separable dual-space {Gaussian} pseudopotentials},
+  journal = {Phys. Rev. B},
+  volume = {54},
+  issue = {3},
+  pages = {1703},
+  year = {1996},
+  month = {Jul},
+  publisher = {American Physical Society},
+  doi = {10.1103/PhysRevB.54.1703},
+  url = {http://link.aps.org/doi/10.1103/PhysRevB.54.1703}
+}
+</code></pre>
+        </section>
+
+        <details>
+          <summary>All Libxc metadata</summary>
+          <dl class="metadata">
+            <dt>identifier</dt><dd>lda_xc_teter93</dd>
+            <dt>family</dt><dd>lda</dd>
+            <dt>kind</dt><dd>exchange_correlation</dd>
+            <dt>derivatives</dt><dd>0, 1, 2</dd>
+            <dt>flags</dt><dd>dim3, exc, fxc, vxc, enforce_fhc</dd>
+<dt>cam_alpha</dt><dd>null</dd>
+<dt>cam_beta</dt><dd>null</dd>
+<dt>cam_omega</dt><dd>null</dd>
+<dt>density_threshold</dt><dd>1.0e-15</dd>
+<dt>exx_coefficient</dt><dd>null</dd>
+<dt>n_spin</dt><dd>1</dd>
+<dt>nlc_C</dt><dd>null</dd>
+<dt>nlc_b</dt><dd>null</dd>
+<dt>sigma_threshold</dt><dd>1.0000000000000027e-20</dd>
+<dt>tau_threshold</dt><dd>1.0e-20</dd>
+<dt>zeta_threshold</dt><dd>2.220446049250313e-16</dd>
+          </dl>
+        </details>
+      </div>
+
+    </main>
+    <div id="command-palette" class="command-palette" aria-hidden="true" hidden>
+      <div class="command-backdrop" data-command-close></div>
+      <form class="command-panel" role="search">
+        <div class="search-box">
+          <input id="command-search" class="search-input command-search-input" type="search" autocomplete="off" placeholder="Search functionals..." aria-controls="command-search-suggestions">
+          <div id="command-search-suggestions" class="search-suggestions command-search-suggestions" role="listbox" hidden></div>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

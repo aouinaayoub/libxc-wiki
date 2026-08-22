@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>gga_c_ft97</title>
+    <link rel="stylesheet" href="../../assets/styles.css?v=20260822-github">
+    <script defer src="../../assets/search.js?v=20260822-github"></script>
+    <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+    <script defer src="../../vendor/katex/katex.min.js"></script>
+    <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
+    <script defer src="../../assets/detail.js?v=20260822-github"></script>
+
+  </head>
+  <body>
+    <main class="shell">
+      <form class="global-search" role="search" action="../../" method="get">
+        <div class="search-box">
+          <input class="search-input global-search-input" name="q" type="search" autocomplete="off" placeholder="Search functionals..." aria-controls="global-search-suggestions">
+          <span class="search-shortcut" aria-hidden="true">Ctrl K</span>
+          <div id="global-search-suggestions" class="search-suggestions" role="listbox" hidden></div>
+        </div>
+      </form>
+
+      <a class="back" href="../../">Back to search</a>
+      <header class="top">
+        <a class="github-link" href="https://github.com/aouinaayoub/libxc-wiki" aria-label="View Libxc Wiki on GitHub" title="View source on GitHub">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .7a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2.23c-3.22.7-3.9-1.37-3.9-1.37-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.71.08-.71 1.16.08 1.78 1.2 1.78 1.2 1.04 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.74-1.55-2.57-.29-5.27-1.29-5.27-5.69 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.16 1.18a10.94 10.94 0 0 1 5.76 0c2.19-1.49 3.16-1.18 3.16-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.42-2.71 5.39-5.29 5.68.42.36.79 1.07.79 2.16v3.2c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .7Z"/></svg>
+        </a>
+
+        <p class="brand">GGA</p>
+        <h1><code class="title-code">gga_c_ft97</code></h1>
+        <div class="detail-tags"><span class="tag">gga</span>
+<span class="tag">correlation</span></div>
+      </header>
+
+      <div class="detail-grid">
+      <section class="callout">
+        <p class="callout-label">Review excerpt</p>
+        <div class="review-html">
+<p>This correlation energy functional, which has often been combined with <a class="functional-link" href="../gga-x-ft97-a/"><code>gga_x_ft97_a</code></a> or <a class="functional-link" href="../gga-x-ft97-b/"><code>gga_x_ft97_b</code></a>, is based on a short-range approximation for the Coulomb hole function which describes electron pairs with same spins and with opposite spins separately. This generalizes earlier works by Gritsenko et al.<sup class="citation-marker"><a href="#review-ref-Gritsenko1986-1799">612</a>,<a href="#review-ref-Gritsenko1987-21">613</a></sup> to inhomogeneous systems by assuming a model dependence of the effective correlation radius on the density gradient.</p>
+<p>The functional has a rather complicated mathematical form and, as mentioned above, it consists of separate parallel ($\parallel$) and perpendicular ($\perp$) spin components that have different expressions. The functional reads</p>
+<div class="equation" data-tex="\begin{aligned}
+e_\text{c}^{\text{FT97}} = &amp;
+  \frac{1+\zeta}{2}\left[
+    e_c^\perp(r_{s\downarrow},\nabla r_{s\downarrow}) +
+    e_c^\parallel(r_{s\uparrow},\nabla r_{s\uparrow})
+  \right]  \\
+ &amp; + \frac{1-\zeta}{2}\left[
+    e_c^\perp(r_{s\uparrow},\nabla r_{s\uparrow}) +
+    e_c^\parallel(r_{s\downarrow},\nabla r_{s\downarrow})
+  \right]
+\end{aligned}"></div>
+<p>where $r_{s\sigma}$ is given by <a class="review-eq-link" href="#review-eq-eq-rs-sigma">
+  <code>eq:rs-sigma</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="r_{s\sigma}^{3\text{D}} = \left(\frac{3}{4\pi n_{\sigma}}\right)^{1/3}"></span>
+  </span>
+</a> (note that $\nabla r_{s\sigma} = -(36\pi)^{-1/3}\left(\nabla n_\sigma\right)/n_\sigma^{4/3}$) and $e_c^\perp$ and $e_c^\parallel$ are defined below.</p>
+<p>The opposite-spin term is given by</p>
+<div class="equation" data-tex="\begin{aligned}
+e_c^\perp(r_{s\sigma}, \nabla r_{s\sigma})
+    = \frac{C_0(0)}{2}\left\{ \E^{\mu^\perp}{\rm
+    Ei}(-\mu^\perp)\right.  \\ \left.
+    +\left(a^\perp\right)^2\left[ \mu^\perp \E^{\mu^\perp}\text{Ei}(-\mu^\perp)
+    + 1 \right] \right\}
+\end{aligned}"></div>
+<p>where $C_0(0)= \left[1 - \ln(2)\right] / \pi^2$, $\text{Ei}(x)$ denotes the exponential integral, and the $(r_{s\sigma}, \nabla r_{s\sigma})$-dependent functions $a^\perp$ and $\mu^\perp$ are defined as follows.</p>
+<p>First, $a^\perp$ is given by</p>
+<div class="equation" data-tex="a^\perp(r_{s\sigma}, \nabla r_{s\sigma}) = (k^\perp r_{s\sigma})^{-2}
+  \frac{6 + 4\sqrt{\mu^\perp} + 4\mu^\perp}{3+ 6\sqrt{\mu^\perp} + 6\mu^\perp}"></div>
+<p>where $k^\perp r_{s\sigma}$ ($k^\perp$ will be defined below) is an effective correlation length, which is assumed to be directly related to the corresponding Wigner&ndash;Seitz radius $r_{s\sigma}$. The main advantage of this choice is that the final form of the functional is able to reproduce the leading terms of the exact high-density and low-density expansions for the HEG.</p>
+<p>Second, $\mu^\perp$ is defined as</p>
+<div class="equation" data-tex="\mu^\perp(r_{s\sigma}, \nabla r_{s\sigma})
+  = \frac{2C_0(0)}{3}\frac{r_{s\sigma}}{\left(k^\perp\right)^2}"></div>
+<p>The function $k^\perp$ that relates the effective correlation length to $r_{s\sigma}$ reads</p>
+<div class="equation" data-tex="k^\perp(r_{s\sigma}, \nabla r_{s\sigma}) =
+  \left\{
+    k^\perp_0 - k^\perp_1\left[1-\E^{-r^\perp_1(r_{s\sigma})^{4/5}}\right]
+  \right\} F^\perp"></div>
+<p>where $k^\perp_0 = 1.291551074$, $k^\perp_1 = 0.349064173$, $r^\perp_1 = 0.083275880$, and the inhomogeneity factor $F^\perp$ reads</p>
+<div class="equation" data-tex="\begin{aligned}
+F^\perp(r_{s\sigma}, \nabla r_{s\sigma}) =  &amp;
+\frac{1 + a_1 |\nabla r_{s\sigma}|^2 + a_2^2 |\nabla r_{s\sigma}|^4}{\sqrt{1+a_3 \frac{|\nabla r_{s\sigma}|^2}{r_{s\sigma}}}}  \\
+&amp; \times\E^{-a_2^2 |\nabla r_{s\sigma}|^4}
+\end{aligned}"></div>
+<p>with $a_1=1.622118767$, $a_2=0.489958076$, and $a_3=1.379021941$.</p>
+<p>The parallel-spin term is given by</p>
+<div class="equation" data-tex="\begin{aligned}
+e_c^\parallel(r_{s\sigma}, \nabla r_{s\sigma}) = &amp;
+  \E^{-(r_{s\sigma})^2/\left(e_1\sqrt{r_{s\sigma}} + e_2 r_{s\sigma}\right)^2}  \\
+ &amp; \times \tilde e_c^\perp(r_{s\sigma}, \nabla r_{s\sigma})
+\end{aligned}"></div>
+<p>where $e_1 = 0.939016$, $e_2 = 1.733170$, and $\tilde e_c^\perp$ has the same form as <a class="review-eq-link" href="#review-eq-eq-ftc-ec">
+  <code>eq:ftc:ec</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="\begin{aligned}
+e_c^\perp(r_{s\sigma}, \nabla r_{s\sigma})
+    = \frac{C_0(0)}{2}\left\{ \E^{\mu^\perp}{\rm
+    Ei}(-\mu^\perp)\right.  \\
+ \left.
+    +\left(a^\perp\right)^2\left[ \mu^\perp \E^{\mu^\perp}\text{Ei}(-\mu^\perp)
+    + 1 \right] \right\}
+\end{aligned}"></span>
+  </span>
+</a>, but with $k^\perp$ replaced by</p>
+<div class="equation" data-tex="\begin{aligned}
+k^\parallel(r_{s\sigma}, \nabla r_{s\sigma}) = &amp;
+  \left\{
+    k^\parallel_0 + k^\parallel_1\left[1-\E^{-r^\parallel_1(r_{s\sigma})^{1/2}}\right]
+    \right.\\
+ &amp; \left. - k^\parallel_2\left[1-\E^{-r^\parallel_2(r_{s\sigma})^{2/5}}\right]
+  \right\} F^\parallel
+\end{aligned}"></div>
+<p>where $k^\parallel_0 = 1.200801774$, $k^\parallel_1 = 0.859614445$, $k^\parallel_2 = 0.812904345$, $r^\parallel_1 = 1.089338848$, $r^\parallel_2 = 0.655638823$, and the inhomogeneity factor $F^\parallel$ is given by</p>
+<div class="equation" data-tex="F^\parallel(r_{s\sigma}, \nabla r_{s\sigma}) =
+  \frac{\displaystyle 1 + a_4^2 |\nabla r_{s\sigma}|^4}{\displaystyle \sqrt{1+a_5 \frac{|\nabla r_{s\sigma}|^2}{r_{s\sigma}}}}
+  \E^{\displaystyle -a_4^2 |\nabla r_{s\sigma}|^4}"></div>
+<p>where $a_4=4.946281353$ and $a_5 = 3.600612059$, which was chosen to reproduce the correct density-gradient expansion for the correlation energy of an electron gas with a high and slowly varying density, as well as several coordinate-scaling constraints.</p>
+<p>Note that $e_1$, $e_2$, $k^\perp_0$, $k^\perp_1$, $r^\perp_1$, $k^\parallel_0$, $k^\parallel_1$, $k^\parallel_2$, $r^\parallel_1$, and $r^\parallel_2$ were determined by a fitting against exact results for the HEG. In contrast, $a_1$, $a_2$, $a_3$, and $a_4$ are empirical parameters obtained through fitting calculated correlation energies to experimental values for a set of atoms. Finally, $a_5$ was fixed by an exact constraint.</p>
+        </div>
+        <p class="source-note">Adapted from <a href="https://arxiv.org/abs/2602.17333">Tran, Lehtola, Pittalis, and Marques, <em>Semi-Local Exchange-Correlation Approximations in Density Functional Theory</em>, arXiv:2602.17333</a>.</p>
+      </section>
+
+        <section class="section">
+          <h2>Referenced Review Equations</h2>
+          <div class="review-equations">
+          <article class="review-equation-card" id="review-eq-eq-rs-sigma">
+            <code>eq:rs-sigma</code>
+            <div class="equation" data-tex="r_{s\sigma}^{3\text{D}} = \left(\frac{3}{4\pi n_{\sigma}}\right)^{1/3}"></div>
+          </article>
+
+          <article class="review-equation-card" id="review-eq-eq-ftc-ec">
+            <code>eq:ftc:ec</code>
+            <div class="equation" data-tex="\begin{aligned}
+e_c^\perp(r_{s\sigma}, \nabla r_{s\sigma})
+    = \frac{C_0(0)}{2}\left\{ \E^{\mu^\perp}{\rm
+    Ei}(-\mu^\perp)\right.  \\
+ \left.
+    +\left(a^\perp\right)^2\left[ \mu^\perp \E^{\mu^\perp}\text{Ei}(-\mu^\perp)
+    + 1 \right] \right\}
+\end{aligned}"></div>
+          </article>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <h2>Review References</h2>
+          <ol class="review-refs"><li id="review-ref-Gritsenko1986-1799" value="612">Gritsenko, O.; Bagaturjants, A.; Kazansky, V. Model universal coulomb hole function for many-electron systems. <em>Int. J. Quant. Chem.</em> <strong>1986</strong>, <em>29</em>, 1799--1813, DOI: <a href="https://doi.org/10.1002/qua.560290612">10.1002/qua.560290612</a></li>
+<li id="review-ref-Gritsenko1987-21" value="613">Gritsenko, O.; Zhidomirov, G. Correlation energy correction as a density functional. A model of the pair distribution function and its application to the first- and second-row atoms and hydrides. <em>Chem. Phys.</em> <strong>1987</strong>, <em>116</em>, 21 -- 32, DOI: <a href="https://doi.org/10.1016/0301-0104(87)80064-2">10.1016/0301-0104(87)80064-2</a></li></ol>
+        </section>
+
+        <section class="section">
+          <h2>Publications</h2>
+          <ol class="publication-refs"><li>Filatov, M.; Thiel, W.. A nonlocal correlation energy density functional from a Coulomb hole model. <em>Int. J. Quantum Chem.</em> <strong>1997</strong>, <em>62</em>, 603 DOI: <a href="https://doi.org/10.1002/(SICI)1097-461X(1997)62:6&lt;603::AID-QUA4&gt;3.0.CO;2-#">10.1002/(SICI)1097-461X(1997)62:6&lt;603::AID-QUA4&gt;3.0.CO;2-#</a></li>
+<li>Filatov, M.; Thiel, W. A new gradient-corrected exchange-correlation density functional. <em>Mol. Phys.</em> <strong>1997</strong>, <em>91</em>, 847, DOI: <a href="https://doi.org/10.1080/002689797170950">10.1080/002689797170950</a></li></ol>
+        </section>
+
+        <section class="section">
+          <div class="section-heading">
+            <h2>BibTeX</h2>
+            <button class="copy-button" type="button" data-copy-target="bibtex-code" aria-label="Copy BibTeX">Copy</button>
+          </div>
+          <pre><code id="bibtex-code">@article{Filatov1997_603,
+  author = {Filatov, M. and Thiel, W.},
+  title = {A nonlocal correlation energy density functional from a {Coulomb} hole model},
+  journal = {Int. J. Quantum Chem.},
+  volume = {62},
+  number = {6},
+  pages = {603},
+  year = {1997},
+  publisher = {John Wiley \&amp; Sons, Inc.},
+  issn = {1097-461X},
+  doi = {10.1002/(SICI)1097-461X(1997)62:6&lt;603::AID-QUA4&gt;3.0.CO;2-\#},
+  url = {http://onlinelibrary.wiley.com/doi/10.1002/(SICI)1097-461X(1997)62:6&lt;603::AID-QUA4&gt;3.0.CO;2-\\%23}
+}
+
+
+@article{Filatov1997_847,
+  author = {Filatov, M. and Thiel, W.},
+  title = {A new gradient-corrected exchange-correlation density functional},
+  journal = {Mol. Phys.},
+  volume = {91},
+  number = {5},
+  pages = {847},
+  year = {1997},
+  doi = {10.1080/002689797170950},
+  url = {http://www.tandfonline.com/doi/abs/10.1080/002689797170950}
+}
+</code></pre>
+        </section>
+
+        <details>
+          <summary>All Libxc metadata</summary>
+          <dl class="metadata">
+            <dt>identifier</dt><dd>gga_c_ft97</dd>
+            <dt>family</dt><dd>gga</dd>
+            <dt>kind</dt><dd>correlation</dd>
+            <dt>derivatives</dt><dd>0, 1, 2</dd>
+            <dt>flags</dt><dd>dim3, exc, fxc, vxc, enforce_fhc</dd>
+<dt>cam_alpha</dt><dd>null</dd>
+<dt>cam_beta</dt><dd>null</dd>
+<dt>cam_omega</dt><dd>null</dd>
+<dt>density_threshold</dt><dd>1.0e-14</dd>
+<dt>exx_coefficient</dt><dd>null</dd>
+<dt>n_spin</dt><dd>1</dd>
+<dt>nlc_C</dt><dd>null</dd>
+<dt>nlc_b</dt><dd>null</dd>
+<dt>sigma_threshold</dt><dd>2.1544346900318888e-19</dd>
+<dt>tau_threshold</dt><dd>1.0e-20</dd>
+<dt>zeta_threshold</dt><dd>2.220446049250313e-16</dd>
+          </dl>
+        </details>
+      </div>
+
+    </main>
+    <div id="command-palette" class="command-palette" aria-hidden="true" hidden>
+      <div class="command-backdrop" data-command-close></div>
+      <form class="command-panel" role="search">
+        <div class="search-box">
+          <input id="command-search" class="search-input command-search-input" type="search" autocomplete="off" placeholder="Search functionals..." aria-controls="command-search-suggestions">
+          <div id="command-search-suggestions" class="search-suggestions command-search-suggestions" role="listbox" hidden></div>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

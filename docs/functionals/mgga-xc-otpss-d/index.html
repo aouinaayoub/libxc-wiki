@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>mgga_xc_otpss_d</title>
+    <link rel="stylesheet" href="../../assets/styles.css?v=20260822-github">
+    <script defer src="../../assets/search.js?v=20260822-github"></script>
+    <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+    <script defer src="../../vendor/katex/katex.min.js"></script>
+    <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
+    <script defer src="../../assets/detail.js?v=20260822-github"></script>
+
+  </head>
+  <body>
+    <main class="shell">
+      <form class="global-search" role="search" action="../../" method="get">
+        <div class="search-box">
+          <input class="search-input global-search-input" name="q" type="search" autocomplete="off" placeholder="Search functionals..." aria-controls="global-search-suggestions">
+          <span class="search-shortcut" aria-hidden="true">Ctrl K</span>
+          <div id="global-search-suggestions" class="search-suggestions" role="listbox" hidden></div>
+        </div>
+      </form>
+
+      <a class="back" href="../../">Back to search</a>
+      <header class="top">
+        <a class="github-link" href="https://github.com/aouinaayoub/libxc-wiki" aria-label="View Libxc Wiki on GitHub" title="View source on GitHub">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .7a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2.23c-3.22.7-3.9-1.37-3.9-1.37-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.71.08-.71 1.16.08 1.78 1.2 1.78 1.2 1.04 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.74-1.55-2.57-.29-5.27-1.29-5.27-5.69 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.16 1.18a10.94 10.94 0 0 1 5.76 0c2.19-1.49 3.16-1.18 3.16-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.42-2.71 5.39-5.29 5.68.42.36.79 1.07.79 2.16v3.2c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .7Z"/></svg>
+        </a>
+
+        <p class="brand">META-GGA</p>
+        <h1><code class="title-code">mgga_xc_otpss_d</code></h1>
+        <div class="detail-tags"><span class="tag">meta-gga</span>
+<span class="tag">exchange</span>
+<span class="tag">correlation</span></div>
+      </header>
+
+      <div class="detail-grid">
+      <section class="callout">
+        <p class="callout-label">Review excerpt</p>
+        <div class="review-html">
+<p>This is a reparametrization of the TPSS functional (<a class="functional-link" href="../mgga-x-tpss/"><code>mgga_x_tpss</code></a> + <a class="functional-link" href="../mgga-c-tpss/"><code>mgga_c_tpss</code></a>), performed in the same way as for <a class="functional-link" href="../gga-xc-oblyp-d/"><code>gga_xc_oblyp_d</code></a>, <a class="functional-link" href="../gga-xc-opwlyp-d/"><code>gga_xc_opwlyp_d</code></a>, and <a class="functional-link" href="../gga-xc-opbe-d/"><code>gga_xc_opbe_d</code></a>. In particular, the D2 dispersion correction of Grimme<sup class="citation-marker"><a href="#review-ref-Grimme2006-1787">544</a></sup> was included. The new parameters in <a class="functional-link" href="../mgga-x-tpss/"><code>mgga_x_tpss</code></a> exchange are $b=3.43$, $c=0.75896$, $e=0.165$, $\mu=0.41567$, and $\kappa = 0.778$ (the last two are parameters of <a class="functional-link" href="../gga-x-pbe/"><code>gga_x_pbe</code></a> entering the definition of <a class="functional-link" href="../mgga-x-tpss/"><code>mgga_x_tpss</code></a>). The parameters in the correlation part <a class="functional-link" href="../mgga-c-tpss/"><code>mgga_c_tpss</code></a> are $d=0.7$ and $\beta=0.08861$ (the last one is in the <a class="functional-link" href="../gga-c-pbe/"><code>gga_c_pbe</code></a> part of <a class="functional-link" href="../mgga-c-tpss/"><code>mgga_c_tpss</code></a>). In their study, Goerigk and Grimme<sup class="citation-marker"><a href="#review-ref-Goerigk2010-107">667</a></sup> found that <a class="functional-link" href="../mgga-xc-otpss-d/"><code>mgga_xc_otpss_d</code></a> outperforms all other considered GGA functionals, with errors comparable to the computationally more expensive hybrid functional B3LYP<sup class="citation-marker"><a href="#review-ref-Stephens1994-11623">423</a></sup> combined with the D2 dispersion term<sup class="citation-marker"><a href="#review-ref-Grimme2006-1787">544</a></sup> (B3LYP-D<sup class="citation-marker"><a href="#review-ref-Schwabe2007-3397">810</a></sup>).</p>
+        </div>
+        <p class="source-note">Adapted from <a href="https://arxiv.org/abs/2602.17333">Tran, Lehtola, Pittalis, and Marques, <em>Semi-Local Exchange-Correlation Approximations in Density Functional Theory</em>, arXiv:2602.17333</a>.</p>
+      </section>
+
+
+        <section class="section">
+          <h2>Review References</h2>
+          <ol class="review-refs"><li id="review-ref-Grimme2006-1787" value="544">Grimme, S. Semiempirical GGA-type density functional constructed with a long-range dispersion correction. <em>J. Comput. Chem.</em> <strong>2006</strong>, <em>27</em>, 1787, DOI: <a href="https://doi.org/10.1002/jcc.20495">10.1002/jcc.20495</a></li>
+<li id="review-ref-Goerigk2010-107" value="667">Goerigk, L.; Grimme, S. A General Database for Main Group Thermochemistry, Kinetics, and Noncovalent Interactions -- Assessment of Common and Reparameterized (meta-)GGA Density Functionals. <em>J. Chem. Theory Comput.</em> <strong>2010</strong>, <em>6</em>, 107, DOI: <a href="https://doi.org/10.1021/ct900489g">10.1021/ct900489g</a></li>
+<li id="review-ref-Stephens1994-11623" value="423">Stephens, P. J.; Devlin, F. J.; Chabalowski, C. F.; Frisch, M. J. Ab Initio Calculation of Vibrational Absorption and Circular Dichroism Spectra Using Density Functional Force Fields. <em>J. Phys. Chem.</em> <strong>1994</strong>, <em>98</em>, 11623, DOI: <a href="https://doi.org/10.1021/j100096a001">10.1021/j100096a001</a></li>
+<li id="review-ref-Schwabe2007-3397" value="810">Schwabe, T.; Grimme, S. Double-hybrid density functionals with long-range dispersion corrections: higher accuracy and extended applicability. <em>Phys. Chem. Chem. Phys.</em> <strong>2007</strong>, <em>9</em>, 3397--3406, DOI: <a href="https://doi.org/10.1039/B704725H">10.1039/B704725H</a></li></ol>
+        </section>
+
+        <section class="section">
+          <h2>Publications</h2>
+          <ol class="publication-refs"><li>Goerigk, L.; Grimme, S. A General Database for Main Group Thermochemistry, Kinetics, and Noncovalent Interactions -- Assessment of Common and Reparameterized (meta-)GGA Density Functionals. <em>J. Chem. Theory Comput.</em> <strong>2010</strong>, <em>6</em>, 107, DOI: <a href="https://doi.org/10.1021/ct900489g">10.1021/ct900489g</a></li></ol>
+        </section>
+
+        <section class="section">
+          <div class="section-heading">
+            <h2>BibTeX</h2>
+            <button class="copy-button" type="button" data-copy-target="bibtex-code" aria-label="Copy BibTeX">Copy</button>
+          </div>
+          <pre><code id="bibtex-code">@article{Goerigk2010_107,
+  author = {Goerigk, L. and Grimme, S.},
+  title = {A General Database for Main Group Thermochemistry, Kinetics, and Noncovalent Interactions -- Assessment of Common and Reparameterized (meta-){GGA} Density Functionals},
+  journal = {J. Chem. Theory Comput.},
+  volume = {6},
+  number = {1},
+  pages = {107},
+  year = {2010},
+  doi = {10.1021/ct900489g},
+  url = {http://pubs.acs.org/doi/abs/10.1021/ct900489g}
+}
+</code></pre>
+        </section>
+
+        <details>
+          <summary>All Libxc metadata</summary>
+          <dl class="metadata">
+            <dt>identifier</dt><dd>mgga_xc_otpss_d</dd>
+            <dt>family</dt><dd>meta-gga</dd>
+            <dt>kind</dt><dd>exchange_correlation</dd>
+            <dt>derivatives</dt><dd>0, 1, 2</dd>
+            <dt>flags</dt><dd>dim3, exc, fxc, vxc, needs_tau, enforce_fhc</dd>
+<dt>cam_alpha</dt><dd>null</dd>
+<dt>cam_beta</dt><dd>null</dd>
+<dt>cam_omega</dt><dd>null</dd>
+<dt>density_threshold</dt><dd>1.0e-15</dd>
+<dt>exx_coefficient</dt><dd>null</dd>
+<dt>n_spin</dt><dd>1</dd>
+<dt>nlc_C</dt><dd>null</dd>
+<dt>nlc_b</dt><dd>null</dd>
+<dt>sigma_threshold</dt><dd>1.0000000000000027e-20</dd>
+<dt>tau_threshold</dt><dd>1.0e-20</dd>
+<dt>zeta_threshold</dt><dd>2.220446049250313e-16</dd>
+          </dl>
+        </details>
+      </div>
+
+    </main>
+    <div id="command-palette" class="command-palette" aria-hidden="true" hidden>
+      <div class="command-backdrop" data-command-close></div>
+      <form class="command-panel" role="search">
+        <div class="search-box">
+          <input id="command-search" class="search-input command-search-input" type="search" autocomplete="off" placeholder="Search functionals..." aria-controls="command-search-suggestions">
+          <div id="command-search-suggestions" class="search-suggestions command-search-suggestions" role="listbox" hidden></div>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

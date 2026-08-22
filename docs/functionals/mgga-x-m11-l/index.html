@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>mgga_x_m11_l</title>
+    <link rel="stylesheet" href="../../assets/styles.css?v=20260822-github">
+    <script defer src="../../assets/search.js?v=20260822-github"></script>
+    <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
+    <script defer src="../../vendor/katex/katex.min.js"></script>
+    <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
+    <script defer src="../../assets/detail.js?v=20260822-github"></script>
+
+  </head>
+  <body>
+    <main class="shell">
+      <form class="global-search" role="search" action="../../" method="get">
+        <div class="search-box">
+          <input class="search-input global-search-input" name="q" type="search" autocomplete="off" placeholder="Search functionals..." aria-controls="global-search-suggestions">
+          <span class="search-shortcut" aria-hidden="true">Ctrl K</span>
+          <div id="global-search-suggestions" class="search-suggestions" role="listbox" hidden></div>
+        </div>
+      </form>
+
+      <a class="back" href="../../">Back to search</a>
+      <header class="top">
+        <a class="github-link" href="https://github.com/aouinaayoub/libxc-wiki" aria-label="View Libxc Wiki on GitHub" title="View source on GitHub">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .7a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2.23c-3.22.7-3.9-1.37-3.9-1.37-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.71.08-.71 1.16.08 1.78 1.2 1.78 1.2 1.04 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.74-1.55-2.57-.29-5.27-1.29-5.27-5.69 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.16 1.18a10.94 10.94 0 0 1 5.76 0c2.19-1.49 3.16-1.18 3.16-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.42-2.71 5.39-5.29 5.68.42.36.79 1.07.79 2.16v3.2c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .7Z"/></svg>
+        </a>
+
+        <p class="brand">META-GGA</p>
+        <h1><code class="title-code">mgga_x_m11_l</code></h1>
+        <div class="detail-tags"><span class="tag">meta-gga</span>
+<span class="tag">exchange</span></div>
+      </header>
+
+      <div class="detail-grid">
+      <section class="callout">
+        <p class="callout-label">Review excerpt</p>
+        <div class="review-html">
+<p>This empirical functional from Peverati and Truhlar<sup class="citation-marker"><a href="#review-ref-Peverati2012-117">712</a></sup> is based on a splitting of the Coulomb operator, leading to an enhancement factor that consists of short- and long-range parts:</p>
+<div class="equation" data-tex="F_\text{x}^\text{M11-L} = F_\text{x}^\text{SR-M11-L} + F_\text{x}^\text{LR-M11-L}"></div>
+<p>that were chosen as combinations of the enhancement factors of the <a class="functional-link" href="../gga-x-pbe/"><code>gga_x_pbe</code></a> (<a class="review-eq-link" href="#review-eq-eq-pbeenh">
+  <code>eq:pbeenh</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="F_\text{x}^{\text{PBE}} = 1 + \kappa\left[1 - \frac{\kappa}{\kappa + f_0(s_\sigma)}\right]"></span>
+  </span>
+</a>) and <a class="functional-link" href="../gga-x-rpbe/"><code>gga_x_rpbe</code></a> (<a class="review-eq-link" href="#review-eq-eq-RPBE">
+  <code>eq:RPBE</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="F_\text{x}^{\text{RPBE}} = 1 + \kappa\left(1 - \E^{-\mu s_\sigma^2/\kappa}\right)"></span>
+  </span>
+</a>) functionals:</p>
+<div class="equation" data-tex="\begin{aligned}
+F_\text{x}^\text{SR-M11-L} = &amp; G(a_{\sigma})\left[f_{1}^{\text{SR}}(w_{\sigma})F_{\text{x}}^{\text{PBE}}(s_\sigma)\right.  \\
+  &amp; \left.+f_{2}^{\text{SR}}(w_{\sigma})F_{\text{x}}^{\text{RPBE}}(s_\sigma)\right]
+\end{aligned}"></div>
+<div class="equation" data-tex="\begin{aligned}
+F_\text{x}^\text{LR-M11-L} = &amp; \left[1-G(a_{\sigma})\right]\left[f_{1}^{\text{LR}}(w_{\sigma})F_{\text{x}}^{\text{PBE}}(s_\sigma)\right.  \\
+ &amp; \left.+f_{2}^{\text{LR}}(w_{\sigma})F_{\text{x}}^{\text{RPBE}}(s_\sigma)\right]
+\end{aligned}"></div>
+<p>The functions $f_{i}^{\text{SR/LR}}$ are given by <a class="review-eq-link" href="#review-eq-eq-fwm06">
+  <code>eq:fwm06</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="f(w_\sigma)= \sum_{i=0}^m a_i w_\sigma^i"></span>
+  </span>
+</a> with $w_\sigma$ defined as <a class="review-eq-link" href="#review-eq-eq-b00w">
+  <code>eq:b00w</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="w_\sigma = \frac{\tau_\sigma^\text{TF} - \tau_\sigma}{\tau_\sigma^\text{TF} + \tau_\sigma}
+  = \frac{C_\text{F} - \tilde{t}_\sigma}{C_\text{F} + \tilde{t}_\sigma}"></span>
+  </span>
+</a>, and $m=8$ was found sufficiently large for a converged accuracy. The splitting of the Coulomb operator is based on the error function $\erf[\omega(\br_1 - \br_2)]$, therefore the function $G$ is given by</p>
+<div class="equation" data-tex="\begin{aligned}
+G(a_\sigma) = &amp; 1 -\frac{8}{3}a_\sigma\bigg[\sqrt{\pi}\erf\left(\frac{1}{2a_\sigma}\right) -
+  3a_\sigma + 4a_\sigma^3  \\
+ &amp; + \left(2a_\sigma-4a_\sigma^3\right)\E^{-1/\left(4a_\sigma^2\right)}
+  \bigg]
+\end{aligned}"></div>
+<p>with</p>
+<div class="equation" data-tex="a_{\sigma}=\frac{\omega}{2\left(12\pi^{2}n_{\sigma}\right)^{1/3}}"></div>
+<p>The coefficients in the functions $f_{i}^{\text{SR/LR}}$, as well as the range-separation parameter $\omega$ (0.25) in <a class="review-eq-link" href="#review-eq-eq-alpha-m11-l">
+  <code>eq:alpha-m11-l</code>
+  <span class="equation-preview" aria-hidden="true">
+    <span class="equation-preview-math" data-tex="a_{\sigma}=\frac{\omega}{2\left(12\pi^{2}n_{\sigma}\right)^{1/3}}"></span>
+  </span>
+</a>, were empirically tuned together with the parameters of <a class="functional-link" href="../mgga-c-m11-l/"><code>mgga_c_m11_l</code></a> correlation. However, several relations between them were imposed so that the following physical conditions are satisfied: the HEG limit, the second-order term in the density-gradient expansion, and no contribution from the $\tau$-dependent terms at the end points $w_\sigma=-1$ (exponential tails) and $w_\sigma=1$ (bond saddle points).</p>
+<p>A particular emphasis was put on systems with multiconfigurational character for the development of the M11-L functional, which  is claimed accurate for a variety of molecular properties and to compete with hybrid functionals. Regarding solid-state properties, M11-L yields lattice constants with an accuracy that is intermediate between PBE (<a class="functional-link" href="../gga-x-pbe/"><code>gga_x_pbe</code></a> + <a class="functional-link" href="../gga-c-pbe/"><code>gga_c_pbe</code></a>) and PBEsol (<a class="functional-link" href="../gga-x-pbe-sol/"><code>gga_x_pbe_sol</code></a> + <a class="functional-link" href="../gga-c-pbe-sol/"><code>gga_c_pbe_sol</code></a>).</p>
+<p>Like M06-L (<a class="functional-link" href="../mgga-x-m06-l/"><code>mgga_x_m06_l</code></a> + <a class="functional-link" href="../mgga-c-m06-l/"><code>mgga_c_m06_l</code></a>), also M11-L has been found to lead to unphysical solutions for the hydrogen atom,<sup class="citation-marker"><a href="#review-ref-Lehtola2023-JPCA-4180">700</a></sup> suggesting issues with overfitting.</p>
+        </div>
+        <p class="source-note">Adapted from <a href="https://arxiv.org/abs/2602.17333">Tran, Lehtola, Pittalis, and Marques, <em>Semi-Local Exchange-Correlation Approximations in Density Functional Theory</em>, arXiv:2602.17333</a>.</p>
+      </section>
+
+        <section class="section">
+          <h2>Referenced Review Equations</h2>
+          <div class="review-equations">
+          <article class="review-equation-card" id="review-eq-eq-pbeenh">
+            <code>eq:pbeenh</code>
+            <div class="equation" data-tex="F_\text{x}^{\text{PBE}} = 1 + \kappa\left[1 - \frac{\kappa}{\kappa + f_0(s_\sigma)}\right]"></div>
+          </article>
+
+          <article class="review-equation-card" id="review-eq-eq-RPBE">
+            <code>eq:RPBE</code>
+            <div class="equation" data-tex="F_\text{x}^{\text{RPBE}} = 1 + \kappa\left(1 - \E^{-\mu s_\sigma^2/\kappa}\right)"></div>
+          </article>
+
+          <article class="review-equation-card" id="review-eq-eq-fwm06">
+            <code>eq:fwm06</code>
+            <div class="equation" data-tex="f(w_\sigma)= \sum_{i=0}^m a_i w_\sigma^i"></div>
+          </article>
+
+          <article class="review-equation-card" id="review-eq-eq-b00w">
+            <code>eq:b00w</code>
+            <div class="equation" data-tex="w_\sigma = \frac{\tau_\sigma^\text{TF} - \tau_\sigma}{\tau_\sigma^\text{TF} + \tau_\sigma}
+  = \frac{C_\text{F} - \tilde{t}_\sigma}{C_\text{F} + \tilde{t}_\sigma}"></div>
+          </article>
+
+          <article class="review-equation-card" id="review-eq-eq-alpha-m11-l">
+            <code>eq:alpha-m11-l</code>
+            <div class="equation" data-tex="a_{\sigma}=\frac{\omega}{2\left(12\pi^{2}n_{\sigma}\right)^{1/3}}"></div>
+          </article>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <h2>Review References</h2>
+          <ol class="review-refs"><li id="review-ref-Peverati2012-117" value="712">Peverati, R.; Truhlar, D. G. M11-L: A Local Density Functional That Provides Improved Accuracy for Electronic Structure Calculations in Chemistry and Physics. <em>J. Phys. Chem. Lett.</em> <strong>2012</strong>, <em>3</em>, 117, DOI: <a href="https://doi.org/10.1021/jz201525m">10.1021/jz201525m</a></li>
+<li id="review-ref-Lehtola2023-JPCA-4180" value="700">Lehtola, S. Atomic Electronic Structure Calculations with Hermite Interpolating Polynomials. <em>J. Phys. Chem. A</em> <strong>2023</strong>, <em>127</em>, 4180--4193, DOI: <a href="https://doi.org/10.1021/acs.jpca.3c00729">10.1021/acs.jpca.3c00729</a></li></ol>
+        </section>
+
+        <section class="section">
+          <h2>Publications</h2>
+          <ol class="publication-refs"><li>Peverati, R.; Truhlar, D. G. M11-L: A Local Density Functional That Provides Improved Accuracy for Electronic Structure Calculations in Chemistry and Physics. <em>J. Phys. Chem. Lett.</em> <strong>2012</strong>, <em>3</em>, 117, DOI: <a href="https://doi.org/10.1021/jz201525m">10.1021/jz201525m</a></li></ol>
+        </section>
+
+        <section class="section">
+          <div class="section-heading">
+            <h2>BibTeX</h2>
+            <button class="copy-button" type="button" data-copy-target="bibtex-code" aria-label="Copy BibTeX">Copy</button>
+          </div>
+          <pre><code id="bibtex-code">@article{Peverati2012_117,
+  author = {Peverati, R. and Truhlar, D. G.},
+  title = {{M11}-{L}: A Local Density Functional That Provides Improved Accuracy for Electronic Structure Calculations in Chemistry and Physics},
+  journal = {J. Phys. Chem. Lett.},
+  volume = {3},
+  number = {1},
+  pages = {117},
+  year = {2012},
+  doi = {10.1021/jz201525m},
+  url = {http://pubs.acs.org/doi/abs/10.1021/jz201525m}
+}
+</code></pre>
+        </section>
+
+        <details>
+          <summary>All Libxc metadata</summary>
+          <dl class="metadata">
+            <dt>identifier</dt><dd>mgga_x_m11_l</dd>
+            <dt>family</dt><dd>meta-gga</dd>
+            <dt>kind</dt><dd>exchange</dd>
+            <dt>derivatives</dt><dd>0, 1, 2</dd>
+            <dt>flags</dt><dd>dim3, exc, fxc, vxc, needs_tau, enforce_fhc</dd>
+<dt>cam_alpha</dt><dd>null</dd>
+<dt>cam_beta</dt><dd>null</dd>
+<dt>cam_omega</dt><dd>null</dd>
+<dt>density_threshold</dt><dd>1.0e-13</dd>
+<dt>exx_coefficient</dt><dd>null</dd>
+<dt>n_spin</dt><dd>1</dd>
+<dt>nlc_C</dt><dd>null</dd>
+<dt>nlc_b</dt><dd>null</dd>
+<dt>sigma_threshold</dt><dd>4.641588833612789e-18</dd>
+<dt>tau_threshold</dt><dd>1.0e-20</dd>
+<dt>zeta_threshold</dt><dd>2.220446049250313e-16</dd>
+          </dl>
+        </details>
+      </div>
+
+    </main>
+    <div id="command-palette" class="command-palette" aria-hidden="true" hidden>
+      <div class="command-backdrop" data-command-close></div>
+      <form class="command-panel" role="search">
+        <div class="search-box">
+          <input id="command-search" class="search-input command-search-input" type="search" autocomplete="off" placeholder="Search functionals..." aria-controls="command-search-suggestions">
+          <div id="command-search-suggestions" class="search-suggestions command-search-suggestions" role="listbox" hidden></div>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
