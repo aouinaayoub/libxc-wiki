@@ -4,12 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Libxc Wiki</title>
-    <link rel="stylesheet" href="assets/styles.css?v=20260822-github">
-    <script defer src="assets/search.js?v=20260822-github"></script>
+    <link rel="stylesheet" href="assets/styles.css?v=20261015-compact-v5">
+    <script defer src="assets/search.js?v=20261015-compact-v5"></script>
 
   </head>
-  <body>
-    <main class="shell">
+  <body class="catalog">
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <main class="shell" id="main-content">
       <header class="top">
         <a class="github-link" href="https://github.com/aouinaayoub/libxc-wiki" aria-label="View Libxc Wiki on GitHub" title="View source on GitHub">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .7a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2.23c-3.22.7-3.9-1.37-3.9-1.37-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.71.08-.71 1.16.08 1.78 1.2 1.78 1.2 1.04 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.74-1.55-2.57-.29-5.27-1.29-5.27-5.69 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.16 1.18a10.94 10.94 0 0 1 5.76 0c2.19-1.49 3.16-1.18 3.16-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.42-2.71 5.39-5.29 5.68.42.36.79 1.07.79 2.16v3.2c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .7Z"/></svg>
@@ -17,39 +18,36 @@
 
         <p class="brand">Libxc Wiki</p>
         <h1>Functionals</h1>
-        <p class="subtle">Review-backed excerpts from <a href="https://arxiv.org/abs/2602.17333">Tran, Lehtola, Pittalis, and Marques, arXiv:2602.17333</a>.<br><a href="https://libxc.gitlab.io/">Official Libxc website</a>.</p>
+        <p class="intro">Explore exchange, correlation, and kinetic-energy functionals in Libxc.</p>
+        <p class="subtle">Review-backed excerpts from <a href="https://arxiv.org/abs/2602.17333">Tran, Lehtola, Pittalis, and Marques, arXiv:2602.17333</a>. <a class="official-link" href="https://libxc.gitlab.io/">Official Libxc website ↗</a></p>
       </header>
 
       <section class="search-panel" aria-label="Search functionals">
         <div class="search-box">
-          <input id="search" class="search-input" type="search" autocomplete="off" autofocus placeholder="Search identifier, kind, tag, publication..." aria-controls="search-suggestions">
+          <input id="search" class="search-input" type="search" autocomplete="off" aria-label="Search functionals" placeholder="Search by identifier, author, or publication…" aria-controls="search-suggestions">
           <span class="search-shortcut" aria-hidden="true">Ctrl K</span>
           <div id="search-suggestions" class="search-suggestions" role="listbox" hidden></div>
         </div>
-        <div class="tag-bar"><button class="tag filter-tag" type="button" data-filter="lda">LDA (72)</button>
+        <div class="filter-groups"><div class="filter-group" role="group" aria-label="Family"><span class="filter-label">Family</span><div class="tag-bar"><button class="tag filter-tag" type="button" data-filter="lda">LDA (72)</button>
 <button class="tag filter-tag" type="button" data-filter="gga">GGA (258)</button>
 <button class="tag filter-tag" type="button" data-filter="meta-gga">meta-GGA (181)</button>
-<button class="tag filter-tag" type="button" data-filter="hybrid">hybrid (164)</button>
-<button class="tag filter-tag" type="button" data-filter="dim1">dim1 (7)</button>
-<button class="tag filter-tag" type="button" data-filter="dim2">dim2 (10)</button>
-<button class="tag filter-tag" type="button" data-filter="exchange">exchange (444)</button>
+<button class="tag filter-tag" type="button" data-filter="hybrid">hybrid (164)</button></div></div><div class="filter-group" role="group" aria-label="Kind"><span class="filter-label">Kind</span><div class="tag-bar"><button class="tag filter-tag" type="button" data-filter="exchange">exchange (444)</button>
 <button class="tag filter-tag" type="button" data-filter="correlation">correlation (352)</button>
-<button class="tag filter-tag" type="button" data-filter="kinetic">kinetic (68)</button>
-          <button id="clear-tags" class="clear-tags" type="button" hidden>Clear (Esc)</button>
-        </div>
-        <div id="result-count" class="result-count"></div>
+<button class="tag filter-tag" type="button" data-filter="kinetic">kinetic (68)</button></div></div><div class="filter-group" role="group" aria-label="Dimension"><span class="filter-label">Dimension</span><div class="tag-bar"><button class="tag filter-tag" type="button" data-filter="dim1">1D (7)</button>
+<button class="tag filter-tag" type="button" data-filter="dim2">2D (10)</button></div></div><button id="clear-tags" class="clear-tags" type="button" hidden>Clear filters</button></div>
+        <div class="results-toolbar"><div id="result-count" class="result-count" role="status" aria-live="polite"></div><span>Choose a family to browse</span></div>
       </section>
 
       <section class="rows" aria-label="Functional results">
         <section class="rung-section is-collapsed is-user-collapsed" data-family="lda">
           <header class="rung-heading">
-            <button class="rung-toggle" type="button" aria-expanded="false">
+            <button class="rung-toggle" type="button" aria-expanded="false" aria-controls="family-lda">
               <span class="rung-chevron" aria-hidden="true">›</span>
-              <h2>LDA</h2>
+              <span class="family-name">LDA</span><span class="family-description">Local density</span>
             </button>
             <span class="rung-count" data-total="72">72</span>
           </header>
-          <div class="rung-rows">
+          <div class="rung-rows" id="family-lda">
       <article class="row-card" role="link" tabindex="0" data-href="functionals/lda-c-1d-css/" data-identifier="lda_c_1d_css" data-authors="Casula et al." data-tags="lda correlation dim1" data-search="lda_c_1d_css correlation lda correlation dim1 casula et al. m. casula, s. sorella, and g. senatore.,  phys. rev. b 74, 245427 (2006)">
         <code class="identifier">lda_c_1d_css</code>
         <div class="row-tags"><button class="tag filter-tag" type="button" data-filter="lda">lda</button>
@@ -580,13 +578,13 @@
 
         <section class="rung-section is-collapsed is-user-collapsed" data-family="gga">
           <header class="rung-heading">
-            <button class="rung-toggle" type="button" aria-expanded="false">
+            <button class="rung-toggle" type="button" aria-expanded="false" aria-controls="family-gga">
               <span class="rung-chevron" aria-hidden="true">›</span>
-              <h2>GGA</h2>
+              <span class="family-name">GGA</span><span class="family-description">Density gradients</span>
             </button>
             <span class="rung-count" data-total="258">258</span>
           </header>
-          <div class="rung-rows">
+          <div class="rung-rows" id="family-gga">
       <article class="row-card" role="link" tabindex="0" data-href="functionals/gga-c-acgga/" data-identifier="gga_c_acgga" data-authors="Cancio et al. and Burke et al." data-tags="gga correlation" data-search="gga_c_acgga correlation gga correlation cancio et al. and burke et al. a. cancio, g. p. chen, b. t. krull, and k. burke.,  j. chem. phys. 149, 084116 (2018) k. burke, a. cancio, t. gould, and s. pittalis.,  arxiv e-prints  (2014)">
         <code class="identifier">gga_c_acgga</code>
         <div class="row-tags"><button class="tag filter-tag" type="button" data-filter="gga">gga</button>
@@ -2437,13 +2435,13 @@
 
         <section class="rung-section is-collapsed is-user-collapsed" data-family="meta-gga">
           <header class="rung-heading">
-            <button class="rung-toggle" type="button" aria-expanded="false">
+            <button class="rung-toggle" type="button" aria-expanded="false" aria-controls="family-meta-gga">
               <span class="rung-chevron" aria-hidden="true">›</span>
-              <h2>meta-GGA</h2>
+              <span class="family-name">meta-GGA</span><span class="family-description">Beyond density gradients</span>
             </button>
             <span class="rung-count" data-total="181">181</span>
           </header>
-          <div class="rung-rows">
+          <div class="rung-rows" id="family-meta-gga">
       <article class="row-card" role="link" tabindex="0" data-href="functionals/mgga-c-b88/" data-identifier="mgga_c_b88" data-authors="Becke et al." data-tags="meta-gga correlation" data-search="mgga_c_b88 correlation meta-gga correlation becke et al. a. d. becke.,  j. chem. phys. 88, 1053-1062 (1988)">
         <code class="identifier">mgga_c_b88</code>
         <div class="row-tags"><button class="tag filter-tag" type="button" data-filter="meta-gga">meta-gga</button>
@@ -3727,13 +3725,13 @@
 
         <section class="rung-section is-collapsed is-user-collapsed" data-family="hybrid">
           <header class="rung-heading">
-            <button class="rung-toggle" type="button" aria-expanded="false">
+            <button class="rung-toggle" type="button" aria-expanded="false" aria-controls="family-hybrid">
               <span class="rung-chevron" aria-hidden="true">›</span>
-              <h2>hybrid</h2>
+              <span class="family-name">hybrid</span><span class="family-description">With exact exchange</span>
             </button>
             <span class="rung-count" data-total="164">164</span>
           </header>
-          <div class="rung-rows">
+          <div class="rung-rows" id="family-hybrid">
       <article class="row-card" role="link" tabindex="0" data-href="functionals/hyb-gga-x-cam-s12g/" data-identifier="hyb_gga_x_cam_s12g" data-authors="Swart et al." data-tags="hybrid exchange" data-search="hyb_gga_x_cam_s12g exchange hybrid exchange swart et al. m. swart.,  chem. phys. lett. 580, 166 - 171 (2013)">
         <code class="identifier">hyb_gga_x_cam_s12g</code>
         <div class="row-tags"><button class="tag filter-tag" type="button" data-filter="hybrid">hybrid</button>
@@ -5021,15 +5019,15 @@
         </section>
 
       </section>
-      <p id="empty-results" class="empty" hidden>No functionals match the current search and tags.</p>
-      <script defer src="assets/app.js?v=20260822-github"></script>
+      <p id="empty-results" class="empty" hidden>No functionals found. Try a shorter search or reset your filters. <button id="reset-search" class="reset-search" type="button">Reset search</button></p>
+      <script defer src="assets/app.js?v=20261015-compact-v5"></script>
 
     </main>
     <div id="command-palette" class="command-palette" aria-hidden="true" hidden>
       <div class="command-backdrop" data-command-close></div>
       <form class="command-panel" role="search">
         <div class="search-box">
-          <input id="command-search" class="search-input command-search-input" type="search" autocomplete="off" placeholder="Search functionals..." aria-controls="command-search-suggestions">
+          <input id="command-search" class="search-input command-search-input" type="search" autocomplete="off" aria-label="Search functionals" placeholder="Search functionals…" aria-controls="command-search-suggestions">
           <div id="command-search-suggestions" class="search-suggestions command-search-suggestions" role="listbox" hidden></div>
         </div>
       </form>

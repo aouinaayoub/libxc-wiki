@@ -142,7 +142,9 @@ function update() {
 
   if (hasQuery) {
     visibleItems
-      .sort((a, b) => b.score - a.score || a.identifier.localeCompare(b.identifier))
+      .sort((a, b) => searchTools
+        ? searchTools.compareMatches({ item: a, score: a.score }, { item: b, score: b.score })
+        : b.score - a.score || a.identifier.localeCompare(b.identifier))
       .forEach((item, order) => {
         item.row.style.order = String(order);
       });
@@ -153,6 +155,7 @@ function update() {
   if (empty) empty.hidden = visible !== 0;
   for (const tag of tags) {
     tag.classList.toggle('active', state.filters.has(tag.dataset.filter));
+    tag.setAttribute('aria-pressed', String(state.filters.has(tag.dataset.filter)));
   }
   if (clearTags) clearTags.hidden = state.filters.size === 0;
   for (const group of groups) {
@@ -194,6 +197,9 @@ search?.addEventListener('keydown', (event) => {
     state.query = '';
     clearFilterCollapseState();
     if (suggestionBox) suggestionBox.hidden = true;
+    const url = new URL(window.location.href);
+    url.searchParams.delete('q');
+    window.history.replaceState({}, '', url);
     update();
   }
 });
@@ -234,8 +240,16 @@ for (const row of rows) {
     window.location.href = row.dataset.href;
   });
   row.addEventListener('keydown', (event) => {
+    if (event.target !== row) return;
     if (event.key === 'Enter') window.location.href = row.dataset.href;
   });
 }
 
 update();
+
+document.querySelector('#reset-search')?.addEventListener('click', () => {
+  state.filters.clear();
+  search.value = '';
+  search.dispatchEvent(new Event('input'));
+  search.focus();
+});

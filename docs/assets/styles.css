@@ -437,7 +437,7 @@ button.tag[disabled] {
   letter-spacing: 0;
 }
 
-.rung-heading span {
+.rung-heading .rung-count {
   color: rgba(101, 109, 118, 0.66);
   font-size: 0.82rem;
 }
@@ -1093,4 +1093,229 @@ code {
   .equation-preview {
     display: none;
   }
+}
+
+/* Scientific reference browser: cool paper, ink, and restrained teal. */
+:root {
+  --bg: #f6f9fb;
+  --surface: #ffffff;
+  --surface-soft: #edf3f6;
+  --ink: #172d3b;
+  --muted: #526776;
+  --faint: #637684;
+  --line: #cbd9e1;
+  --line-soft: #dfe8ee;
+  --accent: #006c78;
+  --accent-ink: #00616c;
+  --accent-soft: #e1f3f3;
+  --green: #006c78;
+  --sans: "Segoe UI", ui-sans-serif, system-ui, sans-serif;
+}
+
+.shell { width: min(1040px, calc(100% - 64px)); max-width: 1040px; padding-top: 48px; }
+.top { gap: 16px; padding-bottom: 28px; }
+.brand { font-family: var(--mono); letter-spacing: .1em; font-size: .78rem; }
+h1 { font-family: var(--sans); font-size: clamp(2.2rem, 5vw, 3.8rem); font-weight: 650; letter-spacing: -.045em; line-height: 1.1; padding-right: 44px; }
+.intro { margin: 0; color: var(--ink); font-size: 1.12rem; line-height: 1.6; }
+.subtle { font-size: .86rem; max-width: 850px; }
+.github-link { width: 44px; height: 44px; }
+.search-panel { padding: 22px; gap: 20px; border-radius: 12px; box-shadow: 0 3px 12px #172d3b06; }
+.search-input { height: 56px; background: var(--surface); border-color: #a9bdc9; }
+.search-shortcut { color: var(--muted); background: var(--surface-soft); }
+.filter-groups { display: grid; gap: 12px; }
+.filter-group { display: flex; gap: 16px; align-items: center; }
+.filter-label { flex: 0 0 82px; color: var(--muted); font-size: .8rem; font-weight: 600; }
+.tag-bar { gap: 8px; }
+.tag-bar .tag { min-height: 36px; padding: 7px 12px; font-size: .8rem; border-radius: 6px; }
+button.tag.active { border-color: var(--accent); background: var(--accent); color: white; }
+.clear-tags { justify-self: start; color: var(--accent-ink); min-height: 36px; }
+.results-toolbar { display: flex; justify-content: space-between; gap: 12px; border-top: 1px solid var(--line-soft); padding-top: 16px; }
+.results-toolbar > span { color: var(--muted); font-size: .8rem; }
+.result-count { color: var(--ink); font-weight: 600; }
+.rows { gap: 12px; }
+.rung-section { gap: 0; border: 1px solid var(--line); border-radius: 10px; background: var(--surface); overflow: clip; }
+.rung-heading { position: relative; align-items: center; padding: 0; border-bottom: 0; gap: 0; }
+.rung-toggle { width: 100%; min-height: 84px; padding: 18px 88px 18px 20px; gap: 16px; border-radius: 0; text-align: left; }
+.rung-toggle:hover { background: var(--surface-soft); }
+.family-name { flex: 0 0 140px; font-family: var(--mono); font-size: 1.3rem; font-weight: 600; color: var(--ink); }
+.family-description { color: var(--muted); font-size: .9rem; }
+.rung-count { position: absolute; right: 22px; pointer-events: none; font-family: var(--mono); padding: 5px 9px; border: 1px solid var(--line-soft); border-radius: 6px; background: var(--surface-soft); }
+.rung-heading .rung-count, .rung-heading .rung-chevron { color: var(--muted); }
+.rung-rows { padding: 0 12px 12px; gap: 0; }
+.row-card { border: 0; border-top: 1px solid var(--line-soft); border-radius: 0; min-height: 66px; }
+.row-card:hover, .row-card:focus { background: var(--surface-soft); box-shadow: none; transform: none; }
+.identifier { border: 0; background: transparent; padding: 4px 0; color: var(--accent-ink); }
+.publication-authors, .suggestion span { color: var(--muted); }
+.row-tags .tag { min-height: 32px; padding: 6px 9px; }
+.empty { line-height: 1.7; }
+.reset-search { display: block; min-height: 44px; margin-top: 12px; padding: 8px 14px; border: 1px solid var(--accent); border-radius: 6px; color: var(--accent-ink); background: var(--surface); cursor: pointer; }
+.title-code { font-size: clamp(1.2rem, 4vw, 2.45rem); border: 0; background: transparent; padding-left: 0; }
+.callout { background: transparent; }
+:where(a, button, input, [tabindex]):focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+.rung-toggle:focus-visible, .clear-tags:focus-visible, .row-card:focus-visible { outline: 3px solid var(--accent); outline-offset: -3px; }
+.skip-link { position: fixed; top: -100px; left: 16px; z-index: 200; padding: 12px; background: var(--surface); border: 2px solid var(--accent); border-radius: 6px; }
+.skip-link:focus { top: 12px; }
+@media (max-width: 700px) {
+  .shell { width: calc(100% - 32px); padding-top: 28px; }
+  .search-panel { padding: 16px; }
+  .filter-group { align-items: flex-start; flex-direction: column; gap: 6px; }
+  .filter-label { flex-basis: auto; }
+  .tag-bar .tag { min-height: 44px; padding: 11px 12px; }
+  .rung-toggle { flex-wrap: wrap; gap: 6px 12px; padding: 18px 64px 18px 14px; }
+  .family-name { flex: 1; font-size: 1.12rem; }
+  .family-description { width: 100%; padding-left: 30px; font-size: .82rem; }
+  .rung-count { right: 14px; }
+  .results-toolbar > span { max-width: 145px; text-align: right; line-height: 1.5; }
+  .row-tags .tag { min-height: 44px; padding: 11px 9px; }
+  .intro { font-size: 1rem; }
+  .subtle { font-size: .8rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition: none !important; animation: none !important; scroll-behavior: auto !important; }
+}
+
+.suggestion-count {
+  position: sticky;
+  top: -6px;
+  z-index: 1;
+  padding: 10px;
+  border-bottom: 1px solid var(--line-soft);
+  background: var(--surface);
+  color: var(--muted);
+  font-size: .8rem;
+}
+.suggestion { scroll-margin-top: 44px; }
+
+/* The catalogue uses a larger reading scale than the article pages. */
+.catalog {
+  --ink: #122f40;
+  --muted: #405969;
+  --faint: #526b79;
+  --line: #bbced9;
+  --line-soft: #d5e1e8;
+  --accent-ink: #005965;
+}
+.catalog .shell {
+  width: min(1120px, calc(100% - 80px));
+  max-width: 1120px;
+  padding-top: 48px;
+}
+.catalog .top { gap: 18px; padding-bottom: 28px; }
+.catalog .brand { font-size: .875rem; font-weight: 700; }
+.catalog h1 { font-size: clamp(2.8rem, 5vw, 4.5rem); letter-spacing: -.05em; font-weight: 700; }
+.catalog .intro { max-width: 900px; font-size: 1.25rem; line-height: 1.6; }
+.catalog .subtle { font-size: 1rem; line-height: 1.7; }
+.catalog .subtle a { text-decoration-color: #8ba4b3; }
+.catalog .search-panel { padding: 24px; gap: 22px; box-shadow: 0 4px 18px #122f4008; }
+.catalog .search-input { height: 62px; font-size: 1.125rem; border-color: #8daab9; }
+.catalog .search-shortcut { font-size: .8rem; padding: 4px 7px; }
+.catalog .filter-groups { gap: 14px; }
+.catalog .filter-label { flex-basis: 100px; color: var(--ink); font-size: .9375rem; font-weight: 650; }
+.catalog .tag-bar { gap: 8px; }
+.catalog .tag-bar .tag {
+  min-height: 44px;
+  padding: 10px 14px;
+  color: #294b60;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.35;
+  background: #f8fafc;
+  border-color: #becfd9;
+  border-radius: 7px;
+}
+.catalog button.tag:hover { color: var(--accent-ink); background: var(--accent-soft); border-color: var(--accent); }
+.catalog button.tag.active { background: var(--accent); border-color: var(--accent); color: white; }
+.catalog .clear-tags { font-size: .9375rem; }
+.catalog .result-count { font-size: 1rem; }
+.catalog .results-toolbar > span { font-size: .9375rem; }
+.catalog .rows { gap: 14px; }
+.catalog .rung-toggle { min-height: 90px; padding: 20px 100px 20px 22px; gap: 18px; }
+.catalog .family-name { flex-basis: 166px; font-size: 1.5rem; letter-spacing: -.04em; }
+.catalog .family-description { font-size: 1.0625rem; }
+.catalog .rung-heading .rung-count { font-size: .9375rem; font-weight: 600; padding: 6px 10px; color: #294b60; }
+.catalog .rung-heading .rung-chevron { font-size: 1.25rem; color: var(--accent-ink); }
+.catalog .rung-rows { padding: 0 16px 12px; }
+.catalog .row-card { min-height: 76px; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(140px, .6fr); }
+.catalog .identifier { font-size: 1.0625rem; font-weight: 650; }
+.catalog .publication-authors { font-size: .9375rem; }
+.catalog .row-tags .tag { font-size: .875rem; color: var(--muted); }
+.catalog .suggestion { min-height: 54px; padding: 12px; }
+.catalog .suggestion code { font-size: 1rem; color: var(--ink); background: transparent; }
+.catalog .suggestion span { font-size: .9375rem; }
+.catalog .suggestion:hover, .catalog .suggestion:focus { background: var(--accent-soft); }
+.catalog .suggestion-count { font-size: .9375rem; font-weight: 600; padding: 12px; }
+.catalog .suggestion { scroll-margin-top: 48px; }
+@media (max-width: 800px) {
+  .catalog .shell { width: calc(100% - 40px); padding-top: 32px; }
+  .catalog .filter-group { flex-direction: column; align-items: flex-start; gap: 8px; }
+  .catalog .filter-label { flex-basis: auto; }
+  .catalog .row-card { grid-template-columns: 1fr; gap: 10px; }
+  .catalog .publication-authors { text-align: left; }
+}
+@media (max-width: 500px) {
+  .catalog .shell { width: calc(100% - 32px); padding-top: 26px; }
+  .catalog .top { gap: 14px; padding-bottom: 24px; }
+  .catalog h1 { font-size: 2.8rem; }
+  .catalog .intro { font-size: 1.125rem; }
+  .catalog .subtle { font-size: .9375rem; }
+  .catalog .search-panel { padding: 16px; gap: 18px; }
+  .catalog .search-input { height: 56px; font-size: 1rem; }
+  .catalog .filter-label { font-size: .875rem; }
+  .catalog .tag-bar .tag { font-size: .875rem; padding: 11px 12px; }
+  .catalog .results-toolbar > span { font-size: .875rem; }
+  .catalog .rung-toggle { padding: 18px 66px 18px 14px; gap: 8px 12px; }
+  .catalog .family-name { flex: 1; font-size: 1.25rem; }
+  .catalog .family-description { font-size: .9375rem; }
+  .catalog .rung-heading .rung-count { font-size: .875rem; }
+  .catalog .identifier { font-size: 1rem; }
+  .catalog .suggestion { grid-template-columns: 1fr; gap: 5px; }
+  .catalog .suggestion span { font-size: .875rem; }
+}
+
+/* Compact overview: retain the reading scale and use the width for families. */
+.catalog .shell { padding: 20px 0; }
+.catalog .top { gap: 10px; margin-bottom: 16px; padding-bottom: 16px; }
+.catalog h1 { font-size: clamp(2.5rem, 4vw, 3.25rem); }
+.catalog .intro { font-size: 1.125rem; }
+.catalog .subtle { max-width: none; font-size: .9375rem; line-height: 1.6; }
+.catalog .official-link { display: inline-block; margin-left: 8px; }
+.catalog .search-panel { margin: 16px 0; padding: 18px 20px; gap: 14px; }
+.catalog .search-input { height: 54px; }
+.catalog .filter-groups { gap: 8px; }
+.catalog .tag-bar .tag { min-height: 40px; padding: 8px 12px; }
+.catalog .results-toolbar { padding-top: 12px; align-items: center; }
+.catalog .rows { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; align-items: start; }
+.catalog .rung-toggle {
+  display: grid;
+  grid-template-columns: 18px minmax(0, 1fr);
+  gap: 5px 12px;
+  min-height: 82px;
+  padding: 14px 76px 14px 18px;
+}
+.catalog .family-name { font-size: 1.375rem; }
+.catalog .family-description { grid-column: 2; width: auto; padding: 0; font-size: 1rem; }
+.catalog .rung-count { right: 16px; }
+/* Expanded families and searches use the full width for readable results. */
+.catalog .rung-section:not(.is-collapsed) { grid-column: 1 / -1; }
+@media (max-width: 800px) {
+  .catalog .filter-group { flex-direction: row; align-items: center; gap: 12px; }
+  .catalog .filter-label { flex: 0 0 86px; }
+  .catalog .top { padding-right: 0; }
+  .catalog .official-link { margin-left: 0; }
+}
+@media (max-width: 500px) {
+  .catalog .shell { padding: 20px 0; }
+  .catalog .brand { font-size: .8rem; }
+  .catalog h1 { font-size: 2.5rem; }
+  .catalog .intro { font-size: 1rem; line-height: 1.5; }
+  .catalog .subtle { font-size: .875rem; }
+  .catalog .search-panel { padding: 14px; gap: 12px; }
+  .catalog .search-input { height: 50px; }
+  .catalog .filter-group { align-items: flex-start; flex-direction: column; gap: 6px; }
+  .catalog .filter-label { flex-basis: auto; }
+  .catalog .tag-bar .tag { min-height: 44px; padding: 11px 12px; }
+  .catalog .rows { grid-template-columns: 1fr; gap: 8px; }
+  .catalog .rung-toggle { min-height: 72px; padding: 12px 64px 12px 14px; }
+  .catalog .family-name { font-size: 1.25rem; }
+  .catalog .family-description { font-size: .9375rem; }
 }

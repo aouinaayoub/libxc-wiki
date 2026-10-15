@@ -4,19 +4,20 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>gga_x_sogga11</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20260822-github">
-    <script defer src="../../assets/search.js?v=20260822-github"></script>
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261015-compact-v5">
+    <script defer src="../../assets/search.js?v=20261015-compact-v5"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20260822-github"></script>
+    <script defer src="../../assets/detail.js?v=20261015-compact-v5"></script>
 
   </head>
-  <body>
-    <main class="shell">
+  <body class="functional-page">
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <main class="shell" id="main-content">
       <form class="global-search" role="search" action="../../" method="get">
         <div class="search-box">
-          <input class="search-input global-search-input" name="q" type="search" autocomplete="off" placeholder="Search functionals..." aria-controls="global-search-suggestions">
+          <input class="search-input global-search-input" name="q" type="search" autocomplete="off" aria-label="Search functionals" placeholder="Search functionals…" aria-controls="global-search-suggestions">
           <span class="search-shortcut" aria-hidden="true">Ctrl K</span>
           <div id="global-search-suggestions" class="search-suggestions" role="listbox" hidden></div>
         </div>
@@ -41,7 +42,6 @@
 <p>This functional is an attempt to obey the density-gradient expansion at small values of $s_\sigma$ and at the same time exhibit reasonable accuracy for the geometry and energetics of molecules. It uses a flexible form:</p>
 <div class="equation" data-tex="F_\text{x}^{\text{SOGGA11}} = g_1(s_\sigma) + g_2(s_\sigma)"></div>
 <p>where the functions $g_1$ and $g_2$ are given by</p>
-<p>\label{eq:sogga11gs}</p>
 <div class="equation" data-tex="\begin{aligned}
 g_1(s_\sigma) =&amp; \sum_{i=0}^m a_i \left( 1 - \frac{1}{1 + \frac{\mu}{\kappa} s_\sigma^2} \right)^i \\
     g_2(s_\sigma) =&amp; \sum_{i=0}^m b_i \left( 1 - \E^{-\mu s_\sigma^2/\kappa} \right)^i
@@ -135,7 +135,7 @@ g_1(s_\sigma) =&amp; \sum_{i=0}^m a_i \left( 1 - \frac{1}{1 + \frac{\mu}{\kappa}
       <div class="command-backdrop" data-command-close></div>
       <form class="command-panel" role="search">
         <div class="search-box">
-          <input id="command-search" class="search-input command-search-input" type="search" autocomplete="off" placeholder="Search functionals..." aria-controls="command-search-suggestions">
+          <input id="command-search" class="search-input command-search-input" type="search" autocomplete="off" aria-label="Search functionals" placeholder="Search functionals…" aria-controls="command-search-suggestions">
           <div id="command-search-suggestions" class="search-suggestions command-search-suggestions" role="listbox" hidden></div>
         </div>
       </form>

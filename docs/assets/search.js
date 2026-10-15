@@ -1,6 +1,4 @@
 (function () {
-  const MAX_SUGGESTIONS = 7;
-
   function normalize(value) {
     return String(value || '')
       .toLowerCase()
@@ -56,9 +54,12 @@
     const haystack = normalize(item.search);
     const haystackCompact = compact(item.search);
     const tags = (item.tags || []).map(normalize);
+    const functionalName = normalize(String(item.identifier || '').replace(/^(?:hyb_)?(?:lda|gga|mgga)_[xck]+_/i, ''));
     let score = 0;
 
     if (identifier === query || identifierCompact === queryCompact) score = Math.max(score, 1000);
+    // Match the functional name itself before variants such as SCAN0 or rSCAN.
+    if (functionalName === query || compact(functionalName) === queryCompact) score = Math.max(score, 960);
     if (identifier.startsWith(query) || identifierCompact.startsWith(queryCompact)) score = Math.max(score, 900 - identifier.length);
     if (identifier.includes(query) || identifierCompact.includes(queryCompact)) score = Math.max(score, 760 - identifier.indexOf(query));
     if (tags.includes(query)) score = Math.max(score, 680);
@@ -66,14 +67,30 @@
 
     if (queryCompact.length <= 4) return score;
 
-    score = Math.max(score, fuzzyScore(queryCompact, identifierCompact) + 260);
+    const identifierScore = fuzzyScore(queryCompact, identifierCompact);
+    if (identifierScore > 0) score = Math.max(score, identifierScore + 260);
     score = Math.max(score, fuzzyScore(queryCompact, haystackCompact));
     return score;
   }
 
+  function kindPriority(item) {
+    const tags = new Set(item.tags || []);
+    if (tags.has('exchange')) return tags.has('correlation') ? 1 : 0;
+    if (tags.has('correlation')) return 2;
+    if (tags.has('kinetic')) return 3;
+    return 4;
+  }
+
+  // Keep relevance first; prefer exchange when matches are equally relevant.
+  function compareMatches(a, b) {
+    return b.score - a.score
+      || kindPriority(a.item) - kindPriority(b.item)
+      || a.item.identifier.localeCompare(b.item.identifier);
+  }
+
   function search(items, rawQuery, options = {}) {
     const filters = options.filters || [];
-    const limit = options.limit || MAX_SUGGESTIONS;
+    const limit = options.limit ?? Infinity;
     const scored = [];
 
     for (const item of items) {
@@ -85,7 +102,7 @@
       scored.push({ item, score });
     }
 
-    scored.sort((a, b) => b.score - a.score || a.item.identifier.localeCompare(b.item.identifier));
+    scored.sort(compareMatches);
     return scored.slice(0, limit);
   }
 
@@ -96,6 +113,14 @@
       container.hidden = true;
       return;
     }
+
+    container.setAttribute('aria-label', `${matches.length} matching functionals`);
+    const count = document.createElement('div');
+    count.className = 'suggestion-count';
+    count.setAttribute('role', 'presentation');
+    count.textContent = `${matches.length} match${matches.length === 1 ? '' : 'es'}${matches.length > 7 ? ' · Scroll for more' : ''}`;
+    container.append(count);
+    container.scrollTop = 0;
 
     for (const match of matches) {
       const button = document.createElement('button');
@@ -238,6 +263,7 @@
   window.LibxcSearch = {
     normalize,
     scoreItem,
+    compareMatches,
     search,
     renderSuggestions,
     bindSuggestionKeyboard,
