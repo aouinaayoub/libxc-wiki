@@ -151,6 +151,7 @@ function setupGlobalSearch() {
         search: item.search || item.identifier,
       }));
       updateSuggestions();
+      return searchTools?.loadExcerpts(index).then(updateSuggestions);
     })
     .catch(() => {});
 
@@ -162,8 +163,8 @@ function setupGlobalSearch() {
 
     const matches = searchTools.search(index, input.value);
     searchTools.renderSuggestions(suggestionBox, matches, (item) => {
-      window.location.href = item.href;
-    });
+      window.location.href = searchTools.resultHref(item, input.value);
+    }, { query: input.value });
   };
 
   const goToSearch = () => {
@@ -208,3 +209,29 @@ try {
 setupCopyButtons();
 setupGlobalSearch();
 setupEscapeToHome();
+
+function setupReviewHighlights() {
+  const query = new URLSearchParams(location.search).get('highlight');
+  const review = document.querySelector('.review-html');
+  const tools = window.LibxcSearch;
+  if (!query || !review || !tools) return;
+  const count = tools.highlightReview(review, query);
+  if (!count) return;
+  review.id = 'review-excerpt';
+  const note = document.createElement('div');
+  note.className = 'review-search-note';
+  const label = document.createElement('span');
+  label.textContent = `${count} review match${count === 1 ? '' : 'es'} for “${query}”`;
+  const clear = document.createElement('button');
+  clear.type = 'button'; clear.className = 'excerpt-expand'; clear.textContent = 'Clear highlights';
+  clear.addEventListener('click', () => {
+    for (const mark of review.querySelectorAll('mark[data-search-match]')) mark.replaceWith(...mark.childNodes);
+    review.normalize();
+    note.remove();
+    const url = new URL(location.href); url.searchParams.delete('highlight'); history.replaceState({}, '', url);
+  });
+  note.append(label, clear);
+  review.before(note);
+  requestAnimationFrame(() => review.querySelector('mark')?.scrollIntoView({ block: 'center' }));
+}
+setupReviewHighlights();

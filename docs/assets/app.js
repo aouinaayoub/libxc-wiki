@@ -24,6 +24,7 @@ const searchIndex = rows.map((row, index) => ({
 const state = {
   query: '',
   filters: new Set(),
+  excerptsStatus: 'loading',
 };
 
 const initialQuery = new URLSearchParams(window.location.search).get('q') || '';
@@ -119,15 +120,65 @@ function updateSuggestions() {
   const matches = searchTools.search(searchIndex, state.query, {
     filters: activeFilters(),
   });
+  // Keyword searches are easier to read in the complete results below.
+  if (matches.length && matches.every(match => match.score < 500)) {
+    suggestionBox.hidden = true;
+    return;
+  }
   searchTools.renderSuggestions(suggestionBox, matches, (item) => {
-    window.location.href = item.href;
-  });
+    window.location.href = searchTools.resultHref(item, state.query);
+  }, { query: state.query });
+}
+
+function updateExcerptPreview(item, show) {
+  const passages = show && state.query.trim() ? searchTools?.excerptMatches(item, state.query) || [] : [];
+  let container = item.row.querySelector('.excerpt-matches');
+  if (!passages.length) { if (container) container.hidden = true; return false; }
+  if (!container) {
+    container = document.createElement('div');
+    container.className = 'excerpt-matches';
+    item.row.append(container);
+  }
+  container.hidden = false;
+  container.replaceChildren();
+  const label = document.createElement('span');
+  label.className = 'excerpt-label';
+  label.textContent = passages.length > 1 ? `Review excerpt · ${passages.length} matching passages` : 'Review excerpt';
+  const content = document.createElement('div');
+  const render = (expanded) => {
+    content.replaceChildren();
+    for (const passage of expanded ? passages : passages.slice(0, 1)) {
+      const paragraph = document.createElement('p');
+      searchTools.renderPassage(paragraph, passage, expanded ? Infinity : 320);
+      content.append(paragraph);
+    }
+  };
+  render(false);
+  container.append(label, content);
+  if (passages.length > 1 || passages[0].text.length > 320) {
+    const toggle = document.createElement('button');
+    toggle.className = 'excerpt-expand';
+    toggle.type = 'button';
+    toggle.setAttribute('aria-expanded', 'false');
+    const moreLabel = passages.length > 1 ? `Show all ${passages.length} passages` : 'Show full passage';
+    toggle.textContent = moreLabel;
+    toggle.addEventListener('click', event => {
+      event.stopPropagation();
+      const expanded = toggle.getAttribute('aria-expanded') !== 'true';
+      toggle.setAttribute('aria-expanded', String(expanded));
+      toggle.textContent = expanded ? 'Show less' : moreLabel;
+      render(expanded);
+    });
+    container.append(toggle);
+  }
+  return true;
 }
 
 function update() {
   const hasQuery = queryIsActive();
   const hasActiveFilter = filterIsActive();
   const visibleItems = [];
+  let excerptResults = 0;
 
   for (const item of searchIndex) {
     const rowTags = new Set(item.tags);
@@ -137,6 +188,8 @@ function update() {
     item.row.toggleAttribute('hidden', !show);
     item.row.classList.toggle('is-hidden', !show);
     item.row.style.order = '';
+    if (updateExcerptPreview(item, show)) excerptResults += 1;
+    item.row.dataset.resultHref = show && hasQuery ? searchTools?.resultHref(item, state.query) || item.href : item.href;
     if (show) visibleItems.push({ ...item, score });
   }
 
@@ -151,8 +204,20 @@ function update() {
   }
 
   const visible = visibleItems.length;
-  if (count) count.textContent = `${visible} result${visible === 1 ? '' : 's'}`;
-  if (empty) empty.hidden = visible !== 0;
+  if (count) {
+    count.textContent = `${visible} result${visible === 1 ? '' : 's'}${hasQuery && excerptResults ? ` · ${excerptResults} with review matches` : ''}`;
+    if (hasQuery && state.excerptsStatus === 'loading') count.textContent += ' · Searching excerpts…';
+    if (state.excerptsStatus === 'failed') {
+      count.append(document.createTextNode(' · Excerpt search unavailable. '));
+      const retry = document.createElement('button');
+      retry.type = 'button'; retry.className = 'excerpt-expand'; retry.textContent = 'Retry';
+      retry.addEventListener('click', loadExcerptSearch);
+      count.append(retry);
+    }
+  }
+  const hint = document.querySelector('.results-toolbar > span');
+  if (hint) hint.textContent = excerptResults ? 'Open a result to read highlighted matches' : 'Choose a family to browse';
+  if (empty) empty.hidden = visible !== 0 || state.excerptsStatus === 'loading';
   for (const tag of tags) {
     tag.classList.toggle('active', state.filters.has(tag.dataset.filter));
     tag.setAttribute('aria-pressed', String(state.filters.has(tag.dataset.filter)));
@@ -164,6 +229,9 @@ function update() {
     const groupCount = group.querySelector('.rung-count');
     if (groupCount) groupCount.textContent = String(visibleRows.length);
     group.hidden = !hasVisibleRows;
+    group.style.order = hasQuery && hasVisibleRows
+      ? String(Math.min(...visibleRows.map(row => Number(row.style.order))))
+      : '';
     const collapsed = hasActiveFilter
       ? group.classList.contains('is-filter-collapsed')
       : group.classList.contains('is-user-collapsed');
@@ -237,11 +305,12 @@ for (const tag of tags) {
 
 for (const row of rows) {
   row.addEventListener('click', () => {
-    window.location.href = row.dataset.href;
+    if (window.getSelection()?.toString()) return;
+    window.location.href = row.dataset.resultHref || row.dataset.href;
   });
   row.addEventListener('keydown', (event) => {
     if (event.target !== row) return;
-    if (event.key === 'Enter') window.location.href = row.dataset.href;
+    if (event.key === 'Enter') window.location.href = row.dataset.resultHref || row.dataset.href;
   });
 }
 
@@ -253,3 +322,16 @@ document.querySelector('#reset-search')?.addEventListener('click', () => {
   search.dispatchEvent(new Event('input'));
   search.focus();
 });
+
+function loadExcerptSearch() {
+  state.excerptsStatus = 'loading';
+  update();
+  searchTools.loadExcerpts(searchIndex).then(() => {
+    state.excerptsStatus = 'ready';
+    update();
+  }).catch(() => {
+    state.excerptsStatus = 'failed';
+    update();
+  });
+}
+if (searchTools) loadExcerptSearch();

@@ -1337,3 +1337,35 @@ button.tag.active { border-color: var(--accent); background: var(--accent); colo
   .review-html .review-list { padding-left: 1.4em; }
   .review-list > li { padding-left: .2em; }
 }
+
+/* Review search keeps the source passage beside the functional it describes. */
+mark[data-search-match] {
+  padding: .02em .13em;
+  border-radius: 3px;
+  background: #ffed9c;
+  color: #342500;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+.excerpt-matches {
+  grid-column: 1 / -1;
+  padding: 14px 16px;
+  border-left: 3px solid var(--accent);
+  border-radius: 0 7px 7px 0;
+  background: #f0f7f8;
+  cursor: text;
+}
+.excerpt-label { display: block; margin-bottom: 8px; color: var(--accent-ink); font-size: .8rem; font-weight: 650; }
+.excerpt-matches p { margin: 0; color: var(--ink); font-size: 1rem; line-height: 1.7; }
+.excerpt-matches p + p { margin-top: 14px; }
+.excerpt-expand { border: 0; padding: 6px 0; background: transparent; color: var(--accent-ink); font: inherit; font-size: .875rem; text-align: left; cursor: pointer; text-decoration: underline; text-underline-offset: .2em; }
+.excerpt-matches .excerpt-expand { margin-top: 8px; min-height: 36px; }
+.suggestion-excerpt { grid-column: 1 / -1; margin: 0; color: var(--muted); font-size: .875rem; line-height: 1.6; }
+.review-search-note { display: flex; align-items: center; flex-wrap: wrap; gap: 8px 20px; justify-content: space-between; margin-bottom: 24px; padding: 12px 16px; background: var(--accent-soft); border-radius: 7px; color: var(--ink); font-size: .9375rem; }
+@media (max-width: 500px) {
+  .excerpt-matches { padding: 12px; }
+  .excerpt-matches p { font-size: .9375rem; }
+  .excerpt-expand { min-height: 44px; }
+}
+.catalog .results-toolbar { flex-wrap: wrap; }
+.catalog .result-count { white-space: normal; line-height: 1.5; }
