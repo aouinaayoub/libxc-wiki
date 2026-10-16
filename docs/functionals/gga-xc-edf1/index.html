@@ -4,12 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>gga_xc_edf1</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20261015-compact-v5">
-    <script defer src="../../assets/search.js?v=20261015-compact-v5"></script>
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261016-review-v1">
+    <script defer src="../../assets/search.js?v=20261016-review-v1"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
+    <script defer src="../../vendor/katex/contrib/mhchem.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20261015-compact-v5"></script>
+    <script defer src="../../assets/detail.js?v=20261016-review-v1"></script>
 
   </head>
   <body class="functional-page">
@@ -40,7 +41,13 @@
       <section class="callout">
         <p class="callout-label">Review excerpt</p>
         <div class="review-html">
-<p>This functional was constructed with three goals in mind: (i) to increase the degree of {\it empiricism} of the functional (hence the name empirical density functional 1, EDF1), (ii) to provide a functional that is accurate for small Gaussian basis sets (indeed nothing guarantees that the best functionals in the large basis-set limit perform well for small basis sets), and (iii) to evaluate the effect of using HF exchange on the accuracy of the functional, in spite of the additional computational effort. The chosen Gaussian basis set is 6-31+G$^*$, and the functional uses the popular <a class="functional-link" href="../gga-x-b88/"><code>gga_x_b88</code></a> and <a class="functional-link" href="../gga-c-lyp/"><code>gga_c_lyp</code></a> approximations:</p>
+<p>This functional was constructed with three goals in mind:</p>
+<ol class="review-list" type="i">
+<li><p>to increase the degree of <em>empiricism</em> of the functional (hence the name empirical density functional 1, EDF1)</p></li>
+<li><p>to provide a functional that is accurate for small Gaussian basis sets (indeed nothing guarantees that the best functionals in the large basis-set limit perform well for small basis sets)</p></li>
+<li><p>to evaluate the effect of using HF exchange on the accuracy of the functional, in spite of the additional computational effort.</p></li>
+</ol>
+<p>The chosen Gaussian basis set is 6-31+G$^*$, and the functional uses the popular <a class="functional-link" href="../gga-x-b88/"><code>gga_x_b88</code></a> and <a class="functional-link" href="../gga-c-lyp/"><code>gga_c_lyp</code></a> approximations:</p>
 <div class="equation" data-tex="\begin{aligned}
 e_\text{xc}^{\text{EDF1}} = &amp; a_1 e_\text{x}^\text{LDA} + a_2
    e_\text{x}^{\text{B88}}(\beta_1) + a_3

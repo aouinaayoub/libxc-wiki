@@ -4,12 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>mgga_x_task</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20261015-compact-v5">
-    <script defer src="../../assets/search.js?v=20261015-compact-v5"></script>
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261016-review-v1">
+    <script defer src="../../assets/search.js?v=20261016-review-v1"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
+    <script defer src="../../vendor/katex/contrib/mhchem.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20261015-compact-v5"></script>
+    <script defer src="../../assets/detail.js?v=20261016-review-v1"></script>
 
   </head>
   <body class="functional-page">
@@ -71,12 +72,17 @@ F_\text{x}^\text{TASK} = &amp; h_{\text{x}}^0 g(s_\sigma) + \left[1-f(\alpha_{\s
 <div class="equation" data-tex="h_{\text{x}}^1(s_\sigma) = \sum_{i=0}^2 a_i R_i(s_{\sigma}^2)"></div>
 <p>where $R_i$ are Chebyshev rational functions, $a_0=0.938719$, $a_1=-0.076371$, and $a_2=-0.0150899$, and</p>
 <div class="equation" data-tex="f(\alpha_{\sigma}) = \sum_{i=0}^4 b_i R_i(\alpha_{\sigma})"></div>
-<p>where $b_0=-0.628591$, $b_1=-2.10315$, $b_2=-0.5$, $b_3=0.103153$, and $b_4=0.128591$. The coefficients $a_i$ and $b_i$ were determined such that (i) the fourth-order density-gradient expansion of exchange <sup class="citation-marker"><a href="#review-ref-Svendsen1996-17402">285</a></sup> in the limit of a slowly varying density with $\alpha_\sigma\approx1$ is recovered and (ii) $f(\alpha_{\sigma}\to\infty)=-3$, which ensures that $\partial F_{\text{x}}/\partial\alpha_{\sigma}$ satisfies <a class="review-eq-link" href="#review-eq-eq-task-alpha">
+<p>where $b_0=-0.628591$, $b_1=-2.10315$, $b_2=-0.5$, $b_3=0.103153$, and $b_4=0.128591$. The coefficients $a_i$ and $b_i$ were determined such that:</p>
+<ol class="review-list" type="i">
+<li><p>the fourth-order density-gradient expansion of exchange <sup class="citation-marker"><a href="#review-ref-Svendsen1996-17402">285</a></sup> in the limit of a slowly varying density with $\alpha_\sigma\approx1$ is recovered</p></li>
+<li><p>$f(\alpha_{\sigma}\to\infty)=-3$, which ensures that $\partial F_{\text{x}}/\partial\alpha_{\sigma}$ satisfies <a class="review-eq-link" href="#review-eq-eq-task-alpha">
   <code>eq:task-alpha</code>
   <span class="equation-preview" aria-hidden="true">
     <span class="equation-preview-math" data-tex="\frac{\partial F_{\text{x}}}{\partial\alpha_{\sigma}}&lt;0"></span>
   </span>
-</a> and that it has a sizable value at small $\alpha_{\sigma}$. Finally, the power $d=10$ in <a class="review-eq-link" href="#review-eq-eq-ftask">
+</a> and that it has a sizable value at small $\alpha_{\sigma}$.</p></li>
+</ol>
+<p>Finally, the power $d=10$ in <a class="review-eq-link" href="#review-eq-eq-ftask">
   <code>eq:ftask</code>
   <span class="equation-preview" aria-hidden="true">
     <span class="equation-preview-math" data-tex="\begin{aligned}

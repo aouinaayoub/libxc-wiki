@@ -4,12 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>gga_xc_xlyp</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20261015-compact-v5">
-    <script defer src="../../assets/search.js?v=20261015-compact-v5"></script>
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261016-review-v1">
+    <script defer src="../../assets/search.js?v=20261016-review-v1"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
+    <script defer src="../../vendor/katex/contrib/mhchem.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20261015-compact-v5"></script>
+    <script defer src="../../assets/detail.js?v=20261016-review-v1"></script>
 
   </head>
   <body class="functional-page">
@@ -43,7 +44,7 @@
 <p>The motivation behind the design of this GGA functional (and its hybrid version X3LYP) is to properly describe weakly-bound systems, while still providing accurate results for thermochemistry. As noncovalent interactions involve large interatomic distances, and therefore regions of space with large values of the reduced gradient $s$, Xu and Goddard<sup class="citation-marker"><a href="#review-ref-Xu2004-2673">662</a></sup> tried to construct an exchange enhancement factor $F_\text{x}$ that is appropriate in such regions with large values of $s$. By evaluating $F_\text{x}$ for a Gaussian density distribution they observed that it is overestimated by <a class="functional-link" href="../gga-x-b88/"><code>gga_x_b88</code></a> and underestimated by <a class="functional-link" href="../gga-x-pw91/"><code>gga_x_pw91</code></a>. They proposed, therefore, to combine these two functionals together with <a class="functional-link" href="../gga-c-lyp/"><code>gga_c_lyp</code></a> for correlation as</p>
 <div class="equation" data-tex="e_\text{xc}^{\text{XLYP}} = a_1 e_\text{x}^\text{LDA} + a_2
   e_\text{x}^{\text{B88}} + a_3 e_\text{x}^{\text{PW91}} + e_\text{c}^{\text{LYP}}"></div>
-<p>The parameters $a_1=1-a_2-a_3$, $a_2=0.722$, and $a_3=0.347$ were determined with the constraint that <a class="functional-link" href="../lda-x/"><code>lda_x</code></a> is recovered for the HEG by fitting to the total energies of 10 atoms, the ionization potentials of 16 atoms, the electron affinities of 10 atoms, and the atomization energies of 38 molecules. In particular, \ce{He2} and \ce{Ne2} were included as representative van der Waals systems. The resulting functional <a class="functional-link" href="../gga-xc-xlyp/"><code>gga_xc_xlyp</code></a>, as well as X3LYP, show good and balanced accuracy for both covalent and noncovalent systems.</p>
+<p>The parameters $a_1=1-a_2-a_3$, $a_2=0.722$, and $a_3=0.347$ were determined with the constraint that <a class="functional-link" href="../lda-x/"><code>lda_x</code></a> is recovered for the HEG by fitting to the total energies of 10 atoms, the ionization potentials of 16 atoms, the electron affinities of 10 atoms, and the atomization energies of 38 molecules. In particular, $\ce{He2}$ and $\ce{Ne2}$ were included as representative van der Waals systems. The resulting functional <a class="functional-link" href="../gga-xc-xlyp/"><code>gga_xc_xlyp</code></a>, as well as X3LYP, show good and balanced accuracy for both covalent and noncovalent systems.</p>
         </div>
         <p class="source-note">Adapted from <a href="https://arxiv.org/abs/2602.17333">Tran, Lehtola, Pittalis, and Marques, <em>Semi-Local Exchange-Correlation Approximations in Density Functional Theory</em>, arXiv:2602.17333</a>.</p>
       </section>

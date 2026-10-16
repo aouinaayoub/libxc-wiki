@@ -4,12 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>gga_x_mpbe</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20261015-compact-v5">
-    <script defer src="../../assets/search.js?v=20261015-compact-v5"></script>
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261016-review-v1">
+    <script defer src="../../assets/search.js?v=20261016-review-v1"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
+    <script defer src="../../vendor/katex/contrib/mhchem.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20261015-compact-v5"></script>
+    <script defer src="../../assets/detail.js?v=20261016-review-v1"></script>
 
   </head>
   <body class="functional-page">
@@ -44,10 +45,10 @@
   <span class="equation-preview" aria-hidden="true">
     <span class="equation-preview-math" data-tex="\tilde{u}(x) = \frac{\gamma x^2}{1 +\gamma x^2}"></span>
   </span>
-</a>.<sup class="citation-marker"><a href="#review-ref-Becke1997-8554">389</a></sup> Here, the parameters are determined in order to fulfill the same mathematical constraints used in the construction of <a class="functional-link" href="../gga-x-pbe/"><code>gga_x_pbe</code></a>. As no improvement was found in going beyond second order in the expansion, the functional reads</p>
+</a>.<sup class="citation-marker"><a href="#review-ref-Becke1997-8554">389</a></sup> Here, the parameters are determined to fulfill the same mathematical constraints used in the construction of <a class="functional-link" href="../gga-x-pbe/"><code>gga_x_pbe</code></a>. As no improvement was found in going beyond second order in the expansion, the functional reads</p>
 <div class="equation" data-tex="F_\text{x}^{\text{mPBE}} = 1 + C_1 \frac{s_\sigma^2}{1 + a s_\sigma^2}
    + C_2\left(\frac{s_\sigma^2}{1 + a s_\sigma^2}\right)^2"></div>
-<p>The parameter $C_1$ is set as $C_1 = \mu^{\text{PBE}}$ in order to obey the density gradient-expansion and recover the <a class="functional-link" href="../lda-x/"><code>lda_x</code></a> linear response, while the LO bound gives another condition. The final degree of freedom is used to minimize the error in atomic exchange energies for the H&ndash;Ar atoms. This yields $C_2=-0.015$ and $a = 0.157$. The results obtained with this functional are quite accurate for a variety of structural, thermodynamic, kinetic, and spectroscopic properties.</p>
+<p>The parameter $C_1$ is set as $C_1 = \mu^{\text{PBE}}$ to obey the density gradient-expansion and recover the <a class="functional-link" href="../lda-x/"><code>lda_x</code></a> linear response, while the LO bound gives another condition. The final degree of freedom is used to minimize the error in atomic exchange energies for the H&ndash;Ar atoms. This yields $C_2=-0.015$ and $a = 0.157$. The results obtained with this functional are quite accurate for a variety of structural, thermodynamic, kinetic, and spectroscopic properties.</p>
         </div>
         <p class="source-note">Adapted from <a href="https://arxiv.org/abs/2602.17333">Tran, Lehtola, Pittalis, and Marques, <em>Semi-Local Exchange-Correlation Approximations in Density Functional Theory</em>, arXiv:2602.17333</a>.</p>
       </section>

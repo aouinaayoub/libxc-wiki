@@ -1319,3 +1319,21 @@ button.tag.active { border-color: var(--accent); background: var(--accent); colo
   .catalog .family-name { font-size: 1.25rem; }
   .catalog .family-description { font-size: .9375rem; }
 }
+
+/* Review lists are document structure, with room for equations within items. */
+.review-html .review-list {
+  min-width: 0;
+  margin: 0;
+  padding-left: 1.7em;
+}
+.review-list > li { min-width: 0; padding-left: .35em; overflow-wrap: anywhere; }
+.review-list > li + li { margin-top: .85em; }
+.review-list > li::marker { color: var(--accent-ink); font-weight: 600; }
+.review-list > li > p + p,
+.review-list > li > .review-list { margin-top: .7em; }
+.review-list .equation { margin: .85em 0; }
+.review-list .equation + p { margin-top: .7em; }
+@media (max-width: 500px) {
+  .review-html .review-list { padding-left: 1.4em; }
+  .review-list > li { padding-left: .2em; }
+}

@@ -4,12 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>gga_x_pbeint</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20261015-compact-v5">
-    <script defer src="../../assets/search.js?v=20261015-compact-v5"></script>
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261016-review-v1">
+    <script defer src="../../assets/search.js?v=20261016-review-v1"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
+    <script defer src="../../vendor/katex/contrib/mhchem.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20261015-compact-v5"></script>
+    <script defer src="../../assets/detail.js?v=20261016-review-v1"></script>
 
   </head>
   <body class="functional-page">
@@ -47,7 +48,7 @@
 </a> is replaced by the function</p>
 <div class="equation" data-tex="\mu^\text{PBEint}(s_\sigma) = \mu^\text{GE} + \left(\mu^\text{PBE} - \mu^\text{GE}\right)
   \frac{\alpha s_\sigma^2}{1 + \alpha s_\sigma^2}"></div>
-<p>where $\mu^\text{GE}$ is the value that comes from the density-gradient expansion. In the rapidly varying density regime (large $s_\sigma$) this functional approaches <a class="functional-link" href="../gga-x-pbe/"><code>gga_x_pbe</code></a>, while in the slowly varying density regime (small $s_\sigma$) it recovers <a class="functional-link" href="../gga-x-pbe-sol/"><code>gga_x_pbe_sol</code></a>. The value of $\alpha = 0.197$ was fixed in order to ensure smooth derivatives of the functional. The functional was designed to be combined with <a class="functional-link" href="../gga-c-pbeint/"><code>gga_c_pbeint</code></a>. As expected, this combination yields results intermediate between PBE (<a class="functional-link" href="../gga-x-pbe/"><code>gga_x_pbe</code></a> + <a class="functional-link" href="../gga-c-pbe/"><code>gga_c_pbe</code></a>) and PBEsol (<a class="functional-link" href="../gga-x-pbe-sol/"><code>gga_x_pbe_sol</code></a> + <a class="functional-link" href="../gga-c-pbe-sol/"><code>gga_c_pbe_sol</code></a>). It improves the geometry and interaction energy of molecules adsorbed on Cu clusters.</p>
+<p>where $\mu^\text{GE}$ is the value that comes from the density-gradient expansion. In the rapidly varying density regime (large $s_\sigma$) this functional approaches <a class="functional-link" href="../gga-x-pbe/"><code>gga_x_pbe</code></a>, while in the slowly varying density regime (small $s_\sigma$) it recovers <a class="functional-link" href="../gga-x-pbe-sol/"><code>gga_x_pbe_sol</code></a>. The value of $\alpha = 0.197$ was fixed to ensure smooth derivatives of the functional. The functional was designed to be combined with <a class="functional-link" href="../gga-c-pbeint/"><code>gga_c_pbeint</code></a>. As expected, this combination yields results intermediate between PBE (<a class="functional-link" href="../gga-x-pbe/"><code>gga_x_pbe</code></a> + <a class="functional-link" href="../gga-c-pbe/"><code>gga_c_pbe</code></a>) and PBEsol (<a class="functional-link" href="../gga-x-pbe-sol/"><code>gga_x_pbe_sol</code></a> + <a class="functional-link" href="../gga-c-pbe-sol/"><code>gga_c_pbe_sol</code></a>). It improves the geometry and interaction energy of molecules adsorbed on Cu clusters.</p>
         </div>
         <p class="source-note">Adapted from <a href="https://arxiv.org/abs/2602.17333">Tran, Lehtola, Pittalis, and Marques, <em>Semi-Local Exchange-Correlation Approximations in Density Functional Theory</em>, arXiv:2602.17333</a>.</p>
       </section>

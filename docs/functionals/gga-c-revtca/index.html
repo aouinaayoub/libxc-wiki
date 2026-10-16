@@ -4,12 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>gga_c_revtca</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20261015-compact-v5">
-    <script defer src="../../assets/search.js?v=20261015-compact-v5"></script>
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261016-review-v1">
+    <script defer src="../../assets/search.js?v=20261016-review-v1"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
+    <script defer src="../../vendor/katex/contrib/mhchem.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20261015-compact-v5"></script>
+    <script defer src="../../assets/detail.js?v=20261016-review-v1"></script>
 
   </head>
   <body class="functional-page">
@@ -46,12 +47,19 @@
   </span>
 </a>):</p>
 <div class="equation" data-tex="e_\text{c}^\text{revTCA} = e_\text{c}^\text{TCA}(r_s,\zeta,s)\left[1 - D\left(r_s,\zeta,s\right)\right]"></div>
-<p>The function $D$ is chosen such that the following four constraints are satisfied: (i) $e_\text{c}^\text{RC04}$ is recovered for the HEG, (ii) $e_\text{c}^\text{revTCA}\le0$, (iii) $D\left(r_s^\text{H},\zeta=1,s^\text{H}\right) = 1$ for any hydrogenoid atom (i.e., no self-interaction error), where $r_s^\text{H}(r)=ne_\text{c}^{\text{RC04}}\E^{(2/3)Zr}$ ($e_\text{c}^{\text{RC04}}$ is <a class="review-eq-link" href="#review-eq-eq-ecrc04">
+<p>The function $D$ is chosen such that the following four constraints are satisfied:</p>
+<ol class="review-list" type="i">
+<li><p>$e_\text{c}^\text{RC04}$ is recovered for the HEG</p></li>
+<li><p>$e_\text{c}^\text{revTCA}\le0$</p></li>
+<li><p>$D\left(r_s^\text{H},\zeta=1,s^\text{H}\right) = 1$ for any hydrogenoid atom (i.e., no self-interaction error), where $r_s^\text{H}(r)=ne_\text{c}^{\text{RC04}}\E^{(2/3)Zr}$ ($e_\text{c}^{\text{RC04}}$ is <a class="review-eq-link" href="#review-eq-eq-ecrc04">
   <code>eq:ecrc04</code>
   <span class="equation-preview" aria-hidden="true">
     <span class="equation-preview-math" data-tex="e_\text{c}^{\text{RC04}}(r_s) = \frac{A\arctan(B + C r_s) + D}{r_s}"></span>
   </span>
-</a>), $s^\text{H}(r)=aZr_s^\text{H}(r)$, and $a=\left[4/\left(9\pi\right)\right]^{1/3}$, and (iv) $e_\text{c}^\text{TCA}$ is recovered for spin-unpolarized systems. These four conditions are fulfilled with the following form:</p>
+</a>), $s^\text{H}(r)=aZr_s^\text{H}(r)$, and $a=\left[4/\left(9\pi\right)\right]^{1/3}$</p></li>
+<li><p>$e_\text{c}^\text{TCA}$ is recovered for spin-unpolarized systems.</p></li>
+</ol>
+<p>These four conditions are fulfilled with the following form:</p>
 <div class="equation" data-tex="D(r_s,\zeta,s) = \zeta^4\left\{1-\left[\frac{\displaystyle \sin\left(\frac{\pi s}{a r_s}\right)}{\displaystyle \frac{\pi s}{a r_s}}\right]^2\right\}"></div>
 <p>Note that, contrary to some self-interaction corrected MGGA functionals, <a class="functional-link" href="../gga-c-revtca/"><code>gga_c_revtca</code></a> is zero only for hydrogenoid atoms, but not for all other one-electron systems. The <a class="functional-link" href="../gga-c-revtca/"><code>gga_c_revtca</code></a> functional was combined with <a class="functional-link" href="../gga-x-pbe-tca/"><code>gga_x_pbe_tca</code></a> for exchange.</p>
         </div>

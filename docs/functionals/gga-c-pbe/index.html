@@ -4,12 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>gga_c_pbe</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20261015-compact-v5">
-    <script defer src="../../assets/search.js?v=20261015-compact-v5"></script>
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261016-review-v1">
+    <script defer src="../../assets/search.js?v=20261016-review-v1"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
+    <script defer src="../../vendor/katex/contrib/mhchem.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20261015-compact-v5"></script>
+    <script defer src="../../assets/detail.js?v=20261016-review-v1"></script>
 
   </head>
   <body class="functional-page">
@@ -39,7 +40,13 @@
       <section class="callout">
         <p class="callout-label">Review excerpt</p>
         <div class="review-html">
-<p>The correlation component of the famous PBE (<a class="functional-link" href="../gga-x-pbe/"><code>gga_x_pbe</code></a> + <a class="functional-link" href="../gga-c-pbe/"><code>gga_c_pbe</code></a>) functional was designed to obey three exact mathematical conditions. (i) Recovery of the exact second-order density-gradient expansion in the slowly varying density limit ($t\to0$). (ii) Vanishing correlation energy in the rapidly varying density limit ($t\to\infty$). (iii) Correct scaling (as a constant) under an uniform scaling in the high-density limit ($r_s\to0$). Based on these conditions, the following ansatz for the correlation energy was proposed:</p>
+<p>The correlation component of PBE (<a class="functional-link" href="../gga-x-pbe/"><code>gga_x_pbe</code></a> + <a class="functional-link" href="../gga-c-pbe/"><code>gga_c_pbe</code></a>) functional was designed to obey three exact mathematical conditions.</p>
+<ol class="review-list" type="i">
+<li><p>Recovery of the exact second-order density-gradient expansion in the slowly varying density limit ($t\to0$).</p></li>
+<li><p>Vanishing correlation energy in the rapidly varying density limit ($t\to\infty$).</p></li>
+<li><p>Correct scaling (as a constant) under a uniform scaling in the high-density limit ($r_s\to0$).</p></li>
+</ol>
+<p>Based on these conditions, the following ansatz for the correlation energy was proposed:</p>
 <div class="equation" data-tex="e_\text{c}^{\text{PBE}} = e_\text{c}^\text{PW-LDA}(r_s, \zeta) + H_0(\phi_{2/3}, t, A)"></div>
 <p>where $e_\text{c}^\text{PW-LDA}$ is <a class="functional-link" href="../lda-c-pw/"><code>lda_c_pw</code></a> and $H_0$ is <a class="review-eq-link" href="#review-eq-eq-ggac-pw91h0">
   <code>eq:ggac:pw91h0</code>
@@ -62,13 +69,17 @@ e_\text{c}^{\text{PW91}} = &amp; e_\text{c}^\text{PW-LDA}(r_s, \zeta) + H_0(\phi
     <span class="equation-preview-math" data-tex="e_\text{c}^{\text{PBE}} = e_\text{c}^\text{PW-LDA}(r_s, \zeta) + H_0(\phi_{2/3}, t, A)"></span>
   </span>
 </a>, leading to a simpler correlation functional.</p>
-<p>Note that two implementations of PBE correlation are available in Libxc. They differ in the value of $\beta^\text{PBE}$:  &#8226; <a class="functional-link" href="../gga-c-pbe/"><code>gga_c_pbe</code></a>: $\beta^{\text{MB}}=0.06672455060314922$, which is related to $\mu^\text{PBE}=$ 0.2195149727645171 (used in <a class="functional-link" href="../gga-x-pbe/"><code>gga_x_pbe</code></a>) via $\mu^\text{PBE} = \beta^{\text{MB}}\pi^2/3$. &#8226; <a class="functional-link" href="../gga-c-pbe-gaussian/"><code>gga_c_pbe_gaussian</code></a>: $\beta^{\text{MB}}=15.75592 \times C_\text{c}(0) = 0.0667263212$, where $C_\text{c}(r_s=0)=0.004235$, see <a class="review-eq-link" href="#review-eq-eq-ggacp86-rgc">
+<p>Note that two implementations of PBE correlation are available in Libxc. They differ in the value of $\beta^\text{PBE}$:</p>
+<ul class="review-list">
+<li><p><a class="functional-link" href="../gga-c-pbe/"><code>gga_c_pbe</code></a>: $\beta^{\text{MB}}=0.06672455060314922$, which is related to $\mu^\text{PBE}=$  0.2195149727645171 (used in <a class="functional-link" href="../gga-x-pbe/"><code>gga_x_pbe</code></a>) via $\mu^\text{PBE} = \beta^{\text{MB}}\pi^2/3$.</p></li>
+<li><p><a class="functional-link" href="../gga-c-pbe-gaussian/"><code>gga_c_pbe_gaussian</code></a>: $\beta^{\text{MB}}=15.75592 \times C_\text{c}(0) = 0.0667263212$, where $C_\text{c}(r_s=0)=0.004235$, see <a class="review-eq-link" href="#review-eq-eq-ggacp86-rgc">
   <code>eq:ggacp86:rgc</code>
   <span class="equation-preview" aria-hidden="true">
     <span class="equation-preview-math" data-tex="C_\text{c}(r_s) = a^\text{RG} + \frac{b^\text{RG} + \alpha^\text{RG} r_s + \beta^\text{RG} r_s^2}
   {1 + \gamma^\text{RG} r_s + \delta^\text{RG} r_s^2 + 10^4\beta^\text{RG} r_s^3}"></span>
   </span>
-</a>. Along with $\kappa^{\text{PBE}}$ and $\mu^{\text{PBE}}$ used in <a class="functional-link" href="../gga-x-pbe-gaussian/"><code>gga_x_pbe_gaussian</code></a>, these are the values used in the GAUSSIAN program.<sup class="citation-marker"><a href="#review-ref-Frisch2016">9</a>,<a href="#review-ref-Lehtola2023-JCP-114116">139</a></sup> </p>
+</a>. Along with $\kappa^{\text{PBE}}$ and $\mu^{\text{PBE}}$ used in <a class="functional-link" href="../gga-x-pbe-gaussian/"><code>gga_x_pbe_gaussian</code></a>, these are the values used in the GAUSSIAN program.<sup class="citation-marker"><a href="#review-ref-Frisch2016">9</a>,<a href="#review-ref-Lehtola2023-JCP-114116">139</a></sup></p></li>
+</ul>
         </div>
         <p class="source-note">Adapted from <a href="https://arxiv.org/abs/2602.17333">Tran, Lehtola, Pittalis, and Marques, <em>Semi-Local Exchange-Correlation Approximations in Density Functional Theory</em>, arXiv:2602.17333</a>.</p>
       </section>

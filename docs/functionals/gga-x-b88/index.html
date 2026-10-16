@@ -4,12 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>gga_x_b88</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20261015-compact-v5">
-    <script defer src="../../assets/search.js?v=20261015-compact-v5"></script>
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261016-review-v1">
+    <script defer src="../../assets/search.js?v=20261016-review-v1"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
+    <script defer src="../../vendor/katex/contrib/mhchem.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20261015-compact-v5"></script>
+    <script defer src="../../assets/detail.js?v=20261016-review-v1"></script>
 
   </head>
   <body class="functional-page">
@@ -39,7 +40,12 @@
       <section class="callout">
         <p class="callout-label">Review excerpt</p>
         <div class="review-html">
-<p>This functional by Becke<sup class="citation-marker"><a href="#review-ref-Becke1988-3098">174</a></sup> is widely considered as the most famous and most widely used GGA exchange functional in the chemistry community, such that <sup class="citation-marker"><a href="#review-ref-Becke1988-3098">174</a></sup> has been cited more than 50,000 times. It has been particularly successful when combined with <a class="functional-link" href="../gga-c-lyp/"><code>gga_c_lyp</code></a> for correlation (BLYP), but also as the GGA component in the hybrid functional B3LYP (<code>hyb\_gga\_xc\_b3lyp</code>).<sup class="citation-marker"><a href="#review-ref-Stephens1994-11623">423</a></sup> Two main ingredients were used for its construction: (i) the correct behavior at the low-density gradient $x_\sigma$ limit should be obeyed (as in most exchange functionals developed so far), and (ii) the exchange energy density for neutral finite systems should have the exact asymptotic decay $-1/(2r)$ when $r\to\infty$. To obtain a functional form obeying condition (ii), Becke<sup class="citation-marker"><a href="#review-ref-Becke1988-3098">174</a></sup> noted that the density $n$ decays asymptotically as $\E^{-\alpha r}$, where $\alpha$ is related to the ionization potential of the system. With this in mind, he proposed the following form:</p>
+<p>This functional by Becke<sup class="citation-marker"><a href="#review-ref-Becke1988-3098">174</a></sup> is widely considered as the most famous and most widely used GGA exchange functional in the chemistry community, such that <sup class="citation-marker"><a href="#review-ref-Becke1988-3098">174</a></sup> has been cited more than 50,000 times. It has been particularly successful when combined with <a class="functional-link" href="../gga-c-lyp/"><code>gga_c_lyp</code></a> for correlation (BLYP), but also as the GGA component in the hybrid functional B3LYP (<a class="functional-link" href="../hyb-gga-xc-b3lyp/"><code>hyb_gga_xc_b3lyp</code></a>).<sup class="citation-marker"><a href="#review-ref-Stephens1994-11623">423</a></sup> Two main ingredients were used for its construction:</p>
+<ol class="review-list" type="i">
+<li><p>the correct behavior at the low-density gradient $x_\sigma$ limit should be obeyed (as in most exchange functionals developed so far)</p></li>
+<li><p>the exchange energy density for neutral finite systems should have the exact asymptotic decay $-1/(2r)$ when $r\to\infty$.</p></li>
+</ol>
+<p>To obtain a functional form obeying condition (ii), Becke<sup class="citation-marker"><a href="#review-ref-Becke1988-3098">174</a></sup> noted that the density $n$ decays asymptotically as $\E^{-\alpha r}$, where $\alpha$ is related to the ionization potential of the system. With this in mind, he proposed the following form:</p>
 <div class="equation" data-tex="F_\text{x}^{\text{B88}} = 1+\frac{\beta}{C_\text{x}}
   \frac{x_\sigma^2}{1 + \gamma\beta x_\sigma\arcsinh(x_\sigma)}"></div>
 <p>As $\gamma=6$ was fixed by the asymptotics, this functional has only one free parameter, $\beta=0.0042$, which was optimized to reproduce the exchange energy of the six rare-gas atoms from He to Rn.</p>

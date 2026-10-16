@@ -4,12 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>gga_x_pbe_tca</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20261015-compact-v5">
-    <script defer src="../../assets/search.js?v=20261015-compact-v5"></script>
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261016-review-v1">
+    <script defer src="../../assets/search.js?v=20261016-review-v1"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
+    <script defer src="../../vendor/katex/contrib/mhchem.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20261015-compact-v5"></script>
+    <script defer src="../../assets/detail.js?v=20261016-review-v1"></script>
 
   </head>
   <body class="functional-page">
@@ -44,7 +45,7 @@
   <span class="equation-preview" aria-hidden="true">
     <span class="equation-preview-math" data-tex="F_\text{x}^{\text{PBE}} = 1 + \kappa\left[1 - \frac{\kappa}{\kappa + f_0(s_\sigma)}\right]"></span>
   </span>
-</a>, but required that the LO bound is locally respected only in the interval that Perdew et al.\ <sup class="citation-marker"><a href="#review-ref-Zupan1997-835">530</a>,<a href="#review-ref-Zupan1997-10184">531</a></sup> called the <em>physical interval</em>, i.e., $0 &lt; s_\sigma &lt; 3$. Furthermore, they used the improved LO bound by Chan and Handy<sup class="citation-marker"><a href="#review-ref-Chan1999-3075">191</a></sup>. This led to $\kappa=1.227$, a value that is close to the empirical value $\kappa=1.245$ of <a class="functional-link" href="../gga-x-pbe-r/"><code>gga_x_pbe_r</code></a>.</p>
+</a>, but required that the LO bound is locally respected only in the interval that Perdew et al. <sup class="citation-marker"><a href="#review-ref-Zupan1997-835">530</a>,<a href="#review-ref-Zupan1997-10184">531</a></sup> called the <em>physical interval</em>, i.e., $0 &lt; s_\sigma &lt; 3$. Furthermore, they used the improved LO bound by Chan and Handy<sup class="citation-marker"><a href="#review-ref-Chan1999-3075">191</a></sup>. This led to $\kappa=1.227$, a value that is close to the empirical value $\kappa=1.245$ of <a class="functional-link" href="../gga-x-pbe-r/"><code>gga_x_pbe_r</code></a>.</p>
 <p>When combined with <a class="functional-link" href="../gga-c-revtca/"><code>gga_c_revtca</code></a> for correlation, <a class="functional-link" href="../gga-x-pbe-tca/"><code>gga_x_pbe_tca</code></a> leads to significant improvements for molecular atomization energies and activation barriers with respect to PBE (<a class="functional-link" href="../gga-x-pbe/"><code>gga_x_pbe</code></a> + <a class="functional-link" href="../gga-c-pbe/"><code>gga_c_pbe</code></a>).</p>
         </div>
         <p class="source-note">Adapted from <a href="https://arxiv.org/abs/2602.17333">Tran, Lehtola, Pittalis, and Marques, <em>Semi-Local Exchange-Correlation Approximations in Density Functional Theory</em>, arXiv:2602.17333</a>.</p>

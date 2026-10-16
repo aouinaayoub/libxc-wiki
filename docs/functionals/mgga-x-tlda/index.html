@@ -4,12 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>mgga_x_tlda</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20261015-compact-v5">
-    <script defer src="../../assets/search.js?v=20261015-compact-v5"></script>
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261016-review-v1">
+    <script defer src="../../assets/search.js?v=20261016-review-v1"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
+    <script defer src="../../vendor/katex/contrib/mhchem.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20261015-compact-v5"></script>
+    <script defer src="../../assets/detail.js?v=20261016-review-v1"></script>
 
   </head>
   <body class="functional-page">
@@ -46,7 +47,7 @@
   </span>
 </a> is used in <a class="functional-link" href="../lda-x/"><code>lda_x</code></a> to obtain a $\tau$-MGGA. However, while this was done for the full dependence on $n_{\sigma}$ in the case of <a class="functional-link" href="../mgga-x-lta/"><code>mgga_x_lta</code></a>, here the substitution is done partially, only in the exchange energy per particle (instead of per volume). The motivation for this choice is the possibility to interpret the functional as an approximation for the averaged exchange hole using the hole of the HEG. This leads to the following enhancement factor:</p>
 <div class="equation" data-tex="F_\text{x}^\text{tLDA} = \left(\frac{\tilde{t}_{\sigma}}{C_{\text{F}}}\right)^{1/5}"></div>
-<p>Calculations on light spherical atoms (He, Be, Ne, Mg, and Ar) lead to rather reasonable total energies (more accurate than <a class="functional-link" href="../lda-x/"><code>lda_x</code></a>, but less accurate than <a class="functional-link" href="../gga-x-pbe/"><code>gga_x_pbe</code></a>), however negative values are obtained for  derivative discontinuities, in contrast to the positive values obtained with EXX-KLI. The functional <a class="functional-link" href="../mgga-x-hlta/"><code>mgga_x_hlta</code></a>, which is discussed later, is a generalization of <a class="functional-link" href="../mgga-x-lta/"><code>mgga_x_lta</code></a> and <a class="functional-link" href="../mgga-x-tlda/"><code>mgga_x_tlda</code></a>.</p>
+<p>Calculations on light spherical atoms (He, Be, Ne, Mg, and Ar) lead to rather reasonable total energies (more accurate than <a class="functional-link" href="../lda-x/"><code>lda_x</code></a>, but less accurate than <a class="functional-link" href="../gga-x-pbe/"><code>gga_x_pbe</code></a>), however negative values are obtained for derivative discontinuities, in contrast to the positive values obtained with EXX-KLI. The functional <a class="functional-link" href="../mgga-x-hlta/"><code>mgga_x_hlta</code></a>, which is discussed later, is a generalization of <a class="functional-link" href="../mgga-x-lta/"><code>mgga_x_lta</code></a> and <a class="functional-link" href="../mgga-x-tlda/"><code>mgga_x_tlda</code></a>.</p>
         </div>
         <p class="source-note">Adapted from <a href="https://arxiv.org/abs/2602.17333">Tran, Lehtola, Pittalis, and Marques, <em>Semi-Local Exchange-Correlation Approximations in Density Functional Theory</em>, arXiv:2602.17333</a>.</p>
       </section>

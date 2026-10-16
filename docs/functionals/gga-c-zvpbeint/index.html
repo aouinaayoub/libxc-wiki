@@ -4,12 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>gga_c_zvpbeint</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20261015-compact-v5">
-    <script defer src="../../assets/search.js?v=20261015-compact-v5"></script>
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261016-review-v1">
+    <script defer src="../../assets/search.js?v=20261016-review-v1"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
+    <script defer src="../../vendor/katex/contrib/mhchem.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20261015-compact-v5"></script>
+    <script defer src="../../assets/detail.js?v=20261016-review-v1"></script>
 
   </head>
   <body class="functional-page">
@@ -39,12 +40,17 @@
       <section class="callout">
         <p class="callout-label">Review excerpt</p>
         <div class="review-html">
-<p>The <a class="functional-link" href="../gga-c-zpbeint/"><code>gga_c_zpbeint</code></a> and <a class="functional-link" href="../gga-c-zpbesol/"><code>gga_c_zpbesol</code></a> functionals have a couple of pitfalls: (i) the correction for spin dependence, <a class="review-eq-link" href="#review-eq-eq-zpbeintf">
+<p>The <a class="functional-link" href="../gga-c-zpbeint/"><code>gga_c_zpbeint</code></a> and <a class="functional-link" href="../gga-c-zpbesol/"><code>gga_c_zpbesol</code></a> functionals have a couple of pitfalls:</p>
+<ol class="review-list" type="i">
+<li><p>the correction for spin dependence, <a class="review-eq-link" href="#review-eq-eq-zpbeintf">
   <code>eq:zpbeintf</code>
   <span class="equation-preview" aria-hidden="true">
     <span class="equation-preview-math" data-tex="f(t,\zeta) = \phi_{2/3}^{\alpha t^3}(\zeta)"></span>
   </span>
-</a>, should have an effect only in the valence regions, as these functionals were proposed to improve the description of bonds; and (ii) they may yield spuriously large contributions in atomic inter-shell regions. In order to solve these problems, Constantin et al.<sup class="citation-marker"><a href="#review-ref-Constantin2012-194105">637</a></sup> proposed a more flexible alternative to <a class="review-eq-link" href="#review-eq-eq-zpbeintf">
+</a>, should have an effect only in the valence regions, as these functionals were proposed to improve the description of bonds</p></li>
+<li><p>they may yield spuriously large contributions in atomic inter-shell regions.</p></li>
+</ol>
+<p>To solve these problems, Constantin et al.<sup class="citation-marker"><a href="#review-ref-Constantin2012-194105">637</a></sup> proposed a more flexible alternative to <a class="review-eq-link" href="#review-eq-eq-zpbeintf">
   <code>eq:zpbeintf</code>
   <span class="equation-preview" aria-hidden="true">
     <span class="equation-preview-math" data-tex="f(t,\zeta) = \phi_{2/3}^{\alpha t^3}(\zeta)"></span>

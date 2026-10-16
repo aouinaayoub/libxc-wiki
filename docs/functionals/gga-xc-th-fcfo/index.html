@@ -4,12 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>gga_xc_th_fcfo</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20261015-compact-v5">
-    <script defer src="../../assets/search.js?v=20261015-compact-v5"></script>
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261016-review-v1">
+    <script defer src="../../assets/search.js?v=20261016-review-v1"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
+    <script defer src="../../vendor/katex/contrib/mhchem.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20261015-compact-v5"></script>
+    <script defer src="../../assets/detail.js?v=20261016-review-v1"></script>
 
   </head>
   <body class="functional-page">
@@ -44,6 +45,7 @@
 <div class="equation" data-tex="e_\text{xc}^{\text{TH}} = \frac{1}{n} \sum_{abcd} \omega_{abcd}
    R_a S_b X_c Y_d"></div>
 <p>where $\omega_{abcd}$ are the empirical coefficients and</p>
+
 <div class="equation" data-tex="\begin{aligned}
 R_a &amp; = n_\uparrow^a + n_\downarrow^a \\
   S_b &amp; = \zeta^{2b} \\
@@ -73,8 +75,8 @@ R_a &amp; = n_\uparrow^a + n_\downarrow^a \\
     <span class="equation-preview-math" data-tex="e_\text{xc}^{\text{TH}} = \frac{1}{n} \sum_{abcd} \omega_{abcd}
    R_a S_b X_c Y_d"></span>
   </span>
-</a> were proposed.<sup class="citation-marker"><a href="#review-ref-Tozer1997-183">474</a></sup> The first two were obtained by fitting the weights $\omega_{abcd}$ to the exact xc potentials of 10 closed-shell systems, namely \ce{H2}, \ce{H2O}, \ce{N2}, HF, CO, LiH, BH, Ne, \ce{F2}, and \ce{CH4}. One of them is <code>lda_xc_th_fl</code>, which is a LDA since $b=c=d=0$. For the other functional, <a class="functional-link" href="../gga-xc-th-fc/"><code>gga_xc_th_fc</code></a>, Tozer et al.<sup class="citation-marker"><a href="#review-ref-Tozer1997-183">474</a></sup> set $b=d=0$. Note that, even if these functionals were fit only to spin-unpolarized potentials, they still retain a (non-linear) dependence on $\zeta$.</p>
-<p>For the two other functionals, they added the xc potentials of the open-shell systems Li, C, N, O, F, CH, \ce{CH2}, \ce{NH2}, and \ce{O2} to the training set. In the first case (<a class="functional-link" href="../gga-xc-th-fcfo/"><code>gga_xc_th_fcfo</code></a>), the difference to the <a class="functional-link" href="../gga-xc-th-fc/"><code>gga_xc_th_fc</code></a> potentials was fit with 8 extra parameters, while the <a class="functional-link" href="../gga-xc-th-fco/"><code>gga_xc_th_fco</code></a> functional was fit directly to a combination of all closed- and open-shell potentials available.</p>
+</a> were proposed.<sup class="citation-marker"><a href="#review-ref-Tozer1997-183">474</a></sup> The first two were obtained by fitting the weights $\omega_{abcd}$ to the exact xc potentials of 10 closed-shell systems, namely $\ce{H2}$, $\ce{H2O}$, $\ce{N2}$, HF, CO, LiH, BH, Ne, $\ce{F2}$, and $\ce{CH4}$. One of them is <code>lda_xc_th_fl</code>, which is a LDA since $b=c=d=0$. For the other functional, <a class="functional-link" href="../gga-xc-th-fc/"><code>gga_xc_th_fc</code></a>, Tozer et al.<sup class="citation-marker"><a href="#review-ref-Tozer1997-183">474</a></sup> set $b=d=0$. Note that, even if these functionals were fit only to spin-unpolarized potentials, they still retain a (non-linear) dependence on $\zeta$.</p>
+<p>For the two other functionals, they added the xc potentials of the open-shell systems Li, C, N, O, F, CH, $\ce{CH2}$, $\ce{NH2}$, and $\ce{O2}$ to the training set. In the first case (<a class="functional-link" href="../gga-xc-th-fcfo/"><code>gga_xc_th_fcfo</code></a>), the difference to the <a class="functional-link" href="../gga-xc-th-fc/"><code>gga_xc_th_fc</code></a> potentials was fit with 8 extra parameters, while the <a class="functional-link" href="../gga-xc-th-fco/"><code>gga_xc_th_fco</code></a> functional was fit directly to a combination of all closed- and open-shell potentials available.</p>
 <p>These functionals are found to yield reasonably accurate optimized geometries, and significantly more accurate asymptotic density than conventional functionals like BLYP (<a class="functional-link" href="../gga-x-b88/"><code>gga_x_b88</code></a> + <a class="functional-link" href="../gga-c-lyp/"><code>gga_c_lyp</code></a>). However, the xc energies (and therefore the total energies) turn out to be significantly too negative, with an error that increases linearly with the number of electrons.<sup class="citation-marker"><a href="#review-ref-Tozer1998-2545">649</a></sup></p>
         </div>
         <p class="source-note">Adapted from <a href="https://arxiv.org/abs/2602.17333">Tran, Lehtola, Pittalis, and Marques, <em>Semi-Local Exchange-Correlation Approximations in Density Functional Theory</em>, arXiv:2602.17333</a>.</p>

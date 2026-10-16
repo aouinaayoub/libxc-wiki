@@ -4,12 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>mgga_x_ms0</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20261015-compact-v5">
-    <script defer src="../../assets/search.js?v=20261015-compact-v5"></script>
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261016-review-v1">
+    <script defer src="../../assets/search.js?v=20261016-review-v1"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
+    <script defer src="../../vendor/katex/contrib/mhchem.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20261015-compact-v5"></script>
+    <script defer src="../../assets/detail.js?v=20261016-review-v1"></script>
 
   </head>
   <body class="functional-page">
@@ -53,7 +54,13 @@
 <div class="equation" data-tex="f_0(s_\sigma) = \mu^{\text{GE}} s_\sigma^2"></div>
 <p>for $F_\text{x}^{1}$. The function</p>
 <div class="equation" data-tex="f(\alpha_\sigma) = \frac{\left(1-\alpha_\sigma^2\right)^3}{1 + \alpha_\sigma^3 + b \alpha_\sigma^6}"></div>
-<p>with $b=1$ (this parameter is introduced later in <a class="functional-link" href="../mgga-x-ms2/"><code>mgga_x_ms2</code></a>) interpolates between $F_\text{x}^{0}$ at $\alpha_\sigma=0$ and $F_\text{x}^{1}$ at $\alpha_\sigma=1$. This form was chosen such that the functional (i) obeys the second-order density-gradient expansion thanks to $\mu=\mu^{\text{GE}}$ in the functions $f_0$, (ii) gives accurate exchange jellium surface energies, and (iii) reproduces the HF exchange energies of the H atom and 12-noninteracting electron hydrogenic anion with nuclear charge $Z=1$ (\ce{H^{11-}}).<sup class="citation-marker"><a href="#review-ref-Staroverov2004-012502">716</a></sup> Condition (iii) was used to fix the parameters $c=0.28771$ in <a class="review-eq-link" href="#review-eq-eq-f0-ms0a">
+<p>with $b=1$ (this parameter is introduced later in <a class="functional-link" href="../mgga-x-ms2/"><code>mgga_x_ms2</code></a>) interpolates between $F_\text{x}^{0}$ at $\alpha_\sigma=0$ and $F_\text{x}^{1}$ at $\alpha_\sigma=1$. This form was chosen such that the functional:</p>
+<ol class="review-list" type="i">
+<li><p>obeys the second-order density-gradient expansion thanks to $\mu=\mu^{\text{GE}}$ in the functions $f_0$</p></li>
+<li><p>gives accurate exchange jellium surface energies</p></li>
+<li><p>reproduces the HF exchange energies of the H atom and 12-noninteracting electron hydrogenic anion with nuclear charge $Z=1$ ($\ce{H^{11-}}$).<sup class="citation-marker"><a href="#review-ref-Staroverov2004-012502">716</a></sup></p></li>
+</ol>
+<p>Condition (iii) was used to fix the parameters $c=0.28771$ in <a class="review-eq-link" href="#review-eq-eq-f0-ms0a">
   <code>eq:f0-ms0a</code>
   <span class="equation-preview" aria-hidden="true">
     <span class="equation-preview-math" data-tex="f_0(s_\sigma) = \mu^{\text{GE}} s_\sigma^2 + c"></span>
@@ -64,7 +71,7 @@
     <span class="equation-preview-math" data-tex="F_\text{x}^{\text{PBE}} = 1 + \kappa\left[1 - \frac{\kappa}{\kappa + f_0(s_\sigma)}\right]"></span>
   </span>
 </a>.</p>
-<p>When combined with <a class="functional-link" href="../gga-c-regtpss/"><code>gga_c_regtpss</code></a> for correlation, <a class="functional-link" href="../mgga-x-ms0/"><code>mgga_x_ms0</code></a> is somehow less accurate than revTPSS (<a class="functional-link" href="../mgga-x-revtpss/"><code>mgga_x_revtpss</code></a> + <a class="functional-link" href="../mgga-c-revtpss/"><code>mgga_c_revtpss</code></a>) for  enthalpies of formation, <sup class="citation-marker"><a href="#review-ref-Sun2012-051101">625</a>,<a href="#review-ref-Sun2013-044113">626</a></sup> but more accurate for lattice constants of solids. Considering all results for atoms, molecules, surfaces, and solids, this functional has a well-balanced accuracy.</p>
+<p>When combined with <a class="functional-link" href="../gga-c-regtpss/"><code>gga_c_regtpss</code></a> for correlation, <a class="functional-link" href="../mgga-x-ms0/"><code>mgga_x_ms0</code></a> is somehow less accurate than revTPSS (<a class="functional-link" href="../mgga-x-revtpss/"><code>mgga_x_revtpss</code></a> + <a class="functional-link" href="../mgga-c-revtpss/"><code>mgga_c_revtpss</code></a>) for enthalpies of formation, <sup class="citation-marker"><a href="#review-ref-Sun2012-051101">625</a>,<a href="#review-ref-Sun2013-044113">626</a></sup> but more accurate for lattice constants of solids. Considering all results for atoms, molecules, surfaces, and solids, this functional has a well-balanced accuracy.</p>
         </div>
         <p class="source-note">Adapted from <a href="https://arxiv.org/abs/2602.17333">Tran, Lehtola, Pittalis, and Marques, <em>Semi-Local Exchange-Correlation Approximations in Density Functional Theory</em>, arXiv:2602.17333</a>.</p>
       </section>

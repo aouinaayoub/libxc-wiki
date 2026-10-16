@@ -4,12 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>lda_c_ow</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20261015-compact-v5">
-    <script defer src="../../assets/search.js?v=20261015-compact-v5"></script>
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261016-review-v1">
+    <script defer src="../../assets/search.js?v=20261016-review-v1"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
+    <script defer src="../../vendor/katex/contrib/mhchem.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20261015-compact-v5"></script>
+    <script defer src="../../assets/detail.js?v=20261016-review-v1"></script>
 
   </head>
   <body class="functional-page">
@@ -46,7 +47,12 @@
   <span class="equation-preview" aria-hidden="true">
     <span class="equation-preview-math" data-tex="e_\text{c}^\text{Wigner}(r_s) = -\frac{a}{b + r_s}"></span>
   </span>
-</a>) to the spin-polarized case. Two versions of this functional were given: (i) <a class="functional-link" href="../lda-c-ow-lyp/"><code>lda_c_ow_lyp</code></a>, where $a=0.04918b$ and $b=\left[3/\left(4\pi\right)\right]^{1/3}/0.349$ were fixed to their values in the <a class="functional-link" href="../gga-c-lyp/"><code>gga_c_lyp</code></a> functional, and (ii) <a class="functional-link" href="../lda-c-ow/"><code>lda_c_ow</code></a>, with $b$ unchanged, but $a=0.0526b$ optimized to reproduce the correlation energy of the ten lightest atoms (H to Ne). Tests of their correlation functionals on the G2 dataset<sup class="citation-marker"><a href="#review-ref-Curtiss1991-7221">430</a>,<a href="#review-ref-Gill1992-499">431</a></sup> in combination with <a class="functional-link" href="../gga-x-b88/"><code>gga_x_b88</code></a> led to the finding that <a class="functional-link" href="../lda-c-ow-lyp/"><code>lda_c_ow_lyp</code></a> gives overall similar results to the more complicated <a class="functional-link" href="../gga-c-lyp/"><code>gga_c_lyp</code></a>.</p>
+</a>) to the spin-polarized case. Two versions of this functional were given:</p>
+<ol class="review-list" type="i">
+<li><p><a class="functional-link" href="../lda-c-ow-lyp/"><code>lda_c_ow_lyp</code></a>, where $a=0.04918b$ and $b=\left[3/\left(4\pi\right)\right]^{1/3}/0.349$ were fixed to their values in the <a class="functional-link" href="../gga-c-lyp/"><code>gga_c_lyp</code></a> functional</p></li>
+<li><p><a class="functional-link" href="../lda-c-ow/"><code>lda_c_ow</code></a>, with $b$ unchanged, but $a=0.0526b$ optimized to reproduce the correlation energy of the ten lightest atoms (H to Ne).</p></li>
+</ol>
+<p>Tests of their correlation functionals on the G2 dataset<sup class="citation-marker"><a href="#review-ref-Curtiss1991-7221">430</a>,<a href="#review-ref-Gill1992-499">431</a></sup> in combination with <a class="functional-link" href="../gga-x-b88/"><code>gga_x_b88</code></a> led to the finding that <a class="functional-link" href="../lda-c-ow-lyp/"><code>lda_c_ow_lyp</code></a> gives overall similar results to the more complicated <a class="functional-link" href="../gga-c-lyp/"><code>gga_c_lyp</code></a>.</p>
         </div>
         <p class="source-note">Adapted from <a href="https://arxiv.org/abs/2602.17333">Tran, Lehtola, Pittalis, and Marques, <em>Semi-Local Exchange-Correlation Approximations in Density Functional Theory</em>, arXiv:2602.17333</a>.</p>
       </section>

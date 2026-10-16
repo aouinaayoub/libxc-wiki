@@ -4,12 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>mgga_c_revscan</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20261015-compact-v5">
-    <script defer src="../../assets/search.js?v=20261015-compact-v5"></script>
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261016-review-v1">
+    <script defer src="../../assets/search.js?v=20261016-review-v1"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
+    <script defer src="../../vendor/katex/contrib/mhchem.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20261015-compact-v5"></script>
+    <script defer src="../../assets/detail.js?v=20261016-review-v1"></script>
 
   </head>
   <body class="functional-page">
@@ -60,7 +61,11 @@ g_\infty(\zeta=0, s) = &amp; \frac{1}{2\left(1+8\chi_\infty s^2\right)^{1/4}} \\
   <span class="equation-preview" aria-hidden="true">
     <span class="equation-preview-math" data-tex="e^\text{SCAN}_\text{c,LDA}(r_s) = -\frac{b_\text{1c}}{1 + b_\text{2c} \sqrt{r_s} + b_\text{3c} r_s}"></span>
   </span>
-</a> were redetermined from the following conditions (with the original <a class="functional-link" href="../mgga-x-scan/"><code>mgga_x_scan</code></a> for exchange): (i) high-density limit of the correlation energy of the two-electron ions ($b_{1\text{c}}=0.030197$), (ii) correlation energy of the He atom ($b_{2\text{c}} = 0.06623$), and (iii) single-orbital lower bound $e^\text{revSCAN}_\text{xc}/e_{\text{x}}^{\text{LDA}} \le 1.67082$ ($e_{\text{x}}^{\text{LDA}}$ is <a class="review-eq-link" href="#review-eq-eq-ldax3d">
+</a> were redetermined from the following conditions (with the original <a class="functional-link" href="../mgga-x-scan/"><code>mgga_x_scan</code></a> for exchange):</p>
+<ol class="review-list" type="i">
+<li><p>high-density limit of the correlation energy of the two-electron ions ($b_{1\text{c}}=0.030197$)</p></li>
+<li><p>correlation energy of the He atom ($b_{2\text{c}} = 0.06623$)</p></li>
+<li><p>single-orbital lower bound $e^\text{revSCAN}_\text{xc}/e_{\text{x}}^{\text{LDA}} \le 1.67082$ ($e_{\text{x}}^{\text{LDA}}$ is <a class="review-eq-link" href="#review-eq-eq-ldax3d">
   <code>eq:ldax3d</code>
   <span class="equation-preview" aria-hidden="true">
     <span class="equation-preview-math" data-tex="\begin{aligned}
@@ -68,7 +73,8 @@ e_\text{x}^\text{LDA}(n_\uparrow,n_\downarrow) =
   -C_{\text{x}}\frac{n_\uparrow^{4/3}+n_\downarrow^{4/3}}{n}
 \end{aligned}"></span>
   </span>
-</a>) for the low-density limit of the HEG ($b_{3\text{c}} = 0.16672$).</p>
+</a>) for the low-density limit of the HEG ($b_{3\text{c}} = 0.16672$).</p></li>
+</ol>
 <p>Finally, the values $c_\text{1c}=1.131$, $c_\text{2c}=1.7$, and $d_\text{c}=1.37$ for the parameters in <a class="review-eq-link" href="#review-eq-eq-scanfalpha">
   <code>eq:scanfalpha</code>
   <span class="equation-preview" aria-hidden="true">

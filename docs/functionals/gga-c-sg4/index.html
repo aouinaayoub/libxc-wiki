@@ -4,12 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>gga_c_sg4</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20261015-compact-v5">
-    <script defer src="../../assets/search.js?v=20261015-compact-v5"></script>
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261016-review-v1">
+    <script defer src="../../assets/search.js?v=20261016-review-v1"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
+    <script defer src="../../vendor/katex/contrib/mhchem.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20261015-compact-v5"></script>
+    <script defer src="../../assets/detail.js?v=20261016-review-v1"></script>
 
   </head>
   <body class="functional-page">
@@ -39,7 +40,12 @@
       <section class="callout">
         <p class="callout-label">Review excerpt</p>
         <div class="review-html">
-<p>This is the correlation companion  of <a class="functional-link" href="../gga-x-sg4/"><code>gga_x_sg4</code></a>. There are two main ideas behind the construction of this functional: (i) the functional should closely reproduce the semiclassical correlation energy expansion of neutral atoms at large nuclear charge $Z$;<sup class="citation-marker"><a href="#review-ref-Burke2014-4834">575</a></sup> and (ii) the functional should recover <a class="functional-link" href="../gga-c-apbe/"><code>gga_c_apbe</code></a> in the core region of heavy atoms, where $r_s\to 0$ and $s\to 0$. The functional is thus written as <a class="review-eq-link" href="#review-eq-eq-zpbeint">
+<p>This is the correlation companion of <a class="functional-link" href="../gga-x-sg4/"><code>gga_x_sg4</code></a>. There are two main ideas behind the construction of this functional:</p>
+<ol class="review-list" type="i">
+<li><p>the functional should closely reproduce the semiclassical correlation energy expansion of neutral atoms at large nuclear charge $Z$;<sup class="citation-marker"><a href="#review-ref-Burke2014-4834">575</a></sup></p></li>
+<li><p>the functional should recover <a class="functional-link" href="../gga-c-apbe/"><code>gga_c_apbe</code></a> in the core region of heavy atoms, where $r_s\to 0$ and $s\to 0$.</p></li>
+</ol>
+<p>The functional is thus written as <a class="review-eq-link" href="#review-eq-eq-zpbeint">
   <code>eq:zpbeint</code>
   <span class="equation-preview" aria-hidden="true">
     <span class="equation-preview-math" data-tex="e_\text{c}^{\text{zPBE-type}} = e_\text{c}^{\text{LDA}}(r_s, \zeta)
@@ -63,7 +69,7 @@
   <span class="equation-preview" aria-hidden="true">
     <span class="equation-preview-math" data-tex="\beta(r_s, t) = \beta_0 + a t^2 f(r_s)"></span>
   </span>
-</a> of the <a class="functional-link" href="../gga-c-pbeloc/"><code>gga_c_pbeloc</code></a> functional). The values of the parameters are $\beta_0 = 3\mu^\text{MGE2}/\pi^2$ ($\mu^\text{MGE2}=0.260$, see <a class="functional-link" href="../gga-x-sg4/"><code>gga_x_sg4</code></a>) in order to recover the LDA linear response and $\sigma=0.07$, that was fit to accurate jellium xc surface energies.<sup class="citation-marker"><a href="#review-ref-Constantin2011-045126">636</a></sup> In <a class="review-eq-link" href="#review-eq-eq-zpbeintf">
+</a> of the <a class="functional-link" href="../gga-c-pbeloc/"><code>gga_c_pbeloc</code></a> functional). The values of the parameters are $\beta_0 = 3\mu^\text{MGE2}/\pi^2$ ($\mu^\text{MGE2}=0.260$, see <a class="functional-link" href="../gga-x-sg4/"><code>gga_x_sg4</code></a>) to recover the LDA linear response and $\sigma=0.07$, that was fit to accurate jellium xc surface energies.<sup class="citation-marker"><a href="#review-ref-Constantin2011-045126">636</a></sup> In <a class="review-eq-link" href="#review-eq-eq-zpbeintf">
   <code>eq:zpbeintf</code>
   <span class="equation-preview" aria-hidden="true">
     <span class="equation-preview-math" data-tex="f(t,\zeta) = \phi_{2/3}^{\alpha t^3}(\zeta)"></span>

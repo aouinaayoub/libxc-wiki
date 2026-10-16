@@ -4,12 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>mgga_c_scan</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20261015-compact-v5">
-    <script defer src="../../assets/search.js?v=20261015-compact-v5"></script>
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261016-review-v1">
+    <script defer src="../../assets/search.js?v=20261016-review-v1"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
+    <script defer src="../../vendor/katex/contrib/mhchem.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20261015-compact-v5"></script>
+    <script defer src="../../assets/detail.js?v=20261016-review-v1"></script>
 
   </head>
   <body class="functional-page">
@@ -95,7 +96,10 @@ t = &amp; \frac{\left\vert\nabla n\right\vert}{2\phi_{2/3}(\zeta)k_{s}n}  \\
   + H^\text{SCAN}_0(r_s,s)\right]G_\text{c}(\zeta)"></div>
 <p>The $\zeta$-dependent function</p>
 <div class="equation" data-tex="G_\text{c}(\zeta) = \left\{1 - 2.3631\left[\phi_{4/3}(\zeta) - 1\right]\right\} \left(1 - \zeta^{12}\right)"></div>
-<p>was chosen such that (i) the correlation energy is zero for any one-electron systems, and (ii) $e^\text{SCAN}_\text{xc}/e_{\text{x}}^{\text{LDA}}$ ($e_{\text{x}}^{\text{LDA}}$ is <a class="review-eq-link" href="#review-eq-eq-ldax3d">
+<p>was chosen such that:</p>
+<ol class="review-list" type="i">
+<li><p>the correlation energy is zero for any one-electron systems</p></li>
+<li><p>$e^\text{SCAN}_\text{xc}/e_{\text{x}}^{\text{LDA}}$ ($e_{\text{x}}^{\text{LDA}}$ is <a class="review-eq-link" href="#review-eq-eq-ldax3d">
   <code>eq:ldax3d</code>
   <span class="equation-preview" aria-hidden="true">
     <span class="equation-preview-math" data-tex="\begin{aligned}
@@ -103,7 +107,8 @@ e_\text{x}^\text{LDA}(n_\uparrow,n_\downarrow) =
   -C_{\text{x}}\frac{n_\uparrow^{4/3}+n_\downarrow^{4/3}}{n}
 \end{aligned}"></span>
   </span>
-</a>) is independent of $\zeta$ in the interval $0 \le |\zeta| &lt; 0.7$ when $r_s\to\infty$, $s=0$, and $\alpha_\text{c}=0$.<sup class="citation-marker"><a href="#review-ref-Perdew2004-6898">798</a></sup></p>
+</a>) is independent of $\zeta$ in the interval $0 \le |\zeta| &lt; 0.7$ when $r_s\to\infty$, $s=0$, and $\alpha_\text{c}=0$.<sup class="citation-marker"><a href="#review-ref-Perdew2004-6898">798</a></sup></p></li>
+</ol>
 <p>The LDA-type component $e^\text{SCAN}_\text{c,LDA}$ reads</p>
 <div class="equation" data-tex="e^\text{SCAN}_\text{c,LDA}(r_s) = -\frac{b_\text{1c}}{1 + b_\text{2c} \sqrt{r_s} + b_\text{3c} r_s}"></div>
 <p>The parameters $b_{i\text{c}}$ were determined as follows: $b_\text{1c}=0.0285764$ was fit to reproduce the high-density limit of the two-electron ion with nuclear charge $Z\to\infty$;<sup class="citation-marker"><a href="#review-ref-Ivanov1998-3151">799</a></sup> $b_\text{2c}=0.0889$ was adjusted to reproduce the xc energy of the He atom;<sup class="citation-marker"><a href="#review-ref-Becke1988-3098">174</a></sup> finally, $b_\text{3c}=0.125541$ was obtained from the lower bound on the xc energies of two-electron systems.<sup class="citation-marker"><a href="#review-ref-Lieb1981-427">167</a></sup></p>

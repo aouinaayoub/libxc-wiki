@@ -4,12 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>mgga_x_revtpss</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20261015-compact-v5">
-    <script defer src="../../assets/search.js?v=20261015-compact-v5"></script>
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261016-review-v1">
+    <script defer src="../../assets/search.js?v=20261016-review-v1"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
+    <script defer src="../../vendor/katex/contrib/mhchem.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20261015-compact-v5"></script>
+    <script defer src="../../assets/detail.js?v=20261016-review-v1"></script>
 
   </head>
   <body class="functional-page">
@@ -57,7 +58,12 @@ f_0^\text{TPSS} = \frac{1}{\left(1+\sqrt{e}p_\sigma\right)^2}\left\{
   \right\}
 \end{aligned}"></span>
   </span>
-</a>) was slightly altered by (i) using $f=3$, thereby shifting that term from 6th order to 8th order in the density-gradient expansion, and (ii) changing $\mu^\text{PBE}$ to a value closer to $\mu^\text{GE}$ used in <a class="functional-link" href="../gga-x-pbe-sol/"><code>gga_x_pbe_sol</code></a>, and adjusting the values of $c$ and $e$ to respect the conditions originally obeyed by <a class="functional-link" href="../mgga-x-tpss/"><code>mgga_x_tpss</code></a>. It turns out that with $\mu^\text{revTPSS}=0.14$, $c=2.35203946$, and $e=2.16769874$ the enhancement factor is close to <a class="functional-link" href="../gga-x-pbe-sol/"><code>gga_x_pbe_sol</code></a> for the range $s_\sigma &lt; 3$, and especially for $s_\sigma &lt; 1$ that is more relevant for the second-order density-gradient expansion for exchange. However, note that <a class="functional-link" href="../mgga-x-tpss/"><code>mgga_x_tpss</code></a> and <a class="functional-link" href="../mgga-x-revtpss/"><code>mgga_x_revtpss</code></a> have an order-of-limits problem,<sup class="citation-marker"><a href="#review-ref-Ruzsinszky2012-2078">706</a></sup> as the enhancement factor yields different values depending on how the limits $s_\sigma\to0$ and $\alpha_\sigma\to0$ are taken, as discussed in more detail for <a class="functional-link" href="../mgga-x-regtpss/"><code>mgga_x_regtpss</code></a>.</p>
+</a>) was slightly altered by:</p>
+<ol class="review-list" type="i">
+<li><p>using $f=3$, thereby shifting that term from 6th order to 8th order in the density-gradient expansion</p></li>
+<li><p>changing $\mu^\text{PBE}$ to a value closer to $\mu^\text{GE}$ used in <a class="functional-link" href="../gga-x-pbe-sol/"><code>gga_x_pbe_sol</code></a>, and adjusting the values of $c$ and $e$ to respect the conditions originally obeyed by <a class="functional-link" href="../mgga-x-tpss/"><code>mgga_x_tpss</code></a>.</p></li>
+</ol>
+<p>It turns out that with $\mu^\text{revTPSS}=0.14$, $c=2.35203946$, and $e=2.16769874$ the enhancement factor is close to <a class="functional-link" href="../gga-x-pbe-sol/"><code>gga_x_pbe_sol</code></a> for the range $s_\sigma &lt; 3$, and especially for $s_\sigma &lt; 1$ that is more relevant for the second-order density-gradient expansion for exchange. However, note that <a class="functional-link" href="../mgga-x-tpss/"><code>mgga_x_tpss</code></a> and <a class="functional-link" href="../mgga-x-revtpss/"><code>mgga_x_revtpss</code></a> have an order-of-limits problem,<sup class="citation-marker"><a href="#review-ref-Ruzsinszky2012-2078">706</a></sup> as the enhancement factor yields different values depending on how the limits $s_\sigma\to0$ and $\alpha_\sigma\to0$ are taken, as discussed in more detail for <a class="functional-link" href="../mgga-x-regtpss/"><code>mgga_x_regtpss</code></a>.</p>
 <p>This functional, when combined with the companion <a class="functional-link" href="../mgga-c-revtpss/"><code>mgga_c_revtpss</code></a>, yields quite accurate results for the lattice constants and cohesive energies of solids, surface energies, and molecular atomization energies.</p>
         </div>
         <p class="source-note">Adapted from <a href="https://arxiv.org/abs/2602.17333">Tran, Lehtola, Pittalis, and Marques, <em>Semi-Local Exchange-Correlation Approximations in Density Functional Theory</em>, arXiv:2602.17333</a>.</p>

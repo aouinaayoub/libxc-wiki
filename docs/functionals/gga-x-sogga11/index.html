@@ -4,12 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>gga_x_sogga11</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20261015-compact-v5">
-    <script defer src="../../assets/search.js?v=20261015-compact-v5"></script>
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261016-review-v1">
+    <script defer src="../../assets/search.js?v=20261016-review-v1"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
+    <script defer src="../../vendor/katex/contrib/mhchem.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20261015-compact-v5"></script>
+    <script defer src="../../assets/detail.js?v=20261016-review-v1"></script>
 
   </head>
   <body class="functional-page">
@@ -42,6 +43,7 @@
 <p>This functional is an attempt to obey the density-gradient expansion at small values of $s_\sigma$ and at the same time exhibit reasonable accuracy for the geometry and energetics of molecules. It uses a flexible form:</p>
 <div class="equation" data-tex="F_\text{x}^{\text{SOGGA11}} = g_1(s_\sigma) + g_2(s_\sigma)"></div>
 <p>where the functions $g_1$ and $g_2$ are given by</p>
+
 <div class="equation" data-tex="\begin{aligned}
 g_1(s_\sigma) =&amp; \sum_{i=0}^m a_i \left( 1 - \frac{1}{1 + \frac{\mu}{\kappa} s_\sigma^2} \right)^i \\
     g_2(s_\sigma) =&amp; \sum_{i=0}^m b_i \left( 1 - \E^{-\mu s_\sigma^2/\kappa} \right)^i

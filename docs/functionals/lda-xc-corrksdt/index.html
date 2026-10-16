@@ -4,12 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>lda_xc_corrksdt</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20261015-compact-v5">
-    <script defer src="../../assets/search.js?v=20261015-compact-v5"></script>
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261016-review-v1">
+    <script defer src="../../assets/search.js?v=20261016-review-v1"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
+    <script defer src="../../vendor/katex/contrib/mhchem.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20261015-compact-v5"></script>
+    <script defer src="../../assets/detail.js?v=20261016-review-v1"></script>
 
   </head>
   <body class="functional-page">
@@ -42,7 +43,7 @@
         <div class="review-html">
 <p>Karasiev et al.<sup class="citation-marker"><a href="#review-ref-Karasiev2014-076403">476</a></sup> proposed an analytical parametrization for the xc free energy of the HEG, with full dependence on the temperature $\tau_{\text{e}}$. It uses an explicit dependence on the reduced temperature $\theta = \tau_{\text{e}}/\tau_{\text{e}}^\text{F}$, where</p>
 <div class="equation" data-tex="\tau_{\text{e}}^\text{F}=\frac{k_\text{F}^2}{2k_\text{B}}=\frac{\left(\frac{9\pi}{4}\right)^{2/3}}{2k_\text{B}r_s^2}"></div>
-<p>is the Fermi temperature, and an interpolation for the spin-polarization $\zeta$. They used a Pad\&#39;e form for both the paramagnetic and ferromagnetic cases:</p>
+<p>is the Fermi temperature, and an interpolation for the spin-polarization $\zeta$. They used a Padé form for both the paramagnetic and ferromagnetic cases:</p>
 <div class="equation" data-tex="\tilde f_{\text{xc}}^{\text{KSDT}}(r_s, \theta) =
 -\frac1{r_s}\frac{\omega a(\theta) + b(\theta) r_s^{1/2} + c(\theta) r_s}
 {1 + d(\theta) r_s^{1/2}+ e(\theta)r_s}"></div>
@@ -54,6 +55,7 @@
 {1 + d(\theta) r_s^{1/2}+ e(\theta)r_s}"></span>
   </span>
 </a> are given by</p>
+
 <div class="equation" data-tex="\begin{aligned}
 a(\theta) &amp; = a_0\tanh\left(\frac{1}{\theta}\right) \frac{a_1 + a_2\theta^2 + a_3\theta^3 + a_4\theta^4}{1 + a_5\theta^2 + a_6\theta^4} \\
   b(\theta) &amp; = \tanh\left(\frac{1}{\sqrt\theta}\right) \frac{b_1 + b_2\theta^2 + b_3\theta^4}{1 + b_4\theta^2 + b_5\theta^4} \\

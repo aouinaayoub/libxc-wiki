@@ -4,12 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>mgga_x_bj06</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20261015-compact-v5">
-    <script defer src="../../assets/search.js?v=20261015-compact-v5"></script>
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261016-review-v1">
+    <script defer src="../../assets/search.js?v=20261016-review-v1"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
+    <script defer src="../../vendor/katex/contrib/mhchem.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20261015-compact-v5"></script>
+    <script defer src="../../assets/detail.js?v=20261016-review-v1"></script>
 
   </head>
   <body class="functional-page">
@@ -44,14 +45,21 @@
   <span class="equation-preview" aria-hidden="true">
     <span class="equation-preview-math" data-tex="U_{\x\sigma}(\br) = \mint{r&#39;} \frac{h_{\x\sigma}(\br,\br&#39;)}{|\br - \br&#39;|} = 2e_{\x\sigma}(\br)"></span>
   </span>
-</a>) is characterized by a step-like structure in multi-shell atoms, and that this structure can be modeled by the ratio $\tau_\sigma/n_\sigma$. They thus proposed this  simple approximation to the EXX-OEP potential</p>
+</a>) is characterized by a step-like structure in multi-shell atoms, and that this structure can be modeled by the ratio $\tau_\sigma/n_\sigma$. They thus proposed this simple approximation to the EXX-OEP potential</p>
 <div class="equation" data-tex="v^\text{BJ06}_{\text{x}\sigma} = v^\text{Slater}_{\text{x}\sigma} + \frac{1}{\pi}\sqrt{\frac{5}{6}}\sqrt{\frac{\tau_\sigma}{n_\sigma}}"></div>
-<p>that fulfills the following conditions: (i) it is invariant to any unitary transformation of the orbitals, (ii) it shows the step-like structure characteristic of $\Delta v_{\text{x}\sigma}$ in atoms, (iii) it recovers the exact (i.e. <a class="functional-link" href="../lda-x/"><code>lda_x</code></a>) HEG limit (<a class="review-eq-link" href="#review-eq-eq-vxlda">
+<p>that fulfills the following conditions:</p>
+<ol class="review-list" type="i">
+<li><p>it is invariant to any unitary transformation of the orbitals</p></li>
+<li><p>it shows the step-like structure characteristic of $\Delta v_{\text{x}\sigma}$ in atoms</p></li>
+<li><p>it recovers the exact (i.e. <a class="functional-link" href="../lda-x/"><code>lda_x</code></a>) HEG limit (<a class="review-eq-link" href="#review-eq-eq-vxlda">
   <code>eq:vxlda</code>
   <span class="equation-preview" aria-hidden="true">
     <span class="equation-preview-math" data-tex="v_{\text{x}\sigma}^\text{LDA}=-\left(\frac{6}{\pi}\right)^{1/3}n_{\sigma}^{1/3}"></span>
   </span>
-</a>), and (iv) it is exact for any hydrogenic atom. As this potential was directly modeled, it suffers from the same drawbacks as <a class="functional-link" href="../gga-x-lb/"><code>gga_x_lb</code></a>. In particular, it has no associated energy functional. Moreover, asymptotically it approaches a constant whose value depends on the eigenvalue of the highest occupied orbital (see also <sup class="citation-marker"><a href="#review-ref-Aschebrock2017-245118">696</a></sup>) and it is not gauge invariant (see <a class="functional-link" href="../mgga-x-rpp09/"><code>mgga_x_rpp09</code></a> for a gauge-invariant modification).</p>
+</a>)</p></li>
+<li><p>it is exact for any hydrogenic atom.</p></li>
+</ol>
+<p>As this potential was directly modeled, it suffers from the same drawbacks as <a class="functional-link" href="../gga-x-lb/"><code>gga_x_lb</code></a>. In particular, it has no associated energy functional. Moreover, asymptotically it approaches a constant whose value depends on the eigenvalue of the highest occupied orbital (see also <sup class="citation-marker"><a href="#review-ref-Aschebrock2017-245118">696</a></sup>) and it is not gauge invariant (see <a class="functional-link" href="../mgga-x-rpp09/"><code>mgga_x_rpp09</code></a> for a gauge-invariant modification).</p>
 <p>As suggested by Becke and Johnson<sup class="citation-marker"><a href="#review-ref-Becke2006-221101">689</a></sup>, the Slater potential, which is computationally expensive, can be accurately replaced by <a class="review-eq-link" href="#review-eq-eq-vxbrhole">
   <code>eq:vxbrhole</code>
   <span class="equation-preview" aria-hidden="true">

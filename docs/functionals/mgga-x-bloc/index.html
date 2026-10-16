@@ -4,12 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>mgga_x_bloc</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20261015-compact-v5">
-    <script defer src="../../assets/search.js?v=20261015-compact-v5"></script>
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261016-review-v1">
+    <script defer src="../../assets/search.js?v=20261016-review-v1"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
+    <script defer src="../../vendor/katex/contrib/mhchem.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20261015-compact-v5"></script>
+    <script defer src="../../assets/detail.js?v=20261016-review-v1"></script>
 
   </head>
   <body class="functional-page">
@@ -59,7 +60,13 @@ f_0^\text{TPSS} = \frac{1}{\left(1+\sqrt{e}p_\sigma\right)^2}\left\{
   </span>
 </a> of the <a class="functional-link" href="../mgga-x-tpss/"><code>mgga_x_tpss</code></a> functional by making it $z_\sigma$-dependent:</p>
 <div class="equation" data-tex="f(z_\sigma) = a + b z_\sigma"></div>
-<p>This function $f$, which controls the behavior of the functional at small $s_\sigma$, should obey the following constraints: (i) $f(z_\sigma) \ge 3$ for $z_\sigma \le 0.3$, so that the fourth-order density-gradient expansion is recovered for a large range of $s_\sigma$, (ii) $f(z_\sigma) \le 2$ for $z_\sigma \ge 0.6$, so that  the enhancement factor of <a class="functional-link" href="../mgga-x-bloc/"><code>mgga_x_bloc</code></a> is larger than the one of <a class="functional-link" href="../mgga-x-tpss/"><code>mgga_x_tpss</code></a> in the rapidly varying density region, and (iii) the functional reproduces the xc jellium surface energies obtained with the accurate diffusion MC method when combined with <a class="functional-link" href="../mgga-c-tpssloc/"><code>mgga_c_tpssloc</code></a>.<sup class="citation-marker"><a href="#review-ref-Wood2007-035403">635</a>,<a href="#review-ref-Constantin2008-036401">720</a></sup> With the values $a=4.0$ and $b=-3.3$, these three conditions are satisfied.</p>
+<p>This function $f$, which controls the behavior of the functional at small $s_\sigma$, should obey the following constraints:</p>
+<ol class="review-list" type="i">
+<li><p>$f(z_\sigma) \ge 3$ for $z_\sigma \le 0.3$, so that the fourth-order density-gradient expansion is recovered for a large range of $s_\sigma$</p></li>
+<li><p>$f(z_\sigma) \le 2$ for $z_\sigma \ge 0.6$, so that the enhancement factor of <a class="functional-link" href="../mgga-x-bloc/"><code>mgga_x_bloc</code></a> is larger than the one of <a class="functional-link" href="../mgga-x-tpss/"><code>mgga_x_tpss</code></a> in the rapidly varying density region</p></li>
+<li><p>the functional reproduces the xc jellium surface energies obtained with the accurate diffusion MC method when combined with <a class="functional-link" href="../mgga-c-tpssloc/"><code>mgga_c_tpssloc</code></a>.<sup class="citation-marker"><a href="#review-ref-Wood2007-035403">635</a>,<a href="#review-ref-Constantin2008-036401">720</a></sup></p></li>
+</ol>
+<p>With the values $a=4.0$ and $b=-3.3$, these three conditions are satisfied.</p>
 <p>The BLOC functional, <a class="functional-link" href="../mgga-x-bloc/"><code>mgga_x_bloc</code></a> plus <a class="functional-link" href="../mgga-c-tpssloc/"><code>mgga_c_tpssloc</code></a>, appears to improve over the standard TPSS (<a class="functional-link" href="../mgga-x-tpss/"><code>mgga_x_tpss</code></a> + <a class="functional-link" href="../mgga-c-tpss/"><code>mgga_c_tpss</code></a>) and revTPSS (<a class="functional-link" href="../mgga-x-revtpss/"><code>mgga_x_revtpss</code></a> + <a class="functional-link" href="../mgga-c-revtpss/"><code>mgga_c_revtpss</code></a>) for a series of molecular and solid-state properties.</p>
         </div>
         <p class="source-note">Adapted from <a href="https://arxiv.org/abs/2602.17333">Tran, Lehtola, Pittalis, and Marques, <em>Semi-Local Exchange-Correlation Approximations in Density Functional Theory</em>, arXiv:2602.17333</a>.</p>

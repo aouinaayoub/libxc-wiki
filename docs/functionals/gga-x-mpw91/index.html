@@ -4,12 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>gga_x_mpw91</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20261015-compact-v5">
-    <script defer src="../../assets/search.js?v=20261015-compact-v5"></script>
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261016-review-v1">
+    <script defer src="../../assets/search.js?v=20261016-review-v1"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
+    <script defer src="../../vendor/katex/contrib/mhchem.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20261015-compact-v5"></script>
+    <script defer src="../../assets/detail.js?v=20261016-review-v1"></script>
 
   </head>
   <body class="functional-page">
@@ -46,7 +47,7 @@
   \frac{\left(c + d\E^{-\gamma s_\sigma^2}\right) s_\sigma^2 - f s_\sigma^\alpha}
   {1 + a s_\sigma \arcsinh(b s_\sigma) + f s_\sigma^\alpha}"></span>
   </span>
-</a> do not significantly affect atomic exchange energies. They are, however, important in the asymptotic low-density and large-gradient regions that may be relevant for noncovalently bound systems. In order to obtain correct long-range behavior of the exchange energy, as well as essential characteristics for describing noncovalent bonds, Adamo and Barone<sup class="citation-marker"><a href="#review-ref-Adamo1998-664">490</a></sup> modified the $\alpha$ and $\beta^{\text{B88}}$ parameters of <a class="functional-link" href="../gga-x-pw91/"><code>gga_x_pw91</code></a> (see <a class="review-eq-link" href="#review-eq-eq-ggaxpw91">
+</a> do not significantly affect atomic exchange energies. They are, however, important in the asymptotic low-density and large-gradient regions that may be relevant for noncovalently bound systems. To obtain correct long-range behavior of the exchange energy, as well as essential characteristics for describing noncovalent bonds, Adamo and Barone<sup class="citation-marker"><a href="#review-ref-Adamo1998-664">490</a></sup> modified the $\alpha$ and $\beta^{\text{B88}}$ parameters of <a class="functional-link" href="../gga-x-pw91/"><code>gga_x_pw91</code></a> (see <a class="review-eq-link" href="#review-eq-eq-ggaxpw91">
   <code>eq:ggaxpw91</code>
   <span class="equation-preview" aria-hidden="true">
     <span class="equation-preview-math" data-tex="F_\text{x}^{\text{PW91}} = 1 + 
@@ -65,7 +66,7 @@ a &amp; = \frac{6 \beta^\text{B88}}{C_s}\,, &amp;
  f &amp; = \frac{10^{-6}}{C_\text{x} C_s^\alpha}
 \end{aligned}"></span>
   </span>
-</a>). The parameters were obtained by fitting to the exact exchange energies of atoms on the first and second rows of the periodic table, as well as rare-gas dimers (\ce{He2} and \ce{Ne2}) close to their van der Waals equilibrium bond length. They obtained $\alpha=3.72$ and $\beta=0.00426$. Note that the values of $\alpha$ and $\beta$ given in <sup class="citation-marker"><a href="#review-ref-Adamo1998-664">490</a></sup> are incorrect.</p>
+</a>). The parameters were obtained by fitting to the exact exchange energies of atoms on the first and second rows of the periodic table, as well as rare-gas dimers ($\ce{He2}$ and $\ce{Ne2}$) close to their van der Waals equilibrium bond length. They obtained $\alpha=3.72$ and $\beta=0.00426$. Note that the values of $\alpha$ and $\beta$ given in <sup class="citation-marker"><a href="#review-ref-Adamo1998-664">490</a></sup> are incorrect.</p>
         </div>
         <p class="source-note">Adapted from <a href="https://arxiv.org/abs/2602.17333">Tran, Lehtola, Pittalis, and Marques, <em>Semi-Local Exchange-Correlation Approximations in Density Functional Theory</em>, arXiv:2602.17333</a>.</p>
       </section>

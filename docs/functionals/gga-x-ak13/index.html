@@ -4,12 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>gga_x_ak13</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20261015-compact-v5">
-    <script defer src="../../assets/search.js?v=20261015-compact-v5"></script>
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261016-review-v1">
+    <script defer src="../../assets/search.js?v=20261016-review-v1"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
+    <script defer src="../../vendor/katex/contrib/mhchem.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20261015-compact-v5"></script>
+    <script defer src="../../assets/detail.js?v=20261016-review-v1"></script>
 
   </head>
   <body class="functional-page">
@@ -58,7 +59,7 @@
 F_\text{x}^\text{AK13} = &amp; 1 + B_1s_\sigma\ln(1+s_\sigma)  \\
  &amp; + B_2s_\sigma\ln\left[1+\ln(1+s_\sigma)\right]
 \end{aligned}"></div>
-<p>with the choice $B_2=\mu^\text{GE}-B_1$ in order to ensure the recovery of the second-order density-gradient expansion (see the review). The remaining constant $B_1=(3/5)\mu^\text{GE} + 8\pi/15$ sets the strength of the xc derivative discontinuity, and it was determined by demanding that the system-independent term in the asymptotic expansion of $v_{\text{x}\sigma}$ yields $-1/r$.</p>
+<p>with the choice $B_2=\mu^\text{GE}-B_1$ to ensure the recovery of the second-order density-gradient expansion (see the review). The remaining constant $B_1=(3/5)\mu^\text{GE} + 8\pi/15$ sets the strength of the xc derivative discontinuity, and it was determined by demanding that the system-independent term in the asymptotic expansion of $v_{\text{x}\sigma}$ yields $-1/r$.</p>
 <p>Compared to <a class="functional-link" href="../lda-x/"><code>lda_x</code></a> (or <a class="functional-link" href="../gga-x-pbe/"><code>gga_x_pbe</code></a>), <a class="functional-link" href="../gga-x-ak13/"><code>gga_x_ak13</code></a> significantly opens the band gap in the semiconductors Si and Ge in a similar way to exact-exchange calculations, and correctly moves down the $d$ bands in Cu bulk metal.</p>
         </div>
         <p class="source-note">Adapted from <a href="https://arxiv.org/abs/2602.17333">Tran, Lehtola, Pittalis, and Marques, <em>Semi-Local Exchange-Correlation Approximations in Density Functional Theory</em>, arXiv:2602.17333</a>.</p>

@@ -4,12 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>gga_x_c09x</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20261015-compact-v5">
-    <script defer src="../../assets/search.js?v=20261015-compact-v5"></script>
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261016-review-v1">
+    <script defer src="../../assets/search.js?v=20261016-review-v1"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
+    <script defer src="../../vendor/katex/contrib/mhchem.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20261015-compact-v5"></script>
+    <script defer src="../../assets/detail.js?v=20261016-review-v1"></script>
 
   </head>
   <body class="functional-page">
@@ -42,7 +43,12 @@
 <p>This functional was developed with the goal of being compatible with a non-local correlation functional for van der Waals interactions.<sup class="citation-marker"><a href="#review-ref-Dion2004-PRL-246401">505</a>,<a href="#review-ref-Dion2005-PRL-109902">506</a>,<a href="#review-ref-Thonhauser2007-125112">549</a></sup> The chosen form is given by</p>
 <div class="equation" data-tex="F_\text{x}^\text{C09x} = 1 + \mu s_\sigma^2 \E^{-\alpha s_\sigma^2}
   + \kappa \left(1 - \E^{-\alpha s_\sigma^2/2}\right)"></div>
-<p>with the parameters $\mu=0.0617$, $\kappa=1.245$, and $\alpha=0.0483$ determined by trying to reproduce (i) the gradient expansion approximation (with the gradient coefficient determined by Sham<sup class="citation-marker"><a href="#review-ref-Sham1971-458">163</a></sup>, see the review) for $s_\sigma&lt;1.5$ and (ii) <a class="functional-link" href="../gga-x-pbe-r/"><code>gga_x_pbe_r</code></a> for $8&lt;s_\sigma&lt;10$. Constraint (i) was chosen such that the functional is more adapted for solids than for finite systems, while constraint (ii) ensures that exchange does not contribute much to van der Waals bonding, as it shouldn&#39;t.</p>
+<p>with the parameters $\mu=0.0617$, $\kappa=1.245$, and $\alpha=0.0483$ determined by trying to reproduce:</p>
+<ol class="review-list" type="i">
+<li><p>the gradient expansion approximation (with the gradient coefficient determined by Sham<sup class="citation-marker"><a href="#review-ref-Sham1971-458">163</a></sup>, see the review) for $s_\sigma&lt;1.5$</p></li>
+<li><p><a class="functional-link" href="../gga-x-pbe-r/"><code>gga_x_pbe_r</code></a> for $8&lt;s_\sigma&lt;10$.</p></li>
+</ol>
+<p>Constraint (i) was chosen such that the functional is more adapted for solids than for finite systems, while constraint (ii) ensures that exchange does not contribute much to van der Waals bonding, as it shouldn&#39;t.</p>
 <p>Using <a class="functional-link" href="../gga-x-c09x/"><code>gga_x_c09x</code></a> instead of <a class="functional-link" href="../gga-x-pbe-r/"><code>gga_x_pbe_r</code></a> as the exchange part of the vdW-DF functional<sup class="citation-marker"><a href="#review-ref-Dion2004-PRL-246401">505</a>,<a href="#review-ref-Dion2005-PRL-109902">506</a></sup> (C09-vdW) leads to significant improvements in the intermolecular interaction energies of the molecular dimers in the S22 dataset.<sup class="citation-marker"><a href="#review-ref-Jurecka2006-1985">550</a></sup></p>
         </div>
         <p class="source-note">Adapted from <a href="https://arxiv.org/abs/2602.17333">Tran, Lehtola, Pittalis, and Marques, <em>Semi-Local Exchange-Correlation Approximations in Density Functional Theory</em>, arXiv:2602.17333</a>.</p>

@@ -4,12 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>gga_c_gapc</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20261015-compact-v5">
-    <script defer src="../../assets/search.js?v=20261015-compact-v5"></script>
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261016-review-v1">
+    <script defer src="../../assets/search.js?v=20261016-review-v1"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
+    <script defer src="../../vendor/katex/contrib/mhchem.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20261015-compact-v5"></script>
+    <script defer src="../../assets/detail.js?v=20261016-review-v1"></script>
 
   </head>
   <body class="functional-page">
@@ -71,7 +72,7 @@ G^{\text{GAPc}}(r_s,\zeta,t) = &amp; \phi_{2/3}^3\frac{\beta(r_s)t^2}{c_1(r_s)-c
   <span class="equation-preview" aria-hidden="true">
     <span class="equation-preview-math" data-tex="H(r_s,t) = \frac{a+Ar_s\ln(r_s)\beta^{-1}(r_s)t^2}{a+t^2}"></span>
   </span>
-</a> is the same parameter as in the reparameterized  $e_\text{c}^\text{rPW-LDA}$ (see <a class="review-eq-link" href="#review-eq-eq-PW92">
+</a> is the same parameter as in the reparameterized $e_\text{c}^\text{rPW-LDA}$ (see <a class="review-eq-link" href="#review-eq-eq-PW92">
   <code>eq:PW92</code>
   <span class="equation-preview" aria-hidden="true">
     <span class="equation-preview-math" data-tex="\begin{aligned}
@@ -100,7 +101,7 @@ G^{\text{GAPc}}(r_s,\zeta,t) = &amp; \phi_{2/3}^3\frac{\beta(r_s)t^2}{c_1(r_s)-c
     <span class="equation-preview-math" data-tex="\alpha(t) = \frac{\alpha_1+t^3}{1+t^3}"></span>
   </span>
 </a>) were determined from a fit to the exact correlation energy density of the He atom. <a class="functional-link" href="../gga-c-gaploc/"><code>gga_c_gaploc</code></a> satisfies all constraints satisfied by <a class="functional-link" href="../gga-c-pbe/"><code>gga_c_pbe</code></a> except the second-order density-gradient expansion that was not considered.</p>
-<p><a class="functional-link" href="../gga-c-gapc/"><code>gga_c_gapc</code></a> competes with the standard <a class="functional-link" href="../gga-c-pbe/"><code>gga_c_pbe</code></a> and  <a class="functional-link" href="../gga-c-lyp/"><code>gga_c_lyp</code></a> for correlation energies of atoms and ions, but is clearly more accurate for the jellium surface correlation energy. The combination of <a class="functional-link" href="../gga-x-pbe-r/"><code>gga_x_pbe_r</code></a> and <a class="functional-link" href="../gga-c-gapc/"><code>gga_c_gapc</code></a> leads to good results for various molecular properties. <a class="functional-link" href="../gga-c-gaploc/"><code>gga_c_gaploc</code></a> is more accurate than <a class="functional-link" href="../gga-c-gapc/"><code>gga_c_gapc</code></a> for correlation energies of atoms and ions, but is less accurate for the jellium surface correlation energy.</p>
+<p><a class="functional-link" href="../gga-c-gapc/"><code>gga_c_gapc</code></a> competes with the standard <a class="functional-link" href="../gga-c-pbe/"><code>gga_c_pbe</code></a> and <a class="functional-link" href="../gga-c-lyp/"><code>gga_c_lyp</code></a> for correlation energies of atoms and ions, but is clearly more accurate for the jellium surface correlation energy. The combination of <a class="functional-link" href="../gga-x-pbe-r/"><code>gga_x_pbe_r</code></a> and <a class="functional-link" href="../gga-c-gapc/"><code>gga_c_gapc</code></a> leads to good results for various molecular properties. <a class="functional-link" href="../gga-c-gaploc/"><code>gga_c_gaploc</code></a> is more accurate than <a class="functional-link" href="../gga-c-gapc/"><code>gga_c_gapc</code></a> for correlation energies of atoms and ions, but is less accurate for the jellium surface correlation energy.</p>
         </div>
         <p class="source-note">Adapted from <a href="https://arxiv.org/abs/2602.17333">Tran, Lehtola, Pittalis, and Marques, <em>Semi-Local Exchange-Correlation Approximations in Density Functional Theory</em>, arXiv:2602.17333</a>.</p>
       </section>

@@ -4,12 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>gga_c_acggap</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20261015-compact-v5">
-    <script defer src="../../assets/search.js?v=20261015-compact-v5"></script>
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261016-review-v1">
+    <script defer src="../../assets/search.js?v=20261016-review-v1"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
+    <script defer src="../../vendor/katex/contrib/mhchem.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20261015-compact-v5"></script>
+    <script defer src="../../assets/detail.js?v=20261016-review-v1"></script>
 
   </head>
   <body class="functional-page">
@@ -39,16 +40,16 @@
       <section class="callout">
         <p class="callout-label">Review excerpt</p>
         <div class="review-html">
-<p>High-level quantum results were used to study the behavior of the correlation energy of neutral atoms in the limit of large nuclear charge,  $Z\to\infty$. The LDA (e.g., <a class="functional-link" href="../lda-c-pw/"><code>lda_c_pw</code></a>) gives correctly the leading contribution. For the following term Burke et al.<sup class="citation-marker"><a href="#review-ref-Burke2014-4834">575</a></sup> found that <a class="functional-link" href="../gga-c-pbe/"><code>gga_c_pbe</code></a> yields already a relatively accurate value, which is considerably better than the one predicted by <a class="functional-link" href="../gga-c-lyp/"><code>gga_c_lyp</code></a>. They then devised a new asymptotically corrected GGA (acGGA) functional that takes into account exactly this $Z\to\infty$ limit. The functional is obtained from <a class="functional-link" href="../gga-c-pbe/"><code>gga_c_pbe</code></a> by replacing $t$ in <a class="review-eq-link" href="#review-eq-eq-ggac-pw91h0">
+<p>High-level quantum results were used to study the behavior of the correlation energy of neutral atoms in the limit of large nuclear charge, $Z\to\infty$. The LDA (e.g., <a class="functional-link" href="../lda-c-pw/"><code>lda_c_pw</code></a>) correctly gives the leading contribution. For the following term Burke et al.<sup class="citation-marker"><a href="#review-ref-Burke2014-4834">575</a></sup> found that <a class="functional-link" href="../gga-c-pbe/"><code>gga_c_pbe</code></a> already yields a relatively accurate value, which is considerably better than the one predicted by <a class="functional-link" href="../gga-c-lyp/"><code>gga_c_lyp</code></a>. They then devised a new asymptotically corrected GGA (acGGA) functional that takes into account exactly this $Z\to\infty$ limit. The functional is obtained from <a class="functional-link" href="../gga-c-pbe/"><code>gga_c_pbe</code></a> by replacing $t$ in <a class="review-eq-link" href="#review-eq-eq-ggac-pw91h0">
   <code>eq:ggac:pw91h0</code>
   <span class="equation-preview" aria-hidden="true">
     <span class="equation-preview-math" data-tex="H_0(\phi_{2/3}, t, A) = \gamma \phi_{2/3}^3 \ln\left[1 + \frac{\beta}{\gamma}
   \frac{t^2 + A t^4}{1 + A (t^2 + A t^4)}\right]"></span>
   </span>
-</a>  by</p>
+</a> by</p>
 <div class="equation" data-tex="t&#39; = t \sqrt{\frac{\eta + t}{\eta + \tilde{c}t}}"></div>
 <p>with $\eta=4.5$ chosen to reproduce the real-space cutoff curve for the xc hole, and $\tilde{c}=1.467$ is chosen to reproduce the $Z\to\infty$ value for the correlation energy. The resulting functional, <a class="functional-link" href="../gga-c-acgga/"><code>gga_c_acgga</code></a>, satisfies all the conditions of <a class="functional-link" href="../gga-c-pbe/"><code>gga_c_pbe</code></a>, but, unlike <a class="functional-link" href="../gga-c-pbe/"><code>gga_c_pbe</code></a>, contains the leading real-space cutoff correction to $\ln t$.</p>
-<p>In order to improve the dependence on $r_s$, the parameter $\beta$ in <a class="review-eq-link" href="#review-eq-eq-ggac-pw91h0">
+<p>To improve the dependence on $r_s$, the parameter $\beta$ in <a class="review-eq-link" href="#review-eq-eq-ggac-pw91h0">
   <code>eq:ggac:pw91h0</code>
   <span class="equation-preview" aria-hidden="true">
     <span class="equation-preview-math" data-tex="H_0(\phi_{2/3}, t, A) = \gamma \phi_{2/3}^3 \ln\left[1 + \frac{\beta}{\gamma}
@@ -57,7 +58,7 @@
 </a> is made $r_s$-dependent:</p>
 <div class="equation" data-tex="\beta(r_s) = \beta_0 \frac{1 + ar_s\left(b+cr_s\right)}{1 + ar_s\left(1+dr_s\right)}"></div>
 <p>leading to the <a class="functional-link" href="../gga-c-acggap/"><code>gga_c_acggap</code></a> (acGGA+) functional. The parameters $\beta_0=\beta^{\text{MB}}$, $a=0.5$, $b=1$, $c=0.16667$, and $d=0.29633$ were chosen so that $d\beta/dr_s=0$ at $r_s=0$.<sup class="citation-marker"><a href="#review-ref-Rasolt1986-1325">592</a></sup></p>
-<p>The atomization energies of molecules were calculated by combining <a class="functional-link" href="../gga-c-acgga/"><code>gga_c_acgga</code></a> with <a class="functional-link" href="../gga-x-b88/"><code>gga_x_b88</code></a> or <a class="functional-link" href="../gga-x-bcgp/"><code>gga_x_bcgp</code></a>, and <a class="functional-link" href="../gga-c-acggap/"><code>gga_c_acggap</code></a> with <a class="functional-link" href="../gga-x-b88/"><code>gga_x_b88</code></a>. Using <a class="functional-link" href="../gga-c-acggap/"><code>gga_c_acggap</code></a> leads to slight improvement compared to <a class="functional-link" href="../gga-c-acgga/"><code>gga_c_acgga</code></a>.</p>
+<p>The atomization energies of molecules were calculated by combining <a class="functional-link" href="../gga-c-acgga/"><code>gga_c_acgga</code></a> with <a class="functional-link" href="../gga-x-b88/"><code>gga_x_b88</code></a> or <a class="functional-link" href="../gga-x-bcgp/"><code>gga_x_bcgp</code></a>, and <a class="functional-link" href="../gga-c-acggap/"><code>gga_c_acggap</code></a> with <a class="functional-link" href="../gga-x-b88/"><code>gga_x_b88</code></a>. Using <a class="functional-link" href="../gga-c-acggap/"><code>gga_c_acggap</code></a> leads to a slight improvement compared to <a class="functional-link" href="../gga-c-acgga/"><code>gga_c_acgga</code></a>.</p>
         </div>
         <p class="source-note">Adapted from <a href="https://arxiv.org/abs/2602.17333">Tran, Lehtola, Pittalis, and Marques, <em>Semi-Local Exchange-Correlation Approximations in Density Functional Theory</em>, arXiv:2602.17333</a>.</p>
       </section>

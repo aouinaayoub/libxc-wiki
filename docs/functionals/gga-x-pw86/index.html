@@ -4,12 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>gga_x_pw86</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20261015-compact-v5">
-    <script defer src="../../assets/search.js?v=20261015-compact-v5"></script>
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261016-review-v1">
+    <script defer src="../../assets/search.js?v=20261016-review-v1"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
+    <script defer src="../../vendor/katex/contrib/mhchem.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20261015-compact-v5"></script>
+    <script defer src="../../assets/detail.js?v=20261016-review-v1"></script>
 
   </head>
   <body class="functional-page">
@@ -39,7 +40,7 @@
       <section class="callout">
         <p class="callout-label">Review excerpt</p>
         <div class="review-html">
-<p>Perdew and Wang proposed an exchange functional derived from the gradient expansion of the exchange hole suitably cut off in order to fulfill two exact properties: negativity and an integration that gives minus one (i.e., deficiency of one electron). In order to fit the functional numerically obtained from their constructed exchange hole, they used the following form:</p>
+<p>Perdew and Wang proposed an exchange functional derived from the gradient expansion of the exchange hole suitably cut off to fulfill two exact properties: negativity and an integration that gives minus one (i.e., deficiency of one electron). To fit the functional numerically obtained from their constructed exchange hole, they used the following form:</p>
 <div class="equation" data-tex="F_\text{x}^{\text{PW86}} = \left(
     1 + \frac{a}{m}s_\sigma^2 + bs_\sigma^4 + cs_\sigma^6\right)^{m}"></div>
 <p>The value $a=0.0864$ was chosen so that the functional fulfills what was at that time wrongly considered as the correct low-$s_\sigma$ expansion of the exchange energy density ($\mu^{\text{Sham}}$, see the review), while the other parameters ($b=14$, $c=0.2$, and $m=1/15$) were determined from the fitting procedure. This functional was quite popular in the past and has been used as the basis for more recent functionals, e.g., <a class="functional-link" href="../gga-x-rpw86/"><code>gga_x_rpw86</code></a>.</p>

@@ -4,12 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>lda_c_vwn_2</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20261015-compact-v5">
-    <script defer src="../../assets/search.js?v=20261015-compact-v5"></script>
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261016-review-v1">
+    <script defer src="../../assets/search.js?v=20261016-review-v1"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
+    <script defer src="../../vendor/katex/contrib/mhchem.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20261015-compact-v5"></script>
+    <script defer src="../../assets/detail.js?v=20261016-review-v1"></script>
 
   </head>
   <body class="functional-page">
@@ -39,7 +40,7 @@
       <section class="callout">
         <p class="callout-label">Review excerpt</p>
         <div class="review-html">
-<p>The Vosko&ndash;Wilk&ndash;Nusair<sup class="citation-marker"><a href="#review-ref-Vosko1980-1200">422</a></sup> (VWN) correlation functional is one of the first <em>modern</em> LDAs, and is still commonly used nowadays. It is based on a Pad\&#39;e approximant technique to accurately interpolate the MC results of Ceperley and Alder<sup class="citation-marker"><a href="#review-ref-Ceperley1980-566">397</a></sup>. Furthermore, by combining these results with the spin-dependence of the RPA correlation energy, Vosko et al.<sup class="citation-marker"><a href="#review-ref-Vosko1980-1200">422</a></sup> were able to obtain an accurate parametrization of the HEG for relevant ranges of $r_s$ and $\zeta$. The functional reads as</p>
+<p>The Vosko&ndash;Wilk&ndash;Nusair<sup class="citation-marker"><a href="#review-ref-Vosko1980-1200">422</a></sup> (VWN) correlation functional is one of the first <em>modern</em> LDAs, and is still commonly used nowadays. It is based on a Padé approximant technique to accurately interpolate the MC results of Ceperley and Alder<sup class="citation-marker"><a href="#review-ref-Ceperley1980-566">397</a></sup>. Furthermore, by combining these results with the spin-dependence of the RPA correlation energy, Vosko et al.<sup class="citation-marker"><a href="#review-ref-Vosko1980-1200">422</a></sup> were able to obtain an accurate parametrization of the HEG for relevant ranges of $r_s$ and $\zeta$. The functional reads as</p>
 <div class="equation" data-tex="e_\text{c}^\text{VWN}(r_s,\zeta) = e_\text{c}^\text{P}(r_s) +
   \left[e_\text{c}^\text{F}(r_s) - e_\text{c}^\text{P}(r_s)\right] f_\text{c}(\zeta)\zeta^4 \\
  +  \frac{f_\text{c}(\zeta)}{f_\text{c}&#39;&#39;(0)}\left(1-\zeta^4\right)\alpha_\text{c}(r_s)"></div>
@@ -63,7 +64,8 @@
   </span>
 </a> to interpolate over the relevant range of $r_s$.</p>
 <p>Unfortunately, the several versions of the VWN functional given in the paper<sup class="citation-marker"><a href="#review-ref-Vosko1980-1200">422</a></sup> later led to confusion in the community,<sup class="citation-marker"><a href="#review-ref-Lehtola2023-JCP-114116">139</a></sup> in particular regarding the construction of the hybrid functional B3LYP.<sup class="citation-marker"><a href="#review-ref-Stephens1994-11623">423</a>,<a href="#review-ref-Hertwig1997-345">424</a></sup> Various versions of the VWN functional are described below:</p>
-<p> &#8226; <a class="functional-link" href="../lda-c-vwn/"><code>lda_c_vwn</code></a> uses <a class="review-eq-link" href="#review-eq-eq-vwnsi">
+<ul class="review-list">
+<li><p><a class="functional-link" href="../lda-c-vwn/"><code>lda_c_vwn</code></a> uses <a class="review-eq-link" href="#review-eq-eq-vwnsi">
   <code>eq:vwnsi</code>
   <span class="equation-preview" aria-hidden="true">
     <span class="equation-preview-math" data-tex="e_\text{c}^\text{VWN}(r_s,\zeta) = e_\text{c}^\text{P}(r_s) +
@@ -77,8 +79,8 @@
  \\
   -\frac{by_0}{X(y_0)}\bigg[\ln\frac{(y-y_0)^2}{X(y)} + 2\frac{b+2y_0}{Q}\arctan\frac{Q}{2y+b}\bigg]\bigg\}"></span>
   </span>
-</a> with the MC coefficients. This is the functional that was recommended by Vosko et al.<sup class="citation-marker"><a href="#review-ref-Vosko1980-1200">422</a></sup>, which is sometimes referred to as VWN5 in the literature. This is the version used in <code>hyb\_gga\_xc\_b3lyp5</code> as implemented in Libxc.</p>
-<p>&#8226; <a class="functional-link" href="../lda-c-vwn-rpa/"><code>lda_c_vwn_rpa</code></a> uses <a class="review-eq-link" href="#review-eq-eq-ldacvwn">
+</a> with the MC coefficients. This is the functional that was recommended by Vosko et al.<sup class="citation-marker"><a href="#review-ref-Vosko1980-1200">422</a></sup>, which is sometimes referred to as VWN5 in the literature. This is the version used in <a class="functional-link" href="../hyb-gga-xc-b3lyp5/"><code>hyb_gga_xc_b3lyp5</code></a> as implemented in Libxc.</p></li>
+<li><p><a class="functional-link" href="../lda-c-vwn-rpa/"><code>lda_c_vwn_rpa</code></a> uses <a class="review-eq-link" href="#review-eq-eq-ldacvwn">
   <code>eq:ldacvwn</code>
   <span class="equation-preview" aria-hidden="true">
     <span class="equation-preview-math" data-tex="G(y) = A\bigg\{\ln\frac{y^2}{X(y)} + \frac{2b}{Q}\arctan\frac{Q}{2y+b}
@@ -91,8 +93,8 @@
     <span class="equation-preview-math" data-tex="e_\text{c}^\text{vBH}(r_s,\zeta) =
   e_\text{c}^\text{P}(r_s) + \left[e_\text{c}^\text{F}(r_s) - e_\text{c}^\text{P}(r_s)\right] f_\text{c}(\zeta)"></span>
   </span>
-</a>. This is the version used in <code>hyb\_gga\_xc\_b3lyp</code> as implemented in Libxc.</p>
-<p>&#8226; <a class="functional-link" href="../lda-c-vwn-1/"><code>lda_c_vwn_1</code></a> uses <a class="review-eq-link" href="#review-eq-eq-ldacvwn">
+</a>. This is the version used in <a class="functional-link" href="../hyb-gga-xc-b3lyp/"><code>hyb_gga_xc_b3lyp</code></a> as implemented in Libxc.</p></li>
+<li><p><a class="functional-link" href="../lda-c-vwn-1/"><code>lda_c_vwn_1</code></a> uses <a class="review-eq-link" href="#review-eq-eq-ldacvwn">
   <code>eq:ldacvwn</code>
   <span class="equation-preview" aria-hidden="true">
     <span class="equation-preview-math" data-tex="G(y) = A\bigg\{\ln\frac{y^2}{X(y)} + \frac{2b}{Q}\arctan\frac{Q}{2y+b}
@@ -105,8 +107,8 @@
     <span class="equation-preview-math" data-tex="e_\text{c}^\text{vBH}(r_s,\zeta) =
   e_\text{c}^\text{P}(r_s) + \left[e_\text{c}^\text{F}(r_s) - e_\text{c}^\text{P}(r_s)\right] f_\text{c}(\zeta)"></span>
   </span>
-</a>.</p>
-<p>&#8226; <a class="functional-link" href="../lda-c-vwn-2/"><code>lda_c_vwn_2</code></a> is given by</p>
+</a>.</p></li>
+<li><p><a class="functional-link" href="../lda-c-vwn-2/"><code>lda_c_vwn_2</code></a> is given by</p>
 <div class="equation" data-tex="e_\text{c}^\text{VWN2}(r_s,\zeta) = e_\text{c}^\text{P, MC}(r_s) \\
   + \left[e_\text{c}^\text{F, RPA}(r_s) - e_\text{c}^\text{P, RPA}(r_s)\right] f_\text{c}(\zeta)(\zeta^4 - 1)  \\
   + \left[e_\text{c}^\text{F, MC}(r_s) - e_\text{c}^\text{P, MC}(r_s)\right] f_\text{c}(\zeta) \\
@@ -118,8 +120,8 @@
  \\
   -\frac{by_0}{X(y_0)}\bigg[\ln\frac{(y-y_0)^2}{X(y)} + 2\frac{b+2y_0}{Q}\arctan\frac{Q}{2y+b}\bigg]\bigg\}"></span>
   </span>
-</a>.</p>
-<p>&#8226; <a class="functional-link" href="../lda-c-vwn-3/"><code>lda_c_vwn_3</code></a> uses the spin interpolation given by <a class="review-eq-link" href="#review-eq-eq-vwnsi">
+</a>.</p></li>
+<li><p><a class="functional-link" href="../lda-c-vwn-3/"><code>lda_c_vwn_3</code></a> uses the spin interpolation given by <a class="review-eq-link" href="#review-eq-eq-vwnsi">
   <code>eq:vwnsi</code>
   <span class="equation-preview" aria-hidden="true">
     <span class="equation-preview-math" data-tex="e_\text{c}^\text{VWN}(r_s,\zeta) = e_\text{c}^\text{P}(r_s) +
@@ -130,8 +132,8 @@
 <div class="equation" data-tex="\alpha^\text{VWN3}_\text{c}(r_s) =  \alpha^\text{RPA}_\text{c}(r_s) \\
  \times\frac{e_\text{c}^\text{F, MC}(r_s) - e_\text{c}^\text{P, MC}(r_s)}
   {e_\text{c}^\text{F, RPA}(r_s) - e_\text{c}^\text{P, RPA}(r_s)}"></div>
-<p>This amounts to the assumption that the spin-dependence of the correlation energy is the same as for the RPA for fixed $r_s$. This is the version used in <code>hyb\_gga\_xc\_b3lyp3</code> as implemented in Libxc.</p>
-<p>&#8226; <a class="functional-link" href="../lda-c-vwn-4/"><code>lda_c_vwn_4</code></a> uses the spin interpolation of <a class="review-eq-link" href="#review-eq-eq-vwnsi">
+<p>This amounts to the assumption that the spin-dependence of the correlation energy is the same as for the RPA for fixed $r_s$. This is the version used in <a class="functional-link" href="../hyb-gga-xc-b3lyp3/"><code>hyb_gga_xc_b3lyp3</code></a> as implemented in Libxc.</p></li>
+<li><p><a class="functional-link" href="../lda-c-vwn-4/"><code>lda_c_vwn_4</code></a> uses the spin interpolation of <a class="review-eq-link" href="#review-eq-eq-vwnsi">
   <code>eq:vwnsi</code>
   <span class="equation-preview" aria-hidden="true">
     <span class="equation-preview-math" data-tex="e_\text{c}^\text{VWN}(r_s,\zeta) = e_\text{c}^\text{P}(r_s) +
@@ -145,8 +147,8 @@
  \\
   -\frac{by_0}{X(y_0)}\bigg[\ln\frac{(y-y_0)^2}{X(y)} + 2\frac{b+2y_0}{Q}\arctan\frac{Q}{2y+b}\bigg]\bigg\}"></span>
   </span>
-</a>, with the exception of the spin stiffness $\alpha_{\text{c}}$ that is calculated at the RPA level.</p>
-<p></p>
+</a>, with the exception of the spin stiffness $\alpha_{\text{c}}$ that is calculated at the RPA level.</p></li>
+</ul>
         </div>
         <p class="source-note">Adapted from <a href="https://arxiv.org/abs/2602.17333">Tran, Lehtola, Pittalis, and Marques, <em>Semi-Local Exchange-Correlation Approximations in Density Functional Theory</em>, arXiv:2602.17333</a>.</p>
       </section>

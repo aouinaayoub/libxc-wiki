@@ -4,12 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>mgga_x_mtask</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20261015-compact-v5">
-    <script defer src="../../assets/search.js?v=20261015-compact-v5"></script>
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261016-review-v1">
+    <script defer src="../../assets/search.js?v=20261016-review-v1"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
+    <script defer src="../../vendor/katex/contrib/mhchem.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20261015-compact-v5"></script>
+    <script defer src="../../assets/detail.js?v=20261016-review-v1"></script>
 
   </head>
   <body class="functional-page">
@@ -39,7 +40,9 @@
       <section class="callout">
         <p class="callout-label">Review excerpt</p>
         <div class="review-html">
-<p><a class="functional-link" href="../mgga-x-task/"><code>mgga_x_task</code></a> has been shown to be accurate for the band gap of bulk solids, however further improvement for 1D and 2D systems is needed, since band gaps for these systems are still too small when compared to reference results. To achieve this goal, two modifications in <a class="functional-link" href="../mgga-x-task/"><code>mgga_x_task</code></a> were made to enhance the nonlocality: (i) choosing an upper bound for $F_\text{x}$ that is less tight, $h_{\text{x}}^0=1.29$ (1.174 in <a class="functional-link" href="../mgga-x-task/"><code>mgga_x_task</code></a>) in <a class="review-eq-link" href="#review-eq-eq-ftask">
+<p><a class="functional-link" href="../mgga-x-task/"><code>mgga_x_task</code></a> has been shown to be accurate for the band gap of bulk solids, however further improvement for 1D and 2D systems is needed, since band gaps for these systems are still too small when compared to reference results. To achieve this goal, two modifications in <a class="functional-link" href="../mgga-x-task/"><code>mgga_x_task</code></a> were made to enhance the nonlocality:</p>
+<ol class="review-list" type="i">
+<li><p>choosing an upper bound for $F_\text{x}$ that is less tight, $h_{\text{x}}^0=1.29$ (1.174 in <a class="functional-link" href="../mgga-x-task/"><code>mgga_x_task</code></a>) in <a class="review-eq-link" href="#review-eq-eq-ftask">
   <code>eq:ftask</code>
   <span class="equation-preview" aria-hidden="true">
     <span class="equation-preview-math" data-tex="\begin{aligned}
@@ -48,12 +51,15 @@ F_\text{x}^\text{TASK} = &amp; h_{\text{x}}^0 g(s_\sigma) + \left[1-f(\alpha_{\s
   &amp; \times\left[h_{\text{x}}^1(s_\sigma)-h_{\text{x}}^0\right]g^d(s_\sigma)
 \end{aligned}"></span>
   </span>
-</a>; and (ii) adjusting the large-$\alpha_\sigma$ limit of $f(\alpha_\sigma)$ (<a class="review-eq-link" href="#review-eq-eq-task-f">
+</a></p></li>
+<li><p>adjusting the large-$\alpha_\sigma$ limit of $f(\alpha_\sigma)$ (<a class="review-eq-link" href="#review-eq-eq-task-f">
   <code>eq:task-f</code>
   <span class="equation-preview" aria-hidden="true">
     <span class="equation-preview-math" data-tex="f(\alpha_{\sigma}) = \sum_{i=0}^4 b_i R_i(\alpha_{\sigma})"></span>
   </span>
-</a>) to $f(\alpha_{\sigma}\to\infty)=-3.5$ ($-3$ in <a class="functional-link" href="../mgga-x-task/"><code>mgga_x_task</code></a>). Because of these changes, the coefficients $a_i$ and $b_i$ in <a class="review-eq-link" href="#review-eq-eq-task-h">
+</a>) to $f(\alpha_{\sigma}\to\infty)=-3.5$ ($-3$ in <a class="functional-link" href="../mgga-x-task/"><code>mgga_x_task</code></a>).</p></li>
+</ol>
+<p>Because of these changes, the coefficients $a_i$ and $b_i$ in <a class="review-eq-link" href="#review-eq-eq-task-h">
   <code>eq:task-h</code>
   <span class="equation-preview" aria-hidden="true">
     <span class="equation-preview-math" data-tex="h_{\text{x}}^1(s_\sigma) = \sum_{i=0}^2 a_i R_i(s_{\sigma}^2)"></span>

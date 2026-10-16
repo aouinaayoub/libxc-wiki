@@ -4,12 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>gga_x_ncapr</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20261015-compact-v5">
-    <script defer src="../../assets/search.js?v=20261015-compact-v5"></script>
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261016-review-v1">
+    <script defer src="../../assets/search.js?v=20261016-review-v1"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
+    <script defer src="../../vendor/katex/contrib/mhchem.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20261015-compact-v5"></script>
+    <script defer src="../../assets/detail.js?v=20261016-review-v1"></script>
 
   </head>
   <body class="functional-page">
@@ -49,7 +50,7 @@ F_\text{x}^\text{NCAP} = 1 + \mu\tanh(s_{\sigma}) \arcsinh(s_{\sigma})  \\
 \end{aligned}"></span>
   </span>
 </a>, but with modified values for most parameters. The parameter $\delta$, which influences the behavior at $s_\sigma\to\infty$ (i.e., in the asymptotic region of finite systems), is changed to $\delta=0.5$. Consequently, $\beta$, that is determined so that the exchange and Hartree energies cancel for the hydrogen atom, is now $\beta\approx0.017983$,<sup class="citation-marker"><a href="#review-ref-approximation2">588</a></sup> while $\alpha$ is also modified through the relation $\alpha=4\pi\beta/(3\mu)$ with $\mu=\mu^{\text{PBE}}$ unchanged.</p>
-<p>It has to be noted that the ionization potentials, electron affinities, and band gaps calculated with <a class="functional-link" href="../gga-x-ncapr/"><code>gga_x_ncapr</code></a> + <a class="functional-link" href="../gga-c-p86/"><code>gga_c_p86</code></a>  for correlation were obtained from orbital energies that were shifted by quantities related to the xc derivative discontinuity.</p>
+<p>It has to be noted that the ionization potentials, electron affinities, and band gaps calculated with <a class="functional-link" href="../gga-x-ncapr/"><code>gga_x_ncapr</code></a> + <a class="functional-link" href="../gga-c-p86/"><code>gga_c_p86</code></a> for correlation were obtained from orbital energies that were shifted by quantities related to the xc derivative discontinuity.</p>
         </div>
         <p class="source-note">Adapted from <a href="https://arxiv.org/abs/2602.17333">Tran, Lehtola, Pittalis, and Marques, <em>Semi-Local Exchange-Correlation Approximations in Density Functional Theory</em>, arXiv:2602.17333</a>.</p>
       </section>

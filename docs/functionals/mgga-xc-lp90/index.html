@@ -4,12 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>mgga_xc_lp90</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20261015-compact-v5">
-    <script defer src="../../assets/search.js?v=20261015-compact-v5"></script>
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261016-review-v1">
+    <script defer src="../../assets/search.js?v=20261016-review-v1"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
+    <script defer src="../../vendor/katex/contrib/mhchem.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20261015-compact-v5"></script>
+    <script defer src="../../assets/detail.js?v=20261016-review-v1"></script>
 
   </head>
   <body class="functional-page">
@@ -50,7 +51,12 @@
 <div class="equation" data-tex="e^\text{LP-MGGA}_\text{xc} = 
   -\left[a\frac{\displaystyle 1+\frac{b}{N}}{\displaystyle 1+\frac{c}{N}} + \frac{d}{8}\left(x^2-u\right)\right] \\
   \times\frac{1}{\displaystyle\left(\frac{4}{3}\pi\right)^{1/3}r_s + k}"></div>
-<p>where $N$ is the number of electrons. The coefficients were fit the same way as for the more simple LDA variants (e.g. <a class="functional-link" href="../lda-xc-lp-a/"><code>lda_xc_lp_a</code></a>), leading to three functionals:  &#8226; <a class="functional-link" href="../mgga-xc-lp90/"><code>mgga_xc_lp90</code></a>: $a=0.80569$, $d=2.4271\times10^{-2}$, and $k = 4.0743\times10^{-3}$, while $b$ and $c$ are set to zero. Note that this value of $d$ is the corrected one mentioned in <sup class="citation-marker"><a href="#review-ref-Zhao1993-918">471</a></sup>. &#8226; <code>mgga_xc_lp90_a</code>: $a=0.7874$ and $d=2.801\times10^{-2}$, while $b$, $c$, and $k$ are set to zero. &#8226; <code>mgga_xc_lp90_n</code>: $a=0.7615$, $b=1.6034$, $c=2.1437$, and $d=6.151\times10^{-2}$, with $k$ set to zero. </p>
+<p>where $N$ is the number of electrons. The coefficients were fit the same way as for the simpler LDA variants (e.g. <a class="functional-link" href="../lda-xc-lp-a/"><code>lda_xc_lp_a</code></a>), leading to three functionals:</p>
+<ul class="review-list">
+<li><p><a class="functional-link" href="../mgga-xc-lp90/"><code>mgga_xc_lp90</code></a>: $a=0.80569$, $d=2.4271\times10^{-2}$, and $k = 4.0743\times10^{-3}$, while $b$ and $c$ are set to zero. Note that this value of $d$ is the corrected one mentioned in <sup class="citation-marker"><a href="#review-ref-Zhao1993-918">471</a></sup>.</p></li>
+<li><p><code>mgga_xc_lp90_a</code>: $a=0.7874$ and $d=2.801\times10^{-2}$, while $b$, $c$, and $k$ are set to zero.</p></li>
+<li><p><code>mgga_xc_lp90_n</code>: $a=0.7615$, $b=1.6034$, $c=2.1437$, and $d=6.151\times10^{-2}$, with $k$ set to zero.</p></li>
+</ul>
 <p>As expected, these functionals improve over their LDA counterparts, like <a class="functional-link" href="../lda-xc-lp-a/"><code>lda_xc_lp_a</code></a>, for the xc energies of atoms.</p>
 <p>The explicit dependence on the number of electrons $N$ in <a class="review-eq-link" href="#review-eq-eq-eclp90">
   <code>eq:eclp90</code>

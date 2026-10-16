@@ -4,12 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>gga_x_gam</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20261015-compact-v5">
-    <script defer src="../../assets/search.js?v=20261015-compact-v5"></script>
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261016-review-v1">
+    <script defer src="../../assets/search.js?v=20261016-review-v1"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
+    <script defer src="../../vendor/katex/contrib/mhchem.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20261015-compact-v5"></script>
+    <script defer src="../../assets/detail.js?v=20261016-review-v1"></script>
 
   </head>
   <body class="functional-page">
@@ -54,7 +55,7 @@
   <span class="equation-preview" aria-hidden="true">
     <span class="equation-preview-math" data-tex="\tilde{v}_\sigma = \frac{\omega_\sigma n_\sigma^{1/3}}{1 + \omega_\sigma n_\sigma^{1/3}}"></span>
   </span>
-</a>. The 16 linear parameters of the functional, together with the 10 parameters of the associated pure correlation functional <a class="functional-link" href="../gga-c-gam/"><code>gga_c_gam</code></a>, were optimized with a particular emphasis for quantities relevant for homogeneous catalysis (main-group and transition-metal bond energies, reaction-barrier heights, and geometry). Also included in the training set are databases for the ionization potentials, electron affinities, interaction energies of weakly-bound systems, lattice constants of solids, etc. During the optimization, a smoothness constraint was applied in order to get a functional that has a reasonable shape without large unphysical variations. Unlike <a class="functional-link" href="../gga-x-n12/"><code>gga_x_n12</code></a>, the functional was not constrained to reduce to <a class="functional-link" href="../lda-x/"><code>lda_x</code></a> for the HEG.</p>
+</a>. The 16 linear parameters of the functional, together with the 10 parameters of the associated pure correlation functional <a class="functional-link" href="../gga-c-gam/"><code>gga_c_gam</code></a>, were optimized with a particular emphasis for quantities relevant for homogeneous catalysis (main-group and transition-metal bond energies, reaction-barrier heights, and geometry). Also included in the training set are databases for the ionization potentials, electron affinities, interaction energies of weakly-bound systems, lattice constants of solids, etc. During the optimization, a smoothness constraint was applied to get a functional that has a reasonable shape without large unphysical variations. Unlike <a class="functional-link" href="../gga-x-n12/"><code>gga_x_n12</code></a>, the functional was not constrained to reduce to <a class="functional-link" href="../lda-x/"><code>lda_x</code></a> for the HEG.</p>
 <p>Among the numerous GGA functionals tested in <sup class="citation-marker"><a href="#review-ref-Yu2015-12146">579</a></sup>, the GAM functional (<a class="functional-link" href="../gga-x-gam/"><code>gga_x_gam</code></a> + <a class="functional-link" href="../gga-c-gam/"><code>gga_c_gam</code></a>) lead to the most accurate results for most of the considered 30 properties, and could also sometimes compete with MGGA and hybrid functionals.</p>
         </div>
         <p class="source-note">Adapted from <a href="https://arxiv.org/abs/2602.17333">Tran, Lehtola, Pittalis, and Marques, <em>Semi-Local Exchange-Correlation Approximations in Density Functional Theory</em>, arXiv:2602.17333</a>.</p>

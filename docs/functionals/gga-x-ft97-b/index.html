@@ -4,12 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>gga_x_ft97_b</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20261015-compact-v5">
-    <script defer src="../../assets/search.js?v=20261015-compact-v5"></script>
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261016-review-v1">
+    <script defer src="../../assets/search.js?v=20261016-review-v1"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
+    <script defer src="../../vendor/katex/contrib/mhchem.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20261015-compact-v5"></script>
+    <script defer src="../../assets/detail.js?v=20261016-review-v1"></script>
 
   </head>
   <body class="functional-page">
@@ -43,7 +44,7 @@
 <div class="equation" data-tex="F_\text{x}^{\text{FT97}} = 1 + \frac{\beta}{C_\text{x}}
   \frac{x_\sigma^2}{\left\{1 + \left(\frac{6\beta}{m}\right)^m 
       x_\sigma^m \left[\arcsinh(x_\sigma^m)\right]^m\right\}^{1/m}}"></div>
-<p>where $m$ and $\beta$ are parameters. This family includes <a class="functional-link" href="../gga-x-b88/"><code>gga_x_b88</code></a> for $m=1$. By fitting to exact exchange energies of light atoms, $m = 2$ and $\beta = 0.00293$ were obtained as the optimal values. It should be noted that this value of $\beta$ is not empirical, but has been determined from a model of the exchange hole in inhomogeneous systems.<sup class="citation-marker"><a href="#review-ref-Becke1983-1915">239</a></sup> The thus defined <a class="functional-link" href="../gga-x-ft97-a/"><code>gga_x_ft97_a</code></a> functional reproduces the exact exchange energies of light atoms from H to Ne more accurately than <a class="functional-link" href="../gga-x-b88/"><code>gga_x_b88</code></a> and <a class="functional-link" href="../gga-x-pw91/"><code>gga_x_pw91</code></a>, but the functional is less accurate for heavier atoms. To resolve this problem, Filatov and Thiel<sup class="citation-marker"><a href="#review-ref-Filatov1997-847">503</a></sup> proposed an improved functional,  <a class="functional-link" href="../gga-x-ft97-b/"><code>gga_x_ft97_b</code></a>, where the constant $\beta$ is replaced by the function</p>
+<p>where $m$ and $\beta$ are parameters. This family includes <a class="functional-link" href="../gga-x-b88/"><code>gga_x_b88</code></a> for $m=1$. By fitting to exact exchange energies of light atoms, $m = 2$ and $\beta = 0.00293$ were obtained as the optimal values. It should be noted that this value of $\beta$ is not empirical, but has been determined from a model of the exchange hole in inhomogeneous systems.<sup class="citation-marker"><a href="#review-ref-Becke1983-1915">239</a></sup> The thus defined <a class="functional-link" href="../gga-x-ft97-a/"><code>gga_x_ft97_a</code></a> functional reproduces the exact exchange energies of light atoms from H to Ne more accurately than <a class="functional-link" href="../gga-x-b88/"><code>gga_x_b88</code></a> and <a class="functional-link" href="../gga-x-pw91/"><code>gga_x_pw91</code></a>, but the functional is less accurate for heavier atoms. To resolve this problem, Filatov and Thiel<sup class="citation-marker"><a href="#review-ref-Filatov1997-847">503</a></sup> proposed an improved functional, <a class="functional-link" href="../gga-x-ft97-b/"><code>gga_x_ft97_b</code></a>, where the constant $\beta$ is replaced by the function</p>
 <div class="equation" data-tex="\beta_\sigma = \beta_0 + \frac{\beta_1 |\nabla n_\sigma|^2}{\beta_2^2 + |\nabla n_\sigma|^2}"></div>
 <p>The values of the three parameters ($\beta_0$, $\beta_1$, and $\beta_2$) were then fit to the exact exchange energies of the atoms H, He, Li, Be, Ne, Mg, Ar, Kr, and Xe, yielding $\beta_0=0.002913644$, $\beta_1=0.0009474169$, and $\beta_2 = 2501.149$ (beware of the missing power 2 for $\beta_2$ in Eq. (16a) of Filatov and Thiel<sup class="citation-marker"><a href="#review-ref-Filatov1997-847">503</a></sup>).</p>
 <p>These two functionals, combined with <a class="functional-link" href="../gga-c-ft97/"><code>gga_c_ft97</code></a> for correlation, give results for the G2 dataset of molecules<sup class="citation-marker"><a href="#review-ref-Curtiss1991-7221">430</a></sup> that are comparable to the hybrid functional B3LYP.<sup class="citation-marker"><a href="#review-ref-Stephens1994-11623">423</a></sup></p>

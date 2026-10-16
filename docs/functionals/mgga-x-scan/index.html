@@ -4,12 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>mgga_x_scan</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20261015-compact-v5">
-    <script defer src="../../assets/search.js?v=20261015-compact-v5"></script>
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261016-review-v1">
+    <script defer src="../../assets/search.js?v=20261016-review-v1"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
+    <script defer src="../../vendor/katex/contrib/mhchem.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20261015-compact-v5"></script>
+    <script defer src="../../assets/detail.js?v=20261016-review-v1"></script>
 
   </head>
   <body class="functional-page">
@@ -39,7 +40,7 @@
       <section class="callout">
         <p class="callout-label">Review excerpt</p>
         <div class="review-html">
-<p>The <em>strongly constrained and appropriately normed</em> (SCAN) exchange functional, together with its correlation companion <a class="functional-link" href="../mgga-c-scan/"><code>mgga_c_scan</code></a>, was built in order to obey a  large number of exact conditions (17 in total!). The price to pay for this is, of course, complexity, and this is indeed one of the most complex functionals ever proposed.</p>
+<p>The <em>strongly constrained and appropriately normed</em> (SCAN) exchange functional, together with its correlation companion <a class="functional-link" href="../mgga-c-scan/"><code>mgga_c_scan</code></a>, was built to obey a large number of exact conditions (17 in total!). The price to pay for this is, of course, complexity, and this is indeed one of the most complex functionals ever proposed.</p>
 <p>The idea is to use the iso-orbital indicator $\alpha_\sigma$ to interpolate between the various regimes, each one being well-described by a different form. Due to its connection to the electron-localization function,<sup class="citation-marker"><a href="#review-ref-Becke1990-JCP-5397">240</a>,<a href="#review-ref-Savin1997-1808">695</a>,<a href="#review-ref-Burnus2005-010501">246</a></sup> $\alpha_\sigma$ can be used to measure the localization of the electrons and to discern between different kinds of bonds. In regions of space dominated by a single covalent bond $\alpha_\sigma\approx0$, while in the case of a metallic bond $\alpha_\sigma\approx1$, and for a weak bond $\alpha_\sigma\gg1$. In practice, the interpolation is performed between $\alpha_\sigma=0$ and $\alpha_\sigma=1$, while the region relevant for weak bonds (large $\alpha_\sigma$) is obtained through an extrapolation. Based on these arguments, Sun et al.<sup class="citation-marker"><a href="#review-ref-Sun2015-PRL-36402">294</a></sup> proposed the following enhancement factor:</p>
 <div class="equation" data-tex="\begin{aligned}
 F_\text{x}^\text{SCAN} = &amp; \left\{h_{\text{x}}^1(s_\sigma,\alpha_\sigma)
@@ -69,7 +70,7 @@ f_0^\text{SCAN}(s_\sigma,\alpha_\sigma) = \mu^\text{GE}s_\sigma^2 + b_4 s_\sigma
   + \left[b_1s_\sigma^2 + b_2(1-\alpha_\sigma)\E^{-b_3(1-\alpha_\sigma)^2}\right]^2
 \end{aligned}"></div>
 <p>with $b_1=511/(27000 b_2)$, $b_2=\sqrt{5913/405000}$, $b_3=1/2$, and $b_4=\left(\mu^\text{GE}\right)^2/\kappa - 1606/18225 - b_1^2$.</p>
-<p>The constant $h_{\text{x}}^0=1.174$ was fixed by imposing the strict LO bound  for two-electron densities.<sup class="citation-marker"><a href="#review-ref-Perdew2014-18A533">725</a></sup> Finally, the function $g$ is defined by</p>
+<p>The constant $h_{\text{x}}^0=1.174$ was fixed by imposing the strict LO bound for two-electron densities.<sup class="citation-marker"><a href="#review-ref-Perdew2014-18A533">725</a></sup> Finally, the function $g$ is defined by</p>
 <div class="equation" data-tex="g(s_\sigma) = 1 - \E^{-a_1/\sqrt{s_\sigma}}"></div>
 <p>with the parameter $a_1=4.9479$ chosen such that the functional reproduces the exact exchange energy of the H atom.</p>
 <p>The four remaining parameters, namely $c_\text{1x}=0.667$, $c_\text{2x}=0.8$, and $d_\text{x}=1.24$ in <a class="review-eq-link" href="#review-eq-eq-scanfalpha">
@@ -83,8 +84,13 @@ f_0^\text{SCAN}(s_\sigma,\alpha_\sigma) = \mu^\text{GE}s_\sigma^2 + b_4 s_\sigma
   <span class="equation-preview" aria-hidden="true">
     <span class="equation-preview-math" data-tex="F_\text{x}^{\text{PBE}} = 1 + \kappa\left[1 - \frac{\kappa}{\kappa + f_0(s_\sigma)}\right]"></span>
   </span>
-</a> and in the definition of $b_4$, were fit together with the three parameters of <a class="functional-link" href="../mgga-c-scan/"><code>mgga_c_scan</code></a> ($c_\text{1c}$, $c_\text{2c}$, and $d_\text{c}$) by requiring that SCAN reproduce accurately the following quantities: (i) the large nuclear charge $Z$ asymptotic coefficients of the xc energy of rare-gas atoms,<sup class="citation-marker"><a href="#review-ref-Elliott2009-1485">291</a>,<a href="#review-ref-Constantin2011-186406">292</a>,<a href="#review-ref-Burke2014-4834">575</a></sup> (ii) the binding energy curve of \ce{Ar2},<sup class="citation-marker"><a href="#review-ref-Patkowski2005-2031">726</a></sup> and (iii) jellium surface xc energies calculated from a MC method.<sup class="citation-marker"><a href="#review-ref-Almeida2002-075115">727</a>,<a href="#review-ref-Wood2007-035403">635</a></sup></p>
-<p>SCAN is a  popular functional, especially in the solid-state community. However, it is also known to lead to numerical instabilities, which prompted the development of more stable versions of SCAN, namely rSCAN (<a class="functional-link" href="../mgga-x-rscan/"><code>mgga_x_rscan</code></a> + <a class="functional-link" href="../mgga-c-rscan/"><code>mgga_c_rscan</code></a>), r$^2$SCAN (<a class="functional-link" href="../mgga-x-r2scan/"><code>mgga_x_r2scan</code></a> + <a class="functional-link" href="../mgga-c-r2scan/"><code>mgga_c_r2scan</code></a>), and r$^4$SCAN exchange (<a class="functional-link" href="../mgga-x-r4scan/"><code>mgga_x_r4scan</code></a>).</p>
+</a> and in the definition of $b_4$, were fit together with the three parameters of <a class="functional-link" href="../mgga-c-scan/"><code>mgga_c_scan</code></a> ($c_\text{1c}$, $c_\text{2c}$, and $d_\text{c}$) by requiring that SCAN reproduce accurately the following quantities:</p>
+<ol class="review-list" type="i">
+<li><p>the large nuclear charge $Z$ asymptotic coefficients of the xc energy of rare-gas atoms,<sup class="citation-marker"><a href="#review-ref-Elliott2009-1485">291</a>,<a href="#review-ref-Constantin2011-186406">292</a>,<a href="#review-ref-Burke2014-4834">575</a></sup></p></li>
+<li><p>the binding energy curve of $\ce{Ar2}$,<sup class="citation-marker"><a href="#review-ref-Patkowski2005-2031">726</a></sup></p></li>
+<li><p>jellium surface xc energies calculated from a MC method.<sup class="citation-marker"><a href="#review-ref-Almeida2002-075115">727</a>,<a href="#review-ref-Wood2007-035403">635</a></sup></p></li>
+</ol>
+<p>SCAN is a popular functional, especially in the solid-state community. However, it is also known to lead to numerical instabilities, which prompted the development of more stable versions of SCAN, namely rSCAN (<a class="functional-link" href="../mgga-x-rscan/"><code>mgga_x_rscan</code></a> + <a class="functional-link" href="../mgga-c-rscan/"><code>mgga_c_rscan</code></a>), r$^2$SCAN (<a class="functional-link" href="../mgga-x-r2scan/"><code>mgga_x_r2scan</code></a> + <a class="functional-link" href="../mgga-c-r2scan/"><code>mgga_c_r2scan</code></a>), and r$^4$SCAN exchange (<a class="functional-link" href="../mgga-x-r4scan/"><code>mgga_x_r4scan</code></a>).</p>
         </div>
         <p class="source-note">Adapted from <a href="https://arxiv.org/abs/2602.17333">Tran, Lehtola, Pittalis, and Marques, <em>Semi-Local Exchange-Correlation Approximations in Density Functional Theory</em>, arXiv:2602.17333</a>.</p>
       </section>

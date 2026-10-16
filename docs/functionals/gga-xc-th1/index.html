@@ -4,12 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>gga_xc_th1</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20261015-compact-v5">
-    <script defer src="../../assets/search.js?v=20261015-compact-v5"></script>
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261016-review-v1">
+    <script defer src="../../assets/search.js?v=20261016-review-v1"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
+    <script defer src="../../vendor/katex/contrib/mhchem.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20261015-compact-v5"></script>
+    <script defer src="../../assets/detail.js?v=20261016-review-v1"></script>
 
   </head>
   <body class="functional-page">
@@ -41,7 +42,7 @@
         <p class="callout-label">Review excerpt</p>
         <div class="review-html">
 <p>From the work of Perdew et al.<sup class="citation-marker"><a href="#review-ref-Perdew1982-1691">332</a></sup> on the derivative discontinuity of the energy at integer electron numbers, Tozer and Handy<sup class="citation-marker"><a href="#review-ref-Tozer1998-2545">649</a></sup> found an ambiguity in the determination of the xc potential $v_{\text{xc}\,\sigma}$ obtained through the ZMP inversion procedure.<sup class="citation-marker"><a href="#review-ref-Zhao1994-2138">472</a></sup> While in the development of their previous functionals (<a class="functional-link" href="../gga-xc-th-fco/"><code>gga_xc_th_fco</code></a>, etc.) the inverted xc potentials were assumed to vanish asymptotically, they should, in fact, go to a finite constant related to the chemical hardness of the system. This was assumed to be the reason for the too negative xc energies obtained with the functionals developed in <sup class="citation-marker"><a href="#review-ref-Tozer1997-183">474</a></sup>.</p>
-<p>In order to circumvent this problem, Tozer and Handy<sup class="citation-marker"><a href="#review-ref-Tozer1998-2545">649</a></sup> used the same functional form as for <a class="functional-link" href="../gga-xc-th-fco/"><code>gga_xc_th_fco</code></a>, namely <a class="review-eq-link" href="#review-eq-eq-th">
+<p>To circumvent this problem, Tozer and Handy<sup class="citation-marker"><a href="#review-ref-Tozer1998-2545">649</a></sup> used the same functional form as for <a class="functional-link" href="../gga-xc-th-fco/"><code>gga_xc_th_fco</code></a>, namely <a class="review-eq-link" href="#review-eq-eq-th">
   <code>eq:th</code>
   <span class="equation-preview" aria-hidden="true">
     <span class="equation-preview-math" data-tex="e_\text{xc}^{\text{TH}} = \frac{1}{n} \sum_{abcd} \omega_{abcd}
@@ -57,7 +58,12 @@ R_a &amp; = n_\uparrow^a + n_\downarrow^a \\
   Y_d &amp; = \left(\frac{2|\nabla n_\uparrow|^2 + 2|\nabla n_\downarrow|^2 -|\nabla n|^2}{n^{8/3}}\right)^d
 \end{aligned}"></span>
   </span>
-</a>, but changed their optimization procedure by: (i) allowing for a finite asymptotic value of the potential, where this value is obtained self-consistently during the fitting; (ii) fitting not only the near-exact (shifted) xc potentials but also xc energies computed from atomic energies and experimental atomization and zero-point energies.<sup class="citation-marker"><a href="#review-ref-Davidson1991-7071">650</a>,<a href="#review-ref-Curtiss1991-7221">430</a>,<a href="#review-ref-Pople1989-5622">651</a></sup> The training set for determining the coefficients $\omega_{abcd}$ in <a class="review-eq-link" href="#review-eq-eq-th">
+</a>, but changed their optimization procedure by:</p>
+<ol class="review-list" type="i">
+<li><p>allowing for a finite asymptotic value of the potential, where this value is obtained self-consistently during the fitting</p></li>
+<li><p>fitting not only the near-exact (shifted) xc potentials but also xc energies computed from atomic energies and experimental atomization and zero-point energies.<sup class="citation-marker"><a href="#review-ref-Davidson1991-7071">650</a>,<a href="#review-ref-Curtiss1991-7221">430</a>,<a href="#review-ref-Pople1989-5622">651</a></sup></p></li>
+</ol>
+<p>The training set for determining the coefficients $\omega_{abcd}$ in <a class="review-eq-link" href="#review-eq-eq-th">
   <code>eq:th</code>
   <span class="equation-preview" aria-hidden="true">
     <span class="equation-preview-math" data-tex="e_\text{xc}^{\text{TH}} = \frac{1}{n} \sum_{abcd} \omega_{abcd}

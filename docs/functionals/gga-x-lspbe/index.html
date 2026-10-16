@@ -4,12 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>gga_x_lspbe</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20261015-compact-v5">
-    <script defer src="../../assets/search.js?v=20261015-compact-v5"></script>
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261016-review-v1">
+    <script defer src="../../assets/search.js?v=20261016-review-v1"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
+    <script defer src="../../vendor/katex/contrib/mhchem.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20261015-compact-v5"></script>
+    <script defer src="../../assets/detail.js?v=20261016-review-v1"></script>
 
   </head>
   <body class="functional-page">
@@ -61,7 +62,7 @@ F_\text{x}^{\text{ls(R)PBE}} = F_\text{x}^{\text{(R)PBE}} -
   </span>
 </a>, $\kappa$, and $\alpha$. Pacheco-Kato et al.<sup class="citation-marker"><a href="#review-ref-PachecoKato2016-268">585</a></sup> chose the value of $\kappa=\kappa^{\text{PBE}}$ as used in both <a class="functional-link" href="../gga-x-pbe/"><code>gga_x_pbe</code></a> and <a class="functional-link" href="../gga-x-rpbe/"><code>gga_x_rpbe</code></a>. The small-$s_\sigma$ expansion of the functional shows that</p>
 <div class="equation" data-tex="\mu_\text{x} = \mu - \alpha - \alpha \kappa"></div>
-<p>is the second-order coefficient. Several non-empirical values for $\mu_\text{x}$ were considered: $\mu^{\text{GE}}$ of the exact density-gradient expansion, $\mu^\text{PBE}$ from  <a class="functional-link" href="../gga-x-pbe/"><code>gga_x_pbe</code></a>, $\mu^{\text{APBE}}=0.260$ from the asymptotic expansion of the semi-classical approximation used in <a class="functional-link" href="../gga-x-apbe/"><code>gga_x_apbe</code></a>, and $\mu^{\text{PBEmol}}=0.27583$ from <a class="functional-link" href="../gga-x-pbe-mol/"><code>gga_x_pbe_mol</code></a>, which was deduced from atomic hydrogen. This leads to four versions for each of these two functionals (thus, eight exchange functionals). Finally, $\alpha$ is chosen such that the maximum of <a class="review-eq-link" href="#review-eq-eq-lsrpbe">
+<p>is the second-order coefficient. Several non-empirical values for $\mu_\text{x}$ were considered: $\mu^{\text{GE}}$ of the exact density-gradient expansion, $\mu^\text{PBE}$ from <a class="functional-link" href="../gga-x-pbe/"><code>gga_x_pbe</code></a>, $\mu^{\text{APBE}}=0.260$ from the asymptotic expansion of the semi-classical approximation used in <a class="functional-link" href="../gga-x-apbe/"><code>gga_x_apbe</code></a>, and $\mu^{\text{PBEmol}}=0.27583$ from <a class="functional-link" href="../gga-x-pbe-mol/"><code>gga_x_pbe_mol</code></a>, which was deduced from atomic hydrogen. This leads to four versions for each of these two functionals (thus, eight exchange functionals). Finally, $\alpha$ is chosen such that the maximum of <a class="review-eq-link" href="#review-eq-eq-lsrpbe">
   <code>eq:lsrpbe</code>
   <span class="equation-preview" aria-hidden="true">
     <span class="equation-preview-math" data-tex="\begin{aligned}

@@ -4,12 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>gga_xc_th2</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20261015-compact-v5">
-    <script defer src="../../assets/search.js?v=20261015-compact-v5"></script>
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261016-review-v1">
+    <script defer src="../../assets/search.js?v=20261016-review-v1"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
+    <script defer src="../../vendor/katex/contrib/mhchem.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20261015-compact-v5"></script>
+    <script defer src="../../assets/detail.js?v=20261016-review-v1"></script>
 
   </head>
   <body class="functional-page">
@@ -46,7 +47,13 @@
     <span class="equation-preview-math" data-tex="e_\text{xc}^{\text{TH}} = \frac{1}{n} \sum_{abcd} \omega_{abcd}
    R_a S_b X_c Y_d"></span>
   </span>
-</a> were fit to (i) near-exact (shifted) xc ZMP<sup class="citation-marker"><a href="#review-ref-Zhao1994-2138">472</a></sup> potentials, (ii) experimental atomization energies of the 13 molecules in the training set, and (iii) the xc energies of the atoms in the training set. The resulting functional retains the good performance of <a class="functional-link" href="../gga-xc-th1/"><code>gga_xc_th1</code></a> for total energies, but improves significantly the evaluation of atomization energies, as expected.</p>
+</a> were fit to:</p>
+<ol class="review-list" type="i">
+<li><p>near-exact (shifted) xc ZMP<sup class="citation-marker"><a href="#review-ref-Zhao1994-2138">472</a></sup> potentials</p></li>
+<li><p>experimental atomization energies of the 13 molecules in the training set</p></li>
+<li><p>the xc energies of the atoms in the training set.</p></li>
+</ol>
+<p>The resulting functional retains the good performance of <a class="functional-link" href="../gga-xc-th1/"><code>gga_xc_th1</code></a> for total energies, but improves significantly the evaluation of atomization energies, as expected.</p>
         </div>
         <p class="source-note">Adapted from <a href="https://arxiv.org/abs/2602.17333">Tran, Lehtola, Pittalis, and Marques, <em>Semi-Local Exchange-Correlation Approximations in Density Functional Theory</em>, arXiv:2602.17333</a>.</p>
       </section>

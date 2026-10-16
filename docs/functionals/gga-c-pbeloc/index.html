@@ -4,12 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>gga_c_pbeloc</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20261015-compact-v5">
-    <script defer src="../../assets/search.js?v=20261015-compact-v5"></script>
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261016-review-v1">
+    <script defer src="../../assets/search.js?v=20261016-review-v1"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
+    <script defer src="../../vendor/katex/contrib/mhchem.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20261015-compact-v5"></script>
+    <script defer src="../../assets/detail.js?v=20261016-review-v1"></script>
 
   </head>
   <body class="functional-page">
@@ -47,7 +48,12 @@
   </span>
 </a>), exhibits a too slowly decaying Taylor expansion at $t = \infty$. To correct this behavior, thus making the correlation energy density more <em>localized</em>, they proposed to replace the constant $\beta=\beta^{\text{MB}}$ of <a class="functional-link" href="../gga-c-pbe/"><code>gga_c_pbe</code></a> by the function</p>
 <div class="equation" data-tex="\beta(r_s, t) = \beta_0 + a t^2 f(r_s)"></div>
-<p>where $\beta_0$ and $a$ are constants. The function $f(r_s)$ determines the correction in the high- and low-density limits, and is chosen to fulfill two constraints: (i) Under uniform scaling, $\beta(r_s, t)$ should reduce to $\beta_0$ at the high- and low-density limits; (ii) $\beta_0&lt;\beta^{\text{MB}}$, which is deduced from the fact that <a class="functional-link" href="../gga-c-pbeloc/"><code>gga_c_pbeloc</code></a> is constructed to be more localized than the original <a class="functional-link" href="../gga-c-pbe/"><code>gga_c_pbe</code></a>. The proposed function that satisfies these two requirements is given by</p>
+<p>where $\beta_0$ and $a$ are constants. The function $f(r_s)$ determines the correction in the high- and low-density limits, and is chosen to fulfill two constraints:</p>
+<ol class="review-list" type="i">
+<li><p>Under uniform scaling, $\beta(r_s, t)$ should reduce to $\beta_0$ at the high- and low-density limits</p></li>
+<li><p>$\beta_0&lt;\beta^{\text{MB}}$, which is deduced from the fact that <a class="functional-link" href="../gga-c-pbeloc/"><code>gga_c_pbeloc</code></a> is constructed to be more localized than the original <a class="functional-link" href="../gga-c-pbe/"><code>gga_c_pbe</code></a>.</p></li>
+</ol>
+<p>The proposed function that satisfies these two requirements is given by</p>
 <div class="equation" data-tex="f(r_s) = 1 - \E^{-r_s^2}"></div>
 <p>while $\beta_0 = 3\mu^\text{GE}/\pi^2 \approx 0.0375$,<sup class="citation-marker"><a href="#review-ref-approximation3">633</a></sup> the same choice as in <a class="functional-link" href="../gga-c-pbe-jrgx/"><code>gga_c_pbe_jrgx</code></a>. The parameter $a=0.08$ was obtained by fitting to jellium surface correlation energies obtained with <a class="functional-link" href="../mgga-c-revtpss/"><code>mgga_c_revtpss</code></a>, which are considered accurate.<sup class="citation-marker"><a href="#review-ref-Wood2007-035403">635</a>,<a href="#review-ref-Constantin2011-045126">636</a></sup></p>
 <p>Test calculations for molecular properties (atomization energies, barrier heights, kinetics, and binding energies of hydrogen-bonded dimers) show that the localization procedure improves the compatibility of the correlation functional with the HF exchange. The errors are significantly reduced compared to using the standard <a class="functional-link" href="../gga-c-pbe/"><code>gga_c_pbe</code></a> or <a class="functional-link" href="../gga-c-lyp/"><code>gga_c_lyp</code></a> functional. Note that <a class="functional-link" href="../mgga-c-tpssloc/"><code>mgga_c_tpssloc</code></a> is based on <a class="functional-link" href="../gga-c-pbeloc/"><code>gga_c_pbeloc</code></a>.</p>

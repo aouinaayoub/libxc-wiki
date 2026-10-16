@@ -4,12 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>mgga_c_cc</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20261015-compact-v5">
-    <script defer src="../../assets/search.js?v=20261015-compact-v5"></script>
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261016-review-v1">
+    <script defer src="../../assets/search.js?v=20261016-review-v1"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
+    <script defer src="../../vendor/katex/contrib/mhchem.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20261015-compact-v5"></script>
+    <script defer src="../../assets/detail.js?v=20261016-review-v1"></script>
 
   </head>
   <body class="functional-page">
@@ -39,7 +40,14 @@
       <section class="callout">
         <p class="callout-label">Review excerpt</p>
         <div class="review-html">
-<p>Schmidt et al.<sup class="citation-marker"><a href="#review-ref-Schmidt2014-18A510">797</a></sup> constructed a correlation functional based on the following requirements: it should (i) be compatible with HF and (ii) be free from one-electron self-interaction error, (iii) have an energy density that has the correct asymptotic behavior in the vacuum, and (iv) have the correct HEG limit. The functional form satisfying these requirements that they proposed depends on the HF exchange-energy density $e_{\text{x}}^{\text{HF}}$:</p>
+<p>Schmidt et al.<sup class="citation-marker"><a href="#review-ref-Schmidt2014-18A510">797</a></sup> constructed a correlation functional based on the following requirements: it should:</p>
+<ol class="review-list" type="i">
+<li><p>be compatible with HF</p></li>
+<li><p>be free from one-electron self-interaction error</p></li>
+<li><p>have an energy density that has the correct asymptotic behavior in the vacuum</p></li>
+<li><p>have the correct HEG limit.</p></li>
+</ol>
+<p>The functional form satisfying these requirements that they proposed depends on the HF exchange-energy density $e_{\text{x}}^{\text{HF}}$:</p>
 <div class="equation" data-tex="e_{\text{c}} = \frac{1-z\zeta^2}{1+ct^2}\left(e_{\text{x}}^{\text{LDA}}-e_{\text{x}}^{\text{HF}}\right)
   + e_{\text{c}}^{\text{CC}}"></div>
 <p>where $e_{\text{x}}^{\text{LDA}}$ is <a class="functional-link" href="../lda-x/"><code>lda_x</code></a> and $e_{\text{c}}^{\text{CC}}$ is the following $\tau$-MGGA component (<a class="functional-link" href="../mgga-c-cc/"><code>mgga_c_cc</code></a>):</p>

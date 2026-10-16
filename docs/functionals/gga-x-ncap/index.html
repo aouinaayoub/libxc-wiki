@@ -4,12 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>gga_x_ncap</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20261015-compact-v5">
-    <script defer src="../../assets/search.js?v=20261015-compact-v5"></script>
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261016-review-v1">
+    <script defer src="../../assets/search.js?v=20261016-review-v1"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
+    <script defer src="../../vendor/katex/contrib/mhchem.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20261015-compact-v5"></script>
+    <script defer src="../../assets/detail.js?v=20261016-review-v1"></script>
 
   </head>
   <body class="functional-page">
@@ -39,12 +40,12 @@
       <section class="callout">
         <p class="callout-label">Review excerpt</p>
         <div class="review-html">
-<p>This functional was developed by taking into account the correct $-1/r$ asymptotic behavior  of the exchange potential $v_{\text{x}\sigma}$ for finite systems. Furthermore, it preserves the correct density-gradient expansion behavior at small $s_\sigma$. The functional form is given by</p>
+<p>This functional was developed by taking into account the correct $-1/r$ asymptotic behavior of the exchange potential $v_{\text{x}\sigma}$ for finite systems. Furthermore, it preserves the correct density-gradient expansion behavior at small $s_\sigma$. The functional form is given by</p>
 <div class="equation" data-tex="\begin{aligned}
 F_\text{x}^\text{NCAP} = 1 + \mu\tanh(s_{\sigma}) \arcsinh(s_{\sigma})  \\
   \times \frac{1 + \alpha\left[ (1-\delta) s_{\sigma} \ln(1+s_{\sigma}) + \delta s_{\sigma}\right]}{1 + \beta \tanh(s_{\sigma}) \arcsinh(s_{\sigma})}
 \end{aligned}"></div>
-<p>where $\mu$, $\alpha$, $\beta$, and  $\delta$ are parameters. The density-gradient expansion fixes the value of $\alpha = 4\pi\beta/(3\mu)$. Furthermore, $\mu=\mu^\text{PBE}$ is fixed at the <a class="functional-link" href="../gga-x-pbe/"><code>gga_x_pbe</code></a> value. The values $\beta\approx0.018086$<sup class="citation-marker"><a href="#review-ref-approximation2">588</a></sup> and $\delta\approx0.304121$<sup class="citation-marker"><a href="#review-ref-approximation2">588</a></sup> were obtained by demanding that the exact exchange energy and the exact highest occupied orbital of the H atom are reproduced. Note that, akin to any GGA exchange functional with a corresponding potential that reproduces the asymptotic behavior $-1/r$, <a class="functional-link" href="../gga-x-ncap/"><code>gga_x_ncap</code></a> does not obey the local version of the LO bound (see the review).</p>
+<p>where $\mu$, $\alpha$, $\beta$, and $\delta$ are parameters. The density-gradient expansion fixes the value of $\alpha = 4\pi\beta/(3\mu)$. Furthermore, $\mu=\mu^\text{PBE}$ is fixed at the <a class="functional-link" href="../gga-x-pbe/"><code>gga_x_pbe</code></a> value. The values $\beta\approx0.018086$<sup class="citation-marker"><a href="#review-ref-approximation2">588</a></sup> and $\delta\approx0.304121$<sup class="citation-marker"><a href="#review-ref-approximation2">588</a></sup> were obtained by demanding that the exact exchange energy and the exact highest occupied orbital of the H atom are reproduced. Note that, akin to any GGA exchange functional with a corresponding potential that reproduces the asymptotic behavior $-1/r$, <a class="functional-link" href="../gga-x-ncap/"><code>gga_x_ncap</code></a> does not obey the local version of the LO bound (see the review).</p>
 <p>When combined with <a class="functional-link" href="../gga-c-p86/"><code>gga_c_p86</code></a> for correlation, this exchange functional is able to compete with more advanced functionals, such as the $\tau$-MGGA SCAN (<a class="functional-link" href="../mgga-x-scan/"><code>mgga_x_scan</code></a> + <a class="functional-link" href="../mgga-c-scan/"><code>mgga_c_scan</code></a>) or the hybrid B3LYP,<sup class="citation-marker"><a href="#review-ref-Stephens1994-11623">423</a></sup> in the reproduction of several properties. It also yields KS eigenvalues of the highest occupied orbitals that are useful approximations to the ionization potential thanks to the inclusion of a systematic derivative discontinuity shift in $v_\text{x}$.</p>
         </div>
         <p class="source-note">Adapted from <a href="https://arxiv.org/abs/2602.17333">Tran, Lehtola, Pittalis, and Marques, <em>Semi-Local Exchange-Correlation Approximations in Density Functional Theory</em>, arXiv:2602.17333</a>.</p>

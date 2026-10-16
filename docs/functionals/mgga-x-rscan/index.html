@@ -4,12 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>mgga_x_rscan</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20261015-compact-v5">
-    <script defer src="../../assets/search.js?v=20261015-compact-v5"></script>
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261016-review-v1">
+    <script defer src="../../assets/search.js?v=20261016-review-v1"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
+    <script defer src="../../vendor/katex/contrib/mhchem.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20261015-compact-v5"></script>
+    <script defer src="../../assets/detail.js?v=20261016-review-v1"></script>
 
   </head>
   <body class="functional-page">
@@ -48,7 +49,7 @@
 <div class="equation" data-tex="\alpha_{\sigma}&#39; = \frac{\displaystyle \tilde{\alpha}_{\sigma}^3}{\displaystyle \tilde{\alpha}_{\sigma}^2+\alpha_{\text{r}}}"></div>
 <p>where</p>
 <div class="equation" data-tex="\tilde{\alpha}_{\sigma} = \frac{\displaystyle \tau_{\sigma}-\tau_{\sigma}^{\text{W}}}{\displaystyle \tau_{\sigma}^{\text{TF}}+\frac{1}{2}\tau_{\text{r}}}"></div>
-<p>and $\alpha_{\text{r}}=10^{-3}$ and $\tau_{\text{r}}=10^{-4}$ are small regularization constants. The introduction of $\tau_{\text{r}}$ cures the divergence in $\alpha_\sigma$ occurring in low-density regions dominated by a single orbital. Furthermore, thanks to $\alpha_{\text{r}}$, the derivatives of $\alpha_{\sigma}&#39;$  with respect to $n_\sigma$, $\nabla n_\sigma$, and $\tau_\sigma$ vanish, reducing numerical noise.</p>
+<p>and $\alpha_{\text{r}}=10^{-3}$ and $\tau_{\text{r}}=10^{-4}$ are small regularization constants. The introduction of $\tau_{\text{r}}$ cures the divergence in $\alpha_\sigma$ occurring in low-density regions dominated by a single orbital. Furthermore, thanks to $\alpha_{\text{r}}$, the derivatives of $\alpha_{\sigma}&#39;$ with respect to $n_\sigma$, $\nabla n_\sigma$, and $\tau_\sigma$ vanish, reducing numerical noise.</p>
 <p>Another reason for the numerical instability of SCAN is that the switching function given by <a class="review-eq-link" href="#review-eq-eq-scanfalpha">
   <code>eq:scanfalpha</code>
   <span class="equation-preview" aria-hidden="true">

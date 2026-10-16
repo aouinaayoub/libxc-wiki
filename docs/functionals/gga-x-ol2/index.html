@@ -4,12 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>gga_x_ol2</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20261015-compact-v5">
-    <script defer src="../../assets/search.js?v=20261015-compact-v5"></script>
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261016-review-v1">
+    <script defer src="../../assets/search.js?v=20261016-review-v1"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
+    <script defer src="../../vendor/katex/contrib/mhchem.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20261015-compact-v5"></script>
+    <script defer src="../../assets/detail.js?v=20261016-review-v1"></script>
 
   </head>
   <body class="functional-page">
@@ -39,14 +40,14 @@
       <section class="callout">
         <p class="callout-label">Review excerpt</p>
         <div class="review-html">
-<p>In order to provide further support for the conjointness conjecture between the exchange and kinetic-energy functionals,<sup class="citation-marker"><a href="#review-ref-Lee1991-768">486</a></sup> Fuentealba and Reyes<sup class="citation-marker"><a href="#review-ref-Fuentealba1995-31">498</a></sup> converted two kinetic-energy functionals into exchange functionals: the gradient expansion at second order, and one of the two functionals in the work of Ou-Yang and Levy<sup class="citation-marker"><a href="#review-ref-OuYang1991-379">499</a></sup>. This leads to</p>
+<p>To provide further support for the conjointness conjecture between the exchange and kinetic-energy functionals,<sup class="citation-marker"><a href="#review-ref-Lee1991-768">486</a></sup> Fuentealba and Reyes<sup class="citation-marker"><a href="#review-ref-Fuentealba1995-31">498</a></sup> converted two kinetic-energy functionals into exchange functionals: the gradient expansion at second order, and one of the two functionals in the work of Ou-Yang and Levy<sup class="citation-marker"><a href="#review-ref-OuYang1991-379">499</a></sup>. This leads to</p>
 <div class="equation" data-tex="F_\text{x}^{\text{GE2}} = 2^{1/3}\frac{c_1}{C_\text{x}}
     \left(1 + c_2 x_{\sigma}^2\right)"></div>
 <p>and</p>
 <div class="equation" data-tex="F_\text{x}^{\text{OL2}} = 2^{1/3}\frac{c_1}{C_\text{x}}
     \left(1 + \frac{1}{72} x_{\sigma}^2 + \frac{c_2 x_{\sigma}}{1 + 2^{5/3}x_{\sigma}}\right)"></div>
 <p>respectively. The parameters $c_1$ and $c_2$ were adjusted to reproduce the HF exchange energies of the He and Ne atoms, leading to $c_1=0.7670$ and $c_2=0.00172$ for <code>gga_x_fr_ge2</code>, and $c_1=0.07064$ and $c_2=34.0135$ for <a class="functional-link" href="../gga-x-ol2/"><code>gga_x_ol2</code></a>. <a class="functional-link" href="../gga-x-ol2/"><code>gga_x_ol2</code></a> is more accurate than <code>gga_x_fr_ge2</code> for the atomic exchange energies of light atoms, while the opposite is true for heavier atoms. Note that these two functionals do not recover the <a class="functional-link" href="../lda-x/"><code>lda_x</code></a> limit for the HEG.</p>
-<p>We note that the third terms in the expressions for the kinetic-energy functionals given by eqs. (14) and (15) in <sup class="citation-marker"><a href="#review-ref-OuYang1991-379">499</a></sup> are inverted. While the coefficients $C_4^{(1)}=0.00677$ and $C_4^{(2)}=0.0887$ are correctly assigned to eqs. (14) and (15), respectively, $|\nabla n|n^{1/3}$ and $|\nabla n|n^{5/3}/\left(n^{4/3}+4|\nabla n|\right)$ should be in eqs. (14) and (15), respectively. The correct expressions are implemented in Libxc and correspond to <code>gga\_k\_ol1</code> and <code>gga\_k\_ol2</code>, respectively.</p>
+<p>We note that the third terms in the expressions for the kinetic-energy functionals given by eqs. (14) and (15) in <sup class="citation-marker"><a href="#review-ref-OuYang1991-379">499</a></sup> are inverted. While the coefficients $C_4^{(1)}=0.00677$ and $C_4^{(2)}=0.0887$ are correctly assigned to eqs. (14) and (15), respectively, $|\nabla n|n^{1/3}$ and $|\nabla n|n^{5/3}/\left(n^{4/3}+4|\nabla n|\right)$ should be in eqs. (14) and (15), respectively. The correct expressions are implemented in Libxc and correspond to <a class="functional-link" href="../gga-k-ol1/"><code>gga_k_ol1</code></a> and <a class="functional-link" href="../gga-k-ol2/"><code>gga_k_ol2</code></a>, respectively.</p>
         </div>
         <p class="source-note">Adapted from <a href="https://arxiv.org/abs/2602.17333">Tran, Lehtola, Pittalis, and Marques, <em>Semi-Local Exchange-Correlation Approximations in Density Functional Theory</em>, arXiv:2602.17333</a>.</p>
       </section>

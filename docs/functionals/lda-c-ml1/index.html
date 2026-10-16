@@ -4,12 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>lda_c_ml1</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20261015-compact-v5">
-    <script defer src="../../assets/search.js?v=20261015-compact-v5"></script>
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261016-review-v1">
+    <script defer src="../../assets/search.js?v=20261016-review-v1"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
+    <script defer src="../../vendor/katex/contrib/mhchem.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20261015-compact-v5"></script>
+    <script defer src="../../assets/detail.js?v=20261016-review-v1"></script>
 
   </head>
   <body class="functional-page">
@@ -56,7 +57,12 @@ Q^{\uparrow\downarrow}(r_s,\zeta) = &amp; -\frac{b_1}{1+b_2k_{\uparrow\downarrow
   </span>
 </a>. The parameter $C=6.187335$ and the correlation factor $\alpha$, presumed to be independent of $r_s$, is given by</p>
 <div class="equation" data-tex="\alpha(\zeta) = 2f_c\phi_{q}(\zeta)"></div>
-<p>with $q$ and $f_c$ used as interpolation parameters. Proynov and Salahub<sup class="citation-marker"><a href="#review-ref-Proynov1994-7874">428</a></sup> claimed that since $\alpha$ is $\zeta$ dependent, parallel-spin correlation can also be accounted for. Two strategies to perform the fitting were used: (i) trying to reproduce the correlation energy of the HEG led to the values $f_c=0.2026$ and $q=0.084$ (<a class="functional-link" href="../lda-c-ml1/"><code>lda_c_ml1</code></a>); (ii) fitting to the experimental binding energy of a set of seven small molecules led to $f_c=0.266$ and $q=0.5$ (<a class="functional-link" href="../lda-c-ml2/"><code>lda_c_ml2</code></a>). The latter choice, when combined with <a class="functional-link" href="../lda-x/"><code>lda_x</code></a> for exchange, turned out to yield good binding energies and equilibrium bond lengths for a larger set of small molecules.</p>
+<p>with $q$ and $f_c$ used as interpolation parameters. Proynov and Salahub<sup class="citation-marker"><a href="#review-ref-Proynov1994-7874">428</a></sup> claimed that since $\alpha$ is $\zeta$ dependent, parallel-spin correlation can also be accounted for. Two strategies to perform the fitting were used:</p>
+<ol class="review-list" type="i">
+<li><p>trying to reproduce the correlation energy of the HEG led to the values $f_c=0.2026$ and $q=0.084$ (<a class="functional-link" href="../lda-c-ml1/"><code>lda_c_ml1</code></a>)</p></li>
+<li><p>fitting to the experimental binding energy of a set of seven small molecules led to $f_c=0.266$ and $q=0.5$ (<a class="functional-link" href="../lda-c-ml2/"><code>lda_c_ml2</code></a>).</p></li>
+</ol>
+<p>The latter choice, when combined with <a class="functional-link" href="../lda-x/"><code>lda_x</code></a> for exchange, turned out to yield good binding energies and equilibrium bond lengths for a larger set of small molecules.</p>
         </div>
         <p class="source-note">Adapted from <a href="https://arxiv.org/abs/2602.17333">Tran, Lehtola, Pittalis, and Marques, <em>Semi-Local Exchange-Correlation Approximations in Density Functional Theory</em>, arXiv:2602.17333</a>.</p>
       </section>

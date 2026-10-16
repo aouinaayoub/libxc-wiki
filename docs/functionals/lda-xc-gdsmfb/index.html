@@ -4,12 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>lda_xc_gdsmfb</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20261015-compact-v5">
-    <script defer src="../../assets/search.js?v=20261015-compact-v5"></script>
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261016-review-v1">
+    <script defer src="../../assets/search.js?v=20261016-review-v1"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
+    <script defer src="../../vendor/katex/contrib/mhchem.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20261015-compact-v5"></script>
+    <script defer src="../../assets/detail.js?v=20261016-review-v1"></script>
 
   </head>
   <body class="functional-page">
@@ -40,7 +41,12 @@
       <section class="callout">
         <p class="callout-label">Review excerpt</p>
         <div class="review-html">
-<p>The free-energy functional <a class="functional-link" href="../lda-xc-ksdt/"><code>lda_xc_ksdt</code></a> suffers from two shortcomings: (i) there was a lack of accurate MC data for low temperatures (corresponding to a reduced temperature $\theta &lt; 0.5$), and (ii) there were only MC results for the paramagnetic case. This was solved by Groth et al.<sup class="citation-marker"><a href="#review-ref-Groth2017-135001">482</a></sup> who performed these calculations and reparameterized the functional <a class="functional-link" href="../lda-xc-ksdt/"><code>lda_xc_ksdt</code></a>. Furthermore, they introduced an extra modification to <a class="functional-link" href="../lda-xc-ksdt/"><code>lda_xc_ksdt</code></a>, namely $\theta$ in <a class="review-eq-link" href="#review-eq-eq-excksdt">
+<p>The free-energy functional <a class="functional-link" href="../lda-xc-ksdt/"><code>lda_xc_ksdt</code></a> suffers from two shortcomings:</p>
+<ol class="review-list" type="i">
+<li><p>there was a lack of accurate MC data for low temperatures (corresponding to a reduced temperature $\theta &lt; 0.5$)</p></li>
+<li><p>there were only MC results for the paramagnetic case.</p></li>
+</ol>
+<p>This was solved by Groth et al.<sup class="citation-marker"><a href="#review-ref-Groth2017-135001">482</a></sup> who performed these calculations and reparameterized the functional <a class="functional-link" href="../lda-xc-ksdt/"><code>lda_xc_ksdt</code></a>. Furthermore, they introduced an extra modification to <a class="functional-link" href="../lda-xc-ksdt/"><code>lda_xc_ksdt</code></a>, namely $\theta$ in <a class="review-eq-link" href="#review-eq-eq-excksdt">
   <code>eq:excksdt</code>
   <span class="equation-preview" aria-hidden="true">
     <span class="equation-preview-math" data-tex="\begin{aligned}

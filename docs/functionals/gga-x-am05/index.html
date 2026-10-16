@@ -4,12 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>gga_x_am05</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20261015-compact-v5">
-    <script defer src="../../assets/search.js?v=20261015-compact-v5"></script>
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261016-review-v1">
+    <script defer src="../../assets/search.js?v=20261016-review-v1"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
+    <script defer src="../../vendor/katex/contrib/mhchem.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20261015-compact-v5"></script>
+    <script defer src="../../assets/detail.js?v=20261016-review-v1"></script>
 
   </head>
   <body class="functional-page">
@@ -39,7 +40,13 @@
       <section class="callout">
         <p class="callout-label">Review excerpt</p>
         <div class="review-html">
-<p>Akin to <a class="functional-link" href="../gga-x-lag/"><code>gga_x_lag</code></a>, this exchange functional uses the Airy gas as a reference system. It intends to solve a problem with <a class="functional-link" href="../gga-x-lag/"><code>gga_x_lag</code></a> that does not reproduce the right limiting behavior far outside the electronic surface. The construction of the functional consists of two steps. In the first step, a local Airy approximation (LAA) is proposed. It is based on (i) the leading behavior of the exchange energy far outside the surface, (ii) the asymptotic expansions of the Airy functions, and (iii) the <a class="functional-link" href="../lda-x/"><code>lda_x</code></a> limit. It reads</p>
+<p>Akin to <a class="functional-link" href="../gga-x-lag/"><code>gga_x_lag</code></a>, this exchange functional uses the Airy gas as a reference system. It intends to solve a problem with <a class="functional-link" href="../gga-x-lag/"><code>gga_x_lag</code></a> that does not reproduce the right limiting behavior far outside the electronic surface. The construction of the functional consists of two steps. In the first step, a local Airy approximation (LAA) is proposed. It is based on:</p>
+<ol class="review-list" type="i">
+<li><p>the leading behavior of the exchange energy far outside the surface</p></li>
+<li><p>the asymptotic expansions of the Airy functions</p></li>
+<li><p>the <a class="functional-link" href="../lda-x/"><code>lda_x</code></a> limit.</p></li>
+</ol>
+<p>It reads</p>
 <div class="equation" data-tex="F_\text{x}^\text{LAA}(s_\sigma) = \frac{\displaystyle 1 + c s_\sigma^2}{\displaystyle 1+\frac{c s_\sigma^2}{F_\text{x}^\text{b}(s_\sigma)}}"></div>
 <p>where the function $F_\text{x}^\text{b}(s_\sigma)$ is given by</p>
 <div class="equation" data-tex="F_\text{x}^\text{b}(s_\sigma) = \frac{\pi}{3} \frac{s_\sigma}

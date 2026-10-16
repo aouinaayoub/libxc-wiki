@@ -4,12 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>gga_x_htbs</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20261015-compact-v5">
-    <script defer src="../../assets/search.js?v=20261015-compact-v5"></script>
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261016-review-v1">
+    <script defer src="../../assets/search.js?v=20261016-review-v1"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
+    <script defer src="../../vendor/katex/contrib/mhchem.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20261015-compact-v5"></script>
+    <script defer src="../../assets/detail.js?v=20261016-review-v1"></script>
 
   </head>
   <body class="functional-page">
@@ -40,7 +41,7 @@
         <p class="callout-label">Review excerpt</p>
         <div class="review-html">
 <p>The idea for this functional comes from the analysis of GGA functionals that have markedly different analytical forms and accuracy. In particular, exchange functionals that yield good results for the geometry of solids, such as <a class="functional-link" href="../gga-x-wc/"><code>gga_x_wc</code></a> or <a class="functional-link" href="../gga-x-pbe-sol/"><code>gga_x_pbe_sol</code></a> have an enhancement factor $F_\text{x}$ that increases with $s_\sigma$ slower than that of <a class="functional-link" href="../gga-x-pbe/"><code>gga_x_pbe</code></a>. Unfortunately, these <em>soft</em> GGAs overestimate atomization energies much more than <a class="functional-link" href="../gga-x-pbe/"><code>gga_x_pbe</code></a> does. However, for GGAs that lead to accurate atomization energies of molecules, such as <a class="functional-link" href="../gga-x-b88/"><code>gga_x_b88</code></a> or <a class="functional-link" href="../gga-x-rpbe/"><code>gga_x_rpbe</code></a>, $F_\text{x}$ grows faster than that of <a class="functional-link" href="../gga-x-pbe/"><code>gga_x_pbe</code></a>. Not surprisingly, perhaps, these <em>strong</em> GGAs largely overestimate lattice constants.</p>
-<p>In order to try to get the best of both worlds, Haas et al.<sup class="citation-marker"><a href="#review-ref-Haas2011-205117">559</a></sup> suggested to interpolate between the enhancement factors of <a class="functional-link" href="../gga-x-wc/"><code>gga_x_wc</code></a> and <a class="functional-link" href="../gga-x-rpbe/"><code>gga_x_rpbe</code></a>:</p>
+<p>To try to get the best of both worlds, Haas et al.<sup class="citation-marker"><a href="#review-ref-Haas2011-205117">559</a></sup> suggested to interpolate between the enhancement factors of <a class="functional-link" href="../gga-x-wc/"><code>gga_x_wc</code></a> and <a class="functional-link" href="../gga-x-rpbe/"><code>gga_x_rpbe</code></a>:</p>
 <div class="equation" data-tex="F_\text{x}^{\text{HTBS}} = \left\{
   \begin{array}{lll}
     F_\text{x}^{\text{WC}}(s_\sigma), &amp; s_\sigma \le s_1 \\

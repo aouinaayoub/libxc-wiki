@@ -4,12 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>gga_x_pbe_gaussian</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20261015-compact-v5">
-    <script defer src="../../assets/search.js?v=20261015-compact-v5"></script>
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261016-review-v1">
+    <script defer src="../../assets/search.js?v=20261016-review-v1"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
+    <script defer src="../../vendor/katex/contrib/mhchem.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20261015-compact-v5"></script>
+    <script defer src="../../assets/detail.js?v=20261016-review-v1"></script>
 
   </head>
   <body class="functional-page">
@@ -39,19 +40,26 @@
       <section class="callout">
         <p class="callout-label">Review excerpt</p>
         <div class="review-html">
-<p>The main objective of Perdew et al.<sup class="citation-marker"><a href="#review-ref-Perdew1996-3865">165</a></sup> when proposing this functional was to simplify the PW91 (<a class="functional-link" href="../gga-x-pw91/"><code>gga_x_pw91</code></a> + <a class="functional-link" href="../gga-c-pw91/"><code>gga_c_pw91</code></a>) functional that is overly complicated and has some deficiencies, such as an unsatisfactory description of the linear response of the HEG or a potential that has wiggles. The PBE (<a class="functional-link" href="../gga-x-pbe/"><code>gga_x_pbe</code></a> + <a class="functional-link" href="../gga-c-pbe/"><code>gga_c_pbe</code></a>) functional is certainly the most famous and used GGA functional in solid-state physics, with <sup class="citation-marker"><a href="#review-ref-Perdew1996-3865">165</a></sup> cited more than 200000 times. It is in any case a good functional that does not suffer from overfitting, analytic problems, or numerical instabilities, and which yields reasonable results in a wide variety of physical circumstances.</p>
-<p>The construction of the exchange part <a class="functional-link" href="../gga-x-pbe/"><code>gga_x_pbe</code></a> was based on the following four conditions. (i) The functional must scale correctly under uniform density scaling, and must recover <a class="functional-link" href="../lda-x/"><code>lda_x</code></a> for the HEG. (ii) It must obey the exact spin-scaling relationship given by <a class="review-eq-link" href="#review-eq-eq-spinsumrule">
+<p>The main objective of Perdew et al.<sup class="citation-marker"><a href="#review-ref-Perdew1996-3865">165</a></sup> when proposing this functional was to simplify the PW91 (<a class="functional-link" href="../gga-x-pw91/"><code>gga_x_pw91</code></a> + <a class="functional-link" href="../gga-c-pw91/"><code>gga_c_pw91</code></a>) functional that is overly complicated and has some deficiencies, such as an unsatisfactory description of the linear response of the HEG or a potential that has wiggles. The PBE (<a class="functional-link" href="../gga-x-pbe/"><code>gga_x_pbe</code></a> + <a class="functional-link" href="../gga-c-pbe/"><code>gga_c_pbe</code></a>) functional is one of the most widely used GGAs in solid-state physics, with <sup class="citation-marker"><a href="#review-ref-Perdew1996-3865">165</a></sup> cited more than 200,000 times. It avoids overfitting, analytic problems, and numerical instabilities, and gives reasonable results across a wide range of physical conditions.</p>
+<p>The construction of the exchange part <a class="functional-link" href="../gga-x-pbe/"><code>gga_x_pbe</code></a> was based on the following four conditions.</p>
+<ol class="review-list" type="i">
+<li><p>The functional must scale correctly under uniform density scaling, and must recover <a class="functional-link" href="../lda-x/"><code>lda_x</code></a> for the HEG.</p></li>
+<li><p>It must obey the exact spin-scaling relationship given by <a class="review-eq-link" href="#review-eq-eq-spinsumrule">
   <code>eq:spinsumrule</code>
   <span class="equation-preview" aria-hidden="true">
     <span class="equation-preview-math" data-tex="E_\x[n_\uparrow, n_\downarrow] = \frac{1}{2}
   \left(E_\x[2n_\uparrow] + E_\x[2n_\downarrow]\right),"></span>
   </span>
-</a>. (iii) For small gradients, it should recover the linear response of <a class="functional-link" href="../lda-x/"><code>lda_x</code></a>. (iv) The LO bound (<a class="review-eq-link" href="#review-eq-eq-lieboxford3">
+</a>.</p></li>
+<li><p>For small gradients, it should recover the linear response of <a class="functional-link" href="../lda-x/"><code>lda_x</code></a>.</p></li>
+<li><p>The LO bound (<a class="review-eq-link" href="#review-eq-eq-lieboxford3">
   <code>eq:lieboxford3</code>
   <span class="equation-preview" aria-hidden="true">
     <span class="equation-preview-math" data-tex="E_\xc[n] \ge   E_\x[n] + W_\c[n]  \ge \lambda_\text{LO} E_\x^\text{LDA}[n]"></span>
   </span>
-</a>) must be satisfied for all possible densities and gradients. They proposed the following, rather simple enhancement factor that obeys all these conditions:</p>
+</a>) must be satisfied for all possible densities and gradients.</p></li>
+</ol>
+<p>The resulting enhancement factor satisfies all four conditions:</p>
 <div class="equation" data-tex="F_\text{x}^{\text{PBE}} = 1 + \kappa\left[1 - \frac{\kappa}{\kappa + f_0(s_\sigma)}\right]"></div>
 <p>where the function $f_0(s_\sigma) = \mu^\text{PBE} s_\sigma^2$. The parameter $\kappa=\kappa^{\text{PBE}}$ is determined by condition (iv), while $\mu^\text{PBE} = \beta^{\text{MB}}\pi^2/3$ comes from condition (iii). Finally, $\beta^{\text{MB}}$ comes from the high-density limit<sup class="citation-marker"><a href="#review-ref-Ma1968-18">168</a></sup> of the weakly $r_s$-dependent gradient coefficient of the correlation energy. Note that <a class="review-eq-link" href="#review-eq-eq-pbeenh">
   <code>eq:pbeenh</code>
@@ -65,7 +73,13 @@
   \frac{x_\sigma^2}{1 +\gamma x_\sigma^2}"></span>
   </span>
 </a>.</p>
-<p>Finally, we mention that three implementations of PBE exchange, which differ in the values of $\kappa^\text{PBE}$ and $\mu^\text{PBE}$, are available in Libxc:  &#8226; <a class="functional-link" href="../gga-x-pbe/"><code>gga_x_pbe</code></a>: $\kappa^\text{PBE}=0.804$ and $\mu^\text{PBE}=0.2195149727645171$. $\mu^\text{PBE}$ is related to $\beta^{\text{MB}}=0.06672455060314922$ (used in <a class="functional-link" href="../gga-c-pbe/"><code>gga_c_pbe</code></a>) via $\mu^\text{PBE} = \beta^{\text{MB}}\pi^2/3$.  &#8226; <a class="functional-link" href="../gga-x-pbe-mod/"><code>gga_x_pbe_mod</code></a>: $\kappa^\text{PBE}=0.804$ and $\mu^\text{PBE}=\beta^{\text{MB}}\pi^2/3 \approx 0.219516$,<sup class="citation-marker"><a href="#review-ref-approximation1">501</a></sup> where $\beta^{\text{MB}}=0.066725$ is a less precise value. &#8226; <a class="functional-link" href="../gga-x-pbe-gaussian/"><code>gga_x_pbe_gaussian</code></a>:  $\kappa^\text{PBE}=0.804000423825475$ and $\mu^\text{PBE}=0.219510240580611$. Along with $\beta^{\text{MB}}$ used in <a class="functional-link" href="../gga-c-pbe-gaussian/"><code>gga_c_pbe_gaussian</code></a>, these are the values used in the GAUSSIAN program.<sup class="citation-marker"><a href="#review-ref-Frisch2016">9</a></sup>  See Lehtola and Marques<sup class="citation-marker"><a href="#review-ref-Lehtola2023-JCP-114116">139</a></sup> for further discussion on these various choices for the parameters.</p>
+<p>Three implementations of PBE exchange, which differ in the values of $\kappa^\text{PBE}$ and $\mu^\text{PBE}$, are available in Libxc:</p>
+<ul class="review-list">
+<li><p><a class="functional-link" href="../gga-x-pbe/"><code>gga_x_pbe</code></a>: $\kappa^\text{PBE}=0.804$ and $\mu^\text{PBE}=0.2195149727645171$. $\mu^\text{PBE}$ is related to $\beta^{\text{MB}}=0.06672455060314922$ (used in <a class="functional-link" href="../gga-c-pbe/"><code>gga_c_pbe</code></a>) via $\mu^\text{PBE} = \beta^{\text{MB}}\pi^2/3$.</p></li>
+<li><p><a class="functional-link" href="../gga-x-pbe-mod/"><code>gga_x_pbe_mod</code></a>: $\kappa^\text{PBE}=0.804$ and $\mu^\text{PBE}=\beta^{\text{MB}}\pi^2/3 \approx 0.219516$,<sup class="citation-marker"><a href="#review-ref-approximation1">501</a></sup> where $\beta^{\text{MB}}=0.066725$ is a less precise value.</p></li>
+<li><p><a class="functional-link" href="../gga-x-pbe-gaussian/"><code>gga_x_pbe_gaussian</code></a>:  $\kappa^\text{PBE}=0.804000423825475$ and $\mu^\text{PBE}=0.219510240580611$. Along with $\beta^{\text{MB}}$ used in <a class="functional-link" href="../gga-c-pbe-gaussian/"><code>gga_c_pbe_gaussian</code></a>, these are the values used in the GAUSSIAN program.<sup class="citation-marker"><a href="#review-ref-Frisch2016">9</a></sup></p></li>
+</ul>
+<p>See Lehtola and Marques<sup class="citation-marker"><a href="#review-ref-Lehtola2023-JCP-114116">139</a></sup> for a discussion of these parameter choices.</p>
         </div>
         <p class="source-note">Adapted from <a href="https://arxiv.org/abs/2602.17333">Tran, Lehtola, Pittalis, and Marques, <em>Semi-Local Exchange-Correlation Approximations in Density Functional Theory</em>, arXiv:2602.17333</a>.</p>
       </section>

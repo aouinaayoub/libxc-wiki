@@ -4,12 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>gga_x_rpw86</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20261015-compact-v5">
-    <script defer src="../../assets/search.js?v=20261015-compact-v5"></script>
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261016-review-v1">
+    <script defer src="../../assets/search.js?v=20261016-review-v1"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
+    <script defer src="../../vendor/katex/contrib/mhchem.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20261015-compact-v5"></script>
+    <script defer src="../../assets/detail.js?v=20261016-review-v1"></script>
 
   </head>
   <body class="functional-page">
@@ -45,7 +46,7 @@
     <span class="equation-preview-math" data-tex="F_\text{x}^{\text{PW86}} = \left(
     1 + \frac{a}{m}s_\sigma^2 + bs_\sigma^4 + cs_\sigma^6\right)^{m}"></span>
   </span>
-</a> gives a slightly different coefficient than the one implied by the original analytical expression. They decided therefore to reparameterize the functional in order to recover the analytical coefficient, and at the same time to fulfill the correct low-density gradient limit ($\mu^{\text{GE}}$). The revised parameters read $a=0.1234$, $b=17.33$, and $c=0.163$. Compared to most other GGA functionals, an important advantage of <a class="functional-link" href="../gga-x-pw86/"><code>gga_x_pw86</code></a> and its revised version <a class="functional-link" href="../gga-x-rpw86/"><code>gga_x_rpw86</code></a> is to agree well with the HF exchange. Therefore, they should not lead to spurious exchange binding, and be a suitable exchange component of functionals that explicitly include van der Waals interactions, such as vdW-DF2.<sup class="citation-marker"><a href="#review-ref-Lee2010-081101">536</a></sup></p>
+</a> gives a slightly different coefficient than the one implied by the original analytical expression. They decided therefore to reparameterize the functional to recover the analytical coefficient, and at the same time to fulfill the correct low-density gradient limit ($\mu^{\text{GE}}$). The revised parameters read $a=0.1234$, $b=17.33$, and $c=0.163$. Compared to most other GGA functionals, an important advantage of <a class="functional-link" href="../gga-x-pw86/"><code>gga_x_pw86</code></a> and its revised version <a class="functional-link" href="../gga-x-rpw86/"><code>gga_x_rpw86</code></a> is to agree well with the HF exchange. Therefore, they should not lead to spurious exchange binding, and be a suitable exchange component of functionals that explicitly include van der Waals interactions, such as vdW-DF2.<sup class="citation-marker"><a href="#review-ref-Lee2010-081101">536</a></sup></p>
         </div>
         <p class="source-note">Adapted from <a href="https://arxiv.org/abs/2602.17333">Tran, Lehtola, Pittalis, and Marques, <em>Semi-Local Exchange-Correlation Approximations in Density Functional Theory</em>, arXiv:2602.17333</a>.</p>
       </section>

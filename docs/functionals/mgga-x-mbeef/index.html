@@ -4,12 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>mgga_x_mbeef</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20261015-compact-v5">
-    <script defer src="../../assets/search.js?v=20261015-compact-v5"></script>
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261016-review-v1">
+    <script defer src="../../assets/search.js?v=20261016-review-v1"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
+    <script defer src="../../vendor/katex/contrib/mhchem.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20261015-compact-v5"></script>
+    <script defer src="../../assets/detail.js?v=20261016-review-v1"></script>
 
   </head>
   <body class="functional-page">
@@ -51,7 +52,7 @@
   <span class="equation-preview" aria-hidden="true">
     <span class="equation-preview-math" data-tex="r(s_\sigma) = \frac{2s_\sigma^2}{q + s_\sigma^2} - 1"></span>
   </span>
-</a> with the value of $q=\kappa^{\text{PBE}}/\mu^{\text{GE}}=6.5124$ obtained through a Pad\&#39;e approximant to the <a class="functional-link" href="../gga-x-pbe-sol/"><code>gga_x_pbe_sol</code></a> enhancement factor, while $f(\alpha_\sigma)$ is <a class="review-eq-link" href="#review-eq-eq-ms0f">
+</a> with the value of $q=\kappa^{\text{PBE}}/\mu^{\text{GE}}=6.5124$ obtained through a Padé approximant to the <a class="functional-link" href="../gga-x-pbe-sol/"><code>gga_x_pbe_sol</code></a> enhancement factor, while $f(\alpha_\sigma)$ is <a class="review-eq-link" href="#review-eq-eq-ms0f">
   <code>eq:ms0f</code>
   <span class="equation-preview" aria-hidden="true">
     <span class="equation-preview-math" data-tex="f(\alpha_\sigma) = \frac{\left(1-\alpha_\sigma^2\right)^3}{1 + \alpha_\sigma^3 + b \alpha_\sigma^6}"></span>
@@ -63,7 +64,7 @@
     <span class="equation-preview-math" data-tex="F_\text{x}^\text{mBEEF} = \sum_{m=0}^{M}\sum_{n=0}^{N} a_{mn} B_m[r(s_\sigma)] B_n[f(\alpha_\sigma)]"></span>
   </span>
 </a>), Wellendorff et al.<sup class="citation-marker"><a href="#review-ref-Wellendorff2014-144107">721</a></sup> followed a similar protocol as for <a class="functional-link" href="../gga-xc-beefvdw/"><code>gga_xc_beefvdw</code></a>, but with slightly updated training datasets. They used G3/99<sup class="citation-marker"><a href="#review-ref-Curtiss2000-7374">722</a></sup> (formation energies of molecules), RE42<sup class="citation-marker"><a href="#review-ref-Wellendorff2012-235149">670</a></sup> (reaction energies), CE27a (chemisorption energies, referenced to free atoms rather than gas-phase adsorbates as in the original CE27 set<sup class="citation-marker"><a href="#review-ref-Wellendorff2012-235149">670</a></sup>), Sol54Ec (cohesive energies), and Sol58LC (lattice constants). The two latter sets<sup class="citation-marker"><a href="#review-ref-Hao2012-014111">723</a>,<a href="#review-ref-Wellendorff2012-235149">670</a></sup> expand the original Sol27Ec and Sol27LC sets by including diatomic rocksalt, cesium chloride, and zincblende crystals. Note that the S22<sup class="citation-marker"><a href="#review-ref-Jurecka2006-1985">550</a></sup> and S22$\times$5<sup class="citation-marker"><a href="#review-ref-Grafova2010-2365">589</a></sup> datasets of weak intermolecular interaction energies of molecular complexes were this time not included in the training set.</p>
-<p>The mBEEF functional (<a class="functional-link" href="../mgga-x-mbeef/"><code>mgga_x_mbeef</code></a> combined with <a class="functional-link" href="../gga-c-pbe-sol/"><code>gga_c_pbe_sol</code></a>) yields more accurate cohesive energies and lattice constants than <a class="functional-link" href="../gga-xc-beefvdw/"><code>gga_xc_beefvdw</code></a>+vdW-DF2, while retaining the high accuracy for  molecular and surface properties. Slightly improved results are also obtained for the S22 dataset, even though no van der Waals dispersion term is included in the functional, but mBEEF is still clearly less accurate than other van der Waals functionals like C09-vdW (see <a class="functional-link" href="../gga-x-c09x/"><code>gga_x_c09x</code></a>) or optPBE-vdW (see <a class="functional-link" href="../gga-x-optpbe-vdw/"><code>gga_x_optpbe_vdw</code></a>).</p>
+<p>The mBEEF functional (<a class="functional-link" href="../mgga-x-mbeef/"><code>mgga_x_mbeef</code></a> combined with <a class="functional-link" href="../gga-c-pbe-sol/"><code>gga_c_pbe_sol</code></a>) yields more accurate cohesive energies and lattice constants than <a class="functional-link" href="../gga-xc-beefvdw/"><code>gga_xc_beefvdw</code></a>+vdW-DF2, while retaining the high accuracy for molecular and surface properties. Slightly improved results are also obtained for the S22 dataset, even though no van der Waals dispersion term is included in the functional, but mBEEF is still clearly less accurate than other van der Waals functionals like C09-vdW (see <a class="functional-link" href="../gga-x-c09x/"><code>gga_x_c09x</code></a>) or optPBE-vdW (see <a class="functional-link" href="../gga-x-optpbe-vdw/"><code>gga_x_optpbe_vdw</code></a>).</p>
         </div>
         <p class="source-note">Adapted from <a href="https://arxiv.org/abs/2602.17333">Tran, Lehtola, Pittalis, and Marques, <em>Semi-Local Exchange-Correlation Approximations in Density Functional Theory</em>, arXiv:2602.17333</a>.</p>
       </section>
