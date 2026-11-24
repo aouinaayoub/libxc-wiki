@@ -3,14 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>gga_x_c09x</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20261016-excerpts-v1">
-    <script defer src="../../assets/search.js?v=20261016-excerpts-v1"></script>
+    <title>gga_x_c09x — C09x to be used with the VdW of Rutgers-Chalmers · Libxc Wiki</title>
+    <meta name="description" content="gga_x_c09x: C09x to be used with the VdW of Rutgers-Chalmers. GGA exchange functional in Libxc, with references and BibTeX. Includes an excerpt from the Tran, Lehtola, Pittalis and Marques review.">
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261117-refs-v1">
+    <script defer src="../../assets/search.js?v=20261117-refs-v1"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
     <script defer src="../../vendor/katex/contrib/mhchem.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20261016-excerpts-v1"></script>
+    <script defer src="../../assets/detail.js?v=20261117-refs-v1"></script>
 
   </head>
   <body class="functional-page">
@@ -32,11 +33,13 @@
 
         <p class="brand">GGA</p>
         <h1><code class="title-code">gga_x_c09x</code></h1>
+        <p class="functional-name">C09x to be used with the VdW of Rutgers-Chalmers</p>
         <div class="detail-tags"><span class="tag">gga</span>
 <span class="tag">exchange</span></div>
       </header>
 
       <div class="detail-grid">
+
       <section class="callout">
         <p class="callout-label">Review excerpt</p>
         <div class="review-html">
@@ -45,7 +48,7 @@
   + \kappa \left(1 - \E^{-\alpha s_\sigma^2/2}\right)"></div>
 <p>with the parameters $\mu=0.0617$, $\kappa=1.245$, and $\alpha=0.0483$ determined by trying to reproduce:</p>
 <ol class="review-list" type="i">
-<li><p>the gradient expansion approximation (with the gradient coefficient determined by Sham<sup class="citation-marker"><a href="#review-ref-Sham1971-458">163</a></sup>, see the review) for $s_\sigma&lt;1.5$</p></li>
+<li><p>the gradient expansion approximation (with the gradient coefficient determined by Sham<sup class="citation-marker"><a href="#review-ref-Sham1971-458">163</a></sup>, see <a class="review-section-link" href="https://arxiv.org/pdf/2602.17333#page=25" title="Gradient-Expansion Approximations">Sec. 2.11</a> of the review) for $s_\sigma&lt;1.5$</p></li>
 <li><p><a class="functional-link" href="../gga-x-pbe-r/"><code>gga_x_pbe_r</code></a> for $8&lt;s_\sigma&lt;10$.</p></li>
 </ol>
 <p>Constraint (i) was chosen such that the functional is more adapted for solids than for finite systems, while constraint (ii) ensures that exchange does not contribute much to van der Waals bonding, as it shouldn&#39;t.</p>

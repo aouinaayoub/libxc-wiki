@@ -3,14 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>mgga_x_lta</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20261016-excerpts-v1">
-    <script defer src="../../assets/search.js?v=20261016-excerpts-v1"></script>
+    <title>mgga_x_lta — Local tau approximation · Libxc Wiki</title>
+    <meta name="description" content="mgga_x_lta: Local tau approximation. Meta-GGA exchange functional in Libxc, with references and BibTeX. Includes an excerpt from the Tran, Lehtola, Pittalis and Marques review.">
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261117-refs-v1">
+    <script defer src="../../assets/search.js?v=20261117-refs-v1"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
     <script defer src="../../vendor/katex/contrib/mhchem.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20261016-excerpts-v1"></script>
+    <script defer src="../../assets/detail.js?v=20261117-refs-v1"></script>
 
   </head>
   <body class="functional-page">
@@ -32,29 +33,21 @@
 
         <p class="brand">META-GGA</p>
         <h1><code class="title-code">mgga_x_lta</code></h1>
+        <p class="functional-name">Local tau approximation</p>
         <div class="detail-tags"><span class="tag">meta-gga</span>
 <span class="tag">exchange</span></div>
       </header>
 
       <div class="detail-grid">
+
       <section class="callout">
         <p class="callout-label">Review excerpt</p>
         <div class="review-html">
-<p>The idea of Ernzerhof and Scuseria<sup class="citation-marker"><a href="#review-ref-Ernzerhof1999-911">680</a></sup> was to write a $\tau$-MGGA functional in the spirit of the <a class="functional-link" href="../lda-x/"><code>lda_x</code></a> functional, but using as basic variable the kinetic-energy density $\tau_\sigma$ instead of the electron density $n_\sigma$. To achieve this, they inverted the Thomas&ndash;Fermi expression for the kinetic energy density of the HEG (<a class="review-eq-link" href="#review-eq-eq-tautf-sigma">
-  <code>eq:tautf-sigma</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="\tau_{\sigma}^{\text{TF}} = C_{\text{F}}n_{\sigma}^{5/3}"></span>
-  </span>
-</a>) to obtain</p>
+<p>The idea of Ernzerhof and Scuseria<sup class="citation-marker"><a href="#review-ref-Ernzerhof1999-911">680</a></sup> was to write a $\tau$-MGGA functional in the spirit of the <a class="functional-link" href="../lda-x/"><code>lda_x</code></a> functional, but using as basic variable the kinetic-energy density $\tau_\sigma$ instead of the electron density $n_\sigma$. To achieve this, they inverted the Thomas&ndash;Fermi expression for the kinetic energy density of the HEG (<a class="review-eq-link" href="#review-eq-eq-tautf-sigma"><span class="eq-number">Eq. (70)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="\tau_{\sigma}^{\text{TF}} = C_{\text{F}}n_{\sigma}^{5/3}"></span></span></a>) to obtain</p>
 <div class="equation" data-tex="\tilde{n}_\sigma = \left(\frac{\tau_\sigma}{C_{\text{F}}}\right)^{3/5}"></div>
 <p>This expression can then be inserted in <a class="functional-link" href="../lda-x/"><code>lda_x</code></a>, therefore transforming it into a $\tau$-MGGA functional, the so-called local-$\tau$ approximation. The enhancement factor reads</p>
 <div class="equation" data-tex="F_{\text{x}}^\text{LTA} = \left(\frac{\tilde{t}_\sigma}{C_{\text{F}}}\right)^{4/5}"></div>
-<p>Note that this procedure can be obviously generalized, and used to transform any LDA into a $\tau$-MGGA. An example is given by <a class="functional-link" href="../mgga-x-hlta/"><code>mgga_x_hlta</code></a>. The <a class="functional-link" href="../mgga-x-lta/"><code>mgga_x_lta</code></a> functional respects the homogeneous scaling condition and the normalization of the exchange hole. Furthermore, it recovers <a class="functional-link" href="../lda-x/"><code>lda_x</code></a> for the HEG. When applied to a series of atomization processes, it yields results that are somewhat complementary to <a class="functional-link" href="../lda-x/"><code>lda_x</code></a>, and thus overall not accurate. Lehtola and Marques<sup class="citation-marker"><a href="#review-ref-Lehtola2021-943">679</a></sup> showed that <a class="review-eq-link" href="#review-eq-eq-lta-enh">
-  <code>eq:lta-enh</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="F_{\text{x}}^\text{LTA} = \left(\frac{\tilde{t}_\sigma}{C_{\text{F}}}\right)^{4/5}"></span>
-  </span>
-</a> leads to divergences in the exponentially decaying asymptotic region.</p>
+<p>Note that this procedure can be obviously generalized, and used to transform any LDA into a $\tau$-MGGA. An example is given by <a class="functional-link" href="../mgga-x-hlta/"><code>mgga_x_hlta</code></a>. The <a class="functional-link" href="../mgga-x-lta/"><code>mgga_x_lta</code></a> functional respects the homogeneous scaling condition and the normalization of the exchange hole. Furthermore, it recovers <a class="functional-link" href="../lda-x/"><code>lda_x</code></a> for the HEG. When applied to a series of atomization processes, it yields results that are somewhat complementary to <a class="functional-link" href="../lda-x/"><code>lda_x</code></a>, and thus overall not accurate. Lehtola and Marques<sup class="citation-marker"><a href="#review-ref-Lehtola2021-943">679</a></sup> showed that <a class="review-eq-link" href="#review-eq-eq-lta-enh"><span class="eq-number">Eq. (566)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="F_{\text{x}}^\text{LTA} = \left(\frac{\tilde{t}_\sigma}{C_{\text{F}}}\right)^{4/5}"></span></span></a> leads to divergences in the exponentially decaying asymptotic region.</p>
         </div>
         <p class="source-note">Adapted from <a href="https://arxiv.org/abs/2602.17333">Tran, Lehtola, Pittalis, and Marques, <em>Semi-Local Exchange-Correlation Approximations in Density Functional Theory</em>, arXiv:2602.17333</a>.</p>
       </section>
@@ -63,12 +56,12 @@
           <h2>Referenced Review Equations</h2>
           <div class="review-equations">
           <article class="review-equation-card" id="review-eq-eq-tautf-sigma">
-            <code>eq:tautf-sigma</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (70)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=13" title="Open page 13 of the review PDF">p. 13 ↗</a></p>
             <div class="equation" data-tex="\tau_{\sigma}^{\text{TF}} = C_{\text{F}}n_{\sigma}^{5/3}"></div>
           </article>
 
           <article class="review-equation-card" id="review-eq-eq-lta-enh">
-            <code>eq:lta-enh</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (566)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=103" title="Open page 103 of the review PDF">p. 103 ↗</a></p>
             <div class="equation" data-tex="F_{\text{x}}^\text{LTA} = \left(\frac{\tilde{t}_\sigma}{C_{\text{F}}}\right)^{4/5}"></div>
           </article>
 

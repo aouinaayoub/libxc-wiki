@@ -3,14 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>mgga_x_mvs</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20261016-excerpts-v1">
-    <script defer src="../../assets/search.js?v=20261016-excerpts-v1"></script>
+    <title>mgga_x_mvs — MVS exchange of Sun, Perdew, and Ruzsinszky · Libxc Wiki</title>
+    <meta name="description" content="mgga_x_mvs: MVS exchange of Sun, Perdew, and Ruzsinszky. Meta-GGA exchange functional in Libxc, with references and BibTeX. Includes an excerpt from the Tran, Lehtola, Pittalis and Marques review.">
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261117-refs-v1">
+    <script defer src="../../assets/search.js?v=20261117-refs-v1"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
     <script defer src="../../vendor/katex/contrib/mhchem.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20261016-excerpts-v1"></script>
+    <script defer src="../../assets/detail.js?v=20261117-refs-v1"></script>
 
   </head>
   <body class="functional-page">
@@ -32,31 +33,23 @@
 
         <p class="brand">META-GGA</p>
         <h1><code class="title-code">mgga_x_mvs</code></h1>
+        <p class="functional-name">MVS exchange of Sun, Perdew, and Ruzsinszky</p>
         <div class="detail-tags"><span class="tag">meta-gga</span>
 <span class="tag">exchange</span></div>
       </header>
 
       <div class="detail-grid">
+
       <section class="callout">
         <p class="callout-label">Review excerpt</p>
         <div class="review-html">
-<p>This <em>made very simple</em> (MVS) $\tau$-MGGA functional was constructed to obey a tight LO bound,<sup class="citation-marker"><a href="#review-ref-Perdew2014-18A533">725</a></sup> together with other constraints. These include the second-order density-gradient expansion for the slowly varying density and the asymptotic expansion of the exchange energy at large nuclear charge $Z$ of neutral atoms (see <sup class="citation-marker"><a href="#review-ref-Elliott2009-1485">291</a></sup> and <a class="functional-link" href="../gga-x-eb88/"><code>gga_x_eb88</code></a>). The enhancement factor is written as</p>
+<p>This <em>made very simple</em> (MVS) $\tau$-MGGA functional was constructed in order to obey a tight LO bound,<sup class="citation-marker"><a href="#review-ref-Perdew2014-18A533">725</a></sup> together with other constraints. These include the second-order density-gradient expansion for the slowly varying density and the asymptotic expansion of the exchange energy at large nuclear charge $Z$ of neutral atoms (see ref. <span class="citation-ref"><a href="#review-ref-Elliott2009-1485">291</a></span> and <a class="functional-link" href="../gga-x-eb88/"><code>gga_x_eb88</code></a>). The enhancement factor is written as</p>
 <div class="equation" data-tex="F_\text{x}^\text{MVS} = \frac{1 + k_0 f_\text{x}(\alpha_\sigma)}{\left(1+bs_\sigma^4\right)^{1/8}}"></div>
-<p>In $F_\text{x}^\text{MVS}$, $k_0=0.174$ was determined from the tight LO bound at $\alpha_\sigma=0$. The denominator was designed such that <a class="review-eq-link" href="#review-eq-eq-fxasymp">
-  <code>eq:fxasymp</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="\lim_{s_\sigma\to\infty} s_\sigma^{1/2} F_\text{x}(s_\sigma) &lt; \infty"></span>
-  </span>
-</a> is obeyed, a required condition to get a finite exchange-energy density for the nonuniform scaling limit of a density.<sup class="citation-marker"><a href="#review-ref-Perdew2014-18A533">725</a>,<a href="#review-ref-Chiodo2012-126402">567</a></sup> The parameter $b=0.0233$ was fixed such that the exact exchange energy of the H atom is reproduced. Finally,</p>
+<p>In $F_\text{x}^\text{MVS}$, $k_0=0.174$ was determined from the tight LO bound at $\alpha_\sigma=0$. The denominator was designed such that <a class="review-eq-link" href="#review-eq-eq-fxasymp"><span class="eq-number">Eq. (431)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="\lim_{s_\sigma\to\infty} s_\sigma^{1/2} F_\text{x}(s_\sigma) &lt; \infty"></span></span></a> is obeyed, a required condition to get a finite exchange-energy density for the nonuniform scaling limit of a density.<sup class="citation-marker"><a href="#review-ref-Perdew2014-18A533">725</a>,<a href="#review-ref-Chiodo2012-126402">567</a></sup> The parameter $b=0.0233$ was fixed such that the exact exchange energy of the H atom is reproduced. Finally,</p>
 <div class="equation" data-tex="f_\text{x}(\alpha_\sigma) = \frac{1-\alpha_\sigma}
   {\left[\left(1+e_1\alpha_\sigma^2\right)^2 + c_1\alpha_\sigma^4\right]^{1/4}}"></div>
 <p>interpolates between the two regimes $\alpha_\sigma=0$ (one or two-electron systems) and $\alpha_\sigma=1$ (HEG), and tends to a constant at $\alpha_\sigma\to\infty$. The parameter $e_1 = -1.6665$ is fixed by the large-$Z$ asymptotic expansion mentioned above, and $c_1=0.7438$ so that the second-order density-gradient expansion is recovered.</p>
-<p>Note that the enhancement factor given by <a class="review-eq-link" href="#review-eq-eq-fmvs">
-  <code>eq:fmvs</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="F_\text{x}^\text{MVS} = \frac{1 + k_0 f_\text{x}(\alpha_\sigma)}{\left(1+bs_\sigma^4\right)^{1/8}}"></span>
-  </span>
-</a> is rather different from most other GGA and MGGA functionals, as it decreases monotonically with increasing $s_\sigma$ or $\alpha_\sigma$. Other functionals that show a similar behavior are <a class="functional-link" href="../mgga-x-mbeef/"><code>mgga_x_mbeef</code></a> and <a class="functional-link" href="../mgga-x-scan/"><code>mgga_x_scan</code></a>.</p>
+<p>Note that the enhancement factor given by <a class="review-eq-link" href="#review-eq-eq-fmvs"><span class="eq-number">Eq. (612)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="F_\text{x}^\text{MVS} = \frac{1 + k_0 f_\text{x}(\alpha_\sigma)}{\left(1+bs_\sigma^4\right)^{1/8}}"></span></span></a> is rather different from most other GGA and MGGA functionals, as it decreases monotonically with increasing $s_\sigma$ or $\alpha_\sigma$. Other functionals that show a similar behavior are <a class="functional-link" href="../mgga-x-mbeef/"><code>mgga_x_mbeef</code></a> and <a class="functional-link" href="../mgga-x-scan/"><code>mgga_x_scan</code></a>.</p>
 <p>Combined with <a class="functional-link" href="../gga-c-regtpss/"><code>gga_c_regtpss</code></a>, this functional is accurate for intermolecular interaction energies (even though no dispersion van der Waals term is included) and lattice constants of solids, quite accurate for barrier heights, but rather poor for the heats of formation of molecules, similarly to PBE (<a class="functional-link" href="../gga-x-pbe/"><code>gga_x_pbe</code></a> + <a class="functional-link" href="../gga-c-pbe/"><code>gga_c_pbe</code></a>).</p>
         </div>
         <p class="source-note">Adapted from <a href="https://arxiv.org/abs/2602.17333">Tran, Lehtola, Pittalis, and Marques, <em>Semi-Local Exchange-Correlation Approximations in Density Functional Theory</em>, arXiv:2602.17333</a>.</p>
@@ -66,12 +59,12 @@
           <h2>Referenced Review Equations</h2>
           <div class="review-equations">
           <article class="review-equation-card" id="review-eq-eq-fxasymp">
-            <code>eq:fxasymp</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (431)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=70" title="Open page 70 of the review PDF">p. 70 ↗</a></p>
             <div class="equation" data-tex="\lim_{s_\sigma\to\infty} s_\sigma^{1/2} F_\text{x}(s_\sigma) &lt; \infty"></div>
           </article>
 
           <article class="review-equation-card" id="review-eq-eq-fmvs">
-            <code>eq:fmvs</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (612)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=112" title="Open page 112 of the review PDF">p. 112 ↗</a></p>
             <div class="equation" data-tex="F_\text{x}^\text{MVS} = \frac{1 + k_0 f_\text{x}(\alpha_\sigma)}{\left(1+bs_\sigma^4\right)^{1/8}}"></div>
           </article>
 

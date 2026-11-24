@@ -3,14 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>mgga_xc_lp90</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20261016-excerpts-v1">
-    <script defer src="../../assets/search.js?v=20261016-excerpts-v1"></script>
+    <title>mgga_xc_lp90 — Lee &amp; Parr, Eq. (56) · Libxc Wiki</title>
+    <meta name="description" content="mgga_xc_lp90: Lee &amp; Parr, Eq. (56). Meta-GGA exchange-correlation functional in Libxc, with references and BibTeX. Includes an excerpt from the Tran, Lehtola, Pittalis and Marques review.">
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261117-refs-v1">
+    <script defer src="../../assets/search.js?v=20261117-refs-v1"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
     <script defer src="../../vendor/katex/contrib/mhchem.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20261016-excerpts-v1"></script>
+    <script defer src="../../assets/detail.js?v=20261117-refs-v1"></script>
 
   </head>
   <body class="functional-page">
@@ -32,40 +33,32 @@
 
         <p class="brand">META-GGA</p>
         <h1><code class="title-code">mgga_xc_lp90</code></h1>
+        <p class="functional-name">Lee &amp; Parr, Eq. (56)</p>
         <div class="detail-tags"><span class="tag">meta-gga</span>
 <span class="tag">exchange</span>
 <span class="tag">correlation</span></div>
       </header>
 
       <div class="detail-grid">
+
       <section class="callout">
         <p class="callout-label">Review excerpt</p>
         <div class="review-html">
-<p>These functionals arise from the way to rewrite the product of two infinite series described in <a class="functional-link" href="../lda-xc-lp-a/"><code>lda_xc_lp_a</code></a>. This leads to a functional form that is more flexible than <a class="review-eq-link" href="#review-eq-eq-lp90">
-  <code>eq:lp90</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="e^\text{LP-LDA}_\text{xc} =
-  -a\frac{1+\frac{b}{N}}{1+\frac{c}{N}}\frac{1}{\left(\frac{4}{3}\pi\right)^{1/3}r_s + k}"></span>
-  </span>
-</a> and that depends on the gradient and Laplacian of the density (only the spin-unpolarized version was developed):</p>
+<p>These functionals arise from the way to rewrite the product of two infinite series described in <a class="functional-link" href="../lda-xc-lp-a/"><code>lda_xc_lp_a</code></a>. This leads to a functional form that is more flexible than <a class="review-eq-link" href="#review-eq-eq-lp90"><span class="eq-number">Eq. (343)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="e^\text{LP-LDA}_\text{xc} =
+  -a\frac{1+\frac{b}{N}}{1+\frac{c}{N}}\frac{1}{\left(\frac{4}{3}\pi\right)^{1/3}r_s + k}"></span></span></a> and that depends on the gradient and Laplacian of the density (only the spin-unpolarized version was developed):</p>
 <div class="equation" data-tex="e^\text{LP-MGGA}_\text{xc} = 
   -\left[a\frac{\displaystyle 1+\frac{b}{N}}{\displaystyle 1+\frac{c}{N}} + \frac{d}{8}\left(x^2-u\right)\right] \\
   \times\frac{1}{\displaystyle\left(\frac{4}{3}\pi\right)^{1/3}r_s + k}"></div>
-<p>where $N$ is the number of electrons. The coefficients were fit the same way as for the simpler LDA variants (e.g. <a class="functional-link" href="../lda-xc-lp-a/"><code>lda_xc_lp_a</code></a>), leading to three functionals:</p>
+<p>where $N$ is the number of electrons. The coefficients were fit the same way as for the more simple LDA variants (e.g. <a class="functional-link" href="../lda-xc-lp-a/"><code>lda_xc_lp_a</code></a>), leading to three functionals:</p>
 <ul class="review-list">
-<li><p><a class="functional-link" href="../mgga-xc-lp90/"><code>mgga_xc_lp90</code></a>: $a=0.80569$, $d=2.4271\times10^{-2}$, and $k = 4.0743\times10^{-3}$, while $b$ and $c$ are set to zero. Note that this value of $d$ is the corrected one mentioned in <sup class="citation-marker"><a href="#review-ref-Zhao1993-918">471</a></sup>.</p></li>
+<li><p><a class="functional-link" href="../mgga-xc-lp90/"><code>mgga_xc_lp90</code></a>: $a=0.80569$, $d=2.4271\times10^{-2}$, and $k = 4.0743\times10^{-3}$, while $b$ and $c$ are set to zero. Note that this value of $d$ is the corrected one mentioned in ref. <span class="citation-ref"><a href="#review-ref-Zhao1993-918">471</a></span>.</p></li>
 <li><p><code>mgga_xc_lp90_a</code>: $a=0.7874$ and $d=2.801\times10^{-2}$, while $b$, $c$, and $k$ are set to zero.</p></li>
 <li><p><code>mgga_xc_lp90_n</code>: $a=0.7615$, $b=1.6034$, $c=2.1437$, and $d=6.151\times10^{-2}$, with $k$ set to zero.</p></li>
 </ul>
 <p>As expected, these functionals improve over their LDA counterparts, like <a class="functional-link" href="../lda-xc-lp-a/"><code>lda_xc_lp_a</code></a>, for the xc energies of atoms.</p>
-<p>The explicit dependence on the number of electrons $N$ in <a class="review-eq-link" href="#review-eq-eq-eclp90">
-  <code>eq:eclp90</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="e^\text{LP-MGGA}_\text{xc} = 
+<p>The explicit dependence on the number of electrons $N$ in <a class="review-eq-link" href="#review-eq-eq-eclp90"><span class="eq-number">Eq. (788)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="e^\text{LP-MGGA}_\text{xc} = 
   -\left[a\frac{\displaystyle 1+\frac{b}{N}}{\displaystyle 1+\frac{c}{N}} + \frac{d}{8}\left(x^2-u\right)\right] \\
-  \times\frac{1}{\displaystyle\left(\frac{4}{3}\pi\right)^{1/3}r_s + k}"></span>
-  </span>
-</a> makes the <code>mgga_xc_lp90_n</code> functional not a semi-local functional (see discussion for <a class="functional-link" href="../lda-x-rae/"><code>lda_x_rae</code></a>). As $b=c=0$ for <a class="functional-link" href="../mgga-xc-lp90/"><code>mgga_xc_lp90</code></a> and <code>mgga_xc_lp90_a</code>, these functionals are not affected by this issue.</p>
+  \times\frac{1}{\displaystyle\left(\frac{4}{3}\pi\right)^{1/3}r_s + k}"></span></span></a> makes the <code>mgga_xc_lp90_n</code> functional not a semi-local functional (see discussion for <a class="functional-link" href="../lda-x-rae/"><code>lda_x_rae</code></a>). As $b=c=0$ for <a class="functional-link" href="../mgga-xc-lp90/"><code>mgga_xc_lp90</code></a> and <code>mgga_xc_lp90_a</code>, these functionals are not affected by this issue.</p>
         </div>
         <p class="source-note">Adapted from <a href="https://arxiv.org/abs/2602.17333">Tran, Lehtola, Pittalis, and Marques, <em>Semi-Local Exchange-Correlation Approximations in Density Functional Theory</em>, arXiv:2602.17333</a>.</p>
       </section>
@@ -74,13 +67,13 @@
           <h2>Referenced Review Equations</h2>
           <div class="review-equations">
           <article class="review-equation-card" id="review-eq-eq-lp90">
-            <code>eq:lp90</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (343)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=49" title="Open page 49 of the review PDF">p. 49 ↗</a></p>
             <div class="equation" data-tex="e^\text{LP-LDA}_\text{xc} =
   -a\frac{1+\frac{b}{N}}{1+\frac{c}{N}}\frac{1}{\left(\frac{4}{3}\pi\right)^{1/3}r_s + k}"></div>
           </article>
 
           <article class="review-equation-card" id="review-eq-eq-eclp90">
-            <code>eq:eclp90</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (788)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=143" title="Open page 143 of the review PDF">p. 143 ↗</a></p>
             <div class="equation" data-tex="e^\text{LP-MGGA}_\text{xc} = 
   -\left[a\frac{\displaystyle 1+\frac{b}{N}}{\displaystyle 1+\frac{c}{N}} + \frac{d}{8}\left(x^2-u\right)\right] \\
   \times\frac{1}{\displaystyle\left(\frac{4}{3}\pi\right)^{1/3}r_s + k}"></div>

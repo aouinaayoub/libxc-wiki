@@ -3,14 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>mgga_x_br89_explicit</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20261016-excerpts-v1">
-    <script defer src="../../assets/search.js?v=20261016-excerpts-v1"></script>
+    <title>mgga_x_br89_explicit — Becke-Roussel 89 with an explicit inversion of x(y), gamma = 0.8 · Libxc Wiki</title>
+    <meta name="description" content="mgga_x_br89_explicit: Becke-Roussel 89 with an explicit inversion of x(y), gamma = 0.8. Meta-GGA exchange functional in Libxc, with references and BibTeX. Includes an excerpt from the Tran, Lehtola, Pittalis and Marques review.">
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261117-refs-v1">
+    <script defer src="../../assets/search.js?v=20261117-refs-v1"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
     <script defer src="../../vendor/katex/contrib/mhchem.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20261016-excerpts-v1"></script>
+    <script defer src="../../assets/detail.js?v=20261117-refs-v1"></script>
 
   </head>
   <body class="functional-page">
@@ -32,25 +33,17 @@
 
         <p class="brand">META-GGA</p>
         <h1><code class="title-code">mgga_x_br89_explicit</code></h1>
+        <p class="functional-name">Becke-Roussel 89 with an explicit inversion of x(y), gamma = 0.8</p>
         <div class="detail-tags"><span class="tag">meta-gga</span>
 <span class="tag">exchange</span></div>
       </header>
 
       <div class="detail-grid">
+
       <section class="callout">
         <p class="callout-label">Review excerpt</p>
         <div class="review-html">
-<p>In the evaluation of <a class="functional-link" href="../mgga-x-br89/"><code>mgga_x_br89</code></a>, the parameter $c_\sigma$ is obtained by solving a nonlinear implicit equation, <a class="review-eq-link" href="#review-eq-eq-mggaxbr89-nonlinear">
-  <code>eq:mggaxbr89-nonlinear</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="\frac{c_\sigma\,\E^{-2c_\sigma/3}}{c_\sigma-2} = \frac{2}{3}\pi^{2/3}\frac{1}{\tilde{C}_{\x\sigma}}"></span>
-  </span>
-</a>, at each point in space. This can only be done numerically, by using Newton&ndash;Raphson method for instance. As a more convenient way to calculate $c_\sigma$, Proynov et al.<sup class="citation-marker"><a href="#review-ref-Proynov2008-103">705</a></sup> proposed the following analytical and explicit expression for $c_\sigma$ as a function of $y_\sigma=\left(2/3\right)\pi^{2/3}/\tilde{C}_{\x\sigma}$ (the right-hand side of <a class="review-eq-link" href="#review-eq-eq-mggaxbr89-nonlinear">
-  <code>eq:mggaxbr89-nonlinear</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="\frac{c_\sigma\,\E^{-2c_\sigma/3}}{c_\sigma-2} = \frac{2}{3}\pi^{2/3}\frac{1}{\tilde{C}_{\x\sigma}}"></span>
-  </span>
-</a>):</p>
+<p>In the evaluation of <a class="functional-link" href="../mgga-x-br89/"><code>mgga_x_br89</code></a>, the parameter $c_\sigma$ is obtained by solving a nonlinear implicit equation, <a class="review-eq-link" href="#review-eq-eq-mggaxbr89-nonlinear"><span class="eq-number">Eq. (551)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="\frac{c_\sigma\,\E^{-2c_\sigma/3}}{c_\sigma-2} = \frac{2}{3}\pi^{2/3}\frac{1}{\tilde{C}_{\x\sigma}}"></span></span></a>, at each point in space. This can only be done numerically, by using Newton&ndash;Raphson method for instance. As a more convenient way to calculate $c_\sigma$, Proynov et al.<sup class="citation-marker"><a href="#review-ref-Proynov2008-103">705</a></sup> proposed the following analytical and explicit expression for $c_\sigma$ as a function of $y_\sigma=\left(2/3\right)\pi^{2/3}/\tilde{C}_{\x\sigma}$ (the right-hand side of <a class="review-eq-link" href="#review-eq-eq-mggaxbr89-nonlinear"><span class="eq-number">Eq. (551)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="\frac{c_\sigma\,\E^{-2c_\sigma/3}}{c_\sigma-2} = \frac{2}{3}\pi^{2/3}\frac{1}{\tilde{C}_{\x\sigma}}"></span></span></a>):</p>
 <div class="equation" data-tex="c_\sigma(y_\sigma)=g(y_\sigma)\frac{P_1\left(y_\sigma\right)}{P_2\left(y_\sigma\right)}"></div>
 <p>where</p>
 <div class="equation" data-tex="g(y_\sigma) =  \\ \left\{
@@ -72,12 +65,7 @@
   \end{array}
   \right."></div>
 <p>The coefficients $B$, $a_i$, $b_i$, $c_i$, $d_i$, and $e_i$ were optimized so that the original function $c_\sigma$ calculated numerically is accurately reproduced and the results obtained for properties are virtually identical to <a class="functional-link" href="../mgga-x-br89/"><code>mgga_x_br89</code></a>.</p>
-<p>The difference between <a class="functional-link" href="../mgga-x-br89-explicit/"><code>mgga_x_br89_explicit</code></a> and <a class="functional-link" href="../mgga-x-br89-explicit-1/"><code>mgga_x_br89_explicit_1</code></a> lies in the parameter $\gamma$ in <a class="review-eq-link" href="#review-eq-eq-br89-q">
-  <code>eq:br89-q</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="\tilde{C}_{\x\sigma} = \frac{1}{6}\left[u_\sigma - 2\gamma\left( 2\tilde{t}_\sigma - \frac{1}{4} x_\sigma^2\right)\right]"></span>
-  </span>
-</a>, which is 0.8 and 1, respectively.</p>
+<p>The difference between <a class="functional-link" href="../mgga-x-br89-explicit/"><code>mgga_x_br89_explicit</code></a> and <a class="functional-link" href="../mgga-x-br89-explicit-1/"><code>mgga_x_br89_explicit_1</code></a> lies in the parameter $\gamma$ in <a class="review-eq-link" href="#review-eq-eq-br89-q"><span class="eq-number">Eq. (552)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="\tilde{C}_{\x\sigma} = \frac{1}{6}\left[u_\sigma - 2\gamma\left( 2\tilde{t}_\sigma - \frac{1}{4} x_\sigma^2\right)\right]"></span></span></a>, which is 0.8 and 1, respectively.</p>
         </div>
         <p class="source-note">Adapted from <a href="https://arxiv.org/abs/2602.17333">Tran, Lehtola, Pittalis, and Marques, <em>Semi-Local Exchange-Correlation Approximations in Density Functional Theory</em>, arXiv:2602.17333</a>.</p>
       </section>
@@ -86,12 +74,12 @@
           <h2>Referenced Review Equations</h2>
           <div class="review-equations">
           <article class="review-equation-card" id="review-eq-eq-mggaxbr89-nonlinear">
-            <code>eq:mggaxbr89-nonlinear</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (551)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=101" title="Open page 101 of the review PDF">p. 101 ↗</a></p>
             <div class="equation" data-tex="\frac{c_\sigma\,\E^{-2c_\sigma/3}}{c_\sigma-2} = \frac{2}{3}\pi^{2/3}\frac{1}{\tilde{C}_{\x\sigma}}"></div>
           </article>
 
           <article class="review-equation-card" id="review-eq-eq-br89-q">
-            <code>eq:br89-q</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (552)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=101" title="Open page 101 of the review PDF">p. 101 ↗</a></p>
             <div class="equation" data-tex="\tilde{C}_{\x\sigma} = \frac{1}{6}\left[u_\sigma - 2\gamma\left( 2\tilde{t}_\sigma - \frac{1}{4} x_\sigma^2\right)\right]"></div>
           </article>
 

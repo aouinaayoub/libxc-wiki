@@ -3,14 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>mgga_c_rscan</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20261016-excerpts-v1">
-    <script defer src="../../assets/search.js?v=20261016-excerpts-v1"></script>
+    <title>mgga_c_rscan — Regularized SCAN correlation by Bartok and Yates · Libxc Wiki</title>
+    <meta name="description" content="mgga_c_rscan: Regularized SCAN correlation by Bartok and Yates. Meta-GGA correlation functional in Libxc, with references and BibTeX. Includes an excerpt from the Tran, Lehtola, Pittalis and Marques review.">
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261117-refs-v1">
+    <script defer src="../../assets/search.js?v=20261117-refs-v1"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
     <script defer src="../../vendor/katex/contrib/mhchem.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20261016-excerpts-v1"></script>
+    <script defer src="../../assets/detail.js?v=20261117-refs-v1"></script>
 
   </head>
   <body class="functional-page">
@@ -32,26 +33,18 @@
 
         <p class="brand">META-GGA</p>
         <h1><code class="title-code">mgga_c_rscan</code></h1>
+        <p class="functional-name">Regularized SCAN correlation by Bartok and Yates</p>
         <div class="detail-tags"><span class="tag">meta-gga</span>
 <span class="tag">correlation</span></div>
       </header>
 
       <div class="detail-grid">
+
       <section class="callout">
         <p class="callout-label">Review excerpt</p>
         <div class="review-html">
-<p>This functional was derived the same way as its exchange counterpart <a class="functional-link" href="../mgga-x-rscan/"><code>mgga_x_rscan</code></a>, that is, by using regularized versions of the iso-orbital indicator and switching function in <a class="functional-link" href="../mgga-c-scan/"><code>mgga_c_scan</code></a>. More precisely, the switching function $f(\alpha_{\text{c}})$ in <a class="review-eq-link" href="#review-eq-eq-ec-scan">
-  <code>eq:ec-scan</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="e_\text{c}^\text{SCAN} = e_\text{c}^1 + 
-  f(\alpha_{\text{c}})\left(e_\text{c}^0 - e_\text{c}^1\right)"></span>
-  </span>
-</a> is replaced by a function $f(\alpha_{\text{c}}&#39;)$ having the same form as <a class="review-eq-link" href="#review-eq-eq-rscanfalpha">
-  <code>eq:rscanfalpha</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="f(\alpha_{\sigma}&#39;) = \sum_{n=0}^{7}c_{n}(\alpha_{\sigma}&#39;)^{n}"></span>
-  </span>
-</a> (with different coefficients $c_n$), with $\alpha_{\text{c}}&#39;$ given by</p>
+<p>This functional was derived the same way as its exchange counterpart <a class="functional-link" href="../mgga-x-rscan/"><code>mgga_x_rscan</code></a>, that is, by using regularized versions of the iso-orbital indicator and switching function in <a class="functional-link" href="../mgga-c-scan/"><code>mgga_c_scan</code></a>. More precisely, the switching function $f(\alpha_{\text{c}})$ in <a class="review-eq-link" href="#review-eq-eq-ec-scan"><span class="eq-number">Eq. (749)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="e_\text{c}^\text{SCAN} = e_\text{c}^1 + 
+  f(\alpha_{\text{c}})\left(e_\text{c}^0 - e_\text{c}^1\right)"></span></span></a> is replaced by a function $f(\alpha_{\text{c}}&#39;)$ having the same form as <a class="review-eq-link" href="#review-eq-eq-rscanfalpha"><span class="eq-number">Eq. (653)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="f(\alpha_{\sigma}&#39;) = \sum_{n=0}^{7}c_{n}(\alpha_{\sigma}&#39;)^{n}"></span></span></a> (with different coefficients $c_n$), with $\alpha_{\text{c}}&#39;$ given by</p>
 <div class="equation" data-tex="\alpha_{\text{c}}&#39; = \frac{\tilde{\alpha}_{\text{c}}^3}{\tilde{\alpha}_{\text{c}}^2+\alpha_{\text{r}}}"></div>
 <p>where</p>
 <div class="equation" data-tex="\tilde{\alpha}_{\text{c}} = \frac{\tau-\tau^{\text{W}}[n]}{\left(\tau^{\text{TF}}[n]+\tau_{\text{r}}\right)\phi_{5/3}(\zeta)}"></div>
@@ -64,13 +57,13 @@
           <h2>Referenced Review Equations</h2>
           <div class="review-equations">
           <article class="review-equation-card" id="review-eq-eq-ec-scan">
-            <code>eq:ec-scan</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (749)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=137" title="Open page 137 of the review PDF">p. 137 ↗</a></p>
             <div class="equation" data-tex="e_\text{c}^\text{SCAN} = e_\text{c}^1 + 
   f(\alpha_{\text{c}})\left(e_\text{c}^0 - e_\text{c}^1\right)"></div>
           </article>
 
           <article class="review-equation-card" id="review-eq-eq-rscanfalpha">
-            <code>eq:rscanfalpha</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (653)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=120" title="Open page 120 of the review PDF">p. 120 ↗</a></p>
             <div class="equation" data-tex="f(\alpha_{\sigma}&#39;) = \sum_{n=0}^{7}c_{n}(\alpha_{\sigma}&#39;)^{n}"></div>
           </article>
 

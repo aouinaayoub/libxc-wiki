@@ -3,14 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>mgga_x_sa_tpss</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20261016-excerpts-v1">
-    <script defer src="../../assets/search.js?v=20261016-excerpts-v1"></script>
+    <title>mgga_x_sa_tpss — TPSS with correct surface asymptotics · Libxc Wiki</title>
+    <meta name="description" content="mgga_x_sa_tpss: TPSS with correct surface asymptotics. Meta-GGA exchange functional in Libxc, with references and BibTeX. Includes an excerpt from the Tran, Lehtola, Pittalis and Marques review.">
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261117-refs-v1">
+    <script defer src="../../assets/search.js?v=20261117-refs-v1"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
     <script defer src="../../vendor/katex/contrib/mhchem.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20261016-excerpts-v1"></script>
+    <script defer src="../../assets/detail.js?v=20261117-refs-v1"></script>
 
   </head>
   <body class="functional-page">
@@ -32,23 +33,17 @@
 
         <p class="brand">META-GGA</p>
         <h1><code class="title-code">mgga_x_sa_tpss</code></h1>
+        <p class="functional-name">TPSS with correct surface asymptotics</p>
         <div class="detail-tags"><span class="tag">meta-gga</span>
 <span class="tag">exchange</span></div>
       </header>
 
       <div class="detail-grid">
+
       <section class="callout">
         <p class="callout-label">Review excerpt</p>
         <div class="review-html">
-<p>Constantin et al.<sup class="citation-marker"><a href="#review-ref-Constantin2016-115127">731</a></sup> modified <a class="functional-link" href="../mgga-x-tpss/"><code>mgga_x_tpss</code></a> to achieve the correct $\propto-1/z$ decay of the xc energy per particle and xc potential with the distance $z$ from the surface in the vacuum. The modification consists of replacing the constant $\kappa=\kappa^{\text{PBE}}$ in <a class="review-eq-link" href="#review-eq-eq-pbeenh">
-  <code>eq:pbeenh</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="F_\text{x}^{\text{PBE}} = 1 + \kappa\left[1 - \frac{\kappa}{\kappa + f_0(s_\sigma)}\right]"></span>
-  </span>
-</a>; <a class="review-eq-link" href="#review-eq-eq-f0TPSS1">
-  <code>eq:f0TPSS1</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="\begin{aligned}
+<p>Constantin et al.<sup class="citation-marker"><a href="#review-ref-Constantin2016-115127">731</a></sup> modified <a class="functional-link" href="../mgga-x-tpss/"><code>mgga_x_tpss</code></a> in order to achieve the correct $\propto-1/z$ decay of the xc energy per particle and xc potential with the distance $z$ from the surface in the vacuum. The modification consists of replacing the constant $\kappa=\kappa^{\text{PBE}}$ in <a class="review-eq-link" href="#review-eq-eq-pbeenh"><span class="eq-number">Eq. (382)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="F_\text{x}^{\text{PBE}} = 1 + \kappa\left[1 - \frac{\kappa}{\kappa + f_0(s_\sigma)}\right]"></span></span></a>; <a class="review-eq-link" href="#review-eq-eq-f0TPSS1"><span class="eq-number">Eq. (578)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="\begin{aligned}
 f_0^\text{TPSS} = \frac{1}{\left(1+\sqrt{e}p_\sigma\right)^2}\left\{
   \left[\mu^\text{GE} + c\frac{z_\sigma^f}{(1+z_\sigma^2)^2}\right] p_\sigma
   \right.
@@ -61,9 +56,7 @@ f_0^\text{TPSS} = \frac{1}{\left(1+\sqrt{e}p_\sigma\right)^2}\left\{
   \left.+ \frac{\left(\mu^\text{GE}\right)^2}{\kappa} p_\sigma^2
   + 2\sqrt{e}\mu^\text{GE}\frac{9}{25}z_\sigma^2 + e \mu^\text{PBE} p_\sigma^3
   \right\}
-\end{aligned}"></span>
-  </span>
-</a> by the function</p>
+\end{aligned}"></span></span></a> by the function</p>
 <div class="equation" data-tex="\kappa_{\sigma}=\frac{2\pi}{3\sqrt{5}}\frac{\sqrt{\alpha_{\sigma}+1}}{\sqrt{a+\ln(\alpha_{\sigma}+b)}}"></div>
 <p>where $a=2.413$ and $b=0.348$ were chosen such that $\kappa=\kappa^{\text{PBE}}$ (i.e., <a class="functional-link" href="../mgga-x-tpss/"><code>mgga_x_tpss</code></a>) is recovered when $\alpha=1$ and $\alpha = 0$. The resulting functional still obeys the exact mathematical constraints satisfied by <a class="functional-link" href="../mgga-x-tpss/"><code>mgga_x_tpss</code></a>. However, an exception is the LO bound that is satisfied only globally, while it is also satisfied locally by <a class="functional-link" href="../mgga-x-tpss/"><code>mgga_x_tpss</code></a>. Yet, Constantin et al.<sup class="citation-marker"><a href="#review-ref-Constantin2016-115127">731</a></sup> mentioned that a simplified version of the Lewin&ndash;Lieb bound<sup class="citation-marker"><a href="#review-ref-Lewin2015-022507">732</a>,<a href="#review-ref-Feinblum2014-241105">733</a></sup> is locally satisfied.</p>
 <p>The accuracy of the functional is similar to that of <a class="functional-link" href="../mgga-x-tpss/"><code>mgga_x_tpss</code></a> for systems with covalent bonds, but it should improve the description of surface-related properties.</p>
@@ -75,12 +68,12 @@ f_0^\text{TPSS} = \frac{1}{\left(1+\sqrt{e}p_\sigma\right)^2}\left\{
           <h2>Referenced Review Equations</h2>
           <div class="review-equations">
           <article class="review-equation-card" id="review-eq-eq-pbeenh">
-            <code>eq:pbeenh</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (382)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=58" title="Open page 58 of the review PDF">p. 58 ↗</a></p>
             <div class="equation" data-tex="F_\text{x}^{\text{PBE}} = 1 + \kappa\left[1 - \frac{\kappa}{\kappa + f_0(s_\sigma)}\right]"></div>
           </article>
 
           <article class="review-equation-card" id="review-eq-eq-f0TPSS1">
-            <code>eq:f0TPSS1</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (578)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=105" title="Open page 105 of the review PDF">p. 105 ↗</a></p>
             <div class="equation" data-tex="\begin{aligned}
 f_0^\text{TPSS} = \frac{1}{\left(1+\sqrt{e}p_\sigma\right)^2}\left\{
   \left[\mu^\text{GE} + c\frac{z_\sigma^f}{(1+z_\sigma^2)^2}\right] p_\sigma

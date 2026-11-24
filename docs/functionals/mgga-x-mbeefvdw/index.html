@@ -3,14 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>mgga_x_mbeefvdw</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20261016-excerpts-v1">
-    <script defer src="../../assets/search.js?v=20261016-excerpts-v1"></script>
+    <title>mgga_x_mbeefvdw — mBEEF-vdW exchange · Libxc Wiki</title>
+    <meta name="description" content="mgga_x_mbeefvdw: mBEEF-vdW exchange. Meta-GGA exchange functional in Libxc, with references and BibTeX. Includes an excerpt from the Tran, Lehtola, Pittalis and Marques review.">
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261117-refs-v1">
+    <script defer src="../../assets/search.js?v=20261117-refs-v1"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
     <script defer src="../../vendor/katex/contrib/mhchem.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20261016-excerpts-v1"></script>
+    <script defer src="../../assets/detail.js?v=20261117-refs-v1"></script>
 
   </head>
   <body class="functional-page">
@@ -32,25 +33,17 @@
 
         <p class="brand">META-GGA</p>
         <h1><code class="title-code">mgga_x_mbeefvdw</code></h1>
+        <p class="functional-name">mBEEF-vdW exchange</p>
         <div class="detail-tags"><span class="tag">meta-gga</span>
 <span class="tag">exchange</span></div>
       </header>
 
       <div class="detail-grid">
+
       <section class="callout">
         <p class="callout-label">Review excerpt</p>
         <div class="review-html">
-<p>The empirical mBEEF-vdW functional was developed for accuracy for a wide range of systems and properties. Its construction follows the strategy used for its predecessors, <a class="functional-link" href="../gga-xc-beefvdw/"><code>gga_xc_beefvdw</code></a> and <a class="functional-link" href="../mgga-x-mbeef/"><code>mgga_x_mbeef</code></a>. The exchange part of mBEEF-vdW, <a class="functional-link" href="../mgga-x-mbeefvdw/"><code>mgga_x_mbeefvdw</code></a>, is given by <a class="review-eq-link" href="#review-eq-eq-mBEEF">
-  <code>eq:mBEEF</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="F_\text{x}^\text{mBEEF} = \sum_{m=0}^{M}\sum_{n=0}^{N} a_{mn} B_m[r(s_\sigma)] B_n[f(\alpha_\sigma)]"></span>
-  </span>
-</a> with $M=N=4$, while $M=N=7$ was used for <a class="functional-link" href="../mgga-x-mbeef/"><code>mgga_x_mbeef</code></a>. The training sets used for the optimization of the 25 coefficients $a_{mn}$ in <a class="review-eq-link" href="#review-eq-eq-mBEEF">
-  <code>eq:mBEEF</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="F_\text{x}^\text{mBEEF} = \sum_{m=0}^{M}\sum_{n=0}^{N} a_{mn} B_m[r(s_\sigma)] B_n[f(\alpha_\sigma)]"></span>
-  </span>
-</a> are essentially the same as the ones used for <a class="functional-link" href="../gga-xc-beefvdw/"><code>gga_xc_beefvdw</code></a> and <a class="functional-link" href="../mgga-x-mbeef/"><code>mgga_x_mbeef</code></a>. The training was carried out in conjunction with a correlation functional that consists of a combination of <a class="functional-link" href="../lda-c-pw/"><code>lda_c_pw</code></a>, <a class="functional-link" href="../gga-c-pbe-sol/"><code>gga_c_pbe_sol</code></a>, and the non-local vdW-DF2 term,<sup class="citation-marker"><a href="#review-ref-Lee2010-081101">536</a></sup> whose mixing coefficients were also optimized, leading to the values 0.41, 0.36, and 0.89, respectively. As for its predecessors, a regularization was applied to obtain a smooth exchange functional. It should be noted that neither <a class="functional-link" href="../mgga-x-mbeefvdw/"><code>mgga_x_mbeefvdw</code></a> nor the correlation part reduce to the correct LDA limit for the HEG.</p>
+<p>The empirical mBEEF-vdW functional was developed for accuracy for a wide range of systems and properties. Its construction follows the strategy used for its predecessors, <a class="functional-link" href="../gga-xc-beefvdw/"><code>gga_xc_beefvdw</code></a> and <a class="functional-link" href="../mgga-x-mbeef/"><code>mgga_x_mbeef</code></a>. The exchange part of mBEEF-vdW, <a class="functional-link" href="../mgga-x-mbeefvdw/"><code>mgga_x_mbeefvdw</code></a>, is given by <a class="review-eq-link" href="#review-eq-eq-mBEEF"><span class="eq-number">Eq. (610)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="F_\text{x}^\text{mBEEF} = \sum_{m=0}^{M}\sum_{n=0}^{N} a_{mn} B_m[r(s_\sigma)] B_n[f(\alpha_\sigma)]"></span></span></a> with $M=N=4$, while $M=N=7$ was used for <a class="functional-link" href="../mgga-x-mbeef/"><code>mgga_x_mbeef</code></a>. The training sets used for the optimization of the 25 coefficients $a_{mn}$ in <a class="review-eq-link" href="#review-eq-eq-mBEEF"><span class="eq-number">Eq. (610)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="F_\text{x}^\text{mBEEF} = \sum_{m=0}^{M}\sum_{n=0}^{N} a_{mn} B_m[r(s_\sigma)] B_n[f(\alpha_\sigma)]"></span></span></a> are essentially the same as the ones used for <a class="functional-link" href="../gga-xc-beefvdw/"><code>gga_xc_beefvdw</code></a> and <a class="functional-link" href="../mgga-x-mbeef/"><code>mgga_x_mbeef</code></a>. The training was carried out in conjunction with a correlation functional that consists of a combination of <a class="functional-link" href="../lda-c-pw/"><code>lda_c_pw</code></a>, <a class="functional-link" href="../gga-c-pbe-sol/"><code>gga_c_pbe_sol</code></a>, and the non-local vdW-DF2 term,<sup class="citation-marker"><a href="#review-ref-Lee2010-081101">536</a></sup> whose mixing coefficients were also optimized, leading to the values 0.41, 0.36, and 0.89, respectively. As for its predecessors, a regularization was applied to obtain a smooth exchange functional. It should be noted that neither <a class="functional-link" href="../mgga-x-mbeefvdw/"><code>mgga_x_mbeefvdw</code></a> nor the correlation part reduce to the correct LDA limit for the HEG.</p>
 <p>A comparison with numerous other GGA and MGGA functionals shows that mBEEF-vdW is among the most accurate functionals for many of the considered properties.</p>
         </div>
         <p class="source-note">Adapted from <a href="https://arxiv.org/abs/2602.17333">Tran, Lehtola, Pittalis, and Marques, <em>Semi-Local Exchange-Correlation Approximations in Density Functional Theory</em>, arXiv:2602.17333</a>.</p>
@@ -60,7 +53,7 @@
           <h2>Referenced Review Equations</h2>
           <div class="review-equations">
           <article class="review-equation-card" id="review-eq-eq-mBEEF">
-            <code>eq:mBEEF</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (610)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=112" title="Open page 112 of the review PDF">p. 112 ↗</a></p>
             <div class="equation" data-tex="F_\text{x}^\text{mBEEF} = \sum_{m=0}^{M}\sum_{n=0}^{N} a_{mn} B_m[r(s_\sigma)] B_n[f(\alpha_\sigma)]"></div>
           </article>
 

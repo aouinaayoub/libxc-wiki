@@ -3,14 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>gga_x_n12</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20261016-excerpts-v1">
-    <script defer src="../../assets/search.js?v=20261016-excerpts-v1"></script>
+    <title>gga_x_n12 — Minnesota N12 exchange functional · Libxc Wiki</title>
+    <meta name="description" content="gga_x_n12: Minnesota N12 exchange functional. GGA exchange functional in Libxc, with references and BibTeX. Includes an excerpt from the Tran, Lehtola, Pittalis and Marques review.">
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261117-refs-v1">
+    <script defer src="../../assets/search.js?v=20261117-refs-v1"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
     <script defer src="../../vendor/katex/contrib/mhchem.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20261016-excerpts-v1"></script>
+    <script defer src="../../assets/detail.js?v=20261117-refs-v1"></script>
 
   </head>
   <body class="functional-page">
@@ -32,43 +33,20 @@
 
         <p class="brand">GGA</p>
         <h1><code class="title-code">gga_x_n12</code></h1>
+        <p class="functional-name">Minnesota N12 exchange functional</p>
         <div class="detail-tags"><span class="tag">gga</span>
 <span class="tag">exchange</span></div>
       </header>
 
       <div class="detail-grid">
+
       <section class="callout">
         <p class="callout-label">Review excerpt</p>
         <div class="review-html">
 <p>The enhancement factor of this functional is defined by a power series</p>
 <div class="equation" data-tex="F_\text{xc}^\text{N12} = \sum_{i=0}^m\sum_{j=0}^{m&#39;} a_{ij} \tilde{u}_\sigma^i v_\sigma^j"></div>
-<p>where $\tilde{u}_\sigma=\tilde{u}(x_\sigma)$ given by <a class="review-eq-link" href="#review-eq-eq-ubecke">
-  <code>eq:ubecke</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="\tilde{u}(x) = \frac{\gamma x^2}{1 +\gamma x^2}"></span>
-  </span>
-</a> that was originally used by Becke<sup class="citation-marker"><a href="#review-ref-Becke1986-4524">172</a></sup> in his functional <a class="functional-link" href="../gga-x-b86/"><code>gga_x_b86</code></a>, and $\tilde{v}_\sigma$ is <a class="review-eq-link" href="#review-eq-eq-v">
-  <code>eq:v</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="\tilde{v}_\sigma = \frac{\omega_\sigma n_\sigma^{1/3}}{1 + \omega_\sigma n_\sigma^{1/3}}"></span>
-  </span>
-</a>. This form was inspired by the expansions proposed in earlier works.<sup class="citation-marker"><a href="#review-ref-Becke1997-8554">389</a>,<a href="#review-ref-Liu1997-1792">565</a></sup> It is important to note that $F_\text{xc}^\text{N12}$ not only depends on the reduced-density gradient $x_\sigma$ (or $s_\sigma$) as a GGA exchange functional usually does, but it also depends on the density $n_\sigma$ (i.e., $F_\text{xc}^\text{N12}=F_\text{xc}^\text{N12}(n_\sigma,x_\sigma)$).</p>
-<p>The expansion was truncated at $m=m&#39;=3$ (16 linear parameters), which was concluded as large enough for good accuracy without leading to numerical instability. The value $\gamma_{\sigma}=0.004$ for the parameter in <a class="review-eq-link" href="#review-eq-eq-ubecke">
-  <code>eq:ubecke</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="\tilde{u}(x) = \frac{\gamma x^2}{1 +\gamma x^2}"></span>
-  </span>
-</a> is originally from <a class="functional-link" href="../gga-x-b86/"><code>gga_x_b86</code></a>, while $\omega_{\sigma}=2.5$ in <a class="review-eq-link" href="#review-eq-eq-v">
-  <code>eq:v</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="\tilde{v}_\sigma = \frac{\omega_\sigma n_\sigma^{1/3}}{1 + \omega_\sigma n_\sigma^{1/3}}"></span>
-  </span>
-</a> was determined in <sup class="citation-marker"><a href="#review-ref-Peverati2012-2310">170</a></sup>. The coefficients $a_{00}$, $a_{10}$, $a_{20}$, and $a_{30}$ were obtained analytically from the expansion to third order in $\tilde{u}_\sigma$ of <a class="functional-link" href="../gga-x-pbe-sol/"><code>gga_x_pbe_sol</code></a>. As such, in the low-density limit <a class="review-eq-link" href="#review-eq-eq-fxcn12">
-  <code>eq:fxcn12</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="F_\text{xc}^\text{N12} = \sum_{i=0}^m\sum_{j=0}^{m&#39;} a_{ij} \tilde{u}_\sigma^i v_\sigma^j"></span>
-  </span>
-</a> reduces to <a class="functional-link" href="../gga-x-pbe-sol/"><code>gga_x_pbe_sol</code></a> and to <a class="functional-link" href="../lda-x/"><code>lda_x</code></a> if $x_\sigma=0$. The remaining parameters were fit together with the parameters of the correlation part <a class="functional-link" href="../gga-c-n12/"><code>gga_c_n12</code></a> to a series of databases including both energetic and structural data of molecules and solids.</p>
+<p>where $\tilde{u}_\sigma=\tilde{u}(x_\sigma)$ given by <a class="review-eq-link" href="#review-eq-eq-ubecke"><span class="eq-number">Eq. (251)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="\tilde{u}(x) = \frac{\gamma x^2}{1 +\gamma x^2}"></span></span></a> that was originally used by Becke<sup class="citation-marker"><a href="#review-ref-Becke1986-4524">172</a></sup> in his functional <a class="functional-link" href="../gga-x-b86/"><code>gga_x_b86</code></a>, and $\tilde{v}_\sigma$ is <a class="review-eq-link" href="#review-eq-eq-v"><span class="eq-number">Eq. (39)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="\tilde{v}_\sigma = \frac{\omega_\sigma n_\sigma^{1/3}}{1 + \omega_\sigma n_\sigma^{1/3}}"></span></span></a>. This form was inspired by the expansions proposed in earlier works.<sup class="citation-marker"><a href="#review-ref-Becke1997-8554">389</a>,<a href="#review-ref-Liu1997-1792">565</a></sup> It is important to note that $F_\text{xc}^\text{N12}$ not only depends on the reduced-density gradient $x_\sigma$ (or $s_\sigma$) as a GGA exchange functional usually does, but it also depends on the density $n_\sigma$ (i.e., $F_\text{xc}^\text{N12}=F_\text{xc}^\text{N12}(n_\sigma,x_\sigma)$).</p>
+<p>The expansion was truncated at $m=m&#39;=3$ (16 linear parameters), which was concluded as large enough for good accuracy without leading to numerical instability. The value $\gamma_{\sigma}=0.004$ for the parameter in <a class="review-eq-link" href="#review-eq-eq-ubecke"><span class="eq-number">Eq. (251)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="\tilde{u}(x) = \frac{\gamma x^2}{1 +\gamma x^2}"></span></span></a> is originally from <a class="functional-link" href="../gga-x-b86/"><code>gga_x_b86</code></a>, while $\omega_{\sigma}=2.5$ in <a class="review-eq-link" href="#review-eq-eq-v"><span class="eq-number">Eq. (39)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="\tilde{v}_\sigma = \frac{\omega_\sigma n_\sigma^{1/3}}{1 + \omega_\sigma n_\sigma^{1/3}}"></span></span></a> was determined in ref. <span class="citation-ref"><a href="#review-ref-Peverati2012-2310">170</a></span>. The coefficients $a_{00}$, $a_{10}$, $a_{20}$, and $a_{30}$ were obtained analytically from the expansion to third order in $\tilde{u}_\sigma$ of <a class="functional-link" href="../gga-x-pbe-sol/"><code>gga_x_pbe_sol</code></a>. As such, in the low-density limit <a class="review-eq-link" href="#review-eq-eq-fxcn12"><span class="eq-number">Eq. (433)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="F_\text{xc}^\text{N12} = \sum_{i=0}^m\sum_{j=0}^{m&#39;} a_{ij} \tilde{u}_\sigma^i v_\sigma^j"></span></span></a> reduces to <a class="functional-link" href="../gga-x-pbe-sol/"><code>gga_x_pbe_sol</code></a> and to <a class="functional-link" href="../lda-x/"><code>lda_x</code></a> if $x_\sigma=0$. The remaining parameters were fit together with the parameters of the correlation part <a class="functional-link" href="../gga-c-n12/"><code>gga_c_n12</code></a> to a series of databases including both energetic and structural data of molecules and solids.</p>
 <p>N12 (<a class="functional-link" href="../gga-x-n12/"><code>gga_x_n12</code></a> + <a class="functional-link" href="../gga-c-n12/"><code>gga_c_n12</code></a>) was then tested on a few properties or types of systems (e.g., semiconductors band gaps or cohesive energies of solids) that were not used in the training set. The results were quite accurate except for the band gaps.</p>
         </div>
         <p class="source-note">Adapted from <a href="https://arxiv.org/abs/2602.17333">Tran, Lehtola, Pittalis, and Marques, <em>Semi-Local Exchange-Correlation Approximations in Density Functional Theory</em>, arXiv:2602.17333</a>.</p>
@@ -78,17 +56,17 @@
           <h2>Referenced Review Equations</h2>
           <div class="review-equations">
           <article class="review-equation-card" id="review-eq-eq-ubecke">
-            <code>eq:ubecke</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (251)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=34" title="Open page 34 of the review PDF">p. 34 ↗</a></p>
             <div class="equation" data-tex="\tilde{u}(x) = \frac{\gamma x^2}{1 +\gamma x^2}"></div>
           </article>
 
           <article class="review-equation-card" id="review-eq-eq-v">
-            <code>eq:v</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (39)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=12" title="Open page 12 of the review PDF">p. 12 ↗</a></p>
             <div class="equation" data-tex="\tilde{v}_\sigma = \frac{\omega_\sigma n_\sigma^{1/3}}{1 + \omega_\sigma n_\sigma^{1/3}}"></div>
           </article>
 
           <article class="review-equation-card" id="review-eq-eq-fxcn12">
-            <code>eq:fxcn12</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (433)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=70" title="Open page 70 of the review PDF">p. 70 ↗</a></p>
             <div class="equation" data-tex="F_\text{xc}^\text{N12} = \sum_{i=0}^m\sum_{j=0}^{m&#39;} a_{ij} \tilde{u}_\sigma^i v_\sigma^j"></div>
           </article>
 

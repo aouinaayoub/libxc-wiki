@@ -3,14 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>hyb_gga_xc_camy_b3lyp</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20261016-excerpts-v1">
-    <script defer src="../../assets/search.js?v=20261016-excerpts-v1"></script>
+    <title>hyb_gga_xc_camy_b3lyp — CAMY version of B3LYP · Libxc Wiki</title>
+    <meta name="description" content="hyb_gga_xc_camy_b3lyp: CAMY version of B3LYP. Hybrid exchange-correlation functional in Libxc, with references and BibTeX.">
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261117-refs-v1">
+    <script defer src="../../assets/search.js?v=20261117-refs-v1"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
     <script defer src="../../vendor/katex/contrib/mhchem.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20261016-excerpts-v1"></script>
+    <script defer src="../../assets/detail.js?v=20261117-refs-v1"></script>
 
   </head>
   <body class="functional-page">
@@ -32,18 +33,28 @@
 
         <p class="brand">HYBRID</p>
         <h1><code class="title-code">hyb_gga_xc_camy_b3lyp</code></h1>
+        <p class="functional-name">CAMY version of B3LYP</p>
         <div class="detail-tags"><span class="tag">hybrid</span>
 <span class="tag">exchange</span>
 <span class="tag">correlation</span></div>
       </header>
 
       <div class="detail-grid">
+        <section class="section key-parameters">
+          <h2>Key parameters</h2>
+          <dl class="param-list">
+            <dt>Exact exchange</dt><dd>19% short range → 65% long range <span class="param-raw">cam_alpha = 0.65, cam_beta = −0.46</span></dd>
+            <dt>Range separation</dt><dd>ω = 0.34 bohr<sup>−1</sup></dd>
+          </dl>
+          <p class="param-note">Default values in Libxc.</p>
+        </section>
+
 
 
 
         <section class="section">
           <h2>Publications</h2>
-          <ol class="publication-refs"><li>Seth, Michael; Ziegler, Tom. Range-Separated Exchange Functionals with Slater-Type Functions. <em>J. Chem. Theory Comput.</em> <strong>2012</strong>, <em>8</em>, 901-907 DOI: <a href="https://doi.org/10.1021/ct300006h">10.1021/ct300006h</a></li></ol>
+          <ol class="publication-refs"><li>Seth, Michael; Ziegler, Tom. Range-Separated Exchange Functionals with Slater-Type Functions. <em>J. Chem. Theory Comput.</em> <strong>2012</strong>, <em>8</em>, 901-907, DOI: <a href="https://doi.org/10.1021/ct300006h">10.1021/ct300006h</a></li></ol>
         </section>
 
         <section class="section">
@@ -72,12 +83,12 @@
             <dt>family</dt><dd>hybrid</dd>
             <dt>kind</dt><dd>exchange_correlation</dd>
             <dt>derivatives</dt><dd>0, 1, 2</dd>
-            <dt>flags</dt><dd>dim3, exc, fxc, vxc, enforce_fhc, hym_camy</dd>
-<dt>cam_alpha</dt><dd>null</dd>
-<dt>cam_beta</dt><dd>null</dd>
-<dt>cam_omega</dt><dd>null</dd>
+            <dt>flags</dt><dd>dim3, exc, fxc, vxc, enforce_fhc, hyb_camy</dd>
+<dt>cam_alpha</dt><dd>0.65</dd>
+<dt>cam_beta</dt><dd>-0.46</dd>
+<dt>cam_omega</dt><dd>0.34</dd>
 <dt>density_threshold</dt><dd>1.0e-15</dd>
-<dt>exx_coefficient</dt><dd>0.65</dd>
+<dt>exx_coefficient</dt><dd>null</dd>
 <dt>n_spin</dt><dd>1</dd>
 <dt>nlc_C</dt><dd>null</dd>
 <dt>nlc_b</dt><dd>null</dd>

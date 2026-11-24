@@ -3,14 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>lda_xc_zlp</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20261016-excerpts-v1">
-    <script defer src="../../assets/search.js?v=20261016-excerpts-v1"></script>
+    <title>lda_xc_zlp — Zhao, Levy &amp; Parr, Eq. (20) · Libxc Wiki</title>
+    <meta name="description" content="lda_xc_zlp: Zhao, Levy &amp; Parr, Eq. (20). LDA exchange-correlation functional in Libxc, with references and BibTeX. Includes an excerpt from the Tran, Lehtola, Pittalis and Marques review.">
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261117-refs-v1">
+    <script defer src="../../assets/search.js?v=20261117-refs-v1"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
     <script defer src="../../vendor/katex/contrib/mhchem.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20261016-excerpts-v1"></script>
+    <script defer src="../../assets/detail.js?v=20261117-refs-v1"></script>
 
   </head>
   <body class="functional-page">
@@ -32,33 +33,25 @@
 
         <p class="brand">LDA</p>
         <h1><code class="title-code">lda_xc_zlp</code></h1>
+        <p class="functional-name">Zhao, Levy &amp; Parr, Eq. (20)</p>
         <div class="detail-tags"><span class="tag">lda</span>
 <span class="tag">exchange</span>
 <span class="tag">correlation</span></div>
       </header>
 
       <div class="detail-grid">
+
       <section class="callout">
         <p class="callout-label">Review excerpt</p>
         <div class="review-html">
 <p>The functional proposed by Zhao et al.<sup class="citation-marker"><a href="#review-ref-Zhao1993-918">471</a></sup> was derived with the help of the relationship between the universal kinetic-energy and electron-electron repulsion functionals,<sup class="citation-marker"><a href="#review-ref-Levy1991-4637">257</a></sup> from which it can be deduced that</p>
 <div class="equation" data-tex="e_\text{xc}[n] = \int_0^1{\rm d}\lambda \lambda \tilde{e}_\text{xc}[n_{1/\lambda}]"></div>
-<p>where $n_\lambda(\br) = \lambda^3 n(\lambda \br)$ and $\lambda$ is the coupling constant. With <a class="review-eq-link" href="#review-eq-eq-scalingLevy">
-  <code>eq:scalingLevy</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="e_\text{xc}[n] = \int_0^1{\rm d}\lambda \lambda \tilde{e}_\text{xc}[n_{1/\lambda}]"></span>
-  </span>
-</a> a new functional $e_\text{xc}$ can be obtained from an existing $\tilde{e}_\text{xc}$. Choosing <a class="functional-link" href="../lda-xc-lp-b/"><code>lda_xc_lp_b</code></a> for $\tilde{e}_\text{xc}$ (i.e., Wigner-type form, <a class="review-eq-link" href="#review-eq-eq-ldacwigner">
-  <code>eq:ldacwigner</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="e_\text{c}^\text{Wigner}(r_s) = -\frac{a}{b + r_s}"></span>
-  </span>
-</a>), the following analytical form is obtained:</p>
+<p>where $n_\lambda(\br) = \lambda^3 n(\lambda \br)$ and $\lambda$ is the coupling constant. With <a class="review-eq-link" href="#review-eq-eq-scalingLevy"><span class="eq-number">Eq. (348)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="e_\text{xc}[n] = \int_0^1{\rm d}\lambda \lambda \tilde{e}_\text{xc}[n_{1/\lambda}]"></span></span></a> a new functional $e_\text{xc}$ can be obtained from an existing $\tilde{e}_\text{xc}$. Choosing <a class="functional-link" href="../lda-xc-lp-b/"><code>lda_xc_lp_b</code></a> for $\tilde{e}_\text{xc}$ (i.e., Wigner-type form, <a class="review-eq-link" href="#review-eq-eq-ldacwigner"><span class="eq-number">Eq. (270)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="e_\text{c}^\text{Wigner}(r_s) = -\frac{a}{b + r_s}"></span></span></a>), the following analytical form is obtained:</p>
 <div class="equation" data-tex="\begin{aligned}
 e_\text{xc}^{\text{ZLP-LDA}}(n) = &amp; -a_0 n^{1/3}  \\
   &amp; \times \bigg[1-\kappa n^{1/3}   \ln \bigg(1 + \frac{1}{\kappa n^{1/3}}\bigg)\bigg]
 \end{aligned}"></div>
-<p>where the parameters were determined the same way as in <sup class="citation-marker"><a href="#review-ref-Lee1990-193">468</a></sup> (<a class="functional-link" href="../lda-xc-lp-a/"><code>lda_xc_lp_a</code></a>, etc.), leading to $a_0 = 0.93222$ and $\kappa = 9.47362\times 10^{-3}$. Note that no spin-polarized formulation of this functional was provided by Zhao et al.<sup class="citation-marker"><a href="#review-ref-Zhao1993-918">471</a></sup>. Also note that the functional <a class="functional-link" href="../mgga-xc-zlp/"><code>mgga_xc_zlp</code></a> was constructed using the same procedure.</p>
+<p>where the parameters were determined the same way as in ref. <span class="citation-ref"><a href="#review-ref-Lee1990-193">468</a></span> (<a class="functional-link" href="../lda-xc-lp-a/"><code>lda_xc_lp_a</code></a>, etc.), leading to $a_0 = 0.93222$ and $\kappa = 9.47362\times 10^{-3}$. Note that no spin-polarized formulation of this functional was provided by Zhao et al.<sup class="citation-marker"><a href="#review-ref-Zhao1993-918">471</a></sup>. Also note that the functional <a class="functional-link" href="../mgga-xc-zlp/"><code>mgga_xc_zlp</code></a> was constructed using the same procedure.</p>
         </div>
         <p class="source-note">Adapted from <a href="https://arxiv.org/abs/2602.17333">Tran, Lehtola, Pittalis, and Marques, <em>Semi-Local Exchange-Correlation Approximations in Density Functional Theory</em>, arXiv:2602.17333</a>.</p>
       </section>
@@ -67,12 +60,12 @@ e_\text{xc}^{\text{ZLP-LDA}}(n) = &amp; -a_0 n^{1/3}  \\
           <h2>Referenced Review Equations</h2>
           <div class="review-equations">
           <article class="review-equation-card" id="review-eq-eq-scalingLevy">
-            <code>eq:scalingLevy</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (348)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=50" title="Open page 50 of the review PDF">p. 50 ↗</a></p>
             <div class="equation" data-tex="e_\text{xc}[n] = \int_0^1{\rm d}\lambda \lambda \tilde{e}_\text{xc}[n_{1/\lambda}]"></div>
           </article>
 
           <article class="review-equation-card" id="review-eq-eq-ldacwigner">
-            <code>eq:ldacwigner</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (270)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=37" title="Open page 37 of the review PDF">p. 37 ↗</a></p>
             <div class="equation" data-tex="e_\text{c}^\text{Wigner}(r_s) = -\frac{a}{b + r_s}"></div>
           </article>
 

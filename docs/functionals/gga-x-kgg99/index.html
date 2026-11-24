@@ -3,14 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>gga_x_kgg99</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20261016-excerpts-v1">
-    <script defer src="../../assets/search.js?v=20261016-excerpts-v1"></script>
+    <title>gga_x_kgg99 — Gilbert and Gill 1999 (mixed) · Libxc Wiki</title>
+    <meta name="description" content="gga_x_kgg99: Gilbert and Gill 1999 (mixed). GGA exchange functional in Libxc, with references and BibTeX. Includes an excerpt from the Tran, Lehtola, Pittalis and Marques review.">
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261117-refs-v1">
+    <script defer src="../../assets/search.js?v=20261117-refs-v1"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
     <script defer src="../../vendor/katex/contrib/mhchem.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20261016-excerpts-v1"></script>
+    <script defer src="../../assets/detail.js?v=20261117-refs-v1"></script>
 
   </head>
   <body class="functional-page">
@@ -32,11 +33,13 @@
 
         <p class="brand">GGA</p>
         <h1><code class="title-code">gga_x_kgg99</code></h1>
+        <p class="functional-name">Gilbert and Gill 1999 (mixed)</p>
         <div class="detail-tags"><span class="tag">gga</span>
 <span class="tag">exchange</span></div>
       </header>
 
       <div class="detail-grid">
+
       <section class="callout">
         <p class="callout-label">Review excerpt</p>
         <div class="review-html">
@@ -50,41 +53,26 @@ F_\text{x}^{\text{GG99}} = \frac{1}{C_{\text{x}}}
 \end{aligned}"></div>
 <p>where $\dilog$ is the dilogarithm function. The reduced-density gradient is given by</p>
 <div class="equation" data-tex="x_\sigma(r) = 2 \pi \sinh(r) \left[\frac{\sech(r)}{3}\right]^{1/3}"></div>
-<p>which is an equation that has to be inverted to obtain $r$, either analytically (see Eq. (22) of Gilbert and Gill<sup class="citation-marker"><a href="#review-ref-Gilbert1999-511">509</a></sup>) or numerically, so that it can be used in an implementation of <a class="review-eq-link" href="#review-eq-eq-gg99">
-  <code>eq:gg99</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="\begin{aligned}
+<p>which is an equation that has to be inverted to obtain $r$, either analytically (see Eq. (22) of Gilbert and Gill<sup class="citation-marker"><a href="#review-ref-Gilbert1999-511">509</a></sup>) or numerically, so that it can be used in an implementation of <a class="review-eq-link" href="#review-eq-eq-gg99"><span class="eq-number">Eq. (389)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="\begin{aligned}
 F_\text{x}^{\text{GG99}} = \frac{1}{C_{\text{x}}}
   \frac{\pi^2 - 12 r\ln\left(1+\E^{-2r}\right) + 12 \dilog\left(-\E^{-2r}\right)}
   {2\times3^{1/3}\pi r \sech^{2/3}(r)}
-\end{aligned}"></span>
-  </span>
-</a>.</p>
+\end{aligned}"></span></span></a>.</p>
 <p>From the small-gradient expansion of this functional given by</p>
 <div class="equation" data-tex="\begin{aligned}
 \lim_{x_\sigma\to 0} F_\text{x}^{\text{GG99}} \approx &amp; 0.9864 + 0.004827 x_\sigma^2  \\
   &amp;- 0.00002194 x_\sigma^4
 \end{aligned}"></div>
-<p>it is interesting to observe that the functional reduces to $F_{\text{x}} \approx 0.9864$ for the HEG, which is quite close to <a class="functional-link" href="../lda-x/"><code>lda_x</code></a> ($F_{\text{x}}=1$), even if the <a class="functional-link" href="../lda-x/"><code>lda_x</code></a> limit was not used in the construction of <a class="functional-link" href="../gga-x-gg99/"><code>gga_x_gg99</code></a>. Furthermore, the quadratic term in <a class="review-eq-link" href="#review-eq-eq-fg999exp">
-  <code>eq:fg999exp</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="\begin{aligned}
+<p>it is interesting to observe that the functional reduces to $F_{\text{x}} \approx 0.9864$ for the HEG, which is quite close to <a class="functional-link" href="../lda-x/"><code>lda_x</code></a> ($F_{\text{x}}=1$), even if the <a class="functional-link" href="../lda-x/"><code>lda_x</code></a> limit was not used in the construction of <a class="functional-link" href="../gga-x-gg99/"><code>gga_x_gg99</code></a>. Furthermore, the quadratic term in <a class="review-eq-link" href="#review-eq-eq-fg999exp"><span class="eq-number">Eq. (391)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="\begin{aligned}
 \lim_{x_\sigma\to 0} F_\text{x}^{\text{GG99}} \approx &amp; 0.9864 + 0.004827 x_\sigma^2  \\
 
   &amp;- 0.00002194 x_\sigma^4
-\end{aligned}"></span>
-  </span>
-</a> is remarkably close to the corresponding value $\beta/C_{\text{x}}=0.0042/C_{\text{x}} \approx 0.004514$ obtained by Becke in <a class="functional-link" href="../gga-x-b88/"><code>gga_x_b88</code></a> by fitting to HF exchange energies of rare-gas atoms.</p>
-<p>The <a class="functional-link" href="../gga-x-gg99/"><code>gga_x_gg99</code></a> functional was found to consistently underestimate the absolute value of the exchange energy in the bonding regions of molecules. To correct for this behavior, Gilbert and Gill<sup class="citation-marker"><a href="#review-ref-Gilbert1999-511">509</a></sup> proposed adding a constant to <a class="review-eq-link" href="#review-eq-eq-gg99">
-  <code>eq:gg99</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="\begin{aligned}
+\end{aligned}"></span></span></a> is remarkably close to the corresponding value $\beta/C_{\text{x}}=0.0042/C_{\text{x}} \approx 0.004514$ obtained by Becke in <a class="functional-link" href="../gga-x-b88/"><code>gga_x_b88</code></a> by fitting to HF exchange energies of rare-gas atoms.</p>
+<p>The <a class="functional-link" href="../gga-x-gg99/"><code>gga_x_gg99</code></a> functional was found to consistently underestimate the absolute value of the exchange energy in the bonding regions of molecules. To correct for this behavior, Gilbert and Gill<sup class="citation-marker"><a href="#review-ref-Gilbert1999-511">509</a></sup> proposed adding a constant to <a class="review-eq-link" href="#review-eq-eq-gg99"><span class="eq-number">Eq. (389)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="\begin{aligned}
 F_\text{x}^{\text{GG99}} = \frac{1}{C_{\text{x}}}
   \frac{\pi^2 - 12 r\ln\left(1+\E^{-2r}\right) + 12 \dilog\left(-\E^{-2r}\right)}
   {2\times3^{1/3}\pi r \sech^{2/3}(r)}
-\end{aligned}"></span>
-  </span>
-</a>:</p>
+\end{aligned}"></span></span></a>:</p>
 <div class="equation" data-tex="F_\text{x}^{\kappa\text{GG99}} = F_\text{x}^{\text{GG99}} - \frac{\kappa}{C_\text{x}}"></div>
 <p>By a simple minimization procedure they obtained the value $\kappa = -0.047$, thus defining the <a class="functional-link" href="../gga-x-kgg99/"><code>gga_x_kgg99</code></a> functional. By adding this term, the atomization energy of molecules is clearly improved. At $x_\sigma=0$, $F_\text{x}^{\kappa\text{GG99}} \approx 1.0369$, which is also close to <a class="functional-link" href="../lda-x/"><code>lda_x</code></a>.</p>
         </div>
@@ -95,7 +83,7 @@ F_\text{x}^{\text{GG99}} = \frac{1}{C_{\text{x}}}
           <h2>Referenced Review Equations</h2>
           <div class="review-equations">
           <article class="review-equation-card" id="review-eq-eq-gg99">
-            <code>eq:gg99</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (389)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=60" title="Open page 60 of the review PDF">p. 60 ↗</a></p>
             <div class="equation" data-tex="\begin{aligned}
 F_\text{x}^{\text{GG99}} = \frac{1}{C_{\text{x}}}
   \frac{\pi^2 - 12 r\ln\left(1+\E^{-2r}\right) + 12 \dilog\left(-\E^{-2r}\right)}
@@ -104,7 +92,7 @@ F_\text{x}^{\text{GG99}} = \frac{1}{C_{\text{x}}}
           </article>
 
           <article class="review-equation-card" id="review-eq-eq-fg999exp">
-            <code>eq:fg999exp</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (391)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=60" title="Open page 60 of the review PDF">p. 60 ↗</a></p>
             <div class="equation" data-tex="\begin{aligned}
 \lim_{x_\sigma\to 0} F_\text{x}^{\text{GG99}} \approx &amp; 0.9864 + 0.004827 x_\sigma^2  \\
 

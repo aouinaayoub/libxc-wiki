@@ -3,14 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>gga_x_ssb</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20261016-excerpts-v1">
-    <script defer src="../../assets/search.js?v=20261016-excerpts-v1"></script>
+    <title>gga_x_ssb — Swart, Sola and Bickelhaupt · Libxc Wiki</title>
+    <meta name="description" content="gga_x_ssb: Swart, Sola and Bickelhaupt. GGA exchange functional in Libxc, with references and BibTeX. Includes an excerpt from the Tran, Lehtola, Pittalis and Marques review.">
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261117-refs-v1">
+    <script defer src="../../assets/search.js?v=20261117-refs-v1"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
     <script defer src="../../vendor/katex/contrib/mhchem.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20261016-excerpts-v1"></script>
+    <script defer src="../../assets/detail.js?v=20261117-refs-v1"></script>
 
   </head>
   <body class="functional-page">
@@ -32,41 +33,23 @@
 
         <p class="brand">GGA</p>
         <h1><code class="title-code">gga_x_ssb</code></h1>
+        <p class="functional-name">Swart, Sola and Bickelhaupt</p>
         <div class="detail-tags"><span class="tag">gga</span>
 <span class="tag">exchange</span></div>
       </header>
 
       <div class="detail-grid">
+
       <section class="callout">
         <p class="callout-label">Review excerpt</p>
         <div class="review-html">
 <p>In an attempt to get a balanced exchange functional capable of yielding good results for a number of different properties such as $\pi$-$\pi$ stacking, hydrogen bonding, S$_\text{N}$2 barriers, and geometries of organic and organometallic systems, Swart et al.<sup class="citation-marker"><a href="#review-ref-Swart2009-094103">542</a></sup> proposed to mix their <a class="functional-link" href="../gga-x-ssb-sw/"><code>gga_x_ssb_sw</code></a> functional with <a class="functional-link" href="../gga-x-kt1/"><code>gga_x_kt1</code></a>:</p>
 <div class="equation" data-tex="F_\text{x}^\text{SSB} = F_\text{x}^\text{SSB-sw} + (F_\text{x}^\text{KT1}-1)"></div>
-<p>The parameters in <a class="review-eq-link" href="#review-eq-eq-f-kt1">
-  <code>eq:f-kt1</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="F_\text{x}^\text{KT1} = 1 -  \frac{\gamma}{C_\text{x}}
-  \frac{n_{\sigma}^{4/3}}{n_{\sigma}^{4/3}+\delta} x_\sigma^2"></span>
-  </span>
-</a>; <a class="review-eq-link" href="#review-eq-eq-fxssbsw">
-  <code>eq:fxssbsw</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="F_\text{x}^\text{SSB-sw} = a + \frac{b s_\sigma^2}{1 + c s_\sigma^2}
-  - \frac{d s_\sigma^2}{1 + e s_\sigma^4}"></span>
-  </span>
-</a> were redefined and reoptimized using a mixture of various properties and databases. This was done in combination with the correlation functional <a class="functional-link" href="../gga-c-spbe/"><code>gga_c_spbe</code></a> and either including or excluding Grimme&#39;s D2 dispersion correction,<sup class="citation-marker"><a href="#review-ref-Grimme2004-JCC-1463">543</a>,<a href="#review-ref-Grimme2006-1787">544</a></sup> leading to <a class="functional-link" href="../gga-x-ssb-d/"><code>gga_x_ssb_d</code></a> and <a class="functional-link" href="../gga-x-ssb/"><code>gga_x_ssb</code></a>, respectively. In <a class="review-eq-link" href="#review-eq-eq-f-kt1">
-  <code>eq:f-kt1</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="F_\text{x}^\text{KT1} = 1 -  \frac{\gamma}{C_\text{x}}
-  \frac{n_{\sigma}^{4/3}}{n_{\sigma}^{4/3}+\delta} x_\sigma^2"></span>
-  </span>
-</a> $\delta$ is unchanged ($\delta=0.1$), while $\gamma$ is defined as $\gamma=ufbC_\text{x}C_s^2$. In <a class="review-eq-link" href="#review-eq-eq-fxssbsw">
-  <code>eq:fxssbsw</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="F_\text{x}^\text{SSB-sw} = a + \frac{b s_\sigma^2}{1 + c s_\sigma^2}
-  - \frac{d s_\sigma^2}{1 + e s_\sigma^4}"></span>
-  </span>
-</a>, $d$ is defined as $d=b(1-u)$. The values of the parameters that were obtained after reoptimization with the constraint $a+b/c=1.804$ as in <a class="functional-link" href="../gga-x-ssb-sw/"><code>gga_x_ssb_sw</code></a> are as follows. For <a class="functional-link" href="../gga-x-ssb/"><code>gga_x_ssb</code></a> $a=1.071769$, $b=0.137574$, $c=0.187883$, $e=6.635315$, $u=-1.205643$, and $f=0.995010$. For <a class="functional-link" href="../gga-x-ssb-d/"><code>gga_x_ssb_d</code></a> $a=1.079966$, $b=0.197465$, $c=0.272729$, $e=5.873645$, $u=-0.749940$, $f=0.949488$, and $s_6=0.847455$, where $s_6$ is the parameter in Grimme&#39;s D2 correction.</p>
+<p>The parameters in <a class="review-eq-link" href="#review-eq-eq-f-kt1"><span class="eq-number">Eq. (398)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="F_\text{x}^\text{KT1} = 1 -  \frac{\gamma}{C_\text{x}}
+  \frac{n_{\sigma}^{4/3}}{n_{\sigma}^{4/3}+\delta} x_\sigma^2"></span></span></a>; <a class="review-eq-link" href="#review-eq-eq-fxssbsw"><span class="eq-number">Eq. (414)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="F_\text{x}^\text{SSB-sw} = a + \frac{b s_\sigma^2}{1 + c s_\sigma^2}
+  - \frac{d s_\sigma^2}{1 + e s_\sigma^4}"></span></span></a> were redefined and reoptimized using a mixture of various properties and databases. This was done in combination with the correlation functional <a class="functional-link" href="../gga-c-spbe/"><code>gga_c_spbe</code></a> and either including or excluding Grimme&#39;s D2 dispersion correction,<sup class="citation-marker"><a href="#review-ref-Grimme2004-JCC-1463">543</a>,<a href="#review-ref-Grimme2006-1787">544</a></sup> leading to <a class="functional-link" href="../gga-x-ssb-d/"><code>gga_x_ssb_d</code></a> and <a class="functional-link" href="../gga-x-ssb/"><code>gga_x_ssb</code></a>, respectively. In <a class="review-eq-link" href="#review-eq-eq-f-kt1"><span class="eq-number">Eq. (398)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="F_\text{x}^\text{KT1} = 1 -  \frac{\gamma}{C_\text{x}}
+  \frac{n_{\sigma}^{4/3}}{n_{\sigma}^{4/3}+\delta} x_\sigma^2"></span></span></a> $\delta$ is unchanged ($\delta=0.1$), while $\gamma$ is defined as $\gamma=ufbC_\text{x}C_s^2$. In <a class="review-eq-link" href="#review-eq-eq-fxssbsw"><span class="eq-number">Eq. (414)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="F_\text{x}^\text{SSB-sw} = a + \frac{b s_\sigma^2}{1 + c s_\sigma^2}
+  - \frac{d s_\sigma^2}{1 + e s_\sigma^4}"></span></span></a>, $d$ is defined as $d=b(1-u)$. The values of the parameters that were obtained after reoptimization with the constraint $a+b/c=1.804$ as in <a class="functional-link" href="../gga-x-ssb-sw/"><code>gga_x_ssb_sw</code></a> are as follows. For <a class="functional-link" href="../gga-x-ssb/"><code>gga_x_ssb</code></a> $a=1.071769$, $b=0.137574$, $c=0.187883$, $e=6.635315$, $u=-1.205643$, and $f=0.995010$. For <a class="functional-link" href="../gga-x-ssb-d/"><code>gga_x_ssb_d</code></a> $a=1.079966$, $b=0.197465$, $c=0.272729$, $e=5.873645$, $u=-0.749940$, $f=0.949488$, and $s_6=0.847455$, where $s_6$ is the parameter in Grimme&#39;s D2 correction.</p>
 <p>This functional corrects only a small region in the reduced-density gradient $s_\sigma$ space when compared to <a class="functional-link" href="../gga-x-pbe/"><code>gga_x_pbe</code></a>, but this leads to a large influence on the performance of the functional and several properties appear to be described quite well. This is true even for some systems put forward by Grimme as difficult cases.</p>
         </div>
         <p class="source-note">Adapted from <a href="https://arxiv.org/abs/2602.17333">Tran, Lehtola, Pittalis, and Marques, <em>Semi-Local Exchange-Correlation Approximations in Density Functional Theory</em>, arXiv:2602.17333</a>.</p>
@@ -76,13 +59,13 @@
           <h2>Referenced Review Equations</h2>
           <div class="review-equations">
           <article class="review-equation-card" id="review-eq-eq-f-kt1">
-            <code>eq:f-kt1</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (398)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=62" title="Open page 62 of the review PDF">p. 62 ↗</a></p>
             <div class="equation" data-tex="F_\text{x}^\text{KT1} = 1 -  \frac{\gamma}{C_\text{x}}
   \frac{n_{\sigma}^{4/3}}{n_{\sigma}^{4/3}+\delta} x_\sigma^2"></div>
           </article>
 
           <article class="review-equation-card" id="review-eq-eq-fxssbsw">
-            <code>eq:fxssbsw</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (414)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=66" title="Open page 66 of the review PDF">p. 66 ↗</a></p>
             <div class="equation" data-tex="F_\text{x}^\text{SSB-sw} = a + \frac{b s_\sigma^2}{1 + c s_\sigma^2}
   - \frac{d s_\sigma^2}{1 + e s_\sigma^4}"></div>
           </article>

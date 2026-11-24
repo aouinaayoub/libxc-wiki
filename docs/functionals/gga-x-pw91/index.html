@@ -3,14 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>gga_x_pw91</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20261016-excerpts-v1">
-    <script defer src="../../assets/search.js?v=20261016-excerpts-v1"></script>
+    <title>gga_x_pw91 — Perdew &amp; Wang 91 · Libxc Wiki</title>
+    <meta name="description" content="gga_x_pw91: Perdew &amp; Wang 91. GGA exchange functional in Libxc, with references and BibTeX. Includes an excerpt from the Tran, Lehtola, Pittalis and Marques review.">
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261117-refs-v1">
+    <script defer src="../../assets/search.js?v=20261117-refs-v1"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
     <script defer src="../../vendor/katex/contrib/mhchem.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20261016-excerpts-v1"></script>
+    <script defer src="../../assets/detail.js?v=20261117-refs-v1"></script>
 
   </head>
   <body class="functional-page">
@@ -32,30 +33,22 @@
 
         <p class="brand">GGA</p>
         <h1><code class="title-code">gga_x_pw91</code></h1>
+        <p class="functional-name">Perdew &amp; Wang 91</p>
         <div class="detail-tags"><span class="tag">gga</span>
 <span class="tag">exchange</span></div>
       </header>
 
       <div class="detail-grid">
+
       <section class="callout">
         <p class="callout-label">Review excerpt</p>
         <div class="review-html">
-<p>The basic idea behind the construction of the PW91 functional (<a class="functional-link" href="../gga-x-pw91/"><code>gga_x_pw91</code></a> + <a class="functional-link" href="../gga-c-pw91/"><code>gga_c_pw91</code></a>) is to use a real-space cutoff to remove the spurious long-range contributions to the second-order density-gradient expansion of the xc hole. The exchange part of PW91 is based on the <a class="functional-link" href="../gga-x-b88/"><code>gga_x_b88</code></a> functional, but it further includes a Gaussian term to enforce the correct small-gradient limit, as well as a $x_\sigma^4$ term that ensures Levy&#39;s scaling inequality <sup class="citation-marker"><a href="#review-ref-Levy1991-4637">257</a></sup> and the LO bound (<a class="review-eq-link" href="#review-eq-eq-lieboxford3">
-  <code>eq:lieboxford3</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="E_\xc[n] \ge   E_\x[n] + W_\c[n]  \ge \lambda_\text{LO} E_\x^\text{LDA}[n]"></span>
-  </span>
-</a>). The enhancement factor reads</p>
+<p>The basic idea behind the construction of the PW91 functional (<a class="functional-link" href="../gga-x-pw91/"><code>gga_x_pw91</code></a> + <a class="functional-link" href="../gga-c-pw91/"><code>gga_c_pw91</code></a>) is to use a real-space cutoff to remove the spurious long-range contributions to the second-order density-gradient expansion of the xc hole. The exchange part of PW91 is based on the <a class="functional-link" href="../gga-x-b88/"><code>gga_x_b88</code></a> functional, but it further includes a Gaussian term to enforce the correct small-gradient limit, as well as a $x_\sigma^4$ term that ensures Levy&#39;s scaling inequality <sup class="citation-marker"><a href="#review-ref-Levy1991-4637">257</a></sup> and the LO bound (<a class="review-eq-link" href="#review-eq-eq-lieboxford3"><span class="eq-number">Eq. (113)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="E_\xc[n] \ge   E_\x[n] + W_\c[n]  \ge \lambda_\text{LO} E_\x^\text{LDA}[n]"></span></span></a>). The enhancement factor reads</p>
 <div class="equation" data-tex="F_\text{x}^{\text{PW91}} = 1 + 
   \frac{\left(c + d\E^{-\gamma s_\sigma^2}\right) s_\sigma^2 - f s_\sigma^\alpha}
   {1 + a s_\sigma \arcsinh(b s_\sigma) + f s_\sigma^\alpha}"></div>
-<p>The constants appeared in <sup class="citation-marker"><a href="#review-ref-Perdew1992-6671">488</a></sup> and <sup class="citation-marker"><a href="#review-ref-Perdew1993-4978">489</a></sup> with the values $a=0.19645$, $b=7.7956$, $c=0.2743$, $d=-0.1508$, and $f=0.004$. (The parameters $\alpha=4$ and $\gamma=100$ are included here for reasons that will become clear when discussing <a class="functional-link" href="../gga-x-mpw91/"><code>gga_x_mpw91</code></a> and <a class="functional-link" href="../gga-xc-opwlyp-d/"><code>gga_xc_opwlyp_d</code></a>). However, it should be underlined that these are not free parameters, and that they are related to $\beta^\text{B88}=0.0042$ in <a class="review-eq-link" href="#review-eq-eq-fxb88">
-  <code>eq:fxb88</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="F_\text{x}^{\text{B88}} = 1+\frac{\beta}{C_\text{x}}
-  \frac{x_\sigma^2}{1 + \gamma\beta x_\sigma\arcsinh(x_\sigma)}"></span>
-  </span>
-</a> of <a class="functional-link" href="../gga-x-b88/"><code>gga_x_b88</code></a> and to other fundamental constants:<sup class="citation-marker"><a href="#review-ref-Adamo1998-664">490</a></sup></p>
+<p>The constants appeared in refs. <span class="citation-ref"><a href="#review-ref-Perdew1992-6671">488</a></span> and <span class="citation-ref"><a href="#review-ref-Perdew1993-4978">489</a></span> with the values $a=0.19645$, $b=7.7956$, $c=0.2743$, $d=-0.1508$, and $f=0.004$. (The parameters $\alpha=4$ and $\gamma=100$ are included here for reasons that will become clear when discussing <a class="functional-link" href="../gga-x-mpw91/"><code>gga_x_mpw91</code></a> and <a class="functional-link" href="../gga-xc-opwlyp-d/"><code>gga_xc_opwlyp_d</code></a>). However, it should be underlined that these are not free parameters, and that they are related to $\beta^\text{B88}=0.0042$ in <a class="review-eq-link" href="#review-eq-eq-fxb88"><span class="eq-number">Eq. (372)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="F_\text{x}^{\text{B88}} = 1+\frac{\beta}{C_\text{x}}
+  \frac{x_\sigma^2}{1 + \gamma\beta x_\sigma\arcsinh(x_\sigma)}"></span></span></a> of <a class="functional-link" href="../gga-x-b88/"><code>gga_x_b88</code></a> and to other fundamental constants:<sup class="citation-marker"><a href="#review-ref-Adamo1998-664">490</a></sup></p>
 <div class="equation" data-tex="\begin{aligned}
 a &amp; = \frac{6 \beta^\text{B88}}{C_s}\,, &amp;
  b &amp; = \frac{1}{C_s}\,, &amp;
@@ -63,19 +56,14 @@ a &amp; = \frac{6 \beta^\text{B88}}{C_s}\,, &amp;
  d &amp; = \frac{\delta - \beta^\text{B88}}{C_\text{x} C_s^2}\,, &amp;
  f &amp; = \frac{10^{-6}}{C_\text{x} C_s^\alpha}
 \end{aligned}"></div>
-<p>where $\delta = 5(36\pi)^{-5/3}$. Note that the definition in <a class="review-eq-link" href="#review-eq-eq-pw91para">
-  <code>eq:pw91para</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="\begin{aligned}
+<p>where $\delta = 5(36\pi)^{-5/3}$. Note that the definition in <a class="review-eq-link" href="#review-eq-eq-pw91para"><span class="eq-number">Eq. (374)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="\begin{aligned}
 a &amp; = \frac{6 \beta^\text{B88}}{C_s}\,, &amp;
  b &amp; = \frac{1}{C_s}\,, &amp;
  c &amp; = \frac{\beta^\text{B88}}{C_\text{x} C_s^2}\,,  \\
 
  d &amp; = \frac{\delta - \beta^\text{B88}}{C_\text{x} C_s^2}\,, &amp;
  f &amp; = \frac{10^{-6}}{C_\text{x} C_s^\alpha}
-\end{aligned}"></span>
-  </span>
-</a> leads to $f \approx 0.003969$, which differs slightly from the value 0.004 mentioned above.</p>
+\end{aligned}"></span></span></a> leads to $f \approx 0.003969$, which differs slightly from the value 0.004 mentioned above.</p>
 <p>PW91 was the most commonly used functional in the solid-state community until the mid-1990s when its simplified successor PBE (<a class="functional-link" href="../gga-x-pbe/"><code>gga_x_pbe</code></a> + <a class="functional-link" href="../gga-c-pbe/"><code>gga_c_pbe</code></a>) arrived.</p>
         </div>
         <p class="source-note">Adapted from <a href="https://arxiv.org/abs/2602.17333">Tran, Lehtola, Pittalis, and Marques, <em>Semi-Local Exchange-Correlation Approximations in Density Functional Theory</em>, arXiv:2602.17333</a>.</p>
@@ -85,18 +73,18 @@ a &amp; = \frac{6 \beta^\text{B88}}{C_s}\,, &amp;
           <h2>Referenced Review Equations</h2>
           <div class="review-equations">
           <article class="review-equation-card" id="review-eq-eq-lieboxford3">
-            <code>eq:lieboxford3</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (113)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=17" title="Open page 17 of the review PDF">p. 17 ↗</a></p>
             <div class="equation" data-tex="E_\xc[n] \ge   E_\x[n] + W_\c[n]  \ge \lambda_\text{LO} E_\x^\text{LDA}[n]"></div>
           </article>
 
           <article class="review-equation-card" id="review-eq-eq-fxb88">
-            <code>eq:fxb88</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (372)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=55" title="Open page 55 of the review PDF">p. 55 ↗</a></p>
             <div class="equation" data-tex="F_\text{x}^{\text{B88}} = 1+\frac{\beta}{C_\text{x}}
   \frac{x_\sigma^2}{1 + \gamma\beta x_\sigma\arcsinh(x_\sigma)}"></div>
           </article>
 
           <article class="review-equation-card" id="review-eq-eq-pw91para">
-            <code>eq:pw91para</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (374)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=55" title="Open page 55 of the review PDF">p. 55 ↗</a></p>
             <div class="equation" data-tex="\begin{aligned}
 a &amp; = \frac{6 \beta^\text{B88}}{C_s}\,, &amp;
  b &amp; = \frac{1}{C_s}\,, &amp;
@@ -120,7 +108,7 @@ a &amp; = \frac{6 \beta^\text{B88}}{C_s}\,, &amp;
 
         <section class="section">
           <h2>Publications</h2>
-          <ol class="publication-refs"><li>Perdew, J. P.. J. P. Perdew. In P. Ziesche and H. Eschrig, editors, Proceedings of the 75. WE-Heraeus-Seminar and 21st Annual International Symposium on Electronic Structure of Solids, 11. Berlin, 1991. Akademie Verlag.</li>
+          <ol class="publication-refs"><li>Perdew, J. P. J. P. Perdew. In P. Ziesche and H. Eschrig, editors, Proceedings of the 75. WE-Heraeus-Seminar and 21st Annual International Symposium on Electronic Structure of Solids, 11. Berlin, 1991. Akademie Verlag.</li>
 <li>Perdew, J. P.; Chevary, J. A.; Vosko, S. H.; Jackson, K. A.; Pederson, M. R.; Singh, D. J.; Fiolhais, C. Atoms, molecules, solids, and surfaces: Applications of the generalized gradient approximation for exchange and correlation. <em>Phys. Rev. B</em> <strong>1992</strong>, <em>46</em>, 6671, DOI: <a href="https://doi.org/10.1103/PhysRevB.46.6671">10.1103/PhysRevB.46.6671</a></li>
 <li>Perdew, J. P.; Chevary, J. A.; Vosko, S. H.; Jackson, K. A.; Pederson, M. R.; Singh, D. J.; Fiolhais, C. Erratum: Atoms, molecules, solids, and surfaces: Applications of the generalized gradient approximation for exchange and correlation. <em>Phys. Rev. B</em> <strong>1993</strong>, <em>48</em>, 4978, DOI: <a href="https://doi.org/10.1103/PhysRevB.48.4978.2">10.1103/PhysRevB.48.4978.2</a></li></ol>
         </section>

@@ -3,14 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>gga_c_zvpbeloc</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20261016-excerpts-v1">
-    <script defer src="../../assets/search.js?v=20261016-excerpts-v1"></script>
+    <title>gga_c_zvpbeloc — PBEloc variation with enhanced compatibility with exact exchange · Libxc Wiki</title>
+    <meta name="description" content="gga_c_zvpbeloc: PBEloc variation with enhanced compatibility with exact exchange. GGA correlation functional in Libxc, with references and BibTeX. Includes an excerpt from the Tran, Lehtola, Pittalis and Marques review.">
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261117-refs-v1">
+    <script defer src="../../assets/search.js?v=20261117-refs-v1"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
     <script defer src="../../vendor/katex/contrib/mhchem.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20261016-excerpts-v1"></script>
+    <script defer src="../../assets/detail.js?v=20261117-refs-v1"></script>
 
   </head>
   <body class="functional-page">
@@ -32,33 +33,20 @@
 
         <p class="brand">GGA</p>
         <h1><code class="title-code">gga_c_zvpbeloc</code></h1>
+        <p class="functional-name">PBEloc variation with enhanced compatibility with exact exchange</p>
         <div class="detail-tags"><span class="tag">gga</span>
 <span class="tag">correlation</span></div>
       </header>
 
       <div class="detail-grid">
+
       <section class="callout">
         <p class="callout-label">Review excerpt</p>
         <div class="review-html">
-<p>The construction of this functional follows the same strategy as for <code>mgga_c_zvtpss</code> and <code>mgga_c_zvtpssloc</code>, which consists of multiplying the correlation energy density of an existing functional, here <a class="functional-link" href="../gga-c-pbeloc/"><code>gga_c_pbeloc</code></a>, by the function $f(\nu,\zeta)$ given by <a class="review-eq-link" href="#review-eq-eq-fzv">
-  <code>eq:fzv</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="f(\nu, \zeta) = \E^{-\alpha \nu^3(r_s,\zeta,t) |\zeta|^\omega}"></span>
-  </span>
-</a>. The goal is to improve compatibility with HF. The function $\nu$ in <a class="review-eq-link" href="#review-eq-eq-fzv">
-  <code>eq:fzv</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="f(\nu, \zeta) = \E^{-\alpha \nu^3(r_s,\zeta,t) |\zeta|^\omega}"></span>
-  </span>
-</a> is here given by</p>
+<p>The construction of this functional follows the same strategy as for <code>mgga_c_zvtpss</code> and <code>mgga_c_zvtpssloc</code>, which consists of multiplying the correlation energy density of an existing functional, here <a class="functional-link" href="../gga-c-pbeloc/"><code>gga_c_pbeloc</code></a>, by the function $f(\nu,\zeta)$ given by <a class="review-eq-link" href="#review-eq-eq-fzv"><span class="eq-number">Eq. (517)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="f(\nu, \zeta) = \E^{-\alpha \nu^3(r_s,\zeta,t) |\zeta|^\omega}"></span></span></a>. The goal is to improve compatibility with HF. The function $\nu$ in <a class="review-eq-link" href="#review-eq-eq-fzv"><span class="eq-number">Eq. (517)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="f(\nu, \zeta) = \E^{-\alpha \nu^3(r_s,\zeta,t) |\zeta|^\omega}"></span></span></a> is here given by</p>
 <div class="equation" data-tex="\nu(r_s,\left\vert\nabla n\right\vert) = A^{-1}\left\vert\nabla n\right\vert r_s^{10/3}"></div>
-<p>where $A=4\left[3/\left(4\pi^4\right)\right]^{1/18}\left[3/\left(4\pi\right)\right]^{10/9}$. The parameters $\omega=2.0$ and $\alpha=0.5$ in <a class="review-eq-link" href="#review-eq-eq-fzv">
-  <code>eq:fzv</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="f(\nu, \zeta) = \E^{-\alpha \nu^3(r_s,\zeta,t) |\zeta|^\omega}"></span>
-  </span>
-</a> were determined by requiring an accurate $\zeta$-dependence of the functional for $\zeta\gtrsim0.3$.</p>
-<p>Results for the atomization energies, barrier heights, and kinetic properties<sup class="citation-marker"><a href="#review-ref-Lynch2003-8996">631</a>,<a href="#review-ref-Lynch2004-1460">632</a>,<a href="#review-ref-Lynch2003-3898">644</a></sup> demonstrate that <a class="functional-link" href="../gga-c-zvpbeloc/"><code>gga_c_zvpbeloc</code></a> is more compatible with HF exchange than the other GGA correlation functionals <a class="functional-link" href="../gga-c-lyp/"><code>gga_c_lyp</code></a>, <a class="functional-link" href="../gga-c-pbe/"><code>gga_c_pbe</code></a>, and <a class="functional-link" href="../gga-c-pbeloc/"><code>gga_c_pbeloc</code></a>. <sup class="citation-marker"><a href="#review-ref-Fabiano2015-122">643</a></sup> also considered a hybrid functional that mixes <a class="functional-link" href="../gga-c-zvpbeloc/"><code>gga_c_zvpbeloc</code></a> with the APBE (<a class="functional-link" href="../gga-x-apbe/"><code>gga_x_apbe</code></a> + <a class="functional-link" href="../gga-c-apbe/"><code>gga_c_apbe</code></a>) functional and HF exchange.</p>
+<p>where $A=4\left[3/\left(4\pi^4\right)\right]^{1/18}\left[3/\left(4\pi\right)\right]^{10/9}$. The parameters $\omega=2.0$ and $\alpha=0.5$ in <a class="review-eq-link" href="#review-eq-eq-fzv"><span class="eq-number">Eq. (517)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="f(\nu, \zeta) = \E^{-\alpha \nu^3(r_s,\zeta,t) |\zeta|^\omega}"></span></span></a> were determined by requiring an accurate $\zeta$-dependence of the functional for $\zeta\gtrsim0.3$.</p>
+<p>Results for the atomization energies, barrier heights, and kinetic properties<sup class="citation-marker"><a href="#review-ref-Lynch2003-8996">631</a>,<a href="#review-ref-Lynch2004-1460">632</a>,<a href="#review-ref-Lynch2003-3898">644</a></sup> demonstrate that <a class="functional-link" href="../gga-c-zvpbeloc/"><code>gga_c_zvpbeloc</code></a> is more compatible with HF exchange than the other GGA correlation functionals <a class="functional-link" href="../gga-c-lyp/"><code>gga_c_lyp</code></a>, <a class="functional-link" href="../gga-c-pbe/"><code>gga_c_pbe</code></a>, and <a class="functional-link" href="../gga-c-pbeloc/"><code>gga_c_pbeloc</code></a>. Ref. <span class="citation-ref"><a href="#review-ref-Fabiano2015-122">643</a></span> also considered a hybrid functional that mixes <a class="functional-link" href="../gga-c-zvpbeloc/"><code>gga_c_zvpbeloc</code></a> with the APBE (<a class="functional-link" href="../gga-x-apbe/"><code>gga_x_apbe</code></a> + <a class="functional-link" href="../gga-c-apbe/"><code>gga_c_apbe</code></a>) functional and HF exchange.</p>
         </div>
         <p class="source-note">Adapted from <a href="https://arxiv.org/abs/2602.17333">Tran, Lehtola, Pittalis, and Marques, <em>Semi-Local Exchange-Correlation Approximations in Density Functional Theory</em>, arXiv:2602.17333</a>.</p>
       </section>
@@ -67,7 +55,7 @@
           <h2>Referenced Review Equations</h2>
           <div class="review-equations">
           <article class="review-equation-card" id="review-eq-eq-fzv">
-            <code>eq:fzv</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (517)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=90" title="Open page 90 of the review PDF">p. 90 ↗</a></p>
             <div class="equation" data-tex="f(\nu, \zeta) = \E^{-\alpha \nu^3(r_s,\zeta,t) |\zeta|^\omega}"></div>
           </article>
 

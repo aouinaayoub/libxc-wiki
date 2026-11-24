@@ -3,14 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>gga_x_vmt84_ge</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20261016-excerpts-v1">
-    <script defer src="../../assets/search.js?v=20261016-excerpts-v1"></script>
+    <title>gga_x_vmt84_ge — VMT{8,4} with constraint satisfaction with mu = mu_GE · Libxc Wiki</title>
+    <meta name="description" content="gga_x_vmt84_ge: VMT{8,4} with constraint satisfaction with mu = mu_GE. GGA exchange functional in Libxc, with references and BibTeX. Includes an excerpt from the Tran, Lehtola, Pittalis and Marques review.">
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261117-refs-v1">
+    <script defer src="../../assets/search.js?v=20261117-refs-v1"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
     <script defer src="../../vendor/katex/contrib/mhchem.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20261016-excerpts-v1"></script>
+    <script defer src="../../assets/detail.js?v=20261117-refs-v1"></script>
 
   </head>
   <body class="functional-page">
@@ -32,41 +33,23 @@
 
         <p class="brand">GGA</p>
         <h1><code class="title-code">gga_x_vmt84_ge</code></h1>
+        <p class="functional-name">VMT{8,4} with constraint satisfaction with mu = mu_GE</p>
         <div class="detail-tags"><span class="tag">gga</span>
 <span class="tag">exchange</span></div>
       </header>
 
       <div class="detail-grid">
+
       <section class="callout">
         <p class="callout-label">Review excerpt</p>
         <div class="review-html">
 <p>These functionals are evolutions of their predecessors <a class="functional-link" href="../gga-x-vmt-ge/"><code>gga_x_vmt_ge</code></a> and <a class="functional-link" href="../gga-x-vmt-pbe/"><code>gga_x_vmt_pbe</code></a>. While <a class="functional-link" href="../gga-x-vmt-ge/"><code>gga_x_vmt_ge</code></a> and <a class="functional-link" href="../gga-x-vmt-pbe/"><code>gga_x_vmt_pbe</code></a> do not satisfy the asymptotic condition<sup class="citation-marker"><a href="#review-ref-Levy1993-11638">192</a>,<a href="#review-ref-Levy1997-13321">193</a></sup></p>
 <div class="equation" data-tex="\lim_{s_\sigma\to\infty} s_\sigma^{1/2} F_\text{x}(s_\sigma) &lt; \infty"></div>
-<p>these functionals proposed by Vela et al.<sup class="citation-marker"><a href="#review-ref-Vela2012-144115">564</a></sup> are constructed such that <a class="review-eq-link" href="#review-eq-eq-fxasymp">
-  <code>eq:fxasymp</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="\lim_{s_\sigma\to\infty} s_\sigma^{1/2} F_\text{x}(s_\sigma) &lt; \infty"></span>
-  </span>
-</a> is obeyed. The form is given by</p>
+<p>these functionals proposed by Vela et al.<sup class="citation-marker"><a href="#review-ref-Vela2012-144115">564</a></sup> are constructed such that <a class="review-eq-link" href="#review-eq-eq-fxasymp"><span class="eq-number">Eq. (431)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="\lim_{s_\sigma\to\infty} s_\sigma^{1/2} F_\text{x}(s_\sigma) &lt; \infty"></span></span></a> is obeyed. The form is given by</p>
 <div class="equation" data-tex="F_\text{x}^{\text{VMT\{m,n\}}} = F_\text{x}^\text{VMT}
   + \left(1 - e^{-\alpha s_\sigma^{m/2}}\right)\left(s_\sigma^{-n/2} - 1 \right)"></div>
-<p>where $F_\text{x}^\text{VMT}$ is <a class="review-eq-link" href="#review-eq-eq-fvmt">
-  <code>eq:fvmt</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="F_\text{x}^\text{VMT} = 1 + \mu s_\sigma^2 \frac{\E^{-\alpha s_\sigma^2}}{1 + \mu s_\sigma^2}"></span>
-  </span>
-</a>. According to Vela et al.<sup class="citation-marker"><a href="#review-ref-Vela2012-144115">564</a></sup>, <a class="functional-link" href="../gga-x-pw91/"><code>gga_x_pw91</code></a> and <a class="functional-link" href="../gga-x-lg93/"><code>gga_x_lg93</code></a> are the only previously existing GGA exchange functionals that satisfy <a class="review-eq-link" href="#review-eq-eq-fxasymp">
-  <code>eq:fxasymp</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="\lim_{s_\sigma\to\infty} s_\sigma^{1/2} F_\text{x}(s_\sigma) &lt; \infty"></span>
-  </span>
-</a>. The values $m=8$ and $n=4$ were chosen from a series of exact requirements and by requiring that the enhancement factor is smooth over the relevant range of $s_\sigma$. Two values for $\mu$ in the $F_\text{x}^\text{VMT}$ component were considered, $\mu = \mu^\text{GE}$ leading to <a class="functional-link" href="../gga-x-vmt84-ge/"><code>gga_x_vmt84_ge</code></a>, and $\mu= \mu^\text{PBE}$ to <a class="functional-link" href="../gga-x-vmt84-pbe/"><code>gga_x_vmt84_pbe</code></a>. The corresponding values of $\alpha$ in <a class="review-eq-link" href="#review-eq-eq-fvmt84">
-  <code>eq:fvmt84</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="F_\text{x}^{\text{VMT\{m,n\}}} = F_\text{x}^\text{VMT}
-  + \left(1 - e^{-\alpha s_\sigma^{m/2}}\right)\left(s_\sigma^{-n/2} - 1 \right)"></span>
-  </span>
-</a> were fixed by the LO bound, leading to $\alpha^\text{GE}=0.000023$ and $\alpha^\text{PBE}=0.000074$, respectively.</p>
+<p>where $F_\text{x}^\text{VMT}$ is <a class="review-eq-link" href="#review-eq-eq-fvmt"><span class="eq-number">Eq. (413)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="F_\text{x}^\text{VMT} = 1 + \mu s_\sigma^2 \frac{\E^{-\alpha s_\sigma^2}}{1 + \mu s_\sigma^2}"></span></span></a>. According to Vela et al.<sup class="citation-marker"><a href="#review-ref-Vela2012-144115">564</a></sup>, <a class="functional-link" href="../gga-x-pw91/"><code>gga_x_pw91</code></a> and <a class="functional-link" href="../gga-x-lg93/"><code>gga_x_lg93</code></a> are the only previously existing GGA exchange functionals that satisfy <a class="review-eq-link" href="#review-eq-eq-fxasymp"><span class="eq-number">Eq. (431)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="\lim_{s_\sigma\to\infty} s_\sigma^{1/2} F_\text{x}(s_\sigma) &lt; \infty"></span></span></a>. The values $m=8$ and $n=4$ were chosen from a series of exact requirements and by requiring that the enhancement factor is smooth over the relevant range of $s_\sigma$. Two values for $\mu$ in the $F_\text{x}^\text{VMT}$ component were considered, $\mu = \mu^\text{GE}$ leading to <a class="functional-link" href="../gga-x-vmt84-ge/"><code>gga_x_vmt84_ge</code></a>, and $\mu= \mu^\text{PBE}$ to <a class="functional-link" href="../gga-x-vmt84-pbe/"><code>gga_x_vmt84_pbe</code></a>. The corresponding values of $\alpha$ in <a class="review-eq-link" href="#review-eq-eq-fvmt84"><span class="eq-number">Eq. (432)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="F_\text{x}^{\text{VMT\{m,n\}}} = F_\text{x}^\text{VMT}
+  + \left(1 - e^{-\alpha s_\sigma^{m/2}}\right)\left(s_\sigma^{-n/2} - 1 \right)"></span></span></a> were fixed by the LO bound, leading to $\alpha^\text{GE}=0.000023$ and $\alpha^\text{PBE}=0.000074$, respectively.</p>
 <p>The <a class="functional-link" href="../gga-x-vmt84-ge/"><code>gga_x_vmt84_ge</code></a> functional was combined with the correlation functionals <a class="functional-link" href="../gga-c-lyp/"><code>gga_c_lyp</code></a> and <a class="functional-link" href="../gga-c-pbe-jrgx/"><code>gga_c_pbe_jrgx</code></a>, while <a class="functional-link" href="../gga-x-vmt84-pbe/"><code>gga_x_vmt84_pbe</code></a> was combined with <a class="functional-link" href="../gga-c-lyp/"><code>gga_c_lyp</code></a> and <a class="functional-link" href="../gga-c-pbe/"><code>gga_c_pbe</code></a>. Overall, <a class="functional-link" href="../gga-x-vmt84-ge/"><code>gga_x_vmt84_ge</code></a> and <a class="functional-link" href="../gga-x-vmt84-pbe/"><code>gga_x_vmt84_pbe</code></a> yielded results similar to <a class="functional-link" href="../gga-x-vmt-ge/"><code>gga_x_vmt_ge</code></a> and <a class="functional-link" href="../gga-x-vmt-pbe/"><code>gga_x_vmt_pbe</code></a>, respectively.</p>
         </div>
         <p class="source-note">Adapted from <a href="https://arxiv.org/abs/2602.17333">Tran, Lehtola, Pittalis, and Marques, <em>Semi-Local Exchange-Correlation Approximations in Density Functional Theory</em>, arXiv:2602.17333</a>.</p>
@@ -76,17 +59,17 @@
           <h2>Referenced Review Equations</h2>
           <div class="review-equations">
           <article class="review-equation-card" id="review-eq-eq-fxasymp">
-            <code>eq:fxasymp</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (431)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=70" title="Open page 70 of the review PDF">p. 70 ↗</a></p>
             <div class="equation" data-tex="\lim_{s_\sigma\to\infty} s_\sigma^{1/2} F_\text{x}(s_\sigma) &lt; \infty"></div>
           </article>
 
           <article class="review-equation-card" id="review-eq-eq-fvmt">
-            <code>eq:fvmt</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (413)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=66" title="Open page 66 of the review PDF">p. 66 ↗</a></p>
             <div class="equation" data-tex="F_\text{x}^\text{VMT} = 1 + \mu s_\sigma^2 \frac{\E^{-\alpha s_\sigma^2}}{1 + \mu s_\sigma^2}"></div>
           </article>
 
           <article class="review-equation-card" id="review-eq-eq-fvmt84">
-            <code>eq:fvmt84</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (432)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=70" title="Open page 70 of the review PDF">p. 70 ↗</a></p>
             <div class="equation" data-tex="F_\text{x}^{\text{VMT\{m,n\}}} = F_\text{x}^\text{VMT}
   + \left(1 - e^{-\alpha s_\sigma^{m/2}}\right)\left(s_\sigma^{-n/2} - 1 \right)"></div>
           </article>

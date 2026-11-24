@@ -3,14 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>lda_c_1d_loos</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20261016-excerpts-v1">
-    <script defer src="../../assets/search.js?v=20261016-excerpts-v1"></script>
+    <title>lda_c_1d_loos — P-F Loos correlation LDA · Libxc Wiki</title>
+    <meta name="description" content="lda_c_1d_loos: P-F Loos correlation LDA. LDA correlation functional in Libxc, with references and BibTeX. Includes an excerpt from the Tran, Lehtola, Pittalis and Marques review.">
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261117-refs-v1">
+    <script defer src="../../assets/search.js?v=20261117-refs-v1"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
     <script defer src="../../vendor/katex/contrib/mhchem.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20261016-excerpts-v1"></script>
+    <script defer src="../../assets/detail.js?v=20261117-refs-v1"></script>
 
   </head>
   <body class="functional-page">
@@ -32,12 +33,14 @@
 
         <p class="brand">LDA</p>
         <h1><code class="title-code">lda_c_1d_loos</code></h1>
+        <p class="functional-name">P-F Loos correlation LDA</p>
         <div class="detail-tags"><span class="tag">lda</span>
 <span class="tag">correlation</span>
 <span class="tag">dim1</span></div>
       </header>
 
       <div class="detail-grid">
+
       <section class="callout">
         <p class="callout-label">Review excerpt</p>
         <div class="review-html">
@@ -46,27 +49,12 @@
 <p>where $\epsilon_0=-\pi^2/360$ and $\epsilon_1=0.00845$. Then, by considering the low-density expansion given by<sup class="citation-marker"><a href="#review-ref-Loos2013-164124">450</a>,<a href="#review-ref-Fogler2005-056405">451</a></sup></p>
 <div class="equation" data-tex="e_\text{c}^{\text{low}}(r_s^{1\text{D}}) =
 \frac{\eta_0}{r_s^{1\text{D}}} + \frac{\eta_1}{\left(r_s^{1\text{D}}\right)^{3/2}} + \ldots"></div>
-<p>where $\eta_0=-\ln\left(\sqrt{2\pi}\right)+3/4$ and $\eta_1=0.359933$, he proposed the following interpolation (see <sup class="citation-marker"><a href="#review-ref-Cioslowski2012-044109">452</a></sup>) between <a class="review-eq-link" href="#review-eq-eq-eclooshigh">
-  <code>eq:eclooshigh</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="e_\text{c}^{\text{high}}(r_s^{1\text{D}}) = \epsilon_0 + \epsilon_1r_s^{1\text{D}} + \ldots"></span>
-  </span>
-</a>; <a class="review-eq-link" href="#review-eq-eq-eclooslow">
-  <code>eq:eclooslow</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="e_\text{c}^{\text{low}}(r_s^{1\text{D}}) =
-\frac{\eta_0}{r_s^{1\text{D}}} + \frac{\eta_1}{\left(r_s^{1\text{D}}\right)^{3/2}} + \ldots"></span>
-  </span>
-</a>:</p>
+<p>where $\eta_0=-\ln\left(\sqrt{2\pi}\right)+3/4$ and $\eta_1=0.359933$, he proposed the following interpolation (see ref. <span class="citation-ref"><a href="#review-ref-Cioslowski2012-044109">452</a></span>) between <a class="review-eq-link" href="#review-eq-eq-eclooshigh"><span class="eq-number">Eq. (320)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="e_\text{c}^{\text{high}}(r_s^{1\text{D}}) = \epsilon_0 + \epsilon_1r_s^{1\text{D}} + \ldots"></span></span></a>; <a class="review-eq-link" href="#review-eq-eq-eclooslow"><span class="eq-number">Eq. (321)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="e_\text{c}^{\text{low}}(r_s^{1\text{D}}) =
+\frac{\eta_0}{r_s^{1\text{D}}} + \frac{\eta_1}{\left(r_s^{1\text{D}}\right)^{3/2}} + \ldots"></span></span></a>:</p>
 <div class="equation" data-tex="e_\text{c}^{\text{Loos-1D}}(r_s^{1\text{D}}) = \gamma^2\sum_{i=0}^{3}c_i\gamma^i\left(1-\gamma\right)^{3-i}"></div>
 <p>where</p>
 <div class="equation" data-tex="\gamma(r_s^{1\text{D}}) = \frac{\sqrt{1+4kr_s^{1\text{D}}}-1}{2kr_s^{1\text{D}}}"></div>
-<p>and $c_0=k\eta_0$, $c_1=4k\eta_0+k^{3/2}\eta_1$, $c_2=5\epsilon_0+\epsilon_1/k$, $c_3=\epsilon_1$, and $k=0.414254$. The value of $k$ was determined from MC data.<sup class="citation-marker"><a href="#review-ref-Lee2011-245114">453</a>,<a href="#review-ref-Loos2013-164124">450</a></sup> Loos<sup class="citation-marker"><a href="#review-ref-Loos2013-064108">449</a></sup> reports an agreement between <a class="review-eq-link" href="#review-eq-eq-ecloos1d">
-  <code>eq:ecloos1d</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="e_\text{c}^{\text{Loos-1D}}(r_s^{1\text{D}}) = \gamma^2\sum_{i=0}^{3}c_i\gamma^i\left(1-\gamma\right)^{3-i}"></span>
-  </span>
-</a> and the MC data within 0.1 <span class="inline-equation">\(\mathrm{m}E_{\mathrm{h}}\)</span>.</p>
+<p>and $c_0=k\eta_0$, $c_1=4k\eta_0+k^{3/2}\eta_1$, $c_2=5\epsilon_0+\epsilon_1/k$, $c_3=\epsilon_1$, and $k=0.414254$. The value of $k$ was determined from MC data.<sup class="citation-marker"><a href="#review-ref-Lee2011-245114">453</a>,<a href="#review-ref-Loos2013-164124">450</a></sup> Loos<sup class="citation-marker"><a href="#review-ref-Loos2013-064108">449</a></sup> reports an agreement between <a class="review-eq-link" href="#review-eq-eq-ecloos1d"><span class="eq-number">Eq. (322)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="e_\text{c}^{\text{Loos-1D}}(r_s^{1\text{D}}) = \gamma^2\sum_{i=0}^{3}c_i\gamma^i\left(1-\gamma\right)^{3-i}"></span></span></a> and the MC data within 0.1 <span class="inline-equation">\(\mathrm{m}E_{\mathrm{h}}\)</span>.</p>
         </div>
         <p class="source-note">Adapted from <a href="https://arxiv.org/abs/2602.17333">Tran, Lehtola, Pittalis, and Marques, <em>Semi-Local Exchange-Correlation Approximations in Density Functional Theory</em>, arXiv:2602.17333</a>.</p>
       </section>
@@ -75,18 +63,18 @@
           <h2>Referenced Review Equations</h2>
           <div class="review-equations">
           <article class="review-equation-card" id="review-eq-eq-eclooshigh">
-            <code>eq:eclooshigh</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (320)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=45" title="Open page 45 of the review PDF">p. 45 ↗</a></p>
             <div class="equation" data-tex="e_\text{c}^{\text{high}}(r_s^{1\text{D}}) = \epsilon_0 + \epsilon_1r_s^{1\text{D}} + \ldots"></div>
           </article>
 
           <article class="review-equation-card" id="review-eq-eq-eclooslow">
-            <code>eq:eclooslow</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (321)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=45" title="Open page 45 of the review PDF">p. 45 ↗</a></p>
             <div class="equation" data-tex="e_\text{c}^{\text{low}}(r_s^{1\text{D}}) =
 \frac{\eta_0}{r_s^{1\text{D}}} + \frac{\eta_1}{\left(r_s^{1\text{D}}\right)^{3/2}} + \ldots"></div>
           </article>
 
           <article class="review-equation-card" id="review-eq-eq-ecloos1d">
-            <code>eq:ecloos1d</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (322)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=45" title="Open page 45 of the review PDF">p. 45 ↗</a></p>
             <div class="equation" data-tex="e_\text{c}^{\text{Loos-1D}}(r_s^{1\text{D}}) = \gamma^2\sum_{i=0}^{3}c_i\gamma^i\left(1-\gamma\right)^{3-i}"></div>
           </article>
 

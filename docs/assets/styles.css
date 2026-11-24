@@ -1369,3 +1369,92 @@ mark[data-search-match] {
 }
 .catalog .results-toolbar { flex-wrap: wrap; }
 .catalog .result-count { white-space: normal; line-height: 1.5; }
+
+/* Functional header: Libxc's descriptive name under the identifier. */
+.functional-name {
+  margin: -2px 0 2px;
+  color: var(--muted);
+  font-size: 1.05rem;
+  line-height: 1.45;
+}
+
+/* The header already ends with a rule; drop the first block's top rule. */
+.detail-grid > :first-child {
+  border-top: 0;
+  padding-top: 4px;
+}
+
+/* Paper-numbered equation and section references. */
+.eq-number {
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.review-eq-link,
+.review-section-link {
+  color: var(--accent-ink);
+  text-decoration: none;
+}
+
+.review-eq-link:hover .eq-number,
+.review-eq-link:focus-visible .eq-number,
+.review-section-link:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.16em;
+}
+
+.equation-card-heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 0 0 6px;
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
+.equation-source {
+  color: var(--muted);
+  font-size: 0.78rem;
+}
+
+/* Hybrid / nonlocal parameters. */
+.param-list {
+  display: grid;
+  grid-template-columns: max-content minmax(0, 1fr);
+  gap: 8px 18px;
+  margin: 0;
+}
+
+.param-list dt {
+  color: var(--muted);
+}
+
+.param-list dd {
+  margin: 0;
+  font-variant-numeric: tabular-nums;
+}
+
+.param-raw {
+  display: block;
+  color: var(--faint);
+  font-family: var(--mono);
+  font-size: 0.8rem;
+}
+
+.param-note {
+  margin: 10px 0 0;
+  color: var(--faint);
+  font-size: 0.82rem;
+}
+
+@media (max-width: 500px) {
+  .param-list {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2px;
+  }
+
+  .param-list dd + dt {
+    margin-top: 10px;
+  }
+}

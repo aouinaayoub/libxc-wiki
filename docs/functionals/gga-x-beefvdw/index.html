@@ -3,14 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>gga_x_beefvdw</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20261016-excerpts-v1">
-    <script defer src="../../assets/search.js?v=20261016-excerpts-v1"></script>
+    <title>gga_x_beefvdw — BEEF-vdW exchange · Libxc Wiki</title>
+    <meta name="description" content="gga_x_beefvdw: BEEF-vdW exchange. GGA exchange functional in Libxc, with references and BibTeX. Includes an excerpt from the Tran, Lehtola, Pittalis and Marques review.">
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261117-refs-v1">
+    <script defer src="../../assets/search.js?v=20261117-refs-v1"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
     <script defer src="../../vendor/katex/contrib/mhchem.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20261016-excerpts-v1"></script>
+    <script defer src="../../assets/detail.js?v=20261117-refs-v1"></script>
 
   </head>
   <body class="functional-page">
@@ -32,13 +33,58 @@
 
         <p class="brand">GGA</p>
         <h1><code class="title-code">gga_x_beefvdw</code></h1>
+        <p class="functional-name">BEEF-vdW exchange</p>
         <div class="detail-tags"><span class="tag">gga</span>
 <span class="tag">exchange</span></div>
       </header>
 
       <div class="detail-grid">
 
+      <section class="callout">
+        <p class="callout-label">Review excerpt</p>
+        <div class="review-html">
+<p>A common problem with functionals that have many empirical parameters, such as <a class="functional-link" href="../gga-xc-hcth-93/"><code>gga_xc_hcth_93</code></a>, is overfitting. For this functional, Wellendorff et al.<sup class="citation-marker"><a href="#review-ref-Wellendorff2012-235149">670</a></sup> tried to mitigate this problem by using techniques that are standard in machine learning. This was achieved by adding a regularization term to the cost function that is minimized during the fitting of the parameters. A standard Tikhonov regularization method<sup class="citation-marker"><a href="#review-ref-Bishop2006">671</a></sup> was used, leading to solution vectors with small coefficients for higher-order polynomials, and therefore rather smooth functional forms that show no strong unphysical variations.</p>
+<p>The GGA component of the chosen functional reads (BEEF stands for Bayesian error estimation functional)</p>
+<div class="equation" data-tex="e_\text{xc}^\text{BEEF-vdW} = e_\text{x}^\text{BEEF-vdW} + \alpha_c e_\text{c}^\text{PW-LDA}
+  + (1 - \alpha_c) e_\text{c}^\text{PBE}"></div>
+<p>where the enhancement factor of the exchange part is expanded in Legendre polynomials $B_m$:</p>
+<div class="equation" data-tex="F_\text{x}^\text{BEEF-vdW} = \sum_{m=0}^{M} a_m B_m[r(s_\sigma)]"></div>
+<p>where $a_m$ are the expansion coefficients and</p>
+<div class="equation" data-tex="r(s_\sigma) = \frac{2s_\sigma^2}{q + s_\sigma^2} - 1"></div>
+<p>with $q=4$, which transforms $r(s_\sigma)$ into the interval $[-1, 1]$. The parameter $M=29$ was chosen in <a class="review-eq-link" href="#review-eq-eq-fxbeef"><span class="eq-number">Eq. (545)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="F_\text{x}^\text{BEEF-vdW} = \sum_{m=0}^{M} a_m B_m[r(s_\sigma)]"></span></span></a>, leading to a total of 31 parameters (including $\alpha_c$). As shown in <a class="review-eq-link" href="#review-eq-eq-excbeef"><span class="eq-number">Eq. (544)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="e_\text{xc}^\text{BEEF-vdW} = e_\text{x}^\text{BEEF-vdW} + \alpha_c e_\text{c}^\text{PW-LDA}
+  + (1 - \alpha_c) e_\text{c}^\text{PBE}"></span></span></a>, this exchange functional is mixed with the <a class="functional-link" href="../lda-c-pw/"><code>lda_c_pw</code></a> and <a class="functional-link" href="../gga-c-pbe/"><code>gga_c_pbe</code></a> correlation functionals. Furthermore, the non-local correlation functional vdW–DF2<sup class="citation-marker"><a href="#review-ref-Lee2010-081101">536</a></sup> was added to <a class="functional-link" href="../gga-xc-beefvdw/"><code>gga_xc_beefvdw</code></a> for the training procedure.</p>
+<p>The 31 parameters were fit to a large training set of reference values that consists of the following subsets: CE17 (17 chemisorption energies), RE42 (42 reaction energies), DBH24/08 (24 reaction barriers<sup class="citation-marker"><a href="#review-ref-Zheng2009-808">672</a></sup>), G2/97 (148 formation energies<sup class="citation-marker"><a href="#review-ref-Curtiss1997-1063">534</a></sup>), Sol34Ec (cohesive energies of 34 solids), and S22$\times$5 (intermolecular interaction energies of 22 molecular dimers at five different intermolecular separations<sup class="citation-marker"><a href="#review-ref-Grafova2010-2365">589</a></sup>).</p>
+<p>Benchmarking against numerous other GGA and GGA-vdW functionals revealed that <a class="functional-link" href="../gga-xc-beefvdw/"><code>gga_xc_beefvdw</code></a>+vdW-DF2 appears to be a rather general purpose xc functional, leading to small errors across a large range of properties.</p>
+        </div>
+        <p class="source-note">Adapted from <a href="https://arxiv.org/abs/2602.17333">Tran, Lehtola, Pittalis, and Marques, <em>Semi-Local Exchange-Correlation Approximations in Density Functional Theory</em>, arXiv:2602.17333</a>.</p>
+      </section>
 
+        <section class="section">
+          <h2>Referenced Review Equations</h2>
+          <div class="review-equations">
+          <article class="review-equation-card" id="review-eq-eq-fxbeef">
+            <p class="equation-card-heading"><span class="eq-number">Eq. (545)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=98" title="Open page 98 of the review PDF">p. 98 ↗</a></p>
+            <div class="equation" data-tex="F_\text{x}^\text{BEEF-vdW} = \sum_{m=0}^{M} a_m B_m[r(s_\sigma)]"></div>
+          </article>
+
+          <article class="review-equation-card" id="review-eq-eq-excbeef">
+            <p class="equation-card-heading"><span class="eq-number">Eq. (544)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=98" title="Open page 98 of the review PDF">p. 98 ↗</a></p>
+            <div class="equation" data-tex="e_\text{xc}^\text{BEEF-vdW} = e_\text{x}^\text{BEEF-vdW} + \alpha_c e_\text{c}^\text{PW-LDA}
+  + (1 - \alpha_c) e_\text{c}^\text{PBE}"></div>
+          </article>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <h2>Review References</h2>
+          <ol class="review-refs"><li id="review-ref-Wellendorff2012-235149" value="670">Wellendorff, J.; Lundgaard, K. T.; Mgelhj, A.; Petzold, V.; Landis, D. D.; Nrskov, J. K.; Bligaard, T.; Jacobsen, K. W. Density functionals for surface science: Exchange-correlation model development with Bayesian error estimation. <em>Phys. Rev. B</em> <strong>2012</strong>, <em>85</em>, 235149, DOI: <a href="https://doi.org/10.1103/PhysRevB.85.235149">10.1103/PhysRevB.85.235149</a></li>
+<li id="review-ref-Bishop2006" value="671">Bishop, C. M. <em>Pattern Recognition and Machine Learning</em>; Springer: New York, 2006</li>
+<li id="review-ref-Lee2010-081101" value="536">Lee, K.; Murray, E. D.; Kong, L.; Lundqvist, B. I.; Langreth, D. C. Higher-accuracy van der Waals density functional. <em>Phys. Rev. B</em> <strong>2010</strong>, <em>82</em>, 081101, DOI: <a href="https://doi.org/10.1103/PhysRevB.82.081101">10.1103/PhysRevB.82.081101</a></li>
+<li id="review-ref-Zheng2009-808" value="672">Zheng, J.; Zhao, Y.; Truhlar, D. G. The DBH24/08 Database and Its Use to Assess Electronic Structure Model Chemistries for Chemical Reaction Barrier Heights. <em>J. Chem. Theory Comput.</em> <strong>2009</strong>, <em>5</em>, 808, DOI: <a href="https://doi.org/10.1021/ct800568m">10.1021/ct800568m</a></li>
+<li id="review-ref-Curtiss1997-1063" value="534">Curtiss, L. A.; Raghavachari, K.; Redfern, P. C.; Pople, J. A. Assessment of Gaussian-2 and density functional theories for the computation of enthalpies of formation. <em>J. Chem. Phys.</em> <strong>1997</strong>, <em>106</em>, 1063--1079, DOI: <a href="https://doi.org/10.1063/1.473182">10.1063/1.473182</a></li>
+<li id="review-ref-Grafova2010-2365" value="589">Gráfová, L.; Pitoňák, M.; Řezáč, J.; Hobza, P. Comparative Study of Selected Wave Function and Density Functional Methods for Noncovalent Interaction Energy Calculations Using the Extended S22 Data Set. <em>J. Chem. Theory Comput.</em> <strong>2010</strong>, <em>6</em>, 2365--2376, DOI: <a href="https://doi.org/10.1021/ct1002253">10.1021/ct1002253</a></li></ol>
+        </section>
 
         <section class="section">
           <h2>Publications</h2>

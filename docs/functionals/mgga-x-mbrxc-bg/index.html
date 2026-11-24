@@ -3,14 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>mgga_x_mbrxc_bg</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20261016-excerpts-v1">
-    <script defer src="../../assets/search.js?v=20261016-excerpts-v1"></script>
+    <title>mgga_x_mbrxc_bg — Modified Becke-Roussel for band gaps - cuspless hole · Libxc Wiki</title>
+    <meta name="description" content="mgga_x_mbrxc_bg: Modified Becke-Roussel for band gaps - cuspless hole. Meta-GGA exchange functional in Libxc, with references and BibTeX. Includes an excerpt from the Tran, Lehtola, Pittalis and Marques review.">
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261117-refs-v1">
+    <script defer src="../../assets/search.js?v=20261117-refs-v1"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
     <script defer src="../../vendor/katex/contrib/mhchem.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20261016-excerpts-v1"></script>
+    <script defer src="../../assets/detail.js?v=20261117-refs-v1"></script>
 
   </head>
   <body class="functional-page">
@@ -32,11 +33,13 @@
 
         <p class="brand">META-GGA</p>
         <h1><code class="title-code">mgga_x_mbrxc_bg</code></h1>
+        <p class="functional-name">Modified Becke-Roussel for band gaps - cuspless hole</p>
         <div class="detail-tags"><span class="tag">meta-gga</span>
 <span class="tag">exchange</span></div>
       </header>
 
       <div class="detail-grid">
+
       <section class="callout">
         <p class="callout-label">Review excerpt</p>
         <div class="review-html">
@@ -46,27 +49,12 @@
 <p>to approximate $\nabla^2 n_{\sigma}$ by</p>
 <div class="equation" data-tex="\nabla^2 n_{\sigma}\approx6\left(\tau_{\sigma} - \tau_{\sigma}^{\text{TF}} -
   \frac{1}{9}\tau_{\sigma}^{\text{W}}\right)"></div>
-<p>and substituted this expression in the expression for the exchange-hole curvature given by <a class="review-eq-link" href="#review-eq-eq-br89-q">
-  <code>eq:br89-q</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="\tilde{C}_{\x\sigma} = \frac{1}{6}\left[u_\sigma - 2\gamma\left( 2\tilde{t}_\sigma - \frac{1}{4} x_\sigma^2\right)\right]"></span>
-  </span>
-</a>. This leads to</p>
+<p>and substituted this expression in the expression for the exchange-hole curvature given by <a class="review-eq-link" href="#review-eq-eq-br89-q"><span class="eq-number">Eq. (552)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="\tilde{C}_{\x\sigma} = \frac{1}{6}\left[u_\sigma - 2\gamma\left( 2\tilde{t}_\sigma - \frac{1}{4} x_\sigma^2\right)\right]"></span></span></a>. This leads to</p>
 <div class="equation" data-tex="\tilde{C}_{\x\sigma} = \left(1-\frac{2}{3}\gamma\right)\tilde{t}_{\sigma} - C_{\text{F}} + \frac{1}{12}\left(\gamma-\frac{1}{6}\right)x_{\sigma}^2"></div>
 <p>Note that the corresponding Eq. (10) of Patra et al.<sup class="citation-marker"><a href="#review-ref-Patra2019-045147">749</a></sup> contains errors. This led Patra et al.<sup class="citation-marker"><a href="#review-ref-Patra2019-045147">749</a></sup> to propose a more general form:</p>
 <div class="equation" data-tex="\tilde{C}_{\x\sigma} = a_{1}2\tilde{t}_{\sigma} - C_{\text{F}} + a_{2}x_{\sigma}^2 + a_{3}x_{\sigma}^4"></div>
 <p>where $a_{1}$, $a_{2}$, and $a_{3}$ are parameters.</p>
-<p>Two sets of values for $(a_{1},a_{2},a_{3})$ were proposed. The first set, $(0.23432,0.089,0.0053)$ (<a class="functional-link" href="../mgga-x-mbrxh-bg/"><code>mgga_x_mbrxh_bg</code></a>), was obtained by using the electron density and exchange hole of the H atom as originally for <a class="functional-link" href="../mgga-x-br89/"><code>mgga_x_br89</code></a>, leading to the nonlinear equation of the Becke&ndash;Roussel scheme (<a class="review-eq-link" href="#review-eq-eq-mggaxbr89-nonlinear">
-  <code>eq:mggaxbr89-nonlinear</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="\frac{c_\sigma\,\E^{-2c_\sigma/3}}{c_\sigma-2} = \frac{2}{3}\pi^{2/3}\frac{1}{\tilde{C}_{\x\sigma}}"></span>
-  </span>
-</a>). For the second set, $(0.074746,0.147,0.0032)$ (<a class="functional-link" href="../mgga-x-mbrxc-bg/"><code>mgga_x_mbrxc_bg</code></a>), a cuspless H atom was used, which results in a nonlinear equation that differs from <a class="review-eq-link" href="#review-eq-eq-mggaxbr89-nonlinear">
-  <code>eq:mggaxbr89-nonlinear</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="\frac{c_\sigma\,\E^{-2c_\sigma/3}}{c_\sigma-2} = \frac{2}{3}\pi^{2/3}\frac{1}{\tilde{C}_{\x\sigma}}"></span>
-  </span>
-</a>:</p>
+<p>Two sets of values for $(a_{1},a_{2},a_{3})$ were proposed. The first set, $(0.23432,0.089,0.0053)$ (<a class="functional-link" href="../mgga-x-mbrxh-bg/"><code>mgga_x_mbrxh_bg</code></a>), was obtained by using the electron density and exchange hole of the H atom as originally for <a class="functional-link" href="../mgga-x-br89/"><code>mgga_x_br89</code></a>, leading to the nonlinear equation of the Becke&ndash;Roussel scheme (<a class="review-eq-link" href="#review-eq-eq-mggaxbr89-nonlinear"><span class="eq-number">Eq. (551)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="\frac{c_\sigma\,\E^{-2c_\sigma/3}}{c_\sigma-2} = \frac{2}{3}\pi^{2/3}\frac{1}{\tilde{C}_{\x\sigma}}"></span></span></a>). For the second set, $(0.074746,0.147,0.0032)$ (<a class="functional-link" href="../mgga-x-mbrxc-bg/"><code>mgga_x_mbrxc_bg</code></a>), a cuspless H atom was used, which results in a nonlinear equation that differs from <a class="review-eq-link" href="#review-eq-eq-mggaxbr89-nonlinear"><span class="eq-number">Eq. (551)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="\frac{c_\sigma\,\E^{-2c_\sigma/3}}{c_\sigma-2} = \frac{2}{3}\pi^{2/3}\frac{1}{\tilde{C}_{\x\sigma}}"></span></span></a>:</p>
 <div class="equation" data-tex="\frac{(1+c_{\sigma})^{5/3}\E^{-2c_{\sigma}/3}}{c_{\sigma}-3} = (32\pi)^{2/3}\frac{1}{6\tilde{C}_{\x\sigma}}"></div>
 <p>In both cases, $a_{1}$ was determined by requiring that the correct HEG limit, <a class="functional-link" href="../lda-x/"><code>lda_x</code></a>, is recovered for a constant electron density, while $a_{2}$ was fixed from a modified second-order density-gradient expansion.<sup class="citation-marker"><a href="#review-ref-Constantin2016-045126">584</a></sup> Then, $a_{3}$ was empirically determined by a fit to the band gap of a set of solids (C, Si, Ge, InAs, AgBr, and Ne).</p>
 <p>The functional <a class="functional-link" href="../mgga-x-mbrxc-bg/"><code>mgga_x_mbrxc_bg</code></a> is particularly interesting for band gap calculations, since it is clearly more accurate than standard functionals like PBE (<a class="functional-link" href="../gga-x-pbe/"><code>gga_x_pbe</code></a> + <a class="functional-link" href="../gga-c-pbe/"><code>gga_c_pbe</code></a>) or SCAN (<a class="functional-link" href="../mgga-x-scan/"><code>mgga_x_scan</code></a> + <a class="functional-link" href="../mgga-c-scan/"><code>mgga_c_scan</code></a>).</p>
@@ -78,12 +66,12 @@
           <h2>Referenced Review Equations</h2>
           <div class="review-equations">
           <article class="review-equation-card" id="review-eq-eq-br89-q">
-            <code>eq:br89-q</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (552)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=101" title="Open page 101 of the review PDF">p. 101 ↗</a></p>
             <div class="equation" data-tex="\tilde{C}_{\x\sigma} = \frac{1}{6}\left[u_\sigma - 2\gamma\left( 2\tilde{t}_\sigma - \frac{1}{4} x_\sigma^2\right)\right]"></div>
           </article>
 
           <article class="review-equation-card" id="review-eq-eq-mggaxbr89-nonlinear">
-            <code>eq:mggaxbr89-nonlinear</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (551)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=101" title="Open page 101 of the review PDF">p. 101 ↗</a></p>
             <div class="equation" data-tex="\frac{c_\sigma\,\E^{-2c_\sigma/3}}{c_\sigma-2} = \frac{2}{3}\pi^{2/3}\frac{1}{\tilde{C}_{\x\sigma}}"></div>
           </article>
 

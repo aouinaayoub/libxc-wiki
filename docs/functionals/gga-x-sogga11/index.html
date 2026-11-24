@@ -3,14 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>gga_x_sogga11</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20261016-excerpts-v1">
-    <script defer src="../../assets/search.js?v=20261016-excerpts-v1"></script>
+    <title>gga_x_sogga11 — Second-order generalized gradient approximation 2011 · Libxc Wiki</title>
+    <meta name="description" content="gga_x_sogga11: Second-order generalized gradient approximation 2011. GGA exchange functional in Libxc, with references and BibTeX. Includes an excerpt from the Tran, Lehtola, Pittalis and Marques review.">
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261117-refs-v1">
+    <script defer src="../../assets/search.js?v=20261117-refs-v1"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
     <script defer src="../../vendor/katex/contrib/mhchem.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20261016-excerpts-v1"></script>
+    <script defer src="../../assets/detail.js?v=20261117-refs-v1"></script>
 
   </head>
   <body class="functional-page">
@@ -32,11 +33,13 @@
 
         <p class="brand">GGA</p>
         <h1><code class="title-code">gga_x_sogga11</code></h1>
+        <p class="functional-name">Second-order generalized gradient approximation 2011</p>
         <div class="detail-tags"><span class="tag">gga</span>
 <span class="tag">exchange</span></div>
       </header>
 
       <div class="detail-grid">
+
       <section class="callout">
         <p class="callout-label">Review excerpt</p>
         <div class="review-html">
@@ -48,17 +51,7 @@
 g_1(s_\sigma) =&amp; \sum_{i=0}^m a_i \left( 1 - \frac{1}{1 + \frac{\mu}{\kappa} s_\sigma^2} \right)^i \\
     g_2(s_\sigma) =&amp; \sum_{i=0}^m b_i \left( 1 - \E^{-\mu s_\sigma^2/\kappa} \right)^i
 \end{aligned}"></div>
-<p>are power expansions of the enhancement factors of <a class="functional-link" href="../gga-x-pbe/"><code>gga_x_pbe</code></a> (<a class="review-eq-link" href="#review-eq-eq-pbeenh">
-  <code>eq:pbeenh</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="F_\text{x}^{\text{PBE}} = 1 + \kappa\left[1 - \frac{\kappa}{\kappa + f_0(s_\sigma)}\right]"></span>
-  </span>
-</a>) and <a class="functional-link" href="../gga-x-rpbe/"><code>gga_x_rpbe</code></a> (<a class="review-eq-link" href="#review-eq-eq-RPBE">
-  <code>eq:RPBE</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="F_\text{x}^{\text{RPBE}} = 1 + \kappa\left(1 - \E^{-\mu s_\sigma^2/\kappa}\right)"></span>
-  </span>
-</a>), respectively. The HEG limit given by <a class="functional-link" href="../lda-x/"><code>lda_x</code></a> is guaranteed by the condition $a_0 + b_0 = 1$, and, making the same choices as for <a class="functional-link" href="../gga-x-sogga/"><code>gga_x_sogga</code></a>, the density-gradient expansion implies that $\mu = \mu^{\text{GE}}$, while $\kappa=0.552$ (coupled with the constraint $a_1+b_1=\kappa$) is imposed by the tighter LO bound.<sup class="citation-marker"><a href="#review-ref-Odashima2007-054106">194</a></sup> Together with the parameters of the correlation counterpart <a class="functional-link" href="../gga-c-sogga11/"><code>gga_c_sogga11</code></a>, the parameters $a_i$ and $b_i$ ($m=5$ was chosen as a good choice) were fit to training data, involving main-group and transition-metal thermochemistry, kinetics, $\pi$ interactions, and noncovalent interactions. This functional is accurate for bond lengths in molecules, and is more accurate than numerous other GGA functionals tested in <sup class="citation-marker"><a href="#review-ref-Peverati2011-1991">560</a></sup> for the energetics of finite systems. Note that the sign in front of $(\mu/\kappa)s^2$ in Eq. (3) of Peverati et al.<sup class="citation-marker"><a href="#review-ref-Peverati2011-1991">560</a></sup> is wrong.</p>
+<p>are power expansions of the enhancement factors of <a class="functional-link" href="../gga-x-pbe/"><code>gga_x_pbe</code></a> (<a class="review-eq-link" href="#review-eq-eq-pbeenh"><span class="eq-number">Eq. (382)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="F_\text{x}^{\text{PBE}} = 1 + \kappa\left[1 - \frac{\kappa}{\kappa + f_0(s_\sigma)}\right]"></span></span></a>) and <a class="functional-link" href="../gga-x-rpbe/"><code>gga_x_rpbe</code></a> (<a class="review-eq-link" href="#review-eq-eq-RPBE"><span class="eq-number">Eq. (387)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="F_\text{x}^{\text{RPBE}} = 1 + \kappa\left(1 - \E^{-\mu s_\sigma^2/\kappa}\right)"></span></span></a>), respectively. The HEG limit given by <a class="functional-link" href="../lda-x/"><code>lda_x</code></a> is guaranteed by the condition $a_0 + b_0 = 1$, and, making the same choices as for <a class="functional-link" href="../gga-x-sogga/"><code>gga_x_sogga</code></a>, the density-gradient expansion implies that $\mu = \mu^{\text{GE}}$, while $\kappa=0.552$ (coupled with the constraint $a_1+b_1=\kappa$) is imposed by the tighter LO bound.<sup class="citation-marker"><a href="#review-ref-Odashima2007-054106">194</a></sup> Together with the parameters of the correlation counterpart <a class="functional-link" href="../gga-c-sogga11/"><code>gga_c_sogga11</code></a>, the parameters $a_i$ and $b_i$ ($m=5$ was chosen as a good choice) were fit to training data, involving main-group and transition-metal thermochemistry, kinetics, $\pi$ interactions, and noncovalent interactions. This functional is accurate for bond lengths in molecules, and is more accurate than numerous other GGA functionals tested in ref. <span class="citation-ref"><a href="#review-ref-Peverati2011-1991">560</a></span> for the energetics of finite systems. Note that the sign in front of $(\mu/\kappa)s^2$ in Eq. (3) of Peverati et al.<sup class="citation-marker"><a href="#review-ref-Peverati2011-1991">560</a></sup> is wrong.</p>
         </div>
         <p class="source-note">Adapted from <a href="https://arxiv.org/abs/2602.17333">Tran, Lehtola, Pittalis, and Marques, <em>Semi-Local Exchange-Correlation Approximations in Density Functional Theory</em>, arXiv:2602.17333</a>.</p>
       </section>
@@ -67,12 +60,12 @@ g_1(s_\sigma) =&amp; \sum_{i=0}^m a_i \left( 1 - \frac{1}{1 + \frac{\mu}{\kappa}
           <h2>Referenced Review Equations</h2>
           <div class="review-equations">
           <article class="review-equation-card" id="review-eq-eq-pbeenh">
-            <code>eq:pbeenh</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (382)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=58" title="Open page 58 of the review PDF">p. 58 ↗</a></p>
             <div class="equation" data-tex="F_\text{x}^{\text{PBE}} = 1 + \kappa\left[1 - \frac{\kappa}{\kappa + f_0(s_\sigma)}\right]"></div>
           </article>
 
           <article class="review-equation-card" id="review-eq-eq-RPBE">
-            <code>eq:RPBE</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (387)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=60" title="Open page 60 of the review PDF">p. 60 ↗</a></p>
             <div class="equation" data-tex="F_\text{x}^{\text{RPBE}} = 1 + \kappa\left(1 - \E^{-\mu s_\sigma^2/\kappa}\right)"></div>
           </article>
 

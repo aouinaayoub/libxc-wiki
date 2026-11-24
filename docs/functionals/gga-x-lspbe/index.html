@@ -3,14 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>gga_x_lspbe</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20261016-excerpts-v1">
-    <script defer src="../../assets/search.js?v=20261016-excerpts-v1"></script>
+    <title>gga_x_lspbe — lsPBE, a PW91-like modification of PBE exchange · Libxc Wiki</title>
+    <meta name="description" content="gga_x_lspbe: lsPBE, a PW91-like modification of PBE exchange. GGA exchange functional in Libxc, with references and BibTeX. Includes an excerpt from the Tran, Lehtola, Pittalis and Marques review.">
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261117-refs-v1">
+    <script defer src="../../assets/search.js?v=20261117-refs-v1"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
     <script defer src="../../vendor/katex/contrib/mhchem.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20261016-excerpts-v1"></script>
+    <script defer src="../../assets/detail.js?v=20261117-refs-v1"></script>
 
   </head>
   <body class="functional-page">
@@ -32,45 +33,27 @@
 
         <p class="brand">GGA</p>
         <h1><code class="title-code">gga_x_lspbe</code></h1>
+        <p class="functional-name">lsPBE, a PW91-like modification of PBE exchange</p>
         <div class="detail-tags"><span class="tag">gga</span>
 <span class="tag">exchange</span></div>
       </header>
 
       <div class="detail-grid">
+
       <section class="callout">
         <p class="callout-label">Review excerpt</p>
         <div class="review-html">
-<p>Pacheco-Kato et al.<sup class="citation-marker"><a href="#review-ref-PachecoKato2016-268">585</a></sup> proposed two functionals that aim at simplifying the <a class="functional-link" href="../gga-x-pw91/"><code>gga_x_pw91</code></a> enhancement factor, while maintaining or improving its performance. These functionals are based on <a class="functional-link" href="../gga-x-pbe/"><code>gga_x_pbe</code></a> and <a class="functional-link" href="../gga-x-rpbe/"><code>gga_x_rpbe</code></a> while adding a Gaussian tail to satisfy the asymptotic reduced-density gradient constraint, <a class="review-eq-link" href="#review-eq-eq-fxasymp">
-  <code>eq:fxasymp</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="\lim_{s_\sigma\to\infty} s_\sigma^{1/2} F_\text{x}(s_\sigma) &lt; \infty"></span>
-  </span>
-</a>. The functionals read</p>
+<p>Pacheco-Kato et al.<sup class="citation-marker"><a href="#review-ref-PachecoKato2016-268">585</a></sup> proposed two functionals that aim at simplifying the <a class="functional-link" href="../gga-x-pw91/"><code>gga_x_pw91</code></a> enhancement factor, while maintaining or improving its performance. These functionals are based on <a class="functional-link" href="../gga-x-pbe/"><code>gga_x_pbe</code></a> and <a class="functional-link" href="../gga-x-rpbe/"><code>gga_x_rpbe</code></a> while adding a Gaussian tail to satisfy the asymptotic reduced-density gradient constraint, <a class="review-eq-link" href="#review-eq-eq-fxasymp"><span class="eq-number">Eq. (431)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="\lim_{s_\sigma\to\infty} s_\sigma^{1/2} F_\text{x}(s_\sigma) &lt; \infty"></span></span></a>. The functionals read</p>
 <div class="equation" data-tex="\begin{aligned}
 F_\text{x}^{\text{ls(R)PBE}} = F_\text{x}^{\text{(R)PBE}} -
   (\kappa+1)\left(1-\E^{-\alpha s_{\sigma}^2}\right)
 \end{aligned}"></div>
-<p>There are three parameters defining the functionals, specifically $\mu$ in <a class="review-eq-link" href="#review-eq-eq-pbeenh">
-  <code>eq:pbeenh</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="F_\text{x}^{\text{PBE}} = 1 + \kappa\left[1 - \frac{\kappa}{\kappa + f_0(s_\sigma)}\right]"></span>
-  </span>
-</a>; <a class="review-eq-link" href="#review-eq-eq-RPBE">
-  <code>eq:RPBE</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="F_\text{x}^{\text{RPBE}} = 1 + \kappa\left(1 - \E^{-\mu s_\sigma^2/\kappa}\right)"></span>
-  </span>
-</a>, $\kappa$, and $\alpha$. Pacheco-Kato et al.<sup class="citation-marker"><a href="#review-ref-PachecoKato2016-268">585</a></sup> chose the value of $\kappa=\kappa^{\text{PBE}}$ as used in both <a class="functional-link" href="../gga-x-pbe/"><code>gga_x_pbe</code></a> and <a class="functional-link" href="../gga-x-rpbe/"><code>gga_x_rpbe</code></a>. The small-$s_\sigma$ expansion of the functional shows that</p>
+<p>There are three parameters defining the functionals, specifically $\mu$ in <a class="review-eq-link" href="#review-eq-eq-pbeenh"><span class="eq-number">Eq. (382)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="F_\text{x}^{\text{PBE}} = 1 + \kappa\left[1 - \frac{\kappa}{\kappa + f_0(s_\sigma)}\right]"></span></span></a>; <a class="review-eq-link" href="#review-eq-eq-RPBE"><span class="eq-number">Eq. (387)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="F_\text{x}^{\text{RPBE}} = 1 + \kappa\left(1 - \E^{-\mu s_\sigma^2/\kappa}\right)"></span></span></a>, $\kappa$, and $\alpha$. Pacheco-Kato et al.<sup class="citation-marker"><a href="#review-ref-PachecoKato2016-268">585</a></sup> chose the value of $\kappa=\kappa^{\text{PBE}}$ as used in both <a class="functional-link" href="../gga-x-pbe/"><code>gga_x_pbe</code></a> and <a class="functional-link" href="../gga-x-rpbe/"><code>gga_x_rpbe</code></a>. The small-$s_\sigma$ expansion of the functional shows that</p>
 <div class="equation" data-tex="\mu_\text{x} = \mu - \alpha - \alpha \kappa"></div>
-<p>is the second-order coefficient. Several non-empirical values for $\mu_\text{x}$ were considered: $\mu^{\text{GE}}$ of the exact density-gradient expansion, $\mu^\text{PBE}$ from <a class="functional-link" href="../gga-x-pbe/"><code>gga_x_pbe</code></a>, $\mu^{\text{APBE}}=0.260$ from the asymptotic expansion of the semi-classical approximation used in <a class="functional-link" href="../gga-x-apbe/"><code>gga_x_apbe</code></a>, and $\mu^{\text{PBEmol}}=0.27583$ from <a class="functional-link" href="../gga-x-pbe-mol/"><code>gga_x_pbe_mol</code></a>, which was deduced from atomic hydrogen. This leads to four versions for each of these two functionals (thus, eight exchange functionals). Finally, $\alpha$ is chosen such that the maximum of <a class="review-eq-link" href="#review-eq-eq-lsrpbe">
-  <code>eq:lsrpbe</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="\begin{aligned}
+<p>is the second-order coefficient. Several non-empirical values for $\mu_\text{x}$ were considered: $\mu^{\text{GE}}$ of the exact density-gradient expansion, $\mu^\text{PBE}$ from <a class="functional-link" href="../gga-x-pbe/"><code>gga_x_pbe</code></a>, $\mu^{\text{APBE}}=0.260$ from the asymptotic expansion of the semi-classical approximation used in <a class="functional-link" href="../gga-x-apbe/"><code>gga_x_apbe</code></a>, and $\mu^{\text{PBEmol}}=0.27583$ from <a class="functional-link" href="../gga-x-pbe-mol/"><code>gga_x_pbe_mol</code></a>, which was deduced from atomic hydrogen. This leads to four versions for each of these two functionals (thus, eight exchange functionals). Finally, $\alpha$ is chosen such that the maximum of <a class="review-eq-link" href="#review-eq-eq-lsrpbe"><span class="eq-number">Eq. (448)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="\begin{aligned}
 F_\text{x}^{\text{ls(R)PBE}} = F_\text{x}^{\text{(R)PBE}} -
   (\kappa+1)\left(1-\E^{-\alpha s_{\sigma}^2}\right)
-\end{aligned}"></span>
-  </span>
-</a> (related to the local LO bound) is equal to the maximum value of <a class="functional-link" href="../gga-x-pw91/"><code>gga_x_pw91</code></a> ($1.641$).</p>
+\end{aligned}"></span></span></a> (related to the local LO bound) is equal to the maximum value of <a class="functional-link" href="../gga-x-pw91/"><code>gga_x_pw91</code></a> ($1.641$).</p>
 <p>These eight exchange functionals were combined with three correlation functionals (<a class="functional-link" href="../gga-c-lyp/"><code>gga_c_lyp</code></a>, <a class="functional-link" href="../gga-c-pw91/"><code>gga_c_pw91</code></a>, and <a class="functional-link" href="../gga-c-pbe/"><code>gga_c_pbe</code></a> with $\beta=3\mu_{\text{x}}/\pi^2$), leading to 24 functionals in total, which were tested on various molecular properties.</p>
 <p>Among these eight exchange functionals, the ones available in Libxc are the two using $\mu_\text{x}=\mu^\text{PBE}$, <a class="functional-link" href="../gga-x-lspbe/"><code>gga_x_lspbe</code></a> and <a class="functional-link" href="../gga-x-lsrpbe/"><code>gga_x_lsrpbe</code></a>.</p>
         </div>
@@ -81,22 +64,22 @@ F_\text{x}^{\text{ls(R)PBE}} = F_\text{x}^{\text{(R)PBE}} -
           <h2>Referenced Review Equations</h2>
           <div class="review-equations">
           <article class="review-equation-card" id="review-eq-eq-fxasymp">
-            <code>eq:fxasymp</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (431)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=70" title="Open page 70 of the review PDF">p. 70 ↗</a></p>
             <div class="equation" data-tex="\lim_{s_\sigma\to\infty} s_\sigma^{1/2} F_\text{x}(s_\sigma) &lt; \infty"></div>
           </article>
 
           <article class="review-equation-card" id="review-eq-eq-pbeenh">
-            <code>eq:pbeenh</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (382)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=58" title="Open page 58 of the review PDF">p. 58 ↗</a></p>
             <div class="equation" data-tex="F_\text{x}^{\text{PBE}} = 1 + \kappa\left[1 - \frac{\kappa}{\kappa + f_0(s_\sigma)}\right]"></div>
           </article>
 
           <article class="review-equation-card" id="review-eq-eq-RPBE">
-            <code>eq:RPBE</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (387)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=60" title="Open page 60 of the review PDF">p. 60 ↗</a></p>
             <div class="equation" data-tex="F_\text{x}^{\text{RPBE}} = 1 + \kappa\left(1 - \E^{-\mu s_\sigma^2/\kappa}\right)"></div>
           </article>
 
           <article class="review-equation-card" id="review-eq-eq-lsrpbe">
-            <code>eq:lsrpbe</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (448)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=75" title="Open page 75 of the review PDF">p. 75 ↗</a></p>
             <div class="equation" data-tex="\begin{aligned}
 F_\text{x}^{\text{ls(R)PBE}} = F_\text{x}^{\text{(R)PBE}} -
   (\kappa+1)\left(1-\E^{-\alpha s_{\sigma}^2}\right)

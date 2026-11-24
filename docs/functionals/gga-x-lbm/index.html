@@ -3,14 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>gga_x_lbm</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20261016-excerpts-v1">
-    <script defer src="../../assets/search.js?v=20261016-excerpts-v1"></script>
+    <title>gga_x_lbm — van Leeuwen &amp; Baerends modified · Libxc Wiki</title>
+    <meta name="description" content="gga_x_lbm: van Leeuwen &amp; Baerends modified. GGA exchange functional in Libxc, with references and BibTeX. Includes an excerpt from the Tran, Lehtola, Pittalis and Marques review.">
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261117-refs-v1">
+    <script defer src="../../assets/search.js?v=20261117-refs-v1"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
     <script defer src="../../vendor/katex/contrib/mhchem.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20261016-excerpts-v1"></script>
+    <script defer src="../../assets/detail.js?v=20261117-refs-v1"></script>
 
   </head>
   <body class="functional-page">
@@ -32,21 +33,18 @@
 
         <p class="brand">GGA</p>
         <h1><code class="title-code">gga_x_lbm</code></h1>
+        <p class="functional-name">van Leeuwen &amp; Baerends modified</p>
         <div class="detail-tags"><span class="tag">gga</span>
 <span class="tag">exchange</span></div>
       </header>
 
       <div class="detail-grid">
+
       <section class="callout">
         <p class="callout-label">Review excerpt</p>
         <div class="review-html">
-<p>This is a generalization of the original <a class="functional-link" href="../gga-x-lb/"><code>gga_x_lb</code></a> potential, with two empirical parameters in <a class="review-eq-link" href="#review-eq-eq-lb">
-  <code>eq:lb</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="v_{\text{x}\sigma}^{\text{LB}} = v_{\text{x}\sigma}^{\text{LDA}}
-  - n_\sigma^{1/3} \frac{\beta x_\sigma^2}{1 + \gamma\beta x_\sigma\arcsinh(x_\sigma)}"></span>
-  </span>
-</a>. The new parameter $\alpha=1.19$, which multiplies $v_{\text{x}\sigma}^{\text{LDA}}$, and $\beta=0.01$ were fit to reproduce the excitation energies and the dipole polarizabilities of small molecules. It turns out that besides improving static hyperpolarizabilities, the <a class="functional-link" href="../gga-x-lbm/"><code>gga_x_lbm</code></a> potential also modifies the relative frequency dependence with respect to <a class="functional-link" href="../lda-x/"><code>lda_x</code></a> and <a class="functional-link" href="../gga-x-lb/"><code>gga_x_lb</code></a>. Note that <a class="functional-link" href="../gga-x-lbm/"><code>gga_x_lbm</code></a> was proposed in particular to be used as a part of the SAOP (statistical averaging of orbital potentials) potential.</p>
+<p>This is a generalization of the original <a class="functional-link" href="../gga-x-lb/"><code>gga_x_lb</code></a> potential, with two empirical parameters in <a class="review-eq-link" href="#review-eq-eq-lb"><span class="eq-number">Eq. (378)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="v_{\text{x}\sigma}^{\text{LB}} = v_{\text{x}\sigma}^{\text{LDA}}
+  - n_\sigma^{1/3} \frac{\beta x_\sigma^2}{1 + \gamma\beta x_\sigma\arcsinh(x_\sigma)}"></span></span></a>. The new parameter $\alpha=1.19$, which multiplies $v_{\text{x}\sigma}^{\text{LDA}}$, and $\beta=0.01$ were fit to reproduce the excitation energies and the dipole polarizabilities of small molecules. It turns out that besides improving static hyperpolarizabilities, the <a class="functional-link" href="../gga-x-lbm/"><code>gga_x_lbm</code></a> potential also modifies the relative frequency dependence with respect to <a class="functional-link" href="../lda-x/"><code>lda_x</code></a> and <a class="functional-link" href="../gga-x-lb/"><code>gga_x_lb</code></a>. Note that <a class="functional-link" href="../gga-x-lbm/"><code>gga_x_lbm</code></a> was proposed in particular to be used as a part of the SAOP (statistical averaging of orbital potentials) potential.</p>
         </div>
         <p class="source-note">Adapted from <a href="https://arxiv.org/abs/2602.17333">Tran, Lehtola, Pittalis, and Marques, <em>Semi-Local Exchange-Correlation Approximations in Density Functional Theory</em>, arXiv:2602.17333</a>.</p>
       </section>
@@ -55,7 +53,7 @@
           <h2>Referenced Review Equations</h2>
           <div class="review-equations">
           <article class="review-equation-card" id="review-eq-eq-lb">
-            <code>eq:lb</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (378)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=57" title="Open page 57 of the review PDF">p. 57 ↗</a></p>
             <div class="equation" data-tex="v_{\text{x}\sigma}^{\text{LB}} = v_{\text{x}\sigma}^{\text{LDA}}
   - n_\sigma^{1/3} \frac{\beta x_\sigma^2}{1 + \gamma\beta x_\sigma\arcsinh(x_\sigma)}"></div>
           </article>

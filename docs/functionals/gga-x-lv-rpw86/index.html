@@ -3,14 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>gga_x_lv_rpw86</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20261016-excerpts-v1">
-    <script defer src="../../assets/search.js?v=20261016-excerpts-v1"></script>
+    <title>gga_x_lv_rpw86 — Berland and Hyldgaard · Libxc Wiki</title>
+    <meta name="description" content="gga_x_lv_rpw86: Berland and Hyldgaard. GGA exchange functional in Libxc, with references and BibTeX. Includes an excerpt from the Tran, Lehtola, Pittalis and Marques review.">
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261117-refs-v1">
+    <script defer src="../../assets/search.js?v=20261117-refs-v1"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
     <script defer src="../../vendor/katex/contrib/mhchem.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20261016-excerpts-v1"></script>
+    <script defer src="../../assets/detail.js?v=20261117-refs-v1"></script>
 
   </head>
   <body class="functional-page">
@@ -32,26 +33,23 @@
 
         <p class="brand">GGA</p>
         <h1><code class="title-code">gga_x_lv_rpw86</code></h1>
+        <p class="functional-name">Berland and Hyldgaard</p>
         <div class="detail-tags"><span class="tag">gga</span>
 <span class="tag">exchange</span></div>
       </header>
 
       <div class="detail-grid">
+
       <section class="callout">
         <p class="callout-label">Review excerpt</p>
         <div class="review-html">
-<p>This is an exchange functional based on the plasmon description within the non-local correlation functionals for van der Waals interactions.<sup class="citation-marker"><a href="#review-ref-Dion2004-PRL-246401">505</a>,<a href="#review-ref-Dion2005-PRL-109902">506</a></sup> In the regime with reduced-density gradient $s_\sigma \lesssim 2.5$ which dominates the non-local correlation component of the binding energy, the functional is made close to the Langreth&ndash;Vosko (LV) screened exchange<sup class="citation-marker"><a href="#review-ref-Langreth1990-175">574</a></sup> (defined below). For larger values of $s_\sigma$, dominated by exchange, the functional becomes similar to <a class="functional-link" href="../gga-x-rpw86/"><code>gga_x_rpw86</code></a> that includes the proper large-$s_\sigma$ behavior of exchange discussed in <sup class="citation-marker"><a href="#review-ref-Murray2009-2754">535</a></sup>. This leads to the following enhancement factor:</p>
+<p>This is an exchange functional based on the plasmon description within the non-local correlation functionals for van der Waals interactions.<sup class="citation-marker"><a href="#review-ref-Dion2004-PRL-246401">505</a>,<a href="#review-ref-Dion2005-PRL-109902">506</a></sup> In the regime with reduced-density gradient $s_\sigma \lesssim 2.5$ which dominates the non-local correlation component of the binding energy, the functional is made close to the Langreth&ndash;Vosko (LV) screened exchange<sup class="citation-marker"><a href="#review-ref-Langreth1990-175">574</a></sup> (defined below). For larger values of $s_\sigma$, dominated by exchange, the functional becomes similar to <a class="functional-link" href="../gga-x-rpw86/"><code>gga_x_rpw86</code></a> that includes the proper large-$s_\sigma$ behavior of exchange discussed in ref. <span class="citation-ref"><a href="#review-ref-Murray2009-2754">535</a></span>. This leads to the following enhancement factor:</p>
 <div class="equation" data-tex="\begin{aligned}
 F_\text{x}^\text{LV-rPW86} = &amp; \frac{1}{1+\alpha s_\sigma^6}F_{\text{x}}^{\text{LV}}(s_\sigma)  \\
  &amp;   + \frac{\alpha s_\sigma^6}{\beta + \alpha s_\sigma^6}F_{\text{x}}^{\text{rPW86}}(s_\sigma)
 \end{aligned}"></div>
-<p>where $F_\text{x}^\text{LV}=1+\mu_\text{LV}s^2$ with $\mu_\text{LV}=-Z_\text{ab}/9$ where $Z_\text{ab}=-0.8491$,<sup class="citation-marker"><a href="#review-ref-Langreth1990-175">574</a></sup> while $F_{\text{x}}^{\text{rPW86}}$ is given by <a class="review-eq-link" href="#review-eq-eq-ggaxpw86">
-  <code>eq:ggaxpw86</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="F_\text{x}^{\text{PW86}} = \left(
-    1 + \frac{a}{m}s_\sigma^2 + bs_\sigma^4 + cs_\sigma^6\right)^{m}"></span>
-  </span>
-</a> with the coefficients of <a class="functional-link" href="../gga-x-rpw86/"><code>gga_x_rpw86</code></a>. The parameters $\alpha = 0.02178$ and $\beta = 1.15$ were determined such that $F_\text{x}^\text{LV-rPW86}$ reproduces at best $F_\text{x}^\text{LV}$ in the $0&lt;s_\sigma&lt;2$ interval and $F_{\text{x}}^{\text{rPW86}}$ in the $4&lt;s_\sigma&lt;10$ interval.</p>
+<p>where $F_\text{x}^\text{LV}=1+\mu_\text{LV}s^2$ with $\mu_\text{LV}=-Z_\text{ab}/9$ where $Z_\text{ab}=-0.8491$,<sup class="citation-marker"><a href="#review-ref-Langreth1990-175">574</a></sup> while $F_{\text{x}}^{\text{rPW86}}$ is given by <a class="review-eq-link" href="#review-eq-eq-ggaxpw86"><span class="eq-number">Eq. (368)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="F_\text{x}^{\text{PW86}} = \left(
+    1 + \frac{a}{m}s_\sigma^2 + bs_\sigma^4 + cs_\sigma^6\right)^{m}"></span></span></a> with the coefficients of <a class="functional-link" href="../gga-x-rpw86/"><code>gga_x_rpw86</code></a>. The parameters $\alpha = 0.02178$ and $\beta = 1.15$ were determined such that $F_\text{x}^\text{LV-rPW86}$ reproduces at best $F_\text{x}^\text{LV}$ in the $0&lt;s_\sigma&lt;2$ interval and $F_{\text{x}}^{\text{rPW86}}$ in the $4&lt;s_\sigma&lt;10$ interval.</p>
 <p><a class="functional-link" href="../gga-x-lv-rpw86/"><code>gga_x_lv_rpw86</code></a> is used as the exchange component of the non-local van der Waals functional vdW-DF-cx.<sup class="citation-marker"><a href="#review-ref-Berland2014-035412">573</a></sup> This functional appears to perform well for the intermolecular distance and binding energy of weakly bound dimers (tested on the S22 set<sup class="citation-marker"><a href="#review-ref-Jurecka2006-1985">550</a></sup>), as well as for the lattice constants of layered materials and strongly-bound solids.</p>
         </div>
         <p class="source-note">Adapted from <a href="https://arxiv.org/abs/2602.17333">Tran, Lehtola, Pittalis, and Marques, <em>Semi-Local Exchange-Correlation Approximations in Density Functional Theory</em>, arXiv:2602.17333</a>.</p>
@@ -61,7 +59,7 @@ F_\text{x}^\text{LV-rPW86} = &amp; \frac{1}{1+\alpha s_\sigma^6}F_{\text{x}}^{\t
           <h2>Referenced Review Equations</h2>
           <div class="review-equations">
           <article class="review-equation-card" id="review-eq-eq-ggaxpw86">
-            <code>eq:ggaxpw86</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (368)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=54" title="Open page 54 of the review PDF">p. 54 ↗</a></p>
             <div class="equation" data-tex="F_\text{x}^{\text{PW86}} = \left(
     1 + \frac{a}{m}s_\sigma^2 + bs_\sigma^4 + cs_\sigma^6\right)^{m}"></div>
           </article>

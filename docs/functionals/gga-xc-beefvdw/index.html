@@ -3,14 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>gga_xc_beefvdw</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20261016-excerpts-v1">
-    <script defer src="../../assets/search.js?v=20261016-excerpts-v1"></script>
+    <title>gga_xc_beefvdw — BEEF-vdW exchange-correlation · Libxc Wiki</title>
+    <meta name="description" content="gga_xc_beefvdw: BEEF-vdW exchange-correlation. GGA exchange-correlation functional in Libxc, with references and BibTeX. Includes an excerpt from the Tran, Lehtola, Pittalis and Marques review.">
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261117-refs-v1">
+    <script defer src="../../assets/search.js?v=20261117-refs-v1"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
     <script defer src="../../vendor/katex/contrib/mhchem.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20261016-excerpts-v1"></script>
+    <script defer src="../../assets/detail.js?v=20261117-refs-v1"></script>
 
   </head>
   <body class="functional-page">
@@ -32,12 +33,14 @@
 
         <p class="brand">GGA</p>
         <h1><code class="title-code">gga_xc_beefvdw</code></h1>
+        <p class="functional-name">BEEF-vdW exchange-correlation</p>
         <div class="detail-tags"><span class="tag">gga</span>
 <span class="tag">exchange</span>
 <span class="tag">correlation</span></div>
       </header>
 
       <div class="detail-grid">
+
       <section class="callout">
         <p class="callout-label">Review excerpt</p>
         <div class="review-html">
@@ -49,18 +52,8 @@
 <div class="equation" data-tex="F_\text{x}^\text{BEEF-vdW} = \sum_{m=0}^{M} a_m B_m[r(s_\sigma)]"></div>
 <p>where $a_m$ are the expansion coefficients and</p>
 <div class="equation" data-tex="r(s_\sigma) = \frac{2s_\sigma^2}{q + s_\sigma^2} - 1"></div>
-<p>with $q=4$, which transforms $r(s_\sigma)$ into the interval $[-1, 1]$. The parameter $M=29$ was chosen in <a class="review-eq-link" href="#review-eq-eq-fxbeef">
-  <code>eq:fxbeef</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="F_\text{x}^\text{BEEF-vdW} = \sum_{m=0}^{M} a_m B_m[r(s_\sigma)]"></span>
-  </span>
-</a>, leading to a total of 31 parameters (including $\alpha_c$). As shown in <a class="review-eq-link" href="#review-eq-eq-excbeef">
-  <code>eq:excbeef</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="e_\text{xc}^\text{BEEF-vdW} = e_\text{x}^\text{BEEF-vdW} + \alpha_c e_\text{c}^\text{PW-LDA}
-  + (1 - \alpha_c) e_\text{c}^\text{PBE}"></span>
-  </span>
-</a>, this exchange functional is mixed with the <a class="functional-link" href="../lda-c-pw/"><code>lda_c_pw</code></a> and <a class="functional-link" href="../gga-c-pbe/"><code>gga_c_pbe</code></a> correlation functionals. Furthermore, the non-local correlation functional vdW–DF2<sup class="citation-marker"><a href="#review-ref-Lee2010-081101">536</a></sup> was added to <a class="functional-link" href="../gga-xc-beefvdw/"><code>gga_xc_beefvdw</code></a> for the training procedure.</p>
+<p>with $q=4$, which transforms $r(s_\sigma)$ into the interval $[-1, 1]$. The parameter $M=29$ was chosen in <a class="review-eq-link" href="#review-eq-eq-fxbeef"><span class="eq-number">Eq. (545)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="F_\text{x}^\text{BEEF-vdW} = \sum_{m=0}^{M} a_m B_m[r(s_\sigma)]"></span></span></a>, leading to a total of 31 parameters (including $\alpha_c$). As shown in <a class="review-eq-link" href="#review-eq-eq-excbeef"><span class="eq-number">Eq. (544)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="e_\text{xc}^\text{BEEF-vdW} = e_\text{x}^\text{BEEF-vdW} + \alpha_c e_\text{c}^\text{PW-LDA}
+  + (1 - \alpha_c) e_\text{c}^\text{PBE}"></span></span></a>, this exchange functional is mixed with the <a class="functional-link" href="../lda-c-pw/"><code>lda_c_pw</code></a> and <a class="functional-link" href="../gga-c-pbe/"><code>gga_c_pbe</code></a> correlation functionals. Furthermore, the non-local correlation functional vdW–DF2<sup class="citation-marker"><a href="#review-ref-Lee2010-081101">536</a></sup> was added to <a class="functional-link" href="../gga-xc-beefvdw/"><code>gga_xc_beefvdw</code></a> for the training procedure.</p>
 <p>The 31 parameters were fit to a large training set of reference values that consists of the following subsets: CE17 (17 chemisorption energies), RE42 (42 reaction energies), DBH24/08 (24 reaction barriers<sup class="citation-marker"><a href="#review-ref-Zheng2009-808">672</a></sup>), G2/97 (148 formation energies<sup class="citation-marker"><a href="#review-ref-Curtiss1997-1063">534</a></sup>), Sol34Ec (cohesive energies of 34 solids), and S22$\times$5 (intermolecular interaction energies of 22 molecular dimers at five different intermolecular separations<sup class="citation-marker"><a href="#review-ref-Grafova2010-2365">589</a></sup>).</p>
 <p>Benchmarking against numerous other GGA and GGA-vdW functionals revealed that <a class="functional-link" href="../gga-xc-beefvdw/"><code>gga_xc_beefvdw</code></a>+vdW-DF2 appears to be a rather general purpose xc functional, leading to small errors across a large range of properties.</p>
         </div>
@@ -71,12 +64,12 @@
           <h2>Referenced Review Equations</h2>
           <div class="review-equations">
           <article class="review-equation-card" id="review-eq-eq-fxbeef">
-            <code>eq:fxbeef</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (545)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=98" title="Open page 98 of the review PDF">p. 98 ↗</a></p>
             <div class="equation" data-tex="F_\text{x}^\text{BEEF-vdW} = \sum_{m=0}^{M} a_m B_m[r(s_\sigma)]"></div>
           </article>
 
           <article class="review-equation-card" id="review-eq-eq-excbeef">
-            <code>eq:excbeef</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (544)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=98" title="Open page 98 of the review PDF">p. 98 ↗</a></p>
             <div class="equation" data-tex="e_\text{xc}^\text{BEEF-vdW} = e_\text{x}^\text{BEEF-vdW} + \alpha_c e_\text{c}^\text{PW-LDA}
   + (1 - \alpha_c) e_\text{c}^\text{PBE}"></div>
           </article>

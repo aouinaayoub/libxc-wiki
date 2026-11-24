@@ -3,14 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>mgga_x_tb09</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20261016-excerpts-v1">
-    <script defer src="../../assets/search.js?v=20261016-excerpts-v1"></script>
+    <title>mgga_x_tb09 — Tran &amp; Blaha 09 · Libxc Wiki</title>
+    <meta name="description" content="mgga_x_tb09: Tran &amp; Blaha 09. Meta-GGA exchange functional in Libxc, with references and BibTeX. Includes an excerpt from the Tran, Lehtola, Pittalis and Marques review.">
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261117-refs-v1">
+    <script defer src="../../assets/search.js?v=20261117-refs-v1"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
     <script defer src="../../vendor/katex/contrib/mhchem.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20261016-excerpts-v1"></script>
+    <script defer src="../../assets/detail.js?v=20261117-refs-v1"></script>
 
   </head>
   <body class="functional-page">
@@ -32,47 +33,24 @@
 
         <p class="brand">META-GGA</p>
         <h1><code class="title-code">mgga_x_tb09</code></h1>
+        <p class="functional-name">Tran &amp; Blaha 09</p>
         <div class="detail-tags"><span class="tag">meta-gga</span>
 <span class="tag">exchange</span></div>
       </header>
 
       <div class="detail-grid">
+
       <section class="callout">
         <p class="callout-label">Review excerpt</p>
         <div class="review-html">
 <p>Inspired by the improved description of the band gap of insulators and semiconductors by <a class="functional-link" href="../mgga-x-bj06/"><code>mgga_x_bj06</code></a> over the standard LDA and PBE (<a class="functional-link" href="../gga-x-pbe/"><code>gga_x_pbe</code></a> + <a class="functional-link" href="../gga-c-pbe/"><code>gga_c_pbe</code></a>) functionals,<sup class="citation-marker"><a href="#review-ref-Tran2007-196208">708</a></sup> Tran and Blaha<sup class="citation-marker"><a href="#review-ref-Tran2009-226401">707</a></sup> suggested the following modification of <a class="functional-link" href="../mgga-x-bj06/"><code>mgga_x_bj06</code></a> as a further improvement:</p>
 <div class="equation" data-tex="v^\text{TB09}_{\text{x}\sigma} = c v^\text{BR89,hole}_{\text{x}\sigma} + (3c-2)\frac{1}{\pi}\sqrt{\frac{5}{6}}\sqrt{\frac{\tau_\sigma}{n_\sigma}}"></div>
-<p>where $v^\text{BR89,hole}_{\text{x}\sigma}$ is <a class="review-eq-link" href="#review-eq-eq-vxbrhole">
-  <code>eq:vxbrhole</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="v^\text{BR89,hole}_{\text{x}\sigma}=2e^\text{BR89}_{\text{x}\sigma}"></span>
-  </span>
-</a> with $\gamma=0.8$. For the parameter $c$, a system-dependent expression is chosen:</p>
+<p>where $v^\text{BR89,hole}_{\text{x}\sigma}$ is <a class="review-eq-link" href="#review-eq-eq-vxbrhole"><span class="eq-number">Eq. (554)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="v^\text{BR89,hole}_{\text{x}\sigma}=2e^\text{BR89}_{\text{x}\sigma}"></span></span></a> with $\gamma=0.8$. For the parameter $c$, a system-dependent expression is chosen:</p>
 <div class="equation" data-tex="c = \alpha + \beta \left[ \frac{1}{V_{\text{cell}}} \int_{\text{cell}}\!\D\br&#39;\, \frac{|\nabla n(\br&#39;)|}{n(\br&#39;)} \right]^e"></div>
 <p>where $V_{\text{cell}}$ is the volume of the unit cell and $e=1/2$. Associated with the LDA correlation potential from <a class="functional-link" href="../lda-c-pw/"><code>lda_c_pw</code></a>, $\alpha=-0.012$ and $\beta=1.023$ were obtained by fitting to the experimental band gaps of a set of 23 solids.</p>
 <p><a class="functional-link" href="../mgga-x-tb09/"><code>mgga_x_tb09</code></a> is to date the most accurate semi-local method for the calculation of band gaps of semiconductors and insulators.<sup class="citation-marker"><a href="#review-ref-Borlido2019-5069">408</a>,<a href="#review-ref-Borlido2020-96">409</a>,<a href="#review-ref-Tran2019-110902">709</a></sup> Note that the TB09 potential (<a class="functional-link" href="../mgga-x-tb09/"><code>mgga_x_tb09</code></a> + <a class="functional-link" href="../lda-c-pw/"><code>lda_c_pw</code></a>) is also commonly called the modified Becke-Johnson (mBJ) potential.</p>
-<p>As is obvious from <a class="review-eq-link" href="#review-eq-eq-tb09-c">
-  <code>eq:tb09-c</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="c = \alpha + \beta \left[ \frac{1}{V_{\text{cell}}} \int_{\text{cell}}\!\D\br&#39;\, \frac{|\nabla n(\br&#39;)|}{n(\br&#39;)} \right]^e"></span>
-  </span>
-</a>, this functional is not formally a semi-local functional. It is also important to note that because of this, <a class="review-eq-link" href="#review-eq-eq-tb09-c">
-  <code>eq:tb09-c</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="c = \alpha + \beta \left[ \frac{1}{V_{\text{cell}}} \int_{\text{cell}}\!\D\br&#39;\, \frac{|\nabla n(\br&#39;)|}{n(\br&#39;)} \right]^e"></span>
-  </span>
-</a> is not implemented in Libxc. Instead, $c$ in <a class="review-eq-link" href="#review-eq-eq-tb09-v">
-  <code>eq:tb09-v</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="v^\text{TB09}_{\text{x}\sigma} = c v^\text{BR89,hole}_{\text{x}\sigma} + (3c-2)\frac{1}{\pi}\sqrt{\frac{5}{6}}\sqrt{\frac{\tau_\sigma}{n_\sigma}}"></span>
-  </span>
-</a> is handled as a parameter that has to be provided by the DFT code calling Libxc.</p>
-<p>As is also seen from the definition of $c$, this potential is meant to be used only for bulk periodic systems, since for systems with vacuum or an interface, the average of $\left\vert\nabla n\right\vert/n$ in the unit cell has no meaning and <a class="review-eq-link" href="#review-eq-eq-tb09-c">
-  <code>eq:tb09-c</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="c = \alpha + \beta \left[ \frac{1}{V_{\text{cell}}} \int_{\text{cell}}\!\D\br&#39;\, \frac{|\nabla n(\br&#39;)|}{n(\br&#39;)} \right]^e"></span>
-  </span>
-</a> cannot be used. For such systems, a solution is either to fix $c$ to a suitable value or to use <code>mgga_x_lmbj</code> that depends on a local average of $\left\vert\nabla n\right\vert/n$.</p>
+<p>As is obvious from <a class="review-eq-link" href="#review-eq-eq-tb09-c"><span class="eq-number">Eq. (591)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="c = \alpha + \beta \left[ \frac{1}{V_{\text{cell}}} \int_{\text{cell}}\!\D\br&#39;\, \frac{|\nabla n(\br&#39;)|}{n(\br&#39;)} \right]^e"></span></span></a>, this functional is not formally a semi-local functional. It is also important to note that because of this, <a class="review-eq-link" href="#review-eq-eq-tb09-c"><span class="eq-number">Eq. (591)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="c = \alpha + \beta \left[ \frac{1}{V_{\text{cell}}} \int_{\text{cell}}\!\D\br&#39;\, \frac{|\nabla n(\br&#39;)|}{n(\br&#39;)} \right]^e"></span></span></a> is not implemented in Libxc. Instead, $c$ in <a class="review-eq-link" href="#review-eq-eq-tb09-v"><span class="eq-number">Eq. (590)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="v^\text{TB09}_{\text{x}\sigma} = c v^\text{BR89,hole}_{\text{x}\sigma} + (3c-2)\frac{1}{\pi}\sqrt{\frac{5}{6}}\sqrt{\frac{\tau_\sigma}{n_\sigma}}"></span></span></a> is handled as a parameter that has to be provided by the DFT code calling Libxc.</p>
+<p>As is also seen from the definition of $c$, this potential is meant to be used only for bulk periodic systems, since for systems with vacuum or an interface, the average of $\left\vert\nabla n\right\vert/n$ in the unit cell has no meaning and <a class="review-eq-link" href="#review-eq-eq-tb09-c"><span class="eq-number">Eq. (591)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="c = \alpha + \beta \left[ \frac{1}{V_{\text{cell}}} \int_{\text{cell}}\!\D\br&#39;\, \frac{|\nabla n(\br&#39;)|}{n(\br&#39;)} \right]^e"></span></span></a> cannot be used. For such systems, a solution is either to fix $c$ to a suitable value or to use <code>mgga_x_lmbj</code> that depends on a local average of $\left\vert\nabla n\right\vert/n$.</p>
         </div>
         <p class="source-note">Adapted from <a href="https://arxiv.org/abs/2602.17333">Tran, Lehtola, Pittalis, and Marques, <em>Semi-Local Exchange-Correlation Approximations in Density Functional Theory</em>, arXiv:2602.17333</a>.</p>
       </section>
@@ -81,17 +59,17 @@
           <h2>Referenced Review Equations</h2>
           <div class="review-equations">
           <article class="review-equation-card" id="review-eq-eq-vxbrhole">
-            <code>eq:vxbrhole</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (554)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=101" title="Open page 101 of the review PDF">p. 101 ↗</a></p>
             <div class="equation" data-tex="v^\text{BR89,hole}_{\text{x}\sigma}=2e^\text{BR89}_{\text{x}\sigma}"></div>
           </article>
 
           <article class="review-equation-card" id="review-eq-eq-tb09-c">
-            <code>eq:tb09-c</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (591)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=108" title="Open page 108 of the review PDF">p. 108 ↗</a></p>
             <div class="equation" data-tex="c = \alpha + \beta \left[ \frac{1}{V_{\text{cell}}} \int_{\text{cell}}\!\D\br&#39;\, \frac{|\nabla n(\br&#39;)|}{n(\br&#39;)} \right]^e"></div>
           </article>
 
           <article class="review-equation-card" id="review-eq-eq-tb09-v">
-            <code>eq:tb09-v</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (590)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=108" title="Open page 108 of the review PDF">p. 108 ↗</a></p>
             <div class="equation" data-tex="v^\text{TB09}_{\text{x}\sigma} = c v^\text{BR89,hole}_{\text{x}\sigma} + (3c-2)\frac{1}{\pi}\sqrt{\frac{5}{6}}\sqrt{\frac{\tau_\sigma}{n_\sigma}}"></div>
           </article>
 

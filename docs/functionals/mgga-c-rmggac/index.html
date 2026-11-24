@@ -3,14 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>mgga_c_rmggac</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20261016-excerpts-v1">
-    <script defer src="../../assets/search.js?v=20261016-excerpts-v1"></script>
+    <title>mgga_c_rmggac — Revised correlation energy for MGGAC exchange functional · Libxc Wiki</title>
+    <meta name="description" content="mgga_c_rmggac: Revised correlation energy for MGGAC exchange functional. Meta-GGA correlation functional in Libxc, with references and BibTeX. Includes an excerpt from the Tran, Lehtola, Pittalis and Marques review.">
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261117-refs-v1">
+    <script defer src="../../assets/search.js?v=20261117-refs-v1"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
     <script defer src="../../vendor/katex/contrib/mhchem.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20261016-excerpts-v1"></script>
+    <script defer src="../../assets/detail.js?v=20261117-refs-v1"></script>
 
   </head>
   <body class="functional-page">
@@ -32,61 +33,28 @@
 
         <p class="brand">META-GGA</p>
         <h1><code class="title-code">mgga_c_rmggac</code></h1>
+        <p class="functional-name">Revised correlation energy for MGGAC exchange functional</p>
         <div class="detail-tags"><span class="tag">meta-gga</span>
 <span class="tag">correlation</span></div>
       </header>
 
       <div class="detail-grid">
+
       <section class="callout">
         <p class="callout-label">Review excerpt</p>
         <div class="review-html">
 <p>The <a class="functional-link" href="../mgga-x-mggac/"><code>mgga_x_mggac</code></a> exchange functional was originally combined with <a class="functional-link" href="../gga-c-mggac/"><code>gga_c_mggac</code></a> for correlation. Aiming at improving the accuracy, a correlation functional that is more suited for use with <a class="functional-link" href="../mgga-x-mggac/"><code>mgga_x_mggac</code></a> was proposed. Its mathematical form differs from <a class="functional-link" href="../mgga-c-scan/"><code>mgga_c_scan</code></a> in two places:</p>
 <ol class="review-list" type="i">
-<li><p>$\beta=\beta^{\text{MB}}$ is used instead of <a class="review-eq-link" href="#review-eq-eq-vpbe-beta">
-  <code>eq:vpbe-beta</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="\beta(r_s) = \beta_0\frac{1 + a r_s}{1 + b r_s}"></span>
-  </span>
-</a></p></li>
-<li><p>the switching function $f$ (see <a class="review-eq-link" href="#review-eq-eq-ec-scan">
-  <code>eq:ec-scan</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="e_\text{c}^\text{SCAN} = e_\text{c}^1 + 
-  f(\alpha_{\text{c}})\left(e_\text{c}^0 - e_\text{c}^1\right)"></span>
-  </span>
-</a>; <a class="review-eq-link" href="#review-eq-eq-scanfalpha">
-  <code>eq:scanfalpha</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="f(\alpha) = \E^{-c_1\alpha/\left(1-\alpha\right)}\theta(1-\alpha)
-  - d \E^{c_2/\left(1-\alpha\right)}\theta(\alpha - 1)"></span>
-  </span>
-</a>) is replaced by</p></li>
+<li><p>$\beta=\beta^{\text{MB}}$ is used instead of <a class="review-eq-link" href="#review-eq-eq-vpbe-beta"><span class="eq-number">Eq. (504)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="\beta(r_s) = \beta_0\frac{1 + a r_s}{1 + b r_s}"></span></span></a></p></li>
+<li><p>the switching function $f$ (see <a class="review-eq-link" href="#review-eq-eq-ec-scan"><span class="eq-number">Eq. (749)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="e_\text{c}^\text{SCAN} = e_\text{c}^1 + 
+  f(\alpha_{\text{c}})\left(e_\text{c}^0 - e_\text{c}^1\right)"></span></span></a>; <a class="review-eq-link" href="#review-eq-eq-scanfalpha"><span class="eq-number">Eq. (615)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="f(\alpha) = \E^{-c_1\alpha/\left(1-\alpha\right)}\theta(1-\alpha)
+  - d \E^{c_2/\left(1-\alpha\right)}\theta(\alpha - 1)"></span></span></a>) is replaced by</p></li>
 </ol>
 <div class="equation" data-tex="f(s,\alpha) = 1 - \frac{3g^3(s,\alpha)}{1+g^3(s,\alpha)+g^6(s,\alpha)}"></div>
 <p>where</p>
 <div class="equation" data-tex="g(s,\alpha) = \frac{(1+\gamma_1)\alpha}{\gamma_1+\alpha+\gamma_2 s^2}"></div>
-<p>with $\gamma_1=0.08$ and $\gamma_2=0.3$ that were obtained by a fit to the atomization energies of the molecules in the AE6 test set.<sup class="citation-marker"><a href="#review-ref-Lynch2003-8996">631</a>,<a href="#review-ref-Lynch2004-1460">632</a></sup> Note that <a class="review-eq-link" href="#review-eq-eq-f-rmggac">
-  <code>eq:f-rmggac</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="f(s,\alpha) = 1 - \frac{3g^3(s,\alpha)}{1+g^3(s,\alpha)+g^6(s,\alpha)}"></span>
-  </span>
-</a> depends on $s$ (<a class="review-eq-link" href="#review-eq-eq-s">
-  <code>eq:s</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="s = \frac{|\nabla n|}{2 n k_\text{F}} = 2^{1/3}C_{s}x =
-  \left(\frac{3}{2\pi}\right)^{1/3}\left\vert\nabla r_s\right\vert"></span>
-  </span>
-</a>) and $\alpha$ (<a class="review-eq-link" href="#review-eq-eq-alpha">
-  <code>eq:alpha</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="\alpha = \frac{\tau-\tau^{\text{W}}[n]}{\tau^{\text{TF}}[n]}"></span>
-  </span>
-</a>), while the function $f$ of <a class="functional-link" href="../mgga-c-scan/"><code>mgga_c_scan</code></a> depends on $\alpha_\text{c}$ (<a class="review-eq-link" href="#review-eq-eq-alpha-sigma2">
-  <code>eq:alpha-sigma2</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="\alpha_{\text{c}} = \frac{\tau - \tau^{\text{W}}[n]}{\tau^{\text{TF}}[n_{\uparrow},n_{\downarrow}]}"></span>
-  </span>
-</a>).</p>
+<p>with $\gamma_1=0.08$ and $\gamma_2=0.3$ that were obtained by a fit to the atomization energies of the molecules in the AE6 test set.<sup class="citation-marker"><a href="#review-ref-Lynch2003-8996">631</a>,<a href="#review-ref-Lynch2004-1460">632</a></sup> Note that <a class="review-eq-link" href="#review-eq-eq-f-rmggac"><span class="eq-number">Eq. (766)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="f(s,\alpha) = 1 - \frac{3g^3(s,\alpha)}{1+g^3(s,\alpha)+g^6(s,\alpha)}"></span></span></a> depends on $s$ (<a class="review-eq-link" href="#review-eq-eq-s"><span class="eq-number">Eq. (46)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="s = \frac{|\nabla n|}{2 n k_\text{F}} = 2^{1/3}C_{s}x =
+  \left(\frac{3}{2\pi}\right)^{1/3}\left\vert\nabla r_s\right\vert"></span></span></a>) and $\alpha$ (<a class="review-eq-link" href="#review-eq-eq-alpha"><span class="eq-number">Eq. (79)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="\alpha = \frac{\tau-\tau^{\text{W}}[n]}{\tau^{\text{TF}}[n]}"></span></span></a>), while the function $f$ of <a class="functional-link" href="../mgga-c-scan/"><code>mgga_c_scan</code></a> depends on $\alpha_\text{c}$ (<a class="review-eq-link" href="#review-eq-eq-alpha-sigma2"><span class="eq-number">Eq. (82)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="\alpha_{\text{c}} = \frac{\tau - \tau^{\text{W}}[n]}{\tau^{\text{TF}}[n_{\uparrow},n_{\downarrow}]}"></span></span></a>).</p>
         </div>
         <p class="source-note">Adapted from <a href="https://arxiv.org/abs/2602.17333">Tran, Lehtola, Pittalis, and Marques, <em>Semi-Local Exchange-Correlation Approximations in Density Functional Theory</em>, arXiv:2602.17333</a>.</p>
       </section>
@@ -95,40 +63,40 @@
           <h2>Referenced Review Equations</h2>
           <div class="review-equations">
           <article class="review-equation-card" id="review-eq-eq-vpbe-beta">
-            <code>eq:vpbe-beta</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (504)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=87" title="Open page 87 of the review PDF">p. 87 ↗</a></p>
             <div class="equation" data-tex="\beta(r_s) = \beta_0\frac{1 + a r_s}{1 + b r_s}"></div>
           </article>
 
           <article class="review-equation-card" id="review-eq-eq-ec-scan">
-            <code>eq:ec-scan</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (749)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=137" title="Open page 137 of the review PDF">p. 137 ↗</a></p>
             <div class="equation" data-tex="e_\text{c}^\text{SCAN} = e_\text{c}^1 + 
   f(\alpha_{\text{c}})\left(e_\text{c}^0 - e_\text{c}^1\right)"></div>
           </article>
 
           <article class="review-equation-card" id="review-eq-eq-scanfalpha">
-            <code>eq:scanfalpha</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (615)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=113" title="Open page 113 of the review PDF">p. 113 ↗</a></p>
             <div class="equation" data-tex="f(\alpha) = \E^{-c_1\alpha/\left(1-\alpha\right)}\theta(1-\alpha)
   - d \E^{c_2/\left(1-\alpha\right)}\theta(\alpha - 1)"></div>
           </article>
 
           <article class="review-equation-card" id="review-eq-eq-f-rmggac">
-            <code>eq:f-rmggac</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (766)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=140" title="Open page 140 of the review PDF">p. 140 ↗</a></p>
             <div class="equation" data-tex="f(s,\alpha) = 1 - \frac{3g^3(s,\alpha)}{1+g^3(s,\alpha)+g^6(s,\alpha)}"></div>
           </article>
 
           <article class="review-equation-card" id="review-eq-eq-s">
-            <code>eq:s</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (46)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=12" title="Open page 12 of the review PDF">p. 12 ↗</a></p>
             <div class="equation" data-tex="s = \frac{|\nabla n|}{2 n k_\text{F}} = 2^{1/3}C_{s}x =
   \left(\frac{3}{2\pi}\right)^{1/3}\left\vert\nabla r_s\right\vert"></div>
           </article>
 
           <article class="review-equation-card" id="review-eq-eq-alpha">
-            <code>eq:alpha</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (79)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=14" title="Open page 14 of the review PDF">p. 14 ↗</a></p>
             <div class="equation" data-tex="\alpha = \frac{\tau-\tau^{\text{W}}[n]}{\tau^{\text{TF}}[n]}"></div>
           </article>
 
           <article class="review-equation-card" id="review-eq-eq-alpha-sigma2">
-            <code>eq:alpha-sigma2</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (82)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=14" title="Open page 14 of the review PDF">p. 14 ↗</a></p>
             <div class="equation" data-tex="\alpha_{\text{c}} = \frac{\tau - \tau^{\text{W}}[n]}{\tau^{\text{TF}}[n_{\uparrow},n_{\downarrow}]}"></div>
           </article>
 

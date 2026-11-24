@@ -3,14 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>mgga_c_tpss</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20261016-excerpts-v1">
-    <script defer src="../../assets/search.js?v=20261016-excerpts-v1"></script>
+    <title>mgga_c_tpss — Tao, Perdew, Staroverov &amp; Scuseria · Libxc Wiki</title>
+    <meta name="description" content="mgga_c_tpss: Tao, Perdew, Staroverov &amp; Scuseria. Meta-GGA correlation functional in Libxc, with references and BibTeX. Includes an excerpt from the Tran, Lehtola, Pittalis and Marques review.">
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261117-refs-v1">
+    <script defer src="../../assets/search.js?v=20261117-refs-v1"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
     <script defer src="../../vendor/katex/contrib/mhchem.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20261016-excerpts-v1"></script>
+    <script defer src="../../assets/detail.js?v=20261117-refs-v1"></script>
 
   </head>
   <body class="functional-page">
@@ -32,30 +33,27 @@
 
         <p class="brand">META-GGA</p>
         <h1><code class="title-code">mgga_c_tpss</code></h1>
+        <p class="functional-name">Tao, Perdew, Staroverov &amp; Scuseria</p>
         <div class="detail-tags"><span class="tag">meta-gga</span>
 <span class="tag">correlation</span></div>
       </header>
 
       <div class="detail-grid">
+
       <section class="callout">
         <p class="callout-label">Review excerpt</p>
         <div class="review-html">
 <p>The correlation companion of <a class="functional-link" href="../mgga-x-tpss/"><code>mgga_x_tpss</code></a> was developed as a (small) correction to <a class="functional-link" href="../mgga-c-pkzb/"><code>mgga_c_pkzb</code></a>. To start with, the functional is written as</p>
 <div class="equation" data-tex="e_c^\text{TPSS} = e_\text{c}^\text{revPKZB}\left(1+d
   z^3e_\text{c}^\text{revPKZB}\right)"></div>
-<p>where $e_\text{c}^\text{revPKZB}$ is a revised version of <a class="functional-link" href="../mgga-c-pkzb/"><code>mgga_c_pkzb</code></a>. Unfortunately, there is a small change to this functional that makes it impossible to write it as <a class="review-eq-link" href="#review-eq-eq-stollfunc">
-  <code>eq:stollfunc</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="\begin{aligned}
+<p>where $e_\text{c}^\text{revPKZB}$ is a revised version of <a class="functional-link" href="../mgga-c-pkzb/"><code>mgga_c_pkzb</code></a>. Unfortunately, there is a small change to this functional that makes it impossible to write it as <a class="review-eq-link" href="#review-eq-eq-stollfunc"><span class="eq-number">Eq. (250)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="\begin{aligned}
 e_\c[n_\uparrow,n_\downarrow] = &amp; \sum_{\sigma} 
    e^\text{LDA}_{\c\,\sigma\sigma}(n_\sigma)F_{\c\,\sigma\sigma}[n_\sigma,0] 
     \\
 
   &amp; + e^\text{LDA}_{\c\,\uparrow\downarrow}(n_\uparrow,n_\downarrow)
   F_{\c\,\uparrow\downarrow}[n_\uparrow,n_\downarrow]
-\end{aligned}"></span>
-  </span>
-</a> for the Stoll decomposition. The quantity $e_\text{c}^\text{revPKZB}$ reads</p>
+\end{aligned}"></span></span></a> for the Stoll decomposition. The quantity $e_\text{c}^\text{revPKZB}$ reads</p>
 <div class="equation" data-tex="\begin{aligned}
 e_\text{c}^\text{revPKZB} = \left[1+C(\zeta,\xi) 
   z^2\right] e_\text{c}^\text{PBE}[n_\uparrow,n_\downarrow]  \\
@@ -66,51 +64,21 @@ e_\text{c}^\text{revPKZB} = \left[1+C(\zeta,\xi)
 <div class="equation" data-tex="\tilde e_\text{c} = \max\left(e_\text{c}^\text{PBE}[n_\uparrow,0], e_\text{c}^\text{PBE}[n_\uparrow,n_\downarrow]\right)"></div>
 <p>The main differences with respect to <a class="functional-link" href="../mgga-c-pkzb/"><code>mgga_c_pkzb</code></a> are:</p>
 <ol class="review-list" type="i">
-<li><p>the replacement of $z_\sigma$ (<a class="review-eq-link" href="#review-eq-eq-z-sigma">
-  <code>eq:z-sigma</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="z_\sigma = \frac{\tau_\sigma^{\text{W}}}{\tau_\sigma}"></span>
-  </span>
-</a>) by the non-spin resolved $z$ (<a class="review-eq-link" href="#review-eq-eq-z">
-  <code>eq:z</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="z = \frac{\tau^{\text{W}}}{\tau}"></span>
-  </span>
-</a>) in <a class="review-eq-link" href="#review-eq-eq-fpkzb2">
-  <code>eq:fpkzb2</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="\begin{aligned}
+<li><p>the replacement of $z_\sigma$ (<a class="review-eq-link" href="#review-eq-eq-z-sigma"><span class="eq-number">Eq. (84)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="z_\sigma = \frac{\tau_\sigma^{\text{W}}}{\tau_\sigma}"></span></span></a>) by the non-spin resolved $z$ (<a class="review-eq-link" href="#review-eq-eq-z"><span class="eq-number">Eq. (83)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="z = \frac{\tau^{\text{W}}}{\tau}"></span></span></a>) in <a class="review-eq-link" href="#review-eq-eq-fpkzb2"><span class="eq-number">Eq. (727b)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="\begin{aligned}
 F^\text{PKZB}_{\text{c}\,\sigma\sigma} &amp; = F^\text{PKZB}_{\text{c}\,\uparrow\downarrow} - (1+C) z_{\sigma}^2
-\end{aligned}"></span>
-  </span>
-</a></p></li>
-<li><p>the $\max$ function in <a class="review-eq-link" href="#review-eq-eq-ctpssmax">
-  <code>eq:ctpssmax</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="\tilde e_\text{c} = \max\left(e_\text{c}^\text{PBE}[n_\uparrow,0], e_\text{c}^\text{PBE}[n_\uparrow,n_\downarrow]\right)"></span>
-  </span>
-</a> that ensures that the correlation energy is negative for all densities</p></li>
-<li><p>the second-order $d$-term in <a class="review-eq-link" href="#review-eq-eq-tpss">
-  <code>eq:tpss</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="e_c^\text{TPSS} = e_\text{c}^\text{revPKZB}\left(1+d
-  z^3e_\text{c}^\text{revPKZB}\right)"></span>
-  </span>
-</a></p></li>
+\end{aligned}"></span></span></a></p></li>
+<li><p>the $\max$ function in <a class="review-eq-link" href="#review-eq-eq-ctpssmax"><span class="eq-number">Eq. (738)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="\tilde e_\text{c} = \max\left(e_\text{c}^\text{PBE}[n_\uparrow,0], e_\text{c}^\text{PBE}[n_\uparrow,n_\downarrow]\right)"></span></span></a> that ensures that the correlation energy is negative for all densities</p></li>
+<li><p>the second-order $d$-term in <a class="review-eq-link" href="#review-eq-eq-tpss"><span class="eq-number">Eq. (736)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="e_c^\text{TPSS} = e_\text{c}^\text{revPKZB}\left(1+d
+  z^3e_\text{c}^\text{revPKZB}\right)"></span></span></a></p></li>
 <li><p>the constant $C$ that is replaced by a function $C(\zeta,\xi)$, where $\xi = |\nabla \zeta|/\left[2(3\pi^2n)^{1/3}\right]$.</p></li>
 </ol>
 <p>To determine $C(\zeta,\xi)$, Tao et al.<sup class="citation-marker"><a href="#review-ref-Tao2003-146401">183</a></sup> used the fact that in the strong-interaction limit $e_\text{xc}$ should become independent of the spin-polarization $\zeta$. To achieve this independence in the range $0 \le |\zeta| \le 0.7$ it is required that</p>
 <div class="equation" data-tex="C(\zeta,0) = c_0 + c_1\zeta^2 + c_2\zeta^4 + c_3\zeta^6"></div>
-<p>with $c_0=0.53$, $c_1=0.87$, $c_2=0.50$, and $c_3=2.26$. The dependence on $\xi$ is designed to remove the self-interaction error for monovalent atoms (like Li):</p>
+<p>with $c_0=0.53$, $c_1=0.87$, $c_2=0.50$, and $c_3=2.26$. The dependence on $\xi$ is designed in order to remove the self-interaction error for monovalent atoms (like Li):</p>
 <div class="equation" data-tex="C(\zeta,\xi) = \frac{C(\zeta,0)}
   {\left[1+\xi^2\phi_{-4/3}(\zeta)\right]^4}"></div>
-<p>Finally, the remaining constant $d=2.8$ (in <a class="review-eq-link" href="#review-eq-eq-tpss">
-  <code>eq:tpss</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="e_c^\text{TPSS} = e_\text{c}^\text{revPKZB}\left(1+d
-  z^3e_\text{c}^\text{revPKZB}\right)"></span>
-  </span>
-</a>) was chosen such that <a class="functional-link" href="../mgga-c-tpss/"><code>mgga_c_tpss</code></a> reproduces the <a class="functional-link" href="../gga-c-pbe/"><code>gga_c_pbe</code></a> surface correlation energy of jellium over the range of valence-electron bulk densities.</p>
+<p>Finally, the remaining constant $d=2.8$ (in <a class="review-eq-link" href="#review-eq-eq-tpss"><span class="eq-number">Eq. (736)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="e_c^\text{TPSS} = e_\text{c}^\text{revPKZB}\left(1+d
+  z^3e_\text{c}^\text{revPKZB}\right)"></span></span></a>) was chosen such that <a class="functional-link" href="../mgga-c-tpss/"><code>mgga_c_tpss</code></a> reproduces the <a class="functional-link" href="../gga-c-pbe/"><code>gga_c_pbe</code></a> surface correlation energy of jellium over the range of valence-electron bulk densities.</p>
         </div>
         <p class="source-note">Adapted from <a href="https://arxiv.org/abs/2602.17333">Tran, Lehtola, Pittalis, and Marques, <em>Semi-Local Exchange-Correlation Approximations in Density Functional Theory</em>, arXiv:2602.17333</a>.</p>
       </section>
@@ -119,7 +87,7 @@ F^\text{PKZB}_{\text{c}\,\sigma\sigma} &amp; = F^\text{PKZB}_{\text{c}\,\uparrow
           <h2>Referenced Review Equations</h2>
           <div class="review-equations">
           <article class="review-equation-card" id="review-eq-eq-stollfunc">
-            <code>eq:stollfunc</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (250)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=34" title="Open page 34 of the review PDF">p. 34 ↗</a></p>
             <div class="equation" data-tex="\begin{aligned}
 e_\c[n_\uparrow,n_\downarrow] = &amp; \sum_{\sigma} 
    e^\text{LDA}_{\c\,\sigma\sigma}(n_\sigma)F_{\c\,\sigma\sigma}[n_\sigma,0] 
@@ -131,29 +99,29 @@ e_\c[n_\uparrow,n_\downarrow] = &amp; \sum_{\sigma}
           </article>
 
           <article class="review-equation-card" id="review-eq-eq-z-sigma">
-            <code>eq:z-sigma</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (84)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=14" title="Open page 14 of the review PDF">p. 14 ↗</a></p>
             <div class="equation" data-tex="z_\sigma = \frac{\tau_\sigma^{\text{W}}}{\tau_\sigma}"></div>
           </article>
 
           <article class="review-equation-card" id="review-eq-eq-z">
-            <code>eq:z</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (83)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=14" title="Open page 14 of the review PDF">p. 14 ↗</a></p>
             <div class="equation" data-tex="z = \frac{\tau^{\text{W}}}{\tau}"></div>
           </article>
 
           <article class="review-equation-card" id="review-eq-eq-fpkzb2">
-            <code>eq:fpkzb2</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (727b)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=133" title="Open page 133 of the review PDF">p. 133 ↗</a></p>
             <div class="equation" data-tex="\begin{aligned}
 F^\text{PKZB}_{\text{c}\,\sigma\sigma} &amp; = F^\text{PKZB}_{\text{c}\,\uparrow\downarrow} - (1+C) z_{\sigma}^2
 \end{aligned}"></div>
           </article>
 
           <article class="review-equation-card" id="review-eq-eq-ctpssmax">
-            <code>eq:ctpssmax</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (738)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=135" title="Open page 135 of the review PDF">p. 135 ↗</a></p>
             <div class="equation" data-tex="\tilde e_\text{c} = \max\left(e_\text{c}^\text{PBE}[n_\uparrow,0], e_\text{c}^\text{PBE}[n_\uparrow,n_\downarrow]\right)"></div>
           </article>
 
           <article class="review-equation-card" id="review-eq-eq-tpss">
-            <code>eq:tpss</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (736)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=135" title="Open page 135 of the review PDF">p. 135 ↗</a></p>
             <div class="equation" data-tex="e_c^\text{TPSS} = e_\text{c}^\text{revPKZB}\left(1+d
   z^3e_\text{c}^\text{revPKZB}\right)"></div>
           </article>

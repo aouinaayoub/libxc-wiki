@@ -3,14 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>mgga_x_jk</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20261016-excerpts-v1">
-    <script defer src="../../assets/search.js?v=20261016-excerpts-v1"></script>
+    <title>mgga_x_jk — Jemmer-Knowles meta-GGA exchange · Libxc Wiki</title>
+    <meta name="description" content="mgga_x_jk: Jemmer-Knowles meta-GGA exchange. Meta-GGA exchange functional in Libxc, with references and BibTeX. Includes an excerpt from the Tran, Lehtola, Pittalis and Marques review.">
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261117-refs-v1">
+    <script defer src="../../assets/search.js?v=20261117-refs-v1"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
     <script defer src="../../vendor/katex/contrib/mhchem.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20261016-excerpts-v1"></script>
+    <script defer src="../../assets/detail.js?v=20261117-refs-v1"></script>
 
   </head>
   <body class="functional-page">
@@ -32,28 +33,20 @@
 
         <p class="brand">META-GGA</p>
         <h1><code class="title-code">mgga_x_jk</code></h1>
+        <p class="functional-name">Jemmer-Knowles meta-GGA exchange</p>
         <div class="detail-tags"><span class="tag">meta-gga</span>
 <span class="tag">exchange</span></div>
       </header>
 
       <div class="detail-grid">
+
       <section class="callout">
         <p class="callout-label">Review excerpt</p>
         <div class="review-html">
 <p>The functional of Jemmer and Knowles<sup class="citation-marker"><a href="#review-ref-Jemmer1995-3571">177</a></sup> depends on the Laplacian of the density, but not on the kinetic-energy density, therefore it is a pure density functional. Its form is given by</p>
 <div class="equation" data-tex="F_\text{x}^\text{JK} = 1 + \frac{F_\text{x}^\text{B88}(x_\sigma)-1}{1+2\frac{\displaystyle x_{\sigma}^2-u_{\sigma}}{\displaystyle x_{\sigma}^2}}"></div>
-<p>where $F_\text{x}^\text{B88}$ is the <a class="functional-link" href="../gga-x-b88/"><code>gga_x_b88</code></a> enhancement factor (<a class="review-eq-link" href="#review-eq-eq-fxb88">
-  <code>eq:fxb88</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="F_\text{x}^{\text{B88}} = 1+\frac{\beta}{C_\text{x}}
-  \frac{x_\sigma^2}{1 + \gamma\beta x_\sigma\arcsinh(x_\sigma)}"></span>
-  </span>
-</a>). The functional was constructed such that both the energy density and potential $v_{\text{xc}\,\sigma}$ have the correct behavior in the asymptotic regions far into the vacuum. Numerical instabilities were reported for this functional and attributed to the dependence of the potential on the high-order derivatives (up to the fourth order) of the density. Lehtola and Marques<sup class="citation-marker"><a href="#review-ref-Lehtola2022-JCP-174114">396</a></sup> pointed out that the denominator in <a class="review-eq-link" href="#review-eq-eq-jk-enh">
-  <code>eq:jk-enh</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="F_\text{x}^\text{JK} = 1 + \frac{F_\text{x}^\text{B88}(x_\sigma)-1}{1+2\frac{\displaystyle x_{\sigma}^2-u_{\sigma}}{\displaystyle x_{\sigma}^2}}"></span>
-  </span>
-</a> can become arbitrarily small or vanish.</p>
+<p>where $F_\text{x}^\text{B88}$ is the <a class="functional-link" href="../gga-x-b88/"><code>gga_x_b88</code></a> enhancement factor (<a class="review-eq-link" href="#review-eq-eq-fxb88"><span class="eq-number">Eq. (372)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="F_\text{x}^{\text{B88}} = 1+\frac{\beta}{C_\text{x}}
+  \frac{x_\sigma^2}{1 + \gamma\beta x_\sigma\arcsinh(x_\sigma)}"></span></span></a>). The functional was constructed such that both the energy density and potential $v_{\text{xc}\,\sigma}$ have the correct behavior in the asymptotic regions far into the vacuum. Numerical instabilities were reported for this functional and attributed to the dependence of the potential on the high-order derivatives (up to the fourth order) of the density. Lehtola and Marques<sup class="citation-marker"><a href="#review-ref-Lehtola2022-JCP-174114">396</a></sup> pointed out that the denominator in <a class="review-eq-link" href="#review-eq-eq-jk-enh"><span class="eq-number">Eq. (555)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="F_\text{x}^\text{JK} = 1 + \frac{F_\text{x}^\text{B88}(x_\sigma)-1}{1+2\frac{\displaystyle x_{\sigma}^2-u_{\sigma}}{\displaystyle x_{\sigma}^2}}"></span></span></a> can become arbitrarily small or vanish.</p>
         </div>
         <p class="source-note">Adapted from <a href="https://arxiv.org/abs/2602.17333">Tran, Lehtola, Pittalis, and Marques, <em>Semi-Local Exchange-Correlation Approximations in Density Functional Theory</em>, arXiv:2602.17333</a>.</p>
       </section>
@@ -62,13 +55,13 @@
           <h2>Referenced Review Equations</h2>
           <div class="review-equations">
           <article class="review-equation-card" id="review-eq-eq-fxb88">
-            <code>eq:fxb88</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (372)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=55" title="Open page 55 of the review PDF">p. 55 ↗</a></p>
             <div class="equation" data-tex="F_\text{x}^{\text{B88}} = 1+\frac{\beta}{C_\text{x}}
   \frac{x_\sigma^2}{1 + \gamma\beta x_\sigma\arcsinh(x_\sigma)}"></div>
           </article>
 
           <article class="review-equation-card" id="review-eq-eq-jk-enh">
-            <code>eq:jk-enh</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (555)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=101" title="Open page 101 of the review PDF">p. 101 ↗</a></p>
             <div class="equation" data-tex="F_\text{x}^\text{JK} = 1 + \frac{F_\text{x}^\text{B88}(x_\sigma)-1}{1+2\frac{\displaystyle x_{\sigma}^2-u_{\sigma}}{\displaystyle x_{\sigma}^2}}"></div>
           </article>
 

@@ -3,14 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>lda_c_2d_prm</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20261016-excerpts-v1">
-    <script defer src="../../assets/search.js?v=20261016-excerpts-v1"></script>
+    <title>lda_c_2d_prm — PRM (for 2D systems) · Libxc Wiki</title>
+    <meta name="description" content="lda_c_2d_prm: PRM (for 2D systems). LDA correlation functional in Libxc, with references and BibTeX. Includes an excerpt from the Tran, Lehtola, Pittalis and Marques review.">
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261117-refs-v1">
+    <script defer src="../../assets/search.js?v=20261117-refs-v1"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
     <script defer src="../../vendor/katex/contrib/mhchem.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20261016-excerpts-v1"></script>
+    <script defer src="../../assets/detail.js?v=20261117-refs-v1"></script>
 
   </head>
   <body class="functional-page">
@@ -32,40 +33,32 @@
 
         <p class="brand">LDA</p>
         <h1><code class="title-code">lda_c_2d_prm</code></h1>
+        <p class="functional-name">PRM (for 2D systems)</p>
         <div class="detail-tags"><span class="tag">lda</span>
 <span class="tag">correlation</span>
 <span class="tag">dim2</span></div>
       </header>
 
       <div class="detail-grid">
+
       <section class="callout">
         <p class="callout-label">Review excerpt</p>
         <div class="review-html">
 <p>Pittalis et al.<sup class="citation-marker"><a href="#review-ref-Pittalis2008-195322">445</a></sup> developed a functional for the 2D HEG, starting from an explicit derivation of the Colle&ndash;Salvetti formula <sup class="citation-marker"><a href="#review-ref-Colle1975-329">441</a></sup> in 2D. They obtained an expression for the correlation energy similar to the original one of Colle and Salvetti<sup class="citation-marker"><a href="#review-ref-Colle1975-329">441</a></sup>. Then, to simplify the formula they used an additional <em>ad hoc</em> Gaussian approximation for the two-body density matrix $\rho_{2} (\br_1, \br_2)$ in terms of the center of mass $\br = (\br_1 + \br_2)/2$ and relative $\br_{12} = \br_2 - \br_1$ coordinates:</p>
 <div class="equation" data-tex="\rho_{2} (\br_1, \br_2) = \rho_{2}(\br,\br) 
 \E^{-c\beta^2(\br) r_{12}^2}"></div>
-<p>where $c=\pi/\left[2\left(N-1\right)q^2\right]$, $N$ is the number of electrons (<a class="review-eq-link" href="#review-eq-eq-N-tot">
-  <code>eq:N-tot</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="N=\mint{r} n(\br)"></span>
-  </span>
-</a>), and $\beta=q\sqrt{n}$ with $q=2.258$ is a fitting parameter that was determined from a reference correlation energy for the singlet state of a two-electron parabolic quantum dot. This led to the correlation energy functional given by</p>
+<p>where $c=\pi/\left[2\left(N-1\right)q^2\right]$, $N$ is the number of electrons (<a class="review-eq-link" href="#review-eq-eq-N-tot"><span class="eq-number">Eq. (260)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="N=\mint{r} n(\br)"></span></span></a>), and $\beta=q\sqrt{n}$ with $q=2.258$ is a fitting parameter that was determined from a reference correlation energy for the singlet state of a two-electron parabolic quantum dot. This led to the correlation energy functional given by</p>
 <div class="equation" data-tex="e^\text{PRM}_\text{c} = c(N-1)\bigg[
 \frac{\sqrt{\pi}\beta}{2\sqrt{2+c}}(\Phi-1)^2+\frac{\Phi(\Phi-1)}{2+c} \\
 +\frac{\sqrt{\pi}\Phi^2}{4\beta(2+c)^{3/2}}
 + \frac{\sqrt{\pi}\beta}{\sqrt{1+c}}(\Phi-1)
 + \frac{\Phi}{1+c}\bigg]"></div>
 <p>where $\Phi=\beta/\left(\beta+\sqrt{\pi}/2\right)$.</p>
-<p>Pittalis et al.<sup class="citation-marker"><a href="#review-ref-Pittalis2008-195322">445</a></sup> also considered a modification of <a class="review-eq-link" href="#review-eq-eq-ecprm">
-  <code>eq:ecprm</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="e^\text{PRM}_\text{c} = c(N-1)\bigg[
+<p>Pittalis et al.<sup class="citation-marker"><a href="#review-ref-Pittalis2008-195322">445</a></sup> also considered a modification of <a class="review-eq-link" href="#review-eq-eq-ecprm"><span class="eq-number">Eq. (304)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="e^\text{PRM}_\text{c} = c(N-1)\bigg[
 \frac{\sqrt{\pi}\beta}{2\sqrt{2+c}}(\Phi-1)^2+\frac{\Phi(\Phi-1)}{2+c} \\
 +\frac{\sqrt{\pi}\Phi^2}{4\beta(2+c)^{3/2}}
 + \frac{\sqrt{\pi}\beta}{\sqrt{1+c}}(\Phi-1)
-+ \frac{\Phi}{1+c}\bigg]"></span>
-  </span>
-</a> (<code>lda_c_2d_prm_mod</code>). It consists of replacing $(\Phi-1)^2$ by $\Phi-1$ in the first term, and refitting the value for $q$ ($q^{\text{mod}}=3.9274$). <code>lda_c_2d_prm_mod</code> clearly improves over <a class="functional-link" href="../lda-c-2d-prm/"><code>lda_c_2d_prm</code></a> for the correlation energy of parabolic and square quantum dots.</p>
++ \frac{\Phi}{1+c}\bigg]"></span></span></a> (<code>lda_c_2d_prm_mod</code>). It consists of replacing $(\Phi-1)^2$ by $\Phi-1$ in the first term, and refitting the value for $q$ ($q^{\text{mod}}=3.9274$). <code>lda_c_2d_prm_mod</code> clearly improves over <a class="functional-link" href="../lda-c-2d-prm/"><code>lda_c_2d_prm</code></a> for the correlation energy of parabolic and square quantum dots.</p>
 <p>The explicit dependence on the number of electrons $N$ makes these functionals formally not semi-local functionals (see discussion for <a class="functional-link" href="../lda-x-rae/"><code>lda_x_rae</code></a>). The functional <a class="functional-link" href="../lda-c-2d-prm/"><code>lda_c_2d_prm</code></a> is implemented in Libxc with $N$ handled as a user-defined parameter, that is set to $N=2$ by default.</p>
         </div>
         <p class="source-note">Adapted from <a href="https://arxiv.org/abs/2602.17333">Tran, Lehtola, Pittalis, and Marques, <em>Semi-Local Exchange-Correlation Approximations in Density Functional Theory</em>, arXiv:2602.17333</a>.</p>
@@ -75,12 +68,12 @@
           <h2>Referenced Review Equations</h2>
           <div class="review-equations">
           <article class="review-equation-card" id="review-eq-eq-N-tot">
-            <code>eq:N-tot</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (260)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=36" title="Open page 36 of the review PDF">p. 36 ↗</a></p>
             <div class="equation" data-tex="N=\mint{r} n(\br)"></div>
           </article>
 
           <article class="review-equation-card" id="review-eq-eq-ecprm">
-            <code>eq:ecprm</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (304)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=43" title="Open page 43 of the review PDF">p. 43 ↗</a></p>
             <div class="equation" data-tex="e^\text{PRM}_\text{c} = c(N-1)\bigg[
 \frac{\sqrt{\pi}\beta}{2\sqrt{2+c}}(\Phi-1)^2+\frac{\Phi(\Phi-1)}{2+c} \\
 +\frac{\sqrt{\pi}\Phi^2}{4\beta(2+c)^{3/2}}

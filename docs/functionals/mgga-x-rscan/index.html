@@ -3,14 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>mgga_x_rscan</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20261016-excerpts-v1">
-    <script defer src="../../assets/search.js?v=20261016-excerpts-v1"></script>
+    <title>mgga_x_rscan — Regularized SCAN exchange by Bartok and Yates · Libxc Wiki</title>
+    <meta name="description" content="mgga_x_rscan: Regularized SCAN exchange by Bartok and Yates. Meta-GGA exchange functional in Libxc, with references and BibTeX. Includes an excerpt from the Tran, Lehtola, Pittalis and Marques review.">
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261117-refs-v1">
+    <script defer src="../../assets/search.js?v=20261117-refs-v1"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
     <script defer src="../../vendor/katex/contrib/mhchem.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20261016-excerpts-v1"></script>
+    <script defer src="../../assets/detail.js?v=20261117-refs-v1"></script>
 
   </head>
   <body class="functional-page">
@@ -32,37 +33,24 @@
 
         <p class="brand">META-GGA</p>
         <h1><code class="title-code">mgga_x_rscan</code></h1>
+        <p class="functional-name">Regularized SCAN exchange by Bartok and Yates</p>
         <div class="detail-tags"><span class="tag">meta-gga</span>
 <span class="tag">exchange</span></div>
       </header>
 
       <div class="detail-grid">
+
       <section class="callout">
         <p class="callout-label">Review excerpt</p>
         <div class="review-html">
-<p>To alleviate the numerical problems encountered with the SCAN (<a class="functional-link" href="../mgga-x-scan/"><code>mgga_x_scan</code></a> + <a class="functional-link" href="../mgga-c-scan/"><code>mgga_c_scan</code></a>) functional, Bartok and Yates<sup class="citation-marker"><a href="#review-ref-Bartok2019-161101">395</a></sup> proposed to substitute the iso-orbital indicator $\alpha_{\sigma}$ (<a class="review-eq-link" href="#review-eq-eq-alpha-sigma">
-  <code>eq:alpha-sigma</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="\alpha_{\sigma} = \frac{\tau_{\sigma}-\tau_{\sigma}^{\text{W}}}{\tau_{\sigma}^{\text{TF}}}"></span>
-  </span>
-</a>) in <a class="functional-link" href="../mgga-x-scan/"><code>mgga_x_scan</code></a> by the regularized $\alpha_{\sigma}&#39;$, defined as</p>
+<p>To alleviate the numerical problems encountered with the SCAN (<a class="functional-link" href="../mgga-x-scan/"><code>mgga_x_scan</code></a> + <a class="functional-link" href="../mgga-c-scan/"><code>mgga_c_scan</code></a>) functional, Bartok and Yates<sup class="citation-marker"><a href="#review-ref-Bartok2019-161101">395</a></sup> proposed to substitute the iso-orbital indicator $\alpha_{\sigma}$ (<a class="review-eq-link" href="#review-eq-eq-alpha-sigma"><span class="eq-number">Eq. (80)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="\alpha_{\sigma} = \frac{\tau_{\sigma}-\tau_{\sigma}^{\text{W}}}{\tau_{\sigma}^{\text{TF}}}"></span></span></a>) in <a class="functional-link" href="../mgga-x-scan/"><code>mgga_x_scan</code></a> by the regularized $\alpha_{\sigma}&#39;$, defined as</p>
 <div class="equation" data-tex="\alpha_{\sigma}&#39; = \frac{\displaystyle \tilde{\alpha}_{\sigma}^3}{\displaystyle \tilde{\alpha}_{\sigma}^2+\alpha_{\text{r}}}"></div>
 <p>where</p>
 <div class="equation" data-tex="\tilde{\alpha}_{\sigma} = \frac{\displaystyle \tau_{\sigma}-\tau_{\sigma}^{\text{W}}}{\displaystyle \tau_{\sigma}^{\text{TF}}+\frac{1}{2}\tau_{\text{r}}}"></div>
 <p>and $\alpha_{\text{r}}=10^{-3}$ and $\tau_{\text{r}}=10^{-4}$ are small regularization constants. The introduction of $\tau_{\text{r}}$ cures the divergence in $\alpha_\sigma$ occurring in low-density regions dominated by a single orbital. Furthermore, thanks to $\alpha_{\text{r}}$, the derivatives of $\alpha_{\sigma}&#39;$ with respect to $n_\sigma$, $\nabla n_\sigma$, and $\tau_\sigma$ vanish, reducing numerical noise.</p>
-<p>Another reason for the numerical instability of SCAN is that the switching function given by <a class="review-eq-link" href="#review-eq-eq-scanfalpha">
-  <code>eq:scanfalpha</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="f(\alpha) = \E^{-c_1\alpha/\left(1-\alpha\right)}\theta(1-\alpha)
-  - d \E^{c_2/\left(1-\alpha\right)}\theta(\alpha - 1)"></span>
-  </span>
-</a> has highly oscillatory derivatives around $\alpha_{\sigma}\approx1$. To remedy this problem, <a class="review-eq-link" href="#review-eq-eq-scanfalpha">
-  <code>eq:scanfalpha</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="f(\alpha) = \E^{-c_1\alpha/\left(1-\alpha\right)}\theta(1-\alpha)
-  - d \E^{c_2/\left(1-\alpha\right)}\theta(\alpha - 1)"></span>
-  </span>
-</a> is replaced by the following function in the interval $\alpha_{\sigma}&#39;\in(0, 2.5)$:</p>
+<p>Another reason for the numerical instability of SCAN is that the switching function given by <a class="review-eq-link" href="#review-eq-eq-scanfalpha"><span class="eq-number">Eq. (615)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="f(\alpha) = \E^{-c_1\alpha/\left(1-\alpha\right)}\theta(1-\alpha)
+  - d \E^{c_2/\left(1-\alpha\right)}\theta(\alpha - 1)"></span></span></a> has highly oscillatory derivatives around $\alpha_{\sigma}\approx1$. To remedy this problem, <a class="review-eq-link" href="#review-eq-eq-scanfalpha"><span class="eq-number">Eq. (615)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="f(\alpha) = \E^{-c_1\alpha/\left(1-\alpha\right)}\theta(1-\alpha)
+  - d \E^{c_2/\left(1-\alpha\right)}\theta(\alpha - 1)"></span></span></a> is replaced by the following function in the interval $\alpha_{\sigma}&#39;\in(0, 2.5)$:</p>
 <div class="equation" data-tex="f(\alpha_{\sigma}&#39;) = \sum_{n=0}^{7}c_{n}(\alpha_{\sigma}&#39;)^{n}"></div>
 <p>When used with the corresponding correlation functional <a class="functional-link" href="../mgga-c-rscan/"><code>mgga_c_rscan</code></a>, the accuracy of rSCAN is usually quite similar to the native SCAN, although an increase of the error is observed for formation enthalpies of molecules.<sup class="citation-marker"><a href="#review-ref-Mejia2019-207101">750</a>,<a href="#review-ref-Bartok2019-JCP-207102">751</a></sup> It was also noted<sup class="citation-marker"><a href="#review-ref-Bartok2019-161101">395</a>,<a href="#review-ref-Furness2020-8208">752</a>,<a href="#review-ref-Furness2020-9248">753</a></sup> that rSCAN does not satisfy some exact constraints that were originally obeyed by SCAN (see discussion for <a class="functional-link" href="../mgga-x-r2scan/"><code>mgga_x_r2scan</code></a> and <a class="functional-link" href="../mgga-c-r2scan/"><code>mgga_c_r2scan</code></a>).</p>
         </div>
@@ -73,12 +61,12 @@
           <h2>Referenced Review Equations</h2>
           <div class="review-equations">
           <article class="review-equation-card" id="review-eq-eq-alpha-sigma">
-            <code>eq:alpha-sigma</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (80)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=14" title="Open page 14 of the review PDF">p. 14 ↗</a></p>
             <div class="equation" data-tex="\alpha_{\sigma} = \frac{\tau_{\sigma}-\tau_{\sigma}^{\text{W}}}{\tau_{\sigma}^{\text{TF}}}"></div>
           </article>
 
           <article class="review-equation-card" id="review-eq-eq-scanfalpha">
-            <code>eq:scanfalpha</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (615)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=113" title="Open page 113 of the review PDF">p. 113 ↗</a></p>
             <div class="equation" data-tex="f(\alpha) = \E^{-c_1\alpha/\left(1-\alpha\right)}\theta(1-\alpha)
   - d \E^{c_2/\left(1-\alpha\right)}\theta(\alpha - 1)"></div>
           </article>

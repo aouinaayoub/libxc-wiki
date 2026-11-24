@@ -3,14 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>lda_c_ow</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20261016-excerpts-v1">
-    <script defer src="../../assets/search.js?v=20261016-excerpts-v1"></script>
+    <title>lda_c_ow — Optimized Wigner · Libxc Wiki</title>
+    <meta name="description" content="lda_c_ow: Optimized Wigner. LDA correlation functional in Libxc, with references and BibTeX. Includes an excerpt from the Tran, Lehtola, Pittalis and Marques review.">
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261117-refs-v1">
+    <script defer src="../../assets/search.js?v=20261117-refs-v1"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
     <script defer src="../../vendor/katex/contrib/mhchem.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20261016-excerpts-v1"></script>
+    <script defer src="../../assets/detail.js?v=20261117-refs-v1"></script>
 
   </head>
   <body class="functional-page">
@@ -32,22 +33,19 @@
 
         <p class="brand">LDA</p>
         <h1><code class="title-code">lda_c_ow</code></h1>
+        <p class="functional-name">Optimized Wigner</p>
         <div class="detail-tags"><span class="tag">lda</span>
 <span class="tag">correlation</span></div>
       </header>
 
       <div class="detail-grid">
+
       <section class="callout">
         <p class="callout-label">Review excerpt</p>
         <div class="review-html">
 <p>Stewart and Gill<sup class="citation-marker"><a href="#review-ref-Stewart1995-4337">412</a></sup> tried to develop a functional that retains the accuracy of <a class="functional-link" href="../gga-c-lyp/"><code>gga_c_lyp</code></a> with a simpler analytical formula that is more physically transparent. With that in mind, they decided to retain the first term of the <a class="functional-link" href="../gga-c-lyp/"><code>gga_c_lyp</code></a> correlation energy, leading to</p>
 <div class="equation" data-tex="e_\text{c}^\text{OW}(r_s) = -\left(1-\zeta^2\right)\frac{a}{b + r_s}"></div>
-<p>where $a$ and $b$ are parameters, and OW stands for optimized Wigner. This is thus a generalization of <a class="functional-link" href="../lda-c-wigner/"><code>lda_c_wigner</code></a> (<a class="review-eq-link" href="#review-eq-eq-ldacwigner">
-  <code>eq:ldacwigner</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="e_\text{c}^\text{Wigner}(r_s) = -\frac{a}{b + r_s}"></span>
-  </span>
-</a>) to the spin-polarized case. Two versions of this functional were given:</p>
+<p>where $a$ and $b$ are parameters, and OW stands for optimized Wigner. This is thus a generalization of <a class="functional-link" href="../lda-c-wigner/"><code>lda_c_wigner</code></a> (<a class="review-eq-link" href="#review-eq-eq-ldacwigner"><span class="eq-number">Eq. (270)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="e_\text{c}^\text{Wigner}(r_s) = -\frac{a}{b + r_s}"></span></span></a>) to the spin-polarized case. Two versions of this functional were given:</p>
 <ol class="review-list" type="i">
 <li><p><a class="functional-link" href="../lda-c-ow-lyp/"><code>lda_c_ow_lyp</code></a>, where $a=0.04918b$ and $b=\left[3/\left(4\pi\right)\right]^{1/3}/0.349$ were fixed to their values in the <a class="functional-link" href="../gga-c-lyp/"><code>gga_c_lyp</code></a> functional</p></li>
 <li><p><a class="functional-link" href="../lda-c-ow/"><code>lda_c_ow</code></a>, with $b$ unchanged, but $a=0.0526b$ optimized to reproduce the correlation energy of the ten lightest atoms (H to Ne).</p></li>
@@ -61,7 +59,7 @@
           <h2>Referenced Review Equations</h2>
           <div class="review-equations">
           <article class="review-equation-card" id="review-eq-eq-ldacwigner">
-            <code>eq:ldacwigner</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (270)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=37" title="Open page 37 of the review PDF">p. 37 ↗</a></p>
             <div class="equation" data-tex="e_\text{c}^\text{Wigner}(r_s) = -\frac{a}{b + r_s}"></div>
           </article>
 

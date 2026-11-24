@@ -3,14 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>mgga_x_rppscan</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20261016-excerpts-v1">
-    <script defer src="../../assets/search.js?v=20261016-excerpts-v1"></script>
+    <title>mgga_x_rppscan — r++SCAN: rSCAN with uniform density limit and coordinate scaling behavior · Libxc Wiki</title>
+    <meta name="description" content="mgga_x_rppscan: r++SCAN: rSCAN with uniform density limit and coordinate scaling behavior. Meta-GGA exchange functional in Libxc, with references and BibTeX. Includes an excerpt from the Tran, Lehtola, Pittalis and Marques review.">
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261117-refs-v1">
+    <script defer src="../../assets/search.js?v=20261117-refs-v1"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
     <script defer src="../../vendor/katex/contrib/mhchem.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20261016-excerpts-v1"></script>
+    <script defer src="../../assets/detail.js?v=20261117-refs-v1"></script>
 
   </head>
   <body class="functional-page">
@@ -32,30 +33,17 @@
 
         <p class="brand">META-GGA</p>
         <h1><code class="title-code">mgga_x_rppscan</code></h1>
+        <p class="functional-name">r++SCAN: rSCAN with uniform density limit and coordinate scaling behavior</p>
         <div class="detail-tags"><span class="tag">meta-gga</span>
 <span class="tag">exchange</span></div>
       </header>
 
       <div class="detail-grid">
+
       <section class="callout">
         <p class="callout-label">Review excerpt</p>
         <div class="review-html">
-<p>The functional <a class="functional-link" href="../mgga-x-rscan/"><code>mgga_x_rscan</code></a>, a regularized version of <a class="functional-link" href="../mgga-x-scan/"><code>mgga_x_scan</code></a>, does not obey several mathematical constraints that are obeyed by <a class="functional-link" href="../mgga-x-scan/"><code>mgga_x_scan</code></a>. Two of these constraints, the HEG limit and the behavior under coordinate scaling, can be restored by replacing the <a class="functional-link" href="../mgga-x-rscan/"><code>mgga_x_rscan</code></a> expression for the iso-orbital indicator (<a class="review-eq-link" href="#review-eq-eq-rscanalpha">
-  <code>eq:rscanalpha</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="\tilde{\alpha}_{\sigma} = \frac{\displaystyle \tau_{\sigma}-\tau_{\sigma}^{\text{W}}}{\displaystyle \tau_{\sigma}^{\text{TF}}+\frac{1}{2}\tau_{\text{r}}}"></span>
-  </span>
-</a>; <a class="review-eq-link" href="#review-eq-eq-rscanalpha1">
-  <code>eq:rscanalpha1</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="\alpha_{\sigma}&#39; = \frac{\displaystyle \tilde{\alpha}_{\sigma}^3}{\displaystyle \tilde{\alpha}_{\sigma}^2+\alpha_{\text{r}}}"></span>
-  </span>
-</a>) with the variant used in <a class="functional-link" href="../mgga-x-r2scan/"><code>mgga_x_r2scan</code></a>, <a class="review-eq-link" href="#review-eq-eq-r2scanalpha">
-  <code>eq:r2scanalpha</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="\tilde{\alpha}_{\sigma} = \frac{\tau_{\sigma}-\tau_{\sigma}^{\text{W}}}{\tau_{\sigma}^{\text{TF}}+\eta\tau_{\sigma}^{\text{W}}}"></span>
-  </span>
-</a>. This substitution, done together with the corresponding one in correlation (<a class="functional-link" href="../mgga-c-rppscan/"><code>mgga_c_rppscan</code></a>), leads to the r++SCAN functional, whose accuracy remains essentially unchanged compared to rSCAN (<a class="functional-link" href="../mgga-x-rscan/"><code>mgga_x_rscan</code></a> + <a class="functional-link" href="../mgga-c-rscan/"><code>mgga_c_rscan</code></a>).</p>
+<p>The functional <a class="functional-link" href="../mgga-x-rscan/"><code>mgga_x_rscan</code></a>, a regularized version of <a class="functional-link" href="../mgga-x-scan/"><code>mgga_x_scan</code></a>, does not obey several mathematical constraints that are obeyed by <a class="functional-link" href="../mgga-x-scan/"><code>mgga_x_scan</code></a>. Two of these constraints, the HEG limit and the behavior under coordinate scaling, can be restored by replacing the <a class="functional-link" href="../mgga-x-rscan/"><code>mgga_x_rscan</code></a> expression for the iso-orbital indicator (<a class="review-eq-link" href="#review-eq-eq-rscanalpha"><span class="eq-number">Eq. (652)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="\tilde{\alpha}_{\sigma} = \frac{\displaystyle \tau_{\sigma}-\tau_{\sigma}^{\text{W}}}{\displaystyle \tau_{\sigma}^{\text{TF}}+\frac{1}{2}\tau_{\text{r}}}"></span></span></a>; <a class="review-eq-link" href="#review-eq-eq-rscanalpha1"><span class="eq-number">Eq. (651)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="\alpha_{\sigma}&#39; = \frac{\displaystyle \tilde{\alpha}_{\sigma}^3}{\displaystyle \tilde{\alpha}_{\sigma}^2+\alpha_{\text{r}}}"></span></span></a>) with the variant used in <a class="functional-link" href="../mgga-x-r2scan/"><code>mgga_x_r2scan</code></a>, <a class="review-eq-link" href="#review-eq-eq-r2scanalpha"><span class="eq-number">Eq. (667)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="\tilde{\alpha}_{\sigma} = \frac{\tau_{\sigma}-\tau_{\sigma}^{\text{W}}}{\tau_{\sigma}^{\text{TF}}+\eta\tau_{\sigma}^{\text{W}}}"></span></span></a>. This substitution, done together with the corresponding one in correlation (<a class="functional-link" href="../mgga-c-rppscan/"><code>mgga_c_rppscan</code></a>), leads to the r++SCAN functional, whose accuracy remains essentially unchanged compared to rSCAN (<a class="functional-link" href="../mgga-x-rscan/"><code>mgga_x_rscan</code></a> + <a class="functional-link" href="../mgga-c-rscan/"><code>mgga_c_rscan</code></a>).</p>
         </div>
         <p class="source-note">Adapted from <a href="https://arxiv.org/abs/2602.17333">Tran, Lehtola, Pittalis, and Marques, <em>Semi-Local Exchange-Correlation Approximations in Density Functional Theory</em>, arXiv:2602.17333</a>.</p>
       </section>
@@ -64,17 +52,17 @@
           <h2>Referenced Review Equations</h2>
           <div class="review-equations">
           <article class="review-equation-card" id="review-eq-eq-rscanalpha">
-            <code>eq:rscanalpha</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (652)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=119" title="Open page 119 of the review PDF">p. 119 ↗</a></p>
             <div class="equation" data-tex="\tilde{\alpha}_{\sigma} = \frac{\displaystyle \tau_{\sigma}-\tau_{\sigma}^{\text{W}}}{\displaystyle \tau_{\sigma}^{\text{TF}}+\frac{1}{2}\tau_{\text{r}}}"></div>
           </article>
 
           <article class="review-equation-card" id="review-eq-eq-rscanalpha1">
-            <code>eq:rscanalpha1</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (651)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=119" title="Open page 119 of the review PDF">p. 119 ↗</a></p>
             <div class="equation" data-tex="\alpha_{\sigma}&#39; = \frac{\displaystyle \tilde{\alpha}_{\sigma}^3}{\displaystyle \tilde{\alpha}_{\sigma}^2+\alpha_{\text{r}}}"></div>
           </article>
 
           <article class="review-equation-card" id="review-eq-eq-r2scanalpha">
-            <code>eq:r2scanalpha</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (667)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=122" title="Open page 122 of the review PDF">p. 122 ↗</a></p>
             <div class="equation" data-tex="\tilde{\alpha}_{\sigma} = \frac{\tau_{\sigma}-\tau_{\sigma}^{\text{W}}}{\tau_{\sigma}^{\text{TF}}+\eta\tau_{\sigma}^{\text{W}}}"></div>
           </article>
 

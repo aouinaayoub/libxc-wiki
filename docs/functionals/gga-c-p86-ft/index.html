@@ -3,14 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>gga_c_p86_ft</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20261016-excerpts-v1">
-    <script defer src="../../assets/search.js?v=20261016-excerpts-v1"></script>
+    <title>gga_c_p86_ft — Perdew 86 with more accurate value for ftilde · Libxc Wiki</title>
+    <meta name="description" content="gga_c_p86_ft: Perdew 86 with more accurate value for ftilde. GGA correlation functional in Libxc, with references and BibTeX. Includes an excerpt from the Tran, Lehtola, Pittalis and Marques review.">
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261117-refs-v1">
+    <script defer src="../../assets/search.js?v=20261117-refs-v1"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
     <script defer src="../../vendor/katex/contrib/mhchem.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20261016-excerpts-v1"></script>
+    <script defer src="../../assets/detail.js?v=20261117-refs-v1"></script>
 
   </head>
   <body class="functional-page">
@@ -32,27 +33,24 @@
 
         <p class="brand">GGA</p>
         <h1><code class="title-code">gga_c_p86_ft</code></h1>
+        <p class="functional-name">Perdew 86 with more accurate value for ftilde</p>
         <div class="detail-tags"><span class="tag">gga</span>
 <span class="tag">correlation</span></div>
       </header>
 
       <div class="detail-grid">
+
       <section class="callout">
         <p class="callout-label">Review excerpt</p>
         <div class="review-html">
 <p>For this functional, Perdew<sup class="citation-marker"><a href="#review-ref-Perdew1986-8822">600</a></sup> tried to go beyond the <a class="functional-link" href="../gga-c-lm/"><code>gga_c_lm</code></a> functional by proposing two modifications:</p>
 <ol class="review-list" type="i">
-<li><p>removing the last term in <a class="review-eq-link" href="#review-eq-eq-eclm">
-  <code>eq:eclm</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="\begin{aligned}
+<li><p>removing the last term in <a class="review-eq-link" href="#review-eq-eq-eclm"><span class="eq-number">Eq. (460)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="\begin{aligned}
 e_\text{c}^\text{LM} = &amp;e_\text{c}^\text{vBH}(r_s, \zeta) 
   + \frac{J}{\alpha^2 r_s}  \\
 
   &amp; \times\left[2\frac{x^2}{\sqrt{\phi_{5/3}(\zeta)}}\E^{-F} - \frac{7}{9}x^2_{\text{tot},4/3}\right]
-\end{aligned}"></span>
-  </span>
-</a>, which is actually a piece of the density-gradient expansion for the exchange energy</p></li>
+\end{aligned}"></span></span></a>, which is actually a piece of the density-gradient expansion for the exchange energy</p></li>
 <li><p>going beyond the RPA for the correlation energy of the HEG and inhomogeneity effects on which the functional is based.</p></li>
 </ol>
 <p>These effects are included through the coefficient of the density-gradient expansion of the correlation energy, calculated beyond the RPA,<sup class="citation-marker"><a href="#review-ref-Geldart1976-1477">602</a>,<a href="#review-ref-Hu1986-943">603</a></sup> as parameterized by Rasolt and Geldart<sup class="citation-marker"><a href="#review-ref-Rasolt1986-1325">592</a></sup>:</p>
@@ -64,7 +62,7 @@ e_\text{c}^\text{LM} = &amp;e_\text{c}^\text{vBH}(r_s, \zeta)
 <p>where $e_\text{c}^\text{PZ}$ is <a class="functional-link" href="../lda-c-pz/"><code>lda_c_pz</code></a>, $\alpha = (4\pi/3)^{1/6}$, and</p>
 <div class="equation" data-tex="F = \tilde{f} \frac{C_\text{c}(0)}{C_\text{c}(r_s)} \frac{x}{\alpha\sqrt{r_s}}"></div>
 <p>with $C_\text{c}(0)=a^\text{RG}+b^\text{RG}$ and $\tilde f = \left(9\pi\right)^{1/6}f$, where the cutoff parameter $f = 0.11$ was chosen such that the exact correlation energy of the Ne atom is reproduced. Note that <a class="functional-link" href="../gga-c-p86/"><code>gga_c_p86</code></a> has been frequently combined with <a class="functional-link" href="../gga-x-b88/"><code>gga_x_b88</code></a> for exchange, leading to the BP86 functional.</p>
-<p>Note that there are two implementations of this functional in Libxc: <a class="functional-link" href="../gga-c-p86/"><code>gga_c_p86</code></a> where $\left(9\pi\right)^{1/6}$ in $\tilde f$ is approximated as 1.745 (as in <sup class="citation-marker"><a href="#review-ref-Perdew1986-8822">600</a></sup>), and <a class="functional-link" href="../gga-c-p86-ft/"><code>gga_c_p86_ft</code></a> where $\left(9\pi\right)^{1/6}$ is accurate to machine precision.<sup class="citation-marker"><a href="#review-ref-Lehtola2023-JCP-114116">139</a></sup></p>
+<p>Note that there are two implementations of this functional in Libxc: <a class="functional-link" href="../gga-c-p86/"><code>gga_c_p86</code></a> where $\left(9\pi\right)^{1/6}$ in $\tilde f$ is approximated as 1.745 (as in ref. <span class="citation-ref"><a href="#review-ref-Perdew1986-8822">600</a></span>), and <a class="functional-link" href="../gga-c-p86-ft/"><code>gga_c_p86_ft</code></a> where $\left(9\pi\right)^{1/6}$ is accurate to machine precision.<sup class="citation-marker"><a href="#review-ref-Lehtola2023-JCP-114116">139</a></sup></p>
         </div>
         <p class="source-note">Adapted from <a href="https://arxiv.org/abs/2602.17333">Tran, Lehtola, Pittalis, and Marques, <em>Semi-Local Exchange-Correlation Approximations in Density Functional Theory</em>, arXiv:2602.17333</a>.</p>
       </section>
@@ -73,7 +71,7 @@ e_\text{c}^\text{LM} = &amp;e_\text{c}^\text{vBH}(r_s, \zeta)
           <h2>Referenced Review Equations</h2>
           <div class="review-equations">
           <article class="review-equation-card" id="review-eq-eq-eclm">
-            <code>eq:eclm</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (460)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=79" title="Open page 79 of the review PDF">p. 79 ↗</a></p>
             <div class="equation" data-tex="\begin{aligned}
 e_\text{c}^\text{LM} = &amp;e_\text{c}^\text{vBH}(r_s, \zeta) 
   + \frac{J}{\alpha^2 r_s}  \\

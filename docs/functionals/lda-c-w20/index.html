@@ -3,14 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>lda_c_w20</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20261016-excerpts-v1">
-    <script defer src="../../assets/search.js?v=20261016-excerpts-v1"></script>
+    <title>lda_c_w20 — Xie, Wu, and Zhao interpolation ansatz without fitting parameters · Libxc Wiki</title>
+    <meta name="description" content="lda_c_w20: Xie, Wu, and Zhao interpolation ansatz without fitting parameters. LDA correlation functional in Libxc, with references and BibTeX. Includes an excerpt from the Tran, Lehtola, Pittalis and Marques review.">
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261117-refs-v1">
+    <script defer src="../../assets/search.js?v=20261117-refs-v1"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
     <script defer src="../../vendor/katex/contrib/mhchem.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20261016-excerpts-v1"></script>
+    <script defer src="../../assets/detail.js?v=20261117-refs-v1"></script>
 
   </head>
   <body class="functional-page">
@@ -32,21 +33,18 @@
 
         <p class="brand">LDA</p>
         <h1><code class="title-code">lda_c_w20</code></h1>
+        <p class="functional-name">Xie, Wu, and Zhao interpolation ansatz without fitting parameters</p>
         <div class="detail-tags"><span class="tag">lda</span>
 <span class="tag">correlation</span></div>
       </header>
 
       <div class="detail-grid">
+
       <section class="callout">
         <p class="callout-label">Review excerpt</p>
         <div class="review-html">
-<p>Xie et al.<sup class="citation-marker"><a href="#review-ref-Xie2021-045130">459</a></sup> constructed an accurate correlation functional (W20, where ``W&quot; stands for Wuhan) by interpolating between the high- and low-density limits of the HEG correlation energy (see the review). No reference MC data were used, as commonly done (e.g., <a class="functional-link" href="../lda-c-vwn/"><code>lda_c_vwn</code></a>), therefore their functional contains no fitting parameter. The functional uses <a class="review-eq-link" href="#review-eq-eq-ldavBHsi">
-  <code>eq:ldavBHsi</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="e_\text{c}^\text{vBH}(r_s,\zeta) =
-  e_\text{c}^\text{P}(r_s) + \left[e_\text{c}^\text{F}(r_s) - e_\text{c}^\text{P}(r_s)\right] f_\text{c}(\zeta)"></span>
-  </span>
-</a> for the spin interpolation, where the individual paramagnetic and ferromagnetic energies are described by the <em>ansatz</em></p>
+<p>Xie et al.<sup class="citation-marker"><a href="#review-ref-Xie2021-045130">459</a></sup> constructed an accurate correlation functional (W20, where ``W&quot; stands for Wuhan) by interpolating between the high- and low-density limits of the HEG correlation energy (see <a class="review-section-link" href="https://arxiv.org/pdf/2602.17333#page=23" title="High- and Low-Density Limits of the Homogeneous Electron Gas">Sec. 2.10</a> of the review). No reference MC data were used, as commonly done (e.g., <a class="functional-link" href="../lda-c-vwn/"><code>lda_c_vwn</code></a>), therefore their functional contains no fitting parameter. The functional uses <a class="review-eq-link" href="#review-eq-eq-ldavBHsi"><span class="eq-number">Eq. (275)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="e_\text{c}^\text{vBH}(r_s,\zeta) =
+  e_\text{c}^\text{P}(r_s) + \left[e_\text{c}^\text{F}(r_s) - e_\text{c}^\text{P}(r_s)\right] f_\text{c}(\zeta)"></span></span></a> for the spin interpolation, where the individual paramagnetic and ferromagnetic energies are described by the <em>ansatz</em></p>
 <div class="equation" data-tex="\begin{aligned}
 e_\text{c}^{\text{W20}}(r_s) = &amp; G(r_s) -\frac{a_0}{2}  \\
   &amp; \times\ln\left[1 + \frac{D(r_s)}{r_s} + \frac{E(r_s)}{r_s^{3/2}}
@@ -65,7 +63,7 @@ D(r_s) =  \E^{-2b_0/a_0} - 2\left[1-\E^{-(r_s/100)^2}\right]  \\
   G(r_s) = \frac{r_s}{1+10\E^{(r_s/100)^2} r_s^{5/4}}  \\
    \times\left[-a_1\ln\left(1+\frac{1}{r_s}\right) + b_1\right]
 \end{aligned}"></div>
-<p>This interpolation <em>ansatz</em> was inspired by <a class="functional-link" href="../lda-c-chachiyo/"><code>lda_c_chachiyo</code></a> and <code>lda_c_dpi</code>, while the Gaussian exponential term was used to control the asymptotic behavior of the functional similarly to <a class="functional-link" href="../gga-x-pw91/"><code>gga_x_pw91</code></a>. The values of the coefficients $a_0$, $a_1$, $b_0$, $b_1$, $c_\text{x}$, and $c_\text{s}$ (for $\zeta=0$ and 1) and of $f_0$, $f_1$, and $f_2$ ($\zeta$-independent) were fully determined by the high- and low-density expansions of the correlation energy of the HEG (see the review and <sup class="citation-marker"><a href="#review-ref-Loos2016-410">5</a></sup>, <sup class="citation-marker"><a href="#review-ref-Sun2010-085123">270</a></sup>, and <sup class="citation-marker"><a href="#review-ref-Sun2018-079903">271</a></sup>). As the value of $b_1$ has only been determined for the paramagnetic term, it was set to zero in the ferromagnetic term.</p>
+<p>This interpolation <em>ansatz</em> was inspired by <a class="functional-link" href="../lda-c-chachiyo/"><code>lda_c_chachiyo</code></a> and <code>lda_c_dpi</code>, while the Gaussian exponential term was used to control the asymptotic behavior of the functional similarly to <a class="functional-link" href="../gga-x-pw91/"><code>gga_x_pw91</code></a>. The values of the coefficients $a_0$, $a_1$, $b_0$, $b_1$, $c_\text{x}$, and $c_\text{s}$ (for $\zeta=0$ and 1) and of $f_0$, $f_1$, and $f_2$ ($\zeta$-independent) were fully determined by the high- and low-density expansions of the correlation energy of the HEG (see <a class="review-section-link" href="https://arxiv.org/pdf/2602.17333#page=23" title="High- and Low-Density Limits of the Homogeneous Electron Gas">Sec. 2.10</a> of the review and refs. <span class="citation-ref"><a href="#review-ref-Loos2016-410">5</a></span>, <span class="citation-ref"><a href="#review-ref-Sun2010-085123">270</a></span>, and <span class="citation-ref"><a href="#review-ref-Sun2018-079903">271</a></span>). As the value of $b_1$ has only been determined for the paramagnetic term, it was set to zero in the ferromagnetic term.</p>
 <p>This formula shows better accuracy in the low-density region than the popular PW92 (<a class="functional-link" href="../lda-c-pw/"><code>lda_c_pw</code></a>) correlation functional that was fit to MC data.</p>
         </div>
         <p class="source-note">Adapted from <a href="https://arxiv.org/abs/2602.17333">Tran, Lehtola, Pittalis, and Marques, <em>Semi-Local Exchange-Correlation Approximations in Density Functional Theory</em>, arXiv:2602.17333</a>.</p>
@@ -75,7 +73,7 @@ D(r_s) =  \E^{-2b_0/a_0} - 2\left[1-\E^{-(r_s/100)^2}\right]  \\
           <h2>Referenced Review Equations</h2>
           <div class="review-equations">
           <article class="review-equation-card" id="review-eq-eq-ldavBHsi">
-            <code>eq:ldavBHsi</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (275)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=38" title="Open page 38 of the review PDF">p. 38 ↗</a></p>
             <div class="equation" data-tex="e_\text{c}^\text{vBH}(r_s,\zeta) =
   e_\text{c}^\text{P}(r_s) + \left[e_\text{c}^\text{F}(r_s) - e_\text{c}^\text{P}(r_s)\right] f_\text{c}(\zeta)"></div>
           </article>

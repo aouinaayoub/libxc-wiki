@@ -3,14 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>gga_c_pbe</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20261016-excerpts-v1">
-    <script defer src="../../assets/search.js?v=20261016-excerpts-v1"></script>
+    <title>gga_c_pbe — Perdew, Burke &amp; Ernzerhof · Libxc Wiki</title>
+    <meta name="description" content="gga_c_pbe: Perdew, Burke &amp; Ernzerhof. GGA correlation functional in Libxc, with references and BibTeX. Includes an excerpt from the Tran, Lehtola, Pittalis and Marques review.">
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261117-refs-v1">
+    <script defer src="../../assets/search.js?v=20261117-refs-v1"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
     <script defer src="../../vendor/katex/contrib/mhchem.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20261016-excerpts-v1"></script>
+    <script defer src="../../assets/detail.js?v=20261117-refs-v1"></script>
 
   </head>
   <body class="functional-page">
@@ -32,53 +33,35 @@
 
         <p class="brand">GGA</p>
         <h1><code class="title-code">gga_c_pbe</code></h1>
+        <p class="functional-name">Perdew, Burke &amp; Ernzerhof</p>
         <div class="detail-tags"><span class="tag">gga</span>
 <span class="tag">correlation</span></div>
       </header>
 
       <div class="detail-grid">
+
       <section class="callout">
         <p class="callout-label">Review excerpt</p>
         <div class="review-html">
-<p>The correlation component of PBE (<a class="functional-link" href="../gga-x-pbe/"><code>gga_x_pbe</code></a> + <a class="functional-link" href="../gga-c-pbe/"><code>gga_c_pbe</code></a>) functional was designed to obey three exact mathematical conditions.</p>
+<p>The correlation component of the famous PBE (<a class="functional-link" href="../gga-x-pbe/"><code>gga_x_pbe</code></a> + <a class="functional-link" href="../gga-c-pbe/"><code>gga_c_pbe</code></a>) functional was designed to obey three exact mathematical conditions.</p>
 <ol class="review-list" type="i">
 <li><p>Recovery of the exact second-order density-gradient expansion in the slowly varying density limit ($t\to0$).</p></li>
 <li><p>Vanishing correlation energy in the rapidly varying density limit ($t\to\infty$).</p></li>
-<li><p>Correct scaling (as a constant) under a uniform scaling in the high-density limit ($r_s\to0$).</p></li>
+<li><p>Correct scaling (as a constant) under an uniform scaling in the high-density limit ($r_s\to0$).</p></li>
 </ol>
 <p>Based on these conditions, the following ansatz for the correlation energy was proposed:</p>
 <div class="equation" data-tex="e_\text{c}^{\text{PBE}} = e_\text{c}^\text{PW-LDA}(r_s, \zeta) + H_0(\phi_{2/3}, t, A)"></div>
-<p>where $e_\text{c}^\text{PW-LDA}$ is <a class="functional-link" href="../lda-c-pw/"><code>lda_c_pw</code></a> and $H_0$ is <a class="review-eq-link" href="#review-eq-eq-ggac-pw91h0">
-  <code>eq:ggac:pw91h0</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="H_0(\phi_{2/3}, t, A) = \gamma \phi_{2/3}^3 \ln\left[1 + \frac{\beta}{\gamma}
-  \frac{t^2 + A t^4}{1 + A (t^2 + A t^4)}\right]"></span>
-  </span>
-</a>, wherein $\beta=\beta^{\text{MB}}$, which is the high-density limit of the coefficient of the density-gradient expansion, condition (i), and $\gamma=[1 - \ln(2)]/\pi^2$, leading to the canceling of the logarithmic divergence of <a class="functional-link" href="../lda-c-pw/"><code>lda_c_pw</code></a>, as implied by condition (iii). Besides the use of a different value for $\gamma$, the main difference compared to <a class="review-eq-link" href="#review-eq-eq-pw91ec">
-  <code>eq:pw91ec</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="\begin{aligned}
+<p>where $e_\text{c}^\text{PW-LDA}$ is <a class="functional-link" href="../lda-c-pw/"><code>lda_c_pw</code></a> and $H_0$ is <a class="review-eq-link" href="#review-eq-eq-ggac-pw91h0"><span class="eq-number">Eq. (469)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="H_0(\phi_{2/3}, t, A) = \gamma \phi_{2/3}^3 \ln\left[1 + \frac{\beta}{\gamma}
+  \frac{t^2 + A t^4}{1 + A (t^2 + A t^4)}\right]"></span></span></a>, wherein $\beta=\beta^{\text{MB}}$, which is the high-density limit of the coefficient of the density-gradient expansion, condition (i), and $\gamma=[1 - \ln(2)]/\pi^2$, leading to the canceling of the logarithmic divergence of <a class="functional-link" href="../lda-c-pw/"><code>lda_c_pw</code></a>, as implied by condition (iii). Besides the use of a different value for $\gamma$, the main difference compared to <a class="review-eq-link" href="#review-eq-eq-pw91ec"><span class="eq-number">Eq. (468)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="\begin{aligned}
 e_\text{c}^{\text{PW91}} = &amp; e_\text{c}^\text{PW-LDA}(r_s, \zeta) + H_0(\phi_{2/3}, t, A)  \\
 
   &amp; + H_1(r_s, \phi_{2/3}, t)
-\end{aligned}"></span>
-  </span>
-</a> of the <a class="functional-link" href="../gga-c-pw91/"><code>gga_c_pw91</code></a> functional concerns the term $H_1$ that is not present in <a class="review-eq-link" href="#review-eq-eq-ecpbe">
-  <code>eq:ecpbe</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="e_\text{c}^{\text{PBE}} = e_\text{c}^\text{PW-LDA}(r_s, \zeta) + H_0(\phi_{2/3}, t, A)"></span>
-  </span>
-</a>, leading to a simpler correlation functional.</p>
+\end{aligned}"></span></span></a> of the <a class="functional-link" href="../gga-c-pw91/"><code>gga_c_pw91</code></a> functional concerns the term $H_1$ that is not present in <a class="review-eq-link" href="#review-eq-eq-ecpbe"><span class="eq-number">Eq. (475)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="e_\text{c}^{\text{PBE}} = e_\text{c}^\text{PW-LDA}(r_s, \zeta) + H_0(\phi_{2/3}, t, A)"></span></span></a>, leading to a simpler correlation functional.</p>
 <p>Note that two implementations of PBE correlation are available in Libxc. They differ in the value of $\beta^\text{PBE}$:</p>
 <ul class="review-list">
 <li><p><a class="functional-link" href="../gga-c-pbe/"><code>gga_c_pbe</code></a>: $\beta^{\text{MB}}=0.06672455060314922$, which is related to $\mu^\text{PBE}=$  0.2195149727645171 (used in <a class="functional-link" href="../gga-x-pbe/"><code>gga_x_pbe</code></a>) via $\mu^\text{PBE} = \beta^{\text{MB}}\pi^2/3$.</p></li>
-<li><p><a class="functional-link" href="../gga-c-pbe-gaussian/"><code>gga_c_pbe_gaussian</code></a>: $\beta^{\text{MB}}=15.75592 \times C_\text{c}(0) = 0.0667263212$, where $C_\text{c}(r_s=0)=0.004235$, see <a class="review-eq-link" href="#review-eq-eq-ggacp86-rgc">
-  <code>eq:ggacp86:rgc</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="C_\text{c}(r_s) = a^\text{RG} + \frac{b^\text{RG} + \alpha^\text{RG} r_s + \beta^\text{RG} r_s^2}
-  {1 + \gamma^\text{RG} r_s + \delta^\text{RG} r_s^2 + 10^4\beta^\text{RG} r_s^3}"></span>
-  </span>
-</a>. Along with $\kappa^{\text{PBE}}$ and $\mu^{\text{PBE}}$ used in <a class="functional-link" href="../gga-x-pbe-gaussian/"><code>gga_x_pbe_gaussian</code></a>, these are the values used in the GAUSSIAN program.<sup class="citation-marker"><a href="#review-ref-Frisch2016">9</a>,<a href="#review-ref-Lehtola2023-JCP-114116">139</a></sup></p></li>
+<li><p><a class="functional-link" href="../gga-c-pbe-gaussian/"><code>gga_c_pbe_gaussian</code></a>: $\beta^{\text{MB}}=15.75592 \times C_\text{c}(0) = 0.0667263212$, where $C_\text{c}(r_s=0)=0.004235$, see <a class="review-eq-link" href="#review-eq-eq-ggacp86-rgc"><span class="eq-number">Eq. (462)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="C_\text{c}(r_s) = a^\text{RG} + \frac{b^\text{RG} + \alpha^\text{RG} r_s + \beta^\text{RG} r_s^2}
+  {1 + \gamma^\text{RG} r_s + \delta^\text{RG} r_s^2 + 10^4\beta^\text{RG} r_s^3}"></span></span></a>. Along with $\kappa^{\text{PBE}}$ and $\mu^{\text{PBE}}$ used in <a class="functional-link" href="../gga-x-pbe-gaussian/"><code>gga_x_pbe_gaussian</code></a>, these are the values used in the GAUSSIAN program.<sup class="citation-marker"><a href="#review-ref-Frisch2016">9</a>,<a href="#review-ref-Lehtola2023-JCP-114116">139</a></sup></p></li>
 </ul>
         </div>
         <p class="source-note">Adapted from <a href="https://arxiv.org/abs/2602.17333">Tran, Lehtola, Pittalis, and Marques, <em>Semi-Local Exchange-Correlation Approximations in Density Functional Theory</em>, arXiv:2602.17333</a>.</p>
@@ -88,13 +71,13 @@ e_\text{c}^{\text{PW91}} = &amp; e_\text{c}^\text{PW-LDA}(r_s, \zeta) + H_0(\phi
           <h2>Referenced Review Equations</h2>
           <div class="review-equations">
           <article class="review-equation-card" id="review-eq-eq-ggac-pw91h0">
-            <code>eq:ggac:pw91h0</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (469)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=80" title="Open page 80 of the review PDF">p. 80 ↗</a></p>
             <div class="equation" data-tex="H_0(\phi_{2/3}, t, A) = \gamma \phi_{2/3}^3 \ln\left[1 + \frac{\beta}{\gamma}
   \frac{t^2 + A t^4}{1 + A (t^2 + A t^4)}\right]"></div>
           </article>
 
           <article class="review-equation-card" id="review-eq-eq-pw91ec">
-            <code>eq:pw91ec</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (468)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=80" title="Open page 80 of the review PDF">p. 80 ↗</a></p>
             <div class="equation" data-tex="\begin{aligned}
 e_\text{c}^{\text{PW91}} = &amp; e_\text{c}^\text{PW-LDA}(r_s, \zeta) + H_0(\phi_{2/3}, t, A)  \\
 
@@ -103,12 +86,12 @@ e_\text{c}^{\text{PW91}} = &amp; e_\text{c}^\text{PW-LDA}(r_s, \zeta) + H_0(\phi
           </article>
 
           <article class="review-equation-card" id="review-eq-eq-ecpbe">
-            <code>eq:ecpbe</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (475)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=81" title="Open page 81 of the review PDF">p. 81 ↗</a></p>
             <div class="equation" data-tex="e_\text{c}^{\text{PBE}} = e_\text{c}^\text{PW-LDA}(r_s, \zeta) + H_0(\phi_{2/3}, t, A)"></div>
           </article>
 
           <article class="review-equation-card" id="review-eq-eq-ggacp86-rgc">
-            <code>eq:ggacp86:rgc</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (462)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=79" title="Open page 79 of the review PDF">p. 79 ↗</a></p>
             <div class="equation" data-tex="C_\text{c}(r_s) = a^\text{RG} + \frac{b^\text{RG} + \alpha^\text{RG} r_s + \beta^\text{RG} r_s^2}
   {1 + \gamma^\text{RG} r_s + \delta^\text{RG} r_s^2 + 10^4\beta^\text{RG} r_s^3}"></div>
           </article>

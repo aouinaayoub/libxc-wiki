@@ -3,14 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>gga_x_sg4</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20261016-excerpts-v1">
-    <script defer src="../../assets/search.js?v=20261016-excerpts-v1"></script>
+    <title>gga_x_sg4 — Semiclassical GGA at fourth order · Libxc Wiki</title>
+    <meta name="description" content="gga_x_sg4: Semiclassical GGA at fourth order. GGA exchange functional in Libxc, with references and BibTeX. Includes an excerpt from the Tran, Lehtola, Pittalis and Marques review.">
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261117-refs-v1">
+    <script defer src="../../assets/search.js?v=20261117-refs-v1"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
     <script defer src="../../vendor/katex/contrib/mhchem.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20261016-excerpts-v1"></script>
+    <script defer src="../../assets/detail.js?v=20261117-refs-v1"></script>
 
   </head>
   <body class="functional-page">
@@ -32,23 +33,20 @@
 
         <p class="brand">GGA</p>
         <h1><code class="title-code">gga_x_sg4</code></h1>
+        <p class="functional-name">Semiclassical GGA at fourth order</p>
         <div class="detail-tags"><span class="tag">gga</span>
 <span class="tag">exchange</span></div>
       </header>
 
       <div class="detail-grid">
+
       <section class="callout">
         <p class="callout-label">Review excerpt</p>
         <div class="review-html">
-<p>One of the most important exact conditions for the development of GGA or MGGA exchange functionals is the small density-gradient expansion. Many functionals are built to reproduce this expansion up to quadratic order. The <a class="functional-link" href="../gga-x-sg4/"><code>gga_x_sg4</code></a> goes one step beyond, and introduces an extension of the modified gradient expansion<sup class="citation-marker"><a href="#review-ref-Elliott2009-1485">291</a></sup> to fourth order:</p>
+<p>One of the most important exact conditions for the development of GGA or MGGA exchange functionals is the small density-gradient expansion. Many functionals are built in order to reproduce this expansion up to quadratic order. The <a class="functional-link" href="../gga-x-sg4/"><code>gga_x_sg4</code></a> goes one step beyond, and introduces an extension of the modified gradient expansion<sup class="citation-marker"><a href="#review-ref-Elliott2009-1485">291</a></sup> to fourth order:</p>
 <div class="equation" data-tex="\lim_{s_\sigma\to 0} F_\text{x}(s_\sigma) = 1 + \mu s_\sigma^2 + \nu s_\sigma^4 + O(s_\sigma^6)"></div>
-<p>By looking at the slowly varying density region of nonrelativistic large neutral atoms (i.e., when $Z\to\infty$, see discussion for <a class="functional-link" href="../gga-x-eb88/"><code>gga_x_eb88</code></a>), one obtains $\mu^\text{MGE2}=0.260$ (close to the value from <sup class="citation-marker"><a href="#review-ref-Elliott2009-1485">291</a></sup>) and $\nu^\text{MGE4}=-0.195$.</p>
-<p>The proposed semiclassical GGA at fourth order (SG4), which obeys the expansion <a class="review-eq-link" href="#review-eq-eq-mge4">
-  <code>eq:mge4</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="\lim_{s_\sigma\to 0} F_\text{x}(s_\sigma) = 1 + \mu s_\sigma^2 + \nu s_\sigma^4 + O(s_\sigma^6)"></span>
-  </span>
-</a> and the LO bound, is given by</p>
+<p>By looking at the slowly varying density region of nonrelativistic large neutral atoms (i.e., when $Z\to\infty$, see discussion for <a class="functional-link" href="../gga-x-eb88/"><code>gga_x_eb88</code></a>), one obtains $\mu^\text{MGE2}=0.260$ (close to the value from ref. <span class="citation-ref"><a href="#review-ref-Elliott2009-1485">291</a></span>) and $\nu^\text{MGE4}=-0.195$.</p>
+<p>The proposed semiclassical GGA at fourth order (SG4), which obeys the expansion <a class="review-eq-link" href="#review-eq-eq-mge4"><span class="eq-number">Eq. (446)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="\lim_{s_\sigma\to 0} F_\text{x}(s_\sigma) = 1 + \mu s_\sigma^2 + \nu s_\sigma^4 + O(s_\sigma^6)"></span></span></a> and the LO bound, is given by</p>
 <div class="equation" data-tex="F_\text{x}^{\text{SG4}} = 1 + \kappa_1 + \kappa_2
   - \frac{\displaystyle \kappa_1 \left(1 - \frac{\mu_1}{\kappa_1} s_{\sigma}^2\right)}{\displaystyle 1 - \left(\frac{\mu_1}{\kappa_1} s_{\sigma}^2\right)^5}
   - \frac{\displaystyle \kappa_2}{\displaystyle 1 + \frac{\mu_2}{\kappa_2} s_{\sigma}^2}"></div>
@@ -62,7 +60,7 @@
           <h2>Referenced Review Equations</h2>
           <div class="review-equations">
           <article class="review-equation-card" id="review-eq-eq-mge4">
-            <code>eq:mge4</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (446)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=75" title="Open page 75 of the review PDF">p. 75 ↗</a></p>
             <div class="equation" data-tex="\lim_{s_\sigma\to 0} F_\text{x}(s_\sigma) = 1 + \mu s_\sigma^2 + \nu s_\sigma^4 + O(s_\sigma^6)"></div>
           </article>
 

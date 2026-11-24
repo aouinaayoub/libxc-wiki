@@ -3,14 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>mgga_c_ccalda</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20261016-excerpts-v1">
-    <script defer src="../../assets/search.js?v=20261016-excerpts-v1"></script>
+    <title>mgga_c_ccalda — Iso-orbital corrected LDA correlation by Lebeda et al · Libxc Wiki</title>
+    <meta name="description" content="mgga_c_ccalda: Iso-orbital corrected LDA correlation by Lebeda et al. Meta-GGA correlation functional in Libxc, with references and BibTeX. Includes an excerpt from the Tran, Lehtola, Pittalis and Marques review.">
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261117-refs-v1">
+    <script defer src="../../assets/search.js?v=20261117-refs-v1"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
     <script defer src="../../vendor/katex/contrib/mhchem.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20261016-excerpts-v1"></script>
+    <script defer src="../../assets/detail.js?v=20261117-refs-v1"></script>
 
   </head>
   <body class="functional-page">
@@ -32,35 +33,22 @@
 
         <p class="brand">META-GGA</p>
         <h1><code class="title-code">mgga_c_ccalda</code></h1>
+        <p class="functional-name">Iso-orbital corrected LDA correlation by Lebeda et al</p>
         <div class="detail-tags"><span class="tag">meta-gga</span>
 <span class="tag">correlation</span></div>
       </header>
 
       <div class="detail-grid">
+
       <section class="callout">
         <p class="callout-label">Review excerpt</p>
         <div class="review-html">
 <p>This correlation functional was designed with the goal of providing a good accuracy for the atomization energies of molecules when combined with <a class="functional-link" href="../mgga-x-task/"><code>mgga_x_task</code></a>. The functional <a class="functional-link" href="../mgga-x-task/"><code>mgga_x_task</code></a> has a reduced self-interaction error and provides the exact energy of the H atom, which suggested Lebeda et al.<sup class="citation-marker"><a href="#review-ref-Lebeda2022-023061">757</a></sup> to combine it with <a class="functional-link" href="../mgga-c-cc/"><code>mgga_c_cc</code></a> that shares similar features. This combination leads to atomization energies that are in most cases improved compared to those obtained with <a class="functional-link" href="../mgga-x-task/"><code>mgga_x_task</code></a> + <a class="functional-link" href="../lda-c-pw/"><code>lda_c_pw</code></a>. Also, the good accuracy of <a class="functional-link" href="../mgga-x-task/"><code>mgga_x_task</code></a> for the band gap of solids is not altered by the addition of <a class="functional-link" href="../mgga-c-cc/"><code>mgga_c_cc</code></a>.</p>
-<p>However, results for molecules containing the light H or Li atoms are extremely inaccurate. A remedy is to combine <a class="review-eq-link" href="#review-eq-eq-eccc">
-  <code>eq:eccc</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="e_{\text{c}}^{\text{CC}} = \left(1-z\zeta^2\right)e_{\text{c}}^{\text{PW-LDA}}"></span>
-  </span>
-</a> and <a class="functional-link" href="../lda-c-pw/"><code>lda_c_pw</code></a>:</p>
+<p>However, results for molecules containing the light H or Li atoms are extremely inaccurate. A remedy is to combine <a class="review-eq-link" href="#review-eq-eq-eccc"><span class="eq-number">Eq. (748)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="e_{\text{c}}^{\text{CC}} = \left(1-z\zeta^2\right)e_{\text{c}}^{\text{PW-LDA}}"></span></span></a> and <a class="functional-link" href="../lda-c-pw/"><code>lda_c_pw</code></a>:</p>
 <div class="equation" data-tex="e_{\text{c}}^{\text{CCaLDA}} = f(\alpha)e_{\text{c}}^{\text{CC}} + \left[1-f(\alpha)\right]e_{\text{c}}^{\text{PW-LDA}}"></div>
 <p>where</p>
 <div class="equation" data-tex="f(\alpha) = (1+c)\frac{\alpha}{1+c\alpha}"></div>
-<p>with $\alpha$ given by <a class="review-eq-link" href="#review-eq-eq-alpha">
-  <code>eq:alpha</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="\alpha = \frac{\tau-\tau^{\text{W}}[n]}{\tau^{\text{TF}}[n]}"></span>
-  </span>
-</a>, which is the spin-unpolarized version of the iso-orbital indicator, and $c=10000$ that was chosen such that the numerical differences with respect to <a class="review-eq-link" href="#review-eq-eq-eccc">
-  <code>eq:eccc</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="e_{\text{c}}^{\text{CC}} = \left(1-z\zeta^2\right)e_{\text{c}}^{\text{PW-LDA}}"></span>
-  </span>
-</a> occur only for $\alpha\approx0$, and should therefore affect only systems containing H and Li atoms.</p>
+<p>with $\alpha$ given by <a class="review-eq-link" href="#review-eq-eq-alpha"><span class="eq-number">Eq. (79)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="\alpha = \frac{\tau-\tau^{\text{W}}[n]}{\tau^{\text{TF}}[n]}"></span></span></a>, which is the spin-unpolarized version of the iso-orbital indicator, and $c=10000$ that was chosen such that the numerical differences with respect to <a class="review-eq-link" href="#review-eq-eq-eccc"><span class="eq-number">Eq. (748)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="e_{\text{c}}^{\text{CC}} = \left(1-z\zeta^2\right)e_{\text{c}}^{\text{PW-LDA}}"></span></span></a> occur only for $\alpha\approx0$, and should therefore affect only systems containing H and Li atoms.</p>
         </div>
         <p class="source-note">Adapted from <a href="https://arxiv.org/abs/2602.17333">Tran, Lehtola, Pittalis, and Marques, <em>Semi-Local Exchange-Correlation Approximations in Density Functional Theory</em>, arXiv:2602.17333</a>.</p>
       </section>
@@ -69,12 +57,12 @@
           <h2>Referenced Review Equations</h2>
           <div class="review-equations">
           <article class="review-equation-card" id="review-eq-eq-eccc">
-            <code>eq:eccc</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (748)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=137" title="Open page 137 of the review PDF">p. 137 ↗</a></p>
             <div class="equation" data-tex="e_{\text{c}}^{\text{CC}} = \left(1-z\zeta^2\right)e_{\text{c}}^{\text{PW-LDA}}"></div>
           </article>
 
           <article class="review-equation-card" id="review-eq-eq-alpha">
-            <code>eq:alpha</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (79)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=14" title="Open page 14 of the review PDF">p. 14 ↗</a></p>
             <div class="equation" data-tex="\alpha = \frac{\tau-\tau^{\text{W}}[n]}{\tau^{\text{TF}}[n]}"></div>
           </article>
 

@@ -3,14 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>lda_x_sloc</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20261016-excerpts-v1">
-    <script defer src="../../assets/search.js?v=20261016-excerpts-v1"></script>
+    <title>lda_x_sloc — simple local model for Slater potential · Libxc Wiki</title>
+    <meta name="description" content="lda_x_sloc: simple local model for Slater potential. LDA exchange functional in Libxc, with references and BibTeX. Includes an excerpt from the Tran, Lehtola, Pittalis and Marques review.">
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261117-refs-v1">
+    <script defer src="../../assets/search.js?v=20261117-refs-v1"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
     <script defer src="../../vendor/katex/contrib/mhchem.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20261016-excerpts-v1"></script>
+    <script defer src="../../assets/detail.js?v=20261117-refs-v1"></script>
 
   </head>
   <body class="functional-page">
@@ -32,38 +33,25 @@
 
         <p class="brand">LDA</p>
         <h1><code class="title-code">lda_x_sloc</code></h1>
+        <p class="functional-name">simple local model for Slater potential</p>
         <div class="detail-tags"><span class="tag">lda</span>
 <span class="tag">exchange</span></div>
       </header>
 
       <div class="detail-grid">
+
       <section class="callout">
         <p class="callout-label">Review excerpt</p>
         <div class="review-html">
-<p>Finzel and Baranov<sup class="citation-marker"><a href="#review-ref-Finzel2017-40">406</a></sup> proposed a simple local approximation for the Slater potential<sup class="citation-marker"><a href="#review-ref-Slater1951-385">50</a></sup> (<a class="review-eq-link" href="#review-eq-eq-Ux-spin">
-  <code>eq:Ux-spin</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="U_{\x\sigma}(\br) = \mint{r&#39;} \frac{h_{\x\sigma}(\br,\br&#39;)}{|\br - \br&#39;|} = 2e_{\x\sigma}(\br)"></span>
-  </span>
-</a>) of the form</p>
+<p>Finzel and Baranov<sup class="citation-marker"><a href="#review-ref-Finzel2017-40">406</a></sup> proposed a simple local approximation for the Slater potential<sup class="citation-marker"><a href="#review-ref-Slater1951-385">50</a></sup> (<a class="review-eq-link" href="#review-eq-eq-Ux-spin"><span class="eq-number">Eq. (144)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="U_{\x\sigma}(\br) = \mint{r&#39;} \frac{h_{\x\sigma}(\br,\br&#39;)}{|\br - \br&#39;|} = 2e_{\x\sigma}(\br)"></span></span></a>) of the form</p>
 <div class="equation" data-tex="v^\text{SLOC}_{\text{x}\sigma} = -a \left(2n_\sigma\right)^{b}"></div>
 <p>which corresponds to an energy density given by</p>
 <div class="equation" data-tex="e^\text{SLOC}_\text{x}(n,\zeta) = -\frac{a}{b+1}  n^b\phi_{b+1}(\zeta)"></div>
-<p>where $\phi_{b+1}$ is given by <a class="review-eq-link" href="#review-eq-eq-phi">
-  <code>eq:phi</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="\begin{aligned}
+<p>where $\phi_{b+1}$ is given by <a class="review-eq-link" href="#review-eq-eq-phi"><span class="eq-number">Eq. (40)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="\begin{aligned}
 \phi_p(\zeta) = &amp; \frac{1}{2} \left[(1+\zeta)^{p} + (1-\zeta)^{p}\right]  \\
 
     = &amp; 2^{p-1}\frac{n_{\uparrow}^{p}+n_{\downarrow}^{p}}{n^{p}}
-\end{aligned}"></span>
-  </span>
-</a>. The parameters $a=1.67$ and $b=0.3$ were determined by fitting <a class="review-eq-link" href="#review-eq-eq-ldasloc">
-  <code>eq:ldasloc</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="v^\text{SLOC}_{\text{x}\sigma} = -a \left(2n_\sigma\right)^{b}"></span>
-  </span>
-</a> to the Slater potential calculated using the HF wavefunctions of Clementi and Roetti<sup class="citation-marker"><a href="#review-ref-Clementi1974-177">407</a></sup> for the Be, Ne, Mg, Ar, Ca, Zn, Kr, Sr, Pd and Xe atoms. Even though the exponent $b$ is close to the $1/3$ of the standard <a class="functional-link" href="../lda-x/"><code>lda_x</code></a>, the prefactor $a$ is considerably larger ($a=\left(3/\pi\right)^{1/3}\approx 0.984745$ for <a class="functional-link" href="../lda-x/"><code>lda_x</code></a>), leading to a much more negative potential. Band gaps calculated with this functional are considerably improved when compared to the original <a class="functional-link" href="../lda-x/"><code>lda_x</code></a>.<sup class="citation-marker"><a href="#review-ref-Finzel2017-40">406</a>,<a href="#review-ref-Borlido2019-5069">408</a>,<a href="#review-ref-Borlido2020-96">409</a></sup> Note that no correlation was added to exchange in the calculations.</p>
+\end{aligned}"></span></span></a>. The parameters $a=1.67$ and $b=0.3$ were determined by fitting <a class="review-eq-link" href="#review-eq-eq-ldasloc"><span class="eq-number">Eq. (268)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="v^\text{SLOC}_{\text{x}\sigma} = -a \left(2n_\sigma\right)^{b}"></span></span></a> to the Slater potential calculated using the HF wavefunctions of Clementi and Roetti<sup class="citation-marker"><a href="#review-ref-Clementi1974-177">407</a></sup> for the Be, Ne, Mg, Ar, Ca, Zn, Kr, Sr, Pd and Xe atoms. Even though the exponent $b$ is close to the $1/3$ of the standard <a class="functional-link" href="../lda-x/"><code>lda_x</code></a>, the prefactor $a$ is considerably larger ($a=\left(3/\pi\right)^{1/3}\approx 0.984745$ for <a class="functional-link" href="../lda-x/"><code>lda_x</code></a>), leading to a much more negative potential. Band gaps calculated with this functional are considerably improved when compared to the original <a class="functional-link" href="../lda-x/"><code>lda_x</code></a>.<sup class="citation-marker"><a href="#review-ref-Finzel2017-40">406</a>,<a href="#review-ref-Borlido2019-5069">408</a>,<a href="#review-ref-Borlido2020-96">409</a></sup> Note that no correlation was added to exchange in the calculations.</p>
         </div>
         <p class="source-note">Adapted from <a href="https://arxiv.org/abs/2602.17333">Tran, Lehtola, Pittalis, and Marques, <em>Semi-Local Exchange-Correlation Approximations in Density Functional Theory</em>, arXiv:2602.17333</a>.</p>
       </section>
@@ -72,12 +60,12 @@
           <h2>Referenced Review Equations</h2>
           <div class="review-equations">
           <article class="review-equation-card" id="review-eq-eq-Ux-spin">
-            <code>eq:Ux-spin</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (144)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=20" title="Open page 20 of the review PDF">p. 20 ↗</a></p>
             <div class="equation" data-tex="U_{\x\sigma}(\br) = \mint{r&#39;} \frac{h_{\x\sigma}(\br,\br&#39;)}{|\br - \br&#39;|} = 2e_{\x\sigma}(\br)"></div>
           </article>
 
           <article class="review-equation-card" id="review-eq-eq-phi">
-            <code>eq:phi</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (40)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=12" title="Open page 12 of the review PDF">p. 12 ↗</a></p>
             <div class="equation" data-tex="\begin{aligned}
 \phi_p(\zeta) = &amp; \frac{1}{2} \left[(1+\zeta)^{p} + (1-\zeta)^{p}\right]  \\
 
@@ -86,7 +74,7 @@
           </article>
 
           <article class="review-equation-card" id="review-eq-eq-ldasloc">
-            <code>eq:ldasloc</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (268)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=37" title="Open page 37 of the review PDF">p. 37 ↗</a></p>
             <div class="equation" data-tex="v^\text{SLOC}_{\text{x}\sigma} = -a \left(2n_\sigma\right)^{b}"></div>
           </article>
 

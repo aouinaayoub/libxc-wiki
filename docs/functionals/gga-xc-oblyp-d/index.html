@@ -3,14 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>gga_xc_oblyp_d</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20261016-excerpts-v1">
-    <script defer src="../../assets/search.js?v=20261016-excerpts-v1"></script>
+    <title>gga_xc_oblyp_d — oBLYP-D functional of Goerigk and Grimme · Libxc Wiki</title>
+    <meta name="description" content="gga_xc_oblyp_d: oBLYP-D functional of Goerigk and Grimme. GGA exchange-correlation functional in Libxc, with references and BibTeX. Includes an excerpt from the Tran, Lehtola, Pittalis and Marques review.">
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261117-refs-v1">
+    <script defer src="../../assets/search.js?v=20261117-refs-v1"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
     <script defer src="../../vendor/katex/contrib/mhchem.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20261016-excerpts-v1"></script>
+    <script defer src="../../assets/detail.js?v=20261117-refs-v1"></script>
 
   </head>
   <body class="functional-page">
@@ -32,26 +33,20 @@
 
         <p class="brand">GGA</p>
         <h1><code class="title-code">gga_xc_oblyp_d</code></h1>
+        <p class="functional-name">oBLYP-D functional of Goerigk and Grimme</p>
         <div class="detail-tags"><span class="tag">gga</span>
 <span class="tag">exchange</span>
 <span class="tag">correlation</span></div>
       </header>
 
       <div class="detail-grid">
+
       <section class="callout">
         <p class="callout-label">Review excerpt</p>
         <div class="review-html">
 <p>Together with <a class="functional-link" href="../mgga-xc-otpss-d/"><code>mgga_xc_otpss_d</code></a>, these are reparametrizations of relatively popular functionals obtained by fitting to a set of 143 reference values. The set consists of 49 atomization energies (mostly from the G2/97 test set<sup class="citation-marker"><a href="#review-ref-Curtiss1997-1063">534</a></sup>), 15 atomic total energies, 8 ionization potentials and 7 electron affinities of atoms from the G2-1 test set,<sup class="citation-marker"><a href="#review-ref-Curtiss1991-7221">430</a></sup> the isomerization reaction from isooctane to $n$-octane, the binding energy of the 5 smallest molecular dimers from the S22 database,<sup class="citation-marker"><a href="#review-ref-Jurecka2006-1985">550</a></sup> and 58 decomposition energies from the MB08-165 set.<sup class="citation-marker"><a href="#review-ref-Grimme2009-993">668</a></sup> Moreover, these functionals were optimized with the D2 dispersion correction of Grimme.<sup class="citation-marker"><a href="#review-ref-Grimme2006-1787">544</a></sup></p>
-<p><a class="functional-link" href="../gga-xc-oblyp-d/"><code>gga_xc_oblyp_d</code></a> is a combination of <a class="functional-link" href="../gga-x-b88/"><code>gga_x_b88</code></a> with the new parameter $\beta=0.00401$ in <a class="review-eq-link" href="#review-eq-eq-fxb88">
-  <code>eq:fxb88</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="F_\text{x}^{\text{B88}} = 1+\frac{\beta}{C_\text{x}}
-  \frac{x_\sigma^2}{1 + \gamma\beta x_\sigma\arcsinh(x_\sigma)}"></span>
-  </span>
-</a> and <a class="functional-link" href="../gga-c-lyp/"><code>gga_c_lyp</code></a> with the new parameters $a=0.05047$, $b=0.140$, $\bar c = 0.2196(4\pi/3)^{1/3}$, and $\bar d = 0.363(4\pi/3)^{1/3}$ in <a class="review-eq-link" href="#review-eq-eq-ec-lyp">
-  <code>eq:ec-lyp</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="\begin{aligned}
+<p><a class="functional-link" href="../gga-xc-oblyp-d/"><code>gga_xc_oblyp_d</code></a> is a combination of <a class="functional-link" href="../gga-x-b88/"><code>gga_x_b88</code></a> with the new parameter $\beta=0.00401$ in <a class="review-eq-link" href="#review-eq-eq-fxb88"><span class="eq-number">Eq. (372)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="F_\text{x}^{\text{B88}} = 1+\frac{\beta}{C_\text{x}}
+  \frac{x_\sigma^2}{1 + \gamma\beta x_\sigma\arcsinh(x_\sigma)}"></span></span></a> and <a class="functional-link" href="../gga-c-lyp/"><code>gga_c_lyp</code></a> with the new parameters $a=0.05047$, $b=0.140$, $\bar c = 0.2196(4\pi/3)^{1/3}$, and $\bar d = 0.363(4\pi/3)^{1/3}$ in <a class="review-eq-link" href="#review-eq-eq-ec-lyp"><span class="eq-number">Eq. (465)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="\begin{aligned}
 e_\text{c}^{\text{LYP}} = &amp; a\Bigg\{-\frac{1-\zeta^2}{1+\bar{d}r_s}  \\
 
  &amp; -\omega x^2\left[\frac{1}{72}\left(1-\zeta^2\right)(47 - 7\delta)-\frac{2}{3}\right]  \\
@@ -73,40 +68,20 @@ e_\text{c}^{\text{LYP}} = &amp; a\Bigg\{-\frac{1-\zeta^2}{1+\bar{d}r_s}  \\
   &amp; \left. -\frac{1}{4}x_\uparrow^2(1-\zeta)^2(1+\zeta)^{8/3}
   \right]
   \Bigg\}
-\end{aligned}"></span>
-  </span>
-</a>; <a class="review-eq-link" href="#review-eq-eq-lyp-w-omega">
-  <code>eq:lyp-w-omega</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="\begin{aligned}
+\end{aligned}"></span></span></a>; <a class="review-eq-link" href="#review-eq-eq-lyp-w-omega"><span class="eq-number">Eq. (466)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="\begin{aligned}
 \omega &amp; = \frac{b\E^{-\bar{c}r_s}}{1 + \bar{d}r_s} \\
     \delta &amp; = \bar{c}r_s + \frac{\bar{d}r_s}{1 + \bar{d}r_s}
-\end{aligned}"></span>
-  </span>
-</a>.</p>
-<p><a class="functional-link" href="../gga-xc-opwlyp-d/"><code>gga_xc_opwlyp_d</code></a> is a combination of reoptimized versions of <a class="functional-link" href="../gga-x-pw91/"><code>gga_x_pw91</code></a> and <a class="functional-link" href="../gga-c-lyp/"><code>gga_c_lyp</code></a>. The reoptimized parameters of the exchange functional are $\alpha=0.79$, $\beta=0.00402$, and $\gamma=0.8894/C_s^2$ in <a class="review-eq-link" href="#review-eq-eq-ggaxpw91">
-  <code>eq:ggaxpw91</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="F_\text{x}^{\text{PW91}} = 1 + 
+\end{aligned}"></span></span></a>.</p>
+<p><a class="functional-link" href="../gga-xc-opwlyp-d/"><code>gga_xc_opwlyp_d</code></a> is a combination of reoptimized versions of <a class="functional-link" href="../gga-x-pw91/"><code>gga_x_pw91</code></a> and <a class="functional-link" href="../gga-c-lyp/"><code>gga_c_lyp</code></a>. The reoptimized parameters of the exchange functional are $\alpha=0.79$, $\beta=0.00402$, and $\gamma=0.8894/C_s^2$ in <a class="review-eq-link" href="#review-eq-eq-ggaxpw91"><span class="eq-number">Eq. (373)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="F_\text{x}^{\text{PW91}} = 1 + 
   \frac{\left(c + d\E^{-\gamma s_\sigma^2}\right) s_\sigma^2 - f s_\sigma^\alpha}
-  {1 + a s_\sigma \arcsinh(b s_\sigma) + f s_\sigma^\alpha}"></span>
-  </span>
-</a>; <a class="review-eq-link" href="#review-eq-eq-pw91para">
-  <code>eq:pw91para</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="\begin{aligned}
+  {1 + a s_\sigma \arcsinh(b s_\sigma) + f s_\sigma^\alpha}"></span></span></a>; <a class="review-eq-link" href="#review-eq-eq-pw91para"><span class="eq-number">Eq. (374)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="\begin{aligned}
 a &amp; = \frac{6 \beta^\text{B88}}{C_s}\,, &amp;
  b &amp; = \frac{1}{C_s}\,, &amp;
  c &amp; = \frac{\beta^\text{B88}}{C_\text{x} C_s^2}\,,  \\
 
  d &amp; = \frac{\delta - \beta^\text{B88}}{C_\text{x} C_s^2}\,, &amp;
  f &amp; = \frac{10^{-6}}{C_\text{x} C_s^\alpha}
-\end{aligned}"></span>
-  </span>
-</a>. Interestingly, the value of $\beta$ is remarkably close to $\beta^{\text{B88}}=0.0042$ used in the original <a class="functional-link" href="../gga-x-b88/"><code>gga_x_b88</code></a> and <a class="functional-link" href="../gga-x-pw91/"><code>gga_x_pw91</code></a> functionals. The reoptimized parameters for the correlation functional are $a=0.04960$, $b=0.144$, $\bar c = 0.2262(4\pi/3)^{1/3}$, and $\bar d = 0.346(4\pi/3)^{1/3}$ in <a class="review-eq-link" href="#review-eq-eq-ec-lyp">
-  <code>eq:ec-lyp</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="\begin{aligned}
+\end{aligned}"></span></span></a>. Interestingly, the value of $\beta$ is remarkably close to $\beta^{\text{B88}}=0.0042$ used in the original <a class="functional-link" href="../gga-x-b88/"><code>gga_x_b88</code></a> and <a class="functional-link" href="../gga-x-pw91/"><code>gga_x_pw91</code></a> functionals. The reoptimized parameters for the correlation functional are $a=0.04960$, $b=0.144$, $\bar c = 0.2262(4\pi/3)^{1/3}$, and $\bar d = 0.346(4\pi/3)^{1/3}$ in <a class="review-eq-link" href="#review-eq-eq-ec-lyp"><span class="eq-number">Eq. (465)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="\begin{aligned}
 e_\text{c}^{\text{LYP}} = &amp; a\Bigg\{-\frac{1-\zeta^2}{1+\bar{d}r_s}  \\
 
  &amp; -\omega x^2\left[\frac{1}{72}\left(1-\zeta^2\right)(47 - 7\delta)-\frac{2}{3}\right]  \\
@@ -128,34 +103,12 @@ e_\text{c}^{\text{LYP}} = &amp; a\Bigg\{-\frac{1-\zeta^2}{1+\bar{d}r_s}  \\
   &amp; \left. -\frac{1}{4}x_\uparrow^2(1-\zeta)^2(1+\zeta)^{8/3}
   \right]
   \Bigg\}
-\end{aligned}"></span>
-  </span>
-</a>; <a class="review-eq-link" href="#review-eq-eq-lyp-w-omega">
-  <code>eq:lyp-w-omega</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="\begin{aligned}
+\end{aligned}"></span></span></a>; <a class="review-eq-link" href="#review-eq-eq-lyp-w-omega"><span class="eq-number">Eq. (466)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="\begin{aligned}
 \omega &amp; = \frac{b\E^{-\bar{c}r_s}}{1 + \bar{d}r_s} \\
     \delta &amp; = \bar{c}r_s + \frac{\bar{d}r_s}{1 + \bar{d}r_s}
-\end{aligned}"></span>
-  </span>
-</a>.</p>
-<p><a class="functional-link" href="../gga-xc-opbe-d/"><code>gga_xc_opbe_d</code></a> is a reoptimized version of PBE, with new parameters $\kappa=1.2010$ and $\mu=0.21198$ in <a class="review-eq-link" href="#review-eq-eq-pbeenh">
-  <code>eq:pbeenh</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="F_\text{x}^{\text{PBE}} = 1 + \kappa\left[1 - \frac{\kappa}{\kappa + f_0(s_\sigma)}\right]"></span>
-  </span>
-</a> for <a class="functional-link" href="../gga-x-pbe/"><code>gga_x_pbe</code></a> and $\beta=0.04636$ in <a class="review-eq-link" href="#review-eq-eq-ggac-pw91h0">
-  <code>eq:ggac:pw91h0</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="H_0(\phi_{2/3}, t, A) = \gamma \phi_{2/3}^3 \ln\left[1 + \frac{\beta}{\gamma}
-  \frac{t^2 + A t^4}{1 + A (t^2 + A t^4)}\right]"></span>
-  </span>
-</a>; <a class="review-eq-link" href="#review-eq-eq-pw91a">
-  <code>eq:pw91a</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="A(r_s, \zeta, \phi_{2/3}) = \frac{\beta}{\gamma w_1}"></span>
-  </span>
-</a> for <a class="functional-link" href="../gga-c-pbe/"><code>gga_c_pbe</code></a>.</p>
+\end{aligned}"></span></span></a>.</p>
+<p><a class="functional-link" href="../gga-xc-opbe-d/"><code>gga_xc_opbe_d</code></a> is a reoptimized version of PBE, with new parameters $\kappa=1.2010$ and $\mu=0.21198$ in <a class="review-eq-link" href="#review-eq-eq-pbeenh"><span class="eq-number">Eq. (382)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="F_\text{x}^{\text{PBE}} = 1 + \kappa\left[1 - \frac{\kappa}{\kappa + f_0(s_\sigma)}\right]"></span></span></a> for <a class="functional-link" href="../gga-x-pbe/"><code>gga_x_pbe</code></a> and $\beta=0.04636$ in <a class="review-eq-link" href="#review-eq-eq-ggac-pw91h0"><span class="eq-number">Eq. (469)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="H_0(\phi_{2/3}, t, A) = \gamma \phi_{2/3}^3 \ln\left[1 + \frac{\beta}{\gamma}
+  \frac{t^2 + A t^4}{1 + A (t^2 + A t^4)}\right]"></span></span></a>; <a class="review-eq-link" href="#review-eq-eq-pw91a"><span class="eq-number">Eq. (470)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="A(r_s, \zeta, \phi_{2/3}) = \frac{\beta}{\gamma w_1}"></span></span></a> for <a class="functional-link" href="../gga-c-pbe/"><code>gga_c_pbe</code></a>.</p>
 <p>It turns out that both <a class="functional-link" href="../gga-xc-oblyp-d/"><code>gga_xc_oblyp_d</code></a> and <a class="functional-link" href="../gga-xc-opwlyp-d/"><code>gga_xc_opwlyp_d</code></a> only yield small differences with respect to the original functionals (note that <a class="functional-link" href="../gga-xc-opwlyp-d/"><code>gga_xc_opwlyp_d</code></a> was actually compared to mPWLYP (<a class="functional-link" href="../gga-x-mpw91/"><code>gga_x_mpw91</code></a> + <a class="functional-link" href="../gga-c-lyp/"><code>gga_c_lyp</code></a>)). The effect of the reoptimization on <a class="functional-link" href="../gga-xc-opbe-d/"><code>gga_xc_opbe_d</code></a> is larger and the description of some properties is indeed improved.</p>
         </div>
         <p class="source-note">Adapted from <a href="https://arxiv.org/abs/2602.17333">Tran, Lehtola, Pittalis, and Marques, <em>Semi-Local Exchange-Correlation Approximations in Density Functional Theory</em>, arXiv:2602.17333</a>.</p>
@@ -165,13 +118,13 @@ e_\text{c}^{\text{LYP}} = &amp; a\Bigg\{-\frac{1-\zeta^2}{1+\bar{d}r_s}  \\
           <h2>Referenced Review Equations</h2>
           <div class="review-equations">
           <article class="review-equation-card" id="review-eq-eq-fxb88">
-            <code>eq:fxb88</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (372)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=55" title="Open page 55 of the review PDF">p. 55 ↗</a></p>
             <div class="equation" data-tex="F_\text{x}^{\text{B88}} = 1+\frac{\beta}{C_\text{x}}
   \frac{x_\sigma^2}{1 + \gamma\beta x_\sigma\arcsinh(x_\sigma)}"></div>
           </article>
 
           <article class="review-equation-card" id="review-eq-eq-ec-lyp">
-            <code>eq:ec-lyp</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (465)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=79" title="Open page 79 of the review PDF">p. 79 ↗</a></p>
             <div class="equation" data-tex="\begin{aligned}
 e_\text{c}^{\text{LYP}} = &amp; a\Bigg\{-\frac{1-\zeta^2}{1+\bar{d}r_s}  \\
 
@@ -198,7 +151,7 @@ e_\text{c}^{\text{LYP}} = &amp; a\Bigg\{-\frac{1-\zeta^2}{1+\bar{d}r_s}  \\
           </article>
 
           <article class="review-equation-card" id="review-eq-eq-lyp-w-omega">
-            <code>eq:lyp-w-omega</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (466)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=79" title="Open page 79 of the review PDF">p. 79 ↗</a></p>
             <div class="equation" data-tex="\begin{aligned}
 \omega &amp; = \frac{b\E^{-\bar{c}r_s}}{1 + \bar{d}r_s} \\
     \delta &amp; = \bar{c}r_s + \frac{\bar{d}r_s}{1 + \bar{d}r_s}
@@ -206,14 +159,14 @@ e_\text{c}^{\text{LYP}} = &amp; a\Bigg\{-\frac{1-\zeta^2}{1+\bar{d}r_s}  \\
           </article>
 
           <article class="review-equation-card" id="review-eq-eq-ggaxpw91">
-            <code>eq:ggaxpw91</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (373)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=55" title="Open page 55 of the review PDF">p. 55 ↗</a></p>
             <div class="equation" data-tex="F_\text{x}^{\text{PW91}} = 1 + 
   \frac{\left(c + d\E^{-\gamma s_\sigma^2}\right) s_\sigma^2 - f s_\sigma^\alpha}
   {1 + a s_\sigma \arcsinh(b s_\sigma) + f s_\sigma^\alpha}"></div>
           </article>
 
           <article class="review-equation-card" id="review-eq-eq-pw91para">
-            <code>eq:pw91para</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (374)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=55" title="Open page 55 of the review PDF">p. 55 ↗</a></p>
             <div class="equation" data-tex="\begin{aligned}
 a &amp; = \frac{6 \beta^\text{B88}}{C_s}\,, &amp;
  b &amp; = \frac{1}{C_s}\,, &amp;
@@ -225,18 +178,18 @@ a &amp; = \frac{6 \beta^\text{B88}}{C_s}\,, &amp;
           </article>
 
           <article class="review-equation-card" id="review-eq-eq-pbeenh">
-            <code>eq:pbeenh</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (382)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=58" title="Open page 58 of the review PDF">p. 58 ↗</a></p>
             <div class="equation" data-tex="F_\text{x}^{\text{PBE}} = 1 + \kappa\left[1 - \frac{\kappa}{\kappa + f_0(s_\sigma)}\right]"></div>
           </article>
 
           <article class="review-equation-card" id="review-eq-eq-ggac-pw91h0">
-            <code>eq:ggac:pw91h0</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (469)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=80" title="Open page 80 of the review PDF">p. 80 ↗</a></p>
             <div class="equation" data-tex="H_0(\phi_{2/3}, t, A) = \gamma \phi_{2/3}^3 \ln\left[1 + \frac{\beta}{\gamma}
   \frac{t^2 + A t^4}{1 + A (t^2 + A t^4)}\right]"></div>
           </article>
 
           <article class="review-equation-card" id="review-eq-eq-pw91a">
-            <code>eq:pw91a</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (470)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=80" title="Open page 80 of the review PDF">p. 80 ↗</a></p>
             <div class="equation" data-tex="A(r_s, \zeta, \phi_{2/3}) = \frac{\beta}{\gamma w_1}"></div>
           </article>
 

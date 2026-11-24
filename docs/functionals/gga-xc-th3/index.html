@@ -3,14 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>gga_xc_th3</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20261016-excerpts-v1">
-    <script defer src="../../assets/search.js?v=20261016-excerpts-v1"></script>
+    <title>gga_xc_th3 — Tozer and Handy v. 3 · Libxc Wiki</title>
+    <meta name="description" content="gga_xc_th3: Tozer and Handy v. 3. GGA exchange-correlation functional in Libxc, with references and BibTeX. Includes an excerpt from the Tran, Lehtola, Pittalis and Marques review.">
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261117-refs-v1">
+    <script defer src="../../assets/search.js?v=20261117-refs-v1"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
     <script defer src="../../vendor/katex/contrib/mhchem.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20261016-excerpts-v1"></script>
+    <script defer src="../../assets/detail.js?v=20261117-refs-v1"></script>
 
   </head>
   <body class="functional-page">
@@ -32,22 +33,19 @@
 
         <p class="brand">GGA</p>
         <h1><code class="title-code">gga_xc_th3</code></h1>
+        <p class="functional-name">Tozer and Handy v. 3</p>
         <div class="detail-tags"><span class="tag">gga</span>
 <span class="tag">exchange</span>
 <span class="tag">correlation</span></div>
       </header>
 
       <div class="detail-grid">
+
       <section class="callout">
         <p class="callout-label">Review excerpt</p>
         <div class="review-html">
-<p>The <a class="functional-link" href="../gga-xc-th3/"><code>gga_xc_th3</code></a> functional, whose expression is given by <a class="review-eq-link" href="#review-eq-eq-th">
-  <code>eq:th</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="e_\text{xc}^{\text{TH}} = \frac{1}{n} \sum_{abcd} \omega_{abcd}
-   R_a S_b X_c Y_d"></span>
-  </span>
-</a>, was designed using the same procedure as for <a class="functional-link" href="../gga-xc-th2/"><code>gga_xc_th2</code></a>, i.e. by fitting near-exact (shifted) ZMP<sup class="citation-marker"><a href="#review-ref-Zhao1994-2138">472</a></sup> xc potentials, atomization energies of molecules, and xc energies of atoms, but with an extended training set, which includes 68 systems (53 molecules and 15 atoms) taken from the G1 set.<sup class="citation-marker"><a href="#review-ref-Pople1989-5622">651</a>,<a href="#review-ref-Curtiss1990-2537">654</a></sup> The <a class="functional-link" href="../gga-xc-th3/"><code>gga_xc_th3</code></a> functional outperforms <a class="functional-link" href="../gga-xc-th2/"><code>gga_xc_th2</code></a>, especially for systems including second-row atoms. Geometries are of a similar quality as with BLYP (<a class="functional-link" href="../gga-x-b88/"><code>gga_x_b88</code></a> + <a class="functional-link" href="../gga-c-lyp/"><code>gga_c_lyp</code></a>).</p>
+<p>The <a class="functional-link" href="../gga-xc-th3/"><code>gga_xc_th3</code></a> functional, whose expression is given by <a class="review-eq-link" href="#review-eq-eq-th"><span class="eq-number">Eq. (535)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="e_\text{xc}^{\text{TH}} = \frac{1}{n} \sum_{abcd} \omega_{abcd}
+   R_a S_b X_c Y_d"></span></span></a>, was designed using the same procedure as for <a class="functional-link" href="../gga-xc-th2/"><code>gga_xc_th2</code></a>, i.e. by fitting near-exact (shifted) ZMP<sup class="citation-marker"><a href="#review-ref-Zhao1994-2138">472</a></sup> xc potentials, atomization energies of molecules, and xc energies of atoms, but with an extended training set, which includes 68 systems (53 molecules and 15 atoms) taken from the G1 set.<sup class="citation-marker"><a href="#review-ref-Pople1989-5622">651</a>,<a href="#review-ref-Curtiss1990-2537">654</a></sup> The <a class="functional-link" href="../gga-xc-th3/"><code>gga_xc_th3</code></a> functional outperforms <a class="functional-link" href="../gga-xc-th2/"><code>gga_xc_th2</code></a>, especially for systems including second-row atoms. Geometries are of a similar quality as with BLYP (<a class="functional-link" href="../gga-x-b88/"><code>gga_x_b88</code></a> + <a class="functional-link" href="../gga-c-lyp/"><code>gga_c_lyp</code></a>).</p>
 <p>Handy and Tozer<sup class="citation-marker"><a href="#review-ref-Handy1998-707">653</a></sup> decided to propose yet another version of their functional, <a class="functional-link" href="../gga-xc-th4/"><code>gga_xc_th4</code></a>, by adding the error in the forces to the fitting procedure. Their objective was to improve the usual overestimation of bond lengths by most GGA functionals. The resulting <a class="functional-link" href="../gga-xc-th4/"><code>gga_xc_th4</code></a> yields energetics similar to <a class="functional-link" href="../gga-xc-th3/"><code>gga_xc_th3</code></a>, but now yields geometries that are more accurate, and as good as the results obtained with the hybrid functional B3LYP.<sup class="citation-marker"><a href="#review-ref-Stephens1994-11623">423</a></sup></p>
         </div>
         <p class="source-note">Adapted from <a href="https://arxiv.org/abs/2602.17333">Tran, Lehtola, Pittalis, and Marques, <em>Semi-Local Exchange-Correlation Approximations in Density Functional Theory</em>, arXiv:2602.17333</a>.</p>
@@ -57,7 +55,7 @@
           <h2>Referenced Review Equations</h2>
           <div class="review-equations">
           <article class="review-equation-card" id="review-eq-eq-th">
-            <code>eq:th</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (535)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=93" title="Open page 93 of the review PDF">p. 93 ↗</a></p>
             <div class="equation" data-tex="e_\text{xc}^{\text{TH}} = \frac{1}{n} \sum_{abcd} \omega_{abcd}
    R_a S_b X_c Y_d"></div>
           </article>

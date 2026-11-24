@@ -3,14 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>gga_x_lb</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20261016-excerpts-v1">
-    <script defer src="../../assets/search.js?v=20261016-excerpts-v1"></script>
+    <title>gga_x_lb — van Leeuwen &amp; Baerends · Libxc Wiki</title>
+    <meta name="description" content="gga_x_lb: van Leeuwen &amp; Baerends. GGA exchange functional in Libxc, with references and BibTeX. Includes an excerpt from the Tran, Lehtola, Pittalis and Marques review.">
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261117-refs-v1">
+    <script defer src="../../assets/search.js?v=20261117-refs-v1"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
     <script defer src="../../vendor/katex/contrib/mhchem.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20261016-excerpts-v1"></script>
+    <script defer src="../../assets/detail.js?v=20261117-refs-v1"></script>
 
   </head>
   <body class="functional-page">
@@ -32,29 +33,21 @@
 
         <p class="brand">GGA</p>
         <h1><code class="title-code">gga_x_lb</code></h1>
+        <p class="functional-name">van Leeuwen &amp; Baerends</p>
         <div class="detail-tags"><span class="tag">gga</span>
 <span class="tag">exchange</span></div>
       </header>
 
       <div class="detail-grid">
+
       <section class="callout">
         <p class="callout-label">Review excerpt</p>
         <div class="review-html">
 <p>A well known failure of most GGA exchange potentials $v_{\text{x}\sigma}$ is to decay exponentially, instead of having the proper $-1/r$ behavior in the vacuum far from the nuclei.<sup class="citation-marker"><a href="#review-ref-Krieger1992-PRA-101">494</a>,<a href="#review-ref-Engel1992-7">491</a></sup> To resolve this problem, van Leeuwen and Baerends<sup class="citation-marker"><a href="#review-ref-Leeuwen1994-2421">493</a></sup> proposed to model the xc potential directly using the same form as the one used by Becke for the <a class="functional-link" href="../gga-x-b88/"><code>gga_x_b88</code></a> energy density:</p>
 <div class="equation" data-tex="v_{\text{x}\sigma}^{\text{LB}} = v_{\text{x}\sigma}^{\text{LDA}}
   - n_\sigma^{1/3} \frac{\beta x_\sigma^2}{1 + \gamma\beta x_\sigma\arcsinh(x_\sigma)}"></div>
-<p>where $v_{\text{x}\sigma}^{\text{LDA}} $ is the <a class="functional-link" href="../lda-x/"><code>lda_x</code></a> potential (<a class="review-eq-link" href="#review-eq-eq-vxlda">
-  <code>eq:vxlda</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="v_{\text{x}\sigma}^\text{LDA}=-\left(\frac{6}{\pi}\right)^{1/3}n_{\sigma}^{1/3}"></span>
-  </span>
-</a>) and $\gamma = 3$ was chosen instead of $\gamma = 6$ in <a class="review-eq-link" href="#review-eq-eq-fxb88">
-  <code>eq:fxb88</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="F_\text{x}^{\text{B88}} = 1+\frac{\beta}{C_\text{x}}
-  \frac{x_\sigma^2}{1 + \gamma\beta x_\sigma\arcsinh(x_\sigma)}"></span>
-  </span>
-</a> of <a class="functional-link" href="../gga-x-b88/"><code>gga_x_b88</code></a> to ensure a $-1/r$ asymptotic behavior of the potential. The value $\beta=0.05$ was fit to the Be atom.</p>
+<p>where $v_{\text{x}\sigma}^{\text{LDA}} $ is the <a class="functional-link" href="../lda-x/"><code>lda_x</code></a> potential (<a class="review-eq-link" href="#review-eq-eq-vxlda"><span class="eq-number">Eq. (258)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="v_{\text{x}\sigma}^\text{LDA}=-\left(\frac{6}{\pi}\right)^{1/3}n_{\sigma}^{1/3}"></span></span></a>) and $\gamma = 3$ was chosen instead of $\gamma = 6$ in <a class="review-eq-link" href="#review-eq-eq-fxb88"><span class="eq-number">Eq. (372)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="F_\text{x}^{\text{B88}} = 1+\frac{\beta}{C_\text{x}}
+  \frac{x_\sigma^2}{1 + \gamma\beta x_\sigma\arcsinh(x_\sigma)}"></span></span></a> of <a class="functional-link" href="../gga-x-b88/"><code>gga_x_b88</code></a> to ensure a $-1/r$ asymptotic behavior of the potential. The value $\beta=0.05$ was fit to the Be atom.</p>
 <p>The <a class="functional-link" href="../gga-x-lb/"><code>gga_x_lb</code></a> potential (usually combined with a LDA correlation functional like <a class="functional-link" href="../lda-c-vwn/"><code>lda_c_vwn</code></a>) is especially adapted for time-dependent simulations, where ionization, which is extremely sensitive to the decay of the potential, plays an important role. However, one has to keep in mind that modeling directly the potential leads to a series of problems. In particular, it can be proven that such potentials are in general not functional derivatives of any energy functional (see <a class="functional-link" href="../gga-x-fd-lb94/"><code>gga_x_fd_lb94</code></a>), and therefore violate serious constraints like the zero-force theorem.<sup class="citation-marker"><a href="#review-ref-Gaiduk2009-044107">495</a>,<a href="#review-ref-Karolewski2009-712">496</a></sup> As a consequence, such potentials do not allow, for example, the calculation of structural properties.</p>
         </div>
         <p class="source-note">Adapted from <a href="https://arxiv.org/abs/2602.17333">Tran, Lehtola, Pittalis, and Marques, <em>Semi-Local Exchange-Correlation Approximations in Density Functional Theory</em>, arXiv:2602.17333</a>.</p>
@@ -64,12 +57,12 @@
           <h2>Referenced Review Equations</h2>
           <div class="review-equations">
           <article class="review-equation-card" id="review-eq-eq-vxlda">
-            <code>eq:vxlda</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (258)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=36" title="Open page 36 of the review PDF">p. 36 ↗</a></p>
             <div class="equation" data-tex="v_{\text{x}\sigma}^\text{LDA}=-\left(\frac{6}{\pi}\right)^{1/3}n_{\sigma}^{1/3}"></div>
           </article>
 
           <article class="review-equation-card" id="review-eq-eq-fxb88">
-            <code>eq:fxb88</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (372)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=55" title="Open page 55 of the review PDF">p. 55 ↗</a></p>
             <div class="equation" data-tex="F_\text{x}^{\text{B88}} = 1+\frac{\beta}{C_\text{x}}
   \frac{x_\sigma^2}{1 + \gamma\beta x_\sigma\arcsinh(x_\sigma)}"></div>
           </article>

@@ -3,14 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>mgga_x_ktbm_0</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20261016-excerpts-v1">
-    <script defer src="../../assets/search.js?v=20261016-excerpts-v1"></script>
+    <title>mgga_x_ktbm_0 — KTBM learned exchange - 0 · Libxc Wiki</title>
+    <meta name="description" content="mgga_x_ktbm_0: KTBM learned exchange - 0. Meta-GGA exchange functional in Libxc, with references and BibTeX. Includes an excerpt from the Tran, Lehtola, Pittalis and Marques review.">
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261117-refs-v1">
+    <script defer src="../../assets/search.js?v=20261117-refs-v1"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
     <script defer src="../../vendor/katex/contrib/mhchem.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20261016-excerpts-v1"></script>
+    <script defer src="../../assets/detail.js?v=20261117-refs-v1"></script>
 
   </head>
   <body class="functional-page">
@@ -32,13 +33,42 @@
 
         <p class="brand">META-GGA</p>
         <h1><code class="title-code">mgga_x_ktbm_0</code></h1>
+        <p class="functional-name">KTBM learned exchange - 0</p>
         <div class="detail-tags"><span class="tag">meta-gga</span>
 <span class="tag">exchange</span></div>
       </header>
 
       <div class="detail-grid">
 
+      <section class="callout">
+        <p class="callout-label">Review excerpt</p>
+        <div class="review-html">
+<p>25 functionals were trained with the goal of exploring the limit of the MGGA approximation for exchange and proposing a functional that shows a good and well-balanced accuracy for three selected properties of bulk solids (lattice constant, cohesive energy, and band gap). The form chosen for the enhancement factor is the Padé type:</p>
+<div class="equation" data-tex="F_{\text{x}}^{\text{KTBM}} = \frac{\displaystyle \sum_{i=0}^{N}\sum_{j=0}^{N-i}c_{ij}p_{\sigma}^i\left(\frac{\tilde{t}_{\sigma}}{C_{\text{F}}}\right)^j}{\displaystyle \sum_{i=0}^{N}\sum_{j=0}^{N-i}d_{ij}p_{\sigma}^i\left(\frac{\tilde{t}_{\sigma}}{C_{\text{F}}}\right)^j}"></div>
+<p>where $c_{ij}$ and $d_{ij}$ are parameters that were determined by fitting experimental data for the three aforementioned properties. The training sets consists of 44 solids for the lattice constant and cohesive energy,<sup class="citation-marker"><a href="#review-ref-Tran2016-204120">777</a></sup> and 440 solids for the band gap.<sup class="citation-marker"><a href="#review-ref-Borlido2020-96">409</a></sup> $N=2$ in <a class="review-eq-link" href="#review-eq-eq-fktbm"><span class="eq-number">Eq. (681)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="F_{\text{x}}^{\text{KTBM}} = \frac{\displaystyle \sum_{i=0}^{N}\sum_{j=0}^{N-i}c_{ij}p_{\sigma}^i\left(\frac{\tilde{t}_{\sigma}}{C_{\text{F}}}\right)^j}{\displaystyle \sum_{i=0}^{N}\sum_{j=0}^{N-i}d_{ij}p_{\sigma}^i\left(\frac{\tilde{t}_{\sigma}}{C_{\text{F}}}\right)^j}"></span></span></a> was used and the correct HEG limit (<a class="functional-link" href="../lda-x/"><code>lda_x</code></a>) was enforced with</p>
+<div class="equation" data-tex="d_{00} + d_{01} + d_{02} = c_{00} + c_{01} + c_{02}"></div>
+<p>leading to 11 independent parameters. Using a larger value for $N$ or releasing the HEG-limit condition led to no significant improvement in the accuracy of the functional. The training of <a class="review-eq-link" href="#review-eq-eq-fktbm"><span class="eq-number">Eq. (681)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="F_{\text{x}}^{\text{KTBM}} = \frac{\displaystyle \sum_{i=0}^{N}\sum_{j=0}^{N-i}c_{ij}p_{\sigma}^i\left(\frac{\tilde{t}_{\sigma}}{C_{\text{F}}}\right)^j}{\displaystyle \sum_{i=0}^{N}\sum_{j=0}^{N-i}d_{ij}p_{\sigma}^i\left(\frac{\tilde{t}_{\sigma}}{C_{\text{F}}}\right)^j}"></span></span></a>, combined with <a class="functional-link" href="../mgga-c-scan/"><code>mgga_c_scan</code></a> for correlation, was carried out by minimizing a loss function that consists of a linear combination of the mean absolute relative error of the three properties. In total, 25 choices for the relative weights of the mean absolute relative error of the three properties were considered, resulting in 25 different parametrizations of <a class="review-eq-link" href="#review-eq-eq-fktbm"><span class="eq-number">Eq. (681)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="F_{\text{x}}^{\text{KTBM}} = \frac{\displaystyle \sum_{i=0}^{N}\sum_{j=0}^{N-i}c_{ij}p_{\sigma}^i\left(\frac{\tilde{t}_{\sigma}}{C_{\text{F}}}\right)^j}{\displaystyle \sum_{i=0}^{N}\sum_{j=0}^{N-i}d_{ij}p_{\sigma}^i\left(\frac{\tilde{t}_{\sigma}}{C_{\text{F}}}\right)^j}"></span></span></a>, all available in Libxc. Among them, mGGA23 (<a class="functional-link" href="../mgga-x-ktbm-23/"><code>mgga_x_ktbm_23</code></a> in Libxc) has a quite good accuracy for all three properties. mGGA23&#39; (<a class="functional-link" href="../mgga-x-ktbm-gap/"><code>mgga_x_ktbm_gap</code></a> in Libxc) is a variation of mGGA23 that was trained using the mean absolute error instead of the mean absolute relative error. It is accurate for the band gap, but not for the two other properties.</p>
+<p>Restricting the summations over $j$ in <a class="review-eq-link" href="#review-eq-eq-fktbm"><span class="eq-number">Eq. (681)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="F_{\text{x}}^{\text{KTBM}} = \frac{\displaystyle \sum_{i=0}^{N}\sum_{j=0}^{N-i}c_{ij}p_{\sigma}^i\left(\frac{\tilde{t}_{\sigma}}{C_{\text{F}}}\right)^j}{\displaystyle \sum_{i=0}^{N}\sum_{j=0}^{N-i}d_{ij}p_{\sigma}^i\left(\frac{\tilde{t}_{\sigma}}{C_{\text{F}}}\right)^j}"></span></span></a> to $j=0$ leads to GGA functionals (see <code>gga_x_ktbm_a</code> and <code>gga_x_ktbm_b</code>).</p>
+        </div>
+        <p class="source-note">Adapted from <a href="https://arxiv.org/abs/2602.17333">Tran, Lehtola, Pittalis, and Marques, <em>Semi-Local Exchange-Correlation Approximations in Density Functional Theory</em>, arXiv:2602.17333</a>.</p>
+      </section>
 
+        <section class="section">
+          <h2>Referenced Review Equations</h2>
+          <div class="review-equations">
+          <article class="review-equation-card" id="review-eq-eq-fktbm">
+            <p class="equation-card-heading"><span class="eq-number">Eq. (681)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=125" title="Open page 125 of the review PDF">p. 125 ↗</a></p>
+            <div class="equation" data-tex="F_{\text{x}}^{\text{KTBM}} = \frac{\displaystyle \sum_{i=0}^{N}\sum_{j=0}^{N-i}c_{ij}p_{\sigma}^i\left(\frac{\tilde{t}_{\sigma}}{C_{\text{F}}}\right)^j}{\displaystyle \sum_{i=0}^{N}\sum_{j=0}^{N-i}d_{ij}p_{\sigma}^i\left(\frac{\tilde{t}_{\sigma}}{C_{\text{F}}}\right)^j}"></div>
+          </article>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <h2>Review References</h2>
+          <ol class="review-refs"><li id="review-ref-Tran2016-204120" value="777">Tran, F.; Stelzl, J.; Blaha, P. Rungs 1 to 4 of DFT Jacob&#39;s ladder: Extensive test on the lattice constant, bulk modulus, and cohesive energy of solids. <em>J. Chem. Phys.</em> <strong>2016</strong>, <em>144</em>, 204120, DOI: <a href="https://doi.org/10.1063/1.4948636">10.1063/1.4948636</a></li>
+<li id="review-ref-Borlido2020-96" value="409">Borlido, P.; Schmidt, J.; Huran, A. W.; Tran, F.; Marques, M. A. L.; Botti, S. Exchange-correlation functionals for band gaps of solids: benchmark, reparametrization and machine learning. <em>npj Comput. Mater.</em> <strong>2020</strong>, <em>6</em>, 96, DOI: <a href="https://doi.org/10.1038/s41524-020-00360-0">10.1038/s41524-020-00360-0</a></li></ol>
+        </section>
 
         <section class="section">
           <h2>Publications</h2>

@@ -3,14 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>mgga_x_mcml</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20261016-excerpts-v1">
-    <script defer src="../../assets/search.js?v=20261016-excerpts-v1"></script>
+    <title>mgga_x_mcml — MCML exchange · Libxc Wiki</title>
+    <meta name="description" content="mgga_x_mcml: MCML exchange. Meta-GGA exchange functional in Libxc, with references and BibTeX. Includes an excerpt from the Tran, Lehtola, Pittalis and Marques review.">
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261117-refs-v1">
+    <script defer src="../../assets/search.js?v=20261117-refs-v1"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
     <script defer src="../../vendor/katex/contrib/mhchem.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20261016-excerpts-v1"></script>
+    <script defer src="../../assets/detail.js?v=20261117-refs-v1"></script>
 
   </head>
   <body class="functional-page">
@@ -32,35 +33,17 @@
 
         <p class="brand">META-GGA</p>
         <h1><code class="title-code">mgga_x_mcml</code></h1>
+        <p class="functional-name">MCML exchange</p>
         <div class="detail-tags"><span class="tag">meta-gga</span>
 <span class="tag">exchange</span></div>
       </header>
 
       <div class="detail-grid">
+
       <section class="callout">
         <p class="callout-label">Review excerpt</p>
         <div class="review-html">
-<p>The analytical form chosen by Brown et al.<sup class="citation-marker"><a href="#review-ref-Brown2021-2004">768</a></sup> for this functional is given by <a class="review-eq-link" href="#review-eq-eq-mBEEF">
-  <code>eq:mBEEF</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="F_\text{x}^\text{mBEEF} = \sum_{m=0}^{M}\sum_{n=0}^{N} a_{mn} B_m[r(s_\sigma)] B_n[f(\alpha_\sigma)]"></span>
-  </span>
-</a> of <a class="functional-link" href="../mgga-x-mbeef/"><code>mgga_x_mbeef</code></a>. As in <a class="functional-link" href="../mgga-x-mbeef/"><code>mgga_x_mbeef</code></a>, $q=\kappa^{\text{PBE}}/\mu^{\text{GE}}=6.5124$ in <a class="review-eq-link" href="#review-eq-eq-beeft">
-  <code>eq:beeft</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="r(s_\sigma) = \frac{2s_\sigma^2}{q + s_\sigma^2} - 1"></span>
-  </span>
-</a>, so that the enhancement factor of <a class="functional-link" href="../gga-x-pbe-sol/"><code>gga_x_pbe_sol</code></a> is recovered. However, $b=4.0$ in <a class="review-eq-link" href="#review-eq-eq-ms0f">
-  <code>eq:ms0f</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="f(\alpha_\sigma) = \frac{\left(1-\alpha_\sigma^2\right)^3}{1 + \alpha_\sigma^3 + b \alpha_\sigma^6}"></span>
-  </span>
-</a>, as in <a class="functional-link" href="../mgga-x-ms2/"><code>mgga_x_ms2</code></a>. Finally, the 64 linear parameters $a_{mn}$ ($M=N=7$ in <a class="review-eq-link" href="#review-eq-eq-mBEEF">
-  <code>eq:mBEEF</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="F_\text{x}^\text{mBEEF} = \sum_{m=0}^{M}\sum_{n=0}^{N} a_{mn} B_m[r(s_\sigma)] B_n[f(\alpha_\sigma)]"></span>
-  </span>
-</a>) were determined from a fit to reference data of various molecular and solid-state properties, while constraining three conditions: the HEG limit of <a class="functional-link" href="../lda-x/"><code>lda_x</code></a>, the second-order density-gradient expansion, and the correct exchange energy of the H atom.</p>
+<p>The analytical form chosen by Brown et al.<sup class="citation-marker"><a href="#review-ref-Brown2021-2004">768</a></sup> for this functional is given by <a class="review-eq-link" href="#review-eq-eq-mBEEF"><span class="eq-number">Eq. (610)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="F_\text{x}^\text{mBEEF} = \sum_{m=0}^{M}\sum_{n=0}^{N} a_{mn} B_m[r(s_\sigma)] B_n[f(\alpha_\sigma)]"></span></span></a> of <a class="functional-link" href="../mgga-x-mbeef/"><code>mgga_x_mbeef</code></a>. As in <a class="functional-link" href="../mgga-x-mbeef/"><code>mgga_x_mbeef</code></a>, $q=\kappa^{\text{PBE}}/\mu^{\text{GE}}=6.5124$ in <a class="review-eq-link" href="#review-eq-eq-beeft"><span class="eq-number">Eq. (546)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="r(s_\sigma) = \frac{2s_\sigma^2}{q + s_\sigma^2} - 1"></span></span></a>, so that the enhancement factor of <a class="functional-link" href="../gga-x-pbe-sol/"><code>gga_x_pbe_sol</code></a> is recovered. However, $b=4.0$ in <a class="review-eq-link" href="#review-eq-eq-ms0f"><span class="eq-number">Eq. (608)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="f(\alpha_\sigma) = \frac{\left(1-\alpha_\sigma^2\right)^3}{1 + \alpha_\sigma^3 + b \alpha_\sigma^6}"></span></span></a>, as in <a class="functional-link" href="../mgga-x-ms2/"><code>mgga_x_ms2</code></a>. Finally, the 64 linear parameters $a_{mn}$ ($M=N=7$ in <a class="review-eq-link" href="#review-eq-eq-mBEEF"><span class="eq-number">Eq. (610)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="F_\text{x}^\text{mBEEF} = \sum_{m=0}^{M}\sum_{n=0}^{N} a_{mn} B_m[r(s_\sigma)] B_n[f(\alpha_\sigma)]"></span></span></a>) were determined from a fit to reference data of various molecular and solid-state properties, while constraining three conditions: the HEG limit of <a class="functional-link" href="../lda-x/"><code>lda_x</code></a>, the second-order density-gradient expansion, and the correct exchange energy of the H atom.</p>
 <p>Combined with <a class="functional-link" href="../gga-c-regtpss/"><code>gga_c_regtpss</code></a> for correlation, the functional shows good performance for surface reaction energies (chemisorption and physisorption), weak intermolecular interaction energies, and bulk properties (lattice constants and bulk moduli).</p>
         </div>
         <p class="source-note">Adapted from <a href="https://arxiv.org/abs/2602.17333">Tran, Lehtola, Pittalis, and Marques, <em>Semi-Local Exchange-Correlation Approximations in Density Functional Theory</em>, arXiv:2602.17333</a>.</p>
@@ -70,17 +53,17 @@
           <h2>Referenced Review Equations</h2>
           <div class="review-equations">
           <article class="review-equation-card" id="review-eq-eq-mBEEF">
-            <code>eq:mBEEF</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (610)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=112" title="Open page 112 of the review PDF">p. 112 ↗</a></p>
             <div class="equation" data-tex="F_\text{x}^\text{mBEEF} = \sum_{m=0}^{M}\sum_{n=0}^{N} a_{mn} B_m[r(s_\sigma)] B_n[f(\alpha_\sigma)]"></div>
           </article>
 
           <article class="review-equation-card" id="review-eq-eq-beeft">
-            <code>eq:beeft</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (546)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=98" title="Open page 98 of the review PDF">p. 98 ↗</a></p>
             <div class="equation" data-tex="r(s_\sigma) = \frac{2s_\sigma^2}{q + s_\sigma^2} - 1"></div>
           </article>
 
           <article class="review-equation-card" id="review-eq-eq-ms0f">
-            <code>eq:ms0f</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (608)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=111" title="Open page 111 of the review PDF">p. 111 ↗</a></p>
             <div class="equation" data-tex="f(\alpha_\sigma) = \frac{\left(1-\alpha_\sigma^2\right)^3}{1 + \alpha_\sigma^3 + b \alpha_\sigma^6}"></div>
           </article>
 

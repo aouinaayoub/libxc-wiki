@@ -3,14 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>mgga_x_revscanl</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20261016-excerpts-v1">
-    <script defer src="../../assets/search.js?v=20261016-excerpts-v1"></script>
+    <title>mgga_x_revscanl — Deorbitalized revised SCAN (revSCAN-L) exchange · Libxc Wiki</title>
+    <meta name="description" content="mgga_x_revscanl: Deorbitalized revised SCAN (revSCAN-L) exchange. Meta-GGA exchange functional in Libxc, with references and BibTeX. Includes an excerpt from the Tran, Lehtola, Pittalis and Marques review.">
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261117-refs-v1">
+    <script defer src="../../assets/search.js?v=20261117-refs-v1"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
     <script defer src="../../vendor/katex/contrib/mhchem.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20261016-excerpts-v1"></script>
+    <script defer src="../../assets/detail.js?v=20261117-refs-v1"></script>
 
   </head>
   <body class="functional-page">
@@ -32,23 +33,20 @@
 
         <p class="brand">META-GGA</p>
         <h1><code class="title-code">mgga_x_revscanl</code></h1>
+        <p class="functional-name">Deorbitalized revised SCAN (revSCAN-L) exchange</p>
         <div class="detail-tags"><span class="tag">meta-gga</span>
 <span class="tag">exchange</span></div>
       </header>
 
       <div class="detail-grid">
+
       <section class="callout">
         <p class="callout-label">Review excerpt</p>
         <div class="review-html">
 <p>Mejia-Rodriguez and Trickey proposed and tested various deorbitalized versions of the $\tau$-MGGA functionals TPSS (<a class="functional-link" href="../mgga-x-tpss/"><code>mgga_x_tpss</code></a> + <a class="functional-link" href="../mgga-c-tpss/"><code>mgga_c_tpss</code></a>), SCAN (<a class="functional-link" href="../mgga-x-scan/"><code>mgga_x_scan</code></a> + <a class="functional-link" href="../mgga-c-scan/"><code>mgga_c_scan</code></a>), and MVS (<a class="functional-link" href="../mgga-x-mvs/"><code>mgga_x_mvs</code></a> + <a class="functional-link" href="../gga-c-regtpss/"><code>gga_c_regtpss</code></a>). The replacement of the kinetic-energy density $\tau_{\sigma}$ by an orbital-free expression depending on $n_\sigma$, $\nabla n_\sigma$, and $\nabla^2 n_\sigma$ was achieved using six different approximations, leading overall to 18 deorbitalized functionals. Among them, <a class="functional-link" href="../mgga-x-scanl/"><code>mgga_x_scanl</code></a> and <code>mgga_x_mvsl</code> are the most interesting for accuracy, and they are described below.</p>
 <p><a class="functional-link" href="../mgga-x-scanl/"><code>mgga_x_scanl</code></a> uses PC07opt,<sup class="citation-marker"><a href="#review-ref-Mejia2017-052512">737</a></sup> a reoptimized version of the PC07 expression,<sup class="citation-marker"><a href="#review-ref-Perdew2007-155109">740</a></sup> for $\tau_{\sigma}$. Its expression is given by</p>
 <div class="equation" data-tex="\tau_{\sigma}^{\text{PC07}} = \tau_{\sigma}^{\text{TF}}F_{t}^{\text{PC07}}(p_\sigma,q_\sigma)"></div>
-<p>where $\tau_{\sigma}^{\text{TF}}$ is given by <a class="review-eq-link" href="#review-eq-eq-tautf-sigma">
-  <code>eq:tautf-sigma</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="\tau_{\sigma}^{\text{TF}} = C_{\text{F}}n_{\sigma}^{5/3}"></span>
-  </span>
-</a> and</p>
+<p>where $\tau_{\sigma}^{\text{TF}}$ is given by <a class="review-eq-link" href="#review-eq-eq-tautf-sigma"><span class="eq-number">Eq. (70)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="\tau_{\sigma}^{\text{TF}} = C_{\text{F}}n_{\sigma}^{5/3}"></span></span></a> and</p>
 <div class="equation" data-tex="F_{t}^{\text{PC07}} = F_{t}^{\text{W}} + z_\sigma^{\text{PC07}}\theta^{\text{PC07}}(z_\sigma^{\text{PC07}})"></div>
 <p>with $F_t^{\text{W}}=\left(5/3\right)p_\sigma$, $z_\sigma^{\text{PC07}}=F_t^{\text{MGE4}}-F_t^{\text{W}}$,</p>
 <div class="equation" data-tex="\begin{aligned}
@@ -63,10 +61,7 @@
 \end{aligned}"></div>
 <p>and</p>
 <div class="equation" data-tex="F_{t}^{\text{MGE4}} = \frac{\displaystyle F_t^{(0)}+F_t^{(2)}+F_t^{(4)}}{\displaystyle \sqrt{1+\left[\frac{F_t^{(4)}}{1+F_t^{\text{W}}}\right]^2}}"></div>
-<p>where $F_t^{(0)}=1$, $F_t^{(2)}=\left(1/9\right)F_t^{\text{W}}+\left(20/9\right)q_\sigma$, and $F_t^{(4)}=\left(8/81\right)q_\sigma^2-\left(1/9\right)p_\sigma q_\sigma+\left(8/243\right)p_\sigma^2$. Perdew and Constantin<sup class="citation-marker"><a href="#review-ref-Perdew2007-155109">740</a></sup> fit the kinetic energy of atomic and jellium systems to find the parameters $a=0.5389$ and $b=3$ in <a class="review-eq-link" href="#review-eq-eq-thetapc07">
-  <code>eq:thetapc07</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="\begin{aligned}
+<p>where $F_t^{(0)}=1$, $F_t^{(2)}=\left(1/9\right)F_t^{\text{W}}+\left(20/9\right)q_\sigma$, and $F_t^{(4)}=\left(8/81\right)q_\sigma^2-\left(1/9\right)p_\sigma q_\sigma+\left(8/243\right)p_\sigma^2$. Perdew and Constantin<sup class="citation-marker"><a href="#review-ref-Perdew2007-155109">740</a></sup> fit the kinetic energy of atomic and jellium systems to find the parameters $a=0.5389$ and $b=3$ in <a class="review-eq-link" href="#review-eq-eq-thetapc07"><span class="eq-number">Eq. (637)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="\begin{aligned}
 \theta^{\text{PC07}}(z) =  \\
 
  \left\{
@@ -78,17 +73,15 @@
     1,     &amp; z \ge a
   \end{array}
   \right.
-\end{aligned}"></span>
-  </span>
-</a> (PC07). Mejia-Rodriguez and Trickey<sup class="citation-marker"><a href="#review-ref-Mejia2017-052512">737</a></sup> proposed the new values $a=1.784720$ and $b=0.258304$, leading to PC07opt.</p>
-<p>The orbital-free kinetic-energy density used in <code>mgga_x_mvsl</code>, which is based on the form developed in <sup class="citation-marker"><a href="#review-ref-Cancio2017-618">741</a></sup>, is given by</p>
+\end{aligned}"></span></span></a> (PC07). Mejia-Rodriguez and Trickey<sup class="citation-marker"><a href="#review-ref-Mejia2017-052512">737</a></sup> proposed the new values $a=1.784720$ and $b=0.258304$, leading to PC07opt.</p>
+<p>The orbital-free kinetic-energy density used in <code>mgga_x_mvsl</code>, which is based on the form developed in ref. <span class="citation-ref"><a href="#review-ref-Cancio2017-618">741</a></span>, is given by</p>
 <div class="equation" data-tex="\tau_{\sigma}^{\text{CRopt}} = \tau_{\sigma}^{\text{TF}}F_{t}^{\text{CRopt}}(p_\sigma,q_\sigma)"></div>
 <p>where</p>
 <div class="equation" data-tex="F_{t}^{\text{CRopt}} = 1 + F_{t}^{\text{W}} + z_\sigma^{\text{CRopt}}\theta^{\text{CR}}(z_\sigma^{\text{CRopt}})"></div>
 <p>with $z_\sigma^{\text{CRopt}} = ap_\sigma+ bq_\sigma - F_t^{\text{W}}$, where $a=-0.295491$ and $b=2.615740$,<sup class="citation-marker"><a href="#review-ref-Mejia2017-052512">737</a></sup> and</p>
 <div class="equation" data-tex="\theta^{\text{CR}}(z) = \left\{1 - \E^{-1/\left\vert z\right\vert^c}\left[1-H(z)\right]\right\}^{1/c}"></div>
 <p>where $H(z)$ is the Heaviside step function and $c=4$.</p>
-<p>SCAN-L (<a class="functional-link" href="../mgga-x-scanl/"><code>mgga_x_scanl</code></a> + <a class="functional-link" href="../mgga-c-scanl/"><code>mgga_c_scanl</code></a>) leads to an accuracy that is quite close to that of the parent SCAN functional for molecular and solid-state properties. However, the band gaps of solids are exceptions: they are smaller with SCAN-L, which can be explained by the xc derivative discontinuity.<sup class="citation-marker"><a href="#review-ref-Perdew1982-1691">332</a></sup> Note that <a class="functional-link" href="../mgga-x-revscanl/"><code>mgga_x_revscanl</code></a>, a deorbitalized version of <a class="functional-link" href="../mgga-x-revscan/"><code>mgga_x_revscan</code></a> also using $\tau_{\sigma}^{\text{PC07}}$, has not been discussed in the literature, but is available in Libxc. The <code>mgga_x_mvsl</code> functional was tested more extensively in <sup class="citation-marker"><a href="#review-ref-Francisco2025-10240">742</a></sup>, where it was shown that it is more accurate than the parent <a class="functional-link" href="../mgga-x-mvs/"><code>mgga_x_mvs</code></a> functional for various molecular and solid-state properties (excluding band gaps).</p>
+<p>SCAN-L (<a class="functional-link" href="../mgga-x-scanl/"><code>mgga_x_scanl</code></a> + <a class="functional-link" href="../mgga-c-scanl/"><code>mgga_c_scanl</code></a>) leads to an accuracy that is quite close to that of the parent SCAN functional for molecular and solid-state properties. However, the band gaps of solids are exceptions: they are smaller with SCAN-L, which can be explained by the xc derivative discontinuity.<sup class="citation-marker"><a href="#review-ref-Perdew1982-1691">332</a></sup> Note that <a class="functional-link" href="../mgga-x-revscanl/"><code>mgga_x_revscanl</code></a>, a deorbitalized version of <a class="functional-link" href="../mgga-x-revscan/"><code>mgga_x_revscan</code></a> also using $\tau_{\sigma}^{\text{PC07}}$, has not been discussed in the literature, but is available in Libxc. The <code>mgga_x_mvsl</code> functional was tested more extensively in ref. <span class="citation-ref"><a href="#review-ref-Francisco2025-10240">742</a></span>, where it was shown that it is more accurate than the parent <a class="functional-link" href="../mgga-x-mvs/"><code>mgga_x_mvs</code></a> functional for various molecular and solid-state properties (excluding band gaps).</p>
         </div>
         <p class="source-note">Adapted from <a href="https://arxiv.org/abs/2602.17333">Tran, Lehtola, Pittalis, and Marques, <em>Semi-Local Exchange-Correlation Approximations in Density Functional Theory</em>, arXiv:2602.17333</a>.</p>
       </section>
@@ -97,12 +90,12 @@
           <h2>Referenced Review Equations</h2>
           <div class="review-equations">
           <article class="review-equation-card" id="review-eq-eq-tautf-sigma">
-            <code>eq:tautf-sigma</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (70)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=13" title="Open page 13 of the review PDF">p. 13 ↗</a></p>
             <div class="equation" data-tex="\tau_{\sigma}^{\text{TF}} = C_{\text{F}}n_{\sigma}^{5/3}"></div>
           </article>
 
           <article class="review-equation-card" id="review-eq-eq-thetapc07">
-            <code>eq:thetapc07</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (637)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=117" title="Open page 117 of the review PDF">p. 117 ↗</a></p>
             <div class="equation" data-tex="\begin{aligned}
 \theta^{\text{PC07}}(z) =  \\
 

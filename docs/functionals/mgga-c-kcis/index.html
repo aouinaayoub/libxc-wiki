@@ -3,14 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>mgga_c_kcis</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20261016-excerpts-v1">
-    <script defer src="../../assets/search.js?v=20261016-excerpts-v1"></script>
+    <title>mgga_c_kcis — Krieger, Chen, Iafrate, and Savin · Libxc Wiki</title>
+    <meta name="description" content="mgga_c_kcis: Krieger, Chen, Iafrate, and Savin. Meta-GGA correlation functional in Libxc, with references and BibTeX. Includes an excerpt from the Tran, Lehtola, Pittalis and Marques review.">
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261117-refs-v1">
+    <script defer src="../../assets/search.js?v=20261117-refs-v1"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
     <script defer src="../../vendor/katex/contrib/mhchem.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20261016-excerpts-v1"></script>
+    <script defer src="../../assets/detail.js?v=20261117-refs-v1"></script>
 
   </head>
   <body class="functional-page">
@@ -32,11 +33,13 @@
 
         <p class="brand">META-GGA</p>
         <h1><code class="title-code">mgga_c_kcis</code></h1>
+        <p class="functional-name">Krieger, Chen, Iafrate, and Savin</p>
         <div class="detail-tags"><span class="tag">meta-gga</span>
 <span class="tag">correlation</span></div>
       </header>
 
       <div class="detail-grid">
+
       <section class="callout">
         <p class="callout-label">Review excerpt</p>
         <div class="review-html">
@@ -51,12 +54,7 @@ e_\text{c}^\text{GGA-GAP}(n_{\uparrow},n_{\downarrow},g) =
   e_\text{c}^\text{GAP,P}(r_s,g,G) + f_c(\zeta)  \\
   \times\left[e_\text{c}^\text{GAP,F}(r_s,g,G)-e_\text{c}^\text{GAP,P}(r_s,g,G)\right]
 \end{aligned}"></div>
-<p>with $f_c(\zeta)$ given by <a class="review-eq-link" href="#review-eq-eq-fzeta">
-  <code>eq:fzeta</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="f_\text{c}(\zeta) = \frac{\phi_{4/3}(\zeta) - 1}{2^{1/3} - 1}"></span>
-  </span>
-</a>, $g=|\nabla n_{\sigma}|$, $G=g^2/\left(8n_{\sigma}^2\right)$, and</p>
+<p>with $f_c(\zeta)$ given by <a class="review-eq-link" href="#review-eq-eq-fzeta"><span class="eq-number">Eq. (276)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="f_\text{c}(\zeta) = \frac{\phi_{4/3}(\zeta) - 1}{2^{1/3} - 1}"></span></span></a>, $g=|\nabla n_{\sigma}|$, $G=g^2/\left(8n_{\sigma}^2\right)$, and</p>
 <div class="equation" data-tex="\begin{aligned}
 e_\text{c}^\text{GAP,P}(r_s,g,G)=\frac{e_\text{c}^\text{GGA,P}(r_s,g)+
   c_1(r_s)G}{1+c_2(r_s)G+c_3(r_s)G^2}
@@ -72,32 +70,17 @@ e_\text{c}^\text{GGA,P}(r_s,g)=\frac{e_\text{c}^\text{PW-LDA}(\zeta=0)}{1+\beta\
 <div class="equation" data-tex="\begin{aligned}
 e_\text{c}^\text{GGA,F}(r_s,g)=\frac{e_\text{c}^\text{PW-LDA}(\zeta=1)}{1+\beta\ln\left(1+\frac{\displaystyle 2^{-1/3} t_0^2}{\displaystyle \left\vert e_\text{c}^{\text{PW-LDA}}(\zeta=1)\right\vert}\right)}
 \end{aligned}"></div>
-<p>with $t_0=t(\zeta=0)$ given by <a class="review-eq-link" href="#review-eq-eq-pw91t">
-  <code>eq:pw91t</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="\begin{aligned}
+<p>with $t_0=t(\zeta=0)$ given by <a class="review-eq-link" href="#review-eq-eq-pw91t"><span class="eq-number">Eq. (57)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="\begin{aligned}
 t = &amp; \frac{\left\vert\nabla n\right\vert}{2\phi_{2/3}(\zeta)k_{s}n}  \\
 
   = &amp; \frac{x}{4\times 2^{1/3}\phi_{2/3}(\zeta)\sqrt{r_s}}
-\end{aligned}"></span>
-  </span>
-</a>, $\beta=\beta^{\text{MB}}$, and $e_\text{c}^\text{PW-LDA}$ is <a class="functional-link" href="../lda-c-pw/"><code>lda_c_pw</code></a> correlation-energy density. The functions $c_i(r_s)$ in <a class="review-eq-link" href="#review-eq-eq-kcis-gapunp">
-  <code>eq:kcis-gapunp</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="\begin{aligned}
+\end{aligned}"></span></span></a>, $\beta=\beta^{\text{MB}}$, and $e_\text{c}^\text{PW-LDA}$ is <a class="functional-link" href="../lda-c-pw/"><code>lda_c_pw</code></a> correlation-energy density. The functions $c_i(r_s)$ in <a class="review-eq-link" href="#review-eq-eq-kcis-gapunp"><span class="eq-number">Eq. (723a)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="\begin{aligned}
 e_\text{c}^\text{GAP,P}(r_s,g,G)=\frac{e_\text{c}^\text{GGA,P}(r_s,g)+
   c_1(r_s)G}{1+c_2(r_s)G+c_3(r_s)G^2}
-\end{aligned}"></span>
-  </span>
-</a>; <a class="review-eq-link" href="#review-eq-eq-kcis-gappol">
-  <code>eq:kcis-gappol</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="\begin{aligned}
+\end{aligned}"></span></span></a>; <a class="review-eq-link" href="#review-eq-eq-kcis-gappol"><span class="eq-number">Eq. (723b)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="\begin{aligned}
 e_\text{c}^\text{GAP,F}(r_s,g,G)=\frac{e_\text{c}^\text{GGA,F}(r_s,g)+
   0.7c_1(r_s)G}{1+1.5c_2(r_s)G+2.59c_3(r_s)G^2}
-\end{aligned}"></span>
-  </span>
-</a> are given by</p>
+\end{aligned}"></span></span></a> are given by</p>
 
 <div class="equation" data-tex="c_1(r_s) = C\frac{2\left(e_\text{c}&#39;\right)^2-e_\text{c}^\text{PW-LDA}(\zeta=0)e_\text{c}&#39;&#39;}
 {2\left\{Ce_\text{c}&#39;-\left[e_\text{c}^\text{PW-LDA}(\zeta=0)\right]^2\right\}}"></div>
@@ -110,16 +93,11 @@ e_\text{c}^\text{GAP,F}(r_s,g,G)=\frac{e_\text{c}^\text{GGA,F}(r_s,g)+
 <div class="equation" data-tex="e_\text{c}&#39;&#39;(r_s) = \sum_{i=3}^{7}b_ir_s^i"></div>
 <div class="equation" data-tex="C(r_s) = f_\text{c}r_s^{-2}"></div>
 <p>with $f_\text{c}=0.06483\left(9\pi/4\right)^{2/3}$.</p>
-<p>Besides recovering the correct limit of the HEG and having the proper scaling behavior in the high-density limit, the functional is also free of one-electron self-interaction error, since $z_{\sigma}=1$ for one-electron systems, leading to a cancellation of the two terms in <a class="review-eq-link" href="#review-eq-eq-kcis">
-  <code>eq:kcis</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="\begin{aligned}
+<p>Besides recovering the correct limit of the HEG and having the proper scaling behavior in the high-density limit, the functional is also free of one-electron self-interaction error, since $z_{\sigma}=1$ for one-electron systems, leading to a cancellation of the two terms in <a class="review-eq-link" href="#review-eq-eq-kcis"><span class="eq-number">Eq. (721)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="\begin{aligned}
 e_\text{c}^\text{KCIS} = e_\text{c}^\text{GGA-GAP}(n_{\uparrow},n_{\downarrow},\nabla n) \\
 
   - \frac{1}{n}\sum_{\sigma} z_{\sigma}n_\sigma e_\text{c}^\text{GGA-GAP}(n_{\sigma},0,\nabla n_\sigma)
-\end{aligned}"></span>
-  </span>
-</a>.</p>
+\end{aligned}"></span></span></a>.</p>
         </div>
         <p class="source-note">Adapted from <a href="https://arxiv.org/abs/2602.17333">Tran, Lehtola, Pittalis, and Marques, <em>Semi-Local Exchange-Correlation Approximations in Density Functional Theory</em>, arXiv:2602.17333</a>.</p>
       </section>
@@ -128,12 +106,12 @@ e_\text{c}^\text{KCIS} = e_\text{c}^\text{GGA-GAP}(n_{\uparrow},n_{\downarrow},\
           <h2>Referenced Review Equations</h2>
           <div class="review-equations">
           <article class="review-equation-card" id="review-eq-eq-fzeta">
-            <code>eq:fzeta</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (276)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=38" title="Open page 38 of the review PDF">p. 38 ↗</a></p>
             <div class="equation" data-tex="f_\text{c}(\zeta) = \frac{\phi_{4/3}(\zeta) - 1}{2^{1/3} - 1}"></div>
           </article>
 
           <article class="review-equation-card" id="review-eq-eq-pw91t">
-            <code>eq:pw91t</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (57)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=13" title="Open page 13 of the review PDF">p. 13 ↗</a></p>
             <div class="equation" data-tex="\begin{aligned}
 t = &amp; \frac{\left\vert\nabla n\right\vert}{2\phi_{2/3}(\zeta)k_{s}n}  \\
 
@@ -142,7 +120,7 @@ t = &amp; \frac{\left\vert\nabla n\right\vert}{2\phi_{2/3}(\zeta)k_{s}n}  \\
           </article>
 
           <article class="review-equation-card" id="review-eq-eq-kcis-gapunp">
-            <code>eq:kcis-gapunp</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (723a)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=133" title="Open page 133 of the review PDF">p. 133 ↗</a></p>
             <div class="equation" data-tex="\begin{aligned}
 e_\text{c}^\text{GAP,P}(r_s,g,G)=\frac{e_\text{c}^\text{GGA,P}(r_s,g)+
   c_1(r_s)G}{1+c_2(r_s)G+c_3(r_s)G^2}
@@ -150,7 +128,7 @@ e_\text{c}^\text{GAP,P}(r_s,g,G)=\frac{e_\text{c}^\text{GGA,P}(r_s,g)+
           </article>
 
           <article class="review-equation-card" id="review-eq-eq-kcis-gappol">
-            <code>eq:kcis-gappol</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (723b)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=133" title="Open page 133 of the review PDF">p. 133 ↗</a></p>
             <div class="equation" data-tex="\begin{aligned}
 e_\text{c}^\text{GAP,F}(r_s,g,G)=\frac{e_\text{c}^\text{GGA,F}(r_s,g)+
   0.7c_1(r_s)G}{1+1.5c_2(r_s)G+2.59c_3(r_s)G^2}
@@ -158,7 +136,7 @@ e_\text{c}^\text{GAP,F}(r_s,g,G)=\frac{e_\text{c}^\text{GGA,F}(r_s,g)+
           </article>
 
           <article class="review-equation-card" id="review-eq-eq-kcis">
-            <code>eq:kcis</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (721)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=133" title="Open page 133 of the review PDF">p. 133 ↗</a></p>
             <div class="equation" data-tex="\begin{aligned}
 e_\text{c}^\text{KCIS} = e_\text{c}^\text{GGA-GAP}(n_{\uparrow},n_{\downarrow},\nabla n) \\
 
@@ -176,10 +154,10 @@ e_\text{c}^\text{KCIS} = e_\text{c}^\text{GGA-GAP}(n_{\uparrow},n_{\downarrow},\
 
         <section class="section">
           <h2>Publications</h2>
-          <ol class="publication-refs"><li>Rey, Jerome; Savin, Andreas. Virtual space level shifting and correlation energies. <em>Int. J. Quantum Chem.</em> <strong>1998</strong>, <em>69</em>, 581--590 DOI: <a href="https://doi.org/10.1002/(SICI)1097-461X(1998)69:4&lt;581::AID-QUA16&gt;3.0.CO;2-2">10.1002/(SICI)1097-461X(1998)69:4&lt;581::AID-QUA16&gt;3.0.CO;2-2</a></li>
+          <ol class="publication-refs"><li>Rey, Jerome; Savin, Andreas. Virtual space level shifting and correlation energies. <em>Int. J. Quantum Chem.</em> <strong>1998</strong>, <em>69</em>, 581--590, DOI: <a href="https://doi.org/10.1002/(SICI)1097-461X(1998)69:4&lt;581::AID-QUA16&gt;3.0.CO;2-2">10.1002/(SICI)1097-461X(1998)69:4&lt;581::AID-QUA16&gt;3.0.CO;2-2</a></li>
 <li>Krieger, J. B.; Chen, J.; Iafrate, G. J.; Savin, A. In <em>Electron Correlations and Materials Properties</em>; Gonis, A., Kioussis, N., Ciftan, M., Eds.; Springer US: Boston, MA, 1999; pp 463--477, DOI: <a href="https://doi.org/10.1007/978-1-4615-4715-0_28">10.1007/978-1-4615-4715-0_28</a></li>
 <li>Krieger, J. B.; Chen, J.; Kurth, S. Construction and application of an accurate self-interaction-corrected correlation energy functional based on an electron gas with a gap. <em>AIP Conf. Proc.</em> <strong>2001</strong>, <em>577</em>, 48--69, DOI: <a href="https://doi.org/10.1063/1.1390178">10.1063/1.1390178</a></li>
-<li>Kurth, Stefan; Perdew, John P.; Blaha, Peter. Molecular and solid-state tests of density functional approximations: LSD, GGAs, and meta-GGAs. <em>Int. J. Quantum Chem.</em> <strong>1999</strong>, <em>75</em>, 889-909 DOI: <a href="https://doi.org/10.1002/(SICI)1097-461X(1999)75:4/5&lt;889::AID-QUA54&gt;3.0.CO;2-8">10.1002/(SICI)1097-461X(1999)75:4/5&lt;889::AID-QUA54&gt;3.0.CO;2-8</a></li>
+<li>Kurth, Stefan; Perdew, John P.; Blaha, Peter. Molecular and solid-state tests of density functional approximations: LSD, GGAs, and meta-GGAs. <em>Int. J. Quantum Chem.</em> <strong>1999</strong>, <em>75</em>, 889-909, DOI: <a href="https://doi.org/10.1002/(SICI)1097-461X(1999)75:4/5&lt;889::AID-QUA54&gt;3.0.CO;2-8">10.1002/(SICI)1097-461X(1999)75:4/5&lt;889::AID-QUA54&gt;3.0.CO;2-8</a></li>
 <li>Toulouse, J.; Savin, A.; Adamo, C. Validation and assessment of an accurate approach to the correlation problem in density functional theory: The Kriger--Chen--Iafrate--Savin model. <em>J. Chem. Phys.</em> <strong>2002</strong>, <em>117</em>, 10465--10473, DOI: <a href="https://doi.org/10.1063/1.1521432">10.1063/1.1521432</a></li></ol>
         </section>
 

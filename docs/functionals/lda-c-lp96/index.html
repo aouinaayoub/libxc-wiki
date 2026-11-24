@@ -3,14 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>lda_c_lp96</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20261016-excerpts-v1">
-    <script defer src="../../assets/search.js?v=20261016-excerpts-v1"></script>
+    <title>lda_c_lp96 — Liu-Parr correlation · Libxc Wiki</title>
+    <meta name="description" content="lda_c_lp96: Liu-Parr correlation. LDA correlation functional in Libxc, with references and BibTeX. Includes an excerpt from the Tran, Lehtola, Pittalis and Marques review.">
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261117-refs-v1">
+    <script defer src="../../assets/search.js?v=20261117-refs-v1"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
     <script defer src="../../vendor/katex/contrib/mhchem.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20261016-excerpts-v1"></script>
+    <script defer src="../../assets/detail.js?v=20261117-refs-v1"></script>
 
   </head>
   <body class="functional-page">
@@ -32,11 +33,13 @@
 
         <p class="brand">LDA</p>
         <h1><code class="title-code">lda_c_lp96</code></h1>
+        <p class="functional-name">Liu-Parr correlation</p>
         <div class="detail-tags"><span class="tag">lda</span>
 <span class="tag">correlation</span></div>
       </header>
 
       <div class="detail-grid">
+
       <section class="callout">
         <p class="callout-label">Review excerpt</p>
         <div class="review-html">
@@ -46,12 +49,7 @@
 <div class="equation" data-tex="T_\text{c}^\lambda[n] = -\lambda^2 \frac{d E_\text{c}^\lambda[n]}{d \lambda}"></div>
 <p>Starting from these identities, and from the assumption that $E_\text{c}^\lambda[n]$ has a Taylor expansion as a function of $\lambda$, Liu and Parr arrived at the conclusion that $E_\text{c}$ and $T_\text{c}$ can be expressed as combinations of homogeneous functionals of different degrees in terms of coordinate scaling. Furthermore, they showed that when $E_\text{c}$ and $T_\text{c}$ are of the LDA type, they are linear combinations of homogeneous functionals of degree $(4-i)/3$, where $i=1$, 2, 3, $\ldots$. Taking into account the first four terms in the expansion leads to the following functional form for the correlation:</p>
 <div class="equation" data-tex="e_\text{c}^{\text{LP96}}(n) = C_1 + C_2 n^{-1/3} + C_3 n^{-2/3} + C_4n^{-1}"></div>
-<p>By first considering <a class="review-eq-link" href="#review-eq-eq-lda-c-lp96">
-  <code>eq:lda:c:lp96</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="e_\text{c}^{\text{LP96}}(n) = C_1 + C_2 n^{-1/3} + C_3 n^{-2/3} + C_4n^{-1}"></span>
-  </span>
-</a> with $C_4=0$, Liu and Parr fit accurate correlation energies for the atoms He through Ar<sup class="citation-marker"><a href="#review-ref-Grabo1995-141">435</a>,<a href="#review-ref-Morrison1995-1980">436</a></sup> and obtained $C_1 = -0.0603$, $C_2=0.0175$, and $C_3=-0.00053$ (<a class="functional-link" href="../lda-c-lp96/"><code>lda_c_lp96</code></a>). However, note that different values for $C_2$ and $C_3$ were given in <sup class="citation-marker"><a href="#review-ref-Liu2000-29">433</a></sup> ($C_1 = -0.0603$, $C_2=0.0715$, and $C_3=-0.0053$), and that it is not clear which set is correct. The values from <sup class="citation-marker"><a href="#review-ref-Liu1996-2211">432</a></sup> are used in the Libxc implementation of <a class="functional-link" href="../lda-c-lp96/"><code>lda_c_lp96</code></a>.</p>
+<p>By first considering <a class="review-eq-link" href="#review-eq-eq-lda-c-lp96"><span class="eq-number">Eq. (296)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="e_\text{c}^{\text{LP96}}(n) = C_1 + C_2 n^{-1/3} + C_3 n^{-2/3} + C_4n^{-1}"></span></span></a> with $C_4=0$, Liu and Parr fit accurate correlation energies for the atoms He through Ar<sup class="citation-marker"><a href="#review-ref-Grabo1995-141">435</a>,<a href="#review-ref-Morrison1995-1980">436</a></sup> and obtained $C_1 = -0.0603$, $C_2=0.0175$, and $C_3=-0.00053$ (<a class="functional-link" href="../lda-c-lp96/"><code>lda_c_lp96</code></a>). However, note that different values for $C_2$ and $C_3$ were given in ref. <span class="citation-ref"><a href="#review-ref-Liu2000-29">433</a></span> ($C_1 = -0.0603$, $C_2=0.0715$, and $C_3=-0.0053$), and that it is not clear which set is correct. The values from ref. <span class="citation-ref"><a href="#review-ref-Liu1996-2211">432</a></span> are used in the Libxc implementation of <a class="functional-link" href="../lda-c-lp96/"><code>lda_c_lp96</code></a>.</p>
 <p>Finally, by taking into account also the term $C_4n^{-1}$, and optimizing the coefficients for both the correlation and kinetic energies simultaneously, the values $C_1 = -0.0532$, $C_2=0.0121$, $C_3=-0.0003$, and $C_4=-0.0070$ were obtained (<code>lda_c_lp96_b</code>).</p>
         </div>
         <p class="source-note">Adapted from <a href="https://arxiv.org/abs/2602.17333">Tran, Lehtola, Pittalis, and Marques, <em>Semi-Local Exchange-Correlation Approximations in Density Functional Theory</em>, arXiv:2602.17333</a>.</p>
@@ -61,7 +59,7 @@
           <h2>Referenced Review Equations</h2>
           <div class="review-equations">
           <article class="review-equation-card" id="review-eq-eq-lda-c-lp96">
-            <code>eq:lda:c:lp96</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (296)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=42" title="Open page 42 of the review PDF">p. 42 ↗</a></p>
             <div class="equation" data-tex="e_\text{c}^{\text{LP96}}(n) = C_1 + C_2 n^{-1/3} + C_3 n^{-2/3} + C_4n^{-1}"></div>
           </article>
 

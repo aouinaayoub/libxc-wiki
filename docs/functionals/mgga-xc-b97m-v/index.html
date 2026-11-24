@@ -3,14 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>mgga_xc_b97m_v</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20261016-excerpts-v1">
-    <script defer src="../../assets/search.js?v=20261016-excerpts-v1"></script>
+    <title>mgga_xc_b97m_v — B97M-V exchange-correlation functional · Libxc Wiki</title>
+    <meta name="description" content="mgga_xc_b97m_v: B97M-V exchange-correlation functional. Meta-GGA exchange-correlation functional in Libxc, with references and BibTeX. Includes an excerpt from the Tran, Lehtola, Pittalis and Marques review.">
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261117-refs-v1">
+    <script defer src="../../assets/search.js?v=20261117-refs-v1"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
     <script defer src="../../vendor/katex/contrib/mhchem.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20261016-excerpts-v1"></script>
+    <script defer src="../../assets/detail.js?v=20261117-refs-v1"></script>
 
   </head>
   <body class="functional-page">
@@ -32,12 +33,21 @@
 
         <p class="brand">META-GGA</p>
         <h1><code class="title-code">mgga_xc_b97m_v</code></h1>
+        <p class="functional-name">B97M-V exchange-correlation functional</p>
         <div class="detail-tags"><span class="tag">meta-gga</span>
 <span class="tag">exchange</span>
 <span class="tag">correlation</span></div>
       </header>
 
       <div class="detail-grid">
+        <section class="section key-parameters">
+          <h2>Key parameters</h2>
+          <dl class="param-list">
+            <dt>VV10 nonlocal correlation</dt><dd>b = 6, C = 0.01</dd>
+          </dl>
+          <p class="param-note">Default values in Libxc.</p>
+        </section>
+
       <section class="callout">
         <p class="callout-label">Review excerpt</p>
         <div class="review-html">
@@ -46,43 +56,18 @@
 \sum_{\sigma}\left(e_{\text{x}\sigma}^\text{B97M-V}
 +e_{\text{c}\,\sigma\sigma}^\text{B97M-V}\right)
 +e_{\text{c}\,\uparrow\downarrow}^\text{B97M-V}"></div>
-<p>where $e_{\text{c}\,\sigma\sigma}^\text{B97M-V}$ and $e_{\text{c}\,\uparrow\downarrow}^\text{B97M-V}$ represent parallel-spin and opposite-spin correlations, respectively, as defined by the Stoll decomposition (see the review). All terms in <a class="review-eq-link" href="#review-eq-eq-exc-b97mv">
-  <code>eq:exc-b97mv</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="e_{\text{xc}}^\text{B97M-V}=
+<p>where $e_{\text{c}\,\sigma\sigma}^\text{B97M-V}$ and $e_{\text{c}\,\uparrow\downarrow}^\text{B97M-V}$ represent parallel-spin and opposite-spin correlations, respectively, as defined by the Stoll decomposition (see <a class="review-section-link" href="https://arxiv.org/pdf/2602.17333#page=33" title="Spin-Resolved Correlation Energy">Sec. 2.18.3</a> of the review). All terms in <a class="review-eq-link" href="#review-eq-eq-exc-b97mv"><span class="eq-number">Eq. (793)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="e_{\text{xc}}^\text{B97M-V}=
 \sum_{\sigma}\left(e_{\text{x}\sigma}^\text{B97M-V}
 +e_{\text{c}\,\sigma\sigma}^\text{B97M-V}\right)
-+e_{\text{c}\,\uparrow\downarrow}^\text{B97M-V}"></span>
-  </span>
-</a> have the form</p>
++e_{\text{c}\,\uparrow\downarrow}^\text{B97M-V}"></span></span></a> have the form</p>
 <div class="equation" data-tex="e^\text{B97M-V} = e^\text{LDA}g(w,\tilde{u})"></div>
 <p>with $e^\text{LDA}$ corresponding to <a class="functional-link" href="../lda-x/"><code>lda_x</code></a> for exchange and <a class="functional-link" href="../lda-c-pw/"><code>lda_c_pw</code></a> for correlation, and</p>
 <div class="equation" data-tex="g(w,\tilde{u}) = \sum_{i}\sum_{j}c_{ij}w^{i}\tilde{u}^{j}"></div>
-<p>In <a class="review-eq-link" href="#review-eq-eq-g-b97mv">
-  <code>eq:g-b97mv</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="g(w,\tilde{u}) = \sum_{i}\sum_{j}c_{ij}w^{i}\tilde{u}^{j}"></span>
-  </span>
-</a>, $w=w_\sigma$ and $\tilde{u}=\tilde{u}_{\text{x}\sigma}=\tilde{u}(x_\sigma)$ for exchange, $w=w_\sigma$ and $\tilde{u}=\tilde{u}_{\text{c}\,\sigma\sigma}=\tilde{u}(x_\sigma)$ for parallel-spin correlation, or $w=w_{\uparrow\downarrow}=\left(\tilde{t}_\uparrow^{-1}+\tilde{t}_\downarrow^{-1}-2C_{\text{F}}^{-1}\right)/\left(\tilde{t}_\uparrow^{-1}+\tilde{t}_\downarrow^{-1}+2C_{\text{F}}^{-1}\right)$ and $\tilde{u}=\tilde{u}_{\text{c}\,\uparrow\downarrow}=\tilde{u}(x_{\text{avg}})$ for opposite-spin correlation. The values from <a class="functional-link" href="../gga-x-b86/"><code>gga_x_b86</code></a> ($\gamma_{\text{x}}=0.004$) and the B97 hybrid functional<sup class="citation-marker"><a href="#review-ref-Becke1997-8554">389</a></sup> ($\gamma_{c\,\sigma\sigma}=0.2$ and $\gamma_{c\,\uparrow\downarrow}=0.006$) were used for the parameter $\gamma$ in $\tilde{u}$ (<a class="review-eq-link" href="#review-eq-eq-ubecke">
-  <code>eq:ubecke</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="\tilde{u}(x) = \frac{\gamma x^2}{1 +\gamma x^2}"></span>
-  </span>
-</a>).</p>
-<p>The coefficients $c_{ij}$ in <a class="review-eq-link" href="#review-eq-eq-g-b97mv">
-  <code>eq:g-b97mv</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="g(w,\tilde{u}) = \sum_{i}\sum_{j}c_{ij}w^{i}\tilde{u}^{j}"></span>
-  </span>
-</a> were obtained from a training procedure using a molecular set of 1095 data points (787 for thermochemistry and 308 for noncovalent interactions). Billions of functional fits were considered, imposing the correct HEG limit. Additional datasets were employed for validating and testing the obtained functional fits, paying careful attention to the number of parameters and the numerical behavior of the fit. The final functional form contains twelve optimized parameters, four for each of the terms in <a class="review-eq-link" href="#review-eq-eq-exc-b97mv">
-  <code>eq:exc-b97mv</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="e_{\text{xc}}^\text{B97M-V}=
+<p>In <a class="review-eq-link" href="#review-eq-eq-g-b97mv"><span class="eq-number">Eq. (795)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="g(w,\tilde{u}) = \sum_{i}\sum_{j}c_{ij}w^{i}\tilde{u}^{j}"></span></span></a>, $w=w_\sigma$ and $\tilde{u}=\tilde{u}_{\text{x}\sigma}=\tilde{u}(x_\sigma)$ for exchange, $w=w_\sigma$ and $\tilde{u}=\tilde{u}_{\text{c}\,\sigma\sigma}=\tilde{u}(x_\sigma)$ for parallel-spin correlation, or $w=w_{\uparrow\downarrow}=\left(\tilde{t}_\uparrow^{-1}+\tilde{t}_\downarrow^{-1}-2C_{\text{F}}^{-1}\right)/\left(\tilde{t}_\uparrow^{-1}+\tilde{t}_\downarrow^{-1}+2C_{\text{F}}^{-1}\right)$ and $\tilde{u}=\tilde{u}_{\text{c}\,\uparrow\downarrow}=\tilde{u}(x_{\text{avg}})$ for opposite-spin correlation. The values from <a class="functional-link" href="../gga-x-b86/"><code>gga_x_b86</code></a> ($\gamma_{\text{x}}=0.004$) and the B97 hybrid functional<sup class="citation-marker"><a href="#review-ref-Becke1997-8554">389</a></sup> ($\gamma_{c\,\sigma\sigma}=0.2$ and $\gamma_{c\,\uparrow\downarrow}=0.006$) were used for the parameter $\gamma$ in $\tilde{u}$ (<a class="review-eq-link" href="#review-eq-eq-ubecke"><span class="eq-number">Eq. (251)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="\tilde{u}(x) = \frac{\gamma x^2}{1 +\gamma x^2}"></span></span></a>).</p>
+<p>The coefficients $c_{ij}$ in <a class="review-eq-link" href="#review-eq-eq-g-b97mv"><span class="eq-number">Eq. (795)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="g(w,\tilde{u}) = \sum_{i}\sum_{j}c_{ij}w^{i}\tilde{u}^{j}"></span></span></a> were obtained from a training procedure using a molecular set of 1095 data points (787 for thermochemistry and 308 for noncovalent interactions). Billions of functional fits were considered, imposing the correct HEG limit. Additional datasets were employed for validating and testing the obtained functional fits, paying careful attention to the number of parameters and the numerical behavior of the fit. The final functional form contains twelve optimized parameters, four for each of the terms in <a class="review-eq-link" href="#review-eq-eq-exc-b97mv"><span class="eq-number">Eq. (793)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="e_{\text{xc}}^\text{B97M-V}=
 \sum_{\sigma}\left(e_{\text{x}\sigma}^\text{B97M-V}
 +e_{\text{c}\,\sigma\sigma}^\text{B97M-V}\right)
-+e_{\text{c}\,\uparrow\downarrow}^\text{B97M-V}"></span>
-  </span>
-</a>:</p>
++e_{\text{c}\,\uparrow\downarrow}^\text{B97M-V}"></span></span></a>:</p>
 <div class="equation" data-tex="\begin{aligned}
 g_{\text{x}}(w_{\sigma},\tilde{u}_{\text{x}\sigma}) =
 1 + 0.416w_{\sigma} + 1.308\tilde{u}_{\text{x}\sigma}  \\
@@ -107,7 +92,7 @@ g_{\text{c}\,\uparrow\downarrow}(w_{\uparrow\downarrow},\tilde{u}_{\text{c}\,\up
           <h2>Referenced Review Equations</h2>
           <div class="review-equations">
           <article class="review-equation-card" id="review-eq-eq-exc-b97mv">
-            <code>eq:exc-b97mv</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (793)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=145" title="Open page 145 of the review PDF">p. 145 ↗</a></p>
             <div class="equation" data-tex="e_{\text{xc}}^\text{B97M-V}=
 \sum_{\sigma}\left(e_{\text{x}\sigma}^\text{B97M-V}
 +e_{\text{c}\,\sigma\sigma}^\text{B97M-V}\right)
@@ -115,12 +100,12 @@ g_{\text{c}\,\uparrow\downarrow}(w_{\uparrow\downarrow},\tilde{u}_{\text{c}\,\up
           </article>
 
           <article class="review-equation-card" id="review-eq-eq-g-b97mv">
-            <code>eq:g-b97mv</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (795)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=145" title="Open page 145 of the review PDF">p. 145 ↗</a></p>
             <div class="equation" data-tex="g(w,\tilde{u}) = \sum_{i}\sum_{j}c_{ij}w^{i}\tilde{u}^{j}"></div>
           </article>
 
           <article class="review-equation-card" id="review-eq-eq-ubecke">
-            <code>eq:ubecke</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (251)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=34" title="Open page 34 of the review PDF">p. 34 ↗</a></p>
             <div class="equation" data-tex="\tilde{u}(x) = \frac{\gamma x^2}{1 +\gamma x^2}"></div>
           </article>
 

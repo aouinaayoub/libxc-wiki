@@ -3,14 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>gga_x_ev93</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20261016-excerpts-v1">
-    <script defer src="../../assets/search.js?v=20261016-excerpts-v1"></script>
+    <title>gga_x_ev93 — Engel and Vosko · Libxc Wiki</title>
+    <meta name="description" content="gga_x_ev93: Engel and Vosko. GGA exchange functional in Libxc, with references and BibTeX. Includes an excerpt from the Tran, Lehtola, Pittalis and Marques review.">
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261117-refs-v1">
+    <script defer src="../../assets/search.js?v=20261117-refs-v1"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
     <script defer src="../../vendor/katex/contrib/mhchem.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20261016-excerpts-v1"></script>
+    <script defer src="../../assets/detail.js?v=20261117-refs-v1"></script>
 
   </head>
   <body class="functional-page">
@@ -32,24 +33,21 @@
 
         <p class="brand">GGA</p>
         <h1><code class="title-code">gga_x_ev93</code></h1>
+        <p class="functional-name">Engel and Vosko</p>
         <div class="detail-tags"><span class="tag">gga</span>
 <span class="tag">exchange</span></div>
       </header>
 
       <div class="detail-grid">
+
       <section class="callout">
         <p class="callout-label">Review excerpt</p>
         <div class="review-html">
-<p>Following the observation that <a class="functional-link" href="../gga-x-pw91/"><code>gga_x_pw91</code></a> leads to a potential $v_{\text{x}\sigma}$ that is not particularly accurate, even though it yields considerably better exchange energies than <a class="functional-link" href="../lda-x/"><code>lda_x</code></a>, Engel and Vosko<sup class="citation-marker"><a href="#review-ref-Engel1993-13164">492</a></sup> constructed a functional designed to reproduce more accurately the EXX-OEP of atoms. The enhancement factor they used is the Padé approximant given by <a class="review-eq-link" href="#review-eq-eq-fecmv92">
-  <code>eq:fecmv92</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="F_\text{x}^{\text{ECMV92}} = \frac{1+a_1 p_\sigma + a_2 p_\sigma^2 + a_3 p_\sigma^3}
-  {1+b_1 p_\sigma + b_2 p_\sigma^2 + b_3 p_\sigma^3}"></span>
-  </span>
-</a>. As a training set to determine the parameters $a_i$ and $b_i$ they used the EXX-OEPs<sup class="citation-marker"><a href="#review-ref-Sharp1953-317">300</a>,<a href="#review-ref-Talman1976-PRA-36">59</a></sup> of 20 atoms ranging from Kr to Rn. It was argued that this choice of rather heavy atoms was an attempt to better describe solids. Finally, the objective function to be minimized by the fit involved the difference between the exact and approximate exchange potentials, weighted by the function $\left[3n_\sigma(\br)+\br\cdot \nabla n_\sigma(\br)\right]/E_{\text{x}\sigma}[n_\sigma]$, where $E_{\text{x}\sigma}[n_\sigma]=\left(1/2\right)E_{\text{x}\sigma}[2n_\sigma]$. This choice was motivated by the virial relation</p>
+<p>Following the observation that <a class="functional-link" href="../gga-x-pw91/"><code>gga_x_pw91</code></a> leads to a potential $v_{\text{x}\sigma}$ that is not particularly accurate, even though it yields considerably better exchange energies than <a class="functional-link" href="../lda-x/"><code>lda_x</code></a>, Engel and Vosko<sup class="citation-marker"><a href="#review-ref-Engel1993-13164">492</a></sup> constructed a functional designed to reproduce more accurately the EXX-OEP of atoms. The enhancement factor they used is the Padé approximant given by <a class="review-eq-link" href="#review-eq-eq-fecmv92"><span class="eq-number">Eq. (375)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="F_\text{x}^{\text{ECMV92}} = \frac{1+a_1 p_\sigma + a_2 p_\sigma^2 + a_3 p_\sigma^3}
+  {1+b_1 p_\sigma + b_2 p_\sigma^2 + b_3 p_\sigma^3}"></span></span></a>. As a training set to determine the parameters $a_i$ and $b_i$ they used the EXX-OEPs<sup class="citation-marker"><a href="#review-ref-Sharp1953-317">300</a>,<a href="#review-ref-Talman1976-PRA-36">59</a></sup> of 20 atoms ranging from Kr to Rn. It was argued that this choice of rather heavy atoms was an attempt to better describe solids. Finally, the objective function to be minimized by the fit involved the difference between the exact and approximate exchange potentials, weighted by the function $\left[3n_\sigma(\br)+\br\cdot \nabla n_\sigma(\br)\right]/E_{\text{x}\sigma}[n_\sigma]$, where $E_{\text{x}\sigma}[n_\sigma]=\left(1/2\right)E_{\text{x}\sigma}[2n_\sigma]$. This choice was motivated by the virial relation</p>
 <div class="equation" data-tex="E_{\text{x}\sigma}[n_\sigma] = \mint{r} v_{\text{x}\sigma}(\br) \left[
     3 n_\sigma(\br) + \br\cdot \nabla n_\sigma(\br)\right]"></div>
-<p>In this way, Engel and Vosko ensured that their functional yields not only accurate potentials, but also accurate exchange energies. With $a_1-b_1=\mu^{\text{GE}}$ fixed by the density-gradient expansion coefficient (see the review), the obtained parameters are $a_1 = 1.647127$, $a_2 = 0.980118$, $a_3 = 0.017399$, $b_1 = 1.523671$, $b_2 = 0.367229$, and $b_3 = 0.011282$. Compared to <a class="functional-link" href="../gga-x-pw91/"><code>gga_x_pw91</code></a>, <a class="functional-link" href="../gga-x-ev93/"><code>gga_x_ev93</code></a> provides more accurate exchange potentials, but exchange energies of lower quality.</p>
+<p>In this way, Engel and Vosko ensured that their functional yields not only accurate potentials, but also accurate exchange energies. With $a_1-b_1=\mu^{\text{GE}}$ fixed by the density-gradient expansion coefficient (see <a class="review-section-link" href="https://arxiv.org/pdf/2602.17333#page=25" title="Gradient-Expansion Approximations">Sec. 2.11</a> of the review), the obtained parameters are $a_1 = 1.647127$, $a_2 = 0.980118$, $a_3 = 0.017399$, $b_1 = 1.523671$, $b_2 = 0.367229$, and $b_3 = 0.011282$. Compared to <a class="functional-link" href="../gga-x-pw91/"><code>gga_x_pw91</code></a>, <a class="functional-link" href="../gga-x-ev93/"><code>gga_x_ev93</code></a> provides more accurate exchange potentials, but exchange energies of lower quality.</p>
         </div>
         <p class="source-note">Adapted from <a href="https://arxiv.org/abs/2602.17333">Tran, Lehtola, Pittalis, and Marques, <em>Semi-Local Exchange-Correlation Approximations in Density Functional Theory</em>, arXiv:2602.17333</a>.</p>
       </section>
@@ -58,7 +56,7 @@
           <h2>Referenced Review Equations</h2>
           <div class="review-equations">
           <article class="review-equation-card" id="review-eq-eq-fecmv92">
-            <code>eq:fecmv92</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (375)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=56" title="Open page 56 of the review PDF">p. 56 ↗</a></p>
             <div class="equation" data-tex="F_\text{x}^{\text{ECMV92}} = \frac{1+a_1 p_\sigma + a_2 p_\sigma^2 + a_3 p_\sigma^3}
   {1+b_1 p_\sigma + b_2 p_\sigma^2 + b_3 p_\sigma^3}"></div>
           </article>

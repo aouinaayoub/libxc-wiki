@@ -3,14 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>lda_x_rae</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20261016-excerpts-v1">
-    <script defer src="../../assets/search.js?v=20261016-excerpts-v1"></script>
+    <title>lda_x_rae — Rae self-energy corrected exchange · Libxc Wiki</title>
+    <meta name="description" content="lda_x_rae: Rae self-energy corrected exchange. LDA exchange functional in Libxc, with references and BibTeX. Includes an excerpt from the Tran, Lehtola, Pittalis and Marques review.">
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261117-refs-v1">
+    <script defer src="../../assets/search.js?v=20261117-refs-v1"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
     <script defer src="../../vendor/katex/contrib/mhchem.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20261016-excerpts-v1"></script>
+    <script defer src="../../assets/detail.js?v=20261117-refs-v1"></script>
 
   </head>
   <body class="functional-page">
@@ -32,23 +33,20 @@
 
         <p class="brand">LDA</p>
         <h1><code class="title-code">lda_x_rae</code></h1>
+        <p class="functional-name">Rae self-energy corrected exchange</p>
         <div class="detail-tags"><span class="tag">lda</span>
 <span class="tag">exchange</span></div>
       </header>
 
       <div class="detail-grid">
+
       <section class="callout">
         <p class="callout-label">Review excerpt</p>
         <div class="review-html">
-<p>The <a class="functional-link" href="../lda-x/"><code>lda_x</code></a> functional contains a self-interaction error,<sup class="citation-marker"><a href="#review-ref-Perdew1981-5048">249</a></sup> which vanishes for the HEG, but may be significant in other systems. Rae<sup class="citation-marker"><a href="#review-ref-Rae1973-574">402</a></sup> proposed a form where this self-interaction error is explicitly removed from the functional by multiplying <a class="review-eq-link" href="#review-eq-eq-ldax3d">
-  <code>eq:ldax3d</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="\begin{aligned}
+<p>The <a class="functional-link" href="../lda-x/"><code>lda_x</code></a> functional contains a self-interaction error,<sup class="citation-marker"><a href="#review-ref-Perdew1981-5048">249</a></sup> which vanishes for the HEG, but may be significant in other systems. Rae<sup class="citation-marker"><a href="#review-ref-Rae1973-574">402</a></sup> proposed a form where this self-interaction error is explicitly removed from the functional by multiplying <a class="review-eq-link" href="#review-eq-eq-ldax3d"><span class="eq-number">Eq. (256)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="\begin{aligned}
 e_\text{x}^\text{LDA}(n_\uparrow,n_\downarrow) = 
   -C_{\text{x}}\frac{n_\uparrow^{4/3}+n_\downarrow^{4/3}}{n}
-\end{aligned}"></span>
-  </span>
-</a> by a factor:</p>
+\end{aligned}"></span></span></a> by a factor:</p>
 <div class="equation" data-tex="\begin{aligned}
 e_\text{x}^\text{Rae}(r_s,\zeta,N) = &amp;e^\text{LDA}_\text{x}(r_s,\zeta)  \\
   &amp; \times\left(1 - \frac 8 3 \delta_x +  2 \delta_x^2 - \frac 1 3 \delta_x^4 \right)
@@ -65,7 +63,7 @@ e_\text{x}^\text{Rae}(r_s,\zeta,N) = &amp;e^\text{LDA}_\text{x}(r_s,\zeta)  \\
           <h2>Referenced Review Equations</h2>
           <div class="review-equations">
           <article class="review-equation-card" id="review-eq-eq-ldax3d">
-            <code>eq:ldax3d</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (256)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=35" title="Open page 35 of the review PDF">p. 35 ↗</a></p>
             <div class="equation" data-tex="\begin{aligned}
 e_\text{x}^\text{LDA}(n_\uparrow,n_\downarrow) = 
   -C_{\text{x}}\frac{n_\uparrow^{4/3}+n_\downarrow^{4/3}}{n}

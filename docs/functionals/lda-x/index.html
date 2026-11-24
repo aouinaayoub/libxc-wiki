@@ -3,14 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>lda_x</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20261016-excerpts-v1">
-    <script defer src="../../assets/search.js?v=20261016-excerpts-v1"></script>
+    <title>lda_x — Slater exchange · Libxc Wiki</title>
+    <meta name="description" content="lda_x: Slater exchange. LDA exchange functional in Libxc, with references and BibTeX. Includes an excerpt from the Tran, Lehtola, Pittalis and Marques review.">
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261117-refs-v1">
+    <script defer src="../../assets/search.js?v=20261117-refs-v1"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
     <script defer src="../../vendor/katex/contrib/mhchem.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20261016-excerpts-v1"></script>
+    <script defer src="../../assets/detail.js?v=20261117-refs-v1"></script>
 
   </head>
   <body class="functional-page">
@@ -32,11 +33,13 @@
 
         <p class="brand">LDA</p>
         <h1><code class="title-code">lda_x</code></h1>
+        <p class="functional-name">Slater exchange</p>
         <div class="detail-tags"><span class="tag">lda</span>
 <span class="tag">exchange</span></div>
       </header>
 
       <div class="detail-grid">
+
       <section class="callout">
         <p class="callout-label">Review excerpt</p>
         <div class="review-html">
@@ -49,26 +52,11 @@ e_\text{x}^\text{LDA}(n_\uparrow,n_\downarrow) =
 <div class="equation" data-tex="\begin{aligned}
 e_\text{x}^\text{LDA}(r_s,\zeta) = -A_\text{x}\frac{\phi_{4/3}(\zeta)}{r_s}
 \end{aligned}"></div>
-<p>where $A_\text{x}$, $C_{\text{x}}$, and $\phi_{4/3}$ are given by <a class="review-eq-link" href="#review-eq-eq-cx">
-  <code>eq:cx</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="C_{\text{x}} = \frac32 \left( \frac{3}{4 \pi}\right)^{1/3} = \frac{3}{4}\left(\frac{6}{\pi}\right)^{1/3} \approx 0.930526"></span>
-  </span>
-</a>; <a class="review-eq-link" href="#review-eq-eq-Axzeta">
-  <code>eq:Axzeta</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="A_\text{x} = \frac{3}{4}\left(\frac{3}{2\pi}\right)^{2/3} \approx 0.458165"></span>
-  </span>
-</a>; <a class="review-eq-link" href="#review-eq-eq-phi">
-  <code>eq:phi</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="\begin{aligned}
+<p>where $A_\text{x}$, $C_{\text{x}}$, and $\phi_{4/3}$ are given by <a class="review-eq-link" href="#review-eq-eq-cx"><span class="eq-number">Eq. (17)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="C_{\text{x}} = \frac32 \left( \frac{3}{4 \pi}\right)^{1/3} = \frac{3}{4}\left(\frac{6}{\pi}\right)^{1/3} \approx 0.930526"></span></span></a>; <a class="review-eq-link" href="#review-eq-eq-Axzeta"><span class="eq-number">Eq. (16)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="A_\text{x} = \frac{3}{4}\left(\frac{3}{2\pi}\right)^{2/3} \approx 0.458165"></span></span></a>; <a class="review-eq-link" href="#review-eq-eq-phi"><span class="eq-number">Eq. (40)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="\begin{aligned}
 \phi_p(\zeta) = &amp; \frac{1}{2} \left[(1+\zeta)^{p} + (1-\zeta)^{p}\right]  \\
 
     = &amp; 2^{p-1}\frac{n_{\uparrow}^{p}+n_{\downarrow}^{p}}{n^{p}}
-\end{aligned}"></span>
-  </span>
-</a>, respectively. With few exceptions, GGA and MGGA exchange functionals recover <a class="functional-link" href="../lda-x/"><code>lda_x</code></a> when evaluated for the HEG. Note that even though the LDA exchange has been surpassed by more modern functionals, it is still sometimes used in applications (combined with a LDA correlation functional) in modern literature.</p>
+\end{aligned}"></span></span></a>, respectively. With few exceptions, GGA and MGGA exchange functionals recover <a class="functional-link" href="../lda-x/"><code>lda_x</code></a> when evaluated for the HEG. Note that even though the LDA exchange has been surpassed by more modern functionals, it is still sometimes used in applications (combined with a LDA correlation functional) in modern literature.</p>
 <p>Gaspar<sup class="citation-marker"><a href="#review-ref-Gaspar1954-263">401</a></sup>, and later Kohn and Sham<sup class="citation-marker"><a href="#review-ref-Kohn1965-PR-1133">2</a></sup>, derived the corresponding potential by minimizing the total energy:</p>
 <div class="equation" data-tex="v_{\text{x}\sigma}^\text{LDA}=-\left(\frac{6}{\pi}\right)^{1/3}n_{\sigma}^{1/3}"></div>
         </div>
@@ -79,17 +67,17 @@ e_\text{x}^\text{LDA}(r_s,\zeta) = -A_\text{x}\frac{\phi_{4/3}(\zeta)}{r_s}
           <h2>Referenced Review Equations</h2>
           <div class="review-equations">
           <article class="review-equation-card" id="review-eq-eq-cx">
-            <code>eq:cx</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (17)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=10" title="Open page 10 of the review PDF">p. 10 ↗</a></p>
             <div class="equation" data-tex="C_{\text{x}} = \frac32 \left( \frac{3}{4 \pi}\right)^{1/3} = \frac{3}{4}\left(\frac{6}{\pi}\right)^{1/3} \approx 0.930526"></div>
           </article>
 
           <article class="review-equation-card" id="review-eq-eq-Axzeta">
-            <code>eq:Axzeta</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (16)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=10" title="Open page 10 of the review PDF">p. 10 ↗</a></p>
             <div class="equation" data-tex="A_\text{x} = \frac{3}{4}\left(\frac{3}{2\pi}\right)^{2/3} \approx 0.458165"></div>
           </article>
 
           <article class="review-equation-card" id="review-eq-eq-phi">
-            <code>eq:phi</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (40)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=12" title="Open page 12 of the review PDF">p. 12 ↗</a></p>
             <div class="equation" data-tex="\begin{aligned}
 \phi_p(\zeta) = &amp; \frac{1}{2} \left[(1+\zeta)^{p} + (1-\zeta)^{p}\right]  \\
 

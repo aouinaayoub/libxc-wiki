@@ -34,6 +34,8 @@
   }
 
   const preparedExcerpts = new WeakMap();
+  const preparedScores = new WeakMap();
+  const preparedMatches = new WeakMap();
   const wordScores = new Map();
   const rootCache = new Map();
   const suffixes = ['izations', 'isations', 'ization', 'isation', 'ically', 'ations', 'ation', 'izing', 'ising', 'ized', 'ised', 'ical', 'isms', 'ism', 'ics', 'ic', 'ness', 'ing', 'ies', 'es', 's'];
@@ -86,8 +88,12 @@
     if (term === word) return 4;
     if (term.length >= 3 && word.includes(term)) return 3;
     if (term.length < 5) return 0;
-    const key = `${term}:${word}`;
-    if (wordScores.has(key)) return wordScores.get(key);
+    if (!wordScores.has(term)) {
+      if (wordScores.size >= 12) wordScores.delete(wordScores.keys().next().value);
+      wordScores.set(term, new Map());
+    }
+    const scores = wordScores.get(term);
+    if (scores.has(word)) return scores.get(word);
     const root = stem(word);
     let score = 0;
     for (const candidate of queryRoots(term)) {
@@ -98,8 +104,7 @@
     }
     const tolerance = term.length >= 8 ? 2 : 1;
     if (!score && distance(term, word, tolerance) <= tolerance) score = 2;
-    if (wordScores.size >= 30000) wordScores.clear();
-    wordScores.set(key, score);
+    scores.set(word, score);
     return score;
   }
 
@@ -114,16 +119,41 @@
   function excerptMatches(item, query) {
     const terms = [...new Set(words(query).map(token => token.word))];
     if (!terms.length) return [];
-    return excerptData(item).flatMap(paragraph => {
+    let cached = preparedMatches.get(item);
+    if (cached?.query === query) return cached.matches;
+    const matches = excerptData(item).flatMap(paragraph => {
       const ranges = paragraph.words.filter(token => terms.some(term => wordScore(term, token.word)));
       return ranges.length ? [{ text: paragraph.text, ranges }] : [];
     });
+    preparedMatches.set(item, { query, matches });
+    return matches;
   }
 
   function excerptScore(item, query) {
-    const tokens = excerptData(item).flatMap(paragraph => paragraph.words);
-    const best = Math.max(0, ...tokens.map(token => wordScore(query, token.word)));
+    const paragraphs = excerptData(item);
+    if (!paragraphs.vocabulary) paragraphs.vocabulary = [...new Set(paragraphs.flatMap(p => p.words.map(t => t.word)))];
+    let best = 0;
+    for (const word of paragraphs.vocabulary) {
+      best = Math.max(best, wordScore(query, word));
+      if (best === 4) break;
+    }
     return best ? 280 + best * 25 : 0;
+  }
+
+  function debounce(callback, delay = 120) {
+    let timer;
+    const run = (...args) => {
+      clearTimeout(timer);
+      timer = setTimeout(() => callback(...args), delay);
+    };
+    run.cancel = () => clearTimeout(timer);
+    return run;
+  }
+
+  function clearHighlights(root) {
+    if (!root) return;
+    for (const mark of root.querySelectorAll('mark[data-search-match]')) mark.replaceWith(...mark.childNodes);
+    root.normalize();
   }
 
   function appendHighlighted(container, text, ranges) {
@@ -177,6 +207,8 @@
       for (const item of items) {
         item.excerpts = data.excerpts[item.identifier] || [];
         preparedExcerpts.delete(item);
+        preparedScores.delete(item);
+        preparedMatches.delete(item);
       }
       document.dispatchEvent(new Event('libxc-excerpts-ready'));
     });
@@ -186,7 +218,7 @@
     if (!root || !query) return 0;
     const terms = words(query).map(token => token.word);
     const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, { acceptNode(node) {
-      return node.parentElement.closest('.katex, .equation, .equation-preview, .citation-marker, mark, script, style')
+      return node.parentElement.closest('.katex, .equation, .equation-preview, .citation-marker, .citation-ref, mark, script, style')
         ? NodeFilter.FILTER_REJECT : NodeFilter.FILTER_ACCEPT;
     } });
     const nodes = [];
@@ -204,6 +236,17 @@
   }
 
   function scoreItem(rawQuery, item) {
+    let cache = preparedScores.get(item);
+    if (!cache) { cache = new Map(); preparedScores.set(item, cache); }
+    const query = normalize(rawQuery);
+    if (!cache.has(query)) {
+      if (cache.size >= 12) cache.delete(cache.keys().next().value);
+      cache.set(query, computeScore(query, item));
+    }
+    return cache.get(query);
+  }
+
+  function computeScore(rawQuery, item) {
     const query = normalize(rawQuery);
     const queryCompact = compact(rawQuery);
     if (!query) return 0;
@@ -292,7 +335,7 @@
     container.append(count);
     container.scrollTop = 0;
 
-    for (const match of matches) {
+    for (const match of matches.slice(0, 30)) {
       const button = document.createElement('button');
       button.className = 'suggestion';
       button.type = 'button';
@@ -433,12 +476,18 @@
       if (matches[0]) window.location.href = resultHref(matches[0].item, input.value);
     });
 
-    input.addEventListener('input', update);
+    const scheduledUpdate = debounce(update);
+    input.addEventListener('input', () => {
+      if (input.value.trim()) scheduledUpdate();
+      else { scheduledUpdate.cancel(); update(); }
+    });
     document.addEventListener('libxc-excerpts-ready', () => { if (!palette.hidden) update(); });
     bindSuggestionKeyboard(input, suggestions);
   }
 
   window.LibxcSearch = {
+    debounce,
+    clearHighlights,
     normalize,
     loadExcerpts,
     excerptMatches,

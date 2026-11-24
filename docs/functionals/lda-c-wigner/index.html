@@ -3,14 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>lda_c_wigner</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20261016-excerpts-v1">
-    <script defer src="../../assets/search.js?v=20261016-excerpts-v1"></script>
+    <title>lda_c_wigner — Wigner · Libxc Wiki</title>
+    <meta name="description" content="lda_c_wigner: Wigner. LDA correlation functional in Libxc, with references and BibTeX. Includes an excerpt from the Tran, Lehtola, Pittalis and Marques review.">
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261117-refs-v1">
+    <script defer src="../../assets/search.js?v=20261117-refs-v1"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
     <script defer src="../../vendor/katex/contrib/mhchem.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20261016-excerpts-v1"></script>
+    <script defer src="../../assets/detail.js?v=20261117-refs-v1"></script>
 
   </head>
   <body class="functional-page">
@@ -32,22 +33,19 @@
 
         <p class="brand">LDA</p>
         <h1><code class="title-code">lda_c_wigner</code></h1>
+        <p class="functional-name">Wigner</p>
         <div class="detail-tags"><span class="tag">lda</span>
 <span class="tag">correlation</span></div>
       </header>
 
       <div class="detail-grid">
+
       <section class="callout">
         <p class="callout-label">Review excerpt</p>
         <div class="review-html">
 <p>Wigner<sup class="citation-marker"><a href="#review-ref-Wigner1938-678">410</a></sup> proposed an extremely simple parametrization for the correlation functional. It reads as</p>
 <div class="equation" data-tex="e_\text{c}^\text{Wigner}(r_s) = -\frac{a}{b + r_s}"></div>
-<p>with $a=0.44$ and $b=7.8$. It is noteworthy that this expression satisfies the uniform scaling requirements,<sup class="citation-marker"><a href="#review-ref-Wilson1998-523">411</a></sup> and despite its simplicity, it gives fairly good values for the correlation energy. Wigner<sup class="citation-marker"><a href="#review-ref-Wigner1938-678">410</a></sup> only considered the spin-unpolarized case, but a spin-polarized version (<a class="functional-link" href="../lda-c-ow/"><code>lda_c_ow</code></a>, <a class="functional-link" href="../lda-c-ow-lyp/"><code>lda_c_ow_lyp</code></a>) was later developed by Stewart and Gill<sup class="citation-marker"><a href="#review-ref-Stewart1995-4337">412</a></sup>. Note that the implementation of <a class="functional-link" href="../lda-c-wigner/"><code>lda_c_wigner</code></a> in Libxc is the spin-polarized version, i.e., <a class="review-eq-link" href="#review-eq-eq-ecow">
-  <code>eq:ecow</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="e_\text{c}^\text{OW}(r_s) = -\left(1-\zeta^2\right)\frac{a}{b + r_s}"></span>
-  </span>
-</a> with the values of $a$ and $b$ mentioned above.</p>
+<p>with $a=0.44$ and $b=7.8$. It is noteworthy that this expression satisfies the uniform scaling requirements,<sup class="citation-marker"><a href="#review-ref-Wilson1998-523">411</a></sup> and despite its simplicity, it gives fairly good values for the correlation energy. Wigner<sup class="citation-marker"><a href="#review-ref-Wigner1938-678">410</a></sup> only considered the spin-unpolarized case, but a spin-polarized version (<a class="functional-link" href="../lda-c-ow/"><code>lda_c_ow</code></a>, <a class="functional-link" href="../lda-c-ow-lyp/"><code>lda_c_ow_lyp</code></a>) was later developed by Stewart and Gill<sup class="citation-marker"><a href="#review-ref-Stewart1995-4337">412</a></sup>. Note that the implementation of <a class="functional-link" href="../lda-c-wigner/"><code>lda_c_wigner</code></a> in Libxc is the spin-polarized version, i.e., <a class="review-eq-link" href="#review-eq-eq-ecow"><span class="eq-number">Eq. (293)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="e_\text{c}^\text{OW}(r_s) = -\left(1-\zeta^2\right)\frac{a}{b + r_s}"></span></span></a> with the values of $a$ and $b$ mentioned above.</p>
         </div>
         <p class="source-note">Adapted from <a href="https://arxiv.org/abs/2602.17333">Tran, Lehtola, Pittalis, and Marques, <em>Semi-Local Exchange-Correlation Approximations in Density Functional Theory</em>, arXiv:2602.17333</a>.</p>
       </section>
@@ -56,7 +54,7 @@
           <h2>Referenced Review Equations</h2>
           <div class="review-equations">
           <article class="review-equation-card" id="review-eq-eq-ecow">
-            <code>eq:ecow</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (293)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=41" title="Open page 41 of the review PDF">p. 41 ↗</a></p>
             <div class="equation" data-tex="e_\text{c}^\text{OW}(r_s) = -\left(1-\zeta^2\right)\frac{a}{b + r_s}"></div>
           </article>
 

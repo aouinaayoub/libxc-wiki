@@ -3,14 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>gga_x_b88m</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20261016-excerpts-v1">
-    <script defer src="../../assets/search.js?v=20261016-excerpts-v1"></script>
+    <title>gga_x_b88m — Becke 88 reoptimized to be used with tau1 · Libxc Wiki</title>
+    <meta name="description" content="gga_x_b88m: Becke 88 reoptimized to be used with tau1. GGA exchange functional in Libxc, with references and BibTeX. Includes an excerpt from the Tran, Lehtola, Pittalis and Marques review.">
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261117-refs-v1">
+    <script defer src="../../assets/search.js?v=20261117-refs-v1"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
     <script defer src="../../vendor/katex/contrib/mhchem.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20261016-excerpts-v1"></script>
+    <script defer src="../../assets/detail.js?v=20261117-refs-v1"></script>
 
   </head>
   <body class="functional-page">
@@ -32,21 +33,18 @@
 
         <p class="brand">GGA</p>
         <h1><code class="title-code">gga_x_b88m</code></h1>
+        <p class="functional-name">Becke 88 reoptimized to be used with tau1</p>
         <div class="detail-tags"><span class="tag">gga</span>
 <span class="tag">exchange</span></div>
       </header>
 
       <div class="detail-grid">
+
       <section class="callout">
         <p class="callout-label">Review excerpt</p>
         <div class="review-html">
-<p>As shown in <sup class="citation-marker"><a href="#review-ref-Adamson1998-6">512</a></sup>, the original value of the parameter $\beta$ in the enhancement factor of <a class="functional-link" href="../gga-x-b88/"><code>gga_x_b88</code></a> (<a class="review-eq-link" href="#review-eq-eq-fxb88">
-  <code>eq:fxb88</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="F_\text{x}^{\text{B88}} = 1+\frac{\beta}{C_\text{x}}
-  \frac{x_\sigma^2}{1 + \gamma\beta x_\sigma\arcsinh(x_\sigma)}"></span>
-  </span>
-</a>) might not be optimal for molecular properties. These properties may, of course, depend strongly on the associated correlation functional. Therefore, Proynov et al.<sup class="citation-marker"><a href="#review-ref-Proynov2000-10013">511</a></sup> reoptimized $\beta$ together with the parameters in <code>mgga_c_tau1</code> using the molecules $\ce{N2}$, $\ce{F2}$, $\ce{O2}$, $\ce{HF}$, $\ce{CN}$, $\ce{H2O}$, $\ce{CH4}$, $\ce{C2H4}$, $\ce{NH3}$, $\ce{C6H6}$, and the hydrogen-bonded water dimer.<sup class="citation-marker"><a href="#review-ref-Proynov1997-427">513</a></sup> They obtained the value $\beta=0.0045$.</p>
+<p>As shown in ref. <span class="citation-ref"><a href="#review-ref-Adamson1998-6">512</a></span>, the original value of the parameter $\beta$ in the enhancement factor of <a class="functional-link" href="../gga-x-b88/"><code>gga_x_b88</code></a> (<a class="review-eq-link" href="#review-eq-eq-fxb88"><span class="eq-number">Eq. (372)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="F_\text{x}^{\text{B88}} = 1+\frac{\beta}{C_\text{x}}
+  \frac{x_\sigma^2}{1 + \gamma\beta x_\sigma\arcsinh(x_\sigma)}"></span></span></a>) might not be optimal for molecular properties. These properties may, of course, depend strongly on the associated correlation functional. Therefore, Proynov et al.<sup class="citation-marker"><a href="#review-ref-Proynov2000-10013">511</a></sup> reoptimized $\beta$ together with the parameters in <code>mgga_c_tau1</code> using the molecules $\ce{N2}$, $\ce{F2}$, $\ce{O2}$, $\ce{HF}$, $\ce{CN}$, $\ce{H2O}$, $\ce{CH4}$, $\ce{C2H4}$, $\ce{NH3}$, $\ce{C6H6}$, and the hydrogen-bonded water dimer.<sup class="citation-marker"><a href="#review-ref-Proynov1997-427">513</a></sup> They obtained the value $\beta=0.0045$.</p>
         </div>
         <p class="source-note">Adapted from <a href="https://arxiv.org/abs/2602.17333">Tran, Lehtola, Pittalis, and Marques, <em>Semi-Local Exchange-Correlation Approximations in Density Functional Theory</em>, arXiv:2602.17333</a>.</p>
       </section>
@@ -55,7 +53,7 @@
           <h2>Referenced Review Equations</h2>
           <div class="review-equations">
           <article class="review-equation-card" id="review-eq-eq-fxb88">
-            <code>eq:fxb88</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (372)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=55" title="Open page 55 of the review PDF">p. 55 ↗</a></p>
             <div class="equation" data-tex="F_\text{x}^{\text{B88}} = 1+\frac{\beta}{C_\text{x}}
   \frac{x_\sigma^2}{1 + \gamma\beta x_\sigma\arcsinh(x_\sigma)}"></div>
           </article>

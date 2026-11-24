@@ -3,14 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>mgga_x_mn12_l</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20261016-excerpts-v1">
-    <script defer src="../../assets/search.js?v=20261016-excerpts-v1"></script>
+    <title>mgga_x_mn12_l — Minnesota MN12-L exchange functional · Libxc Wiki</title>
+    <meta name="description" content="mgga_x_mn12_l: Minnesota MN12-L exchange functional. Meta-GGA exchange functional in Libxc, with references and BibTeX. Includes an excerpt from the Tran, Lehtola, Pittalis and Marques review.">
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261117-refs-v1">
+    <script defer src="../../assets/search.js?v=20261117-refs-v1"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
     <script defer src="../../vendor/katex/contrib/mhchem.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20261016-excerpts-v1"></script>
+    <script defer src="../../assets/detail.js?v=20261117-refs-v1"></script>
 
   </head>
   <body class="functional-page">
@@ -32,38 +33,20 @@
 
         <p class="brand">META-GGA</p>
         <h1><code class="title-code">mgga_x_mn12_l</code></h1>
+        <p class="functional-name">Minnesota MN12-L exchange functional</p>
         <div class="detail-tags"><span class="tag">meta-gga</span>
 <span class="tag">exchange</span></div>
       </header>
 
       <div class="detail-grid">
+
       <section class="callout">
         <p class="callout-label">Review excerpt</p>
         <div class="review-html">
-<p>Peverati and Truhlar<sup class="citation-marker"><a href="#review-ref-Peverati2012-13171">713</a></sup> proposed to extend <a class="functional-link" href="../gga-x-n12/"><code>gga_x_n12</code></a> by adding a dependence on the kinetic-energy density via $w_\sigma$ (<a class="review-eq-link" href="#review-eq-eq-b00w">
-  <code>eq:b00w</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="w_\sigma = \frac{\tau_\sigma^\text{TF} - \tau_\sigma}{\tau_\sigma^\text{TF} + \tau_\sigma}
-  = \frac{C_\text{F} - \tilde{t}_\sigma}{C_\text{F} + \tilde{t}_\sigma}"></span>
-  </span>
-</a>):</p>
+<p>Peverati and Truhlar<sup class="citation-marker"><a href="#review-ref-Peverati2012-13171">713</a></sup> proposed to extend <a class="functional-link" href="../gga-x-n12/"><code>gga_x_n12</code></a> by adding a dependence on the kinetic-energy density via $w_\sigma$ (<a class="review-eq-link" href="#review-eq-eq-b00w"><span class="eq-number">Eq. (91)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="w_\sigma = \frac{\tau_\sigma^\text{TF} - \tau_\sigma}{\tau_\sigma^\text{TF} + \tau_\sigma}
+  = \frac{C_\text{F} - \tilde{t}_\sigma}{C_\text{F} + \tilde{t}_\sigma}"></span></span></a>):</p>
 <div class="equation" data-tex="F_\text{xc}^\text{MN12-L} = \sum_{i=0}^3\sum_{j=0}^{3-i}\sum_{k=0}^{5-i-j} a_{ijk} \tilde{v}_\sigma^i \tilde{u}_\sigma^j w_\sigma^k"></div>
-<p>where $\tilde{v}_\sigma$ and $\tilde{u}_\sigma=\tilde{u}(x_\sigma)$ are given by <a class="review-eq-link" href="#review-eq-eq-v">
-  <code>eq:v</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="\tilde{v}_\sigma = \frac{\omega_\sigma n_\sigma^{1/3}}{1 + \omega_\sigma n_\sigma^{1/3}}"></span>
-  </span>
-</a> with $\omega_{\sigma}=2.5$, and <a class="review-eq-link" href="#review-eq-eq-ubecke">
-  <code>eq:ubecke</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="\tilde{u}(x) = \frac{\gamma x^2}{1 +\gamma x^2}"></span>
-  </span>
-</a> with $\gamma_{\sigma}=0.004$, respectively. Akin to <a class="functional-link" href="../gga-x-n12/"><code>gga_x_n12</code></a>, this functional is not a pure exchange functional, but rather a nonseparable xc functional. The parameters $a_{ijk}$ in <a class="review-eq-link" href="#review-eq-eq-mn12-l">
-  <code>eq:mn12-l</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="F_\text{xc}^\text{MN12-L} = \sum_{i=0}^3\sum_{j=0}^{3-i}\sum_{k=0}^{5-i-j} a_{ijk} \tilde{v}_\sigma^i \tilde{u}_\sigma^j w_\sigma^k"></span>
-  </span>
-</a> were optimized together with those of <a class="functional-link" href="../mgga-c-mn12-l/"><code>mgga_c_mn12_l</code></a> using molecular and solid-state databases. The only constraint that was applied during the optimization was an upper bound of 25 for the absolute values of $a_{ijk}$. Compared to N12 (<a class="functional-link" href="../gga-x-n12/"><code>gga_x_n12</code></a> + <a class="functional-link" href="../gga-c-n12/"><code>gga_c_n12</code></a>), MN12-L improves the results for most of the tested molecular and solid-state properties.</p>
+<p>where $\tilde{v}_\sigma$ and $\tilde{u}_\sigma=\tilde{u}(x_\sigma)$ are given by <a class="review-eq-link" href="#review-eq-eq-v"><span class="eq-number">Eq. (39)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="\tilde{v}_\sigma = \frac{\omega_\sigma n_\sigma^{1/3}}{1 + \omega_\sigma n_\sigma^{1/3}}"></span></span></a> with $\omega_{\sigma}=2.5$, and <a class="review-eq-link" href="#review-eq-eq-ubecke"><span class="eq-number">Eq. (251)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="\tilde{u}(x) = \frac{\gamma x^2}{1 +\gamma x^2}"></span></span></a> with $\gamma_{\sigma}=0.004$, respectively. Akin to <a class="functional-link" href="../gga-x-n12/"><code>gga_x_n12</code></a>, this functional is not a pure exchange functional, but rather a nonseparable xc functional. The parameters $a_{ijk}$ in <a class="review-eq-link" href="#review-eq-eq-mn12-l"><span class="eq-number">Eq. (599)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="F_\text{xc}^\text{MN12-L} = \sum_{i=0}^3\sum_{j=0}^{3-i}\sum_{k=0}^{5-i-j} a_{ijk} \tilde{v}_\sigma^i \tilde{u}_\sigma^j w_\sigma^k"></span></span></a> were optimized together with those of <a class="functional-link" href="../mgga-c-mn12-l/"><code>mgga_c_mn12_l</code></a> using molecular and solid-state databases. The only constraint that was applied during the optimization was an upper bound of 25 for the absolute values of $a_{ijk}$. Compared to N12 (<a class="functional-link" href="../gga-x-n12/"><code>gga_x_n12</code></a> + <a class="functional-link" href="../gga-c-n12/"><code>gga_c_n12</code></a>), MN12-L improves the results for most of the tested molecular and solid-state properties.</p>
         </div>
         <p class="source-note">Adapted from <a href="https://arxiv.org/abs/2602.17333">Tran, Lehtola, Pittalis, and Marques, <em>Semi-Local Exchange-Correlation Approximations in Density Functional Theory</em>, arXiv:2602.17333</a>.</p>
       </section>
@@ -72,23 +55,23 @@
           <h2>Referenced Review Equations</h2>
           <div class="review-equations">
           <article class="review-equation-card" id="review-eq-eq-b00w">
-            <code>eq:b00w</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (91)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=15" title="Open page 15 of the review PDF">p. 15 ↗</a></p>
             <div class="equation" data-tex="w_\sigma = \frac{\tau_\sigma^\text{TF} - \tau_\sigma}{\tau_\sigma^\text{TF} + \tau_\sigma}
   = \frac{C_\text{F} - \tilde{t}_\sigma}{C_\text{F} + \tilde{t}_\sigma}"></div>
           </article>
 
           <article class="review-equation-card" id="review-eq-eq-v">
-            <code>eq:v</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (39)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=12" title="Open page 12 of the review PDF">p. 12 ↗</a></p>
             <div class="equation" data-tex="\tilde{v}_\sigma = \frac{\omega_\sigma n_\sigma^{1/3}}{1 + \omega_\sigma n_\sigma^{1/3}}"></div>
           </article>
 
           <article class="review-equation-card" id="review-eq-eq-ubecke">
-            <code>eq:ubecke</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (251)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=34" title="Open page 34 of the review PDF">p. 34 ↗</a></p>
             <div class="equation" data-tex="\tilde{u}(x) = \frac{\gamma x^2}{1 +\gamma x^2}"></div>
           </article>
 
           <article class="review-equation-card" id="review-eq-eq-mn12-l">
-            <code>eq:mn12-l</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (599)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=109" title="Open page 109 of the review PDF">p. 109 ↗</a></p>
             <div class="equation" data-tex="F_\text{xc}^\text{MN12-L} = \sum_{i=0}^3\sum_{j=0}^{3-i}\sum_{k=0}^{5-i-j} a_{ijk} \tilde{v}_\sigma^i \tilde{u}_\sigma^j w_\sigma^k"></div>
           </article>
 

@@ -3,14 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>mgga_x_hlta</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20261016-excerpts-v1">
-    <script defer src="../../assets/search.js?v=20261016-excerpts-v1"></script>
+    <title>mgga_x_hlta — Half-and-half meta-LDAized LDA exchange by Lehtola and Marques · Libxc Wiki</title>
+    <meta name="description" content="mgga_x_hlta: Half-and-half meta-LDAized LDA exchange by Lehtola and Marques. Meta-GGA exchange functional in Libxc, with references and BibTeX. Includes an excerpt from the Tran, Lehtola, Pittalis and Marques review.">
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261117-refs-v1">
+    <script defer src="../../assets/search.js?v=20261117-refs-v1"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
     <script defer src="../../vendor/katex/contrib/mhchem.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20261016-excerpts-v1"></script>
+    <script defer src="../../assets/detail.js?v=20261117-refs-v1"></script>
 
   </head>
   <body class="functional-page">
@@ -32,39 +33,21 @@
 
         <p class="brand">META-GGA</p>
         <h1><code class="title-code">mgga_x_hlta</code></h1>
+        <p class="functional-name">Half-and-half meta-LDAized LDA exchange by Lehtola and Marques</p>
         <div class="detail-tags"><span class="tag">meta-gga</span>
 <span class="tag">exchange</span></div>
       </header>
 
       <div class="detail-grid">
+
       <section class="callout">
         <p class="callout-label">Review excerpt</p>
         <div class="review-html">
-<p>The functionals <a class="functional-link" href="../mgga-x-lta/"><code>mgga_x_lta</code></a> and <a class="functional-link" href="../mgga-x-tlda/"><code>mgga_x_tlda</code></a> were derived by converting (with the help of <a class="review-eq-link" href="#review-eq-eq-tf-inverted">
-  <code>eq:tf-inverted</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="\tilde{n}_\sigma = \left(\frac{\tau_\sigma}{C_{\text{F}}}\right)^{3/5}"></span>
-  </span>
-</a>) the dependence on $n_{\sigma}$ in <a class="functional-link" href="../lda-x/"><code>lda_x</code></a> into a dependence on $\tau_{\sigma}$. The difference between the two functionals is that the $n_{\sigma}\to\tau_{\sigma}$ conversion is done in the exchange-energy per volume in the case of <a class="functional-link" href="../mgga-x-lta/"><code>mgga_x_lta</code></a>, and only in the exchange-energy per particle for <a class="functional-link" href="../mgga-x-tlda/"><code>mgga_x_tlda</code></a>. A more general approach is to replace $n_{\sigma}$ by</p>
+<p>The functionals <a class="functional-link" href="../mgga-x-lta/"><code>mgga_x_lta</code></a> and <a class="functional-link" href="../mgga-x-tlda/"><code>mgga_x_tlda</code></a> were derived by converting (with the help of <a class="review-eq-link" href="#review-eq-eq-tf-inverted"><span class="eq-number">Eq. (565)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="\tilde{n}_\sigma = \left(\frac{\tau_\sigma}{C_{\text{F}}}\right)^{3/5}"></span></span></a>) the dependence on $n_{\sigma}$ in <a class="functional-link" href="../lda-x/"><code>lda_x</code></a> into a dependence on $\tau_{\sigma}$. The difference between the two functionals is that the $n_{\sigma}\to\tau_{\sigma}$ conversion is done in the exchange-energy per volume in the case of <a class="functional-link" href="../mgga-x-lta/"><code>mgga_x_lta</code></a>, and only in the exchange-energy per particle for <a class="functional-link" href="../mgga-x-tlda/"><code>mgga_x_tlda</code></a>. A more general approach is to replace $n_{\sigma}$ by</p>
 <div class="equation" data-tex="n_{\sigma}^{\text{eff}}=\tilde{n}_{\sigma}^{x}n_{\sigma}^{1-x}"></div>
-<p>where $\tilde{n}_{\sigma}$ is <a class="review-eq-link" href="#review-eq-eq-tf-inverted">
-  <code>eq:tf-inverted</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="\tilde{n}_\sigma = \left(\frac{\tau_\sigma}{C_{\text{F}}}\right)^{3/5}"></span>
-  </span>
-</a> and $x$ a parameter. <a class="functional-link" href="../mgga-x-lta/"><code>mgga_x_lta</code></a> and <a class="functional-link" href="../mgga-x-tlda/"><code>mgga_x_tlda</code></a> correspond to $x=1$ and $1/4$, respectively. This leads to an enhancement factor given by</p>
+<p>where $\tilde{n}_{\sigma}$ is <a class="review-eq-link" href="#review-eq-eq-tf-inverted"><span class="eq-number">Eq. (565)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="\tilde{n}_\sigma = \left(\frac{\tau_\sigma}{C_{\text{F}}}\right)^{3/5}"></span></span></a> and $x$ a parameter. <a class="functional-link" href="../mgga-x-lta/"><code>mgga_x_lta</code></a> and <a class="functional-link" href="../mgga-x-tlda/"><code>mgga_x_tlda</code></a> correspond to $x=1$ and $1/4$, respectively. This leads to an enhancement factor given by</p>
 <div class="equation" data-tex="F_{\text{x}}^{x\text{LTA}} = \left(\frac{\tilde{t}_{\sigma}}{C_{\text{F}}}\right)^{4x/5}"></div>
-<p>This defines a new type of functional that was termed meta-LDA (MLDA), which recovers the HEG limit <a class="functional-link" href="../lda-x/"><code>lda_x</code></a>. <a class="review-eq-link" href="#review-eq-eq-fxlta">
-  <code>eq:fxlta</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="F_{\text{x}}^{x\text{LTA}} = \left(\frac{\tilde{t}_{\sigma}}{C_{\text{F}}}\right)^{4x/5}"></span>
-  </span>
-</a> has been tested on atoms (total and exchange energy) and molecules (atomization energy) for various values of the parameter $x$, and with or without correlation (e.g., <a class="functional-link" href="../mgga-c-hltapw/"><code>mgga_c_hltapw</code></a> that also uses <a class="review-eq-link" href="#review-eq-eq-nxlta">
-  <code>eq:nxlta</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="n_{\sigma}^{\text{eff}}=\tilde{n}_{\sigma}^{x}n_{\sigma}^{1-x}"></span>
-  </span>
-</a>). It was shown that choosing $x=1/2$ (<a class="functional-link" href="../mgga-x-hlta/"><code>mgga_x_hlta</code></a>) and adding <a class="functional-link" href="../mgga-c-hltapw/"><code>mgga_c_hltapw</code></a> for correlation leads to a mean error for the atomization energy of molecules that is one third of the mean error obtained with LDA. This error is, however, still much larger than the errors from standard GGA functionals like BLYP (<a class="functional-link" href="../gga-x-b88/"><code>gga_x_b88</code></a> + <a class="functional-link" href="../gga-c-lyp/"><code>gga_c_lyp</code></a>) or PBE (<a class="functional-link" href="../gga-x-pbe/"><code>gga_x_pbe</code></a> + <a class="functional-link" href="../gga-c-pbe/"><code>gga_c_pbe</code></a>).</p>
+<p>This defines a new type of functional that was termed meta-LDA (MLDA), which recovers the HEG limit <a class="functional-link" href="../lda-x/"><code>lda_x</code></a>. <a class="review-eq-link" href="#review-eq-eq-fxlta"><span class="eq-number">Eq. (672)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="F_{\text{x}}^{x\text{LTA}} = \left(\frac{\tilde{t}_{\sigma}}{C_{\text{F}}}\right)^{4x/5}"></span></span></a> has been tested on atoms (total and exchange energy) and molecules (atomization energy) for various values of the parameter $x$, and with or without correlation (e.g., <a class="functional-link" href="../mgga-c-hltapw/"><code>mgga_c_hltapw</code></a> that also uses <a class="review-eq-link" href="#review-eq-eq-nxlta"><span class="eq-number">Eq. (671)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="n_{\sigma}^{\text{eff}}=\tilde{n}_{\sigma}^{x}n_{\sigma}^{1-x}"></span></span></a>). It was shown that choosing $x=1/2$ (<a class="functional-link" href="../mgga-x-hlta/"><code>mgga_x_hlta</code></a>) and adding <a class="functional-link" href="../mgga-c-hltapw/"><code>mgga_c_hltapw</code></a> for correlation leads to a mean error for the atomization energy of molecules that is one third of the mean error obtained with LDA. This error is, however, still much larger than the errors from standard GGA functionals like BLYP (<a class="functional-link" href="../gga-x-b88/"><code>gga_x_b88</code></a> + <a class="functional-link" href="../gga-c-lyp/"><code>gga_c_lyp</code></a>) or PBE (<a class="functional-link" href="../gga-x-pbe/"><code>gga_x_pbe</code></a> + <a class="functional-link" href="../gga-c-pbe/"><code>gga_c_pbe</code></a>).</p>
         </div>
         <p class="source-note">Adapted from <a href="https://arxiv.org/abs/2602.17333">Tran, Lehtola, Pittalis, and Marques, <em>Semi-Local Exchange-Correlation Approximations in Density Functional Theory</em>, arXiv:2602.17333</a>.</p>
       </section>
@@ -73,17 +56,17 @@
           <h2>Referenced Review Equations</h2>
           <div class="review-equations">
           <article class="review-equation-card" id="review-eq-eq-tf-inverted">
-            <code>eq:tf-inverted</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (565)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=103" title="Open page 103 of the review PDF">p. 103 ↗</a></p>
             <div class="equation" data-tex="\tilde{n}_\sigma = \left(\frac{\tau_\sigma}{C_{\text{F}}}\right)^{3/5}"></div>
           </article>
 
           <article class="review-equation-card" id="review-eq-eq-fxlta">
-            <code>eq:fxlta</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (672)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=123" title="Open page 123 of the review PDF">p. 123 ↗</a></p>
             <div class="equation" data-tex="F_{\text{x}}^{x\text{LTA}} = \left(\frac{\tilde{t}_{\sigma}}{C_{\text{F}}}\right)^{4x/5}"></div>
           </article>
 
           <article class="review-equation-card" id="review-eq-eq-nxlta">
-            <code>eq:nxlta</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (671)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=123" title="Open page 123 of the review PDF">p. 123 ↗</a></p>
             <div class="equation" data-tex="n_{\sigma}^{\text{eff}}=\tilde{n}_{\sigma}^{x}n_{\sigma}^{1-x}"></div>
           </article>
 

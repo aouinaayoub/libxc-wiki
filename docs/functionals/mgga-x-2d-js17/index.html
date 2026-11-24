@@ -3,14 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>mgga_x_2d_js17</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20261016-excerpts-v1">
-    <script defer src="../../assets/search.js?v=20261016-excerpts-v1"></script>
+    <title>mgga_x_2d_js17 — JS17 meta-GGA for 2D · Libxc Wiki</title>
+    <meta name="description" content="mgga_x_2d_js17: JS17 meta-GGA for 2D. Meta-GGA exchange functional in Libxc, with references and BibTeX. Includes an excerpt from the Tran, Lehtola, Pittalis and Marques review.">
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261117-refs-v1">
+    <script defer src="../../assets/search.js?v=20261117-refs-v1"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
     <script defer src="../../vendor/katex/contrib/mhchem.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20261016-excerpts-v1"></script>
+    <script defer src="../../assets/detail.js?v=20261117-refs-v1"></script>
 
   </head>
   <body class="functional-page">
@@ -32,23 +33,20 @@
 
         <p class="brand">META-GGA</p>
         <h1><code class="title-code">mgga_x_2d_js17</code></h1>
+        <p class="functional-name">JS17 meta-GGA for 2D</p>
         <div class="detail-tags"><span class="tag">meta-gga</span>
 <span class="tag">exchange</span>
 <span class="tag">dim2</span></div>
       </header>
 
       <div class="detail-grid">
+
       <section class="callout">
         <p class="callout-label">Review excerpt</p>
         <div class="review-html">
 <p>The construction of this functional for 2D systems starts with a density matrix expansion for the exchange hole. This expansion is required to satisfy the HEG limit (<a class="functional-link" href="../lda-x-2d/"><code>lda_x_2d</code></a>) and two further conditions on the behavior with respect to the distance $\vec{r}_{12}=\vec{r}_2-\vec{r}_1$ from the reference electron, namely the second-order term in the expansion in $\left\vert\vec{r}_{12}\right\vert$ and the large-$\left\vert\vec{r}_{12}\right\vert$ limit. The resulting enhancement factor is given by</p>
 <div class="equation" data-tex="F_{\text{x}}^{\text{JS17-2D}} = \frac{1}{f_{\sigma}} + \frac{2}{5}\frac{R_{\sigma}}{f_{\sigma}^3}"></div>
-<p>where we have neglected the dependence on the paramagnetic current density $\bj_\sigma$ (<a class="review-eq-link" href="#review-eq-eq-j-sigma">
-  <code>eq:j-sigma</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="\bj_\sigma= \text{Im}\left[ \sum_{i}  f_{i \sigma}  \psi^*_{i \sigma} \nabla \psi_{i \sigma} \right]"></span>
-  </span>
-</a>) that was introduced for gauge invariance. Furthermore</p>
+<p>where we have neglected the dependence on the paramagnetic current density $\bj_\sigma$ (<a class="review-eq-link" href="#review-eq-eq-j-sigma"><span class="eq-number">Eq. (95)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="\bj_\sigma= \text{Im}\left[ \sum_{i}  f_{i \sigma}  \psi^*_{i \sigma} \nabla \psi_{i \sigma} \right]"></span></span></a>) that was introduced for gauge invariance. Furthermore</p>
 <div class="equation" data-tex="\begin{aligned}
 f_{\sigma} = &amp; \Big[1+90(2\lambda-1)^2 p_{\sigma}^{2\text{D}}  \\
 &amp; + \beta(2\lambda-1)^4 \left(p_{\sigma}^{2\text{D}}\right)^2 \Big]^{1/15}
@@ -58,17 +56,7 @@ f_{\sigma} = &amp; \Big[1+90(2\lambda-1)^2 p_{\sigma}^{2\text{D}}  \\
 R_{\sigma} = 1 + \frac{128}{21}(2\lambda-1)^2 p_{\sigma}^{2\text{D}}  \\
 + \frac{1}{4\pi}\left[3\left(\lambda^2-\lambda+ \frac{1}{2}\right)\left(\tilde{t}_{\sigma}^{2\text{D}}- 4\pi\right) -\tilde{t}_{\sigma}^{2\text{D}}\right]
 \end{aligned}"></div>
-<p>with $\lambda=0.74$ (fit to EXX-KLI results) and $\beta=30$ such that $F_{\text{x}}^{\text{JS17-2D}}$ is smooth at $p_\sigma^{2\text{D}}\approx0$. In these equations, $p_{\sigma}^{2\text{D}}$ is given by <a class="review-eq-link" href="#review-eq-eq-p-sigma2d">
-  <code>eq:p-sigma2d</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="p_\sigma^{2\text{D}} = \left(s_\sigma^{2\text{D}}\right)^2"></span>
-  </span>
-</a> and $\tilde{t}_{\sigma}^{2\text{D}}$ is given by <a class="review-eq-link" href="#review-eq-eq-t-sigma">
-  <code>eq:t-sigma</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="\tilde{t}_\sigma^{m\text{D}} = \frac{\tau_\sigma}{n_\sigma^\frac{m+2}{m}}"></span>
-  </span>
-</a> with $m=2$.</p>
+<p>with $\lambda=0.74$ (fit to EXX-KLI results) and $\beta=30$ such that $F_{\text{x}}^{\text{JS17-2D}}$ is smooth at $p_\sigma^{2\text{D}}\approx0$. In these equations, $p_{\sigma}^{2\text{D}}$ is given by <a class="review-eq-link" href="#review-eq-eq-p-sigma2d"><span class="eq-number">Eq. (56)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="p_\sigma^{2\text{D}} = \left(s_\sigma^{2\text{D}}\right)^2"></span></span></a> and $\tilde{t}_{\sigma}^{2\text{D}}$ is given by <a class="review-eq-link" href="#review-eq-eq-t-sigma"><span class="eq-number">Eq. (77)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="\tilde{t}_\sigma^{m\text{D}} = \frac{\tau_\sigma}{n_\sigma^\frac{m+2}{m}}"></span></span></a> with $m=2$.</p>
 <p>Calculations on 2D systems (parabolically confined quantum dots and Gaussian quantum dots) show an agreement with EXX-KLI that is improved compared to the other 2D functionals <a class="functional-link" href="../gga-x-2d-b86-mgc/"><code>gga_x_2d_b86_mgc</code></a>, <a class="functional-link" href="../gga-x-2d-b88/"><code>gga_x_2d_b88</code></a>, and <a class="functional-link" href="../mgga-x-2d-prhg07/"><code>mgga_x_2d_prhg07</code></a>.</p>
         </div>
         <p class="source-note">Adapted from <a href="https://arxiv.org/abs/2602.17333">Tran, Lehtola, Pittalis, and Marques, <em>Semi-Local Exchange-Correlation Approximations in Density Functional Theory</em>, arXiv:2602.17333</a>.</p>
@@ -78,17 +66,17 @@ R_{\sigma} = 1 + \frac{128}{21}(2\lambda-1)^2 p_{\sigma}^{2\text{D}}  \\
           <h2>Referenced Review Equations</h2>
           <div class="review-equations">
           <article class="review-equation-card" id="review-eq-eq-j-sigma">
-            <code>eq:j-sigma</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (95)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=15" title="Open page 15 of the review PDF">p. 15 ↗</a></p>
             <div class="equation" data-tex="\bj_\sigma= \text{Im}\left[ \sum_{i}  f_{i \sigma}  \psi^*_{i \sigma} \nabla \psi_{i \sigma} \right]"></div>
           </article>
 
           <article class="review-equation-card" id="review-eq-eq-p-sigma2d">
-            <code>eq:p-sigma2d</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (56)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=13" title="Open page 13 of the review PDF">p. 13 ↗</a></p>
             <div class="equation" data-tex="p_\sigma^{2\text{D}} = \left(s_\sigma^{2\text{D}}\right)^2"></div>
           </article>
 
           <article class="review-equation-card" id="review-eq-eq-t-sigma">
-            <code>eq:t-sigma</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (77)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=14" title="Open page 14 of the review PDF">p. 14 ↗</a></p>
             <div class="equation" data-tex="\tilde{t}_\sigma^{m\text{D}} = \frac{\tau_\sigma}{n_\sigma^\frac{m+2}{m}}"></div>
           </article>
 

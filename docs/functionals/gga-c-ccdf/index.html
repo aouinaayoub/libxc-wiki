@@ -3,14 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>gga_c_ccdf</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20261016-excerpts-v1">
-    <script defer src="../../assets/search.js?v=20261016-excerpts-v1"></script>
+    <title>gga_c_ccdf — ccDF: coupled-cluster motivated density functional · Libxc Wiki</title>
+    <meta name="description" content="gga_c_ccdf: ccDF: coupled-cluster motivated density functional. GGA correlation functional in Libxc, with references and BibTeX. Includes an excerpt from the Tran, Lehtola, Pittalis and Marques review.">
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261117-refs-v1">
+    <script defer src="../../assets/search.js?v=20261117-refs-v1"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
     <script defer src="../../vendor/katex/contrib/mhchem.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20261016-excerpts-v1"></script>
+    <script defer src="../../assets/detail.js?v=20261117-refs-v1"></script>
 
   </head>
   <body class="functional-page">
@@ -32,27 +33,19 @@
 
         <p class="brand">GGA</p>
         <h1><code class="title-code">gga_c_ccdf</code></h1>
+        <p class="functional-name">ccDF: coupled-cluster motivated density functional</p>
         <div class="detail-tags"><span class="tag">gga</span>
 <span class="tag">correlation</span></div>
       </header>
 
       <div class="detail-grid">
+
       <section class="callout">
         <p class="callout-label">Review excerpt</p>
         <div class="review-html">
-<p>Coupled-cluster methods<sup class="citation-marker"><a href="#review-ref-Cizek1966-4256">647</a>,<a href="#review-ref-Cizek1991-91">648</a></sup> are able to provide highly accurate correlation energies. Therefore, results or quantities obtained from coupled-cluster calculations can be used for the development of density functionals. Following this strategy, Margraf et al.<sup class="citation-marker"><a href="#review-ref-Margraf2019-244116">646</a></sup> calculated the coupled-cluster with singles and doubles correlation energy density $e_{\text{c}}^{\text{cc}}$ for the He isoelectronic series from H$^{-}$ to Ne$^{8+}$. Then, using a simple function of the <a class="functional-link" href="../lda-c-wigner/"><code>lda_c_wigner</code></a> type (<a class="review-eq-link" href="#review-eq-eq-ecow">
-  <code>eq:ecow</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="e_\text{c}^\text{OW}(r_s) = -\left(1-\zeta^2\right)\frac{a}{b + r_s}"></span>
-  </span>
-</a> for the spin-polarized version), they performed a fit to the data points ($n$, $e_{\text{c}}^{\text{cc}}$) and obtained $a=\left(c_1/c_2\right)/\left(4\pi/3\right)^{1/3}$ and $b=a/c_1$, with $c_1=0.0468$ and $c_2=0.023$ for the parameters in <a class="review-eq-link" href="#review-eq-eq-ecow">
-  <code>eq:ecow</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="e_\text{c}^\text{OW}(r_s) = -\left(1-\zeta^2\right)\frac{a}{b + r_s}"></span>
-  </span>
-</a>. In a second step, this Wigner-type function is multiplied by another function depending on the reduced-density gradient $s$:</p>
+<p>Coupled-cluster methods<sup class="citation-marker"><a href="#review-ref-Cizek1966-4256">647</a>,<a href="#review-ref-Cizek1991-91">648</a></sup> are able to provide highly accurate correlation energies. Therefore, results or quantities obtained from coupled-cluster calculations can be used for the development of density functionals. Following this strategy, Margraf et al.<sup class="citation-marker"><a href="#review-ref-Margraf2019-244116">646</a></sup> calculated the coupled-cluster with singles and doubles correlation energy density $e_{\text{c}}^{\text{cc}}$ for the He isoelectronic series from H$^{-}$ to Ne$^{8+}$. Then, using a simple function of the <a class="functional-link" href="../lda-c-wigner/"><code>lda_c_wigner</code></a> type (<a class="review-eq-link" href="#review-eq-eq-ecow"><span class="eq-number">Eq. (293)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="e_\text{c}^\text{OW}(r_s) = -\left(1-\zeta^2\right)\frac{a}{b + r_s}"></span></span></a> for the spin-polarized version), they performed a fit to the data points ($n$, $e_{\text{c}}^{\text{cc}}$) and obtained $a=\left(c_1/c_2\right)/\left(4\pi/3\right)^{1/3}$ and $b=a/c_1$, with $c_1=0.0468$ and $c_2=0.023$ for the parameters in <a class="review-eq-link" href="#review-eq-eq-ecow"><span class="eq-number">Eq. (293)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="e_\text{c}^\text{OW}(r_s) = -\left(1-\zeta^2\right)\frac{a}{b + r_s}"></span></span></a>. In a second step, this Wigner-type function is multiplied by another function depending on the reduced-density gradient $s$:</p>
 <div class="equation" data-tex="e_{\text{c}}^{\text{ccDF}} = -\frac{a}{b+r_s}\left[1-\frac{\displaystyle c_3}{\displaystyle 1+\E^{-c_4\left(s-c_5\right)}}\right]"></div>
-<p>where the parameters $c_3=0.544$, $c_4=23.401$, and $c_5=0.479$ were obtained by fitting to the coupled-cluster correlation energies of the atoms of the He isoelectronic series. Note that only the spin-unpolarized form of the functional was presented in <sup class="citation-marker"><a href="#review-ref-Margraf2019-244116">646</a></sup>.</p>
+<p>where the parameters $c_3=0.544$, $c_4=23.401$, and $c_5=0.479$ were obtained by fitting to the coupled-cluster correlation energies of the atoms of the He isoelectronic series. Note that only the spin-unpolarized form of the functional was presented in ref. <span class="citation-ref"><a href="#review-ref-Margraf2019-244116">646</a></span>.</p>
 <p>The functional <a class="functional-link" href="../gga-c-ccdf/"><code>gga_c_ccdf</code></a> is more accurate than <a class="functional-link" href="../gga-c-pbe/"><code>gga_c_pbe</code></a> for the correlation energy of the light He and Be atoms. However, for heavier atoms it significantly underestimates the magnitude of the correlation energy and is less accurate than <a class="functional-link" href="../gga-c-pbe/"><code>gga_c_pbe</code></a>. This is explained by the fact that <a class="functional-link" href="../gga-c-ccdf/"><code>gga_c_ccdf</code></a> is based on <a class="functional-link" href="../lda-c-wigner/"><code>lda_c_wigner</code></a> that in principle does not account for parallel-spin correlation, which is more important in heavier atoms.</p>
         </div>
         <p class="source-note">Adapted from <a href="https://arxiv.org/abs/2602.17333">Tran, Lehtola, Pittalis, and Marques, <em>Semi-Local Exchange-Correlation Approximations in Density Functional Theory</em>, arXiv:2602.17333</a>.</p>
@@ -62,7 +55,7 @@
           <h2>Referenced Review Equations</h2>
           <div class="review-equations">
           <article class="review-equation-card" id="review-eq-eq-ecow">
-            <code>eq:ecow</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (293)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=41" title="Open page 41 of the review PDF">p. 41 ↗</a></p>
             <div class="equation" data-tex="e_\text{c}^\text{OW}(r_s) = -\left(1-\zeta^2\right)\frac{a}{b + r_s}"></div>
           </article>
 

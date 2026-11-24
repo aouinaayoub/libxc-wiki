@@ -3,14 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>mgga_x_scan</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20261016-excerpts-v1">
-    <script defer src="../../assets/search.js?v=20261016-excerpts-v1"></script>
+    <title>mgga_x_scan — SCAN exchange of Sun, Ruzsinszky, and Perdew · Libxc Wiki</title>
+    <meta name="description" content="mgga_x_scan: SCAN exchange of Sun, Ruzsinszky, and Perdew. Meta-GGA exchange functional in Libxc, with references and BibTeX. Includes an excerpt from the Tran, Lehtola, Pittalis and Marques review.">
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261117-refs-v1">
+    <script defer src="../../assets/search.js?v=20261117-refs-v1"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
     <script defer src="../../vendor/katex/contrib/mhchem.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20261016-excerpts-v1"></script>
+    <script defer src="../../assets/detail.js?v=20261117-refs-v1"></script>
 
   </head>
   <body class="functional-page">
@@ -32,15 +33,17 @@
 
         <p class="brand">META-GGA</p>
         <h1><code class="title-code">mgga_x_scan</code></h1>
+        <p class="functional-name">SCAN exchange of Sun, Ruzsinszky, and Perdew</p>
         <div class="detail-tags"><span class="tag">meta-gga</span>
 <span class="tag">exchange</span></div>
       </header>
 
       <div class="detail-grid">
+
       <section class="callout">
         <p class="callout-label">Review excerpt</p>
         <div class="review-html">
-<p>The <em>strongly constrained and appropriately normed</em> (SCAN) exchange functional, together with its correlation companion <a class="functional-link" href="../mgga-c-scan/"><code>mgga_c_scan</code></a>, was built to obey a large number of exact conditions (17 in total!). The price to pay for this is, of course, complexity, and this is indeed one of the most complex functionals ever proposed.</p>
+<p>The <em>strongly constrained and appropriately normed</em> (SCAN) exchange functional, together with its correlation companion <a class="functional-link" href="../mgga-c-scan/"><code>mgga_c_scan</code></a>, was built in order to obey a large number of exact conditions (17 in total!). The price to pay for this is, of course, complexity, and this is indeed one of the most complex functionals ever proposed.</p>
 <p>The idea is to use the iso-orbital indicator $\alpha_\sigma$ to interpolate between the various regimes, each one being well-described by a different form. Due to its connection to the electron-localization function,<sup class="citation-marker"><a href="#review-ref-Becke1990-JCP-5397">240</a>,<a href="#review-ref-Savin1997-1808">695</a>,<a href="#review-ref-Burnus2005-010501">246</a></sup> $\alpha_\sigma$ can be used to measure the localization of the electrons and to discern between different kinds of bonds. In regions of space dominated by a single covalent bond $\alpha_\sigma\approx0$, while in the case of a metallic bond $\alpha_\sigma\approx1$, and for a weak bond $\alpha_\sigma\gg1$. In practice, the interpolation is performed between $\alpha_\sigma=0$ and $\alpha_\sigma=1$, while the region relevant for weak bonds (large $\alpha_\sigma$) is obtained through an extrapolation. Based on these arguments, Sun et al.<sup class="citation-marker"><a href="#review-ref-Sun2015-PRL-36402">294</a></sup> proposed the following enhancement factor:</p>
 <div class="equation" data-tex="\begin{aligned}
 F_\text{x}^\text{SCAN} = &amp; \left\{h_{\text{x}}^1(s_\sigma,\alpha_\sigma)
@@ -50,19 +53,9 @@ F_\text{x}^\text{SCAN} = &amp; \left\{h_{\text{x}}^1(s_\sigma,\alpha_\sigma)
 <p>The interpolating function $f$ is chosen as</p>
 <div class="equation" data-tex="f(\alpha) = \E^{-c_1\alpha/\left(1-\alpha\right)}\theta(1-\alpha)
   - d \E^{c_2/\left(1-\alpha\right)}\theta(\alpha - 1)"></div>
-<p>where $c_1$, $c_2$, and $d$ are parameters and $\theta$ is the step function. As <a class="review-eq-link" href="#review-eq-eq-scanfalpha">
-  <code>eq:scanfalpha</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="f(\alpha) = \E^{-c_1\alpha/\left(1-\alpha\right)}\theta(1-\alpha)
-  - d \E^{c_2/\left(1-\alpha\right)}\theta(\alpha - 1)"></span>
-  </span>
-</a> is also used by <a class="functional-link" href="../mgga-c-scan/"><code>mgga_c_scan</code></a>, the spin $\sigma$ and exchange (x) or correlation (c) indices are not shown.</p>
-<p>To construct the function $h_{\text{x}}^1$, which describes the $\alpha\approx1$ regime, Sun et al.<sup class="citation-marker"><a href="#review-ref-Sun2015-PRL-36402">294</a></sup> used a <a class="functional-link" href="../gga-x-pbe/"><code>gga_x_pbe</code></a> form, <a class="review-eq-link" href="#review-eq-eq-pbeenh">
-  <code>eq:pbeenh</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="F_\text{x}^{\text{PBE}} = 1 + \kappa\left[1 - \frac{\kappa}{\kappa + f_0(s_\sigma)}\right]"></span>
-  </span>
-</a>, where $f_0$ is constructed by using the fourth-order density-gradient expansion for exchange,<sup class="citation-marker"><a href="#review-ref-Svendsen1996-17402">285</a></sup> which is valid for small $s_\sigma$ and $\alpha_\sigma\approx1$:</p>
+<p>where $c_1$, $c_2$, and $d$ are parameters and $\theta$ is the step function. As <a class="review-eq-link" href="#review-eq-eq-scanfalpha"><span class="eq-number">Eq. (615)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="f(\alpha) = \E^{-c_1\alpha/\left(1-\alpha\right)}\theta(1-\alpha)
+  - d \E^{c_2/\left(1-\alpha\right)}\theta(\alpha - 1)"></span></span></a> is also used by <a class="functional-link" href="../mgga-c-scan/"><code>mgga_c_scan</code></a>, the spin $\sigma$ and exchange (x) or correlation (c) indices are not shown.</p>
+<p>To construct the function $h_{\text{x}}^1$, which describes the $\alpha\approx1$ regime, Sun et al.<sup class="citation-marker"><a href="#review-ref-Sun2015-PRL-36402">294</a></sup> used a <a class="functional-link" href="../gga-x-pbe/"><code>gga_x_pbe</code></a> form, <a class="review-eq-link" href="#review-eq-eq-pbeenh"><span class="eq-number">Eq. (382)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="F_\text{x}^{\text{PBE}} = 1 + \kappa\left[1 - \frac{\kappa}{\kappa + f_0(s_\sigma)}\right]"></span></span></a>, where $f_0$ is constructed by using the fourth-order density-gradient expansion for exchange,<sup class="citation-marker"><a href="#review-ref-Svendsen1996-17402">285</a></sup> which is valid for small $s_\sigma$ and $\alpha_\sigma\approx1$:</p>
 <div class="equation" data-tex="\begin{aligned}
 f_0^\text{SCAN}(s_\sigma,\alpha_\sigma) = \mu^\text{GE}s_\sigma^2 + b_4 s_\sigma^4
   \E^{-\left(\left\vert b_4\right\vert/\mu^\text{GE}\right)s_\sigma^2}
@@ -73,18 +66,8 @@ f_0^\text{SCAN}(s_\sigma,\alpha_\sigma) = \mu^\text{GE}s_\sigma^2 + b_4 s_\sigma
 <p>The constant $h_{\text{x}}^0=1.174$ was fixed by imposing the strict LO bound for two-electron densities.<sup class="citation-marker"><a href="#review-ref-Perdew2014-18A533">725</a></sup> Finally, the function $g$ is defined by</p>
 <div class="equation" data-tex="g(s_\sigma) = 1 - \E^{-a_1/\sqrt{s_\sigma}}"></div>
 <p>with the parameter $a_1=4.9479$ chosen such that the functional reproduces the exact exchange energy of the H atom.</p>
-<p>The four remaining parameters, namely $c_\text{1x}=0.667$, $c_\text{2x}=0.8$, and $d_\text{x}=1.24$ in <a class="review-eq-link" href="#review-eq-eq-scanfalpha">
-  <code>eq:scanfalpha</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="f(\alpha) = \E^{-c_1\alpha/\left(1-\alpha\right)}\theta(1-\alpha)
-  - d \E^{c_2/\left(1-\alpha\right)}\theta(\alpha - 1)"></span>
-  </span>
-</a>, and $\kappa=0.065$ in <a class="review-eq-link" href="#review-eq-eq-pbeenh">
-  <code>eq:pbeenh</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="F_\text{x}^{\text{PBE}} = 1 + \kappa\left[1 - \frac{\kappa}{\kappa + f_0(s_\sigma)}\right]"></span>
-  </span>
-</a> and in the definition of $b_4$, were fit together with the three parameters of <a class="functional-link" href="../mgga-c-scan/"><code>mgga_c_scan</code></a> ($c_\text{1c}$, $c_\text{2c}$, and $d_\text{c}$) by requiring that SCAN reproduce accurately the following quantities:</p>
+<p>The four remaining parameters, namely $c_\text{1x}=0.667$, $c_\text{2x}=0.8$, and $d_\text{x}=1.24$ in <a class="review-eq-link" href="#review-eq-eq-scanfalpha"><span class="eq-number">Eq. (615)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="f(\alpha) = \E^{-c_1\alpha/\left(1-\alpha\right)}\theta(1-\alpha)
+  - d \E^{c_2/\left(1-\alpha\right)}\theta(\alpha - 1)"></span></span></a>, and $\kappa=0.065$ in <a class="review-eq-link" href="#review-eq-eq-pbeenh"><span class="eq-number">Eq. (382)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="F_\text{x}^{\text{PBE}} = 1 + \kappa\left[1 - \frac{\kappa}{\kappa + f_0(s_\sigma)}\right]"></span></span></a> and in the definition of $b_4$, were fit together with the three parameters of <a class="functional-link" href="../mgga-c-scan/"><code>mgga_c_scan</code></a> ($c_\text{1c}$, $c_\text{2c}$, and $d_\text{c}$) by requiring that SCAN reproduce accurately the following quantities:</p>
 <ol class="review-list" type="i">
 <li><p>the large nuclear charge $Z$ asymptotic coefficients of the xc energy of rare-gas atoms,<sup class="citation-marker"><a href="#review-ref-Elliott2009-1485">291</a>,<a href="#review-ref-Constantin2011-186406">292</a>,<a href="#review-ref-Burke2014-4834">575</a></sup></p></li>
 <li><p>the binding energy curve of $\ce{Ar2}$,<sup class="citation-marker"><a href="#review-ref-Patkowski2005-2031">726</a></sup></p></li>
@@ -99,13 +82,13 @@ f_0^\text{SCAN}(s_\sigma,\alpha_\sigma) = \mu^\text{GE}s_\sigma^2 + b_4 s_\sigma
           <h2>Referenced Review Equations</h2>
           <div class="review-equations">
           <article class="review-equation-card" id="review-eq-eq-scanfalpha">
-            <code>eq:scanfalpha</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (615)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=113" title="Open page 113 of the review PDF">p. 113 ↗</a></p>
             <div class="equation" data-tex="f(\alpha) = \E^{-c_1\alpha/\left(1-\alpha\right)}\theta(1-\alpha)
   - d \E^{c_2/\left(1-\alpha\right)}\theta(\alpha - 1)"></div>
           </article>
 
           <article class="review-equation-card" id="review-eq-eq-pbeenh">
-            <code>eq:pbeenh</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (382)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=58" title="Open page 58 of the review PDF">p. 58 ↗</a></p>
             <div class="equation" data-tex="F_\text{x}^{\text{PBE}} = 1 + \kappa\left[1 - \frac{\kappa}{\kappa + f_0(s_\sigma)}\right]"></div>
           </article>
 

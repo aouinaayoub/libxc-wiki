@@ -3,14 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>gga_c_sogga11</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20261016-excerpts-v1">
-    <script defer src="../../assets/search.js?v=20261016-excerpts-v1"></script>
+    <title>gga_c_sogga11 — Second-order generalized gradient approximation 2011 · Libxc Wiki</title>
+    <meta name="description" content="gga_c_sogga11: Second-order generalized gradient approximation 2011. GGA correlation functional in Libxc, with references and BibTeX. Includes an excerpt from the Tran, Lehtola, Pittalis and Marques review.">
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261117-refs-v1">
+    <script defer src="../../assets/search.js?v=20261117-refs-v1"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
     <script defer src="../../vendor/katex/contrib/mhchem.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20261016-excerpts-v1"></script>
+    <script defer src="../../assets/detail.js?v=20261117-refs-v1"></script>
 
   </head>
   <body class="functional-page">
@@ -32,11 +33,13 @@
 
         <p class="brand">GGA</p>
         <h1><code class="title-code">gga_c_sogga11</code></h1>
+        <p class="functional-name">Second-order generalized gradient approximation 2011</p>
         <div class="detail-tags"><span class="tag">gga</span>
 <span class="tag">correlation</span></div>
       </header>
 
       <div class="detail-grid">
+
       <section class="callout">
         <p class="callout-label">Review excerpt</p>
         <div class="review-html">
@@ -45,15 +48,10 @@
 e_\text{c}^\text{SOGGA11} = &amp; e_\text{c}^\text{PW-LDA}(r_s,\zeta)  \\
   &amp; \times\left[g_1(r_s, \zeta, t) + g_2(r_s, \zeta, t)\right]
 \end{aligned}"></div>
-<p>where $e_\text{c}^\text{PW-LDA}$ is <a class="functional-link" href="../lda-c-pw/"><code>lda_c_pw</code></a> and (compare to <a class="review-eq-link" href="#review-eq-eq-sogga11gs">
-  <code>eq:sogga11gs</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="\begin{aligned}
+<p>where $e_\text{c}^\text{PW-LDA}$ is <a class="functional-link" href="../lda-c-pw/"><code>lda_c_pw</code></a> and (compare to <a class="review-eq-link" href="#review-eq-eq-sogga11gs"><span class="eq-number">Eq. (428)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="\begin{aligned}
 g_1(s_\sigma) =&amp; \sum_{i=0}^m a_i \left( 1 - \frac{1}{1 + \frac{\mu}{\kappa} s_\sigma^2} \right)^i \\
     g_2(s_\sigma) =&amp; \sum_{i=0}^m b_i \left( 1 - \E^{-\mu s_\sigma^2/\kappa} \right)^i
-\end{aligned}"></span>
-  </span>
-</a>)</p>
+\end{aligned}"></span></span></a>)</p>
 
 <div class="equation" data-tex="\begin{aligned}
 g_1(r_s, \zeta, t) =&amp; \sum_{i=0}^m a_i \left[ 1 - \frac{1}{1 + y(r_s, \zeta, t)} \right]^i \\
@@ -61,26 +59,11 @@ g_1(r_s, \zeta, t) =&amp; \sum_{i=0}^m a_i \left[ 1 - \frac{1}{1 + y(r_s, \zeta,
 \end{aligned}"></div>
 <p>with the function $y(r_s, \zeta, t)$ defined as</p>
 <div class="equation" data-tex="y(r_s, \zeta, t) = -\frac{\beta\phi_{2/3}^3t^2}{e_\text{c}^\text{PW-LDA}(r_s,\zeta)}"></div>
-<p>The HEG limit imposes the constraint $a_0+b_0=1$, while the density-gradient expansion to second order implies $\beta=\beta^{\text{MB}}$, coupled with $a_1+b_1=-1$. With these constraints imposed, the parameters $a_i$ and $b_i$ in <a class="review-eq-link" href="#review-eq-eq-g1sogga">
-  <code>eq:g1sogga</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="\begin{aligned}
+<p>The HEG limit imposes the constraint $a_0+b_0=1$, while the density-gradient expansion to second order implies $\beta=\beta^{\text{MB}}$, coupled with $a_1+b_1=-1$. With these constraints imposed, the parameters $a_i$ and $b_i$ in <a class="review-eq-link" href="#review-eq-eq-g1sogga"><span class="eq-number">Eq. (511)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="\begin{aligned}
 g_1(r_s, \zeta, t) =&amp; \sum_{i=0}^m a_i \left[ 1 - \frac{1}{1 + y(r_s, \zeta, t)} \right]^i \\
     g_2(r_s, \zeta, t) =&amp; \sum_{i=0}^m b_i \left[ 1 - \E^{-y(r_s, \zeta, t)} \right]^i
-\end{aligned}"></span>
-  </span>
-</a> (with $m=5$) were optimized together with <a class="functional-link" href="../gga-x-sogga11/"><code>gga_x_sogga11</code></a>. Note that <a class="review-eq-link" href="#review-eq-eq-ysogga11">
-  <code>eq:ysogga11</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="y(r_s, \zeta, t) = -\frac{\beta\phi_{2/3}^3t^2}{e_\text{c}^\text{PW-LDA}(r_s,\zeta)}"></span>
-  </span>
-</a> is dimensionless, and that it is the leading order term in the expansion of $H_0$ (<a class="review-eq-link" href="#review-eq-eq-ggac-pw91h0">
-  <code>eq:ggac:pw91h0</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="H_0(\phi_{2/3}, t, A) = \gamma \phi_{2/3}^3 \ln\left[1 + \frac{\beta}{\gamma}
-  \frac{t^2 + A t^4}{1 + A (t^2 + A t^4)}\right]"></span>
-  </span>
-</a>) in powers of $t$.</p>
+\end{aligned}"></span></span></a> (with $m=5$) were optimized together with <a class="functional-link" href="../gga-x-sogga11/"><code>gga_x_sogga11</code></a>. It is relatively easy to see that <a class="review-eq-link" href="#review-eq-eq-ysogga11"><span class="eq-number">Eq. (512)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="y(r_s, \zeta, t) = -\frac{\beta\phi_{2/3}^3t^2}{e_\text{c}^\text{PW-LDA}(r_s,\zeta)}"></span></span></a> is dimensionless, and that it is the leading order term in the expansion of $H_0$ (<a class="review-eq-link" href="#review-eq-eq-ggac-pw91h0"><span class="eq-number">Eq. (469)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="H_0(\phi_{2/3}, t, A) = \gamma \phi_{2/3}^3 \ln\left[1 + \frac{\beta}{\gamma}
+  \frac{t^2 + A t^4}{1 + A (t^2 + A t^4)}\right]"></span></span></a>) in powers of $t$.</p>
         </div>
         <p class="source-note">Adapted from <a href="https://arxiv.org/abs/2602.17333">Tran, Lehtola, Pittalis, and Marques, <em>Semi-Local Exchange-Correlation Approximations in Density Functional Theory</em>, arXiv:2602.17333</a>.</p>
       </section>
@@ -89,7 +72,7 @@ g_1(r_s, \zeta, t) =&amp; \sum_{i=0}^m a_i \left[ 1 - \frac{1}{1 + y(r_s, \zeta,
           <h2>Referenced Review Equations</h2>
           <div class="review-equations">
           <article class="review-equation-card" id="review-eq-eq-sogga11gs">
-            <code>eq:sogga11gs</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (428)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=69" title="Open page 69 of the review PDF">p. 69 ↗</a></p>
             <div class="equation" data-tex="\begin{aligned}
 g_1(s_\sigma) =&amp; \sum_{i=0}^m a_i \left( 1 - \frac{1}{1 + \frac{\mu}{\kappa} s_\sigma^2} \right)^i \\
     g_2(s_\sigma) =&amp; \sum_{i=0}^m b_i \left( 1 - \E^{-\mu s_\sigma^2/\kappa} \right)^i
@@ -97,7 +80,7 @@ g_1(s_\sigma) =&amp; \sum_{i=0}^m a_i \left( 1 - \frac{1}{1 + \frac{\mu}{\kappa}
           </article>
 
           <article class="review-equation-card" id="review-eq-eq-g1sogga">
-            <code>eq:g1sogga</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (511)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=88" title="Open page 88 of the review PDF">p. 88 ↗</a></p>
             <div class="equation" data-tex="\begin{aligned}
 g_1(r_s, \zeta, t) =&amp; \sum_{i=0}^m a_i \left[ 1 - \frac{1}{1 + y(r_s, \zeta, t)} \right]^i \\
     g_2(r_s, \zeta, t) =&amp; \sum_{i=0}^m b_i \left[ 1 - \E^{-y(r_s, \zeta, t)} \right]^i
@@ -105,12 +88,12 @@ g_1(r_s, \zeta, t) =&amp; \sum_{i=0}^m a_i \left[ 1 - \frac{1}{1 + y(r_s, \zeta,
           </article>
 
           <article class="review-equation-card" id="review-eq-eq-ysogga11">
-            <code>eq:ysogga11</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (512)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=88" title="Open page 88 of the review PDF">p. 88 ↗</a></p>
             <div class="equation" data-tex="y(r_s, \zeta, t) = -\frac{\beta\phi_{2/3}^3t^2}{e_\text{c}^\text{PW-LDA}(r_s,\zeta)}"></div>
           </article>
 
           <article class="review-equation-card" id="review-eq-eq-ggac-pw91h0">
-            <code>eq:ggac:pw91h0</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (469)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=80" title="Open page 80 of the review PDF">p. 80 ↗</a></p>
             <div class="equation" data-tex="H_0(\phi_{2/3}, t, A) = \gamma \phi_{2/3}^3 \ln\left[1 + \frac{\beta}{\gamma}
   \frac{t^2 + A t^4}{1 + A (t^2 + A t^4)}\right]"></div>
           </article>

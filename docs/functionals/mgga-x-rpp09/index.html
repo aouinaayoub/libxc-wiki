@@ -3,14 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>mgga_x_rpp09</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20261016-excerpts-v1">
-    <script defer src="../../assets/search.js?v=20261016-excerpts-v1"></script>
+    <title>mgga_x_rpp09 — Rasanen, Pittalis &amp; Proetto 09 · Libxc Wiki</title>
+    <meta name="description" content="mgga_x_rpp09: Rasanen, Pittalis &amp; Proetto 09. Meta-GGA exchange functional in Libxc, with references and BibTeX. Includes an excerpt from the Tran, Lehtola, Pittalis and Marques review.">
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261117-refs-v1">
+    <script defer src="../../assets/search.js?v=20261117-refs-v1"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
     <script defer src="../../vendor/katex/contrib/mhchem.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20261016-excerpts-v1"></script>
+    <script defer src="../../assets/detail.js?v=20261117-refs-v1"></script>
 
   </head>
   <body class="functional-page">
@@ -32,41 +33,23 @@
 
         <p class="brand">META-GGA</p>
         <h1><code class="title-code">mgga_x_rpp09</code></h1>
+        <p class="functional-name">Rasanen, Pittalis &amp; Proetto 09</p>
         <div class="detail-tags"><span class="tag">meta-gga</span>
 <span class="tag">exchange</span></div>
       </header>
 
       <div class="detail-grid">
+
       <section class="callout">
         <p class="callout-label">Review excerpt</p>
         <div class="review-html">
 <p>This exchange potential was designed to correct deficiencies of <a class="functional-link" href="../mgga-x-bj06/"><code>mgga_x_bj06</code></a>. Its mathematical form reads</p>
 <div class="equation" data-tex="v^\text{RPP09}_{\text{x}\sigma} = v^\text{Slater}_{\text{x}\sigma} + \frac{1}{\pi}\sqrt{\frac{5}{6}}\sqrt{\frac{D_\sigma}{n_\sigma}}"></div>
-<p>where $v^\text{Slater}_{\text{x}\sigma}$ is the Slater potential<sup class="citation-marker"><a href="#review-ref-Slater1951-385">50</a></sup> given by <a class="review-eq-link" href="#review-eq-eq-Ux-spin">
-  <code>eq:Ux-spin</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="U_{\x\sigma}(\br) = \mint{r&#39;} \frac{h_{\x\sigma}(\br,\br&#39;)}{|\br - \br&#39;|} = 2e_{\x\sigma}(\br)"></span>
-  </span>
-</a> and</p>
+<p>where $v^\text{Slater}_{\text{x}\sigma}$ is the Slater potential<sup class="citation-marker"><a href="#review-ref-Slater1951-385">50</a></sup> given by <a class="review-eq-link" href="#review-eq-eq-Ux-spin"><span class="eq-number">Eq. (144)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="U_{\x\sigma}(\br) = \mint{r&#39;} \frac{h_{\x\sigma}(\br,\br&#39;)}{|\br - \br&#39;|} = 2e_{\x\sigma}(\br)"></span></span></a> and</p>
 <div class="equation" data-tex="D_\sigma = \tau_\sigma - \tau_\sigma ^{\text{W}} - \frac{\left\vert\bj_\sigma\right\vert^2}{2n_\sigma}"></div>
-<p>Thus, the difference from <a class="functional-link" href="../mgga-x-bj06/"><code>mgga_x_bj06</code></a> is the function $D_\sigma$ that is given by $D_\sigma=\tau_\sigma$ in the case of <a class="functional-link" href="../mgga-x-bj06/"><code>mgga_x_bj06</code></a>, see <a class="review-eq-link" href="#review-eq-eq-mggaxbj06-pot">
-  <code>eq:mggaxbj06:pot</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="v^\text{BJ06}_{\text{x}\sigma} = v^\text{Slater}_{\text{x}\sigma} + \frac{1}{\pi}\sqrt{\frac{5}{6}}\sqrt{\frac{\tau_\sigma}{n_\sigma}}"></span>
-  </span>
-</a>. Thanks to this new form for $D_\sigma$, the <a class="functional-link" href="../mgga-x-rpp09/"><code>mgga_x_rpp09</code></a> potential is gauge invariant, exact for any single-orbital system, and approaches zero asymptotically at $r\to\infty$, which was not the case of <a class="functional-link" href="../mgga-x-bj06/"><code>mgga_x_bj06</code></a>.</p>
-<p>In <sup class="citation-marker"><a href="#review-ref-Oliveira2010-3664">711</a></sup> it was shown that <a class="functional-link" href="../mgga-x-rpp09/"><code>mgga_x_rpp09</code></a> is more accurate than <a class="functional-link" href="../mgga-x-bj06/"><code>mgga_x_bj06</code></a> for ionization potentials and electron affinities of atoms and molecules. However, the relative accuracy of the two potentials for polarizabilities depends on the type of systems.</p>
-<p>Note that the Slater potential in <a class="review-eq-link" href="#review-eq-eq-rpp-v">
-  <code>eq:rpp-v</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="v^\text{RPP09}_{\text{x}\sigma} = v^\text{Slater}_{\text{x}\sigma} + \frac{1}{\pi}\sqrt{\frac{5}{6}}\sqrt{\frac{D_\sigma}{n_\sigma}}"></span>
-  </span>
-</a> is replaced by <a class="review-eq-link" href="#review-eq-eq-vxbrhole">
-  <code>eq:vxbrhole</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="v^\text{BR89,hole}_{\text{x}\sigma}=2e^\text{BR89}_{\text{x}\sigma}"></span>
-  </span>
-</a> for the implementation of <a class="functional-link" href="../mgga-x-rpp09/"><code>mgga_x_rpp09</code></a> in Libxc.</p>
+<p>Thus, the difference from <a class="functional-link" href="../mgga-x-bj06/"><code>mgga_x_bj06</code></a> is the function $D_\sigma$ that is given by $D_\sigma=\tau_\sigma$ in the case of <a class="functional-link" href="../mgga-x-bj06/"><code>mgga_x_bj06</code></a>, see <a class="review-eq-link" href="#review-eq-eq-mggaxbj06-pot"><span class="eq-number">Eq. (580)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="v^\text{BJ06}_{\text{x}\sigma} = v^\text{Slater}_{\text{x}\sigma} + \frac{1}{\pi}\sqrt{\frac{5}{6}}\sqrt{\frac{\tau_\sigma}{n_\sigma}}"></span></span></a>. Thanks to this new form for $D_\sigma$, the <a class="functional-link" href="../mgga-x-rpp09/"><code>mgga_x_rpp09</code></a> potential is gauge invariant, exact for any single-orbital system, and approaches zero asymptotically at $r\to\infty$, which was not the case of <a class="functional-link" href="../mgga-x-bj06/"><code>mgga_x_bj06</code></a>.</p>
+<p>In ref. <span class="citation-ref"><a href="#review-ref-Oliveira2010-3664">711</a></span> it was shown that <a class="functional-link" href="../mgga-x-rpp09/"><code>mgga_x_rpp09</code></a> is more accurate than <a class="functional-link" href="../mgga-x-bj06/"><code>mgga_x_bj06</code></a> for ionization potentials and electron affinities of atoms and molecules. However, the relative accuracy of the two potentials for polarizabilities depends on the type of systems.</p>
+<p>Note that the Slater potential in <a class="review-eq-link" href="#review-eq-eq-rpp-v"><span class="eq-number">Eq. (592)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="v^\text{RPP09}_{\text{x}\sigma} = v^\text{Slater}_{\text{x}\sigma} + \frac{1}{\pi}\sqrt{\frac{5}{6}}\sqrt{\frac{D_\sigma}{n_\sigma}}"></span></span></a> is replaced by <a class="review-eq-link" href="#review-eq-eq-vxbrhole"><span class="eq-number">Eq. (554)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="v^\text{BR89,hole}_{\text{x}\sigma}=2e^\text{BR89}_{\text{x}\sigma}"></span></span></a> for the implementation of <a class="functional-link" href="../mgga-x-rpp09/"><code>mgga_x_rpp09</code></a> in Libxc.</p>
         </div>
         <p class="source-note">Adapted from <a href="https://arxiv.org/abs/2602.17333">Tran, Lehtola, Pittalis, and Marques, <em>Semi-Local Exchange-Correlation Approximations in Density Functional Theory</em>, arXiv:2602.17333</a>.</p>
       </section>
@@ -75,22 +58,22 @@
           <h2>Referenced Review Equations</h2>
           <div class="review-equations">
           <article class="review-equation-card" id="review-eq-eq-Ux-spin">
-            <code>eq:Ux-spin</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (144)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=20" title="Open page 20 of the review PDF">p. 20 ↗</a></p>
             <div class="equation" data-tex="U_{\x\sigma}(\br) = \mint{r&#39;} \frac{h_{\x\sigma}(\br,\br&#39;)}{|\br - \br&#39;|} = 2e_{\x\sigma}(\br)"></div>
           </article>
 
           <article class="review-equation-card" id="review-eq-eq-mggaxbj06-pot">
-            <code>eq:mggaxbj06:pot</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (580)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=106" title="Open page 106 of the review PDF">p. 106 ↗</a></p>
             <div class="equation" data-tex="v^\text{BJ06}_{\text{x}\sigma} = v^\text{Slater}_{\text{x}\sigma} + \frac{1}{\pi}\sqrt{\frac{5}{6}}\sqrt{\frac{\tau_\sigma}{n_\sigma}}"></div>
           </article>
 
           <article class="review-equation-card" id="review-eq-eq-rpp-v">
-            <code>eq:rpp-v</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (592)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=108" title="Open page 108 of the review PDF">p. 108 ↗</a></p>
             <div class="equation" data-tex="v^\text{RPP09}_{\text{x}\sigma} = v^\text{Slater}_{\text{x}\sigma} + \frac{1}{\pi}\sqrt{\frac{5}{6}}\sqrt{\frac{D_\sigma}{n_\sigma}}"></div>
           </article>
 
           <article class="review-equation-card" id="review-eq-eq-vxbrhole">
-            <code>eq:vxbrhole</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (554)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=101" title="Open page 101 of the review PDF">p. 101 ↗</a></p>
             <div class="equation" data-tex="v^\text{BR89,hole}_{\text{x}\sigma}=2e^\text{BR89}_{\text{x}\sigma}"></div>
           </article>
 

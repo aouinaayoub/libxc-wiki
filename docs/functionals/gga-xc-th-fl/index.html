@@ -3,14 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>gga_xc_th_fl</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20261016-excerpts-v1">
-    <script defer src="../../assets/search.js?v=20261016-excerpts-v1"></script>
+    <title>gga_xc_th_fl — Tozer and Handy v. FL · Libxc Wiki</title>
+    <meta name="description" content="gga_xc_th_fl: Tozer and Handy v. FL. GGA exchange-correlation functional in Libxc, with references and BibTeX. Includes an excerpt from the Tran, Lehtola, Pittalis and Marques review.">
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261117-refs-v1">
+    <script defer src="../../assets/search.js?v=20261117-refs-v1"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
     <script defer src="../../vendor/katex/contrib/mhchem.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20261016-excerpts-v1"></script>
+    <script defer src="../../assets/detail.js?v=20261117-refs-v1"></script>
 
   </head>
   <body class="functional-page">
@@ -32,6 +33,7 @@
 
         <p class="brand">GGA</p>
         <h1><code class="title-code">gga_xc_th_fl</code></h1>
+        <p class="functional-name">Tozer and Handy v. FL</p>
         <div class="detail-tags"><span class="tag">gga</span>
 <span class="tag">exchange</span>
 <span class="tag">correlation</span></div>
@@ -39,7 +41,48 @@
 
       <div class="detail-grid">
 
+      <section class="callout">
+        <p class="callout-label">Review excerpt</p>
+        <div class="review-html">
+<p>The form of this functional is based on <a class="review-eq-link" href="#review-eq-eq-th"><span class="eq-number">Eq. (535)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="e_\text{xc}^{\text{TH}} = \frac{1}{n} \sum_{abcd} \omega_{abcd}
+   R_a S_b X_c Y_d"></span></span></a>, which is also the expression for the GGA functionals <a class="functional-link" href="../gga-xc-th-fc/"><code>gga_xc_th_fc</code></a>, <a class="functional-link" href="../gga-xc-th-fcfo/"><code>gga_xc_th_fcfo</code></a>, and <a class="functional-link" href="../gga-xc-th-fco/"><code>gga_xc_th_fco</code></a> developed in the same work.<sup class="citation-marker"><a href="#review-ref-Tozer1997-183">474</a></sup> However, in the case of <a class="functional-link" href="../gga-xc-th-fl/"><code>gga_xc_th_fl</code></a> $b=c=d=0$, turning this functional into a LDA since $R_a$ in <a class="review-eq-link" href="#review-eq-eq-rsxy"><span class="eq-number">Eq. (536)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="\begin{aligned}
+R_a &amp; = n_\uparrow^a + n_\downarrow^a \\
+  S_b &amp; = \zeta^{2b} \\
+  X_c &amp; = \frac{|\nabla n_\uparrow|^c + |\nabla n_\downarrow|^c}{2 n^{4c/3}} \\
+  Y_d &amp; = \left(\frac{2|\nabla n_\uparrow|^2 + 2|\nabla n_\downarrow|^2 -|\nabla n|^2}{n^{8/3}}\right)^d
+\end{aligned}"></span></span></a> depends only on the density. The four coefficients $\omega_{a000}$ in <a class="review-eq-link" href="#review-eq-eq-th"><span class="eq-number">Eq. (535)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="e_\text{xc}^{\text{TH}} = \frac{1}{n} \sum_{abcd} \omega_{abcd}
+   R_a S_b X_c Y_d"></span></span></a>, with $a=7/6$, 8/6, 9/6, and 10/6, were determined from a fit to the exact xc potentials of 10 closed-shell systems ($\ce{H2}$, $\ce{H2O}$, $\ce{N2}$, HF, CO, LiH, BH, Ne, $\ce{F2}$, and $\ce{CH4}$) calculated from the inversion scheme of Zhao et al.<sup class="citation-marker"><a href="#review-ref-Zhao1994-2138">472</a></sup>.</p>
+        </div>
+        <p class="source-note">Adapted from <a href="https://arxiv.org/abs/2602.17333">Tran, Lehtola, Pittalis, and Marques, <em>Semi-Local Exchange-Correlation Approximations in Density Functional Theory</em>, arXiv:2602.17333</a>.</p>
+      </section>
 
+        <section class="section">
+          <h2>Referenced Review Equations</h2>
+          <div class="review-equations">
+          <article class="review-equation-card" id="review-eq-eq-th">
+            <p class="equation-card-heading"><span class="eq-number">Eq. (535)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=93" title="Open page 93 of the review PDF">p. 93 ↗</a></p>
+            <div class="equation" data-tex="e_\text{xc}^{\text{TH}} = \frac{1}{n} \sum_{abcd} \omega_{abcd}
+   R_a S_b X_c Y_d"></div>
+          </article>
+
+          <article class="review-equation-card" id="review-eq-eq-rsxy">
+            <p class="equation-card-heading"><span class="eq-number">Eq. (536)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=93" title="Open page 93 of the review PDF">p. 93 ↗</a></p>
+            <div class="equation" data-tex="\begin{aligned}
+R_a &amp; = n_\uparrow^a + n_\downarrow^a \\
+  S_b &amp; = \zeta^{2b} \\
+  X_c &amp; = \frac{|\nabla n_\uparrow|^c + |\nabla n_\downarrow|^c}{2 n^{4c/3}} \\
+  Y_d &amp; = \left(\frac{2|\nabla n_\uparrow|^2 + 2|\nabla n_\downarrow|^2 -|\nabla n|^2}{n^{8/3}}\right)^d
+\end{aligned}"></div>
+          </article>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <h2>Review References</h2>
+          <ol class="review-refs"><li id="review-ref-Tozer1997-183" value="474">Tozer, D. J.; Handy, N. C.; Green, W. H. Exchange-correlation functionals from ab initio electron densities. <em>Chem. Phys. Lett.</em> <strong>1997</strong>, <em>273</em>, 183, DOI: <a href="https://doi.org/10.1016/S0009-2614(97)00586-1">10.1016/S0009-2614(97)00586-1</a></li>
+<li id="review-ref-Zhao1994-2138" value="472">Zhao, Q.; Morrison, R. C.; Parr, R. G. From electron densities to Kohn--Sham kinetic energies, orbital energies, exchange-correlation potentials, and exchange-correlation energies. <em>Phys. Rev. A</em> <strong>1994</strong>, <em>50</em>, 2138--2142, DOI: <a href="https://doi.org/10.1103/PhysRevA.50.2138">10.1103/PhysRevA.50.2138</a></li></ol>
+        </section>
 
         <section class="section">
           <h2>Publications</h2>

@@ -3,14 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>gga_x_hcth_a</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20261016-excerpts-v1">
-    <script defer src="../../assets/search.js?v=20261016-excerpts-v1"></script>
+    <title>gga_x_hcth_a — HCTH-A · Libxc Wiki</title>
+    <meta name="description" content="gga_x_hcth_a: HCTH-A. GGA exchange functional in Libxc, with references and BibTeX. Includes an excerpt from the Tran, Lehtola, Pittalis and Marques review.">
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261117-refs-v1">
+    <script defer src="../../assets/search.js?v=20261117-refs-v1"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
     <script defer src="../../vendor/katex/contrib/mhchem.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20261016-excerpts-v1"></script>
+    <script defer src="../../assets/detail.js?v=20261117-refs-v1"></script>
 
   </head>
   <body class="functional-page">
@@ -32,24 +33,21 @@
 
         <p class="brand">GGA</p>
         <h1><code class="title-code">gga_x_hcth_a</code></h1>
+        <p class="functional-name">HCTH-A</p>
         <div class="detail-tags"><span class="tag">gga</span>
 <span class="tag">exchange</span></div>
       </header>
 
       <div class="detail-grid">
+
       <section class="callout">
         <p class="callout-label">Review excerpt</p>
         <div class="review-html">
-<p>This is one of the three functionals proposed in <sup class="citation-marker"><a href="#review-ref-Hamprecht1998-6264">507</a></sup>; the others are <a class="functional-link" href="../gga-xc-hcth-93/"><code>gga_xc_hcth_93</code></a> and the hybrid B97-1. This functional was used to study the stability of the fit to the analytical form chosen as</p>
+<p>This is one of the three functionals proposed in ref. <span class="citation-ref"><a href="#review-ref-Hamprecht1998-6264">507</a></span>; the others are <a class="functional-link" href="../gga-xc-hcth-93/"><code>gga_xc_hcth_93</code></a> and the hybrid B97-1. This functional was used to study the stability of the fit to the analytical form chosen as</p>
 <div class="equation" data-tex="F_\text{x}^\text{HCTH-A} = a_0 - a_1 \left(F_\text{x}^{\text{B88}}-1\right)
   - a_2\frac{dF_\text{x}^{\text{B88}}}{d \beta}"></div>
-<p>The last two terms involve the <a class="functional-link" href="../gga-x-b88/"><code>gga_x_b88</code></a> enhancement factor (<a class="review-eq-link" href="#review-eq-eq-fxb88">
-  <code>eq:fxb88</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="F_\text{x}^{\text{B88}} = 1+\frac{\beta}{C_\text{x}}
-  \frac{x_\sigma^2}{1 + \gamma\beta x_\sigma\arcsinh(x_\sigma)}"></span>
-  </span>
-</a>) and its derivative with respect to the parameter $\beta$, and they were evaluated at the unmodified value $\beta=0.0042$. The remaining parameters $a_i$ were fit using the same procedure as that for <a class="functional-link" href="../gga-xc-hcth-93/"><code>gga_xc_hcth_93</code></a>, leading to $a_0=1.09878$, $a_1=-2.51173$, and $a_2=0.0156233$. This functional was fit jointly with <a class="functional-link" href="../gga-c-hcth-a/"><code>gga_c_hcth_a</code></a>, and should therefore be used only in combination with it. Note that since $a_0$ is not equal to one, this functional does not reduce to <a class="functional-link" href="../lda-x/"><code>lda_x</code></a> for the HEG.</p>
+<p>The last two terms involve the <a class="functional-link" href="../gga-x-b88/"><code>gga_x_b88</code></a> enhancement factor (<a class="review-eq-link" href="#review-eq-eq-fxb88"><span class="eq-number">Eq. (372)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="F_\text{x}^{\text{B88}} = 1+\frac{\beta}{C_\text{x}}
+  \frac{x_\sigma^2}{1 + \gamma\beta x_\sigma\arcsinh(x_\sigma)}"></span></span></a>) and its derivative with respect to the parameter $\beta$, and they were evaluated at the unmodified value $\beta=0.0042$. The remaining parameters $a_i$ were fit using the same procedure as that for <a class="functional-link" href="../gga-xc-hcth-93/"><code>gga_xc_hcth_93</code></a>, leading to $a_0=1.09878$, $a_1=-2.51173$, and $a_2=0.0156233$. This functional was fit jointly with <a class="functional-link" href="../gga-c-hcth-a/"><code>gga_c_hcth_a</code></a>, and should therefore be used only in combination with it. Note that since $a_0$ is not equal to one, this functional does not reduce to <a class="functional-link" href="../lda-x/"><code>lda_x</code></a> for the HEG.</p>
         </div>
         <p class="source-note">Adapted from <a href="https://arxiv.org/abs/2602.17333">Tran, Lehtola, Pittalis, and Marques, <em>Semi-Local Exchange-Correlation Approximations in Density Functional Theory</em>, arXiv:2602.17333</a>.</p>
       </section>
@@ -58,7 +56,7 @@
           <h2>Referenced Review Equations</h2>
           <div class="review-equations">
           <article class="review-equation-card" id="review-eq-eq-fxb88">
-            <code>eq:fxb88</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (372)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=55" title="Open page 55 of the review PDF">p. 55 ↗</a></p>
             <div class="equation" data-tex="F_\text{x}^{\text{B88}} = 1+\frac{\beta}{C_\text{x}}
   \frac{x_\sigma^2}{1 + \gamma\beta x_\sigma\arcsinh(x_\sigma)}"></div>
           </article>

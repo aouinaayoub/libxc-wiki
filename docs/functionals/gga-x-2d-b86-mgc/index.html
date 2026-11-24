@@ -3,14 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>gga_x_2d_b86_mgc</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20261016-excerpts-v1">
-    <script defer src="../../assets/search.js?v=20261016-excerpts-v1"></script>
+    <title>gga_x_2d_b86_mgc — Becke 86 with modified gradient correction for 2D · Libxc Wiki</title>
+    <meta name="description" content="gga_x_2d_b86_mgc: Becke 86 with modified gradient correction for 2D. GGA exchange functional in Libxc, with references and BibTeX. Includes an excerpt from the Tran, Lehtola, Pittalis and Marques review.">
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261117-refs-v1">
+    <script defer src="../../assets/search.js?v=20261117-refs-v1"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
     <script defer src="../../vendor/katex/contrib/mhchem.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20261016-excerpts-v1"></script>
+    <script defer src="../../assets/detail.js?v=20261117-refs-v1"></script>
 
   </head>
   <body class="functional-page">
@@ -32,12 +33,14 @@
 
         <p class="brand">GGA</p>
         <h1><code class="title-code">gga_x_2d_b86_mgc</code></h1>
+        <p class="functional-name">Becke 86 with modified gradient correction for 2D</p>
         <div class="detail-tags"><span class="tag">gga</span>
 <span class="tag">exchange</span>
 <span class="tag">dim2</span></div>
       </header>
 
       <div class="detail-grid">
+
       <section class="callout">
         <p class="callout-label">Review excerpt</p>
         <div class="review-html">
@@ -45,17 +48,7 @@
 <div class="equation" data-tex="F_\text{x}^{\text{B86-MGC-2D}} =
   1 + \frac{\beta}{C_{\text{x}}^{2\text{D}}}
   \frac{\left(x^{2\text{D}}_\sigma\right)^2}{\left[1 +\gamma \left(x^{2\text{D}}_\sigma\right)^2\right]^{3/4}}"></div>
-<p>where $x_\sigma^{2\text{D}}$ is <a class="review-eq-link" href="#review-eq-eq-x-sigma">
-  <code>eq:x-sigma</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="x_{\sigma}^{m\text{D}} = \frac{|\nabla n_{\sigma}|}{n_{\sigma}^\frac{m+1}{m}}"></span>
-  </span>
-</a> with $m=2$, and $C_{\text{x}}^{2\text{D}}$ is <a class="review-eq-link" href="#review-eq-eq-cx2d">
-  <code>eq:cx2d</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="C_{\text{x}}^{2\text{D}} = \frac{8}{3\sqrt{\pi}} \approx 1.504506"></span>
-  </span>
-</a>. The $3/4$ exponent in the denominator was chosen such that the functional has the correct large-gradient limit in 2D. The values $\beta=0.003317$ and $\gamma=0.008323$ were obtained by fitting to exchange energies of parabolic quantum dots. Note that these values are close to the ones obtained by Becke in the 3D case (<a class="functional-link" href="../gga-x-b86-mgc/"><code>gga_x_b86_mgc</code></a>). The functional improves considerably over <a class="functional-link" href="../lda-x-2d/"><code>lda_x_2d</code></a> for the exchange energy of parabolic and square quantum dots.</p>
+<p>where $x_\sigma^{2\text{D}}$ is <a class="review-eq-link" href="#review-eq-eq-x-sigma"><span class="eq-number">Eq. (42)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="x_{\sigma}^{m\text{D}} = \frac{|\nabla n_{\sigma}|}{n_{\sigma}^\frac{m+1}{m}}"></span></span></a> with $m=2$, and $C_{\text{x}}^{2\text{D}}$ is <a class="review-eq-link" href="#review-eq-eq-cx2d"><span class="eq-number">Eq. (19)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="C_{\text{x}}^{2\text{D}} = \frac{8}{3\sqrt{\pi}} \approx 1.504506"></span></span></a>. The $3/4$ exponent in the denominator was chosen such that the functional has the correct large-gradient limit in 2D. The values $\beta=0.003317$ and $\gamma=0.008323$ were obtained by fitting to exchange energies of parabolic quantum dots. Note that these values are close to the ones obtained by Becke in the 3D case (<a class="functional-link" href="../gga-x-b86-mgc/"><code>gga_x_b86_mgc</code></a>). The functional improves considerably over <a class="functional-link" href="../lda-x-2d/"><code>lda_x_2d</code></a> for the exchange energy of parabolic and square quantum dots.</p>
         </div>
         <p class="source-note">Adapted from <a href="https://arxiv.org/abs/2602.17333">Tran, Lehtola, Pittalis, and Marques, <em>Semi-Local Exchange-Correlation Approximations in Density Functional Theory</em>, arXiv:2602.17333</a>.</p>
       </section>
@@ -64,12 +57,12 @@
           <h2>Referenced Review Equations</h2>
           <div class="review-equations">
           <article class="review-equation-card" id="review-eq-eq-x-sigma">
-            <code>eq:x-sigma</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (42)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=12" title="Open page 12 of the review PDF">p. 12 ↗</a></p>
             <div class="equation" data-tex="x_{\sigma}^{m\text{D}} = \frac{|\nabla n_{\sigma}|}{n_{\sigma}^\frac{m+1}{m}}"></div>
           </article>
 
           <article class="review-equation-card" id="review-eq-eq-cx2d">
-            <code>eq:cx2d</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (19)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=10" title="Open page 10 of the review PDF">p. 10 ↗</a></p>
             <div class="equation" data-tex="C_{\text{x}}^{2\text{D}} = \frac{8}{3\sqrt{\pi}} \approx 1.504506"></div>
           </article>
 

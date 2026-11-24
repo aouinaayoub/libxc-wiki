@@ -172,11 +172,18 @@ function setupGlobalSearch() {
     window.location.href = query ? `../../?q=${encodeURIComponent(query)}` : '../../';
   };
 
-  input.addEventListener('input', updateSuggestions);
+  const scheduledSuggestions = searchTools?.debounce(updateSuggestions) ?? Object.assign(() => updateSuggestions(), { cancel() {} });
+  input.addEventListener('input', () => {
+    if (input.value.trim()) scheduledSuggestions();
+    else { scheduledSuggestions.cancel(); updateSuggestions(); }
+  });
   input.addEventListener('focus', updateSuggestions);
   input.addEventListener('keydown', (event) => {
     if (event.key !== 'Escape') return;
+    scheduledSuggestions.cancel();
     input.value = '';
+    input.dispatchEvent(new Event('input'));
+    event.preventDefault();
     if (suggestionBox) suggestionBox.hidden = true;
   });
 
@@ -222,15 +229,19 @@ function setupReviewHighlights() {
   note.className = 'review-search-note';
   const label = document.createElement('span');
   label.textContent = `${count} review match${count === 1 ? '' : 'es'} for “${query}”`;
-  const clear = document.createElement('button');
-  clear.type = 'button'; clear.className = 'excerpt-expand'; clear.textContent = 'Clear highlights';
-  clear.addEventListener('click', () => {
-    for (const mark of review.querySelectorAll('mark[data-search-match]')) mark.replaceWith(...mark.childNodes);
-    review.normalize();
-    note.remove();
-    const url = new URL(location.href); url.searchParams.delete('highlight'); history.replaceState({}, '', url);
-  });
-  note.append(label, clear);
+  note.append(label);
+  const input = document.querySelector('.global-search-input');
+  if (input) {
+    input.value = query;
+    input.addEventListener('input', () => {
+      if (input.value.trim()) return;
+      tools.clearHighlights(review);
+      note.remove();
+      const url = new URL(location.href);
+      url.searchParams.delete('highlight');
+      history.replaceState({}, '', url);
+    });
+  }
   review.before(note);
   requestAnimationFrame(() => review.querySelector('mark')?.scrollIntoView({ block: 'center' }));
 }

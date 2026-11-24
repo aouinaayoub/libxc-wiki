@@ -3,14 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>gga_x_optpbe_vdw</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20261016-excerpts-v1">
-    <script defer src="../../assets/search.js?v=20261016-excerpts-v1"></script>
+    <title>gga_x_optpbe_vdw — Reparametrized PBE for vdW · Libxc Wiki</title>
+    <meta name="description" content="gga_x_optpbe_vdw: Reparametrized PBE for vdW. GGA exchange functional in Libxc, with references and BibTeX. Includes an excerpt from the Tran, Lehtola, Pittalis and Marques review.">
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261117-refs-v1">
+    <script defer src="../../assets/search.js?v=20261117-refs-v1"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
     <script defer src="../../vendor/katex/contrib/mhchem.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20261016-excerpts-v1"></script>
+    <script defer src="../../assets/detail.js?v=20261117-refs-v1"></script>
 
   </head>
   <body class="functional-page">
@@ -32,36 +33,23 @@
 
         <p class="brand">GGA</p>
         <h1><code class="title-code">gga_x_optpbe_vdw</code></h1>
+        <p class="functional-name">Reparametrized PBE for vdW</p>
         <div class="detail-tags"><span class="tag">gga</span>
 <span class="tag">exchange</span></div>
       </header>
 
       <div class="detail-grid">
+
       <section class="callout">
         <p class="callout-label">Review excerpt</p>
         <div class="review-html">
-<p>These three functionals were proposed as alternatives to <a class="functional-link" href="../gga-x-pbe-r/"><code>gga_x_pbe_r</code></a> for the exchange part of the vdW-DF functional for van der Waals interactions.<sup class="citation-marker"><a href="#review-ref-Dion2004-PRL-246401">505</a>,<a href="#review-ref-Dion2005-PRL-109902">506</a></sup> All three contain empirical parameters that were tuned to minimize the mean absolute error on the intermolecular interaction energies of the S22 dataset of molecular dimers.<sup class="citation-marker"><a href="#review-ref-Jurecka2006-1985">550</a></sup></p>
+<p>These three functionals were proposed as alternatives to <a class="functional-link" href="../gga-x-pbe-r/"><code>gga_x_pbe_r</code></a> for the exchange part of the vdW-DF functional for van der Waals interactions.<sup class="citation-marker"><a href="#review-ref-Dion2004-PRL-246401">505</a>,<a href="#review-ref-Dion2005-PRL-109902">506</a></sup> All three contain empirical parameters that were tuned in order to minimize the mean absolute error on the intermolecular interaction energies of the S22 dataset of molecular dimers.<sup class="citation-marker"><a href="#review-ref-Jurecka2006-1985">550</a></sup></p>
 <p>The <a class="functional-link" href="../gga-x-pbek1-vdw/"><code>gga_x_pbek1_vdw</code></a> functional has the same form as <a class="functional-link" href="../gga-x-pbe/"><code>gga_x_pbe</code></a> and the optimization led to $\kappa=1.00$ ($\mu=\mu^{\text{PBE}}$ was kept fixed). Note that this value of $\kappa$ does not ensure the fulfillment of the LO bound.</p>
 <p>Next, <a class="functional-link" href="../gga-x-optpbe-vdw/"><code>gga_x_optpbe_vdw</code></a> consists of a mixture of <a class="functional-link" href="../gga-x-pbe/"><code>gga_x_pbe</code></a> and <a class="functional-link" href="../gga-x-rpbe/"><code>gga_x_rpbe</code></a>:</p>
 <div class="equation" data-tex="F_{\text{x}}^{\text{optPBE-vdW}}=aF_{\text{x}}^{\text{PBE}}+(1-a)F_{\text{x}}^{\text{RPBE}}"></div>
-<p>where the mixing fraction $a$, as well as $\kappa$ and $\mu$ in <a class="review-eq-link" href="#review-eq-eq-pbeenh">
-  <code>eq:pbeenh</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="F_\text{x}^{\text{PBE}} = 1 + \kappa\left[1 - \frac{\kappa}{\kappa + f_0(s_\sigma)}\right]"></span>
-  </span>
-</a>; <a class="review-eq-link" href="#review-eq-eq-RPBE">
-  <code>eq:RPBE</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="F_\text{x}^{\text{RPBE}} = 1 + \kappa\left(1 - \E^{-\mu s_\sigma^2/\kappa}\right)"></span>
-  </span>
-</a>, were optimized, leading to $a=0.945268$, $\kappa=1.04804$, and $\mu=0.175519$.</p>
-<p>Finally, <a class="functional-link" href="../gga-x-optb88-vdw/"><code>gga_x_optb88_vdw</code></a> has the same form as <a class="functional-link" href="../gga-x-b88/"><code>gga_x_b88</code></a>, and the optimization led to $\beta = 0.22 C_\text{x}C_s^2\approx 0.003369$<sup class="citation-marker"><a href="#review-ref-approximation1">501</a></sup> and $\gamma = 1/\left(1.2C_\text{x}C_s\right) \approx 6.981317$<sup class="citation-marker"><a href="#review-ref-approximation1">501</a></sup> for the parameters in <a class="review-eq-link" href="#review-eq-eq-fxb88">
-  <code>eq:fxb88</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="F_\text{x}^{\text{B88}} = 1+\frac{\beta}{C_\text{x}}
-  \frac{x_\sigma^2}{1 + \gamma\beta x_\sigma\arcsinh(x_\sigma)}"></span>
-  </span>
-</a>. Note that this value of $\gamma$ is incompatible with the exact asymptotic behavior of the exchange energy density that was used in constructing <a class="functional-link" href="../gga-x-b88/"><code>gga_x_b88</code></a>.</p>
+<p>where the mixing fraction $a$, as well as $\kappa$ and $\mu$ in <a class="review-eq-link" href="#review-eq-eq-pbeenh"><span class="eq-number">Eq. (382)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="F_\text{x}^{\text{PBE}} = 1 + \kappa\left[1 - \frac{\kappa}{\kappa + f_0(s_\sigma)}\right]"></span></span></a>; <a class="review-eq-link" href="#review-eq-eq-RPBE"><span class="eq-number">Eq. (387)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="F_\text{x}^{\text{RPBE}} = 1 + \kappa\left(1 - \E^{-\mu s_\sigma^2/\kappa}\right)"></span></span></a>, were optimized, leading to $a=0.945268$, $\kappa=1.04804$, and $\mu=0.175519$.</p>
+<p>Finally, <a class="functional-link" href="../gga-x-optb88-vdw/"><code>gga_x_optb88_vdw</code></a> has the same form as <a class="functional-link" href="../gga-x-b88/"><code>gga_x_b88</code></a>, and the optimization led to $\beta = 0.22 C_\text{x}C_s^2\approx 0.003369$<sup class="citation-marker"><a href="#review-ref-approximation1">501</a></sup> and $\gamma = 1/\left(1.2C_\text{x}C_s\right) \approx 6.981317$<sup class="citation-marker"><a href="#review-ref-approximation1">501</a></sup> for the parameters in <a class="review-eq-link" href="#review-eq-eq-fxb88"><span class="eq-number">Eq. (372)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="F_\text{x}^{\text{B88}} = 1+\frac{\beta}{C_\text{x}}
+  \frac{x_\sigma^2}{1 + \gamma\beta x_\sigma\arcsinh(x_\sigma)}"></span></span></a>. Note that this value of $\gamma$ is incompatible with the exact asymptotic behavior of the exchange energy density that was used in constructing <a class="functional-link" href="../gga-x-b88/"><code>gga_x_b88</code></a>.</p>
 <p>The vdW-DF variant using <a class="functional-link" href="../gga-x-optb88-vdw/"><code>gga_x_optb88_vdw</code></a> for exchange is clearly more accurate than <a class="functional-link" href="../gga-x-pbek1-vdw/"><code>gga_x_pbek1_vdw</code></a> or <a class="functional-link" href="../gga-x-optpbe-vdw/"><code>gga_x_optpbe_vdw</code></a> for the S22 dataset.</p>
         </div>
         <p class="source-note">Adapted from <a href="https://arxiv.org/abs/2602.17333">Tran, Lehtola, Pittalis, and Marques, <em>Semi-Local Exchange-Correlation Approximations in Density Functional Theory</em>, arXiv:2602.17333</a>.</p>
@@ -71,17 +59,17 @@
           <h2>Referenced Review Equations</h2>
           <div class="review-equations">
           <article class="review-equation-card" id="review-eq-eq-pbeenh">
-            <code>eq:pbeenh</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (382)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=58" title="Open page 58 of the review PDF">p. 58 ↗</a></p>
             <div class="equation" data-tex="F_\text{x}^{\text{PBE}} = 1 + \kappa\left[1 - \frac{\kappa}{\kappa + f_0(s_\sigma)}\right]"></div>
           </article>
 
           <article class="review-equation-card" id="review-eq-eq-RPBE">
-            <code>eq:RPBE</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (387)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=60" title="Open page 60 of the review PDF">p. 60 ↗</a></p>
             <div class="equation" data-tex="F_\text{x}^{\text{RPBE}} = 1 + \kappa\left(1 - \E^{-\mu s_\sigma^2/\kappa}\right)"></div>
           </article>
 
           <article class="review-equation-card" id="review-eq-eq-fxb88">
-            <code>eq:fxb88</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (372)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=55" title="Open page 55 of the review PDF">p. 55 ↗</a></p>
             <div class="equation" data-tex="F_\text{x}^{\text{B88}} = 1+\frac{\beta}{C_\text{x}}
   \frac{x_\sigma^2}{1 + \gamma\beta x_\sigma\arcsinh(x_\sigma)}"></div>
           </article>

@@ -3,14 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>mgga_x_revtpss</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20261016-excerpts-v1">
-    <script defer src="../../assets/search.js?v=20261016-excerpts-v1"></script>
+    <title>mgga_x_revtpss — revised Tao, Perdew, Staroverov &amp; Scuseria · Libxc Wiki</title>
+    <meta name="description" content="mgga_x_revtpss: revised Tao, Perdew, Staroverov &amp; Scuseria. Meta-GGA exchange functional in Libxc, with references and BibTeX. Includes an excerpt from the Tran, Lehtola, Pittalis and Marques review.">
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261117-refs-v1">
+    <script defer src="../../assets/search.js?v=20261117-refs-v1"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
     <script defer src="../../vendor/katex/contrib/mhchem.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20261016-excerpts-v1"></script>
+    <script defer src="../../assets/detail.js?v=20261117-refs-v1"></script>
 
   </head>
   <body class="functional-page">
@@ -32,18 +33,17 @@
 
         <p class="brand">META-GGA</p>
         <h1><code class="title-code">mgga_x_revtpss</code></h1>
+        <p class="functional-name">revised Tao, Perdew, Staroverov &amp; Scuseria</p>
         <div class="detail-tags"><span class="tag">meta-gga</span>
 <span class="tag">exchange</span></div>
       </header>
 
       <div class="detail-grid">
+
       <section class="callout">
         <p class="callout-label">Review excerpt</p>
         <div class="review-html">
-<p>The objective of this revised version of <a class="functional-link" href="../mgga-x-tpss/"><code>mgga_x_tpss</code></a> was to reproduce the excellent results for the lattice constants of solids of <a class="functional-link" href="../gga-x-pbe-sol/"><code>gga_x_pbe_sol</code></a> without compromising the good results for the atomization energies of molecules. To achieve this goal, the <a class="functional-link" href="../mgga-x-tpss/"><code>mgga_x_tpss</code></a> form (<a class="review-eq-link" href="#review-eq-eq-f0TPSS1">
-  <code>eq:f0TPSS1</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="\begin{aligned}
+<p>The objective of this revised version of <a class="functional-link" href="../mgga-x-tpss/"><code>mgga_x_tpss</code></a> was to reproduce the excellent results for the lattice constants of solids of <a class="functional-link" href="../gga-x-pbe-sol/"><code>gga_x_pbe_sol</code></a> without compromising the good results for the atomization energies of molecules. To achieve this goal, the <a class="functional-link" href="../mgga-x-tpss/"><code>mgga_x_tpss</code></a> form (<a class="review-eq-link" href="#review-eq-eq-f0TPSS1"><span class="eq-number">Eq. (578)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="\begin{aligned}
 f_0^\text{TPSS} = \frac{1}{\left(1+\sqrt{e}p_\sigma\right)^2}\left\{
   \left[\mu^\text{GE} + c\frac{z_\sigma^f}{(1+z_\sigma^2)^2}\right] p_\sigma
   \right.
@@ -56,9 +56,7 @@ f_0^\text{TPSS} = \frac{1}{\left(1+\sqrt{e}p_\sigma\right)^2}\left\{
   \left.+ \frac{\left(\mu^\text{GE}\right)^2}{\kappa} p_\sigma^2
   + 2\sqrt{e}\mu^\text{GE}\frac{9}{25}z_\sigma^2 + e \mu^\text{PBE} p_\sigma^3
   \right\}
-\end{aligned}"></span>
-  </span>
-</a>) was slightly altered by:</p>
+\end{aligned}"></span></span></a>) was slightly altered by:</p>
 <ol class="review-list" type="i">
 <li><p>using $f=3$, thereby shifting that term from 6th order to 8th order in the density-gradient expansion</p></li>
 <li><p>changing $\mu^\text{PBE}$ to a value closer to $\mu^\text{GE}$ used in <a class="functional-link" href="../gga-x-pbe-sol/"><code>gga_x_pbe_sol</code></a>, and adjusting the values of $c$ and $e$ to respect the conditions originally obeyed by <a class="functional-link" href="../mgga-x-tpss/"><code>mgga_x_tpss</code></a>.</p></li>
@@ -73,7 +71,7 @@ f_0^\text{TPSS} = \frac{1}{\left(1+\sqrt{e}p_\sigma\right)^2}\left\{
           <h2>Referenced Review Equations</h2>
           <div class="review-equations">
           <article class="review-equation-card" id="review-eq-eq-f0TPSS1">
-            <code>eq:f0TPSS1</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (578)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=105" title="Open page 105 of the review PDF">p. 105 ↗</a></p>
             <div class="equation" data-tex="\begin{aligned}
 f_0^\text{TPSS} = \frac{1}{\left(1+\sqrt{e}p_\sigma\right)^2}\left\{
   \left[\mu^\text{GE} + c\frac{z_\sigma^f}{(1+z_\sigma^2)^2}\right] p_\sigma

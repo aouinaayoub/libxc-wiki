@@ -3,14 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>gga_x_bcgp</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20261016-excerpts-v1">
-    <script defer src="../../assets/search.js?v=20261016-excerpts-v1"></script>
+    <title>gga_x_bcgp — Burke, Cancio, Gould, and Pittalis · Libxc Wiki</title>
+    <meta name="description" content="gga_x_bcgp: Burke, Cancio, Gould, and Pittalis. GGA exchange functional in Libxc, with references and BibTeX. Includes an excerpt from the Tran, Lehtola, Pittalis and Marques review.">
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261117-refs-v1">
+    <script defer src="../../assets/search.js?v=20261117-refs-v1"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
     <script defer src="../../vendor/katex/contrib/mhchem.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20261016-excerpts-v1"></script>
+    <script defer src="../../assets/detail.js?v=20261117-refs-v1"></script>
 
   </head>
   <body class="functional-page">
@@ -32,20 +33,17 @@
 
         <p class="brand">GGA</p>
         <h1><code class="title-code">gga_x_bcgp</code></h1>
+        <p class="functional-name">Burke, Cancio, Gould, and Pittalis</p>
         <div class="detail-tags"><span class="tag">gga</span>
 <span class="tag">exchange</span></div>
       </header>
 
       <div class="detail-grid">
+
       <section class="callout">
         <p class="callout-label">Review excerpt</p>
         <div class="review-html">
-<p>This functional has the same form as <a class="functional-link" href="../gga-x-pbe/"><code>gga_x_pbe</code></a> and is similar in spirit to <a class="functional-link" href="../gga-x-eb88/"><code>gga_x_eb88</code></a>. Both use the large nuclear charge ($Z$) limit of atoms to fix parameters in the functional. Actually, it turned out that the two most used exchange GGA functionals (<a class="functional-link" href="../gga-x-b88/"><code>gga_x_b88</code></a> and <a class="functional-link" href="../gga-x-pbe/"><code>gga_x_pbe</code></a>) yield exchange energies that are already relatively accurate in this limit.<sup class="citation-marker"><a href="#review-ref-Elliott2009-1485">291</a></sup> The functional <a class="functional-link" href="../gga-x-eb88/"><code>gga_x_eb88</code></a> is the modified version of <a class="functional-link" href="../gga-x-b88/"><code>gga_x_b88</code></a> that leads to the correct value at the large $Z$ limit. In the case of <a class="functional-link" href="../gga-x-pbe/"><code>gga_x_pbe</code></a>, the necessary modification is an increase in the value of $\mu$ in <a class="review-eq-link" href="#review-eq-eq-pbeenh">
-  <code>eq:pbeenh</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="F_\text{x}^{\text{PBE}} = 1 + \kappa\left[1 - \frac{\kappa}{\kappa + f_0(s_\sigma)}\right]"></span>
-  </span>
-</a> by 13%, leading to <a class="functional-link" href="../gga-x-bcgp/"><code>gga_x_bcgp</code></a> with $\mu=0.249$. This functional was combined with <a class="functional-link" href="../gga-c-acgga/"><code>gga_c_acgga</code></a> for correlation.</p>
+<p>This functional has the same form as <a class="functional-link" href="../gga-x-pbe/"><code>gga_x_pbe</code></a> and is similar in spirit to <a class="functional-link" href="../gga-x-eb88/"><code>gga_x_eb88</code></a>. Both use the large nuclear charge ($Z$) limit of atoms to fix parameters in the functional. Actually, it turned out that the two most used exchange GGA functionals (<a class="functional-link" href="../gga-x-b88/"><code>gga_x_b88</code></a> and <a class="functional-link" href="../gga-x-pbe/"><code>gga_x_pbe</code></a>) yield exchange energies that are already relatively accurate in this limit.<sup class="citation-marker"><a href="#review-ref-Elliott2009-1485">291</a></sup> The functional <a class="functional-link" href="../gga-x-eb88/"><code>gga_x_eb88</code></a> is the modified version of <a class="functional-link" href="../gga-x-b88/"><code>gga_x_b88</code></a> that leads to the correct value at the large $Z$ limit. In the case of <a class="functional-link" href="../gga-x-pbe/"><code>gga_x_pbe</code></a>, the necessary modification is an increase in the value of $\mu$ in <a class="review-eq-link" href="#review-eq-eq-pbeenh"><span class="eq-number">Eq. (382)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="F_\text{x}^{\text{PBE}} = 1 + \kappa\left[1 - \frac{\kappa}{\kappa + f_0(s_\sigma)}\right]"></span></span></a> by 13%, leading to <a class="functional-link" href="../gga-x-bcgp/"><code>gga_x_bcgp</code></a> with $\mu=0.249$. This functional was combined with <a class="functional-link" href="../gga-c-acgga/"><code>gga_c_acgga</code></a> for correlation.</p>
         </div>
         <p class="source-note">Adapted from <a href="https://arxiv.org/abs/2602.17333">Tran, Lehtola, Pittalis, and Marques, <em>Semi-Local Exchange-Correlation Approximations in Density Functional Theory</em>, arXiv:2602.17333</a>.</p>
       </section>
@@ -54,7 +52,7 @@
           <h2>Referenced Review Equations</h2>
           <div class="review-equations">
           <article class="review-equation-card" id="review-eq-eq-pbeenh">
-            <code>eq:pbeenh</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (382)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=58" title="Open page 58 of the review PDF">p. 58 ↗</a></p>
             <div class="equation" data-tex="F_\text{x}^{\text{PBE}} = 1 + \kappa\left[1 - \frac{\kappa}{\kappa + f_0(s_\sigma)}\right]"></div>
           </article>
 
@@ -68,7 +66,7 @@
 
         <section class="section">
           <h2>Publications</h2>
-          <ol class="publication-refs"><li>Burke, K.; Cancio, A.; Gould, T.; Pittalis, S.. Atomic correlation energies and the generalized gradient approximation. <em>ArXiv e-prints</em> <strong>2014</strong></li></ol>
+          <ol class="publication-refs"><li>Burke, K.; Cancio, A.; Gould, T.; Pittalis, S. Atomic correlation energies and the generalized gradient approximation. <em>ArXiv e-prints</em> <strong>2014</strong></li></ol>
         </section>
 
         <section class="section">

@@ -3,14 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>gga_x_ssb_sw</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20261016-excerpts-v1">
-    <script defer src="../../assets/search.js?v=20261016-excerpts-v1"></script>
+    <title>gga_x_ssb_sw — Swart, Sola and Bickelhaupt correction to PBE · Libxc Wiki</title>
+    <meta name="description" content="gga_x_ssb_sw: Swart, Sola and Bickelhaupt correction to PBE. GGA exchange functional in Libxc, with references and BibTeX. Includes an excerpt from the Tran, Lehtola, Pittalis and Marques review.">
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261117-refs-v1">
+    <script defer src="../../assets/search.js?v=20261117-refs-v1"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
     <script defer src="../../vendor/katex/contrib/mhchem.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20261016-excerpts-v1"></script>
+    <script defer src="../../assets/detail.js?v=20261117-refs-v1"></script>
 
   </head>
   <body class="functional-page">
@@ -32,23 +33,20 @@
 
         <p class="brand">GGA</p>
         <h1><code class="title-code">gga_x_ssb_sw</code></h1>
+        <p class="functional-name">Swart, Sola and Bickelhaupt correction to PBE</p>
         <div class="detail-tags"><span class="tag">gga</span>
 <span class="tag">exchange</span></div>
       </header>
 
       <div class="detail-grid">
+
       <section class="callout">
         <p class="callout-label">Review excerpt</p>
         <div class="review-html">
 <p>From studies of spin states, hydrogen bonding, $\pi$-$\pi$ stacking, geometries, and S$_\text{N}$2 reaction barriers, it emerged that <a class="functional-link" href="../gga-x-optx/"><code>gga_x_optx</code></a> shows a good performance for spin states and reaction barriers, while <a class="functional-link" href="../gga-x-pbe/"><code>gga_x_pbe</code></a> works well for weak interactions. This functional is an attempt of getting the best of both worlds by switching between <a class="functional-link" href="../gga-x-optx/"><code>gga_x_optx</code></a> and <a class="functional-link" href="../gga-x-pbe/"><code>gga_x_pbe</code></a> in the appropriate range of $s_\sigma$. This is achieved by the following modification of <a class="functional-link" href="../gga-x-pbe/"><code>gga_x_pbe</code></a>:</p>
 <div class="equation" data-tex="F_\text{x}^\text{SSB-sw} = a + \frac{b s_\sigma^2}{1 + c s_\sigma^2}
   - \frac{d s_\sigma^2}{1 + e s_\sigma^4}"></div>
-<p>The parameter $a=1.05151$ is the same as in <a class="review-eq-link" href="#review-eq-eq-f-optx">
-  <code>eq:f-optx</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="F_\text{x}^{\text{OPTX}} = a + b \frac{\gamma^2 x_\sigma^4}{\left(1 + \gamma x_\sigma^2\right)^2}"></span>
-  </span>
-</a> of <a class="functional-link" href="../gga-x-optx/"><code>gga_x_optx</code></a>, while $c$ is determined by the LO bound ($a+b/c=1+\kappa^{\text{PBE}}$). The remaining three parameters are fit to reproduce <a class="functional-link" href="../gga-x-optx/"><code>gga_x_optx</code></a> for $s_\sigma \leq 0.7$ and <a class="functional-link" href="../gga-x-pbe/"><code>gga_x_pbe</code></a> for $s_\sigma \geq 0.9$, leading to $b=0.191458$, $c=0.254433$, $d=0.180708$, and $e=4.036674$. Note that it is not mentioned in <sup class="citation-marker"><a href="#review-ref-Swart2009-69">541</a></sup> which correlation functional was used.</p>
+<p>The parameter $a=1.05151$ is the same as in <a class="review-eq-link" href="#review-eq-eq-f-optx"><span class="eq-number">Eq. (395)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="F_\text{x}^{\text{OPTX}} = a + b \frac{\gamma^2 x_\sigma^4}{\left(1 + \gamma x_\sigma^2\right)^2}"></span></span></a> of <a class="functional-link" href="../gga-x-optx/"><code>gga_x_optx</code></a>, while $c$ is determined by the LO bound ($a+b/c=1+\kappa^{\text{PBE}}$). The remaining three parameters are fit to reproduce <a class="functional-link" href="../gga-x-optx/"><code>gga_x_optx</code></a> for $s_\sigma \leq 0.7$ and <a class="functional-link" href="../gga-x-pbe/"><code>gga_x_pbe</code></a> for $s_\sigma \geq 0.9$, leading to $b=0.191458$, $c=0.254433$, $d=0.180708$, and $e=4.036674$. Note that it is not mentioned in ref. <span class="citation-ref"><a href="#review-ref-Swart2009-69">541</a></span> which correlation functional was used.</p>
         </div>
         <p class="source-note">Adapted from <a href="https://arxiv.org/abs/2602.17333">Tran, Lehtola, Pittalis, and Marques, <em>Semi-Local Exchange-Correlation Approximations in Density Functional Theory</em>, arXiv:2602.17333</a>.</p>
       </section>
@@ -57,7 +55,7 @@
           <h2>Referenced Review Equations</h2>
           <div class="review-equations">
           <article class="review-equation-card" id="review-eq-eq-f-optx">
-            <code>eq:f-optx</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (395)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=61" title="Open page 61 of the review PDF">p. 61 ↗</a></p>
             <div class="equation" data-tex="F_\text{x}^{\text{OPTX}} = a + b \frac{\gamma^2 x_\sigma^4}{\left(1 + \gamma x_\sigma^2\right)^2}"></div>
           </article>
 

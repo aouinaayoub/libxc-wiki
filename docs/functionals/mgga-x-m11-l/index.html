@@ -3,14 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>mgga_x_m11_l</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20261016-excerpts-v1">
-    <script defer src="../../assets/search.js?v=20261016-excerpts-v1"></script>
+    <title>mgga_x_m11_l — Minnesota M11-L exchange functional · Libxc Wiki</title>
+    <meta name="description" content="mgga_x_m11_l: Minnesota M11-L exchange functional. Meta-GGA exchange functional in Libxc, with references and BibTeX. Includes an excerpt from the Tran, Lehtola, Pittalis and Marques review.">
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261117-refs-v1">
+    <script defer src="../../assets/search.js?v=20261117-refs-v1"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
     <script defer src="../../vendor/katex/contrib/mhchem.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20261016-excerpts-v1"></script>
+    <script defer src="../../assets/detail.js?v=20261117-refs-v1"></script>
 
   </head>
   <body class="functional-page">
@@ -32,27 +33,19 @@
 
         <p class="brand">META-GGA</p>
         <h1><code class="title-code">mgga_x_m11_l</code></h1>
+        <p class="functional-name">Minnesota M11-L exchange functional</p>
         <div class="detail-tags"><span class="tag">meta-gga</span>
 <span class="tag">exchange</span></div>
       </header>
 
       <div class="detail-grid">
+
       <section class="callout">
         <p class="callout-label">Review excerpt</p>
         <div class="review-html">
 <p>This empirical functional from Peverati and Truhlar<sup class="citation-marker"><a href="#review-ref-Peverati2012-117">712</a></sup> is based on a splitting of the Coulomb operator, leading to an enhancement factor that consists of short- and long-range parts:</p>
 <div class="equation" data-tex="F_\text{x}^\text{M11-L} = F_\text{x}^\text{SR-M11-L} + F_\text{x}^\text{LR-M11-L}"></div>
-<p>that were chosen as combinations of the enhancement factors of the <a class="functional-link" href="../gga-x-pbe/"><code>gga_x_pbe</code></a> (<a class="review-eq-link" href="#review-eq-eq-pbeenh">
-  <code>eq:pbeenh</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="F_\text{x}^{\text{PBE}} = 1 + \kappa\left[1 - \frac{\kappa}{\kappa + f_0(s_\sigma)}\right]"></span>
-  </span>
-</a>) and <a class="functional-link" href="../gga-x-rpbe/"><code>gga_x_rpbe</code></a> (<a class="review-eq-link" href="#review-eq-eq-RPBE">
-  <code>eq:RPBE</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="F_\text{x}^{\text{RPBE}} = 1 + \kappa\left(1 - \E^{-\mu s_\sigma^2/\kappa}\right)"></span>
-  </span>
-</a>) functionals:</p>
+<p>that were chosen as combinations of the enhancement factors of the <a class="functional-link" href="../gga-x-pbe/"><code>gga_x_pbe</code></a> (<a class="review-eq-link" href="#review-eq-eq-pbeenh"><span class="eq-number">Eq. (382)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="F_\text{x}^{\text{PBE}} = 1 + \kappa\left[1 - \frac{\kappa}{\kappa + f_0(s_\sigma)}\right]"></span></span></a>) and <a class="functional-link" href="../gga-x-rpbe/"><code>gga_x_rpbe</code></a> (<a class="review-eq-link" href="#review-eq-eq-RPBE"><span class="eq-number">Eq. (387)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="F_\text{x}^{\text{RPBE}} = 1 + \kappa\left(1 - \E^{-\mu s_\sigma^2/\kappa}\right)"></span></span></a>) functionals:</p>
 <div class="equation" data-tex="\begin{aligned}
 F_\text{x}^\text{SR-M11-L} = &amp; G(a_{\sigma})\left[f_{1}^{\text{SR}}(w_{\sigma})F_{\text{x}}^{\text{PBE}}(s_\sigma)\right.  \\
   &amp; \left.+f_{2}^{\text{SR}}(w_{\sigma})F_{\text{x}}^{\text{RPBE}}(s_\sigma)\right]
@@ -61,18 +54,8 @@ F_\text{x}^\text{SR-M11-L} = &amp; G(a_{\sigma})\left[f_{1}^{\text{SR}}(w_{\sigm
 F_\text{x}^\text{LR-M11-L} = &amp; \left[1-G(a_{\sigma})\right]\left[f_{1}^{\text{LR}}(w_{\sigma})F_{\text{x}}^{\text{PBE}}(s_\sigma)\right.  \\
  &amp; \left.+f_{2}^{\text{LR}}(w_{\sigma})F_{\text{x}}^{\text{RPBE}}(s_\sigma)\right]
 \end{aligned}"></div>
-<p>The functions $f_{i}^{\text{SR/LR}}$ are given by <a class="review-eq-link" href="#review-eq-eq-fwm06">
-  <code>eq:fwm06</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="f(w_\sigma)= \sum_{i=0}^m a_i w_\sigma^i"></span>
-  </span>
-</a> with $w_\sigma$ defined as <a class="review-eq-link" href="#review-eq-eq-b00w">
-  <code>eq:b00w</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="w_\sigma = \frac{\tau_\sigma^\text{TF} - \tau_\sigma}{\tau_\sigma^\text{TF} + \tau_\sigma}
-  = \frac{C_\text{F} - \tilde{t}_\sigma}{C_\text{F} + \tilde{t}_\sigma}"></span>
-  </span>
-</a>, and $m=8$ was found sufficiently large for a converged accuracy. The splitting of the Coulomb operator is based on the error function $\erf[\omega(\br_1 - \br_2)]$, therefore the function $G$ is given by</p>
+<p>The functions $f_{i}^{\text{SR/LR}}$ are given by <a class="review-eq-link" href="#review-eq-eq-fwm06"><span class="eq-number">Eq. (583)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="f(w_\sigma)= \sum_{i=0}^m a_i w_\sigma^i"></span></span></a> with $w_\sigma$ defined as <a class="review-eq-link" href="#review-eq-eq-b00w"><span class="eq-number">Eq. (91)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="w_\sigma = \frac{\tau_\sigma^\text{TF} - \tau_\sigma}{\tau_\sigma^\text{TF} + \tau_\sigma}
+  = \frac{C_\text{F} - \tilde{t}_\sigma}{C_\text{F} + \tilde{t}_\sigma}"></span></span></a>, and $m=8$ was found sufficiently large for a converged accuracy. The splitting of the Coulomb operator is based on the error function $\erf[\omega(\br_1 - \br_2)]$, therefore the function $G$ is given by</p>
 <div class="equation" data-tex="\begin{aligned}
 G(a_\sigma) = &amp; 1 -\frac{8}{3}a_\sigma\bigg[\sqrt{\pi}\erf\left(\frac{1}{2a_\sigma}\right) -
   3a_\sigma + 4a_\sigma^3  \\
@@ -81,12 +64,7 @@ G(a_\sigma) = &amp; 1 -\frac{8}{3}a_\sigma\bigg[\sqrt{\pi}\erf\left(\frac{1}{2a_
 \end{aligned}"></div>
 <p>with</p>
 <div class="equation" data-tex="a_{\sigma}=\frac{\omega}{2\left(12\pi^{2}n_{\sigma}\right)^{1/3}}"></div>
-<p>The coefficients in the functions $f_{i}^{\text{SR/LR}}$, as well as the range-separation parameter $\omega$ (0.25) in <a class="review-eq-link" href="#review-eq-eq-alpha-m11-l">
-  <code>eq:alpha-m11-l</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="a_{\sigma}=\frac{\omega}{2\left(12\pi^{2}n_{\sigma}\right)^{1/3}}"></span>
-  </span>
-</a>, were empirically tuned together with the parameters of <a class="functional-link" href="../mgga-c-m11-l/"><code>mgga_c_m11_l</code></a> correlation. However, several relations between them were imposed so that the following physical conditions are satisfied: the HEG limit, the second-order term in the density-gradient expansion, and no contribution from the $\tau$-dependent terms at the end points $w_\sigma=-1$ (exponential tails) and $w_\sigma=1$ (bond saddle points).</p>
+<p>The coefficients in the functions $f_{i}^{\text{SR/LR}}$, as well as the range-separation parameter $\omega$ (0.25) in <a class="review-eq-link" href="#review-eq-eq-alpha-m11-l"><span class="eq-number">Eq. (598)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="a_{\sigma}=\frac{\omega}{2\left(12\pi^{2}n_{\sigma}\right)^{1/3}}"></span></span></a>, were empirically tuned together with the parameters of <a class="functional-link" href="../mgga-c-m11-l/"><code>mgga_c_m11_l</code></a> correlation. However, several relations between them were imposed so that the following physical conditions are satisfied: the HEG limit, the second-order term in the density-gradient expansion, and no contribution from the $\tau$-dependent terms at the end points $w_\sigma=-1$ (exponential tails) and $w_\sigma=1$ (bond saddle points).</p>
 <p>A particular emphasis was put on systems with multiconfigurational character for the development of the M11-L functional, which is claimed accurate for a variety of molecular properties and to compete with hybrid functionals. Regarding solid-state properties, M11-L yields lattice constants with an accuracy that is intermediate between PBE (<a class="functional-link" href="../gga-x-pbe/"><code>gga_x_pbe</code></a> + <a class="functional-link" href="../gga-c-pbe/"><code>gga_c_pbe</code></a>) and PBEsol (<a class="functional-link" href="../gga-x-pbe-sol/"><code>gga_x_pbe_sol</code></a> + <a class="functional-link" href="../gga-c-pbe-sol/"><code>gga_c_pbe_sol</code></a>).</p>
 <p>Like M06-L (<a class="functional-link" href="../mgga-x-m06-l/"><code>mgga_x_m06_l</code></a> + <a class="functional-link" href="../mgga-c-m06-l/"><code>mgga_c_m06_l</code></a>), also M11-L has been found to lead to unphysical solutions for the hydrogen atom,<sup class="citation-marker"><a href="#review-ref-Lehtola2023-JPCA-4180">700</a></sup> suggesting issues with overfitting.</p>
         </div>
@@ -97,28 +75,28 @@ G(a_\sigma) = &amp; 1 -\frac{8}{3}a_\sigma\bigg[\sqrt{\pi}\erf\left(\frac{1}{2a_
           <h2>Referenced Review Equations</h2>
           <div class="review-equations">
           <article class="review-equation-card" id="review-eq-eq-pbeenh">
-            <code>eq:pbeenh</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (382)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=58" title="Open page 58 of the review PDF">p. 58 ↗</a></p>
             <div class="equation" data-tex="F_\text{x}^{\text{PBE}} = 1 + \kappa\left[1 - \frac{\kappa}{\kappa + f_0(s_\sigma)}\right]"></div>
           </article>
 
           <article class="review-equation-card" id="review-eq-eq-RPBE">
-            <code>eq:RPBE</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (387)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=60" title="Open page 60 of the review PDF">p. 60 ↗</a></p>
             <div class="equation" data-tex="F_\text{x}^{\text{RPBE}} = 1 + \kappa\left(1 - \E^{-\mu s_\sigma^2/\kappa}\right)"></div>
           </article>
 
           <article class="review-equation-card" id="review-eq-eq-fwm06">
-            <code>eq:fwm06</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (583)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=106" title="Open page 106 of the review PDF">p. 106 ↗</a></p>
             <div class="equation" data-tex="f(w_\sigma)= \sum_{i=0}^m a_i w_\sigma^i"></div>
           </article>
 
           <article class="review-equation-card" id="review-eq-eq-b00w">
-            <code>eq:b00w</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (91)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=15" title="Open page 15 of the review PDF">p. 15 ↗</a></p>
             <div class="equation" data-tex="w_\sigma = \frac{\tau_\sigma^\text{TF} - \tau_\sigma}{\tau_\sigma^\text{TF} + \tau_\sigma}
   = \frac{C_\text{F} - \tilde{t}_\sigma}{C_\text{F} + \tilde{t}_\sigma}"></div>
           </article>
 
           <article class="review-equation-card" id="review-eq-eq-alpha-m11-l">
-            <code>eq:alpha-m11-l</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (598)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=109" title="Open page 109 of the review PDF">p. 109 ↗</a></p>
             <div class="equation" data-tex="a_{\sigma}=\frac{\omega}{2\left(12\pi^{2}n_{\sigma}\right)^{1/3}}"></div>
           </article>
 

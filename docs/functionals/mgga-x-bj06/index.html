@@ -3,14 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>mgga_x_bj06</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20261016-excerpts-v1">
-    <script defer src="../../assets/search.js?v=20261016-excerpts-v1"></script>
+    <title>mgga_x_bj06 — Becke &amp; Johnson 06 · Libxc Wiki</title>
+    <meta name="description" content="mgga_x_bj06: Becke &amp; Johnson 06. Meta-GGA exchange functional in Libxc, with references and BibTeX. Includes an excerpt from the Tran, Lehtola, Pittalis and Marques review.">
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261117-refs-v1">
+    <script defer src="../../assets/search.js?v=20261117-refs-v1"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
     <script defer src="../../vendor/katex/contrib/mhchem.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20261016-excerpts-v1"></script>
+    <script defer src="../../assets/detail.js?v=20261117-refs-v1"></script>
 
   </head>
   <body class="functional-page">
@@ -32,40 +33,27 @@
 
         <p class="brand">META-GGA</p>
         <h1><code class="title-code">mgga_x_bj06</code></h1>
+        <p class="functional-name">Becke &amp; Johnson 06</p>
         <div class="detail-tags"><span class="tag">meta-gga</span>
 <span class="tag">exchange</span></div>
       </header>
 
       <div class="detail-grid">
+
       <section class="callout">
         <p class="callout-label">Review excerpt</p>
         <div class="review-html">
-<p>Becke and Johnson<sup class="citation-marker"><a href="#review-ref-Becke2006-221101">689</a></sup> noted that the difference between the EXX-OEP and Slater<sup class="citation-marker"><a href="#review-ref-Slater1951-385">50</a></sup> potentials $\Delta v_{\text{x}\sigma} = v^\text{EXX-OEP}_{\text{x}\sigma} - v^\text{Slater}_{\text{x}\sigma}$ (where $v^\text{Slater}_{\text{x}\sigma}$ is given by <a class="review-eq-link" href="#review-eq-eq-Ux-spin">
-  <code>eq:Ux-spin</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="U_{\x\sigma}(\br) = \mint{r&#39;} \frac{h_{\x\sigma}(\br,\br&#39;)}{|\br - \br&#39;|} = 2e_{\x\sigma}(\br)"></span>
-  </span>
-</a>) is characterized by a step-like structure in multi-shell atoms, and that this structure can be modeled by the ratio $\tau_\sigma/n_\sigma$. They thus proposed this simple approximation to the EXX-OEP potential</p>
+<p>Becke and Johnson<sup class="citation-marker"><a href="#review-ref-Becke2006-221101">689</a></sup> noted that the difference between the EXX-OEP and Slater<sup class="citation-marker"><a href="#review-ref-Slater1951-385">50</a></sup> potentials $\Delta v_{\text{x}\sigma} = v^\text{EXX-OEP}_{\text{x}\sigma} - v^\text{Slater}_{\text{x}\sigma}$ (where $v^\text{Slater}_{\text{x}\sigma}$ is given by <a class="review-eq-link" href="#review-eq-eq-Ux-spin"><span class="eq-number">Eq. (144)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="U_{\x\sigma}(\br) = \mint{r&#39;} \frac{h_{\x\sigma}(\br,\br&#39;)}{|\br - \br&#39;|} = 2e_{\x\sigma}(\br)"></span></span></a>) is characterized by a step-like structure in multi-shell atoms, and that this structure can be modeled by the ratio $\tau_\sigma/n_\sigma$. They thus proposed this simple approximation to the EXX-OEP potential</p>
 <div class="equation" data-tex="v^\text{BJ06}_{\text{x}\sigma} = v^\text{Slater}_{\text{x}\sigma} + \frac{1}{\pi}\sqrt{\frac{5}{6}}\sqrt{\frac{\tau_\sigma}{n_\sigma}}"></div>
 <p>that fulfills the following conditions:</p>
 <ol class="review-list" type="i">
 <li><p>it is invariant to any unitary transformation of the orbitals</p></li>
 <li><p>it shows the step-like structure characteristic of $\Delta v_{\text{x}\sigma}$ in atoms</p></li>
-<li><p>it recovers the exact (i.e. <a class="functional-link" href="../lda-x/"><code>lda_x</code></a>) HEG limit (<a class="review-eq-link" href="#review-eq-eq-vxlda">
-  <code>eq:vxlda</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="v_{\text{x}\sigma}^\text{LDA}=-\left(\frac{6}{\pi}\right)^{1/3}n_{\sigma}^{1/3}"></span>
-  </span>
-</a>)</p></li>
+<li><p>it recovers the exact (i.e. <a class="functional-link" href="../lda-x/"><code>lda_x</code></a>) HEG limit (<a class="review-eq-link" href="#review-eq-eq-vxlda"><span class="eq-number">Eq. (258)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="v_{\text{x}\sigma}^\text{LDA}=-\left(\frac{6}{\pi}\right)^{1/3}n_{\sigma}^{1/3}"></span></span></a>)</p></li>
 <li><p>it is exact for any hydrogenic atom.</p></li>
 </ol>
-<p>As this potential was directly modeled, it suffers from the same drawbacks as <a class="functional-link" href="../gga-x-lb/"><code>gga_x_lb</code></a>. In particular, it has no associated energy functional. Moreover, asymptotically it approaches a constant whose value depends on the eigenvalue of the highest occupied orbital (see also <sup class="citation-marker"><a href="#review-ref-Aschebrock2017-245118">696</a></sup>) and it is not gauge invariant (see <a class="functional-link" href="../mgga-x-rpp09/"><code>mgga_x_rpp09</code></a> for a gauge-invariant modification).</p>
-<p>As suggested by Becke and Johnson<sup class="citation-marker"><a href="#review-ref-Becke2006-221101">689</a></sup>, the Slater potential, which is computationally expensive, can be accurately replaced by <a class="review-eq-link" href="#review-eq-eq-vxbrhole">
-  <code>eq:vxbrhole</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="v^\text{BR89,hole}_{\text{x}\sigma}=2e^\text{BR89}_{\text{x}\sigma}"></span>
-  </span>
-</a>:</p>
+<p>As this potential was directly modeled, it suffers from the same drawbacks as <a class="functional-link" href="../gga-x-lb/"><code>gga_x_lb</code></a>. In particular, it has no associated energy functional. Moreover, asymptotically it approaches a constant whose value depends on the eigenvalue of the highest occupied orbital (see also ref. <span class="citation-ref"><a href="#review-ref-Aschebrock2017-245118">696</a></span>) and it is not gauge invariant (see <a class="functional-link" href="../mgga-x-rpp09/"><code>mgga_x_rpp09</code></a> for a gauge-invariant modification).</p>
+<p>As suggested by Becke and Johnson<sup class="citation-marker"><a href="#review-ref-Becke2006-221101">689</a></sup>, the Slater potential, which is computationally expensive, can be accurately replaced by <a class="review-eq-link" href="#review-eq-eq-vxbrhole"><span class="eq-number">Eq. (554)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="v^\text{BR89,hole}_{\text{x}\sigma}=2e^\text{BR89}_{\text{x}\sigma}"></span></span></a>:</p>
 <div class="equation" data-tex="v^\text{BJ06}_{\text{x}\sigma} = v^\text{BR89,hole}_{\text{x}\sigma} + \frac{1}{\pi}\sqrt{\frac{5}{6}}\sqrt{\frac{\tau_\sigma}{n_\sigma}}"></div>
 <p>which is the version available in Libxc (<a class="functional-link" href="../mgga-x-bj06/"><code>mgga_x_bj06</code></a>). Note that <a class="functional-link" href="../mgga-x-bj06/"><code>mgga_x_bj06</code></a> is a component of the <a class="functional-link" href="../mgga-x-tb09/"><code>mgga_x_tb09</code></a> potential.</p>
         </div>
@@ -76,17 +64,17 @@
           <h2>Referenced Review Equations</h2>
           <div class="review-equations">
           <article class="review-equation-card" id="review-eq-eq-Ux-spin">
-            <code>eq:Ux-spin</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (144)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=20" title="Open page 20 of the review PDF">p. 20 ↗</a></p>
             <div class="equation" data-tex="U_{\x\sigma}(\br) = \mint{r&#39;} \frac{h_{\x\sigma}(\br,\br&#39;)}{|\br - \br&#39;|} = 2e_{\x\sigma}(\br)"></div>
           </article>
 
           <article class="review-equation-card" id="review-eq-eq-vxlda">
-            <code>eq:vxlda</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (258)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=36" title="Open page 36 of the review PDF">p. 36 ↗</a></p>
             <div class="equation" data-tex="v_{\text{x}\sigma}^\text{LDA}=-\left(\frac{6}{\pi}\right)^{1/3}n_{\sigma}^{1/3}"></div>
           </article>
 
           <article class="review-equation-card" id="review-eq-eq-vxbrhole">
-            <code>eq:vxbrhole</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (554)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=101" title="Open page 101 of the review PDF">p. 101 ↗</a></p>
             <div class="equation" data-tex="v^\text{BR89,hole}_{\text{x}\sigma}=2e^\text{BR89}_{\text{x}\sigma}"></div>
           </article>
 

@@ -3,14 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>mgga_x_rmspbel</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20261016-excerpts-v1">
-    <script defer src="../../assets/search.js?v=20261016-excerpts-v1"></script>
+    <title>mgga_x_rmspbel — regularized MS-PBEl · Libxc Wiki</title>
+    <meta name="description" content="mgga_x_rmspbel: regularized MS-PBEl. Meta-GGA exchange functional in Libxc, with references and BibTeX. Includes an excerpt from the Tran, Lehtola, Pittalis and Marques review.">
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261117-refs-v1">
+    <script defer src="../../assets/search.js?v=20261117-refs-v1"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
     <script defer src="../../vendor/katex/contrib/mhchem.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20261016-excerpts-v1"></script>
+    <script defer src="../../assets/detail.js?v=20261117-refs-v1"></script>
 
   </head>
   <body class="functional-page">
@@ -32,31 +33,18 @@
 
         <p class="brand">META-GGA</p>
         <h1><code class="title-code">mgga_x_rmspbel</code></h1>
+        <p class="functional-name">regularized MS-PBEl</p>
         <div class="detail-tags"><span class="tag">meta-gga</span>
 <span class="tag">exchange</span></div>
       </header>
 
       <div class="detail-grid">
+
       <section class="callout">
         <p class="callout-label">Review excerpt</p>
         <div class="review-html">
-<p>These functionals have the same mathematical form as <a class="functional-link" href="../mgga-x-msb86bl/"><code>mgga_x_msb86bl</code></a>, <a class="functional-link" href="../mgga-x-mspbel/"><code>mgga_x_mspbel</code></a>, and <a class="functional-link" href="../mgga-x-msrpbel/"><code>mgga_x_msrpbel</code></a>, but use the regularized iso-orbital indicator $\tilde{\alpha}_\sigma$ proposed for <a class="functional-link" href="../mgga-x-r2scan/"><code>mgga_x_r2scan</code></a>, given by <a class="review-eq-link" href="#review-eq-eq-r2scanalpha">
-  <code>eq:r2scanalpha</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="\tilde{\alpha}_{\sigma} = \frac{\tau_{\sigma}-\tau_{\sigma}^{\text{W}}}{\tau_{\sigma}^{\text{TF}}+\eta\tau_{\sigma}^{\text{W}}}"></span>
-  </span>
-</a> with $\eta=10^{-3}$, for evaluating the switching function from <a class="review-eq-link" href="#review-eq-eq-ms0f">
-  <code>eq:ms0f</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="f(\alpha_\sigma) = \frac{\left(1-\alpha_\sigma^2\right)^3}{1 + \alpha_\sigma^3 + b \alpha_\sigma^6}"></span>
-  </span>
-</a> that is used in the enhancement factor (<a class="review-eq-link" href="#review-eq-eq-fx-ms0">
-  <code>eq:fx-ms0</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="F_\text{x}^\text{MS0} = F_\text{x}^{1}(s_\sigma) + f(\alpha_\sigma) 
-  \left[F_\text{x}^{0}(s_\sigma) - F_\text{x}^{1}(s_\sigma)\right]"></span>
-  </span>
-</a>).</p>
+<p>These functionals have the same mathematical form as <a class="functional-link" href="../mgga-x-msb86bl/"><code>mgga_x_msb86bl</code></a>, <a class="functional-link" href="../mgga-x-mspbel/"><code>mgga_x_mspbel</code></a>, and <a class="functional-link" href="../mgga-x-msrpbel/"><code>mgga_x_msrpbel</code></a>, but use the regularized iso-orbital indicator $\tilde{\alpha}_\sigma$ proposed for <a class="functional-link" href="../mgga-x-r2scan/"><code>mgga_x_r2scan</code></a>, given by <a class="review-eq-link" href="#review-eq-eq-r2scanalpha"><span class="eq-number">Eq. (667)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="\tilde{\alpha}_{\sigma} = \frac{\tau_{\sigma}-\tau_{\sigma}^{\text{W}}}{\tau_{\sigma}^{\text{TF}}+\eta\tau_{\sigma}^{\text{W}}}"></span></span></a> with $\eta=10^{-3}$, for evaluating the switching function from <a class="review-eq-link" href="#review-eq-eq-ms0f"><span class="eq-number">Eq. (608)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="f(\alpha_\sigma) = \frac{\left(1-\alpha_\sigma^2\right)^3}{1 + \alpha_\sigma^3 + b \alpha_\sigma^6}"></span></span></a> that is used in the enhancement factor (<a class="review-eq-link" href="#review-eq-eq-fx-ms0"><span class="eq-number">Eq. (605)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="F_\text{x}^\text{MS0} = F_\text{x}^{1}(s_\sigma) + f(\alpha_\sigma) 
+  \left[F_\text{x}^{0}(s_\sigma) - F_\text{x}^{1}(s_\sigma)\right]"></span></span></a>).</p>
 <p>Calculations of adsorption energies and dissociation barriers of molecules on Cu(111) surfaces show that <a class="functional-link" href="../mgga-x-rmsrpbel/"><code>mgga_x_rmsrpbel</code></a> can compete with <a class="functional-link" href="../gga-xc-beefvdw/"><code>gga_xc_beefvdw</code></a>, when combined with the <a class="functional-link" href="../gga-c-regtpss/"><code>gga_c_regtpss</code></a> and rVV10<sup class="citation-marker"><a href="#review-ref-Sabatini2013-041108">775</a></sup> correlation functionals.</p>
         </div>
         <p class="source-note">Adapted from <a href="https://arxiv.org/abs/2602.17333">Tran, Lehtola, Pittalis, and Marques, <em>Semi-Local Exchange-Correlation Approximations in Density Functional Theory</em>, arXiv:2602.17333</a>.</p>
@@ -66,17 +54,17 @@
           <h2>Referenced Review Equations</h2>
           <div class="review-equations">
           <article class="review-equation-card" id="review-eq-eq-r2scanalpha">
-            <code>eq:r2scanalpha</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (667)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=122" title="Open page 122 of the review PDF">p. 122 ↗</a></p>
             <div class="equation" data-tex="\tilde{\alpha}_{\sigma} = \frac{\tau_{\sigma}-\tau_{\sigma}^{\text{W}}}{\tau_{\sigma}^{\text{TF}}+\eta\tau_{\sigma}^{\text{W}}}"></div>
           </article>
 
           <article class="review-equation-card" id="review-eq-eq-ms0f">
-            <code>eq:ms0f</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (608)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=111" title="Open page 111 of the review PDF">p. 111 ↗</a></p>
             <div class="equation" data-tex="f(\alpha_\sigma) = \frac{\left(1-\alpha_\sigma^2\right)^3}{1 + \alpha_\sigma^3 + b \alpha_\sigma^6}"></div>
           </article>
 
           <article class="review-equation-card" id="review-eq-eq-fx-ms0">
-            <code>eq:fx-ms0</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (605)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=111" title="Open page 111 of the review PDF">p. 111 ↗</a></p>
             <div class="equation" data-tex="F_\text{x}^\text{MS0} = F_\text{x}^{1}(s_\sigma) + f(\alpha_\sigma) 
   \left[F_\text{x}^{0}(s_\sigma) - F_\text{x}^{1}(s_\sigma)\right]"></div>
           </article>

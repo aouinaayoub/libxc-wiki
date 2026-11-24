@@ -3,14 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>gga_c_pw91</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20261016-excerpts-v1">
-    <script defer src="../../assets/search.js?v=20261016-excerpts-v1"></script>
+    <title>gga_c_pw91 — Perdew &amp; Wang 91 · Libxc Wiki</title>
+    <meta name="description" content="gga_c_pw91: Perdew &amp; Wang 91. GGA correlation functional in Libxc, with references and BibTeX. Includes an excerpt from the Tran, Lehtola, Pittalis and Marques review.">
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261117-refs-v1">
+    <script defer src="../../assets/search.js?v=20261117-refs-v1"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
     <script defer src="../../vendor/katex/contrib/mhchem.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20261016-excerpts-v1"></script>
+    <script defer src="../../assets/detail.js?v=20261117-refs-v1"></script>
 
   </head>
   <body class="functional-page">
@@ -32,21 +33,18 @@
 
         <p class="brand">GGA</p>
         <h1><code class="title-code">gga_c_pw91</code></h1>
+        <p class="functional-name">Perdew &amp; Wang 91</p>
         <div class="detail-tags"><span class="tag">gga</span>
 <span class="tag">correlation</span></div>
       </header>
 
       <div class="detail-grid">
+
       <section class="callout">
         <p class="callout-label">Review excerpt</p>
         <div class="review-html">
-<p>Akin to several of its predecessors, e.g. <a class="functional-link" href="../gga-c-lm/"><code>gga_c_lm</code></a> or <a class="functional-link" href="../gga-c-p86/"><code>gga_c_p86</code></a>, the correlation component of PW91 (<a class="functional-link" href="../gga-x-pw91/"><code>gga_x_pw91</code></a> + <a class="functional-link" href="../gga-c-pw91/"><code>gga_c_pw91</code></a>) functional has no empirical parameters. For small density gradients, it reduces to the second-order density-gradient expansion with coefficients from Rasolt and Geldart<sup class="citation-marker"><a href="#review-ref-Rasolt1986-1325">592</a></sup> (see <a class="review-eq-link" href="#review-eq-eq-ggacp86-rgc">
-  <code>eq:ggacp86:rgc</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="C_\text{c}(r_s) = a^\text{RG} + \frac{b^\text{RG} + \alpha^\text{RG} r_s + \beta^\text{RG} r_s^2}
-  {1 + \gamma^\text{RG} r_s + \delta^\text{RG} r_s^2 + 10^4\beta^\text{RG} r_s^3}"></span>
-  </span>
-</a>). The functional form reads</p>
+<p>Akin to several of its predecessors, e.g. <a class="functional-link" href="../gga-c-lm/"><code>gga_c_lm</code></a> or <a class="functional-link" href="../gga-c-p86/"><code>gga_c_p86</code></a>, the correlation component of the famous PW91 (<a class="functional-link" href="../gga-x-pw91/"><code>gga_x_pw91</code></a> + <a class="functional-link" href="../gga-c-pw91/"><code>gga_c_pw91</code></a>) functional has no empirical parameters. For small density gradients, it reduces to the second-order density-gradient expansion with coefficients from Rasolt and Geldart<sup class="citation-marker"><a href="#review-ref-Rasolt1986-1325">592</a></sup> (see <a class="review-eq-link" href="#review-eq-eq-ggacp86-rgc"><span class="eq-number">Eq. (462)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="C_\text{c}(r_s) = a^\text{RG} + \frac{b^\text{RG} + \alpha^\text{RG} r_s + \beta^\text{RG} r_s^2}
+  {1 + \gamma^\text{RG} r_s + \delta^\text{RG} r_s^2 + 10^4\beta^\text{RG} r_s^3}"></span></span></a>). The functional form reads</p>
 <div class="equation" data-tex="\begin{aligned}
 e_\text{c}^{\text{PW91}} = &amp; e_\text{c}^\text{PW-LDA}(r_s, \zeta) + H_0(\phi_{2/3}, t, A)  \\
   &amp; + H_1(r_s, \phi_{2/3}, t)
@@ -58,42 +56,17 @@ e_\text{c}^{\text{PW91}} = &amp; e_\text{c}^\text{PW-LDA}(r_s, \zeta) + H_0(\phi
 <div class="equation" data-tex="A(r_s, \zeta, \phi_{2/3}) = \frac{\beta}{\gamma w_1}"></div>
 <p>with</p>
 <div class="equation" data-tex="w_1 = \E^{-e^\text{PW-LDA}_{\text{c}}(r_s,\zeta)/\left(\gamma\phi_{2/3}^3\right)} - 1"></div>
-<p>The parameters entering into <a class="review-eq-link" href="#review-eq-eq-ggac-pw91h0">
-  <code>eq:ggac:pw91h0</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="H_0(\phi_{2/3}, t, A) = \gamma \phi_{2/3}^3 \ln\left[1 + \frac{\beta}{\gamma}
-  \frac{t^2 + A t^4}{1 + A (t^2 + A t^4)}\right]"></span>
-  </span>
-</a>; <a class="review-eq-link" href="#review-eq-eq-pw91a">
-  <code>eq:pw91a</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="A(r_s, \zeta, \phi_{2/3}) = \frac{\beta}{\gamma w_1}"></span>
-  </span>
-</a> are $\beta=\beta^{\text{MB}}$ and $\gamma=\beta^{2} /\left(2\alpha\right)$, with $\alpha=0.09$, $\nu =(16 / \pi)(3\pi^2)^{1/3}$, and $C_\text{c}(0)=a^\text{RG}+b^\text{RG}$, which is the value of the Rasolt and Geldart<sup class="citation-marker"><a href="#review-ref-Rasolt1986-1325">592</a></sup> second-order density-gradient expansion at $r_s=0$ (see <a class="review-eq-link" href="#review-eq-eq-ggacp86-rgc">
-  <code>eq:ggacp86:rgc</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="C_\text{c}(r_s) = a^\text{RG} + \frac{b^\text{RG} + \alpha^\text{RG} r_s + \beta^\text{RG} r_s^2}
-  {1 + \gamma^\text{RG} r_s + \delta^\text{RG} r_s^2 + 10^4\beta^\text{RG} r_s^3}"></span>
-  </span>
-</a>).</p>
+<p>The parameters entering into <a class="review-eq-link" href="#review-eq-eq-ggac-pw91h0"><span class="eq-number">Eq. (469)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="H_0(\phi_{2/3}, t, A) = \gamma \phi_{2/3}^3 \ln\left[1 + \frac{\beta}{\gamma}
+  \frac{t^2 + A t^4}{1 + A (t^2 + A t^4)}\right]"></span></span></a>; <a class="review-eq-link" href="#review-eq-eq-pw91a"><span class="eq-number">Eq. (470)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="A(r_s, \zeta, \phi_{2/3}) = \frac{\beta}{\gamma w_1}"></span></span></a> are $\beta=\beta^{\text{MB}}$ and $\gamma=\beta^{2} /\left(2\alpha\right)$, with $\alpha=0.09$, $\nu =(16 / \pi)(3\pi^2)^{1/3}$, and $C_\text{c}(0)=a^\text{RG}+b^\text{RG}$, which is the value of the Rasolt and Geldart<sup class="citation-marker"><a href="#review-ref-Rasolt1986-1325">592</a></sup> second-order density-gradient expansion at $r_s=0$ (see <a class="review-eq-link" href="#review-eq-eq-ggacp86-rgc"><span class="eq-number">Eq. (462)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="C_\text{c}(r_s) = a^\text{RG} + \frac{b^\text{RG} + \alpha^\text{RG} r_s + \beta^\text{RG} r_s^2}
+  {1 + \gamma^\text{RG} r_s + \delta^\text{RG} r_s^2 + 10^4\beta^\text{RG} r_s^3}"></span></span></a>).</p>
 <p>The second term, $H_1$, reads</p>
 <div class="equation" data-tex="\begin{aligned}
 H_1(r_s, \phi_{2/3}, t) =&amp; \nu \left[C_\text{c}(r_s) - C_\text{c}(0) - \frac{3}{7}c_x\right]  \\
  &amp;\times \phi_{2/3}^3 t^2 \E^{-a_1 r_s \phi_{2/3}^4 t^2}
 \end{aligned}"></div>
-<p>where $C_\text{c}(r_s)$ is <a class="review-eq-link" href="#review-eq-eq-ggacp86-rgc">
-  <code>eq:ggacp86:rgc</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="C_\text{c}(r_s) = a^\text{RG} + \frac{b^\text{RG} + \alpha^\text{RG} r_s + \beta^\text{RG} r_s^2}
-  {1 + \gamma^\text{RG} r_s + \delta^\text{RG} r_s^2 + 10^4\beta^\text{RG} r_s^3}"></span>
-  </span>
-</a>, $a_1 = 400 \left[4/\left(9\pi\right)\right]^{1/3}/\pi$, and $c_x=-a^\text{RG}$ is the coefficient of the density-gradient correction for exchange (see <a class="review-eq-link" href="#review-eq-eq-ggacp86-rgc">
-  <code>eq:ggacp86:rgc</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="C_\text{c}(r_s) = a^\text{RG} + \frac{b^\text{RG} + \alpha^\text{RG} r_s + \beta^\text{RG} r_s^2}
-  {1 + \gamma^\text{RG} r_s + \delta^\text{RG} r_s^2 + 10^4\beta^\text{RG} r_s^3}"></span>
-  </span>
-</a>).</p>
+<p>where $C_\text{c}(r_s)$ is <a class="review-eq-link" href="#review-eq-eq-ggacp86-rgc"><span class="eq-number">Eq. (462)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="C_\text{c}(r_s) = a^\text{RG} + \frac{b^\text{RG} + \alpha^\text{RG} r_s + \beta^\text{RG} r_s^2}
+  {1 + \gamma^\text{RG} r_s + \delta^\text{RG} r_s^2 + 10^4\beta^\text{RG} r_s^3}"></span></span></a>, $a_1 = 400 \left[4/\left(9\pi\right)\right]^{1/3}/\pi$, and $c_x=-a^\text{RG}$ is the coefficient of the density-gradient correction for exchange (see <a class="review-eq-link" href="#review-eq-eq-ggacp86-rgc"><span class="eq-number">Eq. (462)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="C_\text{c}(r_s) = a^\text{RG} + \frac{b^\text{RG} + \alpha^\text{RG} r_s + \beta^\text{RG} r_s^2}
+  {1 + \gamma^\text{RG} r_s + \delta^\text{RG} r_s^2 + 10^4\beta^\text{RG} r_s^3}"></span></span></a>).</p>
         </div>
         <p class="source-note">Adapted from <a href="https://arxiv.org/abs/2602.17333">Tran, Lehtola, Pittalis, and Marques, <em>Semi-Local Exchange-Correlation Approximations in Density Functional Theory</em>, arXiv:2602.17333</a>.</p>
       </section>
@@ -102,19 +75,19 @@ H_1(r_s, \phi_{2/3}, t) =&amp; \nu \left[C_\text{c}(r_s) - C_\text{c}(0) - \frac
           <h2>Referenced Review Equations</h2>
           <div class="review-equations">
           <article class="review-equation-card" id="review-eq-eq-ggacp86-rgc">
-            <code>eq:ggacp86:rgc</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (462)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=79" title="Open page 79 of the review PDF">p. 79 ↗</a></p>
             <div class="equation" data-tex="C_\text{c}(r_s) = a^\text{RG} + \frac{b^\text{RG} + \alpha^\text{RG} r_s + \beta^\text{RG} r_s^2}
   {1 + \gamma^\text{RG} r_s + \delta^\text{RG} r_s^2 + 10^4\beta^\text{RG} r_s^3}"></div>
           </article>
 
           <article class="review-equation-card" id="review-eq-eq-ggac-pw91h0">
-            <code>eq:ggac:pw91h0</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (469)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=80" title="Open page 80 of the review PDF">p. 80 ↗</a></p>
             <div class="equation" data-tex="H_0(\phi_{2/3}, t, A) = \gamma \phi_{2/3}^3 \ln\left[1 + \frac{\beta}{\gamma}
   \frac{t^2 + A t^4}{1 + A (t^2 + A t^4)}\right]"></div>
           </article>
 
           <article class="review-equation-card" id="review-eq-eq-pw91a">
-            <code>eq:pw91a</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (470)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=80" title="Open page 80 of the review PDF">p. 80 ↗</a></p>
             <div class="equation" data-tex="A(r_s, \zeta, \phi_{2/3}) = \frac{\beta}{\gamma w_1}"></div>
           </article>
 
@@ -128,7 +101,7 @@ H_1(r_s, \phi_{2/3}, t) =&amp; \nu \left[C_\text{c}(r_s) - C_\text{c}(0) - \frac
 
         <section class="section">
           <h2>Publications</h2>
-          <ol class="publication-refs"><li>Perdew, J. P.. J. P. Perdew. In P. Ziesche and H. Eschrig, editors, Proceedings of the 75. WE-Heraeus-Seminar and 21st Annual International Symposium on Electronic Structure of Solids, 11. Berlin, 1991. Akademie Verlag.</li>
+          <ol class="publication-refs"><li>Perdew, J. P. J. P. Perdew. In P. Ziesche and H. Eschrig, editors, Proceedings of the 75. WE-Heraeus-Seminar and 21st Annual International Symposium on Electronic Structure of Solids, 11. Berlin, 1991. Akademie Verlag.</li>
 <li>Perdew, J. P.; Chevary, J. A.; Vosko, S. H.; Jackson, K. A.; Pederson, M. R.; Singh, D. J.; Fiolhais, C. Atoms, molecules, solids, and surfaces: Applications of the generalized gradient approximation for exchange and correlation. <em>Phys. Rev. B</em> <strong>1992</strong>, <em>46</em>, 6671, DOI: <a href="https://doi.org/10.1103/PhysRevB.46.6671">10.1103/PhysRevB.46.6671</a></li>
 <li>Perdew, J. P.; Chevary, J. A.; Vosko, S. H.; Jackson, K. A.; Pederson, M. R.; Singh, D. J.; Fiolhais, C. Erratum: Atoms, molecules, solids, and surfaces: Applications of the generalized gradient approximation for exchange and correlation. <em>Phys. Rev. B</em> <strong>1993</strong>, <em>48</em>, 4978, DOI: <a href="https://doi.org/10.1103/PhysRevB.48.4978.2">10.1103/PhysRevB.48.4978.2</a></li></ol>
         </section>

@@ -3,14 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>gga_x_2d_pbe</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20261016-excerpts-v1">
-    <script defer src="../../assets/search.js?v=20261016-excerpts-v1"></script>
+    <title>gga_x_2d_pbe — Perdew, Burke &amp; Ernzerhof in 2D · Libxc Wiki</title>
+    <meta name="description" content="gga_x_2d_pbe: Perdew, Burke &amp; Ernzerhof in 2D. GGA exchange functional in Libxc, with references and BibTeX. Includes an excerpt from the Tran, Lehtola, Pittalis and Marques review.">
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261117-refs-v1">
+    <script defer src="../../assets/search.js?v=20261117-refs-v1"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
     <script defer src="../../vendor/katex/contrib/mhchem.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20261016-excerpts-v1"></script>
+    <script defer src="../../assets/detail.js?v=20261117-refs-v1"></script>
 
   </head>
   <body class="functional-page">
@@ -32,58 +33,30 @@
 
         <p class="brand">GGA</p>
         <h1><code class="title-code">gga_x_2d_pbe</code></h1>
+        <p class="functional-name">Perdew, Burke &amp; Ernzerhof in 2D</p>
         <div class="detail-tags"><span class="tag">gga</span>
 <span class="tag">exchange</span>
 <span class="tag">dim2</span></div>
       </header>
 
       <div class="detail-grid">
+
       <section class="callout">
         <p class="callout-label">Review excerpt</p>
         <div class="review-html">
-<p>These three functionals are the 2D counterparts of <a class="functional-link" href="../gga-x-b88/"><code>gga_x_b88</code></a>, <a class="functional-link" href="../gga-x-b86/"><code>gga_x_b86</code></a>, and <a class="functional-link" href="../gga-x-pbe/"><code>gga_x_pbe</code></a>, respectively. (Note that only <a class="functional-link" href="../gga-x-2d-b88/"><code>gga_x_2d_b88</code></a> was published in <sup class="citation-marker"><a href="#review-ref-Vilhena2014-1837">293</a></sup>, while the two others are unpublished.)</p>
-<p>The famous <a class="functional-link" href="../gga-x-b88/"><code>gga_x_b88</code></a> functional of Becke<sup class="citation-marker"><a href="#review-ref-Becke1988-3098">174</a></sup> can be generalized to finite 2D systems. The counterpart of <a class="review-eq-link" href="#review-eq-eq-fxb88">
-  <code>eq:fxb88</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="F_\text{x}^{\text{B88}} = 1+\frac{\beta}{C_\text{x}}
-  \frac{x_\sigma^2}{1 + \gamma\beta x_\sigma\arcsinh(x_\sigma)}"></span>
-  </span>
-</a> reads</p>
+<p>These three functionals are the 2D counterparts of <a class="functional-link" href="../gga-x-b88/"><code>gga_x_b88</code></a>, <a class="functional-link" href="../gga-x-b86/"><code>gga_x_b86</code></a>, and <a class="functional-link" href="../gga-x-pbe/"><code>gga_x_pbe</code></a>, respectively. (Note that only <a class="functional-link" href="../gga-x-2d-b88/"><code>gga_x_2d_b88</code></a> was published in ref. <span class="citation-ref"><a href="#review-ref-Vilhena2014-1837">293</a></span>, while the two others are unpublished.)</p>
+<p>The famous <a class="functional-link" href="../gga-x-b88/"><code>gga_x_b88</code></a> functional of Becke<sup class="citation-marker"><a href="#review-ref-Becke1988-3098">174</a></sup> can be generalized to finite 2D systems. The counterpart of <a class="review-eq-link" href="#review-eq-eq-fxb88"><span class="eq-number">Eq. (372)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="F_\text{x}^{\text{B88}} = 1+\frac{\beta}{C_\text{x}}
+  \frac{x_\sigma^2}{1 + \gamma\beta x_\sigma\arcsinh(x_\sigma)}"></span></span></a> reads</p>
 <div class="equation" data-tex="F_\text{x}^{\text{B88-2D}} = 1 + \frac{\beta}{C^\text{2D}_\text{x}}
   \frac{\left(x^{2\text{D}}_\sigma\right)^2}
        {1 + \gamma\beta x^{2\text{D}}_\sigma\arcsinh\left(x^{2\text{D}}_\sigma\right)}"></div>
-<p>where $x_\sigma^{2\text{D}}$ is given by <a class="review-eq-link" href="#review-eq-eq-x-sigma">
-  <code>eq:x-sigma</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="x_{\sigma}^{m\text{D}} = \frac{|\nabla n_{\sigma}|}{n_{\sigma}^\frac{m+1}{m}}"></span>
-  </span>
-</a> with $m=2$, and $C_{\text{x}}^{2\text{D}}$ is <a class="review-eq-link" href="#review-eq-eq-cx2d">
-  <code>eq:cx2d</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="C_{\text{x}}^{2\text{D}} = \frac{8}{3\sqrt{\pi}} \approx 1.504506"></span>
-  </span>
-</a>. In this case, the coefficients $\gamma$ and $\beta$ cannot be determined by dimensional analysis. However, one can use the requirement that the 2D exchange-hole potential behaves as $1/r$ for densities that behave as $\E^{-a_0 r^2}$ at large $r$, <sup class="citation-marker"><a href="#review-ref-Pittalis2010-115108">569</a></sup> which implies $\gamma = 8$. The coefficient $\beta=0.007$ was obtained by fitting to the exact-exchange energy of a set of parabolic quantum dots.</p>
-<p>Next, <a class="functional-link" href="../gga-x-2d-b86/"><code>gga_x_2d_b86</code></a> is expressed in a different, yet totally equivalent way to the 3D version (<a class="review-eq-link" href="#review-eq-eq-fxb86">
-  <code>eq:fxb86</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="F_\text{x}^{\text{B86}} = \alpha\frac{3}{2} + \frac{\beta}{C_\text{x}}
-  \frac{x_\sigma^2}{1 +\gamma x_\sigma^2}"></span>
-  </span>
-</a> with $\alpha=2/3$):</p>
+<p>where $x_\sigma^{2\text{D}}$ is given by <a class="review-eq-link" href="#review-eq-eq-x-sigma"><span class="eq-number">Eq. (42)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="x_{\sigma}^{m\text{D}} = \frac{|\nabla n_{\sigma}|}{n_{\sigma}^\frac{m+1}{m}}"></span></span></a> with $m=2$, and $C_{\text{x}}^{2\text{D}}$ is <a class="review-eq-link" href="#review-eq-eq-cx2d"><span class="eq-number">Eq. (19)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="C_{\text{x}}^{2\text{D}} = \frac{8}{3\sqrt{\pi}} \approx 1.504506"></span></span></a>. In this case, the coefficients $\gamma$ and $\beta$ cannot be determined by dimensional analysis. However, one can use the requirement that the 2D exchange-hole potential behaves as $1/r$ for densities that behave as $\E^{-a_0 r^2}$ at large $r$, <sup class="citation-marker"><a href="#review-ref-Pittalis2010-115108">569</a></sup> which implies $\gamma = 8$. The coefficient $\beta=0.007$ was obtained by fitting to the exact-exchange energy of a set of parabolic quantum dots.</p>
+<p>Next, <a class="functional-link" href="../gga-x-2d-b86/"><code>gga_x_2d_b86</code></a> is expressed in a different, yet totally equivalent way to the 3D version (<a class="review-eq-link" href="#review-eq-eq-fxb86"><span class="eq-number">Eq. (367)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="F_\text{x}^{\text{B86}} = \alpha\frac{3}{2} + \frac{\beta}{C_\text{x}}
+  \frac{x_\sigma^2}{1 +\gamma x_\sigma^2}"></span></span></a> with $\alpha=2/3$):</p>
 <div class="equation" data-tex="F_\text{x}^{\text{B86-2D}} =
   \frac{1 + \beta \left(x^{2\text{D}}_\sigma\right)^2}{1 + \gamma \left(x^{2\text{D}}_\sigma\right)^2}"></div>
 <p>where the parameters $\beta = 0.002105$ and $\gamma = 0.000119$ were fit to exact-exchange results for parabolic quantum dots.</p>
-<p>Finally, <a class="functional-link" href="../gga-x-2d-pbe/"><code>gga_x_2d_pbe</code></a> has the same form as its 3D counterpart, <a class="review-eq-link" href="#review-eq-eq-pbeenh">
-  <code>eq:pbeenh</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="F_\text{x}^{\text{PBE}} = 1 + \kappa\left[1 - \frac{\kappa}{\kappa + f_0(s_\sigma)}\right]"></span>
-  </span>
-</a>, but with the obvious substitution of $s_\sigma$ by its 2D version $s_\sigma^{2\text{D}}$ given by <a class="review-eq-link" href="#review-eq-eq-s-sigma2d">
-  <code>eq:s-sigma2d</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="s_\sigma^{2\text{D}} = C_s^{\text{2D}} x_\sigma^{2\text{D}}"></span>
-  </span>
-</a>. The parameters $\kappa=0.4604$ and $\mu=0.354546875$ were in this case fit to exact-exchange results for parabolic quantum dots.</p>
+<p>Finally, <a class="functional-link" href="../gga-x-2d-pbe/"><code>gga_x_2d_pbe</code></a> has the same form as its 3D counterpart, <a class="review-eq-link" href="#review-eq-eq-pbeenh"><span class="eq-number">Eq. (382)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="F_\text{x}^{\text{PBE}} = 1 + \kappa\left[1 - \frac{\kappa}{\kappa + f_0(s_\sigma)}\right]"></span></span></a>, but with the obvious substitution of $s_\sigma$ by its 2D version $s_\sigma^{2\text{D}}$ given by <a class="review-eq-link" href="#review-eq-eq-s-sigma2d"><span class="eq-number">Eq. (52)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="s_\sigma^{2\text{D}} = C_s^{\text{2D}} x_\sigma^{2\text{D}}"></span></span></a>. The parameters $\kappa=0.4604$ and $\mu=0.354546875$ were in this case fit to exact-exchange results for parabolic quantum dots.</p>
         </div>
         <p class="source-note">Adapted from <a href="https://arxiv.org/abs/2602.17333">Tran, Lehtola, Pittalis, and Marques, <em>Semi-Local Exchange-Correlation Approximations in Density Functional Theory</em>, arXiv:2602.17333</a>.</p>
       </section>
@@ -92,34 +65,34 @@
           <h2>Referenced Review Equations</h2>
           <div class="review-equations">
           <article class="review-equation-card" id="review-eq-eq-fxb88">
-            <code>eq:fxb88</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (372)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=55" title="Open page 55 of the review PDF">p. 55 ↗</a></p>
             <div class="equation" data-tex="F_\text{x}^{\text{B88}} = 1+\frac{\beta}{C_\text{x}}
   \frac{x_\sigma^2}{1 + \gamma\beta x_\sigma\arcsinh(x_\sigma)}"></div>
           </article>
 
           <article class="review-equation-card" id="review-eq-eq-x-sigma">
-            <code>eq:x-sigma</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (42)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=12" title="Open page 12 of the review PDF">p. 12 ↗</a></p>
             <div class="equation" data-tex="x_{\sigma}^{m\text{D}} = \frac{|\nabla n_{\sigma}|}{n_{\sigma}^\frac{m+1}{m}}"></div>
           </article>
 
           <article class="review-equation-card" id="review-eq-eq-cx2d">
-            <code>eq:cx2d</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (19)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=10" title="Open page 10 of the review PDF">p. 10 ↗</a></p>
             <div class="equation" data-tex="C_{\text{x}}^{2\text{D}} = \frac{8}{3\sqrt{\pi}} \approx 1.504506"></div>
           </article>
 
           <article class="review-equation-card" id="review-eq-eq-fxb86">
-            <code>eq:fxb86</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (367)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=53" title="Open page 53 of the review PDF">p. 53 ↗</a></p>
             <div class="equation" data-tex="F_\text{x}^{\text{B86}} = \alpha\frac{3}{2} + \frac{\beta}{C_\text{x}}
   \frac{x_\sigma^2}{1 +\gamma x_\sigma^2}"></div>
           </article>
 
           <article class="review-equation-card" id="review-eq-eq-pbeenh">
-            <code>eq:pbeenh</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (382)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=58" title="Open page 58 of the review PDF">p. 58 ↗</a></p>
             <div class="equation" data-tex="F_\text{x}^{\text{PBE}} = 1 + \kappa\left[1 - \frac{\kappa}{\kappa + f_0(s_\sigma)}\right]"></div>
           </article>
 
           <article class="review-equation-card" id="review-eq-eq-s-sigma2d">
-            <code>eq:s-sigma2d</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (52)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=12" title="Open page 12 of the review PDF">p. 12 ↗</a></p>
             <div class="equation" data-tex="s_\sigma^{2\text{D}} = C_s^{\text{2D}} x_\sigma^{2\text{D}}"></div>
           </article>
 

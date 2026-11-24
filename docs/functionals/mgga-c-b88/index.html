@@ -3,14 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>mgga_c_b88</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20261016-excerpts-v1">
-    <script defer src="../../assets/search.js?v=20261016-excerpts-v1"></script>
+    <title>mgga_c_b88 — Meta-GGA correlation by Becke · Libxc Wiki</title>
+    <meta name="description" content="mgga_c_b88: Meta-GGA correlation by Becke. Meta-GGA correlation functional in Libxc, with references and BibTeX. Includes an excerpt from the Tran, Lehtola, Pittalis and Marques review.">
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261117-refs-v1">
+    <script defer src="../../assets/search.js?v=20261117-refs-v1"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
     <script defer src="../../vendor/katex/contrib/mhchem.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20261016-excerpts-v1"></script>
+    <script defer src="../../assets/detail.js?v=20261117-refs-v1"></script>
 
   </head>
   <body class="functional-page">
@@ -32,15 +33,17 @@
 
         <p class="brand">META-GGA</p>
         <h1><code class="title-code">mgga_c_b88</code></h1>
+        <p class="functional-name">Meta-GGA correlation by Becke</p>
         <div class="detail-tags"><span class="tag">meta-gga</span>
 <span class="tag">correlation</span></div>
       </header>
 
       <div class="detail-grid">
+
       <section class="callout">
         <p class="callout-label">Review excerpt</p>
         <div class="review-html">
-<p>Becke<sup class="citation-marker"><a href="#review-ref-Becke1988-JCP-1053">215</a></sup> constructed this functional using known conditions for the correlation hole: the zero-charge sum rule and the cusp behavior at short interelectronic distances. Based on the Stoll decomposition, see the review, the functional reads</p>
+<p>Becke<sup class="citation-marker"><a href="#review-ref-Becke1988-JCP-1053">215</a></sup> constructed this functional using known conditions for the correlation hole: the zero-charge sum rule and the cusp behavior at short interelectronic distances. Based on the Stoll decomposition, see <a class="review-section-link" href="https://arxiv.org/pdf/2602.17333#page=33" title="Spin-Resolved Correlation Energy">Sec. 2.18.3</a> of the review, the functional reads</p>
 <div class="equation" data-tex="\begin{aligned}
 e_{\text{c}\,\uparrow\downarrow}^\text{B88} &amp; = 
     -0.8\frac{n_{\uparrow}n_{\downarrow}}{n}z_{\uparrow\downarrow}^2\left[1-\frac{\ln\left(1+z_{\uparrow\downarrow}\right)}{z_{\uparrow\downarrow}}\right]
@@ -53,18 +56,8 @@ e_{\text{c}\,\uparrow\downarrow}^\text{B88} &amp; =
 <div class="equation" data-tex="D_\sigma = \tau_\sigma - \tau_\sigma^{\text{W}}"></div>
 <p>The quantity $z_{\sigma\sigma&#39;}$ is the correlation length, with $R_{\text{F}}^{\sigma}=-1/v^\text{hole}_{\text{x}\sigma}$ that is identified as the inverse of the Coulomb potential $v^\text{hole}_{\text{x}\sigma}$ created by the exchange hole, for which an exchange functional has to be chosen. Becke<sup class="citation-marker"><a href="#review-ref-Becke1988-JCP-1053">215</a></sup> chose <a class="functional-link" href="../gga-x-b86-mgc/"><code>gga_x_b86_mgc</code></a>, leading to</p>
 <div class="equation" data-tex="R_{\text{F}}^{\sigma}=\frac{1}{2C_{\text{x}}n_\sigma^{1/3}F_\text{x}^{\text{B86-MGC}}(x_\sigma)}"></div>
-<p>where $F_\text{x}^{\text{B86-MGC}}$ is <a class="review-eq-link" href="#review-eq-eq-b86mgc">
-  <code>eq:b86mgc</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="F_\text{x}^{\text{B86-MGC}} = 1 + \frac{\beta}{C_\text{x}}
-  \frac{x_\sigma^2}{\left(1 +\gamma x_\sigma^2\right)^{4/5}}"></span>
-  </span>
-</a>. The parameter $c_{\uparrow\downarrow}=0.63$ in <a class="review-eq-link" href="#review-eq-eq-b88-z">
-  <code>eq:b88-z</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="z_{\sigma\sigma&#39;} = c_{\sigma\sigma&#39;}\left(R_{\text{F}}^{\sigma}+R_{\text{F}}^{\sigma&#39;}\right)"></span>
-  </span>
-</a> was chosen for the opposite-spin correlation such that the exact correlation energy of the He atom is reproduced. Similarly, $c_{\sigma\sigma}=0.96$ for the same-spin correlation was determined from the Ne atom. The functional is more accurate than <a class="functional-link" href="../gga-c-p86/"><code>gga_c_p86</code></a> for atomic correlation energies.</p>
+<p>where $F_\text{x}^{\text{B86-MGC}}$ is <a class="review-eq-link" href="#review-eq-eq-b86mgc"><span class="eq-number">Eq. (369)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="F_\text{x}^{\text{B86-MGC}} = 1 + \frac{\beta}{C_\text{x}}
+  \frac{x_\sigma^2}{\left(1 +\gamma x_\sigma^2\right)^{4/5}}"></span></span></a>. The parameter $c_{\uparrow\downarrow}=0.63$ in <a class="review-eq-link" href="#review-eq-eq-b88-z"><span class="eq-number">Eq. (704a)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="z_{\sigma\sigma&#39;} = c_{\sigma\sigma&#39;}\left(R_{\text{F}}^{\sigma}+R_{\text{F}}^{\sigma&#39;}\right)"></span></span></a> was chosen for the opposite-spin correlation such that the exact correlation energy of the He atom is reproduced. Similarly, $c_{\sigma\sigma}=0.96$ for the same-spin correlation was determined from the Ne atom. The functional is more accurate than <a class="functional-link" href="../gga-c-p86/"><code>gga_c_p86</code></a> for atomic correlation energies.</p>
         </div>
         <p class="source-note">Adapted from <a href="https://arxiv.org/abs/2602.17333">Tran, Lehtola, Pittalis, and Marques, <em>Semi-Local Exchange-Correlation Approximations in Density Functional Theory</em>, arXiv:2602.17333</a>.</p>
       </section>
@@ -73,13 +66,13 @@ e_{\text{c}\,\uparrow\downarrow}^\text{B88} &amp; =
           <h2>Referenced Review Equations</h2>
           <div class="review-equations">
           <article class="review-equation-card" id="review-eq-eq-b86mgc">
-            <code>eq:b86mgc</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (369)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=54" title="Open page 54 of the review PDF">p. 54 ↗</a></p>
             <div class="equation" data-tex="F_\text{x}^{\text{B86-MGC}} = 1 + \frac{\beta}{C_\text{x}}
   \frac{x_\sigma^2}{\left(1 +\gamma x_\sigma^2\right)^{4/5}}"></div>
           </article>
 
           <article class="review-equation-card" id="review-eq-eq-b88-z">
-            <code>eq:b88-z</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (704a)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=130" title="Open page 130 of the review PDF">p. 130 ↗</a></p>
             <div class="equation" data-tex="z_{\sigma\sigma&#39;} = c_{\sigma\sigma&#39;}\left(R_{\text{F}}^{\sigma}+R_{\text{F}}^{\sigma&#39;}\right)"></div>
           </article>
 

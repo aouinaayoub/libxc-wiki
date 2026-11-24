@@ -3,14 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>mgga_c_m11_l</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20261016-excerpts-v1">
-    <script defer src="../../assets/search.js?v=20261016-excerpts-v1"></script>
+    <title>mgga_c_m11_l — Minnesota M11-L correlation functional · Libxc Wiki</title>
+    <meta name="description" content="mgga_c_m11_l: Minnesota M11-L correlation functional. Meta-GGA correlation functional in Libxc, with references and BibTeX. Includes an excerpt from the Tran, Lehtola, Pittalis and Marques review.">
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261117-refs-v1">
+    <script defer src="../../assets/search.js?v=20261117-refs-v1"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
     <script defer src="../../vendor/katex/contrib/mhchem.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20261016-excerpts-v1"></script>
+    <script defer src="../../assets/detail.js?v=20261117-refs-v1"></script>
 
   </head>
   <body class="functional-page">
@@ -32,29 +33,21 @@
 
         <p class="brand">META-GGA</p>
         <h1><code class="title-code">mgga_c_m11_l</code></h1>
+        <p class="functional-name">Minnesota M11-L correlation functional</p>
         <div class="detail-tags"><span class="tag">meta-gga</span>
 <span class="tag">correlation</span></div>
       </header>
 
       <div class="detail-grid">
+
       <section class="callout">
         <p class="callout-label">Review excerpt</p>
         <div class="review-html">
-<p>This functional has the same analytical form as the correlation component of the M08-HX and M08-SO hybrid functionals.<sup class="citation-marker"><a href="#review-ref-Zhao2008-1849">795</a></sup> The tradition of using the Stoll ansatz (see the review) to describe separately the opposite- and parallel-spin contributions to the correlation energy is here not followed, as this had been shown to be inaccurate for the HEG.<sup class="citation-marker"><a href="#review-ref-GoriGiorgi2004-041103">388</a></sup> Consequently, the self-interaction correction factor $1-z_\sigma$ (used in <a class="functional-link" href="../mgga-c-m06-l/"><code>mgga_c_m06_l</code></a> for instance) is also not used, since it can lead to convergence problems.<sup class="citation-marker"><a href="#review-ref-Grafenstein2007-214103">796</a></sup> Instead, an interpolation between the <a class="functional-link" href="../lda-c-pw/"><code>lda_c_pw</code></a> and <a class="functional-link" href="../gga-c-pbe/"><code>gga_c_pbe</code></a> functionals is used:</p>
+<p>This functional has the same analytical form as the correlation component of the M08-HX and M08-SO hybrid functionals.<sup class="citation-marker"><a href="#review-ref-Zhao2008-1849">795</a></sup> The tradition of using the Stoll ansatz (see <a class="review-section-link" href="https://arxiv.org/pdf/2602.17333#page=33" title="Spin-Resolved Correlation Energy">Sec. 2.18.3</a> of the review) to describe separately the opposite- and parallel-spin contributions to the correlation energy is here not followed, as this had been shown to be inaccurate for the HEG.<sup class="citation-marker"><a href="#review-ref-GoriGiorgi2004-041103">388</a></sup> Consequently, the self-interaction correction factor $1-z_\sigma$ (used in <a class="functional-link" href="../mgga-c-m06-l/"><code>mgga_c_m06_l</code></a> for instance) is also not used, since it can lead to convergence problems.<sup class="citation-marker"><a href="#review-ref-Grafenstein2007-214103">796</a></sup> Instead, an interpolation between the <a class="functional-link" href="../lda-c-pw/"><code>lda_c_pw</code></a> and <a class="functional-link" href="../gga-c-pbe/"><code>gga_c_pbe</code></a> functionals is used:</p>
 <div class="equation" data-tex="e_\text{c}^\text{M08} = \sum_{i=0}^m c_i w^i e_\text{c}^\text{PW-LDA} + 
   \sum_{i=0}^m d_i w^i H_0"></div>
-<p>where $H_0$ is the gradient correction of <a class="functional-link" href="../gga-c-pbe/"><code>gga_c_pbe</code></a> (see <a class="review-eq-link" href="#review-eq-eq-ecpbe">
-  <code>eq:ecpbe</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="e_\text{c}^{\text{PBE}} = e_\text{c}^\text{PW-LDA}(r_s, \zeta) + H_0(\phi_{2/3}, t, A)"></span>
-  </span>
-</a>). The variable $w$ is defined by <a class="review-eq-link" href="#review-eq-eq-b00wnospin">
-  <code>eq:b00wnospin</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="w = \frac{\tau^\text{TF} - \tau}{\tau^\text{TF} + \tau} 
-  = \frac{C_\text{F} - 2^{2/3}\tilde{t}}{C_\text{F} +  2^{2/3}\tilde{t}}"></span>
-  </span>
-</a> and $m=8$ is chosen for the sums in the case of <a class="functional-link" href="../mgga-c-m11-l/"><code>mgga_c_m11_l</code></a>, while $m=11$ was chosen for M08-HX and M08-SO.<sup class="citation-marker"><a href="#review-ref-Zhao2008-1849">795</a></sup> The parameters $c_i$ and $d_i$ were fit together with the parameters in the associated exchange functional, <a class="functional-link" href="../mgga-x-m11-l/"><code>mgga_x_m11_l</code></a>. The correct HEG limit (LDA, represented by <a class="functional-link" href="../lda-c-pw/"><code>lda_c_pw</code></a>) and the second-order term in the density-gradient expansion were used as constraints for the parameters.</p>
+<p>where $H_0$ is the gradient correction of <a class="functional-link" href="../gga-c-pbe/"><code>gga_c_pbe</code></a> (see <a class="review-eq-link" href="#review-eq-eq-ecpbe"><span class="eq-number">Eq. (475)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="e_\text{c}^{\text{PBE}} = e_\text{c}^\text{PW-LDA}(r_s, \zeta) + H_0(\phi_{2/3}, t, A)"></span></span></a>). The variable $w$ is defined by <a class="review-eq-link" href="#review-eq-eq-b00wnospin"><span class="eq-number">Eq. (90)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="w = \frac{\tau^\text{TF} - \tau}{\tau^\text{TF} + \tau} 
+  = \frac{C_\text{F} - 2^{2/3}\tilde{t}}{C_\text{F} +  2^{2/3}\tilde{t}}"></span></span></a> and $m=8$ is chosen for the sums in the case of <a class="functional-link" href="../mgga-c-m11-l/"><code>mgga_c_m11_l</code></a>, while $m=11$ was chosen for M08-HX and M08-SO.<sup class="citation-marker"><a href="#review-ref-Zhao2008-1849">795</a></sup> The parameters $c_i$ and $d_i$ were fit together with the parameters in the associated exchange functional, <a class="functional-link" href="../mgga-x-m11-l/"><code>mgga_x_m11_l</code></a>. The correct HEG limit (LDA, represented by <a class="functional-link" href="../lda-c-pw/"><code>lda_c_pw</code></a>) and the second-order term in the density-gradient expansion were used as constraints for the parameters.</p>
         </div>
         <p class="source-note">Adapted from <a href="https://arxiv.org/abs/2602.17333">Tran, Lehtola, Pittalis, and Marques, <em>Semi-Local Exchange-Correlation Approximations in Density Functional Theory</em>, arXiv:2602.17333</a>.</p>
       </section>
@@ -63,12 +56,12 @@
           <h2>Referenced Review Equations</h2>
           <div class="review-equations">
           <article class="review-equation-card" id="review-eq-eq-ecpbe">
-            <code>eq:ecpbe</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (475)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=81" title="Open page 81 of the review PDF">p. 81 ↗</a></p>
             <div class="equation" data-tex="e_\text{c}^{\text{PBE}} = e_\text{c}^\text{PW-LDA}(r_s, \zeta) + H_0(\phi_{2/3}, t, A)"></div>
           </article>
 
           <article class="review-equation-card" id="review-eq-eq-b00wnospin">
-            <code>eq:b00wnospin</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (90)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=14" title="Open page 14 of the review PDF">p. 14 ↗</a></p>
             <div class="equation" data-tex="w = \frac{\tau^\text{TF} - \tau}{\tau^\text{TF} + \tau} 
   = \frac{C_\text{F} - 2^{2/3}\tilde{t}}{C_\text{F} +  2^{2/3}\tilde{t}}"></div>
           </article>

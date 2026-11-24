@@ -3,14 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>gga_x_s12g</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20261016-excerpts-v1">
-    <script defer src="../../assets/search.js?v=20261016-excerpts-v1"></script>
+    <title>gga_x_s12g — Swart 2012 GGA exchange · Libxc Wiki</title>
+    <meta name="description" content="gga_x_s12g: Swart 2012 GGA exchange. GGA exchange functional in Libxc, with references and BibTeX. Includes an excerpt from the Tran, Lehtola, Pittalis and Marques review.">
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261117-refs-v1">
+    <script defer src="../../assets/search.js?v=20261117-refs-v1"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
     <script defer src="../../vendor/katex/contrib/mhchem.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20261016-excerpts-v1"></script>
+    <script defer src="../../assets/detail.js?v=20261117-refs-v1"></script>
 
   </head>
   <body class="functional-page">
@@ -32,24 +33,21 @@
 
         <p class="brand">GGA</p>
         <h1><code class="title-code">gga_x_s12g</code></h1>
+        <p class="functional-name">Swart 2012 GGA exchange</p>
         <div class="detail-tags"><span class="tag">gga</span>
 <span class="tag">exchange</span></div>
       </header>
 
       <div class="detail-grid">
+
       <section class="callout">
         <p class="callout-label">Review excerpt</p>
         <div class="review-html">
 <p>This functional builds upon its predecessors <a class="functional-link" href="../gga-x-ssb-sw/"><code>gga_x_ssb_sw</code></a>, <a class="functional-link" href="../gga-x-ssb/"><code>gga_x_ssb</code></a>, and <a class="functional-link" href="../gga-x-ssb-d/"><code>gga_x_ssb_d</code></a>. Here, a similar expression for the enhancement factor is chosen with the difference that a fourth-order term in $x_\sigma$ is present in the numerator. The form of the enhancement function was chosen to be more flat in the low $x_\sigma$ regime, and it is given by</p>
 <div class="equation" data-tex="F_\text{x}^{\text{S12g}} = A + B\left(1-\frac{1}{1+C x_{\sigma}^2 + D x_{\sigma}^4}\right)  \\
   \times\left(1 - \frac{1}{1+E x_{\sigma}^2}\right)"></div>
-<p>$B$ is fixed by imposing the tight LO bound from Chan and Handy<sup class="citation-marker"><a href="#review-ref-Chan1999-3075">191</a></sup>, leading to $B=1.757-A$. This exchange functional was then combined with <a class="functional-link" href="../gga-c-pbe/"><code>gga_c_pbe</code></a> for correlation and Grimme&#39;s D3 dispersion correction,<sup class="citation-marker"><a href="#review-ref-Grimme2011-WIRCMS-211">572</a></sup> and the remaining parameters ($A$, $C$, $D$, and $E$ in <a class="review-eq-link" href="#review-eq-eq-s12g">
-  <code>eq:s12g</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="F_\text{x}^{\text{S12g}} = A + B\left(1-\frac{1}{1+C x_{\sigma}^2 + D x_{\sigma}^4}\right)  \\
-  \times\left(1 - \frac{1}{1+E x_{\sigma}^2}\right)"></span>
-  </span>
-</a> and $s_{r,6}$ and $s_8$ in the D3 correction) were obtained from a fit to a series of databases for small molecules. The resulting values are $A=1.03842032$, $C=0.00403198$, $D=0.00104596$, $E=0.00594635$, $s_{r,6}=1.17755954$, and $s_8=0.84432515$.</p>
+<p>$B$ is fixed by imposing the tight LO bound from Chan and Handy<sup class="citation-marker"><a href="#review-ref-Chan1999-3075">191</a></sup>, leading to $B=1.757-A$. This exchange functional was then combined with <a class="functional-link" href="../gga-c-pbe/"><code>gga_c_pbe</code></a> for correlation and Grimme&#39;s D3 dispersion correction,<sup class="citation-marker"><a href="#review-ref-Grimme2011-WIRCMS-211">572</a></sup> and the remaining parameters ($A$, $C$, $D$, and $E$ in <a class="review-eq-link" href="#review-eq-eq-s12g"><span class="eq-number">Eq. (440)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="F_\text{x}^{\text{S12g}} = A + B\left(1-\frac{1}{1+C x_{\sigma}^2 + D x_{\sigma}^4}\right)  \\
+  \times\left(1 - \frac{1}{1+E x_{\sigma}^2}\right)"></span></span></a> and $s_{r,6}$ and $s_8$ in the D3 correction) were obtained from a fit to a series of databases for small molecules. The resulting values are $A=1.03842032$, $C=0.00403198$, $D=0.00104596$, $E=0.00594635$, $s_{r,6}=1.17755954$, and $s_8=0.84432515$.</p>
 <p>The functional was shown to work well for a series of molecular properties, including weakly and strongly bound systems, as well as spin-state energies.</p>
         </div>
         <p class="source-note">Adapted from <a href="https://arxiv.org/abs/2602.17333">Tran, Lehtola, Pittalis, and Marques, <em>Semi-Local Exchange-Correlation Approximations in Density Functional Theory</em>, arXiv:2602.17333</a>.</p>
@@ -59,7 +57,7 @@
           <h2>Referenced Review Equations</h2>
           <div class="review-equations">
           <article class="review-equation-card" id="review-eq-eq-s12g">
-            <code>eq:s12g</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (440)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=72" title="Open page 72 of the review PDF">p. 72 ↗</a></p>
             <div class="equation" data-tex="F_\text{x}^{\text{S12g}} = A + B\left(1-\frac{1}{1+C x_{\sigma}^2 + D x_{\sigma}^4}\right)  \\
   \times\left(1 - \frac{1}{1+E x_{\sigma}^2}\right)"></div>
           </article>

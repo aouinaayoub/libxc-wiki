@@ -3,14 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>gga_x_pbe_sol</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20261016-excerpts-v1">
-    <script defer src="../../assets/search.js?v=20261016-excerpts-v1"></script>
+    <title>gga_x_pbe_sol — Perdew, Burke &amp; Ernzerhof SOL · Libxc Wiki</title>
+    <meta name="description" content="gga_x_pbe_sol: Perdew, Burke &amp; Ernzerhof SOL. GGA exchange functional in Libxc, with references and BibTeX. Includes an excerpt from the Tran, Lehtola, Pittalis and Marques review.">
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261117-refs-v1">
+    <script defer src="../../assets/search.js?v=20261117-refs-v1"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
     <script defer src="../../vendor/katex/contrib/mhchem.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20261016-excerpts-v1"></script>
+    <script defer src="../../assets/detail.js?v=20261117-refs-v1"></script>
 
   </head>
   <body class="functional-page">
@@ -32,21 +33,18 @@
 
         <p class="brand">GGA</p>
         <h1><code class="title-code">gga_x_pbe_sol</code></h1>
+        <p class="functional-name">Perdew, Burke &amp; Ernzerhof SOL</p>
         <div class="detail-tags"><span class="tag">gga</span>
 <span class="tag">exchange</span></div>
       </header>
 
       <div class="detail-grid">
+
       <section class="callout">
         <p class="callout-label">Review excerpt</p>
         <div class="review-html">
 <p>Numerical results and analyses of enhancement factors suggest that functionals like <a class="functional-link" href="../gga-x-b88/"><code>gga_x_b88</code></a> that exhibit an enhanced dependence on the density gradient $s_\sigma$ yield accurate atomization energies and total energies of finite systems, but are not so good for the geometry of solids. The opposite trends can also be observed with functionals that have a weaker dependence on $s_\sigma$ and obey more closely the density-gradient expansion of the slowly varying electron gas; note, however, that this argument has been under debate.<sup class="citation-marker"><a href="#review-ref-Mattsson2008-239701">524</a>,<a href="#review-ref-Perdew2008-239702">528</a></sup></p>
-<p>Based on these observations, Perdew et al.<sup class="citation-marker"><a href="#review-ref-Perdew2008-136406">289</a></sup> proposed PBEsol (<a class="functional-link" href="../gga-x-pbe-sol/"><code>gga_x_pbe_sol</code></a> + <a class="functional-link" href="../gga-c-pbe-sol/"><code>gga_c_pbe_sol</code></a>) that obeys the density-gradient expansion (thus, $\mu^{\text{GE}}$ is chosen in <a class="review-eq-link" href="#review-eq-eq-pbeenh">
-  <code>eq:pbeenh</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="F_\text{x}^{\text{PBE}} = 1 + \kappa\left[1 - \frac{\kappa}{\kappa + f_0(s_\sigma)}\right]"></span>
-  </span>
-</a> and is the only difference with respect to <a class="functional-link" href="../gga-x-pbe/"><code>gga_x_pbe</code></a>) and that was specifically designed for properties of solids. PBEsol particularly improves over PBE (<a class="functional-link" href="../gga-x-pbe/"><code>gga_x_pbe</code></a> + <a class="functional-link" href="../gga-c-pbe/"><code>gga_c_pbe</code></a>) on the geometry and the surface energy similarly as <a class="functional-link" href="../gga-x-wc/"><code>gga_x_wc</code></a>, <a class="functional-link" href="../gga-x-am05/"><code>gga_x_am05</code></a>, and <a class="functional-link" href="../gga-x-sogga/"><code>gga_x_sogga</code></a> do. PBEsol has been used quite extensively by the solid-state community.</p>
+<p>Based on these observations, Perdew et al.<sup class="citation-marker"><a href="#review-ref-Perdew2008-136406">289</a></sup> proposed PBEsol (<a class="functional-link" href="../gga-x-pbe-sol/"><code>gga_x_pbe_sol</code></a> + <a class="functional-link" href="../gga-c-pbe-sol/"><code>gga_c_pbe_sol</code></a>) that obeys the density-gradient expansion (thus, $\mu^{\text{GE}}$ is chosen in <a class="review-eq-link" href="#review-eq-eq-pbeenh"><span class="eq-number">Eq. (382)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="F_\text{x}^{\text{PBE}} = 1 + \kappa\left[1 - \frac{\kappa}{\kappa + f_0(s_\sigma)}\right]"></span></span></a> and is the only difference with respect to <a class="functional-link" href="../gga-x-pbe/"><code>gga_x_pbe</code></a>) and that was specifically designed for properties of solids. PBEsol particularly improves over PBE (<a class="functional-link" href="../gga-x-pbe/"><code>gga_x_pbe</code></a> + <a class="functional-link" href="../gga-c-pbe/"><code>gga_c_pbe</code></a>) on the geometry and the surface energy similarly as <a class="functional-link" href="../gga-x-wc/"><code>gga_x_wc</code></a>, <a class="functional-link" href="../gga-x-am05/"><code>gga_x_am05</code></a>, and <a class="functional-link" href="../gga-x-sogga/"><code>gga_x_sogga</code></a> do. PBEsol has been used quite extensively by the solid-state community.</p>
         </div>
         <p class="source-note">Adapted from <a href="https://arxiv.org/abs/2602.17333">Tran, Lehtola, Pittalis, and Marques, <em>Semi-Local Exchange-Correlation Approximations in Density Functional Theory</em>, arXiv:2602.17333</a>.</p>
       </section>
@@ -55,7 +53,7 @@
           <h2>Referenced Review Equations</h2>
           <div class="review-equations">
           <article class="review-equation-card" id="review-eq-eq-pbeenh">
-            <code>eq:pbeenh</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (382)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=58" title="Open page 58 of the review PDF">p. 58 ↗</a></p>
             <div class="equation" data-tex="F_\text{x}^{\text{PBE}} = 1 + \kappa\left[1 - \frac{\kappa}{\kappa + f_0(s_\sigma)}\right]"></div>
           </article>
 

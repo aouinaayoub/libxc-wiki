@@ -3,14 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>lda_c_vbh</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20261016-excerpts-v1">
-    <script defer src="../../assets/search.js?v=20261016-excerpts-v1"></script>
+    <title>lda_c_vbh — von Barth &amp; Hedin · Libxc Wiki</title>
+    <meta name="description" content="lda_c_vbh: von Barth &amp; Hedin. LDA correlation functional in Libxc, with references and BibTeX. Includes an excerpt from the Tran, Lehtola, Pittalis and Marques review.">
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261117-refs-v1">
+    <script defer src="../../assets/search.js?v=20261117-refs-v1"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
     <script defer src="../../vendor/katex/contrib/mhchem.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20261016-excerpts-v1"></script>
+    <script defer src="../../assets/detail.js?v=20261117-refs-v1"></script>
 
   </head>
   <body class="functional-page">
@@ -32,48 +33,30 @@
 
         <p class="brand">LDA</p>
         <h1><code class="title-code">lda_c_vbh</code></h1>
+        <p class="functional-name">von Barth &amp; Hedin</p>
         <div class="detail-tags"><span class="tag">lda</span>
 <span class="tag">correlation</span></div>
       </header>
 
       <div class="detail-grid">
+
       <section class="callout">
         <p class="callout-label">Review excerpt</p>
         <div class="review-html">
 <p>von Barth and Hedin<sup class="citation-marker"><a href="#review-ref-Barth1972-1629">375</a></sup> generalized the original DFT formulation of Hohenberg, Kohn, and Sham<sup class="citation-marker"><a href="#review-ref-Hohenberg1964-PR-864">1</a>,<a href="#review-ref-Kohn1965-PR-1133">2</a></sup> to the case of spin-polarized systems. Their spin-dependent correlation functional is based on a simple interpolation between the correlation energy of the ferromagnetic (F) and paramagnetic (P) phases of the HEG. It reads as</p>
 <div class="equation" data-tex="e_\text{c}^\text{vBH}(r_s,\zeta) =
   e_\text{c}^\text{P}(r_s) + \left[e_\text{c}^\text{F}(r_s) - e_\text{c}^\text{P}(r_s)\right] f_\text{c}(\zeta)"></div>
-<p>The $\zeta$-dependence of the function $f_\text{c}(\zeta)$ is similar to the case of exchange (see <a class="review-eq-link" href="#review-eq-eq-ldax3d2">
-  <code>eq:ldax3d2</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="\begin{aligned}
+<p>The $\zeta$-dependence of the function $f_\text{c}(\zeta)$ is similar to the case of exchange (see <a class="review-eq-link" href="#review-eq-eq-ldax3d2"><span class="eq-number">Eq. (257)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="\begin{aligned}
 e_\text{x}^\text{LDA}(r_s,\zeta) = -A_\text{x}\frac{\phi_{4/3}(\zeta)}{r_s}
-\end{aligned}"></span>
-  </span>
-</a>):</p>
+\end{aligned}"></span></span></a>):</p>
 <div class="equation" data-tex="f_\text{c}(\zeta) = \frac{\phi_{4/3}(\zeta) - 1}{2^{1/3} - 1}"></div>
-<p>where $\phi_{4/3}(\zeta)$ is given by <a class="review-eq-link" href="#review-eq-eq-phi">
-  <code>eq:phi</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="\begin{aligned}
+<p>where $\phi_{4/3}(\zeta)$ is given by <a class="review-eq-link" href="#review-eq-eq-phi"><span class="eq-number">Eq. (40)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="\begin{aligned}
 \phi_p(\zeta) = &amp; \frac{1}{2} \left[(1+\zeta)^{p} + (1-\zeta)^{p}\right]  \\
 
     = &amp; 2^{p-1}\frac{n_{\uparrow}^{p}+n_{\downarrow}^{p}}{n^{p}}
-\end{aligned}"></span>
-  </span>
-</a>. The correlation energies of the ferromagnetic ($e_\text{c}^\text{F}$) and paramagnetic ($e_\text{c}^\text{P}$) HEG were individually parameterized using the Hedin and Lundqvist<sup class="citation-marker"><a href="#review-ref-Hedin1971-2064">417</a></sup> form given by <a class="review-eq-link" href="#review-eq-eq-ldachl">
-  <code>eq:ldachl</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="e_\text{c}^\text{HL}(r_s) = -c\left[(1+y^3)\ln\left(1+\frac{1}{y}\right)
-  + \frac{y}{2} - y^2  - \frac{1}{3}\right]"></span>
-  </span>
-</a> to the correlation energy of the HEG calculated using a ``two-bubble&#39;&#39; approximation to the irreducible polarization. The resulting parameters in <a class="review-eq-link" href="#review-eq-eq-ldachl">
-  <code>eq:ldachl</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="e_\text{c}^\text{HL}(r_s) = -c\left[(1+y^3)\ln\left(1+\frac{1}{y}\right)
-  + \frac{y}{2} - y^2  - \frac{1}{3}\right]"></span>
-  </span>
-</a> are $c^\text{F}=0.0127$ and $r^\text{F}=75$ for $e_\text{c}^\text{F}$, and $c^\text{P}=0.0252$ and $r^\text{P}=30$ for $e_\text{c}^\text{P}$.</p>
+\end{aligned}"></span></span></a>. The correlation energies of the ferromagnetic ($e_\text{c}^\text{F}$) and paramagnetic ($e_\text{c}^\text{P}$) HEG were individually parameterized using the Hedin and Lundqvist<sup class="citation-marker"><a href="#review-ref-Hedin1971-2064">417</a></sup> form given by <a class="review-eq-link" href="#review-eq-eq-ldachl"><span class="eq-number">Eq. (274)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="e_\text{c}^\text{HL}(r_s) = -c\left[(1+y^3)\ln\left(1+\frac{1}{y}\right)
+  + \frac{y}{2} - y^2  - \frac{1}{3}\right]"></span></span></a> to the correlation energy of the HEG calculated using a ``two-bubble&#39;&#39; approximation to the irreducible polarization. The resulting parameters in <a class="review-eq-link" href="#review-eq-eq-ldachl"><span class="eq-number">Eq. (274)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="e_\text{c}^\text{HL}(r_s) = -c\left[(1+y^3)\ln\left(1+\frac{1}{y}\right)
+  + \frac{y}{2} - y^2  - \frac{1}{3}\right]"></span></span></a> are $c^\text{F}=0.0127$ and $r^\text{F}=75$ for $e_\text{c}^\text{F}$, and $c^\text{P}=0.0252$ and $r^\text{P}=30$ for $e_\text{c}^\text{P}$.</p>
         </div>
         <p class="source-note">Adapted from <a href="https://arxiv.org/abs/2602.17333">Tran, Lehtola, Pittalis, and Marques, <em>Semi-Local Exchange-Correlation Approximations in Density Functional Theory</em>, arXiv:2602.17333</a>.</p>
       </section>
@@ -82,14 +65,14 @@ e_\text{x}^\text{LDA}(r_s,\zeta) = -A_\text{x}\frac{\phi_{4/3}(\zeta)}{r_s}
           <h2>Referenced Review Equations</h2>
           <div class="review-equations">
           <article class="review-equation-card" id="review-eq-eq-ldax3d2">
-            <code>eq:ldax3d2</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (257)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=35" title="Open page 35 of the review PDF">p. 35 ↗</a></p>
             <div class="equation" data-tex="\begin{aligned}
 e_\text{x}^\text{LDA}(r_s,\zeta) = -A_\text{x}\frac{\phi_{4/3}(\zeta)}{r_s}
 \end{aligned}"></div>
           </article>
 
           <article class="review-equation-card" id="review-eq-eq-phi">
-            <code>eq:phi</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (40)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=12" title="Open page 12 of the review PDF">p. 12 ↗</a></p>
             <div class="equation" data-tex="\begin{aligned}
 \phi_p(\zeta) = &amp; \frac{1}{2} \left[(1+\zeta)^{p} + (1-\zeta)^{p}\right]  \\
 
@@ -98,7 +81,7 @@ e_\text{x}^\text{LDA}(r_s,\zeta) = -A_\text{x}\frac{\phi_{4/3}(\zeta)}{r_s}
           </article>
 
           <article class="review-equation-card" id="review-eq-eq-ldachl">
-            <code>eq:ldachl</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (274)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=38" title="Open page 38 of the review PDF">p. 38 ↗</a></p>
             <div class="equation" data-tex="e_\text{c}^\text{HL}(r_s) = -c\left[(1+y^3)\ln\left(1+\frac{1}{y}\right)
   + \frac{y}{2} - y^2  - \frac{1}{3}\right]"></div>
           </article>

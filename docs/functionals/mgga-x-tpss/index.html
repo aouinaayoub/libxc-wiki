@@ -3,14 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>mgga_x_tpss</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20261016-excerpts-v1">
-    <script defer src="../../assets/search.js?v=20261016-excerpts-v1"></script>
+    <title>mgga_x_tpss — Tao, Perdew, Staroverov &amp; Scuseria · Libxc Wiki</title>
+    <meta name="description" content="mgga_x_tpss: Tao, Perdew, Staroverov &amp; Scuseria. Meta-GGA exchange functional in Libxc, with references and BibTeX. Includes an excerpt from the Tran, Lehtola, Pittalis and Marques review.">
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261117-refs-v1">
+    <script defer src="../../assets/search.js?v=20261117-refs-v1"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
     <script defer src="../../vendor/katex/contrib/mhchem.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20261016-excerpts-v1"></script>
+    <script defer src="../../assets/detail.js?v=20261117-refs-v1"></script>
 
   </head>
   <body class="functional-page">
@@ -32,31 +33,23 @@
 
         <p class="brand">META-GGA</p>
         <h1><code class="title-code">mgga_x_tpss</code></h1>
+        <p class="functional-name">Tao, Perdew, Staroverov &amp; Scuseria</p>
         <div class="detail-tags"><span class="tag">meta-gga</span>
 <span class="tag">exchange</span></div>
       </header>
 
       <div class="detail-grid">
+
       <section class="callout">
         <p class="callout-label">Review excerpt</p>
         <div class="review-html">
-<p>This functional was developed to correct some deficiencies of PKZB (<a class="functional-link" href="../mgga-x-pkzb/"><code>mgga_x_pkzb</code></a> + <a class="functional-link" href="../mgga-c-pkzb/"><code>mgga_c_pkzb</code></a>), namely the poor description of equilibrium bond lengths<sup class="citation-marker"><a href="#review-ref-Adamo2000-2643">693</a></sup> and hydrogen-bonded complexes.<sup class="citation-marker"><a href="#review-ref-Rabuck2000-439">694</a></sup> It is still constructed based on the <a class="functional-link" href="../gga-x-pbe/"><code>gga_x_pbe</code></a> enhancement factor and the fourth-order density-gradient expansion from <sup class="citation-marker"><a href="#review-ref-Svendsen1996-17402">285</a></sup>, adding a few more constraints.</p>
-<p>The function $f_0$ (see <a class="review-eq-link" href="#review-eq-eq-pbeenh">
-  <code>eq:pbeenh</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="F_\text{x}^{\text{PBE}} = 1 + \kappa\left[1 - \frac{\kappa}{\kappa + f_0(s_\sigma)}\right]"></span>
-  </span>
-</a>; <a class="review-eq-link" href="#review-eq-eq-pkzbf0">
-  <code>eq:pkzbf0</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="\begin{aligned}
+<p>This functional was developed to correct some deficiencies of PKZB (<a class="functional-link" href="../mgga-x-pkzb/"><code>mgga_x_pkzb</code></a> + <a class="functional-link" href="../mgga-c-pkzb/"><code>mgga_c_pkzb</code></a>), namely the poor description of equilibrium bond lengths<sup class="citation-marker"><a href="#review-ref-Adamo2000-2643">693</a></sup> and hydrogen-bonded complexes.<sup class="citation-marker"><a href="#review-ref-Rabuck2000-439">694</a></sup> It is still constructed based on the <a class="functional-link" href="../gga-x-pbe/"><code>gga_x_pbe</code></a> enhancement factor and the fourth-order density-gradient expansion from ref. <span class="citation-ref"><a href="#review-ref-Svendsen1996-17402">285</a></span>, adding a few more constraints.</p>
+<p>The function $f_0$ (see <a class="review-eq-link" href="#review-eq-eq-pbeenh"><span class="eq-number">Eq. (382)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="F_\text{x}^{\text{PBE}} = 1 + \kappa\left[1 - \frac{\kappa}{\kappa + f_0(s_\sigma)}\right]"></span></span></a>; <a class="review-eq-link" href="#review-eq-eq-pkzbf0"><span class="eq-number">Eq. (567)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="\begin{aligned}
 f_0^\text{PKZB} = &amp; \mu^\text{GE} p_\sigma
   + \frac{146}{2025} \tilde q_\sigma^2 - \frac{73}{405} \tilde q_\sigma p_\sigma  \\
 
   &amp; + \left[D + \frac{\left(\mu^\text{GE}\right)^2}{\kappa}\right] p_\sigma^2
-\end{aligned}"></span>
-  </span>
-</a>) is now generalized to</p>
+\end{aligned}"></span></span></a>) is now generalized to</p>
 <div class="equation" data-tex="\begin{aligned}
 f_0^\text{TPSS} = \frac{1}{\left(1+\sqrt{e}p_\sigma\right)^2}\left\{
   \left[\mu^\text{GE} + c\frac{z_\sigma^f}{(1+z_\sigma^2)^2}\right] p_\sigma
@@ -69,25 +62,15 @@ f_0^\text{TPSS} = \frac{1}{\left(1+\sqrt{e}p_\sigma\right)^2}\left\{
   + 2\sqrt{e}\mu^\text{GE}\frac{9}{25}z_\sigma^2 + e \mu^\text{PBE} p_\sigma^3
   \right\}
 \end{aligned}"></div>
-<p>with $f=2$. Compared to <a class="review-eq-link" href="#review-eq-eq-pkzbf0">
-  <code>eq:pkzbf0</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="\begin{aligned}
+<p>with $f=2$. Compared to <a class="review-eq-link" href="#review-eq-eq-pkzbf0"><span class="eq-number">Eq. (567)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="\begin{aligned}
 f_0^\text{PKZB} = &amp; \mu^\text{GE} p_\sigma
   + \frac{146}{2025} \tilde q_\sigma^2 - \frac{73}{405} \tilde q_\sigma p_\sigma  \\
 
   &amp; + \left[D + \frac{\left(\mu^\text{GE}\right)^2}{\kappa}\right] p_\sigma^2
-\end{aligned}"></span>
-  </span>
-</a> a few differences can be observed. First, there is the dependence on the variable $z_\sigma$ (<a class="review-eq-link" href="#review-eq-eq-z-sigma">
-  <code>eq:z-sigma</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="z_\sigma = \frac{\tau_\sigma^{\text{W}}}{\tau_\sigma}"></span>
-  </span>
-</a>). Then, the constant $D$ in <a class="functional-link" href="../mgga-x-pkzb/"><code>mgga_x_pkzb</code></a> is set to zero, which is consistent with the best numerical estimate for this coefficient.<sup class="citation-marker"><a href="#review-ref-Svendsen1996-17402">285</a></sup> Finally, the function $\tilde q_\sigma$ is replaced by</p>
+\end{aligned}"></span></span></a> a few differences can be observed. First, there is the dependence on the variable $z_\sigma$ (<a class="review-eq-link" href="#review-eq-eq-z-sigma"><span class="eq-number">Eq. (84)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="z_\sigma = \frac{\tau_\sigma^{\text{W}}}{\tau_\sigma}"></span></span></a>). Then, the constant $D$ in <a class="functional-link" href="../mgga-x-pkzb/"><code>mgga_x_pkzb</code></a> is set to zero, which is consistent with the best numerical estimate for this coefficient.<sup class="citation-marker"><a href="#review-ref-Svendsen1996-17402">285</a></sup> Finally, the function $\tilde q_\sigma$ is replaced by</p>
 <div class="equation" data-tex="\tilde q_{\sigma} = \frac{9}{20} \frac{\alpha_\sigma -1}
   {\sqrt{1+b\alpha_\sigma(\alpha_\sigma-1)}} + \frac{2}{3}p_\sigma"></div>
-<p>This function employs the iso-orbital indicator $\alpha_\sigma$ that, as noted in the review, is related to the curvature of the exchange hole and (even more directly) to the electron-localization function of Becke and Edgecombe.<sup class="citation-marker"><a href="#review-ref-Becke1990-JCP-5397">240</a>,<a href="#review-ref-Savin1997-1808">695</a>,<a href="#review-ref-Burnus2005-010501">246</a>,<a href="#review-ref-Pittalis2015-075109">241</a>,<a href="#review-ref-Desmarais2024-136401">248</a></sup></p>
+<p>This function employs the iso-orbital indicator $\alpha_\sigma$ that, as noted in <a class="review-section-link" href="https://arxiv.org/pdf/2602.17333#page=17" title="Hole Functions">Sec. 2.5</a> of the review, is related to the curvature of the exchange hole and (even more directly) to the electron-localization function of Becke and Edgecombe.<sup class="citation-marker"><a href="#review-ref-Becke1990-JCP-5397">240</a>,<a href="#review-ref-Savin1997-1808">695</a>,<a href="#review-ref-Burnus2005-010501">246</a>,<a href="#review-ref-Pittalis2015-075109">241</a>,<a href="#review-ref-Desmarais2024-136401">248</a></sup></p>
 <p>Besides the usual constants $\mu^\text{GE}$ and $\mu^\text{PBE}$, the parameters $c=1.59096$ and $e=1.537$ were chosen to eliminate the divergence of the functional at the nucleus for a two-electron density and to yield the exact exchange energy of the H atom. Finally, the parameter $b=0.40$ was chosen as the smallest value such that the enhancement factor increases monotonically as a function of $p_\sigma$.</p>
 <p>TPSS (<a class="functional-link" href="../mgga-x-tpss/"><code>mgga_x_tpss</code></a> + <a class="functional-link" href="../mgga-c-tpss/"><code>mgga_c_tpss</code></a>), which was quite popular, gives generally good results for a wide range of systems and properties, correcting the overestimated PKZB bond lengths in molecules, hydrogen-bonded complexes, and ionic solids.</p>
         </div>
@@ -98,12 +81,12 @@ f_0^\text{PKZB} = &amp; \mu^\text{GE} p_\sigma
           <h2>Referenced Review Equations</h2>
           <div class="review-equations">
           <article class="review-equation-card" id="review-eq-eq-pbeenh">
-            <code>eq:pbeenh</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (382)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=58" title="Open page 58 of the review PDF">p. 58 ↗</a></p>
             <div class="equation" data-tex="F_\text{x}^{\text{PBE}} = 1 + \kappa\left[1 - \frac{\kappa}{\kappa + f_0(s_\sigma)}\right]"></div>
           </article>
 
           <article class="review-equation-card" id="review-eq-eq-pkzbf0">
-            <code>eq:pkzbf0</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (567)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=103" title="Open page 103 of the review PDF">p. 103 ↗</a></p>
             <div class="equation" data-tex="\begin{aligned}
 f_0^\text{PKZB} = &amp; \mu^\text{GE} p_\sigma
   + \frac{146}{2025} \tilde q_\sigma^2 - \frac{73}{405} \tilde q_\sigma p_\sigma  \\
@@ -113,7 +96,7 @@ f_0^\text{PKZB} = &amp; \mu^\text{GE} p_\sigma
           </article>
 
           <article class="review-equation-card" id="review-eq-eq-z-sigma">
-            <code>eq:z-sigma</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (84)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=14" title="Open page 14 of the review PDF">p. 14 ↗</a></p>
             <div class="equation" data-tex="z_\sigma = \frac{\tau_\sigma^{\text{W}}}{\tau_\sigma}"></div>
           </article>
 

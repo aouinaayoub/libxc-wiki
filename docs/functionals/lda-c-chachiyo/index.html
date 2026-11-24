@@ -3,14 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>lda_c_chachiyo</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20261016-excerpts-v1">
-    <script defer src="../../assets/search.js?v=20261016-excerpts-v1"></script>
+    <title>lda_c_chachiyo — Chachiyo simple 2 parameter correlation · Libxc Wiki</title>
+    <meta name="description" content="lda_c_chachiyo: Chachiyo simple 2 parameter correlation. LDA correlation functional in Libxc, with references and BibTeX. Includes an excerpt from the Tran, Lehtola, Pittalis and Marques review.">
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261117-refs-v1">
+    <script defer src="../../assets/search.js?v=20261117-refs-v1"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
     <script defer src="../../vendor/katex/contrib/mhchem.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20261016-excerpts-v1"></script>
+    <script defer src="../../assets/detail.js?v=20261117-refs-v1"></script>
 
   </head>
   <body class="functional-page">
@@ -32,23 +33,20 @@
 
         <p class="brand">LDA</p>
         <h1><code class="title-code">lda_c_chachiyo</code></h1>
+        <p class="functional-name">Chachiyo simple 2 parameter correlation</p>
         <div class="detail-tags"><span class="tag">lda</span>
 <span class="tag">correlation</span></div>
       </header>
 
       <div class="detail-grid">
+
       <section class="callout">
         <p class="callout-label">Review excerpt</p>
         <div class="review-html">
 <p>The starting point of this functional is the second-order M&oslash;ller&ndash;Plesset perturbative expansion of the correlation energy for the HEG as a power series in $r_s^{-1}$ at the low-density limit. Of course, the resulting expression does not reproduce the correct divergence at high density, where <a class="functional-link" href="../lda-c-rpa/"><code>lda_c_rpa</code></a> is exact. The workaround of Chachiyo<sup class="citation-marker"><a href="#review-ref-Chachiyo2016-021101">455</a></sup> to this problem was to include the $r_s^{-1}$-expansion inside a logarithm:</p>
 <div class="equation" data-tex="e_\text{c}^{\text{Cha-LDA}} = a\ln\left(1 + \frac{b}{r_s} + \frac{c}{r_s^2}\right)"></div>
-<p>where $a$, $b$, and $c$ are to be determined. He set $b=c$ based on arguments about the connection between the low- and high-density regimes. Dependence on spin is included with <a class="review-eq-link" href="#review-eq-eq-ldavBHsi">
-  <code>eq:ldavBHsi</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="e_\text{c}^\text{vBH}(r_s,\zeta) =
-  e_\text{c}^\text{P}(r_s) + \left[e_\text{c}^\text{F}(r_s) - e_\text{c}^\text{P}(r_s)\right] f_\text{c}(\zeta)"></span>
-  </span>
-</a>, and the following values for $a$ and $b$ are deduced from the RPA high-density limit:<sup class="citation-marker"><a href="#review-ref-GellMann1957-364">268</a>,<a href="#review-ref-Loos2011-033103">274</a></sup> $a^\text{P}=\left[\ln(2)-1\right]/\left(2\pi^2\right)$, $b^\text{P}=20.4562557$, $a^\text{F}=a^\text{P}/2$, and $b^\text{F}=27.4203609$.</p>
+<p>where $a$, $b$, and $c$ are to be determined. He set $b=c$ based on arguments about the connection between the low- and high-density regimes. Dependence on spin is included with <a class="review-eq-link" href="#review-eq-eq-ldavBHsi"><span class="eq-number">Eq. (275)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="e_\text{c}^\text{vBH}(r_s,\zeta) =
+  e_\text{c}^\text{P}(r_s) + \left[e_\text{c}^\text{F}(r_s) - e_\text{c}^\text{P}(r_s)\right] f_\text{c}(\zeta)"></span></span></a>, and the following values for $a$ and $b$ are deduced from the RPA high-density limit:<sup class="citation-marker"><a href="#review-ref-GellMann1957-364">268</a>,<a href="#review-ref-Loos2011-033103">274</a></sup> $a^\text{P}=\left[\ln(2)-1\right]/\left(2\pi^2\right)$, $b^\text{P}=20.4562557$, $a^\text{F}=a^\text{P}/2$, and $b^\text{F}=27.4203609$.</p>
         </div>
         <p class="source-note">Adapted from <a href="https://arxiv.org/abs/2602.17333">Tran, Lehtola, Pittalis, and Marques, <em>Semi-Local Exchange-Correlation Approximations in Density Functional Theory</em>, arXiv:2602.17333</a>.</p>
       </section>
@@ -57,7 +55,7 @@
           <h2>Referenced Review Equations</h2>
           <div class="review-equations">
           <article class="review-equation-card" id="review-eq-eq-ldavBHsi">
-            <code>eq:ldavBHsi</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (275)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=38" title="Open page 38 of the review PDF">p. 38 ↗</a></p>
             <div class="equation" data-tex="e_\text{c}^\text{vBH}(r_s,\zeta) =
   e_\text{c}^\text{P}(r_s) + \left[e_\text{c}^\text{F}(r_s) - e_\text{c}^\text{P}(r_s)\right] f_\text{c}(\zeta)"></div>
           </article>

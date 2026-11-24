@@ -3,14 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>lda_xc_1d_ehwlrg_2</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20261016-excerpts-v1">
-    <script defer src="../../assets/search.js?v=20261016-excerpts-v1"></script>
+    <title>lda_xc_1d_ehwlrg_2 — LDA constructed from slab-like systems of 2 electrons · Libxc Wiki</title>
+    <meta name="description" content="lda_xc_1d_ehwlrg_2: LDA constructed from slab-like systems of 2 electrons. LDA exchange-correlation functional in Libxc, with references and BibTeX. Includes an excerpt from the Tran, Lehtola, Pittalis and Marques review.">
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261117-refs-v1">
+    <script defer src="../../assets/search.js?v=20261117-refs-v1"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
     <script defer src="../../vendor/katex/contrib/mhchem.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20261016-excerpts-v1"></script>
+    <script defer src="../../assets/detail.js?v=20261117-refs-v1"></script>
 
   </head>
   <body class="functional-page">
@@ -32,6 +33,7 @@
 
         <p class="brand">LDA</p>
         <h1><code class="title-code">lda_xc_1d_ehwlrg_2</code></h1>
+        <p class="functional-name">LDA constructed from slab-like systems of 2 electrons</p>
         <div class="detail-tags"><span class="tag">lda</span>
 <span class="tag">exchange</span>
 <span class="tag">correlation</span>
@@ -39,15 +41,11 @@
       </header>
 
       <div class="detail-grid">
+
       <section class="callout">
         <p class="callout-label">Review excerpt</p>
         <div class="review-html">
-<p>LDA functionals are usually derived from the HEG as the reference system. Entwistle et al.<sup class="citation-marker"><a href="#review-ref-Entwistle2016-205134">481</a></sup> used alternative systems, namely few-electron slabs that resemble the HEG in a finite region of space. To illustrate this concept they decided to work in 1D, using a soft-Coulomb interaction of the form $v(x)=1/\left(\vert x \vert + 1\right)$ (compare to <a class="review-eq-link" href="#review-eq-eq-softCoulomb">
-  <code>eq:softCoulomb</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="v^\text{soft-Coulomb}(x) = \frac{1}{\sqrt{x^2 + b^2}}"></span>
-  </span>
-</a>). The exact xc energy was then calculated for slabs containing one, two, and three electrons, and fit to the form</p>
+<p>LDA functionals are usually derived from the HEG as the reference system. Entwistle et al.<sup class="citation-marker"><a href="#review-ref-Entwistle2016-205134">481</a></sup> used alternative systems, namely few-electron slabs that resemble the HEG in a finite region of space. To illustrate this concept they decided to work in 1D, using a soft-Coulomb interaction of the form $v(x)=1/\left(\vert x \vert + 1\right)$ (compare to <a class="review-eq-link" href="#review-eq-eq-softCoulomb"><span class="eq-number">Eq. (210)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="v^\text{soft-Coulomb}(x) = \frac{1}{\sqrt{x^2 + b^2}}"></span></span></a>). The exact xc energy was then calculated for slabs containing one, two, and three electrons, and fit to the form</p>
 <div class="equation" data-tex="e_\text{xc}^{\text{EHWLRG}}(n) = \left(a_1 + a_2n + a_3n^2\right)n^{\alpha}"></div>
 <p>The fit parameters turn out to be $\alpha = 0.638$, $a_1=-0.803$, $a_2=0.82$, and $a_3=-0.47$ for one-electron slabs (<a class="functional-link" href="../lda-xc-1d-ehwlrg-1/"><code>lda_xc_1d_ehwlrg_1</code></a>), $\alpha = 0.604$, $a_1=-0.74$, $a_2=0.68$, and $a_3=-0.38$ for two-electron slabs (<a class="functional-link" href="../lda-xc-1d-ehwlrg-2/"><code>lda_xc_1d_ehwlrg_2</code></a>), and $\alpha = 0.61$, $a_1=-0.77$, $a_2=0.79$, and $a_3=-0.48$ for three-electron slabs (<a class="functional-link" href="../lda-xc-1d-ehwlrg-3/"><code>lda_xc_1d_ehwlrg_3</code></a>). The application of these functionals on various model systems (e.g., harmonic well) shows that they have a reduced amount of self-interaction error.</p>
         </div>
@@ -58,7 +56,7 @@
           <h2>Referenced Review Equations</h2>
           <div class="review-equations">
           <article class="review-equation-card" id="review-eq-eq-softCoulomb">
-            <code>eq:softCoulomb</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (210)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=30" title="Open page 30 of the review PDF">p. 30 ↗</a></p>
             <div class="equation" data-tex="v^\text{soft-Coulomb}(x) = \frac{1}{\sqrt{x^2 + b^2}}"></div>
           </article>
 

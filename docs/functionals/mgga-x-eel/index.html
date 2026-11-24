@@ -3,14 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>mgga_x_eel</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20261016-excerpts-v1">
-    <script defer src="../../assets/search.js?v=20261016-excerpts-v1"></script>
+    <title>mgga_x_eel — Exact exchange-like exchange of Aschebrock et al · Libxc Wiki</title>
+    <meta name="description" content="mgga_x_eel: Exact exchange-like exchange of Aschebrock et al. Meta-GGA exchange functional in Libxc, with references and BibTeX. Includes an excerpt from the Tran, Lehtola, Pittalis and Marques review.">
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261117-refs-v1">
+    <script defer src="../../assets/search.js?v=20261117-refs-v1"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
     <script defer src="../../vendor/katex/contrib/mhchem.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20261016-excerpts-v1"></script>
+    <script defer src="../../assets/detail.js?v=20261117-refs-v1"></script>
 
   </head>
   <body class="functional-page">
@@ -32,36 +33,28 @@
 
         <p class="brand">META-GGA</p>
         <h1><code class="title-code">mgga_x_eel</code></h1>
+        <p class="functional-name">Exact exchange-like exchange of Aschebrock et al</p>
         <div class="detail-tags"><span class="tag">meta-gga</span>
 <span class="tag">exchange</span></div>
       </header>
 
       <div class="detail-grid">
+
       <section class="callout">
         <p class="callout-label">Review excerpt</p>
         <div class="review-html">
-<p>In the same spirit as <a class="functional-link" href="../mgga-x-task/"><code>mgga_x_task</code></a>, this functional was developed with an emphasis on ultranonlocality to obtain a potential that mimics the EXX-KLI potential. Requirements for the HEG limit and the H atom are used to construct the functional. The aim is to obtain a response to a static electric field similar to that of EXX-KLI. The enhancement factor reads</p>
+<p>In the same spirit as <a class="functional-link" href="../mgga-x-task/"><code>mgga_x_task</code></a>, this functional was developed with an emphasis on ultranonlocality in order to obtain a potential that mimics the EXX-KLI potential. Requirements for the HEG limit and the H atom are used to construct the functional. The aim is to obtain a response to a static electric field similar to that of EXX-KLI. The enhancement factor reads</p>
 <div class="equation" data-tex="\begin{aligned}
 F_\text{x}^\text{EEL} = &amp; k\left\{G\left(s_{\sigma}^2+\frac{3}{5}\alpha_{0}\tanh\left(\frac{\alpha_{\sigma}}{\alpha_{0}}\right)\right)-G\left(s_{\sigma}^2\right)\right\}  \\
   &amp; +G\left(s_{\sigma}^2\right)
 \end{aligned}"></div>
 <p>where</p>
 <div class="equation" data-tex="G\left(x\right)=h_{\text{x}}^{0}\left[1-\E^{-c\left(x-s_{0}^2\right)^{-1/4}}\Theta\left(x-s_{0}^2\right)\right]"></div>
-<p>In <a class="review-eq-link" href="#review-eq-eq-g-eel">
-  <code>eq:g-eel</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="G\left(x\right)=h_{\text{x}}^{0}\left[1-\E^{-c\left(x-s_{0}^2\right)^{-1/4}}\Theta\left(x-s_{0}^2\right)\right]"></span>
-  </span>
-</a>, $h_{\text{x}}^{0}=1.174$ (strongly tightened bound requirement<sup class="citation-marker"><a href="#review-ref-Perdew2014-18A533">725</a></sup>), $c=4.759279$ (exact energy of the H atom), and $s_{0}=\left(6\pi\right)^{-1/3}$ (the smallest value of $s_{\sigma}$ for a doubly occupied $1s$-orbital-like exponential density). In <a class="review-eq-link" href="#review-eq-eq-f-eel">
-  <code>eq:f-eel</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="\begin{aligned}
+<p>In <a class="review-eq-link" href="#review-eq-eq-g-eel"><span class="eq-number">Eq. (685)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="G\left(x\right)=h_{\text{x}}^{0}\left[1-\E^{-c\left(x-s_{0}^2\right)^{-1/4}}\Theta\left(x-s_{0}^2\right)\right]"></span></span></a>, $h_{\text{x}}^{0}=1.174$ (strongly tightened bound requirement<sup class="citation-marker"><a href="#review-ref-Perdew2014-18A533">725</a></sup>), $c=4.759279$ (exact energy of the H atom), and $s_{0}=\left(6\pi\right)^{-1/3}$ (the smallest value of $s_{\sigma}$ for a doubly occupied $1s$-orbital-like exponential density). In <a class="review-eq-link" href="#review-eq-eq-f-eel"><span class="eq-number">Eq. (684)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="\begin{aligned}
 F_\text{x}^\text{EEL} = &amp; k\left\{G\left(s_{\sigma}^2+\frac{3}{5}\alpha_{0}\tanh\left(\frac{\alpha_{\sigma}}{\alpha_{0}}\right)\right)-G\left(s_{\sigma}^2\right)\right\}  \\
 
   &amp; +G\left(s_{\sigma}^2\right)
-\end{aligned}"></span>
-  </span>
-</a>, $\alpha_0=3$ was found to be a good choice such that $\alpha_{0}\tanh\left(\alpha_{\sigma}/\alpha_{0}\right)$ is similar to $\alpha_{\sigma}$ and remains positive. With this choice for $\alpha_0$,</p>
+\end{aligned}"></span></span></a>, $\alpha_0=3$ was found to be a good choice such that $\alpha_{0}\tanh\left(\alpha_{\sigma}/\alpha_{0}\right)$ is similar to $\alpha_{\sigma}$ and remains positive. With this choice for $\alpha_0$,</p>
 <div class="equation" data-tex="k=\frac{1-h_{\text{x}}^0}{G\left[\frac{3}{5}\alpha_0\tanh\left(\alpha_{0}^{-1}\right)\right]-h_{\text{x}}^0} \approx 51.555804"></div>
 <p>is obtained by requiring that $F_\text{x}^\text{EEL}(s_{\sigma}=0,\alpha_{\sigma}=1)=1$ (HEG limit).</p>
 <p>The functional shows a good ability to reproduce EXX-KLI results for the static electric longitudinal polarizability of hydrogen chains and of C$_{2N}$H$_{2N+2}$ oligomers of polyacetylene.</p>
@@ -73,12 +66,12 @@ F_\text{x}^\text{EEL} = &amp; k\left\{G\left(s_{\sigma}^2+\frac{3}{5}\alpha_{0}\
           <h2>Referenced Review Equations</h2>
           <div class="review-equations">
           <article class="review-equation-card" id="review-eq-eq-g-eel">
-            <code>eq:g-eel</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (685)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=127" title="Open page 127 of the review PDF">p. 127 ↗</a></p>
             <div class="equation" data-tex="G\left(x\right)=h_{\text{x}}^{0}\left[1-\E^{-c\left(x-s_{0}^2\right)^{-1/4}}\Theta\left(x-s_{0}^2\right)\right]"></div>
           </article>
 
           <article class="review-equation-card" id="review-eq-eq-f-eel">
-            <code>eq:f-eel</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (684)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=127" title="Open page 127 of the review PDF">p. 127 ↗</a></p>
             <div class="equation" data-tex="\begin{aligned}
 F_\text{x}^\text{EEL} = &amp; k\left\{G\left(s_{\sigma}^2+\frac{3}{5}\alpha_{0}\tanh\left(\frac{\alpha_{\sigma}}{\alpha_{0}}\right)\right)-G\left(s_{\sigma}^2\right)\right\}  \\
 

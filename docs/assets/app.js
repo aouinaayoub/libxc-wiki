@@ -240,6 +240,7 @@ function update() {
   updateSuggestions();
 }
 
+const scheduleUpdate = searchTools?.debounce(update) ?? Object.assign(() => update(), { cancel() {} });
 search?.addEventListener('input', () => {
   state.query = search.value;
   clearFilterCollapseState();
@@ -250,7 +251,8 @@ search?.addEventListener('input', () => {
     url.searchParams.delete('q');
   }
   window.history.replaceState({}, '', url);
-  update();
+  if (state.query.trim()) scheduleUpdate();
+  else { scheduleUpdate.cancel(); update(); }
 });
 
 search?.addEventListener('keydown', (event) => {
@@ -261,6 +263,7 @@ search?.addEventListener('keydown', (event) => {
       update();
       return;
     }
+    scheduleUpdate.cancel();
     search.value = '';
     state.query = '';
     clearFilterCollapseState();

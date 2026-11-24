@@ -3,14 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>gga_c_gapc</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20261016-excerpts-v1">
-    <script defer src="../../assets/search.js?v=20261016-excerpts-v1"></script>
+    <title>gga_c_gapc — GapC · Libxc Wiki</title>
+    <meta name="description" content="gga_c_gapc: GapC. GGA correlation functional in Libxc, with references and BibTeX. Includes an excerpt from the Tran, Lehtola, Pittalis and Marques review.">
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261117-refs-v1">
+    <script defer src="../../assets/search.js?v=20261117-refs-v1"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
     <script defer src="../../vendor/katex/contrib/mhchem.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20261016-excerpts-v1"></script>
+    <script defer src="../../assets/detail.js?v=20261117-refs-v1"></script>
 
   </head>
   <body class="functional-page">
@@ -32,75 +33,39 @@
 
         <p class="brand">GGA</p>
         <h1><code class="title-code">gga_c_gapc</code></h1>
+        <p class="functional-name">GapC</p>
         <div class="detail-tags"><span class="tag">gga</span>
 <span class="tag">correlation</span></div>
       </header>
 
       <div class="detail-grid">
+
       <section class="callout">
         <p class="callout-label">Review excerpt</p>
         <div class="review-html">
-<p>Following the idea behind the construction of <a class="functional-link" href="../mgga-c-kcis/"><code>mgga_c_kcis</code></a>, which is based on the HEG with a gap,<sup class="citation-marker"><a href="#review-ref-Krieger1999-463">639</a>,<a href="#review-ref-Rey1998-581">640</a>,<a href="#review-ref-Kurth1999-889">641</a>,<a href="#review-ref-Toulouse2002-10465">642</a></sup> Fabiano et al.<sup class="citation-marker"><a href="#review-ref-Fabiano2014-2016">638</a></sup> proposed two GGA functionals. In this model, the general form has the same spin-dependence as <a class="review-eq-link" href="#review-eq-eq-ldavBHsi">
-  <code>eq:ldavBHsi</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="e_\text{c}^\text{vBH}(r_s,\zeta) =
-  e_\text{c}^\text{P}(r_s) + \left[e_\text{c}^\text{F}(r_s) - e_\text{c}^\text{P}(r_s)\right] f_\text{c}(\zeta)"></span>
-  </span>
-</a>, where $e_\text{c}^\text{P}$ and $e_\text{c}^\text{F}$ are given by</p>
+<p>Following the idea behind the construction of <a class="functional-link" href="../mgga-c-kcis/"><code>mgga_c_kcis</code></a>, which is based on the HEG with a gap,<sup class="citation-marker"><a href="#review-ref-Krieger1999-463">639</a>,<a href="#review-ref-Rey1998-581">640</a>,<a href="#review-ref-Kurth1999-889">641</a>,<a href="#review-ref-Toulouse2002-10465">642</a></sup> Fabiano et al.<sup class="citation-marker"><a href="#review-ref-Fabiano2014-2016">638</a></sup> proposed two GGA functionals. In this model, the general form has the same spin-dependence as <a class="review-eq-link" href="#review-eq-eq-ldavBHsi"><span class="eq-number">Eq. (275)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="e_\text{c}^\text{vBH}(r_s,\zeta) =
+  e_\text{c}^\text{P}(r_s) + \left[e_\text{c}^\text{F}(r_s) - e_\text{c}^\text{P}(r_s)\right] f_\text{c}(\zeta)"></span></span></a>, where $e_\text{c}^\text{P}$ and $e_\text{c}^\text{F}$ are given by</p>
 <div class="equation" data-tex="e_\text{c}(r_s,G)=\frac{e_\text{c}^\text{rPW-LDA}(r_s)+c_1(r_s)G}{1+c_2(r_s)G+c_3(r_s)G^2}"></div>
-<p>and $e_\text{c}^\text{rPW-LDA}$ is a reparametrization of <a class="functional-link" href="../lda-c-pw/"><code>lda_c_pw</code></a> at $\zeta=0$ (P) or $\zeta=1$ (F), and the functions $c_i$ are given by <a class="review-eq-link" href="#review-eq-eq-call-gap">
-  <code>eq:call-gap</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="c_1(r_s) = C\frac{2\left(e_\text{c}&#39;\right)^2-e_\text{c}^\text{PW-LDA}(\zeta=0)e_\text{c}&#39;&#39;}
-{2\left\{Ce_\text{c}&#39;-\left[e_\text{c}^\text{PW-LDA}(\zeta=0)\right]^2\right\}}"></span>
-  </span>
-</a> with reparameterized $a_i$, $b_i$, and $f_\text{c}$ and with $e_\text{c}^\text{PW-LDA}$ replaced by $e_\text{c}^\text{rPW-LDA}$.<sup class="citation-marker"><a href="#review-ref-Fabiano2014-2016">638</a></sup></p>
+<p>and $e_\text{c}^\text{rPW-LDA}$ is a reparametrization of <a class="functional-link" href="../lda-c-pw/"><code>lda_c_pw</code></a> at $\zeta=0$ (P) or $\zeta=1$ (F), and the functions $c_i$ are given by <a class="review-eq-link" href="#review-eq-eq-call-gap"><span class="eq-number">Eq. (725)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="c_1(r_s) = C\frac{2\left(e_\text{c}&#39;\right)^2-e_\text{c}^\text{PW-LDA}(\zeta=0)e_\text{c}&#39;&#39;}
+{2\left\{Ce_\text{c}&#39;-\left[e_\text{c}^\text{PW-LDA}(\zeta=0)\right]^2\right\}}"></span></span></a> with reparameterized $a_i$, $b_i$, and $f_\text{c}$ and with $e_\text{c}^\text{PW-LDA}$ replaced by $e_\text{c}^\text{rPW-LDA}$.<sup class="citation-marker"><a href="#review-ref-Fabiano2014-2016">638</a></sup></p>
 <p>The first proposed local gap function $G$ reads</p>
 <div class="equation" data-tex="\begin{aligned}
 G^{\text{GAPc}}(r_s,\zeta,t) = &amp; \phi_{2/3}^3\frac{\beta(r_s)t^2}{c_1(r_s)-c_2(r_s)e_\text{c}^\text{rPW-LDA}(r_s)}  \\
   &amp; \times H\left(r_s,t\right)
 \end{aligned}"></div>
-<p>where $\beta$ is defined by <a class="review-eq-link" href="#review-eq-eq-vpbe-beta">
-  <code>eq:vpbe-beta</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="\beta(r_s) = \beta_0\frac{1 + a r_s}{1 + b r_s}"></span>
-  </span>
-</a> and $H$ reads</p>
+<p>where $\beta$ is defined by <a class="review-eq-link" href="#review-eq-eq-vpbe-beta"><span class="eq-number">Eq. (504)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="\beta(r_s) = \beta_0\frac{1 + a r_s}{1 + b r_s}"></span></span></a> and $H$ reads</p>
 <div class="equation" data-tex="H(r_s,t) = \frac{a+Ar_s\ln(r_s)\beta^{-1}(r_s)t^2}{a+t^2}"></div>
-<p>with $a=30$, which was determined by fitting to the exact correlation energies of the He, Ne, and Ar atoms. Note that $A$ in <a class="review-eq-link" href="#review-eq-eq-H-gapc">
-  <code>eq:H-gapc</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="H(r_s,t) = \frac{a+Ar_s\ln(r_s)\beta^{-1}(r_s)t^2}{a+t^2}"></span>
-  </span>
-</a> is the same parameter as in the reparameterized $e_\text{c}^\text{rPW-LDA}$ (see <a class="review-eq-link" href="#review-eq-eq-PW92">
-  <code>eq:PW92</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="\begin{aligned}
-\times\ln\left[1+\frac{1}{2A\left(\beta_1r_s^{1/2}+\beta_2r_s+\beta_3r_s^{3/2}+\beta_4r_s^{p+1}\right)}\right]
-\end{aligned}"></span>
-  </span>
-</a>). All mathematical constraints satisfied by <a class="functional-link" href="../gga-c-pbe/"><code>gga_c_pbe</code></a> are also satisfied by <a class="functional-link" href="../gga-c-gapc/"><code>gga_c_gapc</code></a>. In addition the second-order density-gradient expansion is recovered at any density regime, while that is only the case for the high-density regime for <a class="functional-link" href="../gga-c-pbe/"><code>gga_c_pbe</code></a>.</p>
+<p>with $a=30$, which was determined by fitting to the exact correlation energies of the He, Ne, and Ar atoms. Note that $A$ in <a class="review-eq-link" href="#review-eq-eq-H-gapc"><span class="eq-number">Eq. (523)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="H(r_s,t) = \frac{a+Ar_s\ln(r_s)\beta^{-1}(r_s)t^2}{a+t^2}"></span></span></a> is the same parameter as in the reparameterized $e_\text{c}^\text{rPW-LDA}$ (see <a class="review-eq-link" href="#review-eq-eq-PW92"><span class="eq-number">Eq. (288)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="\begin{aligned}
+G(r_s) = -2A(1+\alpha_1 r_s)  \\
+
+   \times\ln\left[1+\frac{1}{2A\left(\beta_1r_s^{1/2}+\beta_2r_s+\beta_3r_s^{3/2}+\beta_4r_s^{p+1}\right)}\right]
+\end{aligned}"></span></span></a>). All mathematical constraints satisfied by <a class="functional-link" href="../gga-c-pbe/"><code>gga_c_pbe</code></a> are also satisfied by <a class="functional-link" href="../gga-c-gapc/"><code>gga_c_gapc</code></a>. In addition the second-order density-gradient expansion is recovered at any density regime, while that is only the case for the high-density regime for <a class="functional-link" href="../gga-c-pbe/"><code>gga_c_pbe</code></a>.</p>
 <p>The second local gap function $G$ is given by</p>
 <div class="equation" data-tex="G^{\text{GAPloc}}(r_s, s, t) = f_{\text{G}}\frac{s^{\alpha(t)+2}}{r_s^2}\frac{b+s^2}{1+s^{\alpha(t)+2}}"></div>
-<p>where $s$ is the reduced-density gradient given by <a class="review-eq-link" href="#review-eq-eq-s">
-  <code>eq:s</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="s = \frac{|\nabla n|}{2 n k_\text{F}} = 2^{1/3}C_{s}x =
-  \left(\frac{3}{2\pi}\right)^{1/3}\left\vert\nabla r_s\right\vert"></span>
-  </span>
-</a>, $f_{\text{G}}=\left(9\pi/4\right)^{2/3}/2$ (note that the expression for $f_{\text{G}}$ given in <sup class="citation-marker"><a href="#review-ref-Fabiano2014-2016">638</a></sup> is wrong), and</p>
+<p>where $s$ is the reduced-density gradient given by <a class="review-eq-link" href="#review-eq-eq-s"><span class="eq-number">Eq. (46)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="s = \frac{|\nabla n|}{2 n k_\text{F}} = 2^{1/3}C_{s}x =
+  \left(\frac{3}{2\pi}\right)^{1/3}\left\vert\nabla r_s\right\vert"></span></span></a>, $f_{\text{G}}=\left(9\pi/4\right)^{2/3}/2$ (note that the expression for $f_{\text{G}}$ given in ref. <span class="citation-ref"><a href="#review-ref-Fabiano2014-2016">638</a></span> is wrong), and</p>
 <div class="equation" data-tex="\alpha(t) = \frac{\alpha_1+t^3}{1+t^3}"></div>
-<p>The parameters $b=14.709046$ (in <a class="review-eq-link" href="#review-eq-eq-g-gaploc">
-  <code>eq:g-gaploc</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="G^{\text{GAPloc}}(r_s, s, t) = f_{\text{G}}\frac{s^{\alpha(t)+2}}{r_s^2}\frac{b+s^2}{1+s^{\alpha(t)+2}}"></span>
-  </span>
-</a>) and $\alpha_1=6.54613$ (in <a class="review-eq-link" href="#review-eq-eq-alpha-gap">
-  <code>eq:alpha-gap</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="\alpha(t) = \frac{\alpha_1+t^3}{1+t^3}"></span>
-  </span>
-</a>) were determined from a fit to the exact correlation energy density of the He atom. <a class="functional-link" href="../gga-c-gaploc/"><code>gga_c_gaploc</code></a> satisfies all constraints satisfied by <a class="functional-link" href="../gga-c-pbe/"><code>gga_c_pbe</code></a> except the second-order density-gradient expansion that was not considered.</p>
+<p>The parameters $b=14.709046$ (in <a class="review-eq-link" href="#review-eq-eq-g-gaploc"><span class="eq-number">Eq. (524)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="G^{\text{GAPloc}}(r_s, s, t) = f_{\text{G}}\frac{s^{\alpha(t)+2}}{r_s^2}\frac{b+s^2}{1+s^{\alpha(t)+2}}"></span></span></a>) and $\alpha_1=6.54613$ (in <a class="review-eq-link" href="#review-eq-eq-alpha-gap"><span class="eq-number">Eq. (525)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="\alpha(t) = \frac{\alpha_1+t^3}{1+t^3}"></span></span></a>) were determined from a fit to the exact correlation energy density of the He atom. <a class="functional-link" href="../gga-c-gaploc/"><code>gga_c_gaploc</code></a> satisfies all constraints satisfied by <a class="functional-link" href="../gga-c-pbe/"><code>gga_c_pbe</code></a> except the second-order density-gradient expansion that was not considered.</p>
 <p><a class="functional-link" href="../gga-c-gapc/"><code>gga_c_gapc</code></a> competes with the standard <a class="functional-link" href="../gga-c-pbe/"><code>gga_c_pbe</code></a> and <a class="functional-link" href="../gga-c-lyp/"><code>gga_c_lyp</code></a> for correlation energies of atoms and ions, but is clearly more accurate for the jellium surface correlation energy. The combination of <a class="functional-link" href="../gga-x-pbe-r/"><code>gga_x_pbe_r</code></a> and <a class="functional-link" href="../gga-c-gapc/"><code>gga_c_gapc</code></a> leads to good results for various molecular properties. <a class="functional-link" href="../gga-c-gaploc/"><code>gga_c_gaploc</code></a> is more accurate than <a class="functional-link" href="../gga-c-gapc/"><code>gga_c_gapc</code></a> for correlation energies of atoms and ions, but is less accurate for the jellium surface correlation energy.</p>
         </div>
         <p class="source-note">Adapted from <a href="https://arxiv.org/abs/2602.17333">Tran, Lehtola, Pittalis, and Marques, <em>Semi-Local Exchange-Correlation Approximations in Density Functional Theory</em>, arXiv:2602.17333</a>.</p>
@@ -110,47 +75,49 @@ G^{\text{GAPc}}(r_s,\zeta,t) = &amp; \phi_{2/3}^3\frac{\beta(r_s)t^2}{c_1(r_s)-c
           <h2>Referenced Review Equations</h2>
           <div class="review-equations">
           <article class="review-equation-card" id="review-eq-eq-ldavBHsi">
-            <code>eq:ldavBHsi</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (275)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=38" title="Open page 38 of the review PDF">p. 38 ↗</a></p>
             <div class="equation" data-tex="e_\text{c}^\text{vBH}(r_s,\zeta) =
   e_\text{c}^\text{P}(r_s) + \left[e_\text{c}^\text{F}(r_s) - e_\text{c}^\text{P}(r_s)\right] f_\text{c}(\zeta)"></div>
           </article>
 
           <article class="review-equation-card" id="review-eq-eq-call-gap">
-            <code>eq:call-gap</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (725)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=133" title="Open page 133 of the review PDF">p. 133 ↗</a></p>
             <div class="equation" data-tex="c_1(r_s) = C\frac{2\left(e_\text{c}&#39;\right)^2-e_\text{c}^\text{PW-LDA}(\zeta=0)e_\text{c}&#39;&#39;}
 {2\left\{Ce_\text{c}&#39;-\left[e_\text{c}^\text{PW-LDA}(\zeta=0)\right]^2\right\}}"></div>
           </article>
 
           <article class="review-equation-card" id="review-eq-eq-vpbe-beta">
-            <code>eq:vpbe-beta</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (504)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=87" title="Open page 87 of the review PDF">p. 87 ↗</a></p>
             <div class="equation" data-tex="\beta(r_s) = \beta_0\frac{1 + a r_s}{1 + b r_s}"></div>
           </article>
 
           <article class="review-equation-card" id="review-eq-eq-H-gapc">
-            <code>eq:H-gapc</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (523)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=90" title="Open page 90 of the review PDF">p. 90 ↗</a></p>
             <div class="equation" data-tex="H(r_s,t) = \frac{a+Ar_s\ln(r_s)\beta^{-1}(r_s)t^2}{a+t^2}"></div>
           </article>
 
           <article class="review-equation-card" id="review-eq-eq-PW92">
-            <code>eq:PW92</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (288)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=41" title="Open page 41 of the review PDF">p. 41 ↗</a></p>
             <div class="equation" data-tex="\begin{aligned}
-\times\ln\left[1+\frac{1}{2A\left(\beta_1r_s^{1/2}+\beta_2r_s+\beta_3r_s^{3/2}+\beta_4r_s^{p+1}\right)}\right]
+G(r_s) = -2A(1+\alpha_1 r_s)  \\
+
+   \times\ln\left[1+\frac{1}{2A\left(\beta_1r_s^{1/2}+\beta_2r_s+\beta_3r_s^{3/2}+\beta_4r_s^{p+1}\right)}\right]
 \end{aligned}"></div>
           </article>
 
           <article class="review-equation-card" id="review-eq-eq-s">
-            <code>eq:s</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (46)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=12" title="Open page 12 of the review PDF">p. 12 ↗</a></p>
             <div class="equation" data-tex="s = \frac{|\nabla n|}{2 n k_\text{F}} = 2^{1/3}C_{s}x =
   \left(\frac{3}{2\pi}\right)^{1/3}\left\vert\nabla r_s\right\vert"></div>
           </article>
 
           <article class="review-equation-card" id="review-eq-eq-g-gaploc">
-            <code>eq:g-gaploc</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (524)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=90" title="Open page 90 of the review PDF">p. 90 ↗</a></p>
             <div class="equation" data-tex="G^{\text{GAPloc}}(r_s, s, t) = f_{\text{G}}\frac{s^{\alpha(t)+2}}{r_s^2}\frac{b+s^2}{1+s^{\alpha(t)+2}}"></div>
           </article>
 
           <article class="review-equation-card" id="review-eq-eq-alpha-gap">
-            <code>eq:alpha-gap</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (525)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=91" title="Open page 91 of the review PDF">p. 91 ↗</a></p>
             <div class="equation" data-tex="\alpha(t) = \frac{\alpha_1+t^3}{1+t^3}"></div>
           </article>
 

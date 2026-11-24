@@ -3,14 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>gga_c_pbeloc</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20261016-excerpts-v1">
-    <script defer src="../../assets/search.js?v=20261016-excerpts-v1"></script>
+    <title>gga_c_pbeloc — Semilocal dynamical correlation · Libxc Wiki</title>
+    <meta name="description" content="gga_c_pbeloc: Semilocal dynamical correlation. GGA correlation functional in Libxc, with references and BibTeX. Includes an excerpt from the Tran, Lehtola, Pittalis and Marques review.">
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261117-refs-v1">
+    <script defer src="../../assets/search.js?v=20261117-refs-v1"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
     <script defer src="../../vendor/katex/contrib/mhchem.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20261016-excerpts-v1"></script>
+    <script defer src="../../assets/detail.js?v=20261117-refs-v1"></script>
 
   </head>
   <body class="functional-page">
@@ -32,21 +33,18 @@
 
         <p class="brand">GGA</p>
         <h1><code class="title-code">gga_c_pbeloc</code></h1>
+        <p class="functional-name">Semilocal dynamical correlation</p>
         <div class="detail-tags"><span class="tag">gga</span>
 <span class="tag">correlation</span></div>
       </header>
 
       <div class="detail-grid">
+
       <section class="callout">
         <p class="callout-label">Review excerpt</p>
         <div class="review-html">
-<p>It is known that a GGA correlation functional should tend to zero in the rapidly varying density limit ($t\to\infty$). Constantin et al.<sup class="citation-marker"><a href="#review-ref-Constantin2012-035130">634</a></sup> found that the correlation energy density of <a class="functional-link" href="../gga-c-pbe/"><code>gga_c_pbe</code></a>, which depends on the parameter $\beta$ (in <a class="review-eq-link" href="#review-eq-eq-ggac-pw91h0">
-  <code>eq:ggac:pw91h0</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="H_0(\phi_{2/3}, t, A) = \gamma \phi_{2/3}^3 \ln\left[1 + \frac{\beta}{\gamma}
-  \frac{t^2 + A t^4}{1 + A (t^2 + A t^4)}\right]"></span>
-  </span>
-</a>), exhibits a too slowly decaying Taylor expansion at $t = \infty$. To correct this behavior, thus making the correlation energy density more <em>localized</em>, they proposed to replace the constant $\beta=\beta^{\text{MB}}$ of <a class="functional-link" href="../gga-c-pbe/"><code>gga_c_pbe</code></a> by the function</p>
+<p>It is known that a GGA correlation functional should tend to zero in the rapidly varying density limit ($t\to\infty$). Constantin et al.<sup class="citation-marker"><a href="#review-ref-Constantin2012-035130">634</a></sup> found that the correlation energy density of <a class="functional-link" href="../gga-c-pbe/"><code>gga_c_pbe</code></a>, which depends on the parameter $\beta$ (in <a class="review-eq-link" href="#review-eq-eq-ggac-pw91h0"><span class="eq-number">Eq. (469)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="H_0(\phi_{2/3}, t, A) = \gamma \phi_{2/3}^3 \ln\left[1 + \frac{\beta}{\gamma}
+  \frac{t^2 + A t^4}{1 + A (t^2 + A t^4)}\right]"></span></span></a>), exhibits a too slowly decaying Taylor expansion at $t = \infty$. To correct this behavior, thus making the correlation energy density more <em>localized</em>, they proposed to replace the constant $\beta=\beta^{\text{MB}}$ of <a class="functional-link" href="../gga-c-pbe/"><code>gga_c_pbe</code></a> by the function</p>
 <div class="equation" data-tex="\beta(r_s, t) = \beta_0 + a t^2 f(r_s)"></div>
 <p>where $\beta_0$ and $a$ are constants. The function $f(r_s)$ determines the correction in the high- and low-density limits, and is chosen to fulfill two constraints:</p>
 <ol class="review-list" type="i">
@@ -65,7 +63,7 @@
           <h2>Referenced Review Equations</h2>
           <div class="review-equations">
           <article class="review-equation-card" id="review-eq-eq-ggac-pw91h0">
-            <code>eq:ggac:pw91h0</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (469)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=80" title="Open page 80 of the review PDF">p. 80 ↗</a></p>
             <div class="equation" data-tex="H_0(\phi_{2/3}, t, A) = \gamma \phi_{2/3}^3 \ln\left[1 + \frac{\beta}{\gamma}
   \frac{t^2 + A t^4}{1 + A (t^2 + A t^4)}\right]"></div>
           </article>

@@ -3,14 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>gga_c_tau_hcth</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20261016-excerpts-v1">
-    <script defer src="../../assets/search.js?v=20261016-excerpts-v1"></script>
+    <title>gga_c_tau_hcth — correlation part of tau-hcth · Libxc Wiki</title>
+    <meta name="description" content="gga_c_tau_hcth: correlation part of tau-hcth. GGA correlation functional in Libxc, with references and BibTeX. Includes an excerpt from the Tran, Lehtola, Pittalis and Marques review.">
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261117-refs-v1">
+    <script defer src="../../assets/search.js?v=20261117-refs-v1"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
     <script defer src="../../vendor/katex/contrib/mhchem.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20261016-excerpts-v1"></script>
+    <script defer src="../../assets/detail.js?v=20261117-refs-v1"></script>
 
   </head>
   <body class="functional-page">
@@ -32,48 +33,30 @@
 
         <p class="brand">GGA</p>
         <h1><code class="title-code">gga_c_tau_hcth</code></h1>
+        <p class="functional-name">correlation part of tau-hcth</p>
         <div class="detail-tags"><span class="tag">gga</span>
 <span class="tag">correlation</span></div>
       </header>
 
       <div class="detail-grid">
+
       <section class="callout">
         <p class="callout-label">Review excerpt</p>
         <div class="review-html">
-<p>This functional has the same form as the B97 correlation functional, given by <a class="review-eq-link" href="#review-eq-eq-stollfunc">
-  <code>eq:stollfunc</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="\begin{aligned}
+<p>This functional has the same form as the B97 correlation functional, given by <a class="review-eq-link" href="#review-eq-eq-stollfunc"><span class="eq-number">Eq. (250)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="\begin{aligned}
 e_\c[n_\uparrow,n_\downarrow] = &amp; \sum_{\sigma} 
    e^\text{LDA}_{\c\,\sigma\sigma}(n_\sigma)F_{\c\,\sigma\sigma}[n_\sigma,0] 
     \\
 
   &amp; + e^\text{LDA}_{\c\,\uparrow\downarrow}(n_\uparrow,n_\downarrow)
   F_{\c\,\uparrow\downarrow}[n_\uparrow,n_\downarrow]
-\end{aligned}"></span>
-  </span>
-</a> with <a class="functional-link" href="../lda-c-pw/"><code>lda_c_pw</code></a> for the reference LDA component and <a class="review-eq-link" href="#review-eq-eq-b97f">
-  <code>eq:b97f</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="\begin{aligned}
+\end{aligned}"></span></span></a> with <a class="functional-link" href="../lda-c-pw/"><code>lda_c_pw</code></a> for the reference LDA component and <a class="review-eq-link" href="#review-eq-eq-b97f"><span class="eq-number">Eq. (253)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="\begin{aligned}
 F_{\text{c}\,\sigma\sigma}^{\text{B97}} &amp; = g^\text{B97}_{\text{c}\,\sigma\sigma}(x_\sigma)
   \\
   F_{\text{c}\,\uparrow\downarrow}^{\text{B97}} &amp; = g^\text{B97}_{\text{c}\,\uparrow\downarrow}(x_\text{avg})
-\end{aligned}"></span>
-  </span>
-</a>; <a class="review-eq-link" href="#review-eq-eq-b97g">
-  <code>eq:b97g</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="g^\text{B97}_{\text{c}\,\sigma\sigma&#39;}(x) =
-  \sum_{i=0}^m c_{i\,\sigma\sigma&#39;} \left[\tilde{u}(x)\right]^i"></span>
-  </span>
-</a> as described for <a class="functional-link" href="../gga-c-hcth-a/"><code>gga_c_hcth_a</code></a>. The truncation $m=3$ in <a class="review-eq-link" href="#review-eq-eq-b97g">
-  <code>eq:b97g</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="g^\text{B97}_{\text{c}\,\sigma\sigma&#39;}(x) =
-  \sum_{i=0}^m c_{i\,\sigma\sigma&#39;} \left[\tilde{u}(x)\right]^i"></span>
-  </span>
-</a> was used, and the $2\times4=8$ parameters were optimized together with the 8 parameters of the exchange counterpart <a class="functional-link" href="../mgga-x-tau-hcth/"><code>mgga_x_tau_hcth</code></a>.</p>
+\end{aligned}"></span></span></a>; <a class="review-eq-link" href="#review-eq-eq-b97g"><span class="eq-number">Eq. (254)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="g^\text{B97}_{\text{c}\,\sigma\sigma&#39;}(x) =
+  \sum_{i=0}^m c_{i\,\sigma\sigma&#39;} \left[\tilde{u}(x)\right]^i"></span></span></a> as described for <a class="functional-link" href="../gga-c-hcth-a/"><code>gga_c_hcth_a</code></a>. The truncation $m=3$ in <a class="review-eq-link" href="#review-eq-eq-b97g"><span class="eq-number">Eq. (254)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="g^\text{B97}_{\text{c}\,\sigma\sigma&#39;}(x) =
+  \sum_{i=0}^m c_{i\,\sigma\sigma&#39;} \left[\tilde{u}(x)\right]^i"></span></span></a> was used, and the $2\times4=8$ parameters were optimized together with the 8 parameters of the exchange counterpart <a class="functional-link" href="../mgga-x-tau-hcth/"><code>mgga_x_tau_hcth</code></a>.</p>
         </div>
         <p class="source-note">Adapted from <a href="https://arxiv.org/abs/2602.17333">Tran, Lehtola, Pittalis, and Marques, <em>Semi-Local Exchange-Correlation Approximations in Density Functional Theory</em>, arXiv:2602.17333</a>.</p>
       </section>
@@ -82,7 +65,7 @@ F_{\text{c}\,\sigma\sigma}^{\text{B97}} &amp; = g^\text{B97}_{\text{c}\,\sigma\s
           <h2>Referenced Review Equations</h2>
           <div class="review-equations">
           <article class="review-equation-card" id="review-eq-eq-stollfunc">
-            <code>eq:stollfunc</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (250)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=34" title="Open page 34 of the review PDF">p. 34 ↗</a></p>
             <div class="equation" data-tex="\begin{aligned}
 e_\c[n_\uparrow,n_\downarrow] = &amp; \sum_{\sigma} 
    e^\text{LDA}_{\c\,\sigma\sigma}(n_\sigma)F_{\c\,\sigma\sigma}[n_\sigma,0] 
@@ -94,7 +77,7 @@ e_\c[n_\uparrow,n_\downarrow] = &amp; \sum_{\sigma}
           </article>
 
           <article class="review-equation-card" id="review-eq-eq-b97f">
-            <code>eq:b97f</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (253)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=34" title="Open page 34 of the review PDF">p. 34 ↗</a></p>
             <div class="equation" data-tex="\begin{aligned}
 F_{\text{c}\,\sigma\sigma}^{\text{B97}} &amp; = g^\text{B97}_{\text{c}\,\sigma\sigma}(x_\sigma)
   \\
@@ -103,7 +86,7 @@ F_{\text{c}\,\sigma\sigma}^{\text{B97}} &amp; = g^\text{B97}_{\text{c}\,\sigma\s
           </article>
 
           <article class="review-equation-card" id="review-eq-eq-b97g">
-            <code>eq:b97g</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (254)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=34" title="Open page 34 of the review PDF">p. 34 ↗</a></p>
             <div class="equation" data-tex="g^\text{B97}_{\text{c}\,\sigma\sigma&#39;}(x) =
   \sum_{i=0}^m c_{i\,\sigma\sigma&#39;} \left[\tilde{u}(x)\right]^i"></div>
           </article>

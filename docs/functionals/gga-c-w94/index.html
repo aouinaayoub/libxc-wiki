@@ -3,14 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>gga_c_w94</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20261016-excerpts-v1">
-    <script defer src="../../assets/search.js?v=20261016-excerpts-v1"></script>
+    <title>gga_c_w94 — Wilson 94 (Eq. 25) · Libxc Wiki</title>
+    <meta name="description" content="gga_c_w94: Wilson 94 (Eq. 25). GGA correlation functional in Libxc, with references and BibTeX. Includes an excerpt from the Tran, Lehtola, Pittalis and Marques review.">
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261117-refs-v1">
+    <script defer src="../../assets/search.js?v=20261117-refs-v1"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
     <script defer src="../../vendor/katex/contrib/mhchem.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20261016-excerpts-v1"></script>
+    <script defer src="../../assets/detail.js?v=20261117-refs-v1"></script>
 
   </head>
   <body class="functional-page">
@@ -32,24 +33,21 @@
 
         <p class="brand">GGA</p>
         <h1><code class="title-code">gga_c_w94</code></h1>
+        <p class="functional-name">Wilson 94 (Eq. 25)</p>
         <div class="detail-tags"><span class="tag">gga</span>
 <span class="tag">correlation</span></div>
       </header>
 
       <div class="detail-grid">
+
       <section class="callout">
         <p class="callout-label">Review excerpt</p>
         <div class="review-html">
 <p>Coordinate-scaling relations are often used in functional development, and Wilson<sup class="citation-marker"><a href="#review-ref-Wilson1994-337">610</a></sup> wondered if their obedience is actually useful for accuracy. To answer this question, he tested various existing and newly proposed functionals that obey coordinate-scaling relations to various degrees. Several new functional forms were constructed using <a class="functional-link" href="../lda-c-wigner/"><code>lda_c_wigner</code></a> as starting point. It turned out that no functional of the considered forms could obey all constraints. The form that fulfills all conditions except one due to Levy and Perdew<sup class="citation-marker"><a href="#review-ref-Levy1993-11638">192</a>,<a href="#review-ref-Levy1997-13321">193</a></sup> (that was only approximately obeyed) is</p>
 <div class="equation" data-tex="e_\text{c}^{\text{W94}} = \frac{a\sqrt{1 - \zeta^{5/3}}}
   {b + c x^{51/16} + d x^2 r_s + r_s}"></div>
-<p>where the coefficients $a=-1$, $b=11.8$, $c=0.150670$, and $d=0.01102\left(4\pi/3\right)^{1/3}$ were obtained by otherwise the same parametrization procedure as for <a class="functional-link" href="../gga-c-wl/"><code>gga_c_wl</code></a>, with the exception that the parametrization was constrained such that the correlation energy is always negative. We note that $\zeta^{5/3}$ in <a class="review-eq-link" href="#review-eq-eq-w94">
-  <code>eq:w94</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="e_\text{c}^{\text{W94}} = \frac{a\sqrt{1 - \zeta^{5/3}}}
-  {b + c x^{51/16} + d x^2 r_s + r_s}"></span>
-  </span>
-</a> gives a complex value when $\zeta&lt;0$, which can be overcome by taking the absolute value of $\zeta$, at the price of making it non-differentiable at $\zeta=0$.</p>
+<p>where the coefficients $a=-1$, $b=11.8$, $c=0.150670$, and $d=0.01102\left(4\pi/3\right)^{1/3}$ were obtained by otherwise the same parametrization procedure as for <a class="functional-link" href="../gga-c-wl/"><code>gga_c_wl</code></a>, with the exception that the parametrization was constrained such that the correlation energy is always negative. We note that $\zeta^{5/3}$ in <a class="review-eq-link" href="#review-eq-eq-w94"><span class="eq-number">Eq. (474)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="e_\text{c}^{\text{W94}} = \frac{a\sqrt{1 - \zeta^{5/3}}}
+  {b + c x^{51/16} + d x^2 r_s + r_s}"></span></span></a> gives a complex value when $\zeta&lt;0$, which can be overcome by taking the absolute value of $\zeta$, at the price of making it non-differentiable at $\zeta=0$.</p>
 <p>The results suggest that adhering to the constraints is beneficial for accuracy.</p>
         </div>
         <p class="source-note">Adapted from <a href="https://arxiv.org/abs/2602.17333">Tran, Lehtola, Pittalis, and Marques, <em>Semi-Local Exchange-Correlation Approximations in Density Functional Theory</em>, arXiv:2602.17333</a>.</p>
@@ -59,7 +57,7 @@
           <h2>Referenced Review Equations</h2>
           <div class="review-equations">
           <article class="review-equation-card" id="review-eq-eq-w94">
-            <code>eq:w94</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (474)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=81" title="Open page 81 of the review PDF">p. 81 ↗</a></p>
             <div class="equation" data-tex="e_\text{c}^{\text{W94}} = \frac{a\sqrt{1 - \zeta^{5/3}}}
   {b + c x^{51/16} + d x^2 r_s + r_s}"></div>
           </article>

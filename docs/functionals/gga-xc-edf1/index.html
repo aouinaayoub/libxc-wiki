@@ -3,14 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>gga_xc_edf1</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20261016-excerpts-v1">
-    <script defer src="../../assets/search.js?v=20261016-excerpts-v1"></script>
+    <title>gga_xc_edf1 — EDF1 · Libxc Wiki</title>
+    <meta name="description" content="gga_xc_edf1: EDF1. GGA exchange-correlation functional in Libxc, with references and BibTeX. Includes an excerpt from the Tran, Lehtola, Pittalis and Marques review.">
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261117-refs-v1">
+    <script defer src="../../assets/search.js?v=20261117-refs-v1"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
     <script defer src="../../vendor/katex/contrib/mhchem.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20261016-excerpts-v1"></script>
+    <script defer src="../../assets/detail.js?v=20261117-refs-v1"></script>
 
   </head>
   <body class="functional-page">
@@ -32,12 +33,14 @@
 
         <p class="brand">GGA</p>
         <h1><code class="title-code">gga_xc_edf1</code></h1>
+        <p class="functional-name">EDF1</p>
         <div class="detail-tags"><span class="tag">gga</span>
 <span class="tag">exchange</span>
 <span class="tag">correlation</span></div>
       </header>
 
       <div class="detail-grid">
+
       <section class="callout">
         <p class="callout-label">Review excerpt</p>
         <div class="review-html">
@@ -55,16 +58,8 @@ e_\text{xc}^{\text{EDF1}} = &amp; a_1 e_\text{x}^\text{LDA} + a_2
    &amp; + e_\text{c}^{\text{LYP}}(a,
    b, \bar{c}, \bar{d})
 \end{aligned}"></div>
-<p>The coefficients $a_1=1.030952 - a_2 - a_3$, $a_2=10.4017$, and $a_3=-8.44793$, and the parameters in <a class="review-eq-link" href="#review-eq-eq-fxb88">
-  <code>eq:fxb88</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="F_\text{x}^{\text{B88}} = 1+\frac{\beta}{C_\text{x}}
-  \frac{x_\sigma^2}{1 + \gamma\beta x_\sigma\arcsinh(x_\sigma)}"></span>
-  </span>
-</a> ($\beta_1=0.0035$ and $\beta_2=0.0042$) and in <a class="review-eq-link" href="#review-eq-eq-ec-lyp">
-  <code>eq:ec-lyp</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="\begin{aligned}
+<p>The coefficients $a_1=1.030952 - a_2 - a_3$, $a_2=10.4017$, and $a_3=-8.44793$, and the parameters in <a class="review-eq-link" href="#review-eq-eq-fxb88"><span class="eq-number">Eq. (372)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="F_\text{x}^{\text{B88}} = 1+\frac{\beta}{C_\text{x}}
+  \frac{x_\sigma^2}{1 + \gamma\beta x_\sigma\arcsinh(x_\sigma)}"></span></span></a> ($\beta_1=0.0035$ and $\beta_2=0.0042$) and in <a class="review-eq-link" href="#review-eq-eq-ec-lyp"><span class="eq-number">Eq. (465)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="\begin{aligned}
 e_\text{c}^{\text{LYP}} = &amp; a\Bigg\{-\frac{1-\zeta^2}{1+\bar{d}r_s}  \\
 
  &amp; -\omega x^2\left[\frac{1}{72}\left(1-\zeta^2\right)(47 - 7\delta)-\frac{2}{3}\right]  \\
@@ -86,17 +81,10 @@ e_\text{c}^{\text{LYP}} = &amp; a\Bigg\{-\frac{1-\zeta^2}{1+\bar{d}r_s}  \\
   &amp; \left. -\frac{1}{4}x_\uparrow^2(1-\zeta)^2(1+\zeta)^{8/3}
   \right]
   \Bigg\}
-\end{aligned}"></span>
-  </span>
-</a>; <a class="review-eq-link" href="#review-eq-eq-lyp-w-omega">
-  <code>eq:lyp-w-omega</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="\begin{aligned}
+\end{aligned}"></span></span></a>; <a class="review-eq-link" href="#review-eq-eq-lyp-w-omega"><span class="eq-number">Eq. (466)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="\begin{aligned}
 \omega &amp; = \frac{b\E^{-\bar{c}r_s}}{1 + \bar{d}r_s} \\
     \delta &amp; = \bar{c}r_s + \frac{\bar{d}r_s}{1 + \bar{d}r_s}
-\end{aligned}"></span>
-  </span>
-</a> ($a=0.055$, $b=0.158$, $\bar{c}=0.25(4\pi/3)^{1/3}$, and $\bar{d}=0.3505(4\pi/3)^{1/3}$) were adjusted to a series of experimental data similar to the original G2 set.<sup class="citation-marker"><a href="#review-ref-Curtiss1991-7221">430</a></sup> The functional <a class="functional-link" href="../gga-xc-edf1/"><code>gga_xc_edf1</code></a> was, at that time, claimed as the best functional for the study of molecules with the small 6-31+G$^*$ basis set.</p>
+\end{aligned}"></span></span></a> ($a=0.055$, $b=0.158$, $\bar{c}=0.25(4\pi/3)^{1/3}$, and $\bar{d}=0.3505(4\pi/3)^{1/3}$) were adjusted to a series of experimental data similar to the original G2 set.<sup class="citation-marker"><a href="#review-ref-Curtiss1991-7221">430</a></sup> The functional <a class="functional-link" href="../gga-xc-edf1/"><code>gga_xc_edf1</code></a> was, at that time, claimed as the best functional for the study of molecules with the small 6-31+G$^*$ basis set.</p>
         </div>
         <p class="source-note">Adapted from <a href="https://arxiv.org/abs/2602.17333">Tran, Lehtola, Pittalis, and Marques, <em>Semi-Local Exchange-Correlation Approximations in Density Functional Theory</em>, arXiv:2602.17333</a>.</p>
       </section>
@@ -105,13 +93,13 @@ e_\text{c}^{\text{LYP}} = &amp; a\Bigg\{-\frac{1-\zeta^2}{1+\bar{d}r_s}  \\
           <h2>Referenced Review Equations</h2>
           <div class="review-equations">
           <article class="review-equation-card" id="review-eq-eq-fxb88">
-            <code>eq:fxb88</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (372)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=55" title="Open page 55 of the review PDF">p. 55 ↗</a></p>
             <div class="equation" data-tex="F_\text{x}^{\text{B88}} = 1+\frac{\beta}{C_\text{x}}
   \frac{x_\sigma^2}{1 + \gamma\beta x_\sigma\arcsinh(x_\sigma)}"></div>
           </article>
 
           <article class="review-equation-card" id="review-eq-eq-ec-lyp">
-            <code>eq:ec-lyp</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (465)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=79" title="Open page 79 of the review PDF">p. 79 ↗</a></p>
             <div class="equation" data-tex="\begin{aligned}
 e_\text{c}^{\text{LYP}} = &amp; a\Bigg\{-\frac{1-\zeta^2}{1+\bar{d}r_s}  \\
 
@@ -138,7 +126,7 @@ e_\text{c}^{\text{LYP}} = &amp; a\Bigg\{-\frac{1-\zeta^2}{1+\bar{d}r_s}  \\
           </article>
 
           <article class="review-equation-card" id="review-eq-eq-lyp-w-omega">
-            <code>eq:lyp-w-omega</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (466)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=79" title="Open page 79 of the review PDF">p. 79 ↗</a></p>
             <div class="equation" data-tex="\begin{aligned}
 \omega &amp; = \frac{b\E^{-\bar{c}r_s}}{1 + \bar{d}r_s} \\
     \delta &amp; = \bar{c}r_s + \frac{\bar{d}r_s}{1 + \bar{d}r_s}

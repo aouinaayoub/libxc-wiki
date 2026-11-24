@@ -4,8 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Libxc Wiki</title>
-    <link rel="stylesheet" href="assets/styles.css?v=20261016-excerpts-v1">
-    <script defer src="assets/search.js?v=20261016-excerpts-v1"></script>
+    <meta name="description" content="Browse and search the exchange-correlation and kinetic-energy functionals in Libxc, with review excerpts, references and BibTeX.">
+    <link rel="stylesheet" href="assets/styles.css?v=20261117-refs-v1">
+    <script defer src="assets/search.js?v=20261117-refs-v1"></script>
 
   </head>
   <body class="catalog">
@@ -28,13 +29,18 @@
           <span class="search-shortcut" aria-hidden="true">Ctrl K</span>
           <div id="search-suggestions" class="search-suggestions" role="listbox" hidden></div>
         </div>
-        <div class="filter-groups"><div class="filter-group" role="group" aria-label="Family"><span class="filter-label">Family</span><div class="tag-bar"><button class="tag filter-tag" type="button" data-filter="lda">LDA (72)</button>
+        <div class="filter-groups">
+          <div class="filter-group" role="group" aria-label="Functional family"><span class="filter-label">Family</span><div class="tag-bar"><button class="tag filter-tag" type="button" data-filter="lda">LDA (73)</button>
 <button class="tag filter-tag" type="button" data-filter="gga">GGA (258)</button>
 <button class="tag filter-tag" type="button" data-filter="meta-gga">meta-GGA (181)</button>
-<button class="tag filter-tag" type="button" data-filter="hybrid">hybrid (164)</button></div></div><div class="filter-group" role="group" aria-label="Kind"><span class="filter-label">Kind</span><div class="tag-bar"><button class="tag filter-tag" type="button" data-filter="exchange">exchange (444)</button>
-<button class="tag filter-tag" type="button" data-filter="correlation">correlation (352)</button>
-<button class="tag filter-tag" type="button" data-filter="kinetic">kinetic (68)</button></div></div><div class="filter-group" role="group" aria-label="Dimension"><span class="filter-label">Dimension</span><div class="tag-bar"><button class="tag filter-tag" type="button" data-filter="dim1">1D (7)</button>
-<button class="tag filter-tag" type="button" data-filter="dim2">2D (10)</button></div></div><button id="clear-tags" class="clear-tags" type="button" hidden>Clear filters</button></div>
+<button class="tag filter-tag" type="button" data-filter="hybrid">hybrid (167)</button></div></div>
+          <div class="filter-group" role="group" aria-label="Functional kind"><span class="filter-label">Kind</span><div class="tag-bar"><button class="tag filter-tag" type="button" data-filter="exchange">exchange (448)</button>
+<button class="tag filter-tag" type="button" data-filter="correlation">correlation (355)</button>
+<button class="tag filter-tag" type="button" data-filter="kinetic">kinetic (68)</button></div></div>
+          <div class="filter-group" role="group" aria-label="Special dimensions"><span class="filter-label">Dimension</span><div class="tag-bar"><button class="tag filter-tag" type="button" data-filter="dim1">1D (7)</button>
+<button class="tag filter-tag" type="button" data-filter="dim2">2D (10)</button></div></div>
+          <button id="clear-tags" class="clear-tags" type="button" hidden>Clear filters</button>
+        </div>
         <div class="results-toolbar"><div id="result-count" class="result-count" role="status" aria-live="polite"></div><span>Choose a family to browse</span></div>
       </section>
 
@@ -43,13 +49,21 @@
           <header class="rung-heading">
             <button class="rung-toggle" type="button" aria-expanded="false" aria-controls="family-lda">
               <span class="rung-chevron" aria-hidden="true">›</span>
-              <span class="family-name">LDA</span><span class="family-description">Local density</span>
+              <span class="family-name">LDA</span>
+              <span class="family-description">Local density</span>
             </button>
-            <span class="rung-count" data-total="72">72</span>
+            <span class="rung-count" data-total="73">73</span>
           </header>
           <div class="rung-rows" id="family-lda">
-      <article class="row-card" role="link" tabindex="0" data-href="functionals/lda-c-1d-css/" data-identifier="lda_c_1d_css" data-authors="Casula et al." data-tags="lda correlation dim1" data-search="lda_c_1d_css correlation lda correlation dim1 casula et al. m. casula, s. sorella, and g. senatore.,  phys. rev. b 74, 245427 (2006)">
-        <code class="identifier">lda_c_1d_css</code>
+      <article class="row-card" role="link" tabindex="0" data-href="functionals/hyb-lda-x-erf/" data-identifier="hyb_lda_x_erf" data-authors="Gill et al., Toulouse et al., and Tawada et al." data-tags="lda exchange" data-search="hyb_lda_x_erf exchange lda exchange gill et al., toulouse et al., and tawada et al. p. m. w. gill, r. d. adamson, and j. a. pople.,  mol. phys. 88, 1005-1009 (1996) j. toulouse, a. savin, and h.-j. flad.,  int. j. quantum chem. 100, 1047–1056 (2004) y. tawada, t. tsuneda, s. yanagisawa, t. yanai, and k. hirao.,  j. chem. phys. 120, 8425-8433 (2004)">
+        <code class="identifier">hyb_lda_x_erf</code>
+        <div class="row-tags"><button class="tag filter-tag" type="button" data-filter="lda">lda</button>
+<button class="tag filter-tag" type="button" data-filter="exchange">exchange</button></div>
+        <div class="publication-authors">Gill et al., Toulouse et al., and Tawada et al.</div>
+      </article>
+
+      <article class="row-card" role="link" tabindex="0" data-href="functionals/lda-c-1d-csc/" data-identifier="lda_c_1d_csc" data-authors="Casula et al." data-tags="lda correlation dim1" data-search="lda_c_1d_csc correlation lda correlation dim1 casula et al. m. casula, s. sorella, and g. senatore.,  phys. rev. b 74, 245427 (2006)">
+        <code class="identifier">lda_c_1d_csc</code>
         <div class="row-tags"><button class="tag filter-tag" type="button" data-filter="lda">lda</button>
 <button class="tag filter-tag" type="button" data-filter="correlation">correlation</button>
 <button class="tag filter-tag" type="button" data-filter="dim1">dim1</button></div>
@@ -580,7 +594,8 @@
           <header class="rung-heading">
             <button class="rung-toggle" type="button" aria-expanded="false" aria-controls="family-gga">
               <span class="rung-chevron" aria-hidden="true">›</span>
-              <span class="family-name">GGA</span><span class="family-description">Density gradients</span>
+              <span class="family-name">GGA</span>
+              <span class="family-description">Density gradients</span>
             </button>
             <span class="rung-count" data-total="258">258</span>
           </header>
@@ -2437,7 +2452,8 @@
           <header class="rung-heading">
             <button class="rung-toggle" type="button" aria-expanded="false" aria-controls="family-meta-gga">
               <span class="rung-chevron" aria-hidden="true">›</span>
-              <span class="family-name">meta-GGA</span><span class="family-description">Beyond density gradients</span>
+              <span class="family-name">meta-GGA</span>
+              <span class="family-description">Beyond density gradients</span>
             </button>
             <span class="rung-count" data-total="181">181</span>
           </header>
@@ -3727,9 +3743,10 @@
           <header class="rung-heading">
             <button class="rung-toggle" type="button" aria-expanded="false" aria-controls="family-hybrid">
               <span class="rung-chevron" aria-hidden="true">›</span>
-              <span class="family-name">hybrid</span><span class="family-description">With exact exchange</span>
+              <span class="family-name">hybrid</span>
+              <span class="family-description">With exact exchange</span>
             </button>
-            <span class="rung-count" data-total="164">164</span>
+            <span class="rung-count" data-total="167">167</span>
           </header>
           <div class="rung-rows" id="family-hybrid">
       <article class="row-card" role="link" tabindex="0" data-href="functionals/hyb-gga-x-cam-s12g/" data-identifier="hyb_gga_x_cam_s12g" data-authors="Swart et al." data-tags="hybrid exchange" data-search="hyb_gga_x_cam_s12g exchange hybrid exchange swart et al. m. swart.,  chem. phys. lett. 580, 166 - 171 (2013)">
@@ -4630,6 +4647,30 @@
         <div class="publication-authors">Xu et al.</div>
       </article>
 
+      <article class="row-card" role="link" tabindex="0" data-href="functionals/hyb-lda-xc-bn05/" data-identifier="hyb_lda_xc_bn05" data-authors="Baer et al." data-tags="hybrid exchange correlation" data-search="hyb_lda_xc_bn05 exchange_correlation hybrid exchange correlation baer et al. r. baer and d. neuhauser.,  phys. rev. lett. 94, 043002 (2005)">
+        <code class="identifier">hyb_lda_xc_bn05</code>
+        <div class="row-tags"><button class="tag filter-tag" type="button" data-filter="hybrid">hybrid</button>
+<button class="tag filter-tag" type="button" data-filter="exchange">exchange</button>
+<button class="tag filter-tag" type="button" data-filter="correlation">correlation</button></div>
+        <div class="publication-authors">Baer et al.</div>
+      </article>
+
+      <article class="row-card" role="link" tabindex="0" data-href="functionals/hyb-lda-xc-cam-lda0/" data-identifier="hyb_lda_xc_cam_lda0" data-authors="Mosquera et al." data-tags="hybrid exchange correlation" data-search="hyb_lda_xc_cam_lda0 exchange_correlation hybrid exchange correlation mosquera et al. m. a. mosquera, c. h. borca, m. a. ratner, and g. c. schatz.,  j. phys. chem. a 120, 1605-1612 (2016)">
+        <code class="identifier">hyb_lda_xc_cam_lda0</code>
+        <div class="row-tags"><button class="tag filter-tag" type="button" data-filter="hybrid">hybrid</button>
+<button class="tag filter-tag" type="button" data-filter="exchange">exchange</button>
+<button class="tag filter-tag" type="button" data-filter="correlation">correlation</button></div>
+        <div class="publication-authors">Mosquera et al.</div>
+      </article>
+
+      <article class="row-card" role="link" tabindex="0" data-href="functionals/hyb-lda-xc-lda0/" data-identifier="hyb_lda_xc_lda0" data-authors="Rinke et al." data-tags="hybrid exchange correlation" data-search="hyb_lda_xc_lda0 exchange_correlation hybrid exchange correlation rinke et al. p. rinke, a. schleife, e. kioupakis, a. janotti, c. rödl, f. bechstedt, m. scheffler, and c. g. van de walle.,  phys. rev. lett. 108, 126404 (2012)">
+        <code class="identifier">hyb_lda_xc_lda0</code>
+        <div class="row-tags"><button class="tag filter-tag" type="button" data-filter="hybrid">hybrid</button>
+<button class="tag filter-tag" type="button" data-filter="exchange">exchange</button>
+<button class="tag filter-tag" type="button" data-filter="correlation">correlation</button></div>
+        <div class="publication-authors">Rinke et al.</div>
+      </article>
+
       <article class="row-card" role="link" tabindex="0" data-href="functionals/hyb-mgga-x-bmk/" data-identifier="hyb_mgga_x_bmk" data-authors="Boese et al." data-tags="hybrid exchange" data-search="hyb_mgga_x_bmk exchange hybrid exchange boese et al. a. d. boese and j. m. l. martin.,  j. chem. phys. 121, 3405 (2004)">
         <code class="identifier">hyb_mgga_x_bmk</code>
         <div class="row-tags"><button class="tag filter-tag" type="button" data-filter="hybrid">hybrid</button>
@@ -5020,7 +5061,7 @@
 
       </section>
       <p id="empty-results" class="empty" hidden>No functionals found. Try a shorter search or reset your filters. <button id="reset-search" class="reset-search" type="button">Reset search</button></p>
-      <script defer src="assets/app.js?v=20261016-excerpts-v1"></script>
+      <script defer src="assets/app.js?v=20261117-refs-v1"></script>
 
     </main>
     <div id="command-palette" class="command-palette" aria-hidden="true" hidden>

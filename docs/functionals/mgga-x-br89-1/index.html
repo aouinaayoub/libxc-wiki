@@ -3,14 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>mgga_x_br89_1</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20261016-excerpts-v1">
-    <script defer src="../../assets/search.js?v=20261016-excerpts-v1"></script>
+    <title>mgga_x_br89_1 — Becke-Roussel 89, gamma = 1.0 · Libxc Wiki</title>
+    <meta name="description" content="mgga_x_br89_1: Becke-Roussel 89, gamma = 1.0. Meta-GGA exchange functional in Libxc, with references and BibTeX. Includes an excerpt from the Tran, Lehtola, Pittalis and Marques review.">
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261117-refs-v1">
+    <script defer src="../../assets/search.js?v=20261117-refs-v1"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
     <script defer src="../../vendor/katex/contrib/mhchem.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20261016-excerpts-v1"></script>
+    <script defer src="../../assets/detail.js?v=20261117-refs-v1"></script>
 
   </head>
   <body class="functional-page">
@@ -32,11 +33,13 @@
 
         <p class="brand">META-GGA</p>
         <h1><code class="title-code">mgga_x_br89_1</code></h1>
+        <p class="functional-name">Becke-Roussel 89, gamma = 1.0</p>
         <div class="detail-tags"><span class="tag">meta-gga</span>
 <span class="tag">exchange</span></div>
       </header>
 
       <div class="detail-grid">
+
       <section class="callout">
         <p class="callout-label">Review excerpt</p>
         <div class="review-html">
@@ -46,81 +49,28 @@ h_{\text{x}\sigma}^\text{BR89}(r_{12}) = &amp; -\frac{a_\sigma}{16\pi b_\sigma r
  &amp; \times(a_\sigma|b_\sigma-r_{12}|+1)\E^{-a_\sigma|b_\sigma-r_{12}|}  \\
  &amp; - (a_\sigma|b_\sigma+r_{12}|+1)\E^{-a_\sigma|b_\sigma+r_{12}|}\Big]
 \end{aligned}"></div>
-<p>where $r_{12}=\left\vert\br_2-\br_1\right\vert$ denotes the distance from the reference position (see the review). This form is based on the exchange hole of the hydrogenic atom, and the positive parameters $a_\sigma$ and $b_\sigma$ are determined by requiring $h_{\text{x}\sigma}^\text{BR89}$ to reproduce the second-order Taylor expansion of the exact exchange hole at any reference position in space for any inhomogeneous system. This condition leads to the following equation for $a_\sigma$ and $b_\sigma$:</p>
+<p>where $r_{12}=\left\vert\br_2-\br_1\right\vert$ denotes the distance from the reference position (see <a class="review-section-link" href="https://arxiv.org/pdf/2602.17333#page=17" title="Hole Functions">Sec. 2.5</a> of the review). This form is based on the exchange hole of the hydrogenic atom, and the positive parameters $a_\sigma$ and $b_\sigma$ are determined by requiring $h_{\text{x}\sigma}^\text{BR89}$ to reproduce the second-order Taylor expansion of the exact exchange hole at any reference position in space for any inhomogeneous system. This condition leads to the following equation for $a_\sigma$ and $b_\sigma$:</p>
 <div class="equation" data-tex="\frac{c_\sigma\,\E^{-2c_\sigma/3}}{c_\sigma-2} = \frac{2}{3}\pi^{2/3}\frac{1}{\tilde{C}_{\x\sigma}}"></div>
 <p>where</p>
 <div class="equation" data-tex="\tilde{C}_{\x\sigma} = \frac{1}{6}\left[u_\sigma - 2\gamma\left( 2\tilde{t}_\sigma - \frac{1}{4} x_\sigma^2\right)\right]"></div>
-<p>is the exchange-hole curvature (for $\gamma=1$, $\tilde{C}_{\x\sigma}=C_{\x\sigma}/n_{\sigma}^{5/3}$, where $C_{\x\sigma}$ is <a class="review-eq-link" href="#review-eq-eq-curvature">
-  <code>eq:curvature</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="\begin{aligned}
-&amp;= \frac16  \nabla^2 n_\sigma(\br) - \frac23 D_\sigma(\br)
-\end{aligned}"></span>
-  </span>
-</a>) and $c_\sigma = a_\sigma b_\sigma$. Note that although an unique and positive root exists for $c_\sigma$, there is no closed-form solution, so that <a class="review-eq-link" href="#review-eq-eq-mggaxbr89-nonlinear">
-  <code>eq:mggaxbr89-nonlinear</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="\frac{c_\sigma\,\E^{-2c_\sigma/3}}{c_\sigma-2} = \frac{2}{3}\pi^{2/3}\frac{1}{\tilde{C}_{\x\sigma}}"></span>
-  </span>
-</a> has to be solved numerically (e.g., with the Newton&ndash;Raphson method) at each point of space. Once $c_\sigma$ is calculated, $b_\sigma$ can be obtained with $b_{\sigma}=\left[c_{\sigma}^{3}e^{-c_{\sigma}}/ \left(8\pi n_{\sigma}\right)\right]^{1/3}$, which is used for evaluating the energy (<a class="review-eq-link" href="#review-eq-eq-exbr">
-  <code>eq:exbr</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="e^\text{BR89}_{\text{x}\sigma} = - \frac{1}{2b_\sigma}\left[ 1 - \E^{-c_\sigma} \left(1 +\frac{c_\sigma}{2}\right)\right]"></span>
-  </span>
-</a>). Note that the numerical solution of <a class="review-eq-link" href="#review-eq-eq-mggaxbr89-nonlinear">
-  <code>eq:mggaxbr89-nonlinear</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="\frac{c_\sigma\,\E^{-2c_\sigma/3}}{c_\sigma-2} = \frac{2}{3}\pi^{2/3}\frac{1}{\tilde{C}_{\x\sigma}}"></span>
-  </span>
-</a> can be avoided; see the <a class="functional-link" href="../mgga-x-br89-explicit/"><code>mgga_x_br89_explicit</code></a> and <a class="functional-link" href="../mgga-x-br89-explicit-1/"><code>mgga_x_br89_explicit_1</code></a> functionals discussed later, which offer a robust alternative.</p>
-<p>The expression for the functional is obtained by using <a class="review-eq-link" href="#review-eq-eq-mggaxbr89-eh">
-  <code>eq:mggaxbr89:eh</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="\begin{aligned}
+<p>is the exchange-hole curvature (for $\gamma=1$, $\tilde{C}_{\x\sigma}=C_{\x\sigma}/n_{\sigma}^{5/3}$, where $C_{\x\sigma}$ is <a class="review-eq-link" href="#review-eq-eq-curvature"><span class="eq-number">Eq. (147)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="\begin{aligned}
+C_{\x\sigma}(\br)  &amp;= \left.\frac12 \frac{\partial^2 h_{\x\sigma}(\br,u)}{\partial u^2}\right\vert_{u = 0}  \\
+
+ &amp;= \frac16  \nabla^2 n_\sigma(\br) - \frac23 D_\sigma(\br)
+\end{aligned}"></span></span></a>) and $c_\sigma = a_\sigma b_\sigma$. Note that although an unique and positive root exists for $c_\sigma$, there is no closed-form solution, so that <a class="review-eq-link" href="#review-eq-eq-mggaxbr89-nonlinear"><span class="eq-number">Eq. (551)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="\frac{c_\sigma\,\E^{-2c_\sigma/3}}{c_\sigma-2} = \frac{2}{3}\pi^{2/3}\frac{1}{\tilde{C}_{\x\sigma}}"></span></span></a> has to be solved numerically (e.g., with the Newton&ndash;Raphson method) at each point of space. Once $c_\sigma$ is calculated, $b_\sigma$ can be obtained with $b_{\sigma}=\left[c_{\sigma}^{3}e^{-c_{\sigma}}/ \left(8\pi n_{\sigma}\right)\right]^{1/3}$, which is used for evaluating the energy (<a class="review-eq-link" href="#review-eq-eq-exbr"><span class="eq-number">Eq. (553)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="e^\text{BR89}_{\text{x}\sigma} = - \frac{1}{2b_\sigma}\left[ 1 - \E^{-c_\sigma} \left(1 +\frac{c_\sigma}{2}\right)\right]"></span></span></a>). Note that the numerical solution of <a class="review-eq-link" href="#review-eq-eq-mggaxbr89-nonlinear"><span class="eq-number">Eq. (551)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="\frac{c_\sigma\,\E^{-2c_\sigma/3}}{c_\sigma-2} = \frac{2}{3}\pi^{2/3}\frac{1}{\tilde{C}_{\x\sigma}}"></span></span></a> can be avoided; see the <a class="functional-link" href="../mgga-x-br89-explicit/"><code>mgga_x_br89_explicit</code></a> and <a class="functional-link" href="../mgga-x-br89-explicit-1/"><code>mgga_x_br89_explicit_1</code></a> functionals discussed later, which offer a robust alternative.</p>
+<p>The expression for the functional is obtained by using <a class="review-eq-link" href="#review-eq-eq-mggaxbr89-eh"><span class="eq-number">Eq. (550)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="\begin{aligned}
 h_{\text{x}\sigma}^\text{BR89}(r_{12}) = &amp; -\frac{a_\sigma}{16\pi b_\sigma r_{12}}\Big[  \\
 
  &amp; \times(a_\sigma|b_\sigma-r_{12}|+1)\E^{-a_\sigma|b_\sigma-r_{12}|}  \\
 
  &amp; - (a_\sigma|b_\sigma+r_{12}|+1)\E^{-a_\sigma|b_\sigma+r_{12}|}\Big]
-\end{aligned}"></span>
-  </span>
-</a> in the definition of the exchange energy in terms of the exchange hole (see <a class="review-eq-link" href="#review-eq-eq-Ex-hc1-spin1">
-  <code>eq:Ex-hc1-spin1</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="E_\x[n] = \sum_\sigma \mint{r}n_{\sigma}(\br)e_{\x\sigma}(\br)"></span>
-  </span>
-</a>; <a class="review-eq-link" href="#review-eq-eq-Ex-hc1-spin2">
-  <code>eq:Ex-hc1-spin2</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="e_{\x\sigma}(\br) = \frac{1}{2}\mint{r&#39;} \frac{h_{\x\sigma}(\br,\br&#39;)}{|\br - \br&#39;|}"></span>
-  </span>
-</a>), which yields</p>
+\end{aligned}"></span></span></a> in the definition of the exchange energy in terms of the exchange hole (see <a class="review-eq-link" href="#review-eq-eq-Ex-hc1-spin1"><span class="eq-number">Eq. (141)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="E_\x[n] = \sum_\sigma \mint{r}n_{\sigma}(\br)e_{\x\sigma}(\br)"></span></span></a>; <a class="review-eq-link" href="#review-eq-eq-Ex-hc1-spin2"><span class="eq-number">Eq. (142)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="e_{\x\sigma}(\br) = \frac{1}{2}\mint{r&#39;} \frac{h_{\x\sigma}(\br,\br&#39;)}{|\br - \br&#39;|}"></span></span></a>), which yields</p>
 <div class="equation" data-tex="e^\text{BR89}_{\text{x}\sigma} = - \frac{1}{2b_\sigma}\left[ 1 - \E^{-c_\sigma} \left(1 +\frac{c_\sigma}{2}\right)\right]"></div>
-<p>Two values for the parameter $\gamma$ in <a class="review-eq-link" href="#review-eq-eq-br89-q">
-  <code>eq:br89-q</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="\tilde{C}_{\x\sigma} = \frac{1}{6}\left[u_\sigma - 2\gamma\left( 2\tilde{t}_\sigma - \frac{1}{4} x_\sigma^2\right)\right]"></span>
-  </span>
-</a> were considered in <sup class="citation-marker"><a href="#review-ref-Becke1989-3761">687</a></sup>: $\gamma=1$ (<a class="functional-link" href="../mgga-x-br89-1/"><code>mgga_x_br89_1</code></a>) and 0.8 (<a class="functional-link" href="../mgga-x-br89/"><code>mgga_x_br89</code></a>), with the later recovering <a class="functional-link" href="../lda-x/"><code>lda_x</code></a> in the HEG limit.</p>
-<p><a class="functional-link" href="../mgga-x-br89/"><code>mgga_x_br89</code></a> and <a class="functional-link" href="../mgga-x-br89-1/"><code>mgga_x_br89_1</code></a> were combined with the <a class="functional-link" href="../gga-c-p86/"><code>gga_c_p86</code></a> correlation functional in <sup class="citation-marker"><a href="#review-ref-Neumann1996-1">318</a></sup> and <sup class="citation-marker"><a href="#review-ref-Neumann1995-381">688</a></sup>, and tested for the geometries and atomization energies of molecules. It turns out that the functional is superior to LDA, and can sometimes compete with BP86 (<a class="functional-link" href="../gga-x-b88/"><code>gga_x_b88</code></a> + <a class="functional-link" href="../gga-c-p86/"><code>gga_c_p86</code></a>). Note that <a class="functional-link" href="../mgga-x-br89/"><code>mgga_x_br89</code></a> and <a class="functional-link" href="../mgga-x-br89-1/"><code>mgga_x_br89_1</code></a> are ($\nabla^2 n, \tau$)-MGGAs.</p>
+<p>Two values for the parameter $\gamma$ in <a class="review-eq-link" href="#review-eq-eq-br89-q"><span class="eq-number">Eq. (552)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="\tilde{C}_{\x\sigma} = \frac{1}{6}\left[u_\sigma - 2\gamma\left( 2\tilde{t}_\sigma - \frac{1}{4} x_\sigma^2\right)\right]"></span></span></a> were considered in ref. <span class="citation-ref"><a href="#review-ref-Becke1989-3761">687</a></span>: $\gamma=1$ (<a class="functional-link" href="../mgga-x-br89-1/"><code>mgga_x_br89_1</code></a>) and 0.8 (<a class="functional-link" href="../mgga-x-br89/"><code>mgga_x_br89</code></a>), with the later recovering <a class="functional-link" href="../lda-x/"><code>lda_x</code></a> in the HEG limit.</p>
+<p><a class="functional-link" href="../mgga-x-br89/"><code>mgga_x_br89</code></a> and <a class="functional-link" href="../mgga-x-br89-1/"><code>mgga_x_br89_1</code></a> were combined with the <a class="functional-link" href="../gga-c-p86/"><code>gga_c_p86</code></a> correlation functional in refs. <span class="citation-ref"><a href="#review-ref-Neumann1996-1">318</a></span> and <span class="citation-ref"><a href="#review-ref-Neumann1995-381">688</a></span>, and tested for the geometries and atomization energies of molecules. It turns out that the functional is superior to LDA, and can sometimes compete with BP86 (<a class="functional-link" href="../gga-x-b88/"><code>gga_x_b88</code></a> + <a class="functional-link" href="../gga-c-p86/"><code>gga_c_p86</code></a>). Note that <a class="functional-link" href="../mgga-x-br89/"><code>mgga_x_br89</code></a> and <a class="functional-link" href="../mgga-x-br89-1/"><code>mgga_x_br89_1</code></a> are ($\nabla^2 n, \tau$)-MGGAs.</p>
 <p>A quantity that will be used later in the definition of other functionals is the Coulomb potential created by the exchange hole $h_{\text{x}\sigma}^\text{BR89}$:</p>
 <div class="equation" data-tex="v^\text{BR89,hole}_{\text{x}\sigma}=2e^\text{BR89}_{\text{x}\sigma}"></div>
-<p>It has been shown<sup class="citation-marker"><a href="#review-ref-Becke2006-221101">689</a>,<a href="#review-ref-Tran2015-4717">690</a></sup> to be an accurate approximation to the Slater potential<sup class="citation-marker"><a href="#review-ref-Slater1951-385">50</a></sup> (<a class="review-eq-link" href="#review-eq-eq-Ux-spin">
-  <code>eq:Ux-spin</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="U_{\x\sigma}(\br) = \mint{r&#39;} \frac{h_{\x\sigma}(\br,\br&#39;)}{|\br - \br&#39;|} = 2e_{\x\sigma}(\br)"></span>
-  </span>
-</a>), which is the main reason why it has been used as a component in semi-local potentials like <a class="functional-link" href="../mgga-x-bj06/"><code>mgga_x_bj06</code></a> or <a class="functional-link" href="../mgga-x-tb09/"><code>mgga_x_tb09</code></a>. Note that <a class="review-eq-link" href="#review-eq-eq-vxbrhole">
-  <code>eq:vxbrhole</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="v^\text{BR89,hole}_{\text{x}\sigma}=2e^\text{BR89}_{\text{x}\sigma}"></span>
-  </span>
-</a> should not be confused with $v^\text{BR89}_{\text{x}\sigma}$, the functional derivative of <a class="review-eq-link" href="#review-eq-eq-exbr">
-  <code>eq:exbr</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="e^\text{BR89}_{\text{x}\sigma} = - \frac{1}{2b_\sigma}\left[ 1 - \E^{-c_\sigma} \left(1 +\frac{c_\sigma}{2}\right)\right]"></span>
-  </span>
-</a>.</p>
+<p>It has been shown<sup class="citation-marker"><a href="#review-ref-Becke2006-221101">689</a>,<a href="#review-ref-Tran2015-4717">690</a></sup> to be an accurate approximation to the Slater potential<sup class="citation-marker"><a href="#review-ref-Slater1951-385">50</a></sup> (<a class="review-eq-link" href="#review-eq-eq-Ux-spin"><span class="eq-number">Eq. (144)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="U_{\x\sigma}(\br) = \mint{r&#39;} \frac{h_{\x\sigma}(\br,\br&#39;)}{|\br - \br&#39;|} = 2e_{\x\sigma}(\br)"></span></span></a>), which is the main reason why it has been used as a component in semi-local potentials like <a class="functional-link" href="../mgga-x-bj06/"><code>mgga_x_bj06</code></a> or <a class="functional-link" href="../mgga-x-tb09/"><code>mgga_x_tb09</code></a>. Note that <a class="review-eq-link" href="#review-eq-eq-vxbrhole"><span class="eq-number">Eq. (554)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="v^\text{BR89,hole}_{\text{x}\sigma}=2e^\text{BR89}_{\text{x}\sigma}"></span></span></a> should not be confused with $v^\text{BR89}_{\text{x}\sigma}$, the functional derivative of <a class="review-eq-link" href="#review-eq-eq-exbr"><span class="eq-number">Eq. (553)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="e^\text{BR89}_{\text{x}\sigma} = - \frac{1}{2b_\sigma}\left[ 1 - \E^{-c_\sigma} \left(1 +\frac{c_\sigma}{2}\right)\right]"></span></span></a>.</p>
         </div>
         <p class="source-note">Adapted from <a href="https://arxiv.org/abs/2602.17333">Tran, Lehtola, Pittalis, and Marques, <em>Semi-Local Exchange-Correlation Approximations in Density Functional Theory</em>, arXiv:2602.17333</a>.</p>
       </section>
@@ -129,24 +79,26 @@ h_{\text{x}\sigma}^\text{BR89}(r_{12}) = &amp; -\frac{a_\sigma}{16\pi b_\sigma r
           <h2>Referenced Review Equations</h2>
           <div class="review-equations">
           <article class="review-equation-card" id="review-eq-eq-curvature">
-            <code>eq:curvature</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (147)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=21" title="Open page 21 of the review PDF">p. 21 ↗</a></p>
             <div class="equation" data-tex="\begin{aligned}
-&amp;= \frac16  \nabla^2 n_\sigma(\br) - \frac23 D_\sigma(\br)
+C_{\x\sigma}(\br)  &amp;= \left.\frac12 \frac{\partial^2 h_{\x\sigma}(\br,u)}{\partial u^2}\right\vert_{u = 0}  \\
+
+ &amp;= \frac16  \nabla^2 n_\sigma(\br) - \frac23 D_\sigma(\br)
 \end{aligned}"></div>
           </article>
 
           <article class="review-equation-card" id="review-eq-eq-mggaxbr89-nonlinear">
-            <code>eq:mggaxbr89-nonlinear</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (551)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=101" title="Open page 101 of the review PDF">p. 101 ↗</a></p>
             <div class="equation" data-tex="\frac{c_\sigma\,\E^{-2c_\sigma/3}}{c_\sigma-2} = \frac{2}{3}\pi^{2/3}\frac{1}{\tilde{C}_{\x\sigma}}"></div>
           </article>
 
           <article class="review-equation-card" id="review-eq-eq-exbr">
-            <code>eq:exbr</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (553)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=101" title="Open page 101 of the review PDF">p. 101 ↗</a></p>
             <div class="equation" data-tex="e^\text{BR89}_{\text{x}\sigma} = - \frac{1}{2b_\sigma}\left[ 1 - \E^{-c_\sigma} \left(1 +\frac{c_\sigma}{2}\right)\right]"></div>
           </article>
 
           <article class="review-equation-card" id="review-eq-eq-mggaxbr89-eh">
-            <code>eq:mggaxbr89:eh</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (550)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=100" title="Open page 100 of the review PDF">p. 100 ↗</a></p>
             <div class="equation" data-tex="\begin{aligned}
 h_{\text{x}\sigma}^\text{BR89}(r_{12}) = &amp; -\frac{a_\sigma}{16\pi b_\sigma r_{12}}\Big[  \\
 
@@ -157,27 +109,27 @@ h_{\text{x}\sigma}^\text{BR89}(r_{12}) = &amp; -\frac{a_\sigma}{16\pi b_\sigma r
           </article>
 
           <article class="review-equation-card" id="review-eq-eq-Ex-hc1-spin1">
-            <code>eq:Ex-hc1-spin1</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (141)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=20" title="Open page 20 of the review PDF">p. 20 ↗</a></p>
             <div class="equation" data-tex="E_\x[n] = \sum_\sigma \mint{r}n_{\sigma}(\br)e_{\x\sigma}(\br)"></div>
           </article>
 
           <article class="review-equation-card" id="review-eq-eq-Ex-hc1-spin2">
-            <code>eq:Ex-hc1-spin2</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (142)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=20" title="Open page 20 of the review PDF">p. 20 ↗</a></p>
             <div class="equation" data-tex="e_{\x\sigma}(\br) = \frac{1}{2}\mint{r&#39;} \frac{h_{\x\sigma}(\br,\br&#39;)}{|\br - \br&#39;|}"></div>
           </article>
 
           <article class="review-equation-card" id="review-eq-eq-br89-q">
-            <code>eq:br89-q</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (552)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=101" title="Open page 101 of the review PDF">p. 101 ↗</a></p>
             <div class="equation" data-tex="\tilde{C}_{\x\sigma} = \frac{1}{6}\left[u_\sigma - 2\gamma\left( 2\tilde{t}_\sigma - \frac{1}{4} x_\sigma^2\right)\right]"></div>
           </article>
 
           <article class="review-equation-card" id="review-eq-eq-Ux-spin">
-            <code>eq:Ux-spin</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (144)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=20" title="Open page 20 of the review PDF">p. 20 ↗</a></p>
             <div class="equation" data-tex="U_{\x\sigma}(\br) = \mint{r&#39;} \frac{h_{\x\sigma}(\br,\br&#39;)}{|\br - \br&#39;|} = 2e_{\x\sigma}(\br)"></div>
           </article>
 
           <article class="review-equation-card" id="review-eq-eq-vxbrhole">
-            <code>eq:vxbrhole</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (554)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=101" title="Open page 101 of the review PDF">p. 101 ↗</a></p>
             <div class="equation" data-tex="v^\text{BR89,hole}_{\text{x}\sigma}=2e^\text{BR89}_{\text{x}\sigma}"></div>
           </article>
 

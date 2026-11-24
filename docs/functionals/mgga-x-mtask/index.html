@@ -3,14 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>mgga_x_mtask</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20261016-excerpts-v1">
-    <script defer src="../../assets/search.js?v=20261016-excerpts-v1"></script>
+    <title>mgga_x_mtask — modified TASK exchange · Libxc Wiki</title>
+    <meta name="description" content="mgga_x_mtask: modified TASK exchange. Meta-GGA exchange functional in Libxc, with references and BibTeX. Includes an excerpt from the Tran, Lehtola, Pittalis and Marques review.">
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261117-refs-v1">
+    <script defer src="../../assets/search.js?v=20261117-refs-v1"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
     <script defer src="../../vendor/katex/contrib/mhchem.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20261016-excerpts-v1"></script>
+    <script defer src="../../assets/detail.js?v=20261117-refs-v1"></script>
 
   </head>
   <body class="functional-page">
@@ -32,44 +33,26 @@
 
         <p class="brand">META-GGA</p>
         <h1><code class="title-code">mgga_x_mtask</code></h1>
+        <p class="functional-name">modified TASK exchange</p>
         <div class="detail-tags"><span class="tag">meta-gga</span>
 <span class="tag">exchange</span></div>
       </header>
 
       <div class="detail-grid">
+
       <section class="callout">
         <p class="callout-label">Review excerpt</p>
         <div class="review-html">
 <p><a class="functional-link" href="../mgga-x-task/"><code>mgga_x_task</code></a> has been shown to be accurate for the band gap of bulk solids, however further improvement for 1D and 2D systems is needed, since band gaps for these systems are still too small when compared to reference results. To achieve this goal, two modifications in <a class="functional-link" href="../mgga-x-task/"><code>mgga_x_task</code></a> were made to enhance the nonlocality:</p>
 <ol class="review-list" type="i">
-<li><p>choosing an upper bound for $F_\text{x}$ that is less tight, $h_{\text{x}}^0=1.29$ (1.174 in <a class="functional-link" href="../mgga-x-task/"><code>mgga_x_task</code></a>) in <a class="review-eq-link" href="#review-eq-eq-ftask">
-  <code>eq:ftask</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="\begin{aligned}
+<li><p>choosing an upper bound for $F_\text{x}$ that is less tight, $h_{\text{x}}^0=1.29$ (1.174 in <a class="functional-link" href="../mgga-x-task/"><code>mgga_x_task</code></a>) in <a class="review-eq-link" href="#review-eq-eq-ftask"><span class="eq-number">Eq. (659)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="\begin{aligned}
 F_\text{x}^\text{TASK} = &amp; h_{\text{x}}^0 g(s_\sigma) + \left[1-f(\alpha_{\sigma})\right]  \\
 
   &amp; \times\left[h_{\text{x}}^1(s_\sigma)-h_{\text{x}}^0\right]g^d(s_\sigma)
-\end{aligned}"></span>
-  </span>
-</a></p></li>
-<li><p>adjusting the large-$\alpha_\sigma$ limit of $f(\alpha_\sigma)$ (<a class="review-eq-link" href="#review-eq-eq-task-f">
-  <code>eq:task-f</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="f(\alpha_{\sigma}) = \sum_{i=0}^4 b_i R_i(\alpha_{\sigma})"></span>
-  </span>
-</a>) to $f(\alpha_{\sigma}\to\infty)=-3.5$ ($-3$ in <a class="functional-link" href="../mgga-x-task/"><code>mgga_x_task</code></a>).</p></li>
+\end{aligned}"></span></span></a></p></li>
+<li><p>adjusting the large-$\alpha_\sigma$ limit of $f(\alpha_\sigma)$ (<a class="review-eq-link" href="#review-eq-eq-task-f"><span class="eq-number">Eq. (662)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="f(\alpha_{\sigma}) = \sum_{i=0}^4 b_i R_i(\alpha_{\sigma})"></span></span></a>) to $f(\alpha_{\sigma}\to\infty)=-3.5$ ($-3$ in <a class="functional-link" href="../mgga-x-task/"><code>mgga_x_task</code></a>).</p></li>
 </ol>
-<p>Because of these changes, the coefficients $a_i$ and $b_i$ in <a class="review-eq-link" href="#review-eq-eq-task-h">
-  <code>eq:task-h</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="h_{\text{x}}^1(s_\sigma) = \sum_{i=0}^2 a_i R_i(s_{\sigma}^2)"></span>
-  </span>
-</a>; <a class="review-eq-link" href="#review-eq-eq-task-f">
-  <code>eq:task-f</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="f(\alpha_{\sigma}) = \sum_{i=0}^4 b_i R_i(\alpha_{\sigma})"></span>
-  </span>
-</a> had to be recalculated, and the new values are given by $a_0=0.924374$, $a_1=-0.09276847$, $a_2=-0.017143$, $b_0=-0.639572$, $b_1=-2.087488$, $b_2=-0.625$, $b_3=-0.162512$, and $b_4=0.014572$. The functional <a class="functional-link" href="../mgga-x-mtask/"><code>mgga_x_mtask</code></a> provides band gaps of low-dimensional systems that are slightly larger compared to those of <a class="functional-link" href="../mgga-x-task/"><code>mgga_x_task</code></a> and closer to reference results.<sup class="citation-marker"><a href="#review-ref-Tran2021-104103">767</a></sup></p>
+<p>Because of these changes, the coefficients $a_i$ and $b_i$ in <a class="review-eq-link" href="#review-eq-eq-task-h"><span class="eq-number">Eq. (661)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="h_{\text{x}}^1(s_\sigma) = \sum_{i=0}^2 a_i R_i(s_{\sigma}^2)"></span></span></a>; <a class="review-eq-link" href="#review-eq-eq-task-f"><span class="eq-number">Eq. (662)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="f(\alpha_{\sigma}) = \sum_{i=0}^4 b_i R_i(\alpha_{\sigma})"></span></span></a> had to be recalculated, and the new values are given by $a_0=0.924374$, $a_1=-0.09276847$, $a_2=-0.017143$, $b_0=-0.639572$, $b_1=-2.087488$, $b_2=-0.625$, $b_3=-0.162512$, and $b_4=0.014572$. The functional <a class="functional-link" href="../mgga-x-mtask/"><code>mgga_x_mtask</code></a> provides band gaps of low-dimensional systems that are slightly larger compared to those of <a class="functional-link" href="../mgga-x-task/"><code>mgga_x_task</code></a> and closer to reference results.<sup class="citation-marker"><a href="#review-ref-Tran2021-104103">767</a></sup></p>
         </div>
         <p class="source-note">Adapted from <a href="https://arxiv.org/abs/2602.17333">Tran, Lehtola, Pittalis, and Marques, <em>Semi-Local Exchange-Correlation Approximations in Density Functional Theory</em>, arXiv:2602.17333</a>.</p>
       </section>
@@ -78,7 +61,7 @@ F_\text{x}^\text{TASK} = &amp; h_{\text{x}}^0 g(s_\sigma) + \left[1-f(\alpha_{\s
           <h2>Referenced Review Equations</h2>
           <div class="review-equations">
           <article class="review-equation-card" id="review-eq-eq-ftask">
-            <code>eq:ftask</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (659)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=121" title="Open page 121 of the review PDF">p. 121 ↗</a></p>
             <div class="equation" data-tex="\begin{aligned}
 F_\text{x}^\text{TASK} = &amp; h_{\text{x}}^0 g(s_\sigma) + \left[1-f(\alpha_{\sigma})\right]  \\
 
@@ -87,12 +70,12 @@ F_\text{x}^\text{TASK} = &amp; h_{\text{x}}^0 g(s_\sigma) + \left[1-f(\alpha_{\s
           </article>
 
           <article class="review-equation-card" id="review-eq-eq-task-f">
-            <code>eq:task-f</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (662)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=121" title="Open page 121 of the review PDF">p. 121 ↗</a></p>
             <div class="equation" data-tex="f(\alpha_{\sigma}) = \sum_{i=0}^4 b_i R_i(\alpha_{\sigma})"></div>
           </article>
 
           <article class="review-equation-card" id="review-eq-eq-task-h">
-            <code>eq:task-h</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (661)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=121" title="Open page 121 of the review PDF">p. 121 ↗</a></p>
             <div class="equation" data-tex="h_{\text{x}}^1(s_\sigma) = \sum_{i=0}^2 a_i R_i(s_{\sigma}^2)"></div>
           </article>
 

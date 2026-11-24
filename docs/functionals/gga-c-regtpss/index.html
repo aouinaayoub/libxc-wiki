@@ -3,14 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>gga_c_regtpss</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20261016-excerpts-v1">
-    <script defer src="../../assets/search.js?v=20261016-excerpts-v1"></script>
+    <title>gga_c_regtpss — regularized TPSS correlation · Libxc Wiki</title>
+    <meta name="description" content="gga_c_regtpss: regularized TPSS correlation. GGA correlation functional in Libxc, with references and BibTeX. Includes an excerpt from the Tran, Lehtola, Pittalis and Marques review.">
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261117-refs-v1">
+    <script defer src="../../assets/search.js?v=20261117-refs-v1"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
     <script defer src="../../vendor/katex/contrib/mhchem.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20261016-excerpts-v1"></script>
+    <script defer src="../../assets/detail.js?v=20261117-refs-v1"></script>
 
   </head>
   <body class="functional-page">
@@ -32,38 +33,20 @@
 
         <p class="brand">GGA</p>
         <h1><code class="title-code">gga_c_regtpss</code></h1>
+        <p class="functional-name">regularized TPSS correlation</p>
         <div class="detail-tags"><span class="tag">gga</span>
 <span class="tag">correlation</span></div>
       </header>
 
       <div class="detail-grid">
+
       <section class="callout">
         <p class="callout-label">Review excerpt</p>
         <div class="review-html">
 <p>This variant of the <a class="functional-link" href="../gga-c-pbe/"><code>gga_c_pbe</code></a> functional, also called vPBEc in the literature, was proposed by Perdew et al.<sup class="citation-marker"><a href="#review-ref-Perdew2009-026403">623</a></sup> as a building block of their <a class="functional-link" href="../mgga-c-revtpss/"><code>mgga_c_revtpss</code></a> functional. It incorporates the density dependence of the parameter $\beta$ of Ma and Brueckner<sup class="citation-marker"><a href="#review-ref-Ma1968-18">168</a></sup> that was later derived by Hu and Langreth<sup class="citation-marker"><a href="#review-ref-Hu1986-943">603</a></sup> at the beyond-RPA level. The fit to the Hu and Langreth<sup class="citation-marker"><a href="#review-ref-Hu1986-943">603</a></sup> result reads</p>
 <div class="equation" data-tex="\beta(r_s) = \beta_0\frac{1 + a r_s}{1 + b r_s}"></div>
-<p>where $\beta_0=\beta^{\text{MB}}$, $a=0.1$, and $b=0.1778$. <a class="review-eq-link" href="#review-eq-eq-vpbe-beta">
-  <code>eq:vpbe-beta</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="\beta(r_s) = \beta_0\frac{1 + a r_s}{1 + b r_s}"></span>
-  </span>
-</a> replaces the constant $\beta=\beta^{\text{MB}}$ in <a class="review-eq-link" href="#review-eq-eq-ggac-pw91h0">
-  <code>eq:ggac:pw91h0</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="H_0(\phi_{2/3}, t, A) = \gamma \phi_{2/3}^3 \ln\left[1 + \frac{\beta}{\gamma}
-  \frac{t^2 + A t^4}{1 + A (t^2 + A t^4)}\right]"></span>
-  </span>
-</a>; <a class="review-eq-link" href="#review-eq-eq-pw91a">
-  <code>eq:pw91a</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="A(r_s, \zeta, \phi_{2/3}) = \frac{\beta}{\gamma w_1}"></span>
-  </span>
-</a> of <a class="functional-link" href="../gga-c-pbe/"><code>gga_c_pbe</code></a>, and was chosen such that the second-order density-gradient terms for exchange and correlation cancel in the low-density limit ($r_s\to\infty$). The use of <a class="review-eq-link" href="#review-eq-eq-vpbe-beta">
-  <code>eq:vpbe-beta</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="\beta(r_s) = \beta_0\frac{1 + a r_s}{1 + b r_s}"></span>
-  </span>
-</a> leads to slightly larger atomization energies and smaller surface energies than with the standard <a class="functional-link" href="../gga-c-pbe/"><code>gga_c_pbe</code></a> functional. The functional <a class="functional-link" href="../gga-c-regtpss/"><code>gga_c_regtpss</code></a> is used as the correlation component in the $\tau$-MGGA functionals MS0, MS1, and MS2,<sup class="citation-marker"><a href="#review-ref-Sun2012-051101">625</a>,<a href="#review-ref-Sun2013-044113">626</a></sup> as well as MVS,<sup class="citation-marker"><a href="#review-ref-Sun2015-685">627</a></sup> whose exchange components are <a class="functional-link" href="../mgga-x-ms0/"><code>mgga_x_ms0</code></a>, <a class="functional-link" href="../mgga-x-ms1/"><code>mgga_x_ms1</code></a>, <a class="functional-link" href="../mgga-x-ms2/"><code>mgga_x_ms2</code></a>, and <a class="functional-link" href="../mgga-x-mvs/"><code>mgga_x_mvs</code></a>, respectively.</p>
+<p>where $\beta_0=\beta^{\text{MB}}$, $a=0.1$, and $b=0.1778$. <a class="review-eq-link" href="#review-eq-eq-vpbe-beta"><span class="eq-number">Eq. (504)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="\beta(r_s) = \beta_0\frac{1 + a r_s}{1 + b r_s}"></span></span></a> replaces the constant $\beta=\beta^{\text{MB}}$ in <a class="review-eq-link" href="#review-eq-eq-ggac-pw91h0"><span class="eq-number">Eq. (469)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="H_0(\phi_{2/3}, t, A) = \gamma \phi_{2/3}^3 \ln\left[1 + \frac{\beta}{\gamma}
+  \frac{t^2 + A t^4}{1 + A (t^2 + A t^4)}\right]"></span></span></a>; <a class="review-eq-link" href="#review-eq-eq-pw91a"><span class="eq-number">Eq. (470)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="A(r_s, \zeta, \phi_{2/3}) = \frac{\beta}{\gamma w_1}"></span></span></a> of <a class="functional-link" href="../gga-c-pbe/"><code>gga_c_pbe</code></a>, and was chosen such that the second-order density-gradient terms for exchange and correlation cancel in the low-density limit ($r_s\to\infty$). The use of <a class="review-eq-link" href="#review-eq-eq-vpbe-beta"><span class="eq-number">Eq. (504)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="\beta(r_s) = \beta_0\frac{1 + a r_s}{1 + b r_s}"></span></span></a> leads to slightly larger atomization energies and smaller surface energies than with the standard <a class="functional-link" href="../gga-c-pbe/"><code>gga_c_pbe</code></a> functional. The functional <a class="functional-link" href="../gga-c-regtpss/"><code>gga_c_regtpss</code></a> is used as the correlation component in the $\tau$-MGGA functionals MS0, MS1, and MS2,<sup class="citation-marker"><a href="#review-ref-Sun2012-051101">625</a>,<a href="#review-ref-Sun2013-044113">626</a></sup> as well as MVS,<sup class="citation-marker"><a href="#review-ref-Sun2015-685">627</a></sup> whose exchange components are <a class="functional-link" href="../mgga-x-ms0/"><code>mgga_x_ms0</code></a>, <a class="functional-link" href="../mgga-x-ms1/"><code>mgga_x_ms1</code></a>, <a class="functional-link" href="../mgga-x-ms2/"><code>mgga_x_ms2</code></a>, and <a class="functional-link" href="../mgga-x-mvs/"><code>mgga_x_mvs</code></a>, respectively.</p>
         </div>
         <p class="source-note">Adapted from <a href="https://arxiv.org/abs/2602.17333">Tran, Lehtola, Pittalis, and Marques, <em>Semi-Local Exchange-Correlation Approximations in Density Functional Theory</em>, arXiv:2602.17333</a>.</p>
       </section>
@@ -72,18 +55,18 @@
           <h2>Referenced Review Equations</h2>
           <div class="review-equations">
           <article class="review-equation-card" id="review-eq-eq-vpbe-beta">
-            <code>eq:vpbe-beta</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (504)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=87" title="Open page 87 of the review PDF">p. 87 ↗</a></p>
             <div class="equation" data-tex="\beta(r_s) = \beta_0\frac{1 + a r_s}{1 + b r_s}"></div>
           </article>
 
           <article class="review-equation-card" id="review-eq-eq-ggac-pw91h0">
-            <code>eq:ggac:pw91h0</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (469)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=80" title="Open page 80 of the review PDF">p. 80 ↗</a></p>
             <div class="equation" data-tex="H_0(\phi_{2/3}, t, A) = \gamma \phi_{2/3}^3 \ln\left[1 + \frac{\beta}{\gamma}
   \frac{t^2 + A t^4}{1 + A (t^2 + A t^4)}\right]"></div>
           </article>
 
           <article class="review-equation-card" id="review-eq-eq-pw91a">
-            <code>eq:pw91a</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (470)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=80" title="Open page 80 of the review PDF">p. 80 ↗</a></p>
             <div class="equation" data-tex="A(r_s, \zeta, \phi_{2/3}) = \frac{\beta}{\gamma w_1}"></div>
           </article>
 

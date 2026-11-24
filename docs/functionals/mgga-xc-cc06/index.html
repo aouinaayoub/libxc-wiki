@@ -3,14 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>mgga_xc_cc06</title>
-    <link rel="stylesheet" href="../../assets/styles.css?v=20261016-excerpts-v1">
-    <script defer src="../../assets/search.js?v=20261016-excerpts-v1"></script>
+    <title>mgga_xc_cc06 — Cancio and Chou 2006 · Libxc Wiki</title>
+    <meta name="description" content="mgga_xc_cc06: Cancio and Chou 2006. Meta-GGA exchange-correlation functional in Libxc, with references and BibTeX. Includes an excerpt from the Tran, Lehtola, Pittalis and Marques review.">
+    <link rel="stylesheet" href="../../assets/styles.css?v=20261117-refs-v1">
+    <script defer src="../../assets/search.js?v=20261117-refs-v1"></script>
     <link rel="stylesheet" href="../../vendor/katex/katex.min.css">
     <script defer src="../../vendor/katex/katex.min.js"></script>
     <script defer src="../../vendor/katex/contrib/mhchem.min.js"></script>
     <script defer src="../../vendor/katex/contrib/auto-render.min.js"></script>
-    <script defer src="../../assets/detail.js?v=20261016-excerpts-v1"></script>
+    <script defer src="../../assets/detail.js?v=20261117-refs-v1"></script>
 
   </head>
   <body class="functional-page">
@@ -32,12 +33,14 @@
 
         <p class="brand">META-GGA</p>
         <h1><code class="title-code">mgga_xc_cc06</code></h1>
+        <p class="functional-name">Cancio and Chou 2006</p>
         <div class="detail-tags"><span class="tag">meta-gga</span>
 <span class="tag">exchange</span>
 <span class="tag">correlation</span></div>
       </header>
 
       <div class="detail-grid">
+
       <section class="callout">
         <p class="callout-label">Review excerpt</p>
         <div class="review-html">
@@ -47,18 +50,8 @@
 <p>where $e^\text{LDA}_\text{x}$ is <a class="functional-link" href="../lda-x/"><code>lda_x</code></a>, $e^\text{PW-LDA}_\text{c}$ is <a class="functional-link" href="../lda-c-pw/"><code>lda_c_pw</code></a>, and the enhancement factor reads</p>
 <div class="equation" data-tex="F^\text{CC06}_\text{xc}(u) = 1 + \frac{\alpha + 
   \beta\left[3/\left(4\pi\right)\right]^{2/3}u}{1 + \gamma\left[3/\left(4\pi\right)\right]^{2/3}u}"></div>
-<p>The three parameters were fit to reproduce the variational MC xc-energy density for bulk silicon, yielding $\alpha=-0.0007$, $\beta= 0.0080$, and $\gamma=0.026$. Note that since $\alpha$ is nonzero, the functional does not recover the correct HEG limit (LDA), i.e. $F^\text{CC06}_\text{xc}(u=0)=1+\alpha=0.9993$ instead of 1, albeit the deviation is small. Note that $u$ in <a class="review-eq-link" href="#review-eq-eq-cc06">
-  <code>eq:cc06</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="F^\text{CC06}_\text{xc}(u) = 1 + \frac{\alpha + 
-  \beta\left[3/\left(4\pi\right)\right]^{2/3}u}{1 + \gamma\left[3/\left(4\pi\right)\right]^{2/3}u}"></span>
-  </span>
-</a> is given by <a class="review-eq-link" href="#review-eq-eq-u">
-  <code>eq:u</code>
-  <span class="equation-preview" aria-hidden="true">
-    <span class="equation-preview-math" data-tex="u^{m\text{D}} = \frac{\nabla^2 n}{n^\frac{m+2}{m}}"></span>
-  </span>
-</a> with $n=n_\uparrow+n_\downarrow$ also in the spin-polarized case.</p>
+<p>The three parameters were fit to reproduce the variational MC xc-energy density for bulk silicon, yielding $\alpha=-0.0007$, $\beta= 0.0080$, and $\gamma=0.026$. Note that since $\alpha$ is nonzero, the functional does not recover the correct HEG limit (LDA), i.e. $F^\text{CC06}_\text{xc}(u=0)=1+\alpha=0.9993$ instead of 1, albeit the deviation is small. Note that $u$ in <a class="review-eq-link" href="#review-eq-eq-cc06"><span class="eq-number">Eq. (792)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="F^\text{CC06}_\text{xc}(u) = 1 + \frac{\alpha + 
+  \beta\left[3/\left(4\pi\right)\right]^{2/3}u}{1 + \gamma\left[3/\left(4\pi\right)\right]^{2/3}u}"></span></span></a> is given by <a class="review-eq-link" href="#review-eq-eq-u"><span class="eq-number">Eq. (58)</span><span class="equation-preview" aria-hidden="true"><span class="equation-preview-math" data-tex="u^{m\text{D}} = \frac{\nabla^2 n}{n^\frac{m+2}{m}}"></span></span></a> with $n=n_\uparrow+n_\downarrow$ also in the spin-polarized case.</p>
         </div>
         <p class="source-note">Adapted from <a href="https://arxiv.org/abs/2602.17333">Tran, Lehtola, Pittalis, and Marques, <em>Semi-Local Exchange-Correlation Approximations in Density Functional Theory</em>, arXiv:2602.17333</a>.</p>
       </section>
@@ -67,13 +60,13 @@
           <h2>Referenced Review Equations</h2>
           <div class="review-equations">
           <article class="review-equation-card" id="review-eq-eq-cc06">
-            <code>eq:cc06</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (792)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=144" title="Open page 144 of the review PDF">p. 144 ↗</a></p>
             <div class="equation" data-tex="F^\text{CC06}_\text{xc}(u) = 1 + \frac{\alpha + 
   \beta\left[3/\left(4\pi\right)\right]^{2/3}u}{1 + \gamma\left[3/\left(4\pi\right)\right]^{2/3}u}"></div>
           </article>
 
           <article class="review-equation-card" id="review-eq-eq-u">
-            <code>eq:u</code>
+            <p class="equation-card-heading"><span class="eq-number">Eq. (58)</span><a class="equation-source" href="https://arxiv.org/pdf/2602.17333#page=13" title="Open page 13 of the review PDF">p. 13 ↗</a></p>
             <div class="equation" data-tex="u^{m\text{D}} = \frac{\nabla^2 n}{n^\frac{m+2}{m}}"></div>
           </article>
 
